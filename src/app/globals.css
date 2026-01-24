@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #faf8f5;
+  --foreground: #1a1a1a;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+}
+
+::selection {
+  background: #1a1a1a;
+  color: #faf8f5;
+}

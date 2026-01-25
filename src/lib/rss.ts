@@ -56,6 +56,14 @@ export function generateRssFeed(): string {
     <language>en-us</language>
     <lastBuildDate>${lastBuildDate}</lastBuildDate>
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>${SITE_URL}/icon.png</url>
+      <title>${escapeXml(SITE_TITLE)}</title>
+      <link>${SITE_URL}</link>
+      <width>64</width>
+      <height>64</height>
+      <description>woza.ink logo</description>
+    </image>
 ${items}
   </channel>
 </rss>`;

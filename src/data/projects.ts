@@ -50,4 +50,13 @@ export const projects: Project[] = [
     url: "https://wezer.vercel.app",
     github: "https://github.com/Wozacosta/wezer",
   },
+  {
+    slug: "leplein",
+    title: "Le Plein",
+    description:
+      "A mobile-first web app for finding the cheapest fuel prices near you in France, using real-time data from the official French government API",
+    color: "#22c55e",
+    url: "https://leplein.vercel.app",
+    github: "https://github.com/Wozacosta/leplein",
+  },
 ];

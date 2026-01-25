@@ -41,4 +41,13 @@ export const projects: Project[] = [
     color: "#f59e0b",
     url: "https://fitlog-theta.vercel.app",
   },
+  {
+    slug: "wezer",
+    title: "Wezer",
+    description:
+      "Real-time weather anomaly tracking for global cities, monitoring temperature deviations from historical averages across 50 cities worldwide",
+    color: "#3b82f6",
+    url: "https://wezer.vercel.app",
+    github: "https://github.com/Wozacosta/wezer",
+  },
 ];

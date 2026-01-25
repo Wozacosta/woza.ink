@@ -19,7 +19,7 @@ export default function Home() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-xl text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-xl text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors"
             >
               {link.label}
             </Link>

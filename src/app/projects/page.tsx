@@ -13,14 +13,16 @@ export default function ProjectsPage() {
       <header className="py-16 px-8">
         <Link
           href="/"
-          className="text-gray-500 hover:text-gray-900 transition-colors mb-8 inline-block"
+          className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors mb-8 inline-block"
         >
           &larr; Back
         </Link>
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
           Projects
         </h1>
-        <p className="text-lg text-gray-600 max-w-md">Things I've built</p>
+        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-md">
+          Things I've built
+        </p>
       </header>
 
       <section className="max-w-6xl mx-auto px-8 pb-24">
@@ -34,7 +36,7 @@ export default function ProjectsPage() {
               className="group block"
             >
               <article className="transition-all duration-300 ease-out group-hover:scale-[1.02]">
-                <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-100 shadow-md group-hover:shadow-xl transition-shadow">
+                <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-md group-hover:shadow-xl transition-shadow">
                   <Image
                     src={getScreenshotUrl(project.url)}
                     alt={project.title}
@@ -45,15 +47,15 @@ export default function ProjectsPage() {
                 </div>
                 <div className="mt-4 flex items-start justify-between gap-4">
                   <div>
-                    <h2 className="text-xl font-semibold text-gray-900 group-hover:text-gray-600 transition-colors">
+                    <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">
                       {project.title}
                     </h2>
-                    <p className="text-gray-500 text-sm mt-1">
+                    <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
                       {project.description}
                     </p>
                   </div>
                   {project.github && (
-                    <span className="text-gray-400 group-hover:text-gray-600 transition-colors flex-shrink-0 mt-1">
+                    <span className="text-gray-400 group-hover:text-gray-600 dark:text-gray-500 dark:group-hover:text-gray-300 transition-colors flex-shrink-0 mt-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"

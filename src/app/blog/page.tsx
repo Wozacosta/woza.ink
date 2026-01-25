@@ -1,10 +1,16 @@
-import Link from 'next/link'
+import Link from "next/link";
+import { getAllPosts } from "@/data/blog";
 
 export default function BlogPage() {
+  const posts = getAllPosts();
+
   return (
     <main className="min-h-screen">
       <header className="py-16 px-8">
-        <Link href="/" className="text-gray-500 hover:text-gray-900 transition-colors mb-8 inline-block">
+        <Link
+          href="/"
+          className="text-gray-500 hover:text-gray-900 transition-colors mb-8 inline-block"
+        >
           &larr; Back
         </Link>
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
@@ -16,10 +22,40 @@ export default function BlogPage() {
       </header>
 
       <section className="max-w-3xl mx-auto px-8 pb-24">
-        <p className="text-gray-500 text-center py-12">
-          Coming soon...
-        </p>
+        {posts.length === 0 ? (
+          <p className="text-gray-500 text-center py-12">No posts yet...</p>
+        ) : (
+          <div className="space-y-12">
+            {posts.map((post) => (
+              <article key={post.slug} className="group">
+                <Link href={`/blog/${post.slug}`} className="block">
+                  <time className="text-sm text-gray-400 font-mono">
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                  <h2 className="text-2xl font-semibold mt-2 group-hover:text-gray-600 transition-colors">
+                    {post.title}
+                  </h2>
+                  <p className="text-gray-600 mt-2">{post.description}</p>
+                  <div className="flex gap-2 mt-3">
+                    {post.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </Link>
+              </article>
+            ))}
+          </div>
+        )}
       </section>
     </main>
-  )
+  );
 }

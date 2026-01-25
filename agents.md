@@ -2,13 +2,13 @@
 
 ## Project Overview
 
-**woza.ink** is a personal website with a collection of interactive projects, a blog, and an about page.
+**woza.ink** is a personal landing page and portfolio website showcasing external projects, with a blog and about section.
 
 ## Tech Stack
 
-- **Framework**: Next.js 16 (App Router)
-- **UI**: React 19, Tailwind CSS 3.4
-- **Language**: TypeScript 5.9 (strict mode)
+- **Framework**: Next.js 16.1.4 (App Router)
+- **UI**: React 19.2.3, Tailwind CSS 3.4.19
+- **Language**: TypeScript 5.9.3 (strict mode)
 - **Package Manager**: pnpm
 
 ## Site Structure
@@ -18,35 +18,37 @@
 | Route | Description |
 |-------|-------------|
 | `/` | Homepage - minimal landing with nav links |
-| `/projects` | Grid of interactive projects |
-| `/blog` | Blog posts (placeholder) |
+| `/projects` | Grid of external projects with live screenshots |
+| `/blog` | Blog listing page |
+| `/blog/[slug]` | Individual blog post pages |
 | `/about` | About page (placeholder) |
-| `/{project-slug}` | Individual project pages |
 
 ### File Structure
 
 ```
 src/
 ├── app/
-│   ├── layout.tsx          # Root layout
-│   ├── page.tsx            # Homepage (links to projects, blog, about)
-│   ├── globals.css         # Global styles (Tailwind)
+│   ├── layout.tsx          # Root layout (Inter font, metadata)
+│   ├── page.tsx            # Homepage (navigation hub)
+│   ├── globals.css         # Global styles (Tailwind + CSS variables)
 │   ├── projects/
-│   │   └── page.tsx        # Projects listing page
+│   │   └── page.tsx        # Projects gallery (external links)
 │   ├── blog/
-│   │   └── page.tsx        # Blog page
-│   ├── about/
-│   │   └── page.tsx        # About page
-│   ├── infinite-scroll/    # Project: Infinite scroll game
-│   ├── color-memory/       # Project: Color memory game
-│   ├── typing-test/        # Project: Typing speed test
-│   ├── draw/               # Project: Drawing canvas
-│   ├── password-game/      # Project: Password creation game
-│   └── spend-money/        # Project: Spend a billion dollars game
-├── components/
-│   └── ProjectLayout.tsx   # Shared layout for projects (back link goes to /projects)
-└── data/
-    └── projects.ts         # Project metadata (slug, title, description, color, emoji)
+│   │   ├── page.tsx        # Blog listing page
+│   │   └── [slug]/
+│   │       └── page.tsx    # Individual blog post
+│   └── about/
+│       └── page.tsx        # About page (placeholder)
+├── components/             # Reusable UI components (empty)
+├── content/
+│   └── blog/               # Blog posts in Markdown
+│       ├── building-pomo.md
+│       ├── why-i-build.md
+│       └── learning-nextjs.md
+├── data/
+│   ├── projects.ts         # Project metadata (external URLs)
+│   └── blog.ts             # Blog post metadata and content loader
+└── styles/                 # Additional styles (empty)
 ```
 
 ## Commands
@@ -62,31 +64,42 @@ pnpm lint     # Run ESLint
 
 - `@/*` maps to `./src/*`
 
+## Current Projects (External)
+
+| Project | Description | URL |
+|---------|-------------|-----|
+| Pomo | Pomodoro timer with music links | pomo-coral-eight.vercel.app |
+| Guide To | Music guides platform | guideto.vercel.app |
+| Baseline | Nicotine quit support PWA | baseline-lilac.vercel.app |
+| FitLog | Exercise tracking app | fitlog-theta.vercel.app |
+| Wezer | Weather anomaly tracker | wezer.vercel.app |
+
 ## Adding New Projects
 
-1. Create a new folder in `src/app/` with the project slug
-2. Add a `page.tsx` file with the project component
-3. Register the project in `src/data/projects.ts` with:
-   - `slug`: URL path (matches folder name)
+1. Add entry to `src/data/projects.ts` with:
+   - `slug`: URL-friendly identifier
    - `title`: Display name
    - `description`: Short description
    - `color`: Hex color for theming
-   - `emoji`: Optional emoji icon
+   - `url`: External project URL
+   - `github`: Optional GitHub repo URL
 
-## Current Projects
+## Adding Blog Posts
 
-| Slug | Title | Description |
-|------|-------|-------------|
-| infinite-scroll | Infinite Scroll | How far can you scroll? |
-| color-memory | Color Memory | Test your color memory |
-| typing-test | Typing Test | How fast can you type? |
-| draw | Draw | Simple drawing canvas |
-| password-game | Password Game | Create the perfect password |
-| spend-money | Spend Money | Spend a billion dollars |
+1. Create a new `.md` file in `src/content/blog/`
+2. Add frontmatter with title, date, description, and tags
+3. Write content in Markdown
+4. The post will automatically appear on `/blog`
+
+## Theme
+
+- **Background**: Cream (#faf8f5)
+- **Foreground**: Ink (#1a1a1a)
+- **Font**: Inter (Google Fonts)
 
 ## Notes
 
-- Each project page should use `ProjectLayout` component for consistent styling
-- Projects are client-side interactive experiences (use `'use client'` directive)
-- Tailwind is configured with PostCSS and Autoprefixer
-- Homepage is minimal: just title and nav links to projects/blog/about
+- Projects link to external sites (not hosted locally)
+- Screenshots generated via microlink.io API
+- Blog posts are written in Markdown with frontmatter
+- All external links use `rel="noopener noreferrer"`

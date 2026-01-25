@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Cat W Favicon</title>
+
+  <!-- Background (optional). Remove if you want fully transparent. -->
+  <rect x="0" y="0" width="64" height="64" rx="14" fill="#0B1220"/>
+
+  <!-- W badge -->
+  <g transform="translate(0,0)">
+    <circle cx="32" cy="18" r="12" fill="#ffffff" opacity="0.95"/>
+    <text x="32" y="22.5"
+          text-anchor="middle"
+          font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+          font-size="14"
+          font-weight="800"
+          fill="#0B1220">W</text>
+  </g>
+
+  <!-- Cat head -->
+  <g transform="translate(0,2)">
+    <!-- ears -->
+    <path d="M18 30 L14 22 L24 26 Z" fill="#F7B267"/>
+    <path d="M46 30 L50 22 L40 26 Z" fill="#F7B267"/>
+
+    <!-- head -->
+    <circle cx="32" cy="38" r="18" fill="#F7B267"/>
+
+    <!-- inner ears -->
+    <path d="M18.8 29.2 L16.2 24.5 L22.6 27.2 Z" fill="#F48498" opacity="0.75"/>
+    <path d="M45.2 29.2 L47.8 24.5 L41.4 27.2 Z" fill="#F48498" opacity="0.75"/>
+
+    <!-- eyes -->
+    <circle cx="25.5" cy="38" r="2.2" fill="#0B1220"/>
+    <circle cx="38.5" cy="38" r="2.2" fill="#0B1220"/>
+
+    <!-- nose -->
+    <path d="M32 41.5 L29.8 44.2 L34.2 44.2 Z" fill="#0B1220" opacity="0.85"/>
+
+    <!-- mouth -->
+    <path d="M32 44.2 C30.5 46 28.7 46.5 27 46.2" stroke="#0B1220" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M32 44.2 C33.5 46 35.3 46.5 37 46.2" stroke="#0B1220" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+
+    <!-- whiskers -->
+    <path d="M12.5 41.2 H22" stroke="#0B1220" stroke-width="1.4" opacity="0.65" stroke-linecap="round"/>
+    <path d="M12.8 44.2 H22" stroke="#0B1220" stroke-width="1.4" opacity="0.65" stroke-linecap="round"/>
+    <path d="M42 41.2 H51.5" stroke="#0B1220" stroke-width="1.4" opacity="0.65" stroke-linecap="round"/>
+    <path d="M42 44.2 H51.2" stroke="#0B1220" stroke-width="1.4" opacity="0.65" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -81,7 +81,7 @@ The application follows Next.js 13+ App Router conventions:
 │  │ microlink.io    │  │ External Project Sites           │   │
 │  │ (Screenshots)   │  │ - pomo-coral-eight.vercel.app   │   │
 │  │                 │  │ - guideto.vercel.app            │   │
-│  │                 │  │ - baseline-lilac.vercel.app     │   │
+│  │                 │  │ - basel.ink     │   │
 │  │                 │  │ - fitlog-theta.vercel.app       │   │
 │  │                 │  │ - wezer.vercel.app              │   │
 │  └─────────────────┘  └─────────────────────────────────┘   │
@@ -175,7 +175,7 @@ Post content in markdown...
 |---------|-----|-------------|
 | Pomo | pomo-coral-eight.vercel.app | Pomodoro timer with music links |
 | Guide To | guideto.vercel.app | Music guides with rich media |
-| Baseline | baseline-lilac.vercel.app | Nicotine quit helper PWA |
+| Baseline | basel.ink | Nicotine quit helper PWA |
 | FitLog | fitlog-theta.vercel.app | Exercise tracking app |
 | Wezer | wezer.vercel.app | Weather anomaly tracker |
 

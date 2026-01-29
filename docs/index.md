@@ -51,7 +51,7 @@ pnpm build
 |---------|-------------|----------|
 | Pomo | Pomodoro timer | pomo-coral-eight.vercel.app |
 | Guide To | Music guides | guideto.vercel.app |
-| Baseline | Nicotine quit helper | baseline-lilac.vercel.app |
+| Baseline | Nicotine quit helper | basel.ink |
 | FitLog | Exercise tracker | fitlog-theta.vercel.app |
 | Wezer | Weather anomalies | wezer.vercel.app |
 

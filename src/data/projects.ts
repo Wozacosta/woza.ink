@@ -31,7 +31,7 @@ export const projects: Project[] = [
     description:
       "A PWA to help quit nicotine with motivation, progress tracking, and crisis support",
     color: "#10b981",
-    url: "https://baseline-lilac.vercel.app",
+    url: "https://basel.ink",
   },
   {
     slug: "fitlog",

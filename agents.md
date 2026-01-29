@@ -70,7 +70,7 @@ pnpm lint     # Run ESLint
 |---------|-------------|-----|
 | Pomo | Pomodoro timer with music links | pomo-coral-eight.vercel.app |
 | Guide To | Music guides platform | guideto.vercel.app |
-| Baseline | Nicotine quit support PWA | baseline-lilac.vercel.app |
+| Baseline | Nicotine quit support PWA | basel.ink |
 | FitLog | Exercise tracking app | fitlog-theta.vercel.app |
 | Wezer | Weather anomaly tracker | wezer.vercel.app |
 

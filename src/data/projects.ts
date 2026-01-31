@@ -14,7 +14,7 @@ export const projects: Project[] = [
     description:
       "A simple, elegant Pomodoro timer with concentration music links and productivity tracking",
     color: "#ef4444",
-    url: "https://pomo-coral-eight.vercel.app",
+    url: "https://pomodo.ink",
     github: "https://github.com/Wozacosta/pomo",
   },
   {
@@ -65,6 +65,6 @@ export const projects: Project[] = [
     description:
       "A local-first habit tracking PWA. Grid-based, offline-capable, no login required",
     color: "#6366f1",
-    url: "https://progress-nine-theta.vercel.app",
+    url: "https://habitu.xyz",
   },
 ];

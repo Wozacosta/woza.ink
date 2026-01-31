@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { RssLink } from "@/components/RssLink";
@@ -41,6 +42,7 @@ export default function RootLayout({
           <ThemeToggle />
         </div>
         {children}
+        <Analytics />
       </body>
     </html>
   );

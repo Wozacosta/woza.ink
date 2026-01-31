@@ -59,4 +59,12 @@ export const projects: Project[] = [
     url: "https://leplein.vercel.app",
     github: "https://github.com/Wozacosta/leplein",
   },
+  {
+    slug: "progress",
+    title: "Progress",
+    description:
+      "A local-first habit tracking PWA. Grid-based, offline-capable, no login required",
+    color: "#6366f1",
+    url: "https://progress-nine-theta.vercel.app",
+  },
 ];

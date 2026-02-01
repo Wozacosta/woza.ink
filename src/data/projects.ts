@@ -56,7 +56,7 @@ export const projects: Project[] = [
     description:
       "A mobile-first web app for finding the cheapest fuel prices near you in France, using real-time data from the official French government API",
     color: "#22c55e",
-    url: "https://leplein.vercel.app",
+    url: "https://leple.ink",
     github: "https://github.com/Wozacosta/leplein",
   },
   {

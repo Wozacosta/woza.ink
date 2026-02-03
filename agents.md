@@ -43,8 +43,9 @@ src/
 ├── content/
 │   └── blog/               # Blog posts in Markdown
 │       ├── building-pomo.md
-│       ├── why-i-build.md
-│       └── learning-nextjs.md
+│       ├── exploring-x401-standard.md
+│       ├── what-is-rss.md
+│       └── why-i-build.md
 ├── data/
 │   ├── projects.ts         # Project metadata (external URLs)
 │   └── blog.ts             # Blog post metadata and content loader

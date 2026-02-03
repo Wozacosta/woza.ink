@@ -43,7 +43,7 @@ src/
 ├── content/
 │   └── blog/               # Blog posts in Markdown
 │       ├── building-pomo.md
-│       ├── exploring-x401-standard.md
+│       ├── exploring-x402-standard.md
 │       ├── what-is-rss.md
 │       └── why-i-build.md
 ├── data/

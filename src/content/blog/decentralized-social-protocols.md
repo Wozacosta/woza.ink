@@ -1,330 +1,148 @@
 ---
-title: "The Four Protocols Trying to Replace Twitter"
+title: "The Four Protocols Trying to Replace Twitter (and why they'll keep arguing about moderation)"
 date: "2026-02-18"
-description: "Nostr, Bluesky, Mastodon, and Farcaster all want to decentralize social media. They disagree on almost everything about how to do it."
-tags: ["web", "privacy", "open-source"]
+description: "Nostr, AT Protocol, ActivityPub, and Farcaster — what they are, how they differ, and why any of this actually matters."
+tags: ["web", "decentralized", "social", "protocols"]
 ---
 
 # The Four Protocols Trying to Replace Twitter
 
-Every time a centralized platform implodes — a policy change, an acquisition, an erratic new owner — the same conversation starts: "We should decentralize social media."
-
-The interesting thing is that people are actually trying. And they've come up with four fundamentally different answers to the same question: how do you build a social network that no single company can control?
-
-The answers are **Nostr**, **AT Protocol** (Bluesky), **ActivityPub** (Mastodon), and **Farcaster**. Each makes different bets on what decentralization means, what trade-offs are acceptable, and what the actual problem is.
-
-Let's look at the protocols underneath.
-
-## Nostr: Keys, Events, and Nothing Else
-
-Nostr stands for "Notes and Other Stuff Transmitted by Relays." It's the most radical of the four — not because of what it includes, but because of what it doesn't.
-
-The entire protocol has three concepts: **keys**, **events**, and **relays**.
-
-Your identity is a cryptographic key pair using [secp256k1](https://en.bitcoin.it/wiki/Secp256k1) (the same curve as Bitcoin). Your public key is your identity. Your private key signs everything you post. There's no username, no email, no server account. You *are* your key.
-
-Everything you do — posting, liking, following, updating your profile — is an **event**: a signed JSON blob with a kind number, some content, and your signature. That's the entire data model. Kind 0 is metadata. Kind 1 is a text note. Kind 3 is your contact list. The protocol is extended through community proposals called [**NIPs**](https://nips.nostr.com/) (Nostr Implementation Possibilities), which define new event kinds and behaviors.
-
-Events are published to **relays** — simple servers that accept, store, and serve events over WebSockets. Anyone can run a relay. Relays don't talk to each other. There's no federation, no consensus, no coordination. Your client connects to multiple relays and stitches together a view of the world.
-
-```
-Nostr Architecture
-
-  ┌──────────┐     signs event      ┌────────────────────────┐
-  │ Private  │ ──────────────────►  │  Event (JSON)          │
-  │ Key      │                      │  {                     │
-  └──────────┘                      │    kind: 1,            │
-                                    │    content: "hello",   │
-                                    │    pubkey: "abc...",   │
-                                    │    sig: "def..."       │
-                                    │  }                     │
-                                    └───────┬────────────────┘
-                                            │
-                              published to multiple relays
-                                            │
-                      ┌─────────────────────┼─────────────────────┐
-                      ▼                     ▼                     ▼
-               ┌────────────┐       ┌────────────┐       ┌────────────┐
-               │  Relay A   │       │  Relay B   │       │  Relay C   │
-               │  (anyone   │       │  (anyone   │       │  (anyone   │
-               │  can run)  │       │  can run)  │       │  can run)  │
-               └────────────┘       └────────────┘       └────────────┘
-                      ▲                     ▲                     ▲
-                      │                     │                     │
-                      └─────────────────────┼─────────────────────┘
-                                            │
-                                    client connects to
-                                    multiple relays via
-                                    WebSockets, stitches
-                                    together a feed
-                                            │
-                                     ┌──────┴──────┐
-                                     │   Client    │
-                                     │ (Damus,     │
-                                     │  Primal,    │
-                                     │  Amethyst)  │
-                                     └─────────────┘
-```
-
-If a relay bans you, you publish to different relays. If a relay goes down, your signed events can be re-published anywhere. Your identity is your key — it doesn't live on any server.
-
-The trade-off is obvious: the UX is rough. Key management is hard. Losing your private key means losing your identity permanently. Spam filtering is relay-by-relay. Discovery relies on the "outbox model" — clients look up which relays you publish to and connect directly.
-
-But there's an elegance to the simplicity. Nostr doesn't need DNS, doesn't need a blockchain, doesn't need a foundation. It needs WebSockets and cryptographic signatures. Jack Dorsey donated $10 million to Nostr development in 2025, which is ironic given that the protocol's entire philosophy is that it shouldn't need anyone's permission or money to exist.
-
-## AT Protocol: The Layered Architecture
-
-Bluesky's [AT Protocol](https://atproto.com/) (Authenticated Transfer Protocol) takes the opposite approach from Nostr. Where Nostr is minimal, AT Protocol is engineered.
-
-The architecture has three layers:
-
-**Personal Data Servers (PDS)** store your data. Think of them like your email provider — they host your posts, follows, likes, and profile in a signed data repository. You can self-host a PDS or use a provider (Bluesky runs the largest one). The key design goal: you can migrate your account to a different PDS without the server's cooperation. Your data is signed and your identity is anchored to a [DID](https://www.w3.org/TR/did-core/) (Decentralized Identifier), not to any particular server.
-
-**Relays** aggregate data from all PDSes into a single stream — the "firehose." Every change happening anywhere on the network flows through relays in real time. This is the indexing layer. It's expensive to run (though the [2025 roadmap](https://docs.bsky.app/blog/2025-protocol-roadmap-spring) has focused on making relays cheaper), and currently Bluesky operates the dominant one.
-
-**AppViews** consume the firehose and serve processed data to client apps. An AppView is essentially an API backend — it takes the raw stream, indexes it, and presents it in whatever shape a particular application needs. Bluesky's microblogging app is one AppView. But others exist: Frontpage (a Hacker News-style link aggregator), Smoke Signal (an RSVP service), and others, all reading from the same protocol.
-
-```
-AT Protocol Architecture
-
-┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐
-│  PDS 1  │  │  PDS 2  │  │  PDS 3  │  │  PDS n  │
-│ (Bluesky│  │ (self-  │  │ (third  │  │  ...    │
-│  hosted)│  │  hosted)│  │  party) │  │         │
-└────┬────┘  └────┬────┘  └────┬────┘  └────┬────┘
-     │            │            │            │
-     └────────────┴─────┬──────┴────────────┘
-                        │
-                   Firehose (all changes, real-time)
-                        │
-                        ▼
-              ┌──────────────────┐
-              │      Relay       │
-              │  (aggregates all │
-              │   PDS streams)   │
-              └────────┬─────────┘
-                       │
-          ┌────────────┼────────────┐
-          ▼            ▼            ▼
-   ┌────────────┐ ┌──────────┐ ┌──────────────┐
-   │  Bluesky   │ │Frontpage │ │ Smoke Signal │
-   │  AppView   │ │ AppView  │ │   AppView    │
-   │(microblog) │ │ (links)  │ │   (RSVPs)    │
-   └──────┬─────┘ └────┬─────┘ └──────┬───────┘
-          │             │              │
-          ▼             ▼              ▼
-      ┌────────┐  ┌──────────┐  ┌───────────┐
-      │ Bluesky│  │Frontpage │  │Smoke Signal│
-      │  App   │  │   App    │  │    App     │
-      └────────┘  └──────────┘  └───────────┘
-```
-
-Everything is tied together by **Lexicons** — a global schema language that defines what data structures look like. Different AppViews can define their own lexicons, so the same protocol can support microblogging, video sharing, or anything else.
-
-Identity uses DIDs and domain-based handles. Your handle can be your own domain (mine could be `@woza.ink`), which means you verify your identity through DNS rather than trusting a central authority.
-
-The AT Protocol is going through [IETF standardization](https://datatracker.ietf.org/doc/draft-mahy-atproto-overview/) as of January 2026. There are about 2,000 third-party PDS servers, though most are tiny. The network has crossed 20 million users, maintained by around 15 engineers.
-
-The criticism: despite the federated architecture, the network currently depends heavily on Bluesky's infrastructure. The relay and AppView layers are technically open but practically centralized. Bluesky acknowledges this and calls true multi-stakeholder infrastructure ["hard decentralization"](https://docs.bsky.app/blog/protocol-checkin-fall-2025) — a goal, not a current state.
-
-## ActivityPub: The Fediverse Standard
-
-[ActivityPub](https://www.w3.org/TR/activitypub/) is the oldest of the four, published as a W3C Recommendation in January 2018. It's the protocol behind [Mastodon](https://joinmastodon.org/), but also [PeerTube](https://joinpeertube.org/) (video), [Pixelfed](https://pixelfed.org/) (photos), [Lemmy](https://join-lemmy.org/) (link aggregation), [BookWyrm](https://bookwyrm.social/) (book reviews), and dozens of other platforms. Together, they form the **Fediverse** — a network of independently operated servers that speak the same language.
-
-The protocol defines two things: a **client-to-server API** for creating and modifying content, and a **server-to-server protocol** for delivering content across instances. It uses [ActivityStreams 2.0](https://www.w3.org/TR/activitystreams-core/) (JSON-LD) as its data format, with three core types: Objects (content), Activities (actions on content), and Actors (users, groups, services).
-
-Every actor has an **inbox** and an **outbox**. Publishing is straightforward: you create an activity, it goes to your outbox, your server delivers it (via HTTP POST) to the inboxes of everyone in the activity's addressing fields. Receiving servers process it and update their local state.
-
-```
-ActivityPub: Federation Between Instances
-
-┌──────────────────────┐            ┌──────────────────────┐
-│   mastodon.social    │            │   fosstodon.org      │
-│                      │            │                      │
-│  @alice              │            │  @bob                │
-│  ┌───────┐           │   HTTP     │           ┌───────┐  │
-│  │Outbox │──── Create Post ──────────────────►│ Inbox │  │
-│  └───────┘           │   POST     │           └───────┘  │
-│                      │            │                      │
-│  ┌───────┐           │            │           ┌───────┐  │
-│  │ Inbox │◄──── Like ────────────────────────│Outbox │  │
-│  └───────┘           │            │           └───────┘  │
-│                      │            │                      │
-│  Own rules,          │            │  Own rules,          │
-│  own moderation,     │            │  own moderation,     │
-│  own database        │            │  own database        │
-└──────────────────────┘            └──────────────────────┘
-         │                                     │
-         └────────── The Fediverse ────────────┘
-               (thousands of instances)
-
-Also speaks ActivityPub:
-  PeerTube (video) • Pixelfed (photos) • Lemmy (links)
-  BookWyrm (books) • WriteFreely (blogs) • Threads (partial)
-```
-
-The federation model is instance-based. You create an account on a Mastodon instance — say, `@alice@mastodon.social` — and that instance is your home. You can follow and interact with users on any other ActivityPub instance. Each instance sets its own rules, moderation policies, and content guidelines. Admins can block entire instances they find problematic.
-
-This is both the strength and the weakness. Instance-based identity means your username is tied to a server. If that server shuts down, your identity goes with it. Account migration exists but is limited — you can move followers, but your post history stays behind. This is a known pain point and an active area of work, but it's not solved yet.
-
-The Fediverse has over 15 million users across thousands of servers. Meta's Threads has implemented partial ActivityPub support — crossposting works, but full two-way federation is still incomplete as of 2025. WordPress added ActivityPub support in 2025, which is potentially significant given how much of the web runs on WordPress.
-
-The W3C announced a new Social Web Working Group starting January 2026 to maintain and evolve the protocol. There's some tension here: the only two organizations active in the Fediverse that are paid W3C members are Meta and the Social Web Foundation (which receives Meta funding). Mastodon gGmbH and other major Fediverse developers aren't W3C members, creating a governance gap between protocol stewardship and the people actually building the software.
-
-## Farcaster: The Crypto-Native Approach
-
-[Farcaster](https://docs.farcaster.xyz/) takes a different bet: put identity on a blockchain, put everything else off it.
-
-The protocol uses a "sufficiently decentralized" hybrid architecture. Three smart contracts on [OP Mainnet](https://optimism.io/) (an Ethereum Layer 2) handle the critical stuff: **IdRegistry** maps Farcaster IDs to Ethereum wallet addresses, **KeyRegistry** manages which signing keys can post on behalf of an account, and **StorageRegistry** tracks how much storage an account has paid for (about $7/year for 5,000 posts plus reactions and follows).
-
-Everything else — posts ("casts"), follows, reactions, profiles — lives offchain in a peer-to-peer network. In April 2025, Farcaster upgraded from a CRDT-based system to **Snapchain**, a consensus layer built on Malachite BFT that handles 10,000+ transactions per second with sub-second finality. The data is validated by 11 community-elected validators.
-
-```
-Farcaster: Hybrid Onchain/Offchain Architecture
-
-┌─── Onchain (OP Mainnet) ──────────────────────────────────┐
-│                                                           │
-│  IdRegistry        KeyRegistry       StorageRegistry      │
-│  (FID → wallet)    (signing keys)    ($7/yr per account)  │
-│                                                           │
-│  ✓ Security-critical    ✓ Immutable    ✓ Verifiable       │
-└────────────────────────────┬──────────────────────────────┘
-                             │
-              offchain systems verify
-              signatures against
-              onchain registries
-                             │
-┌────────────────────────────▼──────────────────────────────┐
-│                                                           │
-│                  Snapchain Network                        │
-│              (Malachite BFT consensus)                    │
-│                                                           │
-│  Casts    Follows    Reactions    Profiles                 │
-│                                                           │
-│  10,000+ TPS  •  ~780ms finality  •  11 validators       │
-└────────────────────────────┬──────────────────────────────┘
-                             │
-                ┌────────────┼────────────┐
-                ▼            ▼            ▼
-          ┌──────────┐ ┌──────────┐ ┌──────────┐
-          │ Warpcast │ │ Supercast│ │ Frames   │
-          │ (app)    │ │  (app)   │ │(in-feed  │
-          │          │ │          │ │ dApps)   │
-          └──────────┘ └──────────┘ └──────────┘
-```
-
-The crypto-native identity opens up interesting possibilities. **Frames** let developers embed interactive applications directly in posts — an NFT mint button, a token swap, a DAO vote. It's the most composable of the four protocols, if you're already in the Ethereum ecosystem.
-
-The challenge is that Farcaster's audience is almost entirely crypto-native. Daily active users have settled around 40,000–60,000 as of late 2025, despite the technical infrastructure being designed for millions. The protocol raised $150 million in venture funding with 80,000 daily users — a ratio that raised eyebrows. In January 2026, Farcaster transitioned to new ownership under Neynar, with the original company planning to return the $180 million it had raised.
-
-The technical architecture is impressive. The adoption story is still being written.
-
-## The Protocols, Compared
-
-Here's where they diverge on the questions that matter:
-
-```
-┌──────────────────┬──────────────┬──────────────┬──────────────┬──────────────┐
-│                  │    Nostr     │  AT Protocol │  ActivityPub │   Farcaster  │
-├──────────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-│ Identity         │ Crypto key   │ DID + domain │ @user@server │ ETH wallet   │
-│ Portability      │ ✓ Total      │ ✓ Designed   │ ✗ Partial    │ ✓ Onchain    │
-│ Data storage     │ Relays       │ PDS (signed) │ Instance DB  │ Snapchain    │
-│ Federation       │ None (P2P)   │ Layered      │ Server-based │ Hybrid       │
-│ Governance       │ Nobody       │ Bluesky/IETF │ W3C          │ Neynar       │
-│ Moderation       │ Per-relay    │ Pluggable    │ Per-instance │ Per-app      │
-│ Encryption       │ NIP-44       │ None yet     │ None native  │ None native  │
-│ Users (approx)   │ ~500K        │ ~20M         │ ~15M         │ ~60K DAU     │
-│ Spec status      │ Community    │ IETF draft   │ W3C Rec      │ Internal     │
-│ Blockchain req   │ ✗ No         │ ✗ No         │ ✗ No         │ ✓ Yes (L2)   │
-│ Year launched    │ 2023         │ 2023         │ 2018         │ 2022         │
-└──────────────────┴──────────────┴──────────────┴──────────────┴──────────────┘
-```
-
-### Identity
-
-- **Nostr**: Cryptographic key pair. You are your key. Lose it, lose everything
-- **AT Protocol**: DIDs anchored to domain names. Portable across servers. You can be `@yourname.com`
-- **ActivityPub**: Server-bound. `@user@instance.com`. Moving means starting over (mostly)
-- **Farcaster**: Ethereum wallet address mapped to an onchain ID. Your identity is an NFT, essentially
-
-### Data Ownership
-
-- **Nostr**: Your signed events can be re-published to any relay. True portability
-- **AT Protocol**: Signed data repositories. Designed for migration without server cooperation
-- **ActivityPub**: Data lives on your instance. Migration is partial — followers move, posts don't
-- **Farcaster**: Identity is onchain and portable. Social data lives in the Snapchain network
-
-### Decentralization Model
-
-- **Nostr**: No coordination. Relays are independent. Maximum chaos, maximum censorship resistance
-- **AT Protocol**: Federated layers (PDS, Relay, AppView). Designed for decentralization, currently fairly centralized in practice
-- **ActivityPub**: Instance-based federation. Genuinely distributed, but identity is fragile
-- **Farcaster**: Hybrid. Onchain identity, offchain data with BFT consensus. Decentralized-ish
-
-### Governance
-
-- **Nostr**: Nobody. Community NIPs. No foundation required
-- **AT Protocol**: Bluesky PBC, moving toward IETF standardization
-- **ActivityPub**: W3C, with governance tensions between corporate members and actual developers
-- **Farcaster**: Originally Merkle Manufactory (VC-funded), now Neynar
-
-### Moderation
-
-- **Nostr**: Relay-level. Each relay decides what to host. No global moderation
-- **AT Protocol**: Labelers and algorithmic feeds. Moderation is a pluggable service, not a platform decision
-- **ActivityPub**: Instance-level. Admins set rules and can defederate from problematic instances
-- **Farcaster**: App-level. The Warpcast client has its own moderation; the protocol doesn't enforce it
-
-## What Actually Matters
-
-These protocols aren't competing to solve the same problem. They're competing visions of what the problem *is*.
-
-**Nostr** says the problem is that any intermediary can be compromised, so eliminate intermediaries. Build on cryptography and nothing else.
-
-**AT Protocol** says the problem is data lock-in and algorithmic control, so make data portable and algorithms choosable. Engineer the layers carefully.
-
-**ActivityPub** says the problem is centralized ownership, so federate the servers and let communities self-govern. Use existing web standards.
-
-**Farcaster** says the problem is that identity should be an asset you own, so put it on a blockchain and build composable social primitives on top.
-
-None of them have won. All of them work. The AT Protocol has the most users (20 million on Bluesky). ActivityPub has the broadest ecosystem (dozens of different apps speaking the same protocol). Nostr has the most radical architecture. Farcaster has the most sophisticated onchain integration.
-
-The real test isn't technical — it's whether any of these protocols can survive the moment when they become large enough to matter. When governments want to regulate them, when spam becomes overwhelming, when the people running infrastructure get tired of doing it for free.
-
-Centralized platforms fail in predictable ways: acquisition, enshittification, policy capture. Decentralized protocols fail in different ways: governance disputes, infrastructure costs, and the simple reality that running a server is harder than creating an account.
-
-We're still early. But at least we have options. And unlike the last decade of social media, the data formats are open, the code is auditable, and if any of these platforms betrays its users — the protocol survives.
-
-## Further Reading
-
-**Nostr**
-- [Nostr Protocol Repository](https://github.com/nostr-protocol/nostr) — The protocol spec and overview
-- [NIPs (Nostr Implementation Possibilities)](https://nips.nostr.com/) — All current protocol extensions
-- [NIP-01: Basic Protocol Flow](https://nips.nostr.com/1) — The core event structure specification
-- [nostr.com](https://nostr.com/) — Official site with client directory and getting started guides
-- [Nostr.how](https://nostr.how/en/the-protocol) — Community-maintained protocol explainer
-
-**AT Protocol (Bluesky)**
-- [AT Protocol Documentation](https://atproto.com/) — Official protocol specs
-- [Federation Architecture](https://docs.bsky.app/docs/advanced-guides/federation-architecture) — How PDS, Relay, and AppView work together
-- [2025 Protocol Roadmap](https://docs.bsky.app/blog/2025-protocol-roadmap-spring) — Sync v1.1, OAuth scopes, and relay improvements
-- [Protocol Check-in (Fall 2025)](https://docs.bsky.app/blog/protocol-checkin-fall-2025) — Hard decentralization goals and AT 1.0
-- [Introduction to AT Protocol](https://mackuba.eu/2025/08/20/introduction-to-atproto/) — Excellent independent technical overview
-
-**ActivityPub (Mastodon / Fediverse)**
-- [ActivityPub W3C Specification](https://www.w3.org/TR/activitypub/) — The official standard
-- [ActivityStreams 2.0](https://www.w3.org/TR/activitystreams-core/) — The data format underneath ActivityPub
-- [Mastodon Documentation](https://docs.joinmastodon.org/) — How Mastodon implements ActivityPub
-- [Fediverse Observer](https://fediverse.observer/) — Live stats on the Fediverse network
-- [joinmastodon.org](https://joinmastodon.org/) — Find an instance and get started
-
-**Farcaster**
-- [Farcaster Protocol Documentation](https://docs.farcaster.xyz/) — Architecture overview and specs
-- [Farcaster Architecture Overview](https://docs.farcaster.xyz/learn/architecture/overview) — Onchain/offchain split explained
-- [Farcaster on GitHub](https://github.com/farcasterxyz) — Protocol and hub implementations
-- [Farcaster in 2025: The Protocol Paradox](https://blockeden.xyz/blog/2025/10/28/farcaster-in-2025-the-protocol-paradox/) — Honest assessment of adoption challenges
+Bold promise: decentralized social is not one thing. It's at least four. Each one tries to solve parts of the same problem — too much central control, too little portability, and user experience that either delights or annoys depending on how strong your patience is.
+
+This guide cuts the noise. Short, punchy, and slightly salty where appropriate. Expect: a quick TL;DR, a few callouts, and a practical comparison so you can stop asking “which one will win?” and start asking “which one helps *my* use case?”
+
+TL;DR — quick, for impatient humans
+- Nostr: ridiculously simple. Public keys + events = proto-social. Minimal assumptions.
+- AT Protocol (Bluesky): layered architecture focused on discoverability and portability.
+- ActivityPub: the W3C-fediverse staple. Federation, rooms, and a lot of real-world usage (Mastodon being the most visible).
+- Farcaster: crypto-native social — developer-first, wallet-friendly vibes.
+
+Why you should care
+- Ownership: moving identity and content away from a single company.
+- Interop: the ability to move or read your content across clients/servers.
+- Resilience: fewer single points of failure and less "platform-as-king" behavior.
 
 ---
 
-*Interested in decentralized protocols? Check out my article on [Matrix](/blog/matrix-protocol), the open protocol for encrypted messaging, or [Signal vs Telegram](/blog/signal-vs-telegram) for a look at what "encrypted" really means.*
+## Quick callout: Not a magic bullet
+> Decentralized does not equal utopia. Different protocols trade off complexity, privacy, moderation, and UX in different ways. Pick for the trade-offs, not for the hype.
+
+---
+
+## Nostr: Keys, events, and delightful minimalism
+
+Nostr is... delightfully tiny in its mental model: you have keypairs, you publish *events*, and clients show events. There is no canonical server; relays are optional infrastructure that help distribute messages.
+
+Why people like it
+- Simple primitives make it easy to implement clients.
+- Great for experimentation and for folks who want minimal reliance on centralized infra.
+
+Trade-offs
+- Minimalism means fewer built-in moderation primitives and less standardization around identity and content discovery.
+- UX and feature richness depend heavily on the client ecosystem, so experiences vary widely.
+
+When to reach for Nostr
+- You want a lightweight social pipe that’s easy to build on.
+- You're fine leaning on client-side and relay-side features instead of expecting a full-featured server spec.
+
+---
+
+## AT Protocol: A layered attempt at portability and moderation
+
+The AT Protocol (associated with Bluesky) aims to structure social stacks into layers that separate discovery, moderation, and identity in ways meant to improve portability and user control.
+
+Why people like it
+- Designed with portability in mind — the idea that profiles and content should be able to move between providers more smoothly.
+- Focus on moderation primitives that let communities set policies without a single central arbiter.
+
+Trade-offs
+- More structure means more spec work and a steeper bar for implementors.
+- Real-world success depends on client and host adoption; the protocol alone doesn't guarantee delightful UX.
+
+When to reach for AT Protocol
+- You care about moving your identity/data between providers.
+- You want richer moderation tools baked into the architecture rather than glued on later.
+
+---
+
+## ActivityPub: federation, federated servers, and the fediverse
+
+ActivityPub is a W3C standard that powers the "fediverse" — a network of federated servers where users on different servers can interact. Mastodon is the most visible ActivityPub-based ecosystem, but there are many others.
+
+Why people like it
+- Proven in production: real communities, real moderation practices, real movement of people.
+- Federation enables diversity of server rules, culture, and governance.
+
+Trade-offs
+- Federation complexity: server operators need to handle spam, abuse, moderation, and scaling.
+- UX fragmentation: different servers can behave differently, and bridges to other ecosystems can be messy.
+
+When to reach for ActivityPub
+- You want mature, production-ready federation with plenty of clients and admins.
+- You accept server ops as part of the cost of decentralization.
+
+---
+
+## Farcaster: crypto-native, developer-first social
+
+Farcaster approaches social through a web3-informed lens: identity and developer tooling are central. It's attractive for folks who want on-chain/crypto primitives to play nicely with social primitives.
+
+Why people like it
+- Developer-first culture; emphasis on extensible identity models and composable apps.
+- Integrates well with wallet-based identities and incentives in some implementations.
+
+Trade-offs
+- Web3 integration brings additional complexity and a different threat model.
+- Buyer beware: crypto-native communities can be gatekept by tooling and token dynamics.
+
+When to reach for Farcaster
+- You're building apps that want wallet-native identity or crypto features baked into social flows.
+- You care about composability between social apps and web3 tooling.
+
+---
+
+## Protocols, compared — what actually differs
+
+- Identity: Nostr uses raw keypairs; ActivityPub uses account IDs on homeservers; AT Protocol focuses on portability of identity; Farcaster leans into wallet-based identities.
+- Data ownership: All aim to decentralize ownership to varying degrees. ActivityPub gives server-level control; others emphasize client-side or user-owned keys.
+- Decentralization model: Nostr is relay-centric and very minimal; ActivityPub is server federation; AT Protocol is layered hosts; Farcaster is application-layer with crypto identity glue.
+- Governance and moderation: Some protocols build primitives for moderation (AT Protocol), others leave it to server operators or relays (ActivityPub, Nostr). Expect energetic debates here.
+- UX maturity: ActivityPub (Mastodon) leads in real-world user-facing maturity. Nostr and Farcaster are fast-moving and experimental. AT Protocol is positioned for improved portability but still depends on ecosystem adoption.
+
+---
+
+## What actually matters (practical lens)
+1. Will people use it? Network effects beat tech in the social space. Protocols that make onboarding easy and that have at least one polished client tend to win adoption.
+2. Can communities govern at scale? Tools that let communities set rules, moderate content, and evolve policy without central shutdowns are more robust.
+3. Is identity portable or at least recoverable? Losing an account because you can't migrate your followers/content is a poor user experience.
+4. Is the UX good enough for non-technical people? If the setup resembles a devops task, mainstream adoption stalls.
+
+---
+
+> Quick engineering note: building on decentralized protocols means you should design for eventual consistency, offline-first behavior, and stronger client-side heuristics (spam filtering, display rules, local moderation UI).
+
+---
+
+## TL;DR — Should you care, and which one to pick?
+
+- You want experimentation, quick hacks, or minimal servers: check out `Nostr`.
+- You want portability and built-in moderation primitives: watch the `AT Protocol` ecosystem.
+- You want production-grade federation with a bunch of users and many clients: `ActivityPub` (Mastodon & friends).
+- You're building web3/social hybrids or want wallet-native identity: `Farcaster` might be your playground.
+
+Remember: these are not mutually exclusive. Bridges, translators, and multi-protocol clients are already part of the landscape.
+
+---
+
+## Further reading (starter links)
+- Nostr spec and community writeups (search "Nostr protocol")
+- AT Protocol / Bluesky docs (look for "AT Protocol" and "Bluesky")
+- ActivityPub W3C specification and Mastodon guides
+- Farcaster developer docs and community resources
+
+If you want, I can:
+- Add a comparison matrix for embedding in the site,
+- Draft micro-copy for a "Which protocol is right for me?" quiz,
+- Or make a lightweight one-page infographic summarizing the trade-offs.
+
+Which one do you want first? Make it funky and I will sprinkle some neon callouts.

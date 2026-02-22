@@ -7,40 +7,55 @@ tags: ["personal", "career", "motivation"]
 
 # Why I Build Things
 
-There's a question I get asked a lot: "Why do you spend your free time building side projects?"
+One line: I build things because making tiny, imperfect stuff is the fastest path from "idea" to "I know something now."  
+Subtitle: less theory, more chaos. More shipping, fewer meetings. ✨
 
-It's a fair question. After a full day of coding at work, the last thing most people want to do is... more coding. But for me, side projects serve a different purpose than work.
+> ⚡ Pro tip: if you can finish it in a weekend, you're learning faster than if you read three docs and never touch the keyboard.
 
-## Work vs. Play
+## The Hook: Why side projects beat passive learning
 
-At work, I'm solving other people's problems. The constraints are set by business requirements, legacy code, and team decisions made years ago. It's valuable work, but it's not *my* work.
+At work I solve other people's constraints. Side projects are where I break rules, try new tools, and learn how things actually fail in the wild. It's like a low-stakes lab for curiosity.
 
-Side projects are different. They're playgrounds where I can:
+- Work gives you requirements, budgets, and legacy code.
+- Side projects give you *permission* to be weird, to `refactor` with abandon, and to throw away things that don't work.
 
-- Try new technologies without risk
-- Build exactly what I want, how I want
-- Ship something in a weekend instead of a quarter
+Yes, sometimes they fail. Good. Failure is feedback served quickly — the most honest kind.
 
-## The Compound Effect
+> NOTE: Shipping is a pressure test. A todo app that sits on your laptop is a draft. A todo app that other humans actually click is a mirror.
 
-Each project I build teaches me something. Pomo taught me about state management patterns. Wezer taught me about working with weather APIs. FitLog taught me about data visualization.
+## How I treat side projects (a practical playbook)
 
-These lessons compound. The more I build, the faster I can build the next thing. The patterns become intuitive. The debugging becomes quicker.
+1. Start tiny. One feature. One goal. One weekend.
+2. Pick a friction-reducing stack (something you already grok).
+3. Ship the core, then iterate. Release > perfect.
+4. Keep the scope mercilessly small — scope creep is the silent productivity killer.
+5. Learn, log, move on. Every project should teach one concrete thing (auth patterns, DB migrations, UX fail cases).
 
-## Staying Sharp
+I use tiny experiments to test ideas: a two-hour prototype, a weekend MVP, then either a polish pass or a graceful sunset. The iteration rhythm matters more than the idea quality.
 
-The tech industry moves fast. If you're not learning, you're falling behind. Side projects are my way of staying current without it feeling like homework.
+## What I learn (and what compounds)
 
-When I want to learn a new framework, I don't read the docs and call it a day. I build something with it. That's when the real learning happens.
+Each project teaches a micro-skill: state management patterns, deployment gotchas, API ergonomics, or the mental model behind a library. These micro-skills compound — they make the next project faster and better. It’s not just knowledge accumulation, it’s muscle memory.
 
-## The Joy of Shipping
+> Pull-quote: "Small projects are compound interest for craftsmanship."
 
-There's something deeply satisfying about taking an idea from your head and putting it on the internet for anyone to use. It doesn't matter if 10 people use it or 10,000. The act of shipping is the reward.
+## The joy of shipping
 
-## It's Not About the Money
+There’s a real, weird joy in sending an update and watching one or two strangers use it. Shipping makes learning visible. It transforms private experiments into public signals.
 
-None of my side projects make money. That's intentional. The moment I start thinking about monetization, the fun disappears. These projects are for me, and if others find them useful, that's a bonus.
+## Not about money (usually)
 
----
+Monetization shifts intentions. Most of my side projects are intentionally non-commercial — they’re playgrounds, not startups. That freedom allows bolder choices.
 
-*What drives you to build? I'd love to hear your story.*
+## TL;DR — TL;Funky (short, punchy, and actionable) 🚀
+
+- Ship over polish. Try > theorize.  
+- Start tiny: one feature, one weekend.  
+- Learn one thing per project. Make it explicit.  
+- Keep scope small — scope kills experiments.  
+- Fail fast, log lessons, move on.  
+- If you want to build: start today and publish something imperfect.
+
+If you build something, ping me. I love seeing experiments — drop a link, a weird bug, or a screenshot. Let’s trade notes and ship more weird, useful things. 🙌
+
+*— If you're curious about what I learned building Pomo, FitLog, or other small weirdos, check the rest of the blog. Or just start building. The rest follows.*

@@ -12,6 +12,17 @@ export interface ReadingItem {
 
 export const readingItems: ReadingItem[] = [
   {
+    slug: "web4-birth-of-superintelligent-life",
+    title: "Web 4.0: The Birth of Superintelligent Life",
+    url: "http://web4.ai/",
+    source: "Conway Research",
+    author: "Sigil Wen",
+    readDate: "2026-02-22",
+    description:
+      "A manifesto arguing that Web 4.0 is the era of autonomous AI agents that can earn, transact, and sustain themselves. Introduces Conway as infrastructure for AI to permissionlessly buy compute, deploy apps, and operate without human intervention.",
+    tags: ["AI", "crypto", "infrastructure", "web"],
+  },
+  {
     slug: "local-first-software",
     title: "Local-first software: You own your data, in spite of the cloud",
     url: "https://www.inkandswitch.com/local-first/",

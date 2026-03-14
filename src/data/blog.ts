@@ -72,3 +72,20 @@ export function getAllSlugs(): string[] {
     .filter((file) => file.endsWith(".md"))
     .map((file) => file.replace(".md", ""));
 }
+
+export function getReadTime(content: string): number {
+  const words = content.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
+
+export function getAdjacentPosts(slug: string): {
+  prev: BlogPost | null;
+  next: BlogPost | null;
+} {
+  const posts = getAllPosts(); // sorted newest first
+  const idx = posts.findIndex((p) => p.slug === slug);
+  return {
+    prev: idx > 0 ? posts[idx - 1] : null,
+    next: idx < posts.length - 1 ? posts[idx + 1] : null,
+  };
+}

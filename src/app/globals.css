@@ -5,6 +5,7 @@
 :root {
     --background: #faf8f5;
     --foreground: #1a1a1a;
+    --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace;
     color-scheme: light;
 }
 
@@ -12,6 +13,10 @@
     --background: #1a1a1a;
     --foreground: #faf8f5;
     color-scheme: dark;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,4 +31,51 @@ body {
 ::selection {
     background: var(--foreground);
     color: var(--background);
+}
+
+/* ── Entrance animation ─────────────────────────────────────── */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-slide-up {
+    animation: fadeSlideUp 0.4s ease-out both;
+}
+
+/* ── Prose enhancements ─────────────────────────────────────── */
+
+/* Drop cap on first paragraph of a post */
+.prose-drop-cap > p:first-of-type::first-letter {
+    float: left;
+    font-size: 3.5rem;
+    line-height: 0.8;
+    font-weight: 700;
+    margin-right: 0.1em;
+    margin-top: 0.05em;
+    color: var(--foreground);
+}
+
+/* Decorative opening quote mark on blockquotes */
+.prose blockquote {
+    position: relative;
+}
+
+.prose blockquote::before {
+    content: '\201C';
+    position: absolute;
+    left: -0.1em;
+    top: -0.3em;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--foreground);
+    opacity: 0.06;
+    font-family: Georgia, serif;
+    pointer-events: none;
 }

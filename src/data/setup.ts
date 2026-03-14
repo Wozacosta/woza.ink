@@ -106,6 +106,23 @@ export const setupCategories: SetupCategory[] = [
     ],
   },
   {
+    id: "terminal",
+    title: "Terminal",
+    description: "Where I actually spend most of my time.",
+    items: [
+      {
+        type: "post",
+        slug: "cmux-terminal-for-agentic-coding",
+        note: "My current daily driver. The notification rings alone justify the switch if you're running agents in parallel.",
+      },
+      {
+        type: "post",
+        slug: "dotfiles",
+        note: "The single highest-leverage thing you can do for your dev environment. stow makes the symlink management painless.",
+      },
+    ],
+  },
+  {
     id: "ai",
     title: "AI",
     description: "Tools and thinking around how I use AI day-to-day.",
@@ -135,6 +152,11 @@ export const setupCategories: SetupCategory[] = [
         channel: "Andrej Karpathy",
         note:
           "The clearest 1-hour explanation of how LLMs actually work, from someone who helped build them. Required viewing before having an opinion on AI.",
+      },
+      {
+        type: "video",
+        title: "My Opencode Workflow As A Senior Engineer",
+        url: "https://www.youtube.com/watch?v=UhRGHr7pgnU",
       },
     ],
   },

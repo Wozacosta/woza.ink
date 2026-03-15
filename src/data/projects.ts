@@ -67,4 +67,13 @@ export const projects: Project[] = [
     color: "#6366f1",
     url: "https://habitu.xyz",
   },
+  {
+    slug: "laterlist",
+    title: "LaterList",
+    description:
+      "Save any URL and read/watch it later. Items are auto-categorized using AI based on URL metadata. Local-first, no account needed",
+    color: "#f97316",
+    url: "https://laterlist.cc",
+    github: "https://github.com/Wozacosta/laterlist",
+  },
 ];

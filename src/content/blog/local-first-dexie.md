@@ -182,7 +182,8 @@ Not ideal when the server must be the sole authority (banking ledgers, some lega
 
 ---
 
-Want me to: 
-- add a small `sync` status component example, 
-- or convert some parts of your existing app to use Dexie with minimal code changes? 
-Say the word and I’ll make it snappy — funky styling included. 😎
+## Further reading
+
+- [Dexie.js documentation](https://dexie.org/docs/Tutorial/Getting-started) — getting started guide with framework-specific examples
+- [DexieCloud](https://dexie.org/cloud/) — the sync service; pricing, docs, and self-hosting options
+- [Local-first Software](https://www.inkandswitch.com/local-first/) — the original Ink & Switch essay that defined the term and the principles; still the best articulation of why this matters

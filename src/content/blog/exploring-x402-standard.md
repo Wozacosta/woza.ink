@@ -96,4 +96,4 @@ x402 isn't flashy, but it's pragmatic. It reduces impedance between services, gi
 
 If you're into standards that quietly make life better, read the spec and try returning a minimal x402 envelope from one service. You'll thank yourself next time a `403` shows up in prod.
 
-*Interested in related standards and protocols? You might like my pieces on `Matrix` and `RSS` — open protocols that actually work for users.*
+*Interested in related standards and protocols? See [Matrix: the Protocol That Wants to Fix Messaging](/blog/matrix-protocol) and [What is RSS?](/blog/what-is-rss) — two open protocols that quietly make the internet work better.*

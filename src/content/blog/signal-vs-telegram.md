@@ -159,10 +159,10 @@ Both have their place. The key is not to confuse marketing with guarantees. If y
 
 ---
 
-Further reading
-- Signal Protocol spec and audits
-- Telegram MTProto documentation (read critically)
-- Practical guides on metadata minimization
-- Use an RSS reader to follow privacy/security researchers — you shouldn't rely on headlines.
+## Further reading
 
-Got a use case? Tell me who you're protecting against and I’ll recommend the right workflow (and whether you should add secure backups, device hygiene steps, or alternatives).
+- [Signal Protocol specifications](https://signal.org/docs/) — X3DH, Double Ratchet, PQXDH, and Sesame, all publicly documented
+- [Telegram MTProto documentation](https://core.telegram.org/mtproto) — read critically; note what it covers (cloud chat transport encryption) vs. what it doesn't address (server-side key access)
+- [EFF Surveillance Self-Defense](https://ssd.eff.org/) — practical threat modeling and tool selection guides from the Electronic Frontier Foundation
+- [Cure53 audit of Signal Android](https://cure53.de/pentest-report_signal-android.pdf) — one of the more thorough third-party security audits of a messaging app; useful for understanding what "audited" actually means in practice
+- [What is RSS?](/blog/what-is-rss) — follow privacy and security researchers via RSS instead of social media; you'll get their actual writing instead of algorithmic highlights

@@ -42,13 +42,13 @@ That’s it. No accounts, no tracking, no weird engagement math.
 (If a site hides theirs, search in the footer or view the page source for `<link rel="alternate" type="application/rss+xml">`.)
 
 ## Pick a reader — options for different vibes
-- NetNewsWire (Mac/iOS) — clean, open source, blissful
-- Feedly (Web/Mobile) — powerful, polished, freemium
-- Inoreader (Web/Mobile) — advanced filtering and automation
-- Miniflux (Self-hosted) — privacy-first minimalist
+- [NetNewsWire](https://netnewswire.com/) (Mac/iOS) — free, open source, native, fast. The most Mac-native option.
+- [Feedly](https://feedly.com/) (Web/Mobile) — powerful, polished, freemium. Good if you want AI summaries and team features.
+- [Inoreader](https://www.inoreader.com/) (Web/Mobile) — advanced filtering, rules, and automation. Best for power users.
+- [Miniflux](https://miniflux.app/) (Self-hosted) — privacy-first, minimal, Go binary. Run it on a $5 VPS and own your reader.
 - Podcast apps — they use RSS too (podcasts are just RSS with enclosures)
 
-If you prefer control, self-hosted readers like Miniflux or Tiny Tiny RSS let you run your own pipeline.
+If you prefer control, self-hosted readers like Miniflux or [Tiny Tiny RSS](https://tt-rss.org/) let you run your own pipeline.
 
 > Callout — Reader styles:
 > - Minimalist readers = less friction, more focus.
@@ -95,7 +95,7 @@ RSS readers fetch content, but they don't need to know who you are. If you use a
 ## Final thoughts (a tiny rant + challenge)
 Algorithms are designed to monetize attention. RSS is designed to deliver information. One funnels you into behaviors; the other gives you choice. If you want to reclaim how you consume the web, subscribe to five feeds this week. Bonus points if one is obscure and delightful.
 
-Want help migrating your subscriptions or picking a reader? Tell me your platform (iOS, Android, web, self-host) and I’ll recommend three readers and a migration plan.
+For iOS specifically, [NetNewsWire](https://netnewswire.com/) is free and excellent. For self-hosting, [Miniflux](https://miniflux.app/) is the cleanest option.
 
 ---
 *This site’s feed lives at `/feed.xml` — paste it into your reader of choice and get this blog delivered straight to your queue.*

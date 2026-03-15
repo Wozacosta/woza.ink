@@ -45,4 +45,4 @@ It's also a fairly new tool — the surface area is smaller than something like 
 
 You're running multiple Claude Code sessions, or any mix of terminal-based agents, and the cognitive overhead of tracking which one needs attention is real friction. The notification system alone is worth the switch if that's your daily workflow.
 
-*Still placeholder notes here — will expand with actual usage over time.*
+

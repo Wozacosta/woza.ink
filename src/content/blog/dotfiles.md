@@ -143,4 +143,4 @@ The real value isn't the setup speed, though that's real. It's the habit of trea
 
 It's also a surprisingly good signal when evaluating tools — if something doesn't have a clean, file-based config, that's worth noting.
 
-*Dotfiles repo linked [here](#) — will update with actual link.*
+

@@ -84,8 +84,8 @@ This is not just about ideology — it's practical. Governments, enterprises, an
    - Try joining a project or interest-based room.
 
 4. Optional: Run your own server
-   - `Synapse` (Python) — reference implementation, full-featured
-   - `Conduit` (Rust) — lightweight and fast
+   - [Synapse](https://github.com/element-hq/synapse) (Python) — reference implementation, full-featured
+   - [Conduit](https://conduit.rs/) (Rust) — lightweight and fast, single binary
    - Consider Docker images and automated deployment for easier ops
 
 ---
@@ -151,8 +151,8 @@ If you're curious about federated, open systems, Matrix is a practical, working 
 
 ## Want to Play? A Minimal "Try-It" Checklist
 
-- Install Element (desktop or web)
-- Create an account on `matrix.org` (or any public homeserver)
+- Install [Element](https://element.io/) (desktop or web) — the most polished Matrix client
+- Create an account on [matrix.org](https://matrix.org/) (or any public homeserver)
 - Join `#matrix:matrix.org`
 - Toggle encryption in a DM and send a test message
 - Try bridging a test IRC channel (if you like tinkering)
@@ -166,7 +166,3 @@ Messaging platforms shape how communities form and how power flows online. When 
 So: try it. Bridge your friends. Run a server. Break something, fix it, and enjoy the freedom.
 
 If you liked this, you might also enjoy: [What is RSS?](/blog/what-is-rss) — another small protocol that gives you more control over your online life.
-
---- 
-
-*If you want, I can add a short "how-to self-host Synapse with Docker" appendix or a small cheatsheet for Element settings. Want that?*

@@ -134,15 +134,10 @@ Remember: these are not mutually exclusive. Bridges, translators, and multi-prot
 
 ---
 
-## Further reading (starter links)
-- Nostr spec and community writeups (search "Nostr protocol")
-- AT Protocol / Bluesky docs (look for "AT Protocol" and "Bluesky")
-- ActivityPub W3C specification and Mastodon guides
-- Farcaster developer docs and community resources
+## Further reading
 
-If you want, I can:
-- Add a comparison matrix for embedding in the site,
-- Draft micro-copy for a "Which protocol is right for me?" quiz,
-- Or make a lightweight one-page infographic summarizing the trade-offs.
-
-Which one do you want first? Make it funky and I will sprinkle some neon callouts.
+- [Nostr.com](https://nostr.com/) — the approachable intro to the protocol, plus an apps directory and NIPs browser
+- [AT Protocol documentation](https://atproto.com/) — specs, SDKs, and developer guides for Bluesky's underlying protocol
+- [ActivityPub W3C specification](https://www.w3.org/TR/activitypub/) — the actual standard; dry but authoritative. Also see [activitypub.rocks](https://activitypub.rocks/) for a more readable entry point
+- [Farcaster documentation](https://docs.farcaster.xyz/) — protocol specs, Frames API, and developer guides
+- [Farcaster.xyz](https://farcaster.xyz/) — the main landing page and Warpcast onboarding

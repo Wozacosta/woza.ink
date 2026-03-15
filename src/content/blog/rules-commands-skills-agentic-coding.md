@@ -148,4 +148,6 @@ Most developers treat AI as a conversation partner. The ones shipping faster tre
 
 ---
 
-*If you're using Claude Code specifically, the BMAD methodology is one of the most complete implementations of this pattern I've seen — worth digging into if you want to see all three layers working together in practice.*
+---
+
+*If you're using Claude Code specifically, the [BMAD method](https://github.com/bmadcode/BMAD-METHOD) is one of the most complete implementations of this pattern I've seen — worth digging into if you want to see all three layers working together in practice.*

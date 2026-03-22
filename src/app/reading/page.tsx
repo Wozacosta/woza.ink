@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { getAllReadingItems } from "@/data/reading";
 
-export default function ReadingPage() {
-  const items = getAllReadingItems();
+export default async function ReadingPage() {
+  const items = await getAllReadingItems();
 
   return (
     <main className="min-h-screen">

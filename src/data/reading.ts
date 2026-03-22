@@ -10,7 +10,8 @@ export interface ReadingItem {
   tags: string[];
 }
 
-export const readingItems: ReadingItem[] = [
+/** Hardcoded items (fallback / manually curated) */
+const manualItems: ReadingItem[] = [
   {
     slug: "web4-birth-of-superintelligent-life",
     title: "Web 4.0: The Birth of Superintelligent Life",
@@ -83,8 +84,70 @@ export const readingItems: ReadingItem[] = [
   },
 ];
 
-export function getAllReadingItems(): ReadingItem[] {
-  return [...readingItems].sort(
+interface LaterlistItem {
+  title: string;
+  url: string;
+  category: string;
+  tags: string[];
+  doneAt: string;
+  addedAt: string;
+  notes: string | null;
+  topics: string[];
+}
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .trim()
+    .slice(0, 60);
+}
+
+function extractDomain(url: string): string {
+  try {
+    return new URL(url).hostname.replace("www.", "");
+  } catch {
+    return "";
+  }
+}
+
+function toLaterlistReadingItem(item: LaterlistItem): ReadingItem {
+  return {
+    slug: slugify(item.title),
+    title: item.title,
+    url: item.url,
+    source: extractDomain(item.url),
+    readDate: item.doneAt.slice(0, 10),
+    description: item.notes ?? "",
+    tags: [...item.tags, ...item.topics],
+  };
+}
+
+async function fetchLaterlistItems(): Promise<ReadingItem[]> {
+  const url = process.env.LATERLIST_API_URL ?? "https://laterlist.cc";
+  try {
+    const res = await fetch(`${url}/api/public/reading-list`, {
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return [];
+    const data: LaterlistItem[] = await res.json();
+    return data.map(toLaterlistReadingItem);
+  } catch {
+    return [];
+  }
+}
+
+export async function getAllReadingItems(): Promise<ReadingItem[]> {
+  const laterlistItems = await fetchLaterlistItems();
+
+  // Deduplicate by URL (laterlist takes precedence)
+  const seenUrls = new Set(laterlistItems.map((i) => i.url));
+  const manual = manualItems.filter((i) => !seenUrls.has(i.url));
+
+  const all = [...laterlistItems, ...manual];
+  return all.sort(
     (a, b) => new Date(b.readDate).getTime() - new Date(a.readDate).getTime(),
   );
 }

@@ -127,8 +127,11 @@ function toLaterlistReadingItem(item: LaterlistItem): ReadingItem {
 
 async function fetchLaterlistItems(): Promise<ReadingItem[]> {
   const url = process.env.LATERLIST_API_URL ?? "https://laterlist.cc";
+  const apiKey = process.env.LATERLIST_API_KEY;
+  if (!apiKey) return [];
   try {
     const res = await fetch(`${url}/api/public/reading-list`, {
+      headers: { Authorization: `Bearer ${apiKey}` },
       next: { revalidate: 3600 },
     });
     if (!res.ok) return [];

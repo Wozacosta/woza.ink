@@ -51,6 +51,8 @@ src/
 ├── components/
 │   ├── ReadingProgress.tsx  # Reading progress bar for blog posts
 │   ├── RssLink.tsx          # RSS feed link component
+│   ├── Sidenotes.tsx        # Margin sidenotes (positioned at marker Y-coords)
+│   ├── TableOfContents.tsx  # Scroll-aware TOC sidebar
 │   ├── TagBadge.tsx         # Colored tag badges (color map per tag)
 │   └── ThemeToggle.tsx      # Dark/light mode toggle
 ├── content/
@@ -60,9 +62,15 @@ src/
 │   ├── projects.ts         # Project metadata (external URLs)
 │   ├── setup.ts            # Setup page categories and items
 │   ├── reading.ts          # Reading list items
-│   └── about.ts            # About page content
+│   ├── about.ts            # About page content
+│   └── sidenotes/          # Per-article sidenote data
+│       ├── types.ts         # Sidenote/ArticleSidenotes interfaces
+│       ├── index.ts         # Barrel loader (getSidenotes by slug)
+│       └── [slug].ts        # One file per article
 └── lib/
-    └── rss.ts              # RSS feed XML generator
+    ├── headings.ts          # Extract headings from markdown, add IDs to HTML
+    ├── sidenotes.ts         # Inject superscript markers into rendered HTML
+    └── rss.ts               # RSS feed XML generator
 ```
 
 ## Commands
@@ -103,13 +111,61 @@ pnpm lint     # Run ESLint
    - `github`: Optional GitHub repo URL
    - `active`: Optional, set `false` for coming-soon projects (card links to github instead)
 
+## Article Layout (Gwern-style)
+
+Blog posts use a three-column layout on larger screens:
+
+| Breakpoint | Layout |
+|------------|--------|
+| < 1024px | Single column (mobile/small tablet) |
+| ≥ 1024px (lg) | TOC sidebar + article |
+| ≥ 1280px (xl) | TOC sidebar + article + sidenotes |
+
+### Components
+
+- **TableOfContents** (`src/components/TableOfContents.tsx`): Client component using IntersectionObserver to highlight the active section. Extracts h2/h3 headings from markdown.
+- **Sidenotes** (`src/components/Sidenotes.tsx`): Client component that positions each note at the Y-coordinate of its marker in the article text. Uses `[data-sn="N"]` attributes injected server-side.
+
+### Sidenotes Data Format
+
+Each article's sidenotes are in `src/data/sidenotes/[slug].ts`:
+
+```ts
+import type { ArticleSidenotes } from "./types";
+
+export const sidenotes: ArticleSidenotes = {
+  slug: "my-article",
+  notes: [
+    {
+      marker: "exact phrase from article text",  // anchors the note here
+      type: "quote",                             // quote | source | context | counter | note
+      content: "The sidenote content...",
+      attribution: "Author Name",                // optional
+      url: "https://...",                         // optional
+    },
+  ],
+};
+```
+
+**Important**: The `marker` must be an exact substring of the rendered article text (case-sensitive). It's matched via `string.indexOf()` in the HTML — so use plain text as it renders, including any markdown formatting characters that appear in the source (`**bold**`, `` `code` ``, `[link](url)`).
+
+After creating a sidenotes file, add its import to `src/data/sidenotes/index.ts`.
+
+### Rendering Pipeline
+
+1. Markdown → HTML via `marked`
+2. `addHeadingIds()` adds `id` attributes to headings
+3. `injectSidenoteMarkers()` finds each marker phrase and appends `<sup class="sn-ref" data-sn="N">N</sup>`
+4. Client-side `Sidenotes` component reads marker positions and absolutely positions notes in the right column
+
 ## Adding Blog Posts
 
 1. Create a new `.md` file in `src/content/blog/`
 2. Add frontmatter with title, date, description, and tags
 3. Write content in Markdown
 4. The post will automatically appear on `/blog`
-5. If the post is a setup/tools article, also add it to the setup page (see below)
+5. Optionally create a sidenotes file in `src/data/sidenotes/[slug].ts` and register it in `index.ts`
+6. If the post is a setup/tools article, also add it to the setup page (see below)
 
 ## Adding to the Setup Page
 
@@ -132,6 +188,6 @@ The `/setup` page is a curated list defined in `src/data/setup.ts`. It does **no
 
 - Projects link to external sites (not hosted locally)
 - Screenshots generated via microlink.io API
-- Blog posts are written in Markdown with frontmatter parsed by `gray-matter`, rendered by `marked`
+- Blog posts are written in Markdown with frontmatter parsed by `gray-matter`, rendered by `marked` with heading IDs and sidenote markers injected server-side
 - All external links use `rel="noopener noreferrer"`
 - Tag badge colors are mapped in `src/components/TagBadge.tsx` — unrecognized tags get a gray default

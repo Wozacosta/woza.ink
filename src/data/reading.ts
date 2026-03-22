@@ -126,7 +126,7 @@ function toLaterlistReadingItem(item: LaterlistItem): ReadingItem {
 }
 
 async function fetchLaterlistItems(): Promise<ReadingItem[]> {
-  const url = process.env.LATERLIST_API_URL ?? "https://laterlist.cc";
+  const url = process.env.LATERLIST_API_URL ?? "https://www.laterlist.cc";
   const apiKey = process.env.LATERLIST_API_KEY;
   if (!apiKey) return [];
   try {

@@ -179,6 +179,32 @@ export const setupCategories: SetupCategory[] = [
     ],
   },
   {
+    id: "window-management",
+    title: "Window Management",
+    description: "Reproducing i3 on macOS.",
+    items: [
+      {
+        type: "post",
+        slug: "i3-on-mac-flashspace",
+        note: "My full journey from Aerospace to Flashspace — and why snappiness matters more than features when you're chasing the i3 feeling.",
+      },
+      {
+        type: "article",
+        title: "FlashSpace — Virtual workspace manager for macOS",
+        url: "https://github.com/wojciech-kulik/FlashSpace",
+        source: "github.com/wojciech-kulik",
+        note: "The tool that finally made macOS Spaces feel like i3 workspaces. Instant switching, app assignment, zero friction.",
+      },
+      {
+        type: "article",
+        title: "AeroSpace — i3-like tiling window manager for macOS",
+        url: "https://github.com/nikitabobko/AeroSpace",
+        source: "github.com/nikitabobko",
+        note: "A solid i3 port for Mac. I moved away from it but it's the right choice if you want full tree-based tiling.",
+      },
+    ],
+  },
+  {
     id: "shell",
     title: "Shell",
     description: "The layer between me and the machine.",

@@ -95,6 +95,18 @@ interface LaterlistItem {
   topics: string[];
 }
 
+function decodeHtmlEntities(str: string): string {
+  return str
+    .replace(/&#x27;/g, "'")
+    .replace(/&#x2F;/g, "/")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)))
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, n) => String.fromCharCode(parseInt(n, 16)));
+}
+
 function slugify(text: string): string {
   return text
     .toLowerCase()
@@ -116,7 +128,7 @@ function extractDomain(url: string): string {
 function toLaterlistReadingItem(item: LaterlistItem): ReadingItem {
   return {
     slug: slugify(item.title),
-    title: item.title,
+    title: decodeHtmlEntities(item.title),
     url: item.url,
     source: extractDomain(item.url),
     readDate: item.doneAt.slice(0, 10),

@@ -11,7 +11,7 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "sync": "curl -s -X POST \"https://www.woza.ink/api/revalidate?secret=${REVALIDATE_SECRET}&path=/reading\" | cat"
+    "sync": "export $(grep -v '^#' .env | xargs) && curl -s -X POST \"https://www.woza.ink/api/revalidate?secret=${REVALIDATE_SECRET}&path=/reading\""
   },
   "dependencies": {
     "@types/node": "^25.0.10",

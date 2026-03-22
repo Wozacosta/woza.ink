@@ -118,3 +118,20 @@ body {
 .dark .scrollbar-thin:hover {
     scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
 }
+
+/* ── Sidenote markers ─────────────────────────────────────── */
+.sn-ref {
+    font-size: 0.65em;
+    font-weight: 600;
+    color: var(--foreground);
+    opacity: 0.3;
+    cursor: default;
+    margin-left: 1px;
+    vertical-align: super;
+    line-height: 0;
+    transition: opacity 0.15s;
+}
+
+.sn-ref:hover {
+    opacity: 0.6;
+}

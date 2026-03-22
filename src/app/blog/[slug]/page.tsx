@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { marked } from "marked";
 import { getPostBySlug, getAllSlugs, getAdjacentPosts, getReadTime } from "@/data/blog";
 import { extractHeadings, addHeadingIds } from "@/lib/headings";
+import { injectSidenoteMarkers } from "@/lib/sidenotes";
 import { TagBadge } from "@/components/TagBadge";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { TableOfContents } from "@/components/TableOfContents";
@@ -42,11 +43,14 @@ export default async function BlogPostPage({
   }
 
   const rawHtml = await marked(post.content);
-  const contentHtml = addHeadingIds(rawHtml);
+  const withIds = addHeadingIds(rawHtml);
   const headings = extractHeadings(post.content);
   const { prev, next } = getAdjacentPosts(slug);
   const readTime = getReadTime(post.content);
   const articleSidenotes = getSidenotes(slug);
+  const contentHtml = articleSidenotes
+    ? injectSidenoteMarkers(withIds, articleSidenotes.notes)
+    : withIds;
 
   return (
     <main className="min-h-screen">
@@ -150,11 +154,9 @@ export default async function BlogPostPage({
           )}
         </div>
 
-        {/* ── Right: Sidenotes ── */}
-        <aside className="hidden xl:block pt-16">
-          <div className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto pr-2 scrollbar-thin">
-            {articleSidenotes && <Sidenotes notes={articleSidenotes.notes} />}
-          </div>
+        {/* ── Right: Sidenotes (absolutely positioned to match marker Y) ── */}
+        <aside className="hidden xl:block pt-16 relative">
+          {articleSidenotes && <Sidenotes notes={articleSidenotes.notes} />}
         </aside>
       </div>
     </main>

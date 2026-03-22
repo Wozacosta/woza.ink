@@ -1,6 +1,6 @@
 export interface Sidenote {
-  /** Heading ID this note is anchored to */
-  heading: string;
+  /** Unique phrase from the article text — the sidenote anchors here */
+  marker: string;
   /** Note type */
   type: "quote" | "source" | "context" | "counter" | "note";
   /** The note content (markdown allowed) */

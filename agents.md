@@ -178,6 +178,29 @@ The `/setup` page is a curated list defined in `src/data/setup.ts`. It does **no
    - `{ type: "video", title: "...", url: "..." }` — links to an external video
 3. Every item can have an optional `note` field (1-3 sentences, your personal annotation)
 
+## Laterlist Integration (Reading Page)
+
+The `/reading` page pulls read articles from [laterlist.cc](https://laterlist.cc) automatically.
+
+### How it works
+
+1. At build time (and every hour via ISR), woza.ink calls `GET https://www.laterlist.cc/api/public/reading-list` with an API key
+2. Laterlist returns all items with `status: "done"` from the server store (title, url, category, tags, doneAt, notes, topics)
+3. woza.ink maps them to `ReadingItem` objects (domain extracted as source, tags + topics merged)
+4. Deduplicates against hardcoded manual items in `src/data/reading.ts` (laterlist wins on same URL)
+5. Sorts by read date, renders on `/reading`
+
+### Env vars
+
+| Variable | Where | Purpose |
+|----------|-------|---------|
+| `LATERLIST_API_KEY` | woza.ink (Vercel) | Bearer token for the reading-list endpoint |
+| `LATERLIST_API_URL` | woza.ink (Vercel, optional) | Override base URL (defaults to `https://www.laterlist.cc`) |
+
+### Adding manual reading items
+
+Hardcoded items live in `src/data/reading.ts` in the `manualItems` array. These are merged with laterlist data and shown if no laterlist item has the same URL.
+
 ## Theme
 
 - **Background**: Cream (#faf8f5)

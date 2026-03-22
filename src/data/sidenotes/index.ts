@@ -6,6 +6,7 @@ import { sidenotes as contextMemory } from "./context-and-memory-agentic-coding"
 import { sidenotes as decentSocial } from "./decentralized-social-protocols";
 import { sidenotes as dotfiles } from "./dotfiles";
 import { sidenotes as erc8004 } from "./erc-8004-trustless-agents";
+import { sidenotes as ercsEips } from "./ethereum-ercs-eips-that-shaped-the-chain";
 import { sidenotes as x402 } from "./exploring-x402-standard";
 import { sidenotes as ghostty } from "./ghostty-terminal";
 import { sidenotes as gitWorktrees } from "./git-worktrees-parallel-agents";
@@ -26,7 +27,7 @@ import { sidenotes as whatIsRss } from "./what-is-rss";
 import { sidenotes as whyIBuild } from "./why-i-build";
 
 const all: ArticleSidenotes[] = [
-  buildingPomo, cmux, contextMemory, decentSocial, dotfiles, erc8004, x402,
+  buildingPomo, cmux, contextMemory, decentSocial, dotfiles, erc8004, ercsEips, x402,
   ghostty, gitWorktrees, i3Mac, localFirst, matrix, megaeth, mppVsX402, nestjs, onchainPub,
   opencode, rssSetup, privacy, rulesCommands, signalTelegram, torrentArch, whatIsRss, whyIBuild,
 ];

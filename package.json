@@ -10,7 +10,8 @@
     "lint": "next lint",
     "test": "vitest",
     "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "sync": "curl -s -X POST \"https://woza.ink/api/revalidate?secret=${REVALIDATE_SECRET}&path=/reading\" | cat"
   },
   "dependencies": {
     "@types/node": "^25.0.10",

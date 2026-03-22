@@ -180,15 +180,23 @@ The `/setup` page is a curated list defined in `src/data/setup.ts`. It does **no
 
 ## Laterlist Integration (Reading Page)
 
-The `/reading` page pulls read articles from [laterlist.cc](https://laterlist.cc) automatically.
+The `/reading` page pulls published articles from [laterlist.cc](https://laterlist.cc).
 
-### How it works
+### Flow
 
-1. At build time (and every hour via ISR), woza.ink calls `GET https://www.laterlist.cc/api/public/reading-list` with an API key
-2. Laterlist returns all items with `status: "done"` from the server store (title, url, category, tags, doneAt, notes, topics)
-3. woza.ink maps them to `ReadingItem` objects (domain extracted as source, tags + topics merged)
-4. Deduplicates against hardcoded manual items in `src/data/reading.ts` (laterlist wins on same URL)
-5. Sorts by read date, renders on `/reading`
+1. In laterlist: mark an article as done (checkbox), then click **↗** to publish it
+2. The client pushes the item to laterlist's server store via `PUT /api/items/sync`
+3. woza.ink fetches `GET https://www.laterlist.cc/api/public/reading-list` (with API key) — filters by `publishedAt`
+4. Items are mapped to `ReadingItem` objects, deduplicated against manual items, sorted by read date
+5. Page revalidates every hour via ISR, or on demand via `pnpm sync`
+
+### Force sync
+
+```bash
+pnpm sync
+```
+
+This calls `POST https://woza.ink/api/revalidate?secret=$REVALIDATE_SECRET&path=/reading` to force ISR revalidation immediately.
 
 ### Env vars
 
@@ -196,6 +204,7 @@ The `/reading` page pulls read articles from [laterlist.cc](https://laterlist.cc
 |----------|-------|---------|
 | `LATERLIST_API_KEY` | woza.ink (Vercel) | Bearer token for the reading-list endpoint |
 | `LATERLIST_API_URL` | woza.ink (Vercel, optional) | Override base URL (defaults to `https://www.laterlist.cc`) |
+| `REVALIDATE_SECRET` | woza.ink (Vercel + local shell) | Secret for the on-demand revalidation endpoint |
 
 ### Adding manual reading items
 

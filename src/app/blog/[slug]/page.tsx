@@ -155,7 +155,7 @@ export default async function BlogPostPage({
         </div>
 
         {/* ── Right: Sidenotes (absolutely positioned to match marker Y) ── */}
-        <aside className="hidden xl:block pt-16 relative">
+        <aside className="hidden xl:block pt-16 relative" data-sidenotes>
           {articleSidenotes && <Sidenotes notes={articleSidenotes.notes} />}
         </aside>
       </div>

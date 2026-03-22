@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { marked } from "marked";
+import { marked, type MarkedExtension } from "marked";
 import { getPostBySlug, getAllSlugs, getAdjacentPosts, getReadTime } from "@/data/blog";
 import { extractHeadings, addHeadingIds } from "@/lib/headings";
 import { injectSidenoteMarkers } from "@/lib/sidenotes";
+import { highlight } from "@/lib/highlight";
 import { TagBadge } from "@/components/TagBadge";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { TableOfContents } from "@/components/TableOfContents";
@@ -42,7 +43,25 @@ export default async function BlogPostPage({
     notFound();
   }
 
-  const rawHtml = await marked(post.content);
+  // Collect code blocks for async highlighting, then replace after render
+  const codeBlocks: { lang: string; code: string; placeholder: string }[] = [];
+  const renderer: MarkedExtension = {
+    renderer: {
+      code({ text, lang }) {
+        const id = `__CODE_BLOCK_${codeBlocks.length}__`;
+        codeBlocks.push({ lang: lang || "", code: text, placeholder: id });
+        return id;
+      },
+    },
+  };
+  marked.use(renderer);
+  let rawHtml = await marked(post.content);
+
+  // Replace placeholders with highlighted HTML
+  for (const block of codeBlocks) {
+    const highlighted = await highlight(block.code, block.lang);
+    rawHtml = rawHtml.replace(block.placeholder, highlighted);
+  }
   const withIds = addHeadingIds(rawHtml);
   const headings = extractHeadings(post.content);
   const { prev, next } = getAdjacentPosts(slug);

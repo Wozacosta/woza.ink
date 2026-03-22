@@ -135,3 +135,31 @@ body {
 .sn-ref:hover {
     opacity: 0.6;
 }
+
+/* ── Shiki syntax highlighting ────────────────────────────── */
+
+/* Dual-theme: light colors are inline defaults, dark mode swaps to --shiki-dark */
+.dark .shiki,
+.dark .shiki span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+}
+
+/* Code block container */
+.prose pre:has(.shiki) {
+    padding: 0;
+    background: none;
+}
+
+.prose .shiki {
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dark .prose .shiki {
+    border-color: rgba(255, 255, 255, 0.08);
+}

@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**woza.ink** is a personal landing page and portfolio website showcasing external projects, with a blog and about section.
+**woza.ink** is a personal landing page and portfolio website showcasing external projects, with a blog, setup/tools page, reading list, and about section.
 
 ## Tech Stack
 
@@ -21,7 +21,10 @@
 | `/projects` | Grid of external projects with live screenshots |
 | `/blog` | Blog listing page |
 | `/blog/[slug]` | Individual blog post pages |
-| `/about` | About page (placeholder) |
+| `/setup` | Curated setup/tools page (hardcoded in `src/data/setup.ts`) |
+| `/reading` | Reading list page (hardcoded in `src/data/reading.ts`) |
+| `/about` | About page |
+| `/feed.xml` | RSS feed (auto-generated from blog posts) |
 
 ### File Structure
 
@@ -37,19 +40,29 @@ src/
 │   │   ├── page.tsx        # Blog listing page
 │   │   └── [slug]/
 │   │       └── page.tsx    # Individual blog post
-│   └── about/
-│       └── page.tsx        # About page (placeholder)
-├── components/             # Reusable UI components (empty)
+│   ├── setup/
+│   │   └── page.tsx        # Setup/tools page
+│   ├── reading/
+│   │   └── page.tsx        # Reading list page
+│   ├── about/
+│   │   └── page.tsx        # About page
+│   └── feed.xml/
+│       └── route.ts        # RSS feed endpoint
+├── components/
+│   ├── ReadingProgress.tsx  # Reading progress bar for blog posts
+│   ├── RssLink.tsx          # RSS feed link component
+│   ├── TagBadge.tsx         # Colored tag badges (color map per tag)
+│   └── ThemeToggle.tsx      # Dark/light mode toggle
 ├── content/
-│   └── blog/               # Blog posts in Markdown
-│       ├── building-pomo.md
-│       ├── exploring-x402-standard.md
-│       ├── what-is-rss.md
-│       └── why-i-build.md
+│   └── blog/               # Blog posts in Markdown (auto-discovered)
 ├── data/
+│   ├── blog.ts             # Blog post loader (getAllPosts, getPostBySlug, etc.)
 │   ├── projects.ts         # Project metadata (external URLs)
-│   └── blog.ts             # Blog post metadata and content loader
-└── styles/                 # Additional styles (empty)
+│   ├── setup.ts            # Setup page categories and items
+│   ├── reading.ts          # Reading list items
+│   └── about.ts            # About page content
+└── lib/
+    └── rss.ts              # RSS feed XML generator
 ```
 
 ## Commands
@@ -69,11 +82,15 @@ pnpm lint     # Run ESLint
 
 | Project | Description | URL |
 |---------|-------------|-----|
-| Pomo | Pomodoro timer with music links | pomo-coral-eight.vercel.app |
-| Guide To | Music guides platform | guideto.vercel.app |
+| Progress | Local-first habit tracking PWA | habitu.xyz |
+| LaterList | Save-for-later app with AI categorization | laterlist.cc |
+| Payp | Crypto payments (coming soon) | payp.ink |
 | Baseline | Nicotine quit support PWA | basel.ink |
-| FitLog | Exercise tracking app | fitlog-theta.vercel.app |
+| Guide To | Music guides platform | guideto.vercel.app |
 | Wezer | Weather anomaly tracker | wezer.vercel.app |
+| Pomo | Pomodoro timer with music links | pomodo.ink |
+| FitLog | Exercise tracking app | fitlog-theta.vercel.app |
+| Le Plein | Cheapest fuel prices in France | leple.ink |
 
 ## Adding New Projects
 
@@ -84,6 +101,7 @@ pnpm lint     # Run ESLint
    - `color`: Hex color for theming
    - `url`: External project URL
    - `github`: Optional GitHub repo URL
+   - `active`: Optional, set `false` for coming-soon projects (card links to github instead)
 
 ## Adding Blog Posts
 
@@ -91,6 +109,18 @@ pnpm lint     # Run ESLint
 2. Add frontmatter with title, date, description, and tags
 3. Write content in Markdown
 4. The post will automatically appear on `/blog`
+5. If the post is a setup/tools article, also add it to the setup page (see below)
+
+## Adding to the Setup Page
+
+The `/setup` page is a curated list defined in `src/data/setup.ts`. It does **not** auto-discover posts by tag — items must be added manually.
+
+1. Open `src/data/setup.ts` and find the relevant category (or create a new one)
+2. Add an item to the category's `items` array. Three types are supported:
+   - `{ type: "post", slug: "my-article" }` — references an internal blog post by slug
+   - `{ type: "article", title: "...", url: "..." }` — links to an external article
+   - `{ type: "video", title: "...", url: "..." }` — links to an external video
+3. Every item can have an optional `note` field (1-3 sentences, your personal annotation)
 
 ## Theme
 
@@ -102,5 +132,6 @@ pnpm lint     # Run ESLint
 
 - Projects link to external sites (not hosted locally)
 - Screenshots generated via microlink.io API
-- Blog posts are written in Markdown with frontmatter
+- Blog posts are written in Markdown with frontmatter parsed by `gray-matter`, rendered by `marked`
 - All external links use `rel="noopener noreferrer"`
+- Tag badge colors are mapped in `src/components/TagBadge.tsx` — unrecognized tags get a gray default

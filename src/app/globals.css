@@ -79,3 +79,42 @@ body {
     font-family: Georgia, serif;
     pointer-events: none;
 }
+
+/* ── Article three-column layout ──────────────────────────── */
+.article-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (min-width: 1024px) {
+    .article-layout {
+        grid-template-columns: 13rem 1fr;
+        max-width: 64rem;
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .article-layout {
+        grid-template-columns: 13rem 1fr 15rem;
+        max-width: 82rem;
+        gap: 2.5rem;
+    }
+}
+
+/* Thin scrollbar for TOC overflow */
+.scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.scrollbar-thin:hover {
+    scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+}
+
+.dark .scrollbar-thin:hover {
+    scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}

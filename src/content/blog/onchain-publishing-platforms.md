@@ -141,6 +141,14 @@ Decentralized Reddit/Medium hybrid built as a Polkadot parachain. Content on IPF
 ### t2.world — The "Proof of Attention" Experiment
 Built on Lens Protocol, designed as a direct Medium alternative. Interesting concept: reward deep reading, not just clicks. Raised $3.4M in 2022. Current status: appears to have stalled. Very little visible activity in 2025-2026.
 
+### Leaflet — AT Protocol Publishing
+
+[Leaflet](https://leaflet.pub/) takes a different path entirely — it's not onchain, it's built on the [AT Protocol](https://atproto.com/) (the thing Bluesky runs on). Open-source ([GitHub](https://github.com/hyperlink-academy/leaflet)), built by Hyperlink Academy with React, Next.js, Supabase, and Replicache for real-time collaborative editing.
+
+The pitch: your identity is your AT Protocol handle, not a platform account. Publish long-form documents and they're interoperable with the entire Atmosphere ecosystem — engagement from Bluesky flows back to your Leaflet posts. You can create instant collaborative docs without even signing up, or run full publications as AT Protocol-native blogs.
+
+It's not decentralized storage (no IPFS, no Arweave). It's decentralized *identity and social graph*. Your readers follow you across any app on the protocol. If Leaflet disappears tomorrow, your identity, followers, and social connections don't. That's a different bet than the crypto-native platforms above, but it's solving the same core problem: your audience shouldn't be hostage to any single service.
+
 ---
 
 ## The Access Layer: ENS Gateways and Decentralized Hosting

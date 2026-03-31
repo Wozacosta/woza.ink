@@ -55,6 +55,8 @@ Custom domains as handles is notable: your Bluesky handle can be your own domain
 
 The AT Protocol federation is partially live but most users are on Bluesky's own infrastructure. The full vision — where anyone can run a PDS and Bluesky is just one app on a shared network — is in progress. The architecture supports it; the adoption isn't there yet.
 
+Beyond social, the AT Protocol is being used for non-social apps too. [Tangled](https://tangled.org/) is a code collaboration platform — think GitHub, but built on atproto. Your repos, issues, and pull requests are tied to your AT Protocol identity, not a platform account. It's early, but it's a concrete example of the protocol's promise extending beyond microblogging: if your identity is portable, why shouldn't your code hosting be too?
+
 ---
 
 ## Farcaster — crypto-native social

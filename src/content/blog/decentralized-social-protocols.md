@@ -60,6 +60,7 @@ The AT Protocol ecosystem — the "Atmosphere" — is growing beyond Bluesky its
 - [Tangled](https://tangled.org/) — code collaboration (think GitHub) built on atproto. Your repos, issues, and PRs are tied to your AT Protocol identity, not a platform account.
 - [Popfeed](https://popfeed.social/) — a media tracking and review app. Log movies, TV shows, music, and games, share reviews, and build lists. You log in with your Bluesky identity and your social graph comes with you — no rebuilding your network from scratch. Like a Letterboxd/Trakt hybrid that runs on the protocol.
 - [Anisota](https://anisota.net/) — a radically different Bluesky client. It presents posts as collectible trading cards with rarity ratings and finite stamina-limited decks. The goal: slow you down. A calming, nature-themed interface designed to make you scroll less and read more intentionally.
+- [Graze](https://www.graze.social/) — a no-code custom feed builder for Bluesky. Drag-and-drop logic gates, regex filters, entity matching, hashtag exclusion. Feed operators get analytics (views, engagement) and can monetize through sponsorships. It's the power-user answer to "I want a feed that shows exactly what I want and nothing else."
 
 These are concrete proof that the protocol's promise extends beyond microblogging. If your identity is portable, every app can build on the same social graph.
 

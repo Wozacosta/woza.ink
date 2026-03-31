@@ -121,19 +121,22 @@ body {
 
 /* ── Sidenote markers ─────────────────────────────────────── */
 .sn-ref {
-    font-size: 0.65em;
-    font-weight: 600;
-    color: var(--foreground);
-    opacity: 0.3;
+    font-size: 0.6em;
+    font-weight: 700;
+    color: var(--background);
+    background: var(--foreground);
+    opacity: 0.25;
     cursor: default;
-    margin-left: 1px;
+    margin-left: 2px;
     vertical-align: super;
     line-height: 0;
+    padding: 1px 3.5px;
+    border-radius: 9999px;
     transition: opacity 0.15s;
 }
 
 .sn-ref:hover {
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 /* ── Shiki syntax highlighting ────────────────────────────── */

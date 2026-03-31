@@ -87,14 +87,16 @@ Farcaster is a social protocol (think: decentralized Twitter). **Warpcast** is t
 
 **How it's built:**
 - Identity and account keys registered on **Ethereum** (OP Mainnet).
-- Social data (casts, reactions, follows) lives on **Snapchain** — a custom consensus layer with sub-second finality.
+- Social data (casts, reactions, follows) lives on **Snapchain** — a custom consensus layer with sub-second finality (10,000+ TPS, 780ms).
 - ~250K monthly active users, 100K+ funded wallets.
 
 **The publishing angle:** Write long-form on Paragraph, distribute via Farcaster. Posts appear in feeds natively. **Frames** (interactive in-feed mini apps) enable NFT minting, payments, and commerce directly in the social feed.
 
+**The protocol paradox:** Farcaster raised $180M and hit a $1B valuation, but the user numbers tell a harder story. DAU peaked at ~100K in July 2024 and dropped 40%. New registrations fell 95.7% from 15,000 to ~650/day. Only ~4,360 Power Badge holders show authentic engagement. Monthly revenue cratered from $1.91M (peak) to ~$10K by October 2025. The strategy has shifted from competing with Twitter to [leaning into crypto-native strengths](https://blockeden.xyz/blog/2025/10/28/farcaster-in-2025-the-protocol-paradox/) — **Farcaster Pro** ($120/year, sold 10K subscriptions in 6 hours) and AI token deployment via **Clanker** (one AI agent created a token that hit $80M market cap).
+
 **Recent drama:** In January 2026, **Neynar acquired the Farcaster protocol** from Merkle Manufactory (which returned ~$180M in venture funding). The "sufficiently decentralized" claim has been challenged — only 11 validators on Snapchain, selected via community vote every 6 months.
 
-**The honest take:** Farcaster is where the most interesting crypto-native conversations happen right now. But "sufficiently decentralized" is doing a lot of heavy lifting in that tagline. And long-form content requires Paragraph integration — it's not native.
+**The honest take:** World-class infrastructure, insufficient users. Farcaster is where the most interesting crypto-native conversations happen — but "sufficiently decentralized" is doing a lot of heavy lifting in that tagline, and the user retention problem is real.
 
 ---
 
@@ -151,6 +153,10 @@ Built on Lens Protocol, designed as a direct Medium alternative. Interesting con
 The pitch: your identity is your AT Protocol handle, not a platform account. Publish long-form documents and they're interoperable with the entire Atmosphere ecosystem — engagement from Bluesky flows back to your Leaflet posts. You can create instant collaborative docs without even signing up, or run full publications as AT Protocol-native blogs.
 
 It's not decentralized storage (no IPFS, no Arweave). It's decentralized *identity and social graph*. Your readers follow you across any app on the protocol. If Leaflet disappears tomorrow, your identity, followers, and social connections don't. That's a different bet than the crypto-native platforms above, but it's solving the same core problem: your audience shouldn't be hostage to any single service.
+
+### pckt.blog — AT Protocol Blogging
+
+[pckt.blog](https://pckt.blog/) is another AT Protocol-native blogging platform — simpler than Leaflet, closer to a traditional blog host. Multi-blog support, custom domains, sections/tags, RSS feeds, analytics, image galleries. Your identity is your atproto handle. Content syncs across the Atmosphere. Think of it as the "just give me a blog" option for people already in the Bluesky ecosystem — no collaborative editing, no publications, just clean personal blogging with decentralized identity baked in.
 
 ---
 

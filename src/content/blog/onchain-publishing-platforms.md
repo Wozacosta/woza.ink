@@ -27,7 +27,7 @@ TL;DR
 
 ## Paragraph — The One That's Actually Working
 
-Paragraph (paragraph.xyz) is the closest thing to a "web3 Substack" that doesn't feel broken. After absorbing Mirror in May 2024, it's now the default platform for crypto-native writers. Backed by Union Square Ventures.
+Paragraph ([paragraph.com](https://paragraph.com/)) is the closest thing to a "web3 Substack" that doesn't feel broken. After absorbing Mirror in May 2024, it's now the default platform for crypto-native writers. Backed by Union Square Ventures.
 
 **How it works:**
 - Write and publish like any newsletter platform — email delivery, analytics, SEO, the works.
@@ -131,6 +131,9 @@ Privacy-focused, open-source social platform on Ethereum. MINDS token for reward
 
 ### Sigle — Bitcoin-Secured Writing
 Built on **Stacks** (Bitcoin L2). The unique angle: inscribe your writing as **Bitcoin Ordinals** for permanent on-Bitcoin storage. Zero platform fees. Niche but interesting if you're a Bitcoin maximalist who writes.
+
+### friend.tech — The SocialFi Cautionary Tale
+[friend.tech](https://www.friend.tech/) launched on Base in 2023 with a simple hook: buy "keys" to access exclusive chat rooms with creators. It exploded — $52M in deposits at peak, $2M/day in fees. Then it collapsed just as fast. By late 2024, daily new users dropped to single digits, fees fell under $100/day, and deposits were down 92%. The founders transferred smart contract ownership to a null address — effectively making it immutable but abandoned — and walked away with roughly $44M. The FRIEND token crashed 98% from its launch. A textbook example of what happens when speculation is the product and there's no underlying utility once the hype fades.
 
 ### DeSo — Purpose-Built Social Chain
 Its own L1 blockchain designed specifically for social media. Formerly BitClout (the one that launched by scraping Twitter profiles without consent). Content stored directly onchain at ~1/10,000th the cost of Ethereum. Creator Coins let you speculate on people, which is either innovative or dystopian depending on your perspective.

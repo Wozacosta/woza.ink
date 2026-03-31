@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import type { Sidenote } from "@/data/sidenotes/types";
 
 const typeLabel: Record<Sidenote["type"], string> = {
@@ -19,47 +19,61 @@ const typeDot: Record<Sidenote["type"], string> = {
   note: "bg-gray-400",
 };
 
-const MIN_GAP = 160;
+const GAP = 12; // px between sidenotes
 
 export function Sidenotes({ notes }: { notes: Sidenote[] }) {
   const [positions, setPositions] = useState<(number | null)[]>([]);
+  const noteRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const calculate = useCallback(() => {
     const aside = document.querySelector<HTMLElement>("[data-sidenotes]");
     if (!aside) return;
 
     const asideTop = aside.getBoundingClientRect().top + window.scrollY;
-    const raw: (number | null)[] = [];
 
+    // Get ideal positions from markers
+    const ideal: (number | null)[] = [];
     notes.forEach((_, i) => {
       const marker = document.querySelector<HTMLElement>(`[data-sn="${i}"]`);
       if (marker) {
         const markerTop = marker.getBoundingClientRect().top + window.scrollY;
-        raw.push(markerTop - asideTop);
+        ideal.push(markerTop - asideTop);
       } else {
-        raw.push(null);
+        ideal.push(null);
       }
     });
 
-    // resolve overlaps
-    let lastTop = -MIN_GAP;
-    for (let i = 0; i < raw.length; i++) {
-      if (raw[i] === null) continue;
-      if (raw[i]! < lastTop + MIN_GAP) {
-        raw[i] = lastTop + MIN_GAP;
+    // Resolve overlaps using actual rendered heights
+    const resolved = [...ideal];
+    let lastBottom = -GAP;
+
+    for (let i = 0; i < resolved.length; i++) {
+      if (resolved[i] === null) continue;
+
+      // Don't push above ideal position, only down
+      const minTop = lastBottom + GAP;
+      if (resolved[i]! < minTop) {
+        resolved[i] = minTop;
       }
-      lastTop = raw[i]!;
+
+      // Measure actual height of this note
+      const el = noteRefs.current[i];
+      const height = el?.offsetHeight ?? 140;
+      lastBottom = resolved[i]! + height;
     }
 
-    setPositions(raw);
+    setPositions(resolved);
   }, [notes]);
 
   useEffect(() => {
+    // Initial + delayed recalc (after fonts/images)
     calculate();
-    const timer = setTimeout(calculate, 600);
+    const t1 = setTimeout(calculate, 300);
+    const t2 = setTimeout(calculate, 1000);
     window.addEventListener("resize", calculate);
     return () => {
-      clearTimeout(timer);
+      clearTimeout(t1);
+      clearTimeout(t2);
       window.removeEventListener("resize", calculate);
     };
   }, [calculate]);
@@ -73,10 +87,11 @@ export function Sidenotes({ notes }: { notes: Sidenote[] }) {
         return (
           <div
             key={i}
+            ref={(el) => { noteRefs.current[i] = el; }}
             className="absolute left-0 right-0"
-            style={{ top: positions[i] ?? i * MIN_GAP }}
+            style={{ top: positions[i] ?? i * 160 }}
           >
-            <div className="text-[12px] leading-relaxed pb-4">
+            <div className="text-[12px] leading-relaxed pb-3">
               <div className="flex items-center gap-1.5 mb-1">
                 <span
                   className={`w-1.5 h-1.5 rounded-full shrink-0 ${typeDot[note.type]}`}

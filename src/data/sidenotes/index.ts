@@ -19,17 +19,19 @@ import { sidenotes as nestjs } from "./nestjs-framework";
 import { sidenotes as onchainPub } from "./onchain-publishing-platforms";
 import { sidenotes as opencode } from "./opencode-vs-claude-code";
 import { sidenotes as rssSetup } from "./personal-rss-setup-2026";
+import { sidenotes as photographyCameras } from "./photography-cameras-2026";
 import { sidenotes as privacy } from "./privacy-in-crypto";
 import { sidenotes as rulesCommands } from "./rules-commands-skills-agentic-coding";
 import { sidenotes as signalTelegram } from "./signal-vs-telegram";
 import { sidenotes as torrentArch } from "./torrent-architecture";
 import { sidenotes as whatIsRss } from "./what-is-rss";
+import { sidenotes as lightroomAlts } from "./lightroom-alternatives";
 import { sidenotes as whyIBuild } from "./why-i-build";
 
 const all: ArticleSidenotes[] = [
   buildingPomo, cmux, contextMemory, decentSocial, dotfiles, erc8004, ercsEips, x402,
   ghostty, gitWorktrees, i3Mac, localFirst, matrix, megaeth, mppVsX402, nestjs, onchainPub,
-  opencode, rssSetup, privacy, rulesCommands, signalTelegram, torrentArch, whatIsRss, whyIBuild,
+  opencode, rssSetup, photographyCameras, privacy, lightroomAlts, rulesCommands, signalTelegram, torrentArch, whatIsRss, whyIBuild,
 ];
 
 const bySlug = new Map(all.map((s) => [s.slug, s]));

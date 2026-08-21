@@ -11,7 +11,7 @@ export interface ReadingItem {
 }
 
 /** Hardcoded items (fallback / manually curated) */
-const manualItems: ReadingItem[] = [
+export const manualItems: ReadingItem[] = [
   {
     slug: "web4-birth-of-superintelligent-life",
     title: "Web 4.0: The Birth of Superintelligent Life",

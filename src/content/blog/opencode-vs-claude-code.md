@@ -29,7 +29,7 @@ If you're evaluating which to try first, either works. The differences become mo
 
 ## Claude Code
 
-Claude Code is [Anthropic's official CLI](https://claude.ai/docs). It ships from the company that makes Claude, which has a few concrete implications.
+Claude Code is [Anthropic's official CLI](https://code.claude.com/docs). It ships from the company that makes Claude, which has a few concrete implications.
 
 **Tight Claude integration.** It's the reference implementation for how Anthropic wants Claude to be used in an agentic coding context. New model capabilities tend to show up here first. The tool-use patterns, the memory model, the way permissions work — these are designed around Claude's actual capabilities rather than being a layer on top of an API.
 
@@ -83,7 +83,7 @@ The tooling around agentic coding is moving fast enough that the right answer to
 
 ## Further reading
 
-- [Claude Code documentation](https://claude.ai/docs) — official docs for Claude Code; covers commands, permissions, and the memory model
+- [Claude Code documentation](https://code.claude.com/docs) — official docs for Claude Code; covers commands, permissions, and the memory model
 - [OpenCode on GitHub](https://github.com/sst/opencode) — source code, installation, and configuration docs
 - [Rules, Commands, and Skills: The Three Layers of Agentic Coding](/blog/rules-commands-skills-agentic-coding) — how to structure your agentic setup to work well with either tool
 - [Memory, Context, and Sessions in Agentic Coding](/blog/context-and-memory-agentic-coding) — the mental model for working with stateless agents effectively

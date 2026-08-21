@@ -87,7 +87,7 @@ This is the gap that Ethereum-native privacy solutions are trying to fill.
 
 ## Tornado Cash and what happened to it
 
-The first major Ethereum privacy tool was [Tornado Cash](https://tornado.cash/) — a smart contract mixer that worked by pooling deposits and allowing withdrawals to different addresses. You'd deposit 1 ETH into the pool; someone else would withdraw 1 ETH to a fresh address. By breaking the on-chain link between deposit and withdrawal, it provided basic anonymity.
+The first major Ethereum privacy tool was [Tornado Cash](https://github.com/tornadocash/tornado-core) — a smart contract mixer that worked by pooling deposits and allowing withdrawals to different addresses. You'd deposit 1 ETH into the pool; someone else would withdraw 1 ETH to a fresh address. By breaking the on-chain link between deposit and withdrawal, it provided basic anonymity.
 
 Tornado Cash worked. It also became the primary tool for laundering crypto stolen in major hacks — the Lazarus Group (a North Korea state hacking outfit) used it extensively after the Ronin Bridge hack, the Harmony Bridge hack, and others. In August 2022, the US Treasury's OFAC [sanctioned Tornado Cash](https://home.treasury.gov/news/press-releases/jy0916), designating it as a Specially Designated National — the same classification used for terrorist organizations and state adversaries.
 

@@ -164,5 +164,5 @@ Both have their place. The key is not to confuse marketing with guarantees. If y
 - [Signal Protocol specifications](https://signal.org/docs/) — X3DH, Double Ratchet, PQXDH, and Sesame, all publicly documented
 - [Telegram MTProto documentation](https://core.telegram.org/mtproto) — read critically; note what it covers (cloud chat transport encryption) vs. what it doesn't address (server-side key access)
 - [EFF Surveillance Self-Defense](https://ssd.eff.org/) — practical threat modeling and tool selection guides from the Electronic Frontier Foundation
-- [Cure53 audit of Signal Android](https://cure53.de/pentest-report_signal-android.pdf) — one of the more thorough third-party security audits of a messaging app; useful for understanding what "audited" actually means in practice
+- [A Formal Security Analysis of the Signal Messaging Protocol](https://eprint.iacr.org/2016/1013.pdf) — the Cohn-Gordon et al. academic analysis of X3DH and the Double Ratchet; useful for understanding what "audited" actually means in practice
 - [What is RSS?](/blog/what-is-rss) — follow privacy and security researchers via RSS instead of social media; you'll get their actual writing instead of algorithmic highlights

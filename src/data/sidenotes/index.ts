@@ -13,6 +13,7 @@ import { sidenotes as gitWorktrees } from "./git-worktrees-parallel-agents";
 import { sidenotes as i3Mac } from "./i3-on-mac-flashspace";
 import { sidenotes as localFirst } from "./local-first-dexie";
 import { sidenotes as matrix } from "./matrix-protocol";
+import { sidenotes as multisig } from "./multisig-security-model";
 import { sidenotes as megaeth } from "./megaeth-real-time-blockchain";
 import { sidenotes as mppVsX402 } from "./mpp-vs-x402";
 import { sidenotes as nestjs } from "./nestjs-framework";
@@ -24,6 +25,7 @@ import { sidenotes as privacy } from "./privacy-in-crypto";
 import { sidenotes as rulesCommands } from "./rules-commands-skills-agentic-coding";
 import { sidenotes as signalTelegram } from "./signal-vs-telegram";
 import { sidenotes as torrentArch } from "./torrent-architecture";
+import { sidenotes as trueRandomness } from "./true-randomness-and-dice";
 import { sidenotes as whatIsRss } from "./what-is-rss";
 import { sidenotes as lightroomAlts } from "./lightroom-alternatives";
 import { sidenotes as whyIBuild } from "./why-i-build";
@@ -31,7 +33,8 @@ import { sidenotes as whyIBuild } from "./why-i-build";
 const all: ArticleSidenotes[] = [
   buildingPomo, cmux, contextMemory, decentSocial, dotfiles, erc8004, ercsEips, x402,
   ghostty, gitWorktrees, i3Mac, localFirst, matrix, megaeth, mppVsX402, nestjs, onchainPub,
-  opencode, rssSetup, photographyCameras, privacy, lightroomAlts, rulesCommands, signalTelegram, torrentArch, whatIsRss, whyIBuild,
+  opencode, rssSetup, photographyCameras, privacy, lightroomAlts, rulesCommands, signalTelegram, torrentArch,
+  multisig, trueRandomness, whatIsRss, whyIBuild,
 ];
 
 const bySlug = new Map(all.map((s) => [s.slug, s]));

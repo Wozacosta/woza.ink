@@ -10,6 +10,38 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "cytisinio",
+    title: "Cytisinio",
+    description:
+      "A cytisine course companion with pill scheduling and daily guidance for a 25-day quit plan",
+    color: "#0f766e",
+    url: "https://cytisin.io",
+  },
+  {
+    slug: "juzi-chinese-grammar",
+    title: "句子 Jùzi",
+    description:
+      "Learn Chinese grammar through sentence mining and spaced repetition",
+    color: "#dc2626",
+    url: "https://juzi-chinese-grammar.vercel.app",
+  },
+  {
+    slug: "mandarin-atlas",
+    title: "Mandarin Atlas",
+    description:
+      "A clear, level-by-level path through Chinese study, books, apps, film, and native media",
+    color: "#d97706",
+    url: "https://mandarin-atlas-one.vercel.app",
+  },
+  {
+    slug: "triplan",
+    title: "Triplan",
+    description:
+      "City breaks organized by walkable districts, with day-by-day plans grouped by neighborhood",
+    color: "#e11d48",
+    url: "https://triplan.ink",
+  },
+  {
     slug: "progress",
     title: "Progress",
     description:

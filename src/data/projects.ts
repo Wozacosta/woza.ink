@@ -15,7 +15,7 @@ export const projects: Project[] = [
     description:
       "A cytisine course companion with pill scheduling and daily guidance for a 25-day quit plan",
     color: "#0f766e",
-    url: "https://cytisin.io",
+    url: "https://cytisinio-hnhwqjeda-rabahmsamys-projects.vercel.app",
   },
   {
     slug: "juzi-chinese-grammar",

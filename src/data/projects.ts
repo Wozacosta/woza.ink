@@ -23,7 +23,7 @@ export const projects: Project[] = [
     description:
       "Learn Chinese grammar through sentence mining and spaced repetition",
     color: "#dc2626",
-    url: "https://juzi-chinese-grammar.vercel.app",
+    url: "https://chinesesentences.com",
   },
   {
     slug: "mandarin-atlas",

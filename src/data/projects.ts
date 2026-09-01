@@ -19,7 +19,7 @@ export const projects: Project[] = [
   },
   {
     slug: "juzi-chinese-grammar",
-    title: "句子 Jùzi",
+    title: "Chinese Sentences",
     description:
       "Learn Chinese grammar through sentence mining and spaced repetition",
     color: "#dc2626",

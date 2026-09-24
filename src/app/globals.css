@@ -139,6 +139,12 @@ body {
     opacity: 0.5;
 }
 
+.sn-ref a {
+    color: inherit;
+    text-decoration: none;
+    cursor: inherit;
+}
+
 /* ── Shiki syntax highlighting ────────────────────────────── */
 
 /* Dual-theme: light colors are inline defaults, dark mode swaps to --shiki-dark */

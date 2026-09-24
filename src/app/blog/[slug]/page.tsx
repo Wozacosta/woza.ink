@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { marked, type MarkedExtension } from "marked";
+import { Marked } from "marked";
 import { getPostBySlug, getAllSlugs, getAdjacentPosts, getReadTime } from "@/data/blog";
 import { extractHeadings, addHeadingIds } from "@/lib/headings";
 import { injectSidenoteMarkers } from "@/lib/sidenotes";
@@ -10,6 +10,9 @@ import { ReadingProgress } from "@/components/ReadingProgress";
 import { TableOfContents } from "@/components/TableOfContents";
 import { Sidenotes } from "@/components/Sidenotes";
 import { getSidenotes } from "@/data/sidenotes";
+
+// Only pre-rendered slugs are valid; unknown slugs 404 without touching the filesystem
+export const dynamicParams = false;
 
 // Generate static params for all blog posts
 export function generateStaticParams() {
@@ -43,25 +46,26 @@ export default async function BlogPostPage({
     notFound();
   }
 
-  // Collect code blocks for async highlighting, then replace after render
-  const codeBlocks: { lang: string; code: string; placeholder: string }[] = [];
-  const renderer: MarkedExtension = {
+  // Collect code blocks for async highlighting, then replace after render.
+  // A fresh Marked instance per render keeps the global `marked` untouched.
+  const codeBlocks: { lang: string; code: string }[] = [];
+  const md = new Marked({
     renderer: {
       code({ text, lang }) {
-        const id = `__CODE_BLOCK_${codeBlocks.length}__`;
-        codeBlocks.push({ lang: lang || "", code: text, placeholder: id });
-        return id;
+        codeBlocks.push({ lang: lang || "", code: text });
+        return `__CODE_BLOCK_${codeBlocks.length - 1}__`;
       },
     },
-  };
-  marked.use(renderer);
-  let rawHtml = await marked(post.content);
-
-  // Replace placeholders with highlighted HTML
-  for (const block of codeBlocks) {
-    const highlighted = await highlight(block.code, block.lang);
-    rawHtml = rawHtml.replace(block.placeholder, highlighted);
-  }
+  });
+  const parsed = await md.parse(post.content);
+  const blocks = await Promise.all(
+    codeBlocks.map((block) => highlight(block.code, block.lang)),
+  );
+  // Function replacer so `$&`, `$'` etc. in highlighted code are not treated as patterns
+  const rawHtml = parsed.replace(
+    /__CODE_BLOCK_(\d+)__/g,
+    (_match, i) => blocks[Number(i)],
+  );
   const withIds = addHeadingIds(rawHtml);
   const headings = extractHeadings(post.content);
   const { prev, next } = getAdjacentPosts(slug);

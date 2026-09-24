@@ -17,7 +17,7 @@ export default async function ReadingPage() {
           Reading
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-md">
-          Articles, essays, and things I've been reading
+          Articles, essays, and things I&apos;ve been reading
         </p>
       </header>
 

@@ -116,15 +116,12 @@ describe("blog utilities", () => {
       const posts = getAllPosts();
       if (posts.length > 0) {
         const post: BlogPost = posts[0];
-        // Type checking - these will fail compilation if types are wrong
-        const _slug: string = post.slug;
-        const _title: string = post.title;
-        const _date: string = post.date;
-        const _description: string = post.description;
-        const _tags: string[] = post.tags;
-        const _content: string = post.content;
-
-        expect(true).toBe(true); // Type checking passed
+        expect(typeof post.slug).toBe("string");
+        expect(typeof post.title).toBe("string");
+        expect(typeof post.date).toBe("string");
+        expect(typeof post.description).toBe("string");
+        expect(Array.isArray(post.tags)).toBe(true);
+        expect(typeof post.content).toBe("string");
       }
     });
   });

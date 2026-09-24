@@ -1,43 +1,56 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 
 const THEME_KEY = "woza-theme";
+const THEME_EVENT = "woza-theme-change";
+const DARK_QUERY = "(prefers-color-scheme: dark)";
+
+function subscribe(onChange: () => void) {
+  const mediaQuery = window.matchMedia(DARK_QUERY);
+  mediaQuery.addEventListener("change", onChange);
+  window.addEventListener("storage", onChange);
+  window.addEventListener(THEME_EVENT, onChange);
+  return () => {
+    mediaQuery.removeEventListener("change", onChange);
+    window.removeEventListener("storage", onChange);
+    window.removeEventListener(THEME_EVENT, onChange);
+  };
+}
+
+// Stored preference wins; otherwise follow the system setting
+function getIsDark() {
+  const stored = localStorage.getItem(THEME_KEY);
+  return stored === "dark" || (!stored && window.matchMedia(DARK_QUERY).matches);
+}
+
+// Unknown on the server; render a placeholder until hydrated
+function getServerIsDark(): boolean | null {
+  return null;
+}
 
 export function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const isDark = useSyncExternalStore<boolean | null>(
+    subscribe,
+    getIsDark,
+    getServerIsDark,
+  );
 
+  // Keep the <html> class in sync, e.g. when the system theme changes
   useEffect(() => {
-    setMounted(true);
-    const stored = localStorage.getItem(THEME_KEY);
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    const dark = stored === "dark" || (!stored && prefersDark);
-    setIsDark(dark);
-
-    // Listen for system theme changes
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (e: MediaQueryListEvent) => {
-      // Only react to system changes if no stored preference
-      if (!localStorage.getItem(THEME_KEY)) {
-        setIsDark(e.matches);
-        document.documentElement.classList.toggle("dark", e.matches);
-      }
-    };
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
+    if (isDark !== null) {
+      document.documentElement.classList.toggle("dark", isDark);
+    }
+  }, [isDark]);
 
   const toggle = () => {
     const newDark = !isDark;
-    setIsDark(newDark);
     document.documentElement.classList.toggle("dark", newDark);
     localStorage.setItem(THEME_KEY, newDark ? "dark" : "light");
+    window.dispatchEvent(new Event(THEME_EVENT));
   };
 
-  if (!mounted) {
+  if (isDark === null) {
     return <div className="w-9 h-9" aria-hidden="true" />;
   }
 

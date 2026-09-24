@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { projects, type Project } from "./projects";
+import { projects } from "./projects";
 
 describe("projects data", () => {
   it("should export an array of projects", () => {

@@ -21,7 +21,7 @@ export default function ProjectsPage() {
           Projects
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-md">
-          Things I've built
+          Things I&apos;ve built
         </p>
       </header>
 

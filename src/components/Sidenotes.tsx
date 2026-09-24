@@ -52,11 +52,12 @@ export function Sidenotes({ notes }: { notes: RenderedSidenote[] }) {
 
   useEffect(() => {
     // Initial + delayed recalc (after fonts/images)
-    calculate();
+    const raf = requestAnimationFrame(calculate);
     const t1 = setTimeout(calculate, 300);
     const t2 = setTimeout(calculate, 1000);
     window.addEventListener("resize", calculate);
     return () => {
+      cancelAnimationFrame(raf);
       clearTimeout(t1);
       clearTimeout(t2);
       window.removeEventListener("resize", calculate);

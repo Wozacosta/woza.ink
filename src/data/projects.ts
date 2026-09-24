@@ -10,6 +10,14 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "what-if",
+    title: "What If",
+    description:
+      "An alternate history generator. Type a point of divergence and watch every decade since get rewritten",
+    color: "#a16207",
+    url: "https://althistory-eosin.vercel.app",
+  },
+  {
     slug: "cytisinio",
     title: "Cytisinio",
     description:

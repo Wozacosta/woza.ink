@@ -15,3 +15,8 @@ export interface ArticleSidenotes {
   slug: string;
   notes: Sidenote[];
 }
+
+/** A sidenote with its markdown content rendered to inline HTML */
+export interface RenderedSidenote extends Sidenote {
+  html: string;
+}

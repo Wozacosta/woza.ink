@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Marked } from "marked";
+import { Marked, marked } from "marked";
 import { getPostBySlug, getAllSlugs, getAdjacentPosts, getReadTime } from "@/data/blog";
 import { addHeadingIds } from "@/lib/headings";
 import { injectSidenoteMarkers } from "@/lib/sidenotes";
@@ -9,6 +9,7 @@ import { TagBadge } from "@/components/TagBadge";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { TableOfContents } from "@/components/TableOfContents";
 import { Sidenotes } from "@/components/Sidenotes";
+import { Endnotes } from "@/components/Endnotes";
 import { getSidenotes } from "@/data/sidenotes";
 
 // Only pre-rendered slugs are valid; unknown slugs 404 without touching the filesystem
@@ -73,6 +74,10 @@ export default async function BlogPostPage({
   const contentHtml = articleSidenotes
     ? injectSidenoteMarkers(withIds, articleSidenotes.notes)
     : withIds;
+  const notes = (articleSidenotes?.notes ?? []).map((note) => ({
+    ...note,
+    html: marked.parseInline(note.content, { async: false }),
+  }));
 
   return (
     <main className="min-h-screen">
@@ -139,6 +144,8 @@ export default async function BlogPostPage({
             />
           </article>
 
+          <Endnotes notes={notes} />
+
           <div className="pb-4 flex justify-end">
             <a
               href="#"
@@ -178,7 +185,7 @@ export default async function BlogPostPage({
 
         {/* ── Right: Sidenotes (absolutely positioned to match marker Y) ── */}
         <aside className="hidden xl:block pt-16 relative" data-sidenotes>
-          {articleSidenotes && <Sidenotes notes={articleSidenotes.notes} />}
+          <Sidenotes notes={notes} />
         </aside>
       </div>
     </main>

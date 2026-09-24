@@ -1,27 +1,12 @@
 "use client";
 
 import { useEffect, useState, useCallback, useRef } from "react";
-import type { Sidenote } from "@/data/sidenotes/types";
-
-const typeLabel: Record<Sidenote["type"], string> = {
-  quote: "Quote",
-  source: "Source",
-  context: "Context",
-  counter: "Counter",
-  note: "Note",
-};
-
-const typeDot: Record<Sidenote["type"], string> = {
-  quote: "bg-amber-400",
-  source: "bg-blue-400",
-  context: "bg-emerald-400",
-  counter: "bg-rose-400",
-  note: "bg-gray-400",
-};
+import type { RenderedSidenote } from "@/data/sidenotes/types";
+import { typeLabel, typeDot } from "./sidenoteStyles";
 
 const GAP = 12; // px between sidenotes
 
-export function Sidenotes({ notes }: { notes: Sidenote[] }) {
+export function Sidenotes({ notes }: { notes: RenderedSidenote[] }) {
   const [positions, setPositions] = useState<(number | null)[]>([]);
   const noteRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -103,7 +88,10 @@ export function Sidenotes({ notes }: { notes: Sidenote[] }) {
                   {i + 1}
                 </span>
               </div>
-              <p className="text-gray-600 dark:text-gray-400">{note.content}</p>
+              <p
+                className="sn-body text-gray-600 dark:text-gray-400"
+                dangerouslySetInnerHTML={{ __html: note.html }}
+              />
               {note.attribution && (
                 <p className="mt-1 text-[11px] text-gray-400 dark:text-gray-500 italic">
                   — {note.attribution}

@@ -1,3 +1,5 @@
+import { decodeEntities } from "./html";
+
 export interface Heading {
   id: string;
   text: string;
@@ -15,34 +17,32 @@ export function slugify(text: string): string {
     .trim();
 }
 
-/** Extract h2/h3 headings from raw markdown */
-export function extractHeadings(markdown: string): Heading[] {
-  const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+/**
+ * Add unique IDs to rendered heading elements and collect h2/h3 for the TOC.
+ * Working from the HTML (not the markdown) means `#` lines inside code
+ * blocks are ignored and TOC ids always match the rendered ids.
+ */
+export function addHeadingIds(html: string): {
+  html: string;
+  headings: Heading[];
+} {
+  const seen = new Map<string, number>();
   const headings: Heading[] = [];
-  let match;
 
-  while ((match = headingRegex.exec(markdown)) !== null) {
-    const level = match[1].length;
-    const raw = match[2]
-      .replace(/\*\*(.+?)\*\*/g, "$1")
-      .replace(/\*(.+?)\*/g, "$1")
-      .replace(/`(.+?)`/g, "$1")
-      .replace(/\[(.+?)\]\(.+?\)/g, "$1")
-      .trim();
-    headings.push({ id: slugify(raw), text: raw, level });
-  }
-
-  return headings;
-}
-
-/** Post-process rendered HTML to add IDs to heading elements */
-export function addHeadingIds(html: string): string {
-  return html.replace(
-    /<h([1-6])>([\s\S]*?)<\/h[1-6]>/g,
-    (_match, level, inner) => {
-      const plain = inner.replace(/<[^>]*>/g, "");
-      const id = slugify(plain);
+  const withIds = html.replace(
+    /<h([1-6])>([\s\S]*?)<\/h\1>/g,
+    (_match, level: string, inner: string) => {
+      const text = decodeEntities(inner.replace(/<[^>]*>/g, "")).trim();
+      const base = slugify(text) || "section";
+      const count = seen.get(base) ?? 0;
+      seen.set(base, count + 1);
+      const id = count === 0 ? base : `${base}-${count}`;
+      if (level === "2" || level === "3") {
+        headings.push({ id, text, level: Number(level) });
+      }
       return `<h${level} id="${id}">${inner}</h${level}>`;
     },
   );
+
+  return { html: withIds, headings };
 }

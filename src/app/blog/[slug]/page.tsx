@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Marked } from "marked";
 import { getPostBySlug, getAllSlugs, getAdjacentPosts, getReadTime } from "@/data/blog";
-import { extractHeadings, addHeadingIds } from "@/lib/headings";
+import { addHeadingIds } from "@/lib/headings";
 import { injectSidenoteMarkers } from "@/lib/sidenotes";
 import { highlight } from "@/lib/highlight";
 import { TagBadge } from "@/components/TagBadge";
@@ -66,8 +66,7 @@ export default async function BlogPostPage({
     /__CODE_BLOCK_(\d+)__/g,
     (_match, i) => blocks[Number(i)],
   );
-  const withIds = addHeadingIds(rawHtml);
-  const headings = extractHeadings(post.content);
+  const { html: withIds, headings } = addHeadingIds(rawHtml);
   const { prev, next } = getAdjacentPosts(slug);
   const readTime = getReadTime(post.content);
   const articleSidenotes = getSidenotes(slug);

@@ -29,7 +29,7 @@ export default async function ReadingPage() {
         ) : (
           <div className="space-y-10">
             {items.map((item) => (
-              <article key={item.slug} className="group">
+              <article key={item.url} className="group">
                 <a
                   href={item.url}
                   target="_blank"

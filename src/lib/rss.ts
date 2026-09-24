@@ -1,9 +1,6 @@
 import { getAllPosts, BlogPost } from "@/data/blog";
+import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION } from "@/lib/site";
 
-const SITE_URL = "https://woza.ink";
-const SITE_TITLE = "woza.ink";
-const SITE_DESCRIPTION =
-  "A collection of creative experiments and interactive experiences";
 const FEED_ITEM_LIMIT = 20;
 
 function escapeXml(text: string): string {

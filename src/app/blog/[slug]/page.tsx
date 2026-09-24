@@ -32,6 +32,16 @@ export async function generateMetadata({
   return {
     title: `${post.title} — woza.ink`,
     description: post.description,
+    alternates: { canonical: `/blog/${slug}` },
+    openGraph: {
+      siteName: "woza.ink",
+      type: "article",
+      title: post.title,
+      description: post.description,
+      publishedTime: post.date,
+      tags: post.tags,
+      url: `/blog/${slug}`,
+    },
   };
 }
 

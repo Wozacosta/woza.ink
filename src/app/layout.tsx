@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { RssLink } from "@/components/RssLink";
+import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,9 +12,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "woza.ink",
-  description:
-    "A collection of creative experiments and interactive experiences",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    siteName: SITE_TITLE,
+    type: "website",
+  },
 };
 
 export default function RootLayout({

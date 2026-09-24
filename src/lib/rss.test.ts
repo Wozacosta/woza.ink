@@ -23,7 +23,7 @@ describe("RSS feed generation", () => {
     it("should include channel metadata", () => {
       const feed = generateRssFeed();
       expect(feed).toContain("<title>woza.ink</title>");
-      expect(feed).toContain("<link>https://woza.ink</link>");
+      expect(feed).toContain("<link>https://www.woza.ink</link>");
       expect(feed).toContain("<description>");
       expect(feed).toContain("<language>en-us</language>");
     });
@@ -36,7 +36,7 @@ describe("RSS feed generation", () => {
 
     it("should include atom:link self-reference", () => {
       const feed = generateRssFeed();
-      expect(feed).toContain('href="https://woza.ink/feed.xml"');
+      expect(feed).toContain('href="https://www.woza.ink/feed.xml"');
       expect(feed).toContain('rel="self"');
       expect(feed).toContain('type="application/rss+xml"');
     });
@@ -59,7 +59,7 @@ describe("RSS feed generation", () => {
 
     it("should have valid blog post URLs", () => {
       const feed = generateRssFeed();
-      expect(feed).toMatch(/<link>https:\/\/woza\.ink\/blog\/[\w-]+<\/link>/);
+      expect(feed).toMatch(/<link>https:\/\/www\.woza\.ink\/blog\/[\w-]+<\/link>/);
     });
 
     it("should have guid with isPermaLink attribute", () => {

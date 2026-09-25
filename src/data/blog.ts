@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { tagSlug } from "@/lib/tags";
 
 export interface BlogPost {
   slug: string;
@@ -88,4 +89,40 @@ export function getAdjacentPosts(slug: string): {
     prev: idx > 0 ? posts[idx - 1] : null,
     next: idx < posts.length - 1 ? posts[idx + 1] : null,
   };
+}
+
+export interface TagSummary {
+  slug: string;
+  /** Most common spelling of the tag across posts */
+  label: string;
+  count: number;
+}
+
+export function getAllTags(): TagSummary[] {
+  const bySlug = new Map<string, { count: number; spellings: Map<string, number> }>();
+
+  for (const post of getAllPosts()) {
+    for (const tag of new Set(post.tags)) {
+      const slug = tagSlug(tag);
+      if (!slug) continue;
+      const entry = bySlug.get(slug) ?? { count: 0, spellings: new Map() };
+      entry.count++;
+      entry.spellings.set(tag, (entry.spellings.get(tag) ?? 0) + 1);
+      bySlug.set(slug, entry);
+    }
+  }
+
+  return [...bySlug.entries()]
+    .map(([slug, { count, spellings }]) => ({
+      slug,
+      label: [...spellings.entries()].sort((a, b) => b[1] - a[1])[0][0],
+      count,
+    }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+}
+
+export function getPostsByTag(slug: string): BlogPost[] {
+  return getAllPosts().filter((post) =>
+    post.tags.some((tag) => tagSlug(tag) === slug),
+  );
 }

@@ -110,7 +110,7 @@ export default async function BlogPostPage({
             </h1>
             <div className="flex gap-2 flex-wrap mt-4">
               {post.tags.map((tag) => (
-                <TagBadge key={tag} tag={tag} />
+                <TagBadge key={tag} tag={tag} link />
               ))}
             </div>
             {post.description && (

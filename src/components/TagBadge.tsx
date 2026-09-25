@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { tagHref } from "@/lib/tags";
+
 const TAG_COLORS: Record<string, string> = {
   project:
     "bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300",
@@ -42,13 +45,31 @@ const TAG_COLORS: Record<string, string> = {
 const DEFAULT_TAG =
   "bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400";
 
-export function TagBadge({ tag }: { tag: string }) {
+export function TagBadge({
+  tag,
+  link = false,
+  count,
+}: {
+  tag: string;
+  /** Render as a link to the tag's page */
+  link?: boolean;
+  /** Optional post count shown after the tag */
+  count?: number;
+}) {
   const colors = TAG_COLORS[tag.toLowerCase()] ?? DEFAULT_TAG;
-  return (
-    <span
-      className={`text-xs px-2 py-0.5 rounded-full font-medium transition-opacity ${colors}`}
-    >
+  const className = `text-xs px-2 py-0.5 rounded-full font-medium transition-opacity ${colors}`;
+  const label = (
+    <>
       #{tag}
-    </span>
+      {count !== undefined && <span className="ml-1 opacity-60">{count}</span>}
+    </>
+  );
+
+  if (!link) return <span className={className}>{label}</span>;
+
+  return (
+    <Link href={tagHref(tag)} className={`${className} hover:opacity-75`}>
+      {label}
+    </Link>
   );
 }

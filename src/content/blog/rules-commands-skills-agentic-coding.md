@@ -76,7 +76,7 @@ Steps:
 
 The key distinction from rules: **commands are imperative, rules are declarative**. A rule says "always do X." A command says "when I say so, do these steps."
 
-The failure mode with commands is trying to make them too general. A `/help-me-code` command is useless. A `/scaffold-api-route` command that knows exactly which folder to use, which middleware to apply, and which test pattern to follow — that's leverage.
+Commands fail when they are too general. A `/help-me-code` command is useless. A `/scaffold-api-route` command that knows exactly which folder to use, which middleware to apply, and which test pattern to follow saves time.
 
 > Commands are the things you used to keep in a Notion doc that nobody ever read. Now they're executable.
 
@@ -138,11 +138,11 @@ Without rules, every session starts from scratch. Without commands, you repeat y
 
 ## The practical takeaway
 
-Start with rules. They're the lowest effort, highest leverage entry point. Five good rules beat fifty mediocre ones.
+Start with rules. They give you the biggest return for the least effort. Five good rules beat fifty mediocre ones.
 
 Then identify the two or three workflows you run most often and turn them into commands. The goal isn't to automate everything — it's to make the common things frictionless.
 
-Skills come last, and only where you need real depth. They're expensive to write well and they need maintenance as your codebase evolves. But when you have a skill that truly encodes how you do something — architecture decisions, code review standards, onboarding a new feature — it's the closest thing to cloning your own judgment.
+Skills come last, and only where you need depth. They're expensive to write well and they need maintenance as your codebase evolves. A skill that encodes how you make architecture decisions, review code, or onboard a feature comes closest to cloning your own judgment.
 
 Most developers treat AI as a conversation partner. The ones shipping faster treat it as a programmable system. Rules, commands, and skills are how you build that system.
 

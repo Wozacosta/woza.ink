@@ -86,7 +86,7 @@ Compare this to opening with "hey continue where we left off" after a reset. The
 
 ## Writing things down
 
-The single highest-leverage habit for working with agents: write down decisions as you make them.
+The most useful habit when working with agents: write down decisions as you make them.
 
 Not in the chat. In a file.
 
@@ -121,5 +121,5 @@ The developers who get the most out of agentic coding aren't the ones who have t
 ## Further reading
 
 - [Rules, Commands, and Skills: The Three Layers of Agentic Coding](/blog/rules-commands-skills-agentic-coding) — how to structure the persistent context infrastructure
-- [BMAD method](https://github.com/bmadcode/BMAD-METHOD) — a comprehensive system for agentic development workflows; worth studying for how it handles context across sessions
+- [BMAD method](https://github.com/bmadcode/BMAD-METHOD) — a full system for agentic development workflows; its handling of context across sessions is especially useful
 - [Git Worktrees for Parallel Agent Work](/blog/git-worktrees-parallel-agents) — the infrastructure side of running multiple sessions concurrently

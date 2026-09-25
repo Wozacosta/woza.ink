@@ -51,7 +51,7 @@ Practical result: Even if Signal's servers are seized, the attackers gain little
 ## How Telegram's Encryption Works
 
 Telegram has two modes:
-1. Cloud Chats (default): messages are encrypted in transit between you and Telegram servers, but Telegram holds the keys on the server side. This enables seamless multi-device sync and server-side features (search, history, sync across clients).
+1. Cloud Chats (default): messages are encrypted in transit between you and Telegram servers, but Telegram holds the keys on the server side. This enables multi-device sync plus server-side search and history.
 2. Secret Chats: true E2EE for one-to-one conversations using client-side keys. Not available for cloud-group chats or for multi-device group E2EE in the standard Telegram model.
 
 Consequences:

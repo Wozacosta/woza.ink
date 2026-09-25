@@ -47,7 +47,7 @@ There’s a real, weird joy in sending an update and watching one or two strange
 
 Monetization shifts intentions. Most of my side projects are intentionally non-commercial — they’re playgrounds, not startups. That freedom allows bolder choices.
 
-## TL;DR — TL;Funky (short, punchy, and actionable) 🚀
+## The short version
 
 - Ship over polish. Try > theorize.  
 - Start tiny: one feature, one weekend.  

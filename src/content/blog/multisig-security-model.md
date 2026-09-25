@@ -19,7 +19,7 @@ The best evidence for this is that the largest crypto theft ever recorded happen
 
 An **m-of-n** scheme requires *m* signatures from a set of *n* keys. A 2-of-3 wallet has three keys; any two can spend.
 
-The arithmetic is the whole point:
+Start with the arithmetic:
 
 - **Theft resistance** goes up. An attacker needs *m* keys, not one.
 - **Loss resistance** goes up. You can lose *n − m* keys and still spend.
@@ -51,7 +51,7 @@ Two schemes implement this in practice, and the difference between them is the t
 
 **MuSig2** (BIP 327) is an *n*-of-*n* protocol. Everyone signs, and the signatures aggregate into one. [BitGo reports roughly 47 vBytes saved per input](https://bitcoinops.org/en/bitgo-musig2/) against native SegWit multisig, around 30% lower fees. The catch is in the name: *n*-of-*n*. One unresponsive signer and nobody can spend. There is no threshold.
 
-**FROST** (Flexible Round-Optimized Schnorr Threshold) *is* a threshold scheme — a subset of *m* signers can produce a valid aggregate signature. It also supports distributed key generation, meaning the full private key never exists anywhere, at any point, including at setup. That's a genuinely stronger property than any script-based multisig offers.
+**FROST** (Flexible Round-Optimized Schnorr Threshold) *is* a threshold scheme — a subset of *m* signers can produce a valid aggregate signature. It also supports distributed key generation, meaning the full private key never exists anywhere, at any point, including at setup. No script-based multisig offers that property.
 
 FROST is the more interesting technology and the less deployed one. In Bitcoin it remains largely experimental, with production use concentrated in specialized systems rather than general wallets. MuSig2 shipped first because *n*-of-*n* is a much easier problem.
 
@@ -124,7 +124,7 @@ Most multisig failures are boring. They're not attacks.
 
 **Backup complexity scales badly.** Bitcoin multisig recovery needs the keys *and* the wallet descriptor — the output descriptor or the xpubs and script type. Back up three seed phrases and lose the descriptor and you may be unable to reconstruct the addresses at all. This has happened to real people with real money.
 
-**Inheritance gets harder, not easier.** Explaining a 2-of-3 to someone who will need to use it while grieving, possibly years from now, on software that has since changed, is a genuinely hard design problem. Miniscript and policy languages like [Liana's](https://wizardsardine.com/liana/) time-locked recovery paths exist specifically to address this, and they're worth looking at if inheritance is part of your threat model.
+**Inheritance gets harder, not easier.** Explaining a 2-of-3 to someone who will need to use it while grieving, possibly years from now, on software that has since changed, is a hard design problem. Miniscript and policy languages like [Liana's](https://wizardsardine.com/liana/) time-locked recovery paths address this directly and belong in any inheritance threat model.
 
 **Signer coordination has a cost.** A 3-of-5 across timezones means some transactions take days. Organizations respond by keeping a hot wallet for operations — which is fine, as long as everyone stays honest about how much sits in it.
 
@@ -132,7 +132,7 @@ Most multisig failures are boring. They're not attacks.
 
 ## Choosing
 
-Start from what you're actually defending against. The threat model determines the answer, and the answers genuinely differ:
+Start from what you're actually defending against. The threat model determines the answer, and the answers differ:
 
 **One person, meaningful savings, single chain.** 2-of-3, keys in three physically separate locations, at least one of them not your home. Back up the descriptor alongside the seeds. Test recovery *before* funding it, with a trivial amount, and test it again yearly.
 
@@ -152,7 +152,7 @@ Multisig is a good primitive, and it defends a narrower perimeter than its reput
 
 The industry's largest loss was a multisig wallet where the cryptography performed flawlessly. That should be the starting point for anyone designing a setup, not a footnote.
 
-Add signers only where the extra key genuinely reduces something you're actually afraid of. Then spend the remaining effort on the part that failed at Bybit: knowing what you're signing.
+Add signers only where the extra key reduces a risk you're actually afraid of. Then spend the remaining effort on the part that failed at Bybit: knowing what you're signing.
 
 ---
 

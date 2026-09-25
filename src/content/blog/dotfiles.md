@@ -139,8 +139,7 @@ What to leave out: secrets, tokens, anything machine-specific that shouldn't roa
 
 ## The compounding return
 
-The real value isn't the setup speed, though that's real. It's the habit of treating your environment as code. You start reviewing changes before committing them. You write comments explaining why an alias exists. You see the history of how your workflow evolved.
+The lasting benefit is the habit of treating your environment as code. You start reviewing changes before committing them. You write comments explaining why an alias exists. You see the history of how your workflow evolved.
 
 It's also a surprisingly good signal when evaluating tools — if something doesn't have a clean, file-based config, that's worth noting.
-
 

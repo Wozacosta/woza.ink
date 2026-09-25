@@ -38,7 +38,7 @@ Matrix = interoperable, federated chat where you can run the server, choose the 
 - Interop: Bridges mean your Matrix client can talk to Slack channels, IRC rooms, Telegram groups, and more.
 - Open governance: The spec and reference implementations are public, maintained by a non-profit foundation.
 
-This is not just about ideology — it's practical. Governments, enterprises, and open-source communities use Matrix because it's robust and auditable.
+This has practical consequences. Governments, enterprises, and open-source communities use Matrix because it is reliable and auditable.
 
 ---
 
@@ -103,7 +103,7 @@ Bridges let Matrix rooms talk to other networks. They enable:
 - Telegram ↔ Matrix
 - SMS ↔ Matrix (yes, really — with the right setup)
 
-Bridges are great for gradual migration: you can bring a community into Matrix without forcing everyone to give up their old tool immediately. Bridges vary in quality; some are seamless, others are quirky. Still better than starting from zero.
+Bridges are great for gradual migration: you can bring a community into Matrix without forcing everyone to give up their old tool immediately. Quality varies; some bridges feel native, while others are quirky. Still better than starting from zero.
 
 ---
 
@@ -137,7 +137,7 @@ Q: Is Matrix encrypted by default?
 A: Direct messages typically are; room encryption depends on settings and the client. Always confirm E2EE is enabled for private conversations.
 
 Q: Can I export my data?  
-A: Yes, you can back up and export account data, but moving servers isn't seamless yet — plan carefully.
+A: Yes, you can back up and export account data, but moving servers still takes planning.
 
 ---
 

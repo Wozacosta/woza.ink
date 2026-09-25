@@ -20,7 +20,7 @@ tags: ["web", "local-first", "tutorial"]
 
 ## Why we should care (short and spicy)
 
-If your app "spins and dies" when the network hiccups, users get annoyed, uninstall, and never come back. Local-first flips the script: instant reads/writes, seamless offline use, and background sync that quietly keeps devices in sync. It's like building a native app, but with web tech — and users actually own their data.
+If your app "spins and dies" when the network hiccups, users get annoyed, uninstall, and never come back. Local-first gives you instant reads and writes, full offline use, and background sync between devices. It's like building a native app, but with web tech — and users own their data.
 
 > Pro tip: ship the simplest local UX first. Sync is an add-on, not a requirement.
 

@@ -12,7 +12,7 @@ export const sidenotes: ArticleSidenotes = {
       url: "https://matrix.org/foundation/about/",
     },
     {
-      marker: "Governments, enterprises, and open-source communities use Matrix because it's robust and auditable",
+      marker: "Governments, enterprises, and open-source communities use Matrix because it is reliable and auditable",
       type: "source",
       content:
         "Matrix reached 115 million users in 2023 (up ~50% in 12 months) and continues to grow. Over 25 countries now actively deploy Matrix for digital sovereignty. Notable government adoptions include France's **Tchap** (launched 2019, used across all government agencies), Germany's **BwMessenger** (100,000+ active users in the Bundeswehr), and Bavaria's **ByCS** messenger for schools sized for half a million pupils.",

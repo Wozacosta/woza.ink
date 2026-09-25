@@ -31,7 +31,7 @@ Pick the wrong one and the failure is usually silent, which is what makes this c
 
 ## True random vs pseudorandom
 
-A **TRNG** (true random number generator) harvests entropy from a physical process believed to be fundamentally unpredictable: thermal noise, shot noise, radioactive decay, quantum measurement, oscillator jitter. Output is genuinely non-deterministic. It's also slow, sometimes biased, and hard to verify — which is a serious problem, because a broken hardware RNG and a working one produce output that looks identical.
+A **TRNG** (true random number generator) harvests entropy from a physical process believed to be fundamentally unpredictable: thermal noise, shot noise, radioactive decay, quantum measurement, oscillator jitter. Its output is non-deterministic. It is also slow, sometimes biased, and hard to verify — a serious problem because a broken hardware RNG and a working one produce output that looks identical.
 
 A **PRNG** is a deterministic algorithm. Feed it a seed, get a long stream that passes statistical tests. Same seed, same stream, always. Fast and reproducible — exactly what you want for simulations and games. `Math.random()` and `rand()` live here, and neither belongs anywhere near a key.
 
@@ -59,7 +59,7 @@ Since Linux 5.6, `/dev/random` blocks only before the pool is first initialized.
 
 **Use `getrandom(2)`.** It blocks until the pool is initialized, then never blocks again, and it can't fail due to file descriptor exhaustion the way opening `/dev/urandom` can. In userland: `getrandom()` on Linux, `arc4random_buf()` on BSD and macOS, `BCryptGenRandom` on Windows, `crypto.randomBytes()` in Node, `secrets` in Python. Never the language's default random module.
 
-The one genuinely dangerous window is **early boot**, especially on embedded devices and freshly cloned VM images — no disk history, no user input, no accumulated jitter. Devices have shipped SSH host keys generated seconds after first boot, and researchers have found thousands of them sharing keys across the internet.
+The dangerous window is **early boot**, especially on embedded devices and freshly cloned VM images — no disk history, no user input, no accumulated jitter. Devices have shipped SSH host keys generated seconds after first boot, and researchers have found thousands of them sharing keys across the internet.
 
 ---
 
@@ -69,7 +69,7 @@ Some setups are famous mostly for being fun to look at.
 
 Cloudflare's San Francisco lobby has a wall of **lava lamps** filmed by a camera whose frames feed an entropy pool. Their London office uses a chaotic pendulum; Singapore uses a radioactive source measuring uranium decay.
 
-It's real entropy. It's also somewhat theatrical, and Cloudflare is refreshingly upfront that it's one input among many rather than the load-bearing source. Chaotic fluid in wax is genuinely hard to predict, but the camera sensor's own thermal noise probably contributes more entropy than the lamps do.
+It's real entropy. It's also somewhat theatrical, and Cloudflare is upfront that it's one input among many rather than the main source. Chaotic fluid in wax is hard to predict, but the camera sensor's own thermal noise probably contributes more entropy than the lamps do.
 
 The **ANU Quantum Random Numbers Server** is a more rigorous version: it measures vacuum fluctuations of the electromagnetic field — quantum noise, unpredictable as a matter of physics rather than practical difficulty — and streams the output publicly.
 
@@ -126,7 +126,7 @@ Everything so far assumed you generate randomness for yourself. The problem chan
 
 **Commit-reveal** is the foundational trick. Publish `hash(secret)` first. Reveal `secret` later. Anyone can check the hash matches, so you're bound to a value you chose before seeing anything else. This is what "provably fair" online gambling runs on: a hashed **server seed** published up front, a player-supplied **client seed**, and a **nonce** incrementing per round, run through HMAC-SHA256. The player contributes entropy the operator can't control, and after the server seed is revealed every past round can be recomputed and checked.
 
-It's a genuinely elegant construction. It's also worth knowing what it doesn't prove. It confirms the operator didn't change the outcome after your bet. It says nothing about whether the game's odds are what the operator claims, and it doesn't satisfy any major gaming regulator — licensed markets require certification from labs like GLI or eCOGRA, which test the generator's statistical behavior over time rather than the integrity of individual rounds. The two mechanisms answer different questions, and crypto casinos advertising "provably fair" as equivalent to a license are eliding that.
+It's an elegant construction with a narrow guarantee: the operator did not change the outcome after your bet. It says nothing about whether the game's odds are what the operator claims, and it doesn't satisfy any major gaming regulator. Licensed markets require certification from labs like GLI or eCOGRA, which test the generator's statistical behavior over time rather than the integrity of individual rounds. The two mechanisms answer different questions, and crypto casinos advertising "provably fair" as equivalent to a license are eliding that.
 
 **Blockchain randomness** has the same shape with adversarial validators added.
 
@@ -134,7 +134,7 @@ Ethereum's `PREVRANDAO` exposes the beacon chain's RANDAO accumulator — each p
 
 **VRFs** solve this differently. A verifiable random function produces a value plus a proof that the value was derived correctly from a specific input and a specific private key. [Chainlink VRF](https://docs.chain.link/vrf) publishes both on-chain, so the contract verifies the proof before accepting the number. Nobody — not the oracle, not the developer, not a validator — can substitute a different value. You are still trusting that the oracle answers at all.
 
-**drand** takes the threshold approach: a league of independent operators produces a jointly-generated random beacon on a fixed schedule, where no minority can predict or bias the output and no single operator can withhold it. It's public, unbiasable, and continuous — genuinely the most decentralized option — and its values are public the instant they're produced, so you can't use them for anything requiring privacy.
+**drand** takes the threshold approach: a league of independent operators produces a jointly-generated random beacon on a fixed schedule, where no minority can predict or bias the output and no single operator can withhold it. No other option here distributes control as widely. Its values are public the instant they're produced, so you can't use them for anything requiring privacy.
 
 ---
 

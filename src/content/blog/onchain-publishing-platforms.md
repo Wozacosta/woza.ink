@@ -9,9 +9,9 @@ tags: ["web3", "decentralized", "publishing", "open-source"]
 
 🔥 Quick vibe: Medium takes your audience. Substack takes a cut. Onchain publishing promises you keep both. But the reality is messier than the pitch.
 
-There's a growing ecosystem of web3-native publishing platforms that let you write, own your content onchain, and monetize without a middleman. Some are thriving. Some are dead. Most sit somewhere in between.
+Web3-native publishing platforms let you write, own your content onchain, and monetize without a middleman. A few are active, some are dead, and most sit somewhere in between.
 
-This post maps the landscape — Paragraph, Mirror (RIP), Lens, Farcaster, Hive, Steemit, and more — so you can decide if any of them are worth your time.
+This post compares Paragraph, Mirror (RIP), Lens, Farcaster, Hive, Steemit, and others, including what each one offers and whether it is still active.
 
 > Callout — Who this is for:
 > Writers, devs, and creators who've heard "publish onchain" and want to know what that actually means in practice. No wallet required to read this post.
@@ -166,7 +166,7 @@ Publishing onchain is one thing. Actually serving that content to readers throug
 
 ### eth.limo — The Privacy-Preserving ENS Gateway
 
-[eth.limo](https://eth.limo/) is a free, open-source gateway that lets anyone access ENS-linked content through a normal browser. Add `.limo` to any ENS name — `yourname.eth.limo` — and it resolves to whatever's stored on IPFS, Arweave, or Swarm behind that ENS record. Zero configuration required.
+[eth.limo](https://eth.limo/) is a free, open-source gateway that lets anyone access ENS-linked content through a normal browser. Add `.limo` to any ENS name — `yourname.eth.limo` — and it resolves to whatever's stored on IPFS, Arweave, or Swarm behind that ENS record. It needs no local setup.
 
 **Why it matters for publishing:** If you host your blog on IPFS and point your ENS name at it, eth.limo is what makes it accessible without requiring readers to run a special browser or extension. It's the bridge between the decentralized web and the one people actually use.
 

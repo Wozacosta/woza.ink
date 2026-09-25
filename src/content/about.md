@@ -13,7 +13,7 @@ By day, I work as a software engineer, crafting products that (hopefully) make p
 
 I'm particularly interested in:
 
-- **Web development** — React, Next.js, and the ever-evolving JavaScript ecosystem
+- **Web development** — React, Next.js, and the changing JavaScript ecosystem
 - **Developer tools** — Making the development experience smoother
 - **Creative coding** — Generative art, interactive experiences, and visual experiments
 

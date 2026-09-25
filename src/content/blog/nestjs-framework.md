@@ -98,7 +98,7 @@ This layered architecture means you rarely write cross-cutting concerns inside y
 
 ## How it compares to the alternatives
 
-The Node.js framework landscape in 2026 is crowded. Here's where NestJS sits:
+The Node.js framework field in 2026 is crowded. Here's where NestJS sits:
 
 **Express** — Still the default. Minimal, flexible, zero opinions. NestJS actually uses Express under the hood. The comparison isn't really NestJS vs Express — it's "do you want structure imposed by a framework, or do you want to build your own?"
 
@@ -130,7 +130,7 @@ export class UsersResolver {
 }
 ```
 
-For microservices, NestJS provides transport-layer abstractions over TCP, Redis, NATS, RabbitMQ, Kafka, gRPC, and MQTT. You swap transports by changing a configuration option. Your service code stays the same. This is genuinely useful — you can develop locally with TCP and deploy with Kafka without rewriting handlers.
+For microservices, NestJS provides transport-layer abstractions over TCP, Redis, NATS, RabbitMQ, Kafka, gRPC, and MQTT. You swap transports by changing a configuration option. Your service code stays the same, so you can develop locally with TCP and deploy with Kafka without rewriting handlers.
 
 ---
 
@@ -172,7 +172,7 @@ NestJS is enterprise architecture for Node.js. That's its strength and its limit
 
 ## Further reading
 
-- [NestJS official documentation](https://docs.nestjs.com/) — comprehensive and well-maintained; start with the Overview section
+- [NestJS official documentation](https://docs.nestjs.com/) — detailed and well-maintained; start with the Overview section
 - [NestJS GitHub repository](https://github.com/nestjs/nest) — source code, issues, and release notes
 - [Interview with Kamil Mysliwiec](https://angular.love/interview-with-kamil-mysliwiec-part-1/) — the creator talks about NestJS's origins and design philosophy
 - [NestJS companies page](https://docs.nestjs.com/discover/companies) — who's using it in production

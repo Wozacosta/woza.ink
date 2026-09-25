@@ -5,7 +5,7 @@ export const sidenotes: ArticleSidenotes = {
   notes: [
     {
       marker:
-        "Before jumping into tools, it's worth naming what makes i3 great",
+        "Before jumping into tools, it helps to name what makes i3 great",
       type: "context",
       content:
         "i3 was created in **2009** by Michael Stapelberg, originally as a response to frustrations with wmii (Window Manager Improved Improved). The name \"i3\" stands for \"improved tiling wm\" — improved improved improved. Its design philosophy follows the Unix principle of \"do one thing and do it well\": i3 manages windows, i3bar handles the status bar, i3lock handles screen locking. The project famously prioritizes documentation and stability over new features.",

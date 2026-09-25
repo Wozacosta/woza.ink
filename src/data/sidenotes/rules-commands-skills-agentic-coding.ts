@@ -52,7 +52,7 @@ export const sidenotes: ArticleSidenotes = {
     },
     {
       marker:
-        "Start with rules. They're the lowest effort, highest leverage entry point",
+        "Start with rules. They give you the biggest return for the least effort",
       type: "counter",
       content:
         "One caveat to the \"start with rules\" advice: Cursor users report that a well-crafted `.cursorrules` file can push AI suggestion acceptance rates **from 30% to 80%+**. But the flip side is real — over-stuffed rule files become noise. The 2026 Agentic Coding Trends Report from Anthropic emphasizes that vibe coding (typing prompts and hoping for the best) fails when code moves from prototype to production. The technique skips design, review, and testing.",

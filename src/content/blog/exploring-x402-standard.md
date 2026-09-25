@@ -62,7 +62,7 @@ Yes, it's JSON. Yes, it makes life easier.
 
 ## Where x402 fits in your stack
 
-- API Gateway: return x402 from the gateway when a request fails policy checks — callers get actionable feedback.
+- API Gateway: return x402 from the gateway when a request fails policy checks — callers get a specific reason they can act on.
 - Microservices: embed x402 responses for inter-service auth calls, making it easier to surface why a request was blocked.
 - Policy Engines: policy decisions (WAF, OPA, custom ABAC) can be surfaced verbatim in the x402 envelope.
 

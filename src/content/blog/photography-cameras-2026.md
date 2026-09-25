@@ -51,7 +51,7 @@ Is DSLR dead? For new purchases, yes. For shooting, no. A used Canon 5D Mark IV 
 
 ---
 
-## The mirrorless landscape: five ecosystems
+## Five mirrorless systems
 
 **Canon RF mount** — The biggest ecosystem in 2026. Canon overtook Sony in global mirrorless market share in 2025. Wide range from the budget R100 to the professional R1 and R5 Mark II. The RF lens library is excellent and growing fast. Downside: Canon is aggressive about blocking third-party lenses, though Sigma and Tamron have started releasing RF-mount options.
 
@@ -113,7 +113,7 @@ Let's be honest about what phones do well. In 2026, flagship phones have 1-inch 
 - Battery life measured in hundreds or thousands of shots
 - No AI "enhancement" altering your image without permission
 
-The honest answer: if you only share photos on social media and shoot in decent light, your phone is genuinely good enough. A dedicated camera becomes worth it when you want creative control, when you shoot in difficult light, when you print large, when you need reach (wildlife, sports), or when you simply enjoy the process of photography as a deliberate act rather than a point-and-tap reflex.
+If you only share photos on social media and shoot in decent light, your phone is good enough. A dedicated camera becomes useful when you want creative control, shoot in difficult light, print large, need reach for wildlife or sports, or simply enjoy photography as a deliberate act rather than a point-and-tap reflex.
 
 ---
 
@@ -121,7 +121,7 @@ The honest answer: if you only share photos on social media and shoot in decent 
 
 Phones compensate for their tiny sensors with software. Google's Night Sight, Apple's Smart HDR, Samsung's AI processing — these systems capture multiple frames at different exposures and merge them computationally into a single image that no single exposure could produce.
 
-This is genuinely impressive engineering. A Pixel phone in Night Sight mode can produce a usable image in conditions where a dedicated camera with a kit lens would give you a noisy mess. The phone is capturing 15-30 frames, aligning them, denoising, tone-mapping, and applying scene-specific adjustments — all in under two seconds.
+The engineering is impressive. A Pixel phone in Night Sight mode can produce a usable image in conditions where a dedicated camera with a kit lens would give you a noisy mess. The phone captures 15-30 frames, aligns them, removes noise, adjusts the tones for the scene, and finishes in under two seconds.
 
 Dedicated cameras are slowly adopting some of these techniques. In-camera HDR modes, pixel-shift high resolution, and AI-based autofocus are all computational photography. But cameras remain fundamentally conservative — they give you a single raw capture and let you process it yourself. That's a feature, not a limitation. You decide what the final image looks like, not an algorithm.
 
@@ -151,7 +151,7 @@ The gap is closing from both sides. Phones get bigger sensors; cameras get smart
 
 ---
 
-## The used market: where the real value is
+## Why the used market wins
 
 The U.S. secondhand camera and lens market hit $2.6 billion in 2025. It's not a niche — it's the smart way to buy.
 
@@ -199,6 +199,6 @@ Opinionated take. If you're starting from zero:
 
 ---
 
-Photography in 2026 is in a genuinely interesting place. The tools are better and more accessible than they've ever been. A $500 camera today outperforms a $5,000 camera from 2015. Your phone is a legitimate photographic tool. Film is alive. The used market is overflowing with great gear.
+Photography tools are better and more accessible than ever in 2026. A $500 camera today outperforms a $5,000 camera from 2015. Your phone is a legitimate photographic tool. Film is alive. The used market is overflowing with great gear.
 
 The only wrong choice is the one that stays in the box. Pick something, go shoot, and figure out what matters to you by making photographs — not by reading specs.

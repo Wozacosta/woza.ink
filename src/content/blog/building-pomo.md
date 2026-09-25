@@ -43,13 +43,13 @@ I wanted something that sat politely on your screen and helped you do one thing:
 Pomo focuses on three core things:
 
 ### 1) Clean Timer Interface
-The timer is the whole point. Big number. Subtle progress ring. Start / stop / skip. No intrusive onboarding, no nagging modals.
+The timer comes first. Big number. Subtle progress ring. Start / stop / skip. No intrusive onboarding, no nagging modals.
 
 ### 2) Concentration Music
 Rather than embed a full player (hello complexity), I curated a handful of links to focus playlists. One tap, new tab, get back to work.
 
 ### 3) Simple Progress Tracking
-At the end of the day you can glance at how many pomodoros you finished. No streak shame. No gamified dopamine loop. Just a quiet record.
+You can glance at how many pomodoros you finished that day. No streak shame. No gamified dopamine loop. Just a quiet record.
 
 ---
 

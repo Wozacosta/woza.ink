@@ -9,7 +9,7 @@ tags: ["photography", "tools", "guide"]
 
 Adobe has 41 million Creative Cloud subscribers paying every single month. That number went up again last year. The Photography Plan now costs $19.99/month for new customers — double what it was a few years ago. And yet, when you ask photographers what they'd switch to, most shrug. "There's nothing else." That's not true. It hasn't been true for a while. But the perception persists because Adobe built something more powerful than good software: they built a habit.
 
-Let's break down what Lightroom actually does, why people stay, why people leave, and what the alternatives genuinely offer in 2026.
+This is what Lightroom does, why people stay, why they leave, and what its alternatives offer in 2026.
 
 ---
 
@@ -25,7 +25,7 @@ There are two versions and they're confusingly named.
 
 Both require a Creative Cloud subscription. There is no way to buy Lightroom outright. The Photography Plan — which bundles Lightroom, Lightroom Classic, and Photoshop — runs $19.99/month with 1TB of cloud storage. Legacy subscribers on the old 20GB plan pay $14.99/month. The pre-paid annual rate of $9.99/month is only available to existing subscribers. New customers pay more. This is the Adobe playbook: raise prices on the people who can't easily leave.
 
-Why does it dominate? Three reasons. First, it was early — Lightroom launched in 2007 and defined the non-destructive RAW editing workflow that every competitor now copies. Second, the ecosystem — presets, plugins, tutorials, YouTube education — is massive. Third, inertia. Migrating a catalog of 50,000 edited photos to another tool is genuinely painful. Adobe knows this. It's the moat.
+Why does it dominate? Three reasons. First, it was early — Lightroom launched in 2007 and defined the non-destructive RAW editing workflow that every competitor now copies. Second, the ecosystem — presets, plugins, tutorials, YouTube education — is massive. Third, inertia. Migrating a catalog of 50,000 edited photos takes a lot of work. Adobe knows this. It's the moat.
 
 ---
 
@@ -77,7 +77,7 @@ DxO approaches photo editing from a science-first angle. They've been measuring 
 
 Photomator — formerly Pixelmator Photo before Apple acquired the Pixelmator team in early 2025 — is what happens when a photo editor is built entirely for Apple's stack. SwiftUI, Core ML, Metal, Apple silicon optimization. It's fast in a way that cross-platform tools can't match on a Mac.
 
-**What it does well:** ML-powered auto-adjustments that are genuinely good out of the box. One-tap color correction that understands scenes. RAW processing that leverages Apple's Neural Engine. Batch editing across entire shoots. The interface is clean and focused — it does less than Lightroom, but what it does, it does elegantly.
+**What it does well:** ML-powered auto-adjustments that work well out of the box. One-tap color correction that understands scenes. RAW processing that uses Apple's Neural Engine. Batch editing across entire shoots. The interface is clean and focused — it does less than Lightroom, but what it does, it does elegantly.
 
 **Pricing:** One-time purchase on the App Store, or a subscription option. The perpetual license makes it one of the cheapest capable RAW editors available.
 
@@ -99,7 +99,7 @@ darktable is the most direct open-source alternative to Lightroom. It's a non-de
 
 **What's hard:** The learning curve is brutal. The interface is dense and not intuitive. Documentation exists but assumes knowledge. There are multiple ways to achieve the same result, with some modules being "legacy" and others being "modern" — and the software doesn't always make clear which is which. Color management works but requires configuration. Performance on large libraries can lag.
 
-darktable is genuinely capable software that rewards investment. But "investment" means hours of learning before you're as productive as you'd be in Lightroom on day one.
+darktable is capable software that rewards investment. But "investment" means hours of learning before you're as productive as you'd be in Lightroom on day one.
 
 ### RawTherapee
 
@@ -113,7 +113,7 @@ RawTherapee is a pure RAW processor — no DAM, no library management. It's a ph
 
 digiKam is the open-source answer to the DAM problem. It handles photo management — importing, tagging, face recognition, geolocation, metadata editing — and includes basic editing tools. Think of it as the library half of Lightroom, open-sourced.
 
-**Use case:** Pair digiKam for organization with darktable or RawTherapee for editing. It's the FOSS Lightroom workflow, assembled from parts. It works. It's not seamless.
+**Use case:** Pair digiKam for organization with darktable or RawTherapee for editing. It's the FOSS Lightroom workflow, assembled from parts. It works, but the handoff between tools is clunky.
 
 ---
 
@@ -155,7 +155,7 @@ No tool has cracked the DAM problem perfectly. Lightroom Classic's catalog is th
 
 Every photo editor now has AI features. Here's what's real and what's hype:
 
-**Noise reduction** — The most impactful AI application. DxO DeepPRIME XD3 leads. Lightroom's AI Denoise is good but a step behind. ON1 and Topaz are competitive. This is the one area where AI has genuinely changed what's possible.
+**Noise reduction** — AI has made its clearest difference here. DxO DeepPRIME XD3 leads. Lightroom's AI Denoise is good but a step behind. ON1 and Topaz are competitive. Modern tools can rescue high-ISO files that older denoisers would smear.
 
 **Masking and selection** — Lightroom's AI-powered Select Subject and Select Sky are fast and accurate. Capture One added similar tools. These save real time compared to painting masks by hand.
 
@@ -187,4 +187,4 @@ This is opinionated. Disagree if you want.
 
 ---
 
-The photo editing market in 2026 is better than it's ever been. Adobe still dominates, but the alternatives are no longer compromises — they're genuine choices with real strengths. The subscription model isn't going away, but neither are the tools that refuse to adopt it. Pick the one that fits how you work, not how Adobe wants you to work.
+The photo editing market in 2026 is better than it's ever been. Adobe still dominates, but the alternatives are no longer compromises. Each has distinct strengths. The subscription model isn't going away, but neither are the tools that refuse to adopt it. Pick the one that fits how you work, not how Adobe wants you to work.

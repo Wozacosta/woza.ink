@@ -80,7 +80,7 @@ window-padding-y = 8
 cursor-style = block
 ```
 
-That's a complete, functional config. Most people need fewer lines than that. Ghostty's defaults are good enough that zero configuration is a viable starting point.
+That's a complete, functional config. Most people need fewer lines than that. Ghostty's defaults are good enough to start without a config file.
 
 This is a deliberate choice. WezTerm gives you a full Lua runtime. Kitty has its own config syntax with conditionals and includes. Ghostty says: you don't need a programming language to configure a terminal. If the option exists, it's a key-value pair. If it doesn't exist as an option, file an issue.
 
@@ -141,6 +141,6 @@ This is a rare move. Most developer tools either stay side projects until they d
 
 Terminal emulators aren't supposed to be exciting. They render text, they accept input, they get out of the way. The fact that Ghostty attracted 45,000 GitHub stars in just over a year says something about how much latent frustration existed with the status quo.
 
-Hashimoto didn't set out to build the most popular terminal. He set out to prove that the speed-features-native tradeoff was artificial. The result is a terminal that's genuinely fast, genuinely full-featured, and genuinely native — backed by a non-profit structure that means it can't be acquired, can't pivot to enterprise, and can't enshittify.
+Hashimoto didn't set out to build the most popular terminal. He set out to prove that the speed-features-native tradeoff was artificial. Ghostty is fast, full-featured, and native. Its non-profit structure means it can't be acquired, can't pivot to enterprise, and can't enshittify.
 
 That's a strong foundation. Whether you switch today or just keep it on your radar, Ghostty is shaping what terminals look like going forward.

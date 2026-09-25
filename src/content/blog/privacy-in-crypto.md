@@ -65,11 +65,11 @@ Zcash has two address types:
 
 This duality is both Zcash's strength and its persistent weakness. In theory, optional privacy lets Zcash work with regulated exchanges and compliance tools that need some level of visibility. In practice, if most users stick to transparent addresses (which historically they have — shielded usage has been growing but took years to become significant), the anonymity set for shielded transactions is small. A small anonymity set weakens privacy guarantees: if very few people are using shielded addresses, the pool of possible senders and receivers is small enough to narrow inference.
 
-The cryptography is genuinely impressive. The original Groth16 zk-SNARK that Zcash used required a trusted setup — a ceremony where participants generated cryptographic parameters that had to be discarded. If anyone in the ceremony kept their "toxic waste" portion, they could theoretically forge transactions undetected. Zcash ran elaborate multi-party ceremonies (Sprout and Sapling) to mitigate this. Electric Coin Co.'s subsequent breakthrough, [Halo](https://electriccoin.co/blog/explaining-halo-2/), eliminates the trusted setup requirement entirely — a significant cryptographic advance.
+The cryptography is impressive. The original Groth16 zk-SNARK that Zcash used required a trusted setup — a ceremony where participants generated cryptographic parameters that had to be discarded. If anyone in the ceremony kept their "toxic waste" portion, they could theoretically forge transactions undetected. Zcash ran elaborate multi-party ceremonies (Sprout and Sapling) to mitigate this. Electric Coin Co.'s subsequent breakthrough, [Halo](https://electriccoin.co/blog/explaining-halo-2/), eliminates the trusted setup requirement entirely — a significant cryptographic advance.
 
 **The tradeoffs:** Generating a shielded Zcash transaction is computationally expensive (though this has improved significantly with newer proving systems). Zcash has faced similar exchange delistings as Monero, despite the transparent/shielded choice. And Zcash, like Monero, is a standalone chain — it doesn't compose with Ethereum's DeFi ecosystem.
 
-**The honest picture:** Zcash is the most cryptographically sophisticated privacy coin, with a research pedigree that's influenced much of the broader zero-knowledge space. The optional nature of privacy is a genuine weakness in practice — privacy guarantees require large anonymity sets, which requires most users to use shielded mode. That's an adoption problem, not a cryptography problem.
+Zcash is the most cryptographically sophisticated privacy coin, with a research pedigree that's influenced much of the broader zero-knowledge space. Optional privacy is a weakness in practice: privacy guarantees require large anonymity sets, which means most users need to use shielded mode. That's an adoption problem, not a cryptography problem.
 
 ---
 
@@ -160,7 +160,7 @@ This is why peer-to-peer exchanges exist — platforms where you can buy and sel
 
 **LocalMonero and AgoraDesk** were the two main P2P platforms specifically built for Monero. LocalMonero launched in 2017 as a LocalBitcoins-style marketplace for XMR trades — sellers post offers, buyers respond, trades execute with an escrow system and a dispute resolution layer. At its peak it was the primary way to acquire Monero without KYC. AgoraDesk was its sister platform for Bitcoin.
 
-Both shut down in May 2024. The team cited "a changed landscape" — a phrase widely understood to mean regulatory pressure — and gave six months of notice for users to withdraw funds. The closure was a significant blow to the Monero ecosystem's on-ramp infrastructure. No successor platform of the same scale has fully emerged.
+Both shut down in May 2024. The team cited "a changed landscape," a phrase widely understood to mean regulatory pressure, and gave users six months to withdraw funds. The closures removed the Monero ecosystem's largest on-ramps. No successor platform of the same scale has fully emerged.
 
 **Haveno** is the most serious attempt to fill the gap. It's a decentralized, non-custodial exchange built specifically for Monero, forked from the Bisq codebase and modified to use XMR as the base currency. Trades run on Tor, there's no central server, and the protocol uses Monero's multisig for escrow — the exchange itself holds nothing. 
 

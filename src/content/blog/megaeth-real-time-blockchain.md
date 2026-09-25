@@ -56,7 +56,7 @@ On a standard EVM node, every transaction that touches storage triggers disk rea
 
 SALT (Small Authentication Large Trie) is MegaETH's solution. The key insight: the authentication structure — the part you hash on every state access — doesn't need to live on disk if you have enough RAM. SALT restructures the state trie so the authentication tree fits in memory, while the actual state data stays on disk. The hot path — every transaction, every state access — never touches disk. The cold path — reconstructing a full proof, syncing a new node — still uses disk, but it's not on the critical performance path.
 
-This is a genuine systems engineering improvement, not a whitepaper concept. It's also why the sequencer needs to be a high-spec machine: you need enough RAM to hold the authentication structure for the full chain state. That hardware requirement is part of why the sequencer is centralized.
+This is a systems engineering improvement that exists beyond the whitepaper. It's also why the sequencer needs to be a high-spec machine: you need enough RAM to hold the authentication structure for the full chain state. That hardware requirement is part of why the sequencer is centralized.
 
 ---
 
@@ -96,7 +96,7 @@ MegaETH mainnet launched in February 2026, with Chainlink live at launch — mea
 
 **USDm** is the chain's native stablecoin, built with Ethena. The sequencer runs at cost rather than extracting MEV-style fees, and USDm aligns incentives across the network — low fees as a structural goal rather than a promotional claim.
 
-**MegaMafia** is the builder cohort — early-stage founders co-living and building alongside the core team, curated for genuine novelty. The framing is deliberately A24-ish: aesthetic curation, backing people with conviction, not just funding projects that fit a familiar DeFi template. Apps in the cohort include Pump Party, Lemonade, Euphoria, and others pushing at what's possible when latency stops being the constraint.
+**MegaMafia** is the builder cohort — early-stage founders co-living and building alongside the core team, selected for ideas outside familiar DeFi templates. The framing is deliberately A24-ish: aesthetic curation and backing people with conviction. Apps in the cohort include Pump Party, Lemonade, and Euphoria.
 
 **By the numbers:** $93.2M raised across four rounds. Founded by Yilong Li and Lei Yang.
 
@@ -106,7 +106,7 @@ MegaETH mainnet launched in February 2026, with Chainlink live at launch — mea
 
 MegaETH gets several things right. Node specialization as a first-class design principle — rather than a compromise — is the correct framing of where blockchain performance actually comes from. SALT is a real engineering improvement. Launching on Ethereum as a settlement layer rather than competing as a new L1 is the pragmatically correct bet for long-term credible neutrality. And launching with real DeFi liquidity from day one avoids the ghost-chain failure mode that's killed dozens of technically sound networks.
 
-What it's betting on: that a single sequencer is acceptable in exchange for real-time performance, that stateless validation and Pi Squared become robust at scale, and that the app categories enabled by real-time blockchains — onchain order books, real-time games, reactive DeFi — develop into large user bases and not just proofs of concept.
+What it's betting on: that a single sequencer is acceptable in exchange for real-time performance, that stateless validation and Pi Squared stay reliable at scale, and that the app categories enabled by real-time blockchains — onchain order books, real-time games, reactive DeFi — develop into large user bases and not just proofs of concept.
 
 The competition is real. Monad takes a different approach: parallel EVM execution across decentralized validators, trading some throughput ceiling for better decentralization properties. Solana is already fast, already has liquidity, and is increasingly accessible to EVM developers via tooling. MegaETH's answer to both is that raw sequential execution latency — not parallel throughput, not validator count — is the binding constraint on the apps it cares about, and that Ethereum settlement is worth the architecture trade-off.
 

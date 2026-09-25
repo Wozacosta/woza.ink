@@ -15,7 +15,7 @@ When I moved to macOS full-time I wanted that back. This is the setup I landed o
 
 ## What i3 actually gives you
 
-Before jumping into tools, it's worth naming what makes i3 great. It's not just tiling. Tiling is table stakes. The real value is:
+Before jumping into tools, it helps to name what makes i3 great. Tiling is table stakes. The parts that matter are:
 
 1. **Workspaces on a keybind.** `Super+1` takes you to workspace 1. Instantly. No animation, no slide.
 2. **Windows follow rules.** Browser goes to workspace 2, terminal to workspace 1, Slack to workspace 4. You don't arrange anything manually.
@@ -92,7 +92,7 @@ I use macOS native tiling for the simple cases (left half, right half) and that'
 
 ---
 
-## Why snappiness is the whole point
+## Why snappiness matters
 
 The temptation with window management tools is to chase features. More layout options, more rules, more automation. But the thing that makes i3 great isn't the feature set — it's the speed. You think "I need the browser" and the browser is there. No animation, no waiting, no context switch.
 

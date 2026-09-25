@@ -39,7 +39,7 @@ The key difference from ActivityPub: in AT Protocol, you can move your account �
 
 The experience: you join an instance — mastodon.social, fosstodon.org, hachyderm.io, or hundreds of others — and get a Twitter-like timeline. You can follow anyone on any instance. Your instance has its own moderators and rules. The "federated timeline" shows everything your instance's users follow. The "local timeline" shows just your instance.
 
-What works: it's genuinely production-grade. Mature apps on every platform (Ivory on iOS is excellent). A large enough user base that you can find a real community. Moderation that's distributed — your instance's rules don't have to match anyone else's.
+What works: it's production-grade. Mature apps on every platform (Ivory on iOS is excellent). A large enough user base that you can find a real community. Moderation that's distributed — your instance's rules don't have to match anyone else's.
 
 What doesn't: the instance model is confusing to new users ("which one do I join?"). Moving instances is possible but clunky. The algorithm is deliberately minimal — chronological by default, which some people love and others find noisy. Discovery is harder than on centralized platforms.
 
@@ -49,7 +49,7 @@ What doesn't: the instance model is confusing to new users ("which one do I join
 
 [Bluesky](https://bsky.app/) started as a Twitter-incubated project and launched publicly in 2023. It runs on AT Protocol and has grown into one of the most active decentralized social platforms — several million daily active users as of early 2026.
 
-The product feels closer to Twitter than Mastodon does. Faster, more algorithmically surfaced, with a "starter packs" onboarding that made it genuinely accessible. The big technical differentiator: custom feeds. Anyone can build and publish a feed algorithm — you can subscribe to "the best science posts" or "posts from people in my city" built by independent developers, not just Bluesky's default.
+The product feels closer to Twitter than Mastodon does. Faster, more algorithmically surfaced, with a "starter packs" onboarding that made it easier to start. The big technical differentiator: custom feeds. Anyone can build and publish a feed algorithm — you can subscribe to "the best science posts" or "posts from people in my city" built by independent developers, not just Bluesky's default.
 
 Custom domains as handles is notable: your Bluesky handle can be your own domain (`you.yourdomain.com`), which is a lightweight but real identity portability story — your identity is yours, not just bluesky.social's.
 
@@ -144,7 +144,7 @@ PeerTube is most meaningful for creators who want to publish content that can't 
 
 **Bluesky** has better UX than Mastodon for most users and is growing fast. The AT Protocol architecture is technically superior for portability. The main open question is whether the federation actually gets used, or whether Bluesky becomes the dominant centralized node on its own network — which would be a disappointment architecturally even if the product is good.
 
-**Farcaster** is building something that nobody else is — crypto-native identity with programmable social primitives. Frames are genuinely novel. The audience is self-selecting and that's fine; not everything has to be for everyone. If you're building things at the intersection of social and web3, this is the most interesting platform.
+**Farcaster** is building crypto-native identity with programmable social primitives. Frames let posts run interactive apps in the feed. The audience is self-selecting and that's fine; not everything has to be for everyone. If you're building things at the intersection of social and web3, this is the most interesting platform.
 
 **Nostr** is the most censorship-resistant and the most experimental. If you're in a country with aggressive internet censorship, or you're building on a very minimal decentralized primitive, Nostr is worth understanding. For casual social media users it's too rough.
 

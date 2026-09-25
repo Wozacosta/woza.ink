@@ -46,7 +46,7 @@ export const sidenotes: ArticleSidenotes = {
     },
     {
       marker:
-        "The single highest-leverage habit for working with agents: write down decisions as you make them",
+        "The most useful habit when working with agents: write down decisions as you make them",
       type: "counter",
       content:
         'The RAG vs. long-context debate is relevant here. An ICLR 2025 paper found that simply stuffing more retrieved passages into a longer context window does **not** always improve answers — it can amplify distraction and degrade output quality. The winning pattern emerging in 2025-2026 is hybrid: use retrieval to identify relevant context, then use the long window to reason across it. The same principle applies to session context: curate what goes in, don\'t dump everything.',

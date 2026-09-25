@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     siteName: SITE_TITLE,
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

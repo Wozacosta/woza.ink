@@ -1,5 +1,8 @@
 import { describe, it, expect } from "vitest";
-import { projects } from "./projects";
+import fs from "fs";
+import path from "path";
+import { projects, PROJECT_CATEGORIES } from "./projects";
+import { getAllSlugs } from "./blog";
 
 describe("projects data", () => {
   it("should export an array of projects", () => {
@@ -47,5 +50,28 @@ describe("projects data", () => {
     expect(slugs).toContain("pomo");
     expect(slugs).toContain("guideto");
     expect(slugs).toContain("baseline");
+  });
+
+  it("each project has a summary and a known category", () => {
+    projects.forEach((project) => {
+      expect(project.summary.length).toBeGreaterThan(40);
+      expect(PROJECT_CATEGORIES).toContain(project.category);
+    });
+  });
+
+  it("each live project has a screenshot in public/projects", () => {
+    projects
+      .filter((p) => p.active !== false)
+      .forEach((project) => {
+        const file = path.join(process.cwd(), "public/projects", `${project.slug}.webp`);
+        expect(fs.existsSync(file), `${project.slug}.webp`).toBe(true);
+      });
+  });
+
+  it("linked blog posts exist", () => {
+    const slugs = getAllSlugs();
+    projects.forEach((project) => {
+      if (project.post) expect(slugs).toContain(project.post);
+    });
   });
 });

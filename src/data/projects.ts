@@ -1,102 +1,130 @@
+export const PROJECT_CATEGORIES = [
+  "Learning",
+  "Health",
+  "Productivity",
+  "Travel",
+  "Culture",
+  "Utilities",
+  "Crypto",
+] as const;
+
+export type ProjectCategory = (typeof PROJECT_CATEGORIES)[number];
+
 export interface Project {
   slug: string;
   title: string;
+  /** One-line tagline */
   description: string;
+  /** Two or three sentences on what it does and how */
+  summary: string;
+  category: ProjectCategory;
   color: string;
   url: string;
   github?: string;
-  active?: boolean; // false = not yet live, card links to github instead
+  /** Slug of a blog post about the project */
+  post?: string;
+  active?: boolean; // false = not live yet: no screenshot, no site link
 }
 
 export const projects: Project[] = [
   {
     slug: "what-if",
     title: "What If",
-    description:
-      "An alternate history generator. Type a point of divergence and watch every decade since get rewritten",
+    description: "An alternate history generator",
+    summary:
+      "Change one moment in the past, like Napoleon winning at Waterloo or the Library of Alexandria never burning, and What If rewrites every decade since. You read how the world would have turned out, era by era.",
+    category: "Culture",
     color: "#a16207",
     url: "https://althistory-eosin.vercel.app",
   },
   {
     slug: "cytisinio",
     title: "Cytisinio",
-    description:
-      "A cytisine course companion with pill scheduling and daily guidance for a 25-day quit plan",
+    description: "A companion for the 25-day cytisine quit course",
+    summary:
+      "Built for people quitting nicotine with cytisine (Desmoxan, Tabex, Recigar). It works out your pill schedule from your start date, then tracks nicotine use, mood and cravings each day, with guidance for every phase of the course.",
+    category: "Health",
     color: "#0f766e",
     url: "https://cytisine.fit",
   },
   {
     slug: "juzi-chinese-grammar",
     title: "Chinese Sentences",
-    description:
-      "Learn Chinese grammar through sentence mining and spaced repetition",
+    description: "Chinese grammar that sticks",
+    summary:
+      "Learn Chinese grammar from real sentences instead of rule tables. New sentences arrive daily and come back for review on a spaced-repetition schedule, in simplified, traditional or both.",
+    category: "Learning",
     color: "#dc2626",
     url: "https://chinesesentences.com",
   },
   {
     slug: "mandarin-atlas",
     title: "Mandarin Atlas",
-    description:
-      "A clear, level-by-level path through Chinese study, books, apps, film, and native media",
+    description: "A map from first tones to native media",
+    summary:
+      "Pick your level and Mandarin Atlas tells you what to study next, plus the books, apps, films and shows that fit that stage. Six stages take you from complete beginner to native content.",
+    category: "Learning",
     color: "#d97706",
     url: "https://mandarin-atlas-one.vercel.app",
   },
   {
     slug: "triplan",
     title: "Triplan",
-    description:
-      "City breaks organized by walkable districts, with day-by-day plans grouped by neighborhood",
+    description: "Plan trips by neighborhood, not by pin",
+    summary:
+      "Hand-written walks through the neighborhoods of 200 cities, stitched into day-by-day itineraries around your dates and hotel. You spend your days exploring one area at a time instead of crossing town between pins.",
+    category: "Travel",
     color: "#e11d48",
     url: "https://triplan.ink",
   },
   {
     slug: "progress",
     title: "Progress",
-    description:
-      "A local-first habit tracking PWA. Grid-based, offline-capable, no login required",
+    description: "A grid-based habit tracker",
+    summary:
+      "Track habits on a simple grid so streaks and gaps are visible at a glance. It's a local-first PWA: it works offline, installs on your phone, and needs no account.",
+    category: "Productivity",
     color: "#6366f1",
     url: "https://habitu.xyz",
   },
   {
     slug: "laterlist",
     title: "LaterList",
-    description:
-      "Save any URL and read/watch it later. Items are auto-categorized using AI based on URL metadata. Local-first, no account needed",
+    description: "Save any link to read or watch later",
+    summary:
+      "Paste an article, video, paper, repo or podcast and AI fills in the title, category, tags and read time. Everything lives in your browser and works offline; sign in to sync across devices.",
+    category: "Productivity",
     color: "#f97316",
     url: "https://laterlist.cc",
     github: "https://github.com/Wozacosta/laterlist",
   },
   {
-    slug: "payp",
-    title: "Payp",
-    description:
-      "Pay and get paid with crypto, simply",
-    color: "#0ea5e9",
-    url: "https://payp.ink",
-    github: "https://github.com/Wozacosta/payp",
-    active: false,
-  },
-  {
     slug: "baseline",
     title: "Baseline",
-    description:
-      "A PWA to help quit nicotine with motivation, progress tracking, and crisis support",
+    description: "An offline-first quit companion",
+    summary:
+      "Choose what you're quitting, set a quit date, and Baseline tracks your progress alongside science-backed reasons to stay quit and support for rough moments. Nicotine is supported today, alcohol is next.",
+    category: "Health",
     color: "#10b981",
     url: "https://basel.ink",
   },
   {
     slug: "guideto",
     title: "Guide To",
-    description:
-      "Create and browse immersive music guides with rich media content",
+    description: "Photo and audio guides to music scenes",
+    summary:
+      "Short guides to music scenes, venues and artists, from London's trip-hop revival to Tokyo's Shibuya-kei. Each one pairs the history and photos with the music to listen to.",
+    category: "Culture",
     color: "#8b5cf6",
     url: "https://guideto.vercel.app",
   },
   {
     slug: "wezer",
     title: "Wezer",
-    description:
-      "Real-time weather anomaly tracking for global cities, monitoring temperature deviations from historical averages across 50 cities worldwide",
+    description: "Where the weather is strangest right now",
+    summary:
+      "Compares today's temperature in 50 cities worldwide against their historical daily averages and ranks the biggest anomalies. The most unusual ones come with related news coverage.",
+    category: "Utilities",
     color: "#3b82f6",
     url: "https://wezer.vercel.app",
     github: "https://github.com/Wozacosta/wezer",
@@ -104,27 +132,45 @@ export const projects: Project[] = [
   {
     slug: "pomo",
     title: "Pomo",
-    description:
-      "A simple, elegant Pomodoro timer with concentration music links and productivity tracking",
+    description: "A calm Pomodoro timer",
+    summary:
+      "A big countdown, a progress ring and nothing in the way. It keeps tasks, streaks and session history in your browser, with one-click concentration music from NTS, SomaFM and lo-fi radio.",
+    category: "Productivity",
     color: "#ef4444",
     url: "https://pomodo.ink",
     github: "https://github.com/Wozacosta/pomo",
+    post: "building-pomo",
   },
   {
     slug: "fitlog",
     title: "FitLog",
-    description:
-      "Track daily exercises, monitor progress over time, and view statistics",
+    description: "A simple workout log",
+    summary:
+      "Log your exercises day by day and see how they progress over time with per-exercise statistics. Your log is tied to an account, so it follows you across devices.",
+    category: "Health",
     color: "#f59e0b",
     url: "https://fitlog-theta.vercel.app",
   },
   {
     slug: "leplein",
     title: "Le Plein",
-    description:
-      "A mobile-first web app for finding the cheapest fuel prices near you in France, using real-time data from the official French government API",
+    description: "The cheapest fuel near you in France",
+    summary:
+      "Uses the French government's live fuel price feed to find the cheapest station nearby. Filter by fuel type, sort by price or distance, see which stations are out of stock, and open directions in one tap.",
+    category: "Utilities",
     color: "#22c55e",
     url: "https://leple.ink",
     github: "https://github.com/Wozacosta/leplein",
+  },
+  {
+    slug: "payp",
+    title: "Payp",
+    description: "Pay and get paid with crypto, simply",
+    summary:
+      "A straightforward way to send and request crypto payments. Still in development.",
+    category: "Crypto",
+    color: "#0ea5e9",
+    url: "https://payp.ink",
+    active: false,
   },
 ];

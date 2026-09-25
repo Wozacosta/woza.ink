@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Marked, marked } from "marked";
+import { marked } from "marked";
 import { getPostBySlug, getAllSlugs, getAdjacentPosts, getReadTime } from "@/data/blog";
 import { addHeadingIds } from "@/lib/headings";
 import { injectSidenoteMarkers } from "@/lib/sidenotes";
-import { highlight } from "@/lib/highlight";
+import { renderMarkdown } from "@/lib/render";
 import { TagBadge } from "@/components/TagBadge";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { TableOfContents } from "@/components/TableOfContents";
@@ -57,27 +57,9 @@ export default async function BlogPostPage({
     notFound();
   }
 
-  // Collect code blocks for async highlighting, then replace after render.
-  // A fresh Marked instance per render keeps the global `marked` untouched.
-  const codeBlocks: { lang: string; code: string }[] = [];
-  const md = new Marked({
-    renderer: {
-      code({ text, lang }) {
-        codeBlocks.push({ lang: lang || "", code: text });
-        return `__CODE_BLOCK_${codeBlocks.length - 1}__`;
-      },
-    },
-  });
-  const parsed = await md.parse(post.content);
-  const blocks = await Promise.all(
-    codeBlocks.map((block) => highlight(block.code, block.lang)),
+  const { html: withIds, headings } = addHeadingIds(
+    await renderMarkdown(post.content),
   );
-  // Function replacer so `$&`, `$'` etc. in highlighted code are not treated as patterns
-  const rawHtml = parsed.replace(
-    /__CODE_BLOCK_(\d+)__/g,
-    (_match, i) => blocks[Number(i)],
-  );
-  const { html: withIds, headings } = addHeadingIds(rawHtml);
   const { prev, next } = getAdjacentPosts(slug);
   const readTime = getReadTime(post.content);
   const articleSidenotes = getSidenotes(slug);

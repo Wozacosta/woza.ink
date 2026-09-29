@@ -28,11 +28,11 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "what-if",
-    title: "What If",
+    slug: "uchronia",
+    title: "Uchronia",
     description: "An alternate history generator",
     summary:
-      "Change one moment in the past, like Napoleon winning at Waterloo or the Library of Alexandria never burning, and What If rewrites every decade since. You read how the world would have turned out, era by era.",
+      "Change one moment in the past, like Napoleon winning at Waterloo or the Library of Alexandria never burning, and Uchronia rewrites every decade since. Each era comes with a redrawn world map, so you can watch the borders shift as the timeline plays out.",
     category: "Culture",
     color: "#a16207",
     url: "https://uchronia.app",
@@ -78,11 +78,11 @@ export const projects: Project[] = [
     url: "https://triplan.ink",
   },
   {
-    slug: "progress",
-    title: "Progress",
+    slug: "habitu",
+    title: "Habitu",
     description: "A grid-based habit tracker",
     summary:
-      "Track habits on a simple grid so streaks and gaps are visible at a glance. It's a local-first PWA: it works offline, installs on your phone, and needs no account.",
+      "Track habits on a day-by-day grid: one tap marks a day done, two marks it partial, and 7- and 30-day scores show how you're doing. It's a local-first PWA that works offline and needs no account; sign in only if you want sync.",
     category: "Productivity",
     color: "#6366f1",
     url: "https://habitu.xyz",

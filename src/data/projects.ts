@@ -35,7 +35,7 @@ export const projects: Project[] = [
       "Change one moment in the past, like Napoleon winning at Waterloo or the Library of Alexandria never burning, and What If rewrites every decade since. You read how the world would have turned out, era by era.",
     category: "Culture",
     color: "#a16207",
-    url: "https://althistory-eosin.vercel.app",
+    url: "https://uchronia.app",
   },
   {
     slug: "cytisinio",

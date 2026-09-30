@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-pm-shares"><title id="t-pm-shares">One dollar of collateral mints a YES and a NO share; their prices are the market's probabilities; at resolution the winning share pays one dollar</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-pm-shares" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Will X happen before the deadline?</text>
+<rect x="20" y="48" width="128" height="64" rx="8" class="d-box"/>
+<circle cx="34" cy="66" r="4" class="d-blue d-fill"/>
+<text x="46" y="70" class="d-t" text-anchor="start" >$1 collateral</text>
+<text x="46" y="86" class="d-s" text-anchor="start" >USDC, or TYD</text>
+<text x="84" y="130" class="d-s" text-anchor="middle" >mint a pair</text>
+<rect x="196" y="36" width="184" height="44" rx="8" class="d-box"/>
+<circle cx="210" cy="54" r="4" class="d-green d-fill"/>
+<text x="222" y="58" class="d-t" text-anchor="start" >YES</text>
+<text x="222" y="74" class="d-s" text-anchor="start" >pays $1 if X happens</text>
+<rect x="196" y="90" width="184" height="44" rx="8" class="d-box"/>
+<circle cx="210" cy="108" r="4" class="d-rose d-fill"/>
+<text x="222" y="112" class="d-t" text-anchor="start" >NO</text>
+<text x="222" y="128" class="d-s" text-anchor="start" >pays $1 if it doesn't</text>
+<path d="M148,72 L170,72 L170,58 L194,58" class="d-line" marker-end="url(#ah-pm-shares)"/>
+<path d="M170,72 L170,112 L194,112" class="d-line" marker-end="url(#ah-pm-shares)"/>
+<text x="20" y="164" class="d-s d-green d-ct" text-anchor="start" >YES 0.62</text>
+<text x="380" y="164" class="d-s d-rose d-ct" text-anchor="end" >NO 0.38</text>
+<rect x="20" y="172" width="223.2" height="14" rx="3" class="d-green d-fill" opacity="0.85"/>
+<rect x="245.2" y="172" width="134.8" height="14" rx="3" class="d-rose d-fill" opacity="0.85"/>
+<text x="200" y="204" class="d-s" text-anchor="middle" >The price is the market's probability: 62%</text>
+<line x1="20" y1="226" x2="380" y2="226" class="d-line d-faint"/>
+<text x="20" y="250" class="d-t" text-anchor="start" >At resolution</text>
+<text x="20" y="270" class="d-s" text-anchor="start" >X happens → YES redeems for $1, NO for $0</text>
+<text x="20" y="287" class="d-s" text-anchor="start" >A YES + NO pair always redeems for $1, so prices sum to ~1</text>
+</svg>

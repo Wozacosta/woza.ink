@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 486" role="img" aria-labelledby="t-trueo-escalation"><title id="t-trueo-escalation">Trueo resolution: market rules fixed on-chain, a bonded proposal, then optional escalation to the Oracle Council, TRUE holders, and finally eleven random attesters</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-trueo-escalation" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="16" width="262" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="34" r="4" class="d-blue d-fill"/>
+<text x="46" y="38" class="d-t" text-anchor="start" >Market created</text>
+<text x="46" y="54" class="d-s" text-anchor="start" >question, criteria, sources fixed on-chain</text>
+<path d="M64,68 L64,108" class="d-line" marker-end="url(#ah-trueo-escalation)"/>
+<text x="74" y="92" class="d-s" text-anchor="start" >event happens</text>
+<rect x="20" y="110" width="262" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="128" r="4" class="d-violet d-fill"/>
+<text x="46" y="132" class="d-t" text-anchor="start" >Proposal</text>
+<text x="46" y="148" class="d-s" text-anchor="start" >a resolver proposes, 250 TYD bond</text>
+<text x="296" y="132" class="d-s d-green d-ct" text-anchor="start" >no challenge</text>
+<text x="296" y="147" class="d-s d-green d-ct" text-anchor="start" >→ resolved</text>
+<path d="M64,162 L64,202" class="d-line" marker-end="url(#ah-trueo-escalation)"/>
+<text x="74" y="186" class="d-s" text-anchor="start" >12 h to challenge, 250 TYD bond</text>
+<rect x="20" y="204" width="262" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="222" r="4" class="d-amber d-fill"/>
+<text x="46" y="226" class="d-t" text-anchor="start" >Oracle Council</text>
+<text x="46" y="242" class="d-s" text-anchor="start" >5 members arbitrate, set who's slashed</text>
+<text x="296" y="226" class="d-s d-green d-ct" text-anchor="start" >no challenge</text>
+<text x="296" y="241" class="d-s d-green d-ct" text-anchor="start" >→ resolved</text>
+<path d="M64,256 L64,296" class="d-line" marker-end="url(#ah-trueo-escalation)"/>
+<text x="74" y="280" class="d-s" text-anchor="start" >12 h to escalate, 750 TYD bond</text>
+<rect x="20" y="298" width="262" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="316" r="4" class="d-amber d-fill"/>
+<text x="46" y="320" class="d-t" text-anchor="start" >TRUE holders vote</text>
+<text x="46" y="336" class="d-s" text-anchor="start" >on the outcome and the slashing</text>
+<text x="296" y="320" class="d-s d-green d-ct" text-anchor="start" >no challenge</text>
+<text x="296" y="335" class="d-s d-green d-ct" text-anchor="start" >→ resolved</text>
+<path d="M64,350 L64,390" class="d-line" marker-end="url(#ah-trueo-escalation)"/>
+<text x="74" y="374" class="d-s" text-anchor="start" >escalator holds ≥ 250k TRUE</text>
+<rect x="20" y="392" width="262" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="410" r="4" class="d-rose d-fill"/>
+<text x="46" y="414" class="d-t" text-anchor="start" >11 random attesters</text>
+<text x="46" y="430" class="d-s" text-anchor="start" >final verdict</text>
+<text x="20" y="480" class="d-s" text-anchor="start" >Each step costs more to reach and is more neutral than the last.</text>
+</svg>

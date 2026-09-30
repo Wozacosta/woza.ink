@@ -23,6 +23,7 @@ import { sidenotes as onchainPub } from "./onchain-publishing-platforms";
 import { sidenotes as opencode } from "./opencode-vs-claude-code";
 import { sidenotes as rssSetup } from "./personal-rss-setup-2026";
 import { sidenotes as photographyCameras } from "./photography-cameras-2026";
+import { sidenotes as predictionMarkets } from "./prediction-markets";
 import { sidenotes as privacy } from "./privacy-in-crypto";
 import { sidenotes as rulesCommands } from "./rules-commands-skills-agentic-coding";
 import { sidenotes as signalTelegram } from "./signal-vs-telegram";
@@ -35,7 +36,7 @@ import { sidenotes as whyIBuild } from "./why-i-build";
 const all: ArticleSidenotes[] = [
   arrStack, buildingPomo, clearSigning, cmux, contextMemory, decentSocial, dotfiles, erc8004, ercsEips, x402,
   ghostty, gitWorktrees, i3Mac, localFirst, matrix, megaeth, mppVsX402, nestjs, onchainPub,
-  opencode, rssSetup, photographyCameras, privacy, lightroomAlts, rulesCommands, signalTelegram, torrentArch,
+  opencode, rssSetup, photographyCameras, predictionMarkets, privacy, lightroomAlts, rulesCommands, signalTelegram, torrentArch,
   multisig, trueRandomness, whatIsRss, whyIBuild,
 ];
 

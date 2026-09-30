@@ -82,6 +82,22 @@ export function locateMarker(html: string, marker: string): number {
 }
 
 /**
+ * Notes in reading order: sorted by where their marker appears in the
+ * article (notes whose marker isn't found go last). Numbering and margin
+ * placement follow this order, so data files can list notes in any order.
+ */
+export function orderByPosition<T extends Sidenote>(html: string, notes: T[]): T[] {
+  return notes
+    .map((note, i) => ({ note, i, pos: locateMarker(html, note.marker) }))
+    .sort((a, b) => {
+      const pa = a.pos === -1 ? Infinity : a.pos;
+      const pb = b.pos === -1 ? Infinity : b.pos;
+      return pa - pb || a.i - b.i;
+    })
+    .map(({ note }) => note);
+}
+
+/**
  * Inject superscript markers into rendered article HTML.
  * Each marker phrase is matched against the article's visible text, so
  * markdown syntax and HTML entities in the source don't prevent a match.

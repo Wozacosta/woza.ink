@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { marked } from "marked";
 import { getPostBySlug, getAllSlugs, getAdjacentPosts, getReadTime } from "@/data/blog";
 import { addHeadingIds } from "@/lib/headings";
-import { injectSidenoteMarkers } from "@/lib/sidenotes";
+import { injectSidenoteMarkers, orderByPosition } from "@/lib/sidenotes";
 import { renderMarkdown, stripLeadingH1 } from "@/lib/render";
 import { formatDate } from "@/lib/format";
 import { AUTHOR, SITE_TITLE, SITE_URL } from "@/lib/site";
@@ -69,10 +69,9 @@ export default async function BlogPostPage({
   const { prev, next } = getAdjacentPosts(slug);
   const readTime = getReadTime(post.content);
   const articleSidenotes = getSidenotes(slug);
-  const contentHtml = articleSidenotes
-    ? injectSidenoteMarkers(withIds, articleSidenotes.notes)
-    : withIds;
-  const notes = (articleSidenotes?.notes ?? []).map((note) => ({
+  const orderedNotes = orderByPosition(withIds, articleSidenotes?.notes ?? []);
+  const contentHtml = injectSidenoteMarkers(withIds, orderedNotes);
+  const notes = orderedNotes.map((note) => ({
     ...note,
     html: marked.parseInline(note.content, { async: false }),
   }));

@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { Marked } from "marked";
 import { getAllPosts } from "@/data/blog";
 import { getSidenotes } from "@/data/sidenotes";
-import { injectSidenoteMarkers, locateMarker, markerText } from "./sidenotes";
+import { injectSidenoteMarkers, locateMarker, markerText, orderByPosition } from "./sidenotes";
 
 const render = (md: string) => new Marked().parse(md) as string;
 const note = (marker: string) => ({ marker, type: "note" as const, content: "" });
@@ -50,6 +50,20 @@ describe("injectSidenoteMarkers", () => {
     expect(out.indexOf('data-sn="1"')).toBeLessThan(out.indexOf('data-sn="0"'));
     expect(out).toContain('href="#sn-1"');
     expect(out).toContain('href="#sn-2"');
+  });
+});
+
+describe("orderByPosition", () => {
+  it("sorts notes into reading order, unmatched last", () => {
+    const html = render("alpha beta gamma");
+    const ordered = orderByPosition(html, [note("gamma"), note("missing"), note("alpha"), note("beta")]);
+    expect(ordered.map((n) => n.marker)).toEqual(["alpha", "beta", "gamma", "missing"]);
+  });
+
+  it("numbers injected markers in reading order", () => {
+    const html = render("alpha beta");
+    const out = injectSidenoteMarkers(html, orderByPosition(html, [note("beta"), note("alpha")]));
+    expect(out.indexOf('href="#sn-1"')).toBeLessThan(out.indexOf('href="#sn-2"'));
   });
 });
 

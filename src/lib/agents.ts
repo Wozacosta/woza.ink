@@ -6,7 +6,9 @@
 import { getAllPosts, type BlogPost } from "@/data/blog";
 import { getAboutContent } from "@/data/about";
 import { projects } from "@/data/projects";
+import { Marked } from "marked";
 import { getSidenotes } from "@/data/sidenotes";
+import { orderByPosition } from "@/lib/sidenotes";
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/site";
 
 /** Posts start with `# Title`; drop it since we write our own header */
@@ -41,7 +43,8 @@ export function postToMarkdown(post: BlogPost): string {
   const sidenotes = getSidenotes(post.slug);
   if (sidenotes?.notes.length) {
     lines.push("", "## Notes", "");
-    sidenotes.notes.forEach((note, i) => {
+    const html = new Marked().parse(post.content) as string;
+    orderByPosition(html, sidenotes.notes).forEach((note, i) => {
       const source = [note.attribution && `— ${note.attribution}`, note.url && `(${note.url})`]
         .filter(Boolean)
         .join(" ");

@@ -1,5 +1,6 @@
 import type { ArticleSidenotes } from "./types";
 
+import { sidenotes as arrStack } from "./arr-stack";
 import { sidenotes as buildingPomo } from "./building-pomo";
 import { sidenotes as cmux } from "./cmux-terminal-for-agentic-coding";
 import { sidenotes as contextMemory } from "./context-and-memory-agentic-coding";
@@ -31,7 +32,7 @@ import { sidenotes as lightroomAlts } from "./lightroom-alternatives";
 import { sidenotes as whyIBuild } from "./why-i-build";
 
 const all: ArticleSidenotes[] = [
-  buildingPomo, cmux, contextMemory, decentSocial, dotfiles, erc8004, ercsEips, x402,
+  arrStack, buildingPomo, cmux, contextMemory, decentSocial, dotfiles, erc8004, ercsEips, x402,
   ghostty, gitWorktrees, i3Mac, localFirst, matrix, megaeth, mppVsX402, nestjs, onchainPub,
   opencode, rssSetup, photographyCameras, privacy, lightroomAlts, rulesCommands, signalTelegram, torrentArch,
   multisig, trueRandomness, whatIsRss, whyIBuild,

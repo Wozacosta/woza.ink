@@ -39,10 +39,7 @@ function ProjectCard({ project, priority }: { project: Project; priority: boolea
           />
         ) : (
           <div className="flex h-full items-center justify-center">
-            <span
-              className="text-3xl font-bold tracking-tight opacity-60"
-              style={{ color: project.color }}
-            >
+            <span className="text-3xl font-bold tracking-tight text-muted">
               {project.title}
             </span>
           </div>
@@ -143,7 +140,7 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
           onClick={() => setCategory(null)}
           className={chip(category === null)}
         >
-          All <span className="opacity-50">{projects.length}</span>
+          All <span className="ml-0.5 font-mono text-xs">{projects.length}</span>
         </button>
         {categories.map((c) => (
           <button
@@ -153,7 +150,7 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
             onClick={() => setCategory(category === c ? null : c)}
             className={chip(category === c)}
           >
-            {c} <span className="opacity-50">{counts.get(c)}</span>
+            {c} <span className="ml-0.5 font-mono text-xs">{counts.get(c)}</span>
           </button>
         ))}
       </div>

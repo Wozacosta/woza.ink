@@ -21,23 +21,7 @@ A word on legality before we start. The apps are ordinary open-source software, 
 
 Every *arr setup, however elaborate, follows the same path:
 
-```text
-you ─request─▶ Seerr
-                 │ adds the title
-                 ▼
-Prowlarr ─────▶ Sonarr / Radarr
- indexers        │ picks a release
-                 ▼
-          download client
-                 │ when finished
-                 ▼
-         import + hardlink
-                 │
-         ┌───────┴───────┐
-         ▼               ▼
-   Jellyfin/Plex      Bazarr
-   media server      subtitles
-```
+![Seerr takes requests, the managers track what you want, Prowlarr feeds them indexers, the download client moves the bytes, and the import hands finished files to the media server and Bazarr.](diagram:arr-architecture)
 
 Each box is a separate program with its own web UI, database and REST API. They talk to each other over HTTP, authenticated with API keys. That's the whole trick: no shared database, no message bus, just small services that each own one job and call each other.
 
@@ -74,6 +58,8 @@ The Servarr wiki puts it bluntly: Sonarr will only find releases that are newly 
 
 This design makes sense once you see the load it avoids. A library of 200 shows has thousands of episodes. Searching every indexer for every missing episode on a schedule would hammer the indexers, get you rate-limited or banned, and mostly return nothing. Watching the feed of new uploads is cheap and catches almost everything going forward.
 
+![Only uploads that appear after you add a show pass through Sonarr's RSS sync. The backlog needs a one-time search.](diagram:arr-rss-sync)
+
 The catch is the backlog. When you add a show, you have to tick "Start search for missing episodes" or click search yourself. Forget, and those older episodes stay missing forever. This gap is exactly why third-party "hunter" tools became popular: they trickle searches for missing items through the API at a polite rate. More on how one of them ended, below.
 
 ---
@@ -85,6 +71,8 @@ The managers need indexers to watch and search. An **indexer** is a searchable c
 Early on, you configured every indexer separately in every manager. Three managers and eight indexers meant 24 configurations to keep in sync. **Jackett** fixed part of this by acting as a proxy that translated dozens of tracker sites into one standard API (Torznab), but you still had to add each Jackett feed to each manager by hand.
 
 **Prowlarr** (2020) finished the job. You add indexers once, in Prowlarr, and it pushes them to Sonarr, Radarr and Lidarr through their APIs. It only syncs each indexer to the apps whose categories it supports, so a music-only indexer never shows up in Radarr. Change an API key in Prowlarr and every manager gets the update.
+
+![Three managers and four indexers used to mean twelve configurations. With Prowlarr it's four, pushed to every app.](diagram:arr-prowlarr)
 
 Some indexer sites sit behind Cloudflare's bot protection, which blocks plain HTTP clients. For those, Prowlarr can route requests through **FlareSolverr**, a small service that runs a headless browser to pass the challenge and hand back the page.
 
@@ -104,7 +92,9 @@ Resolution, source (web, Blu-ray, broadcast), codec, HDR format, audio format, a
 
 **Quality profiles** set the floor and the goal. "Accept anything from 720p to 1080p, and stop upgrading once I have 1080p Web-DL." If the first release to appear is 720p, the manager grabs it. When a better one shows up later, it grabs that too and replaces the file. That's an upgrade, and it happens automatically until the cutoff is reached.
 
-**Custom formats** add scoring on top. Each one is a set of conditions matched against the release name ("contains DV or HDR10", "audio is Atmos", "release group is on this list") with a score. A release's total score decides between versions of the same quality, and a negative score can ban something outright. Radarr had them first (and reworked them in v3); Sonarr added them in v4.
+**Custom formats** add scoring on top. Each one is a set of conditions matched against the release name ("contains DV or HDR10", "audio is Atmos", "release group is on this list") with a score. A release's total score decides between versions of the same quality, and a negative score can ban something outright.
+
+![Example scores: the profile filters, custom formats rank what's left, and the winner is upgraded later if something better appears.](diagram:arr-release-scoring) Radarr had them first (and reworked them in v3); Sonarr added them in v4.
 
 Writing good custom formats is fiddly, so almost nobody does it from scratch. The **TRaSH Guides** are a community-maintained set of recommended profiles, custom formats and scores. **Recyclarr** is a command-line tool that syncs them into your Sonarr and Radarr instances from a YAML file, so when the guides update, your setup follows.
 
@@ -135,7 +125,11 @@ Hardlinks only work within a single filesystem. That's why the TRaSH Guides insi
 └── media/      tv/  movies/  music/
 ```
 
-...mounted into every container as the same `/data` path. Get this right and imports are instant: a hardlink for torrents, an atomic move for Usenet. Get it wrong, say by mounting `/downloads` and `/tv` as separate volumes in Docker, and every import turns into a full copy. It's slow, it doubles disk usage, and nothing warns you. The Servarr wiki notes that many common import issues come down to bad Docker paths and permissions. This is the single most common mistake in the whole stack.
+...mounted into every container as the same `/data` path.
+
+![Two paths, one copy on disk. Split the volumes and every import becomes a full copy.](diagram:arr-hardlinks)
+
+Get this right and imports are instant: a hardlink for torrents, an atomic move for Usenet. Get it wrong, say by mounting `/downloads` and `/tv` as separate volumes in Docker, and every import turns into a full copy. It's slow, it doubles disk usage, and nothing warns you. The [Servarr Docker Guide](https://wiki.servarr.com/docker-guide) explains why: two volumes look like two different filesystems inside the container, even when they're one disk outside it. Permissions are the other half. Every container must run with the same user and group IDs, or one app can't touch another's files. Renzo Beux, [writing up his own stack](https://renzobeux.dev/blog/docker-compose-arr-stack/), calls mismatched IDs the number one cause of downloads that finish but never import. Paths and permissions together are the most common way this stack breaks.
 
 ---
 
@@ -180,4 +174,8 @@ Fifteen years after NzbDrone, the pattern holds: state what you want, let small 
 - [Recyclarr](https://recyclarr.dev/): sync TRaSH Guides into Sonarr and Radarr
 - [Seerr release announcement](https://docs.seerr.dev/blog/seerr-release/): why Overseerr and Jellyseerr merged
 - [Huntarr security review](https://github.com/rfsbraz/huntarr-security-review/blob/main/Huntarr.io_SECURITY_REVIEW.md): the full list of findings
+- [Servarr Docker Guide](https://wiki.servarr.com/docker-guide): consistent paths, users and groups across containers, and why they matter
+- [TRaSH Guides: Hardlinks and Instant Moves](https://trash-guides.info/File-and-Folder-Structure/Hardlinks-and-Instant-Moves/): the clearest explanation of the folder layout
+- [The Complete *arr Stack](https://renzobeux.dev/blog/docker-compose-arr-stack/): Renzo Beux's real-world Compose setup, with the lessons learned
+- [YAMS](https://yams.media/): one script that installs the whole stack, built because explaining how the pieces connect "was a big pain"
 - [BitTorrent: The Protocol That Refuses to Die](/blog/torrent-architecture): how the transfer layer underneath actually works

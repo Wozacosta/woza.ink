@@ -30,7 +30,8 @@ function formatRFC822Date(dateString: string): string {
 
 /** Post HTML suitable for feed readers: absolute links, no duplicate title */
 export async function renderFeedContent(post: BlogPost): Promise<string> {
-  const html = stripLeadingH1(await renderMarkdown(post.content));
+  // Feed readers don't have our CSS, so diagrams go in as plain <img> tags
+  const html = stripLeadingH1(await renderMarkdown(post.content, { diagrams: "img" }));
   return html.replace(/(href|src)="\/(?!\/)/g, `$1="${SITE_URL}/`);
 }
 

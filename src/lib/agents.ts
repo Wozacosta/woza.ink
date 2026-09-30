@@ -19,6 +19,11 @@ function absolutizeLinks(markdown: string): string {
   return markdown.replace(/\]\(\/(?!\/)/g, `](${SITE_URL}/`);
 }
 
+/** `![caption](diagram:name)` → a normal image pointing at the published SVG */
+function resolveDiagrams(markdown: string): string {
+  return markdown.replace(/\]\(diagram:([a-z0-9-]+)\)/g, `](${SITE_URL}/diagrams/$1.svg)`);
+}
+
 export function postToMarkdown(post: BlogPost): string {
   const url = `${SITE_URL}/blog/${post.slug}`;
   const lines = [
@@ -30,7 +35,7 @@ export function postToMarkdown(post: BlogPost): string {
     `- Tags: ${post.tags.join(", ")}`,
     `- URL: ${url}`,
     "",
-    absolutizeLinks(stripLeadingHeading(post.content)).trim(),
+    resolveDiagrams(absolutizeLinks(stripLeadingHeading(post.content))).trim(),
   ];
 
   const sidenotes = getSidenotes(post.slug);

@@ -15,6 +15,12 @@
     --line-strong: #cfc8bc; /* hover borders, bullets */
     --surface: #f1ede6; /* chips, hover backgrounds */
     --prose-body: #2e2b28;
+    /* Diagram accents (≥ 4.5:1 as text on both backgrounds) */
+    --d-violet: #6d28d9;
+    --d-blue: #1d4ed8;
+    --d-amber: #92400e;
+    --d-green: #047857;
+    --d-rose: #be123c;
     --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
     color-scheme: light;
 }
@@ -28,6 +34,11 @@
     --line-strong: #46433e;
     --surface: #242321;
     --prose-body: #d9d5ce;
+    --d-violet: #a78bfa;
+    --d-blue: #60a5fa;
+    --d-amber: #fbbf24;
+    --d-green: #34d399;
+    --d-rose: #fb7185;
     color-scheme: dark;
 }
 
@@ -176,6 +187,41 @@ body {
         font-size: 0.85em;
         width: max-content;
         max-width: 42rem;
+    }
+}
+
+/* ── Diagrams: SVGs from public/diagrams, inlined so they follow the theme ── */
+.prose figure.diagram {
+    margin: 2.25em auto;
+    max-width: 34rem;
+}
+
+.prose figure.diagram svg,
+.prose figure.diagram img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.prose figure.diagram figcaption {
+    margin-top: 0.9em;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 1.5;
+    color: var(--subtle);
+}
+
+/* Phones: let diagrams use the full screen width for legible labels */
+@media (max-width: 639px) {
+    .prose figure.diagram {
+        margin-left: -1.25rem;
+        margin-right: -1.25rem;
+        max-width: none;
+    }
+
+    .prose figure.diagram figcaption {
+        padding: 0 1.25rem;
     }
 }
 

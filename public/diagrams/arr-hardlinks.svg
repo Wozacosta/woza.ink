@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-labelledby="t-arr-hardlinks"><title id="t-arr-hardlinks">One filesystem: two paths hardlink to the same data. Separate Docker volumes: the import becomes a full copy</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-arr-hardlinks" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One /data volume: hardlink</text>
+<rect x="20" y="36" width="282" height="36" rx="8" class="d-box"/>
+<text x="34" y="58.5" class="d-t" text-anchor="start" ></text>
+<text x="34" y="58" class="d-s d-m" text-anchor="start" >/data/torrents/tv/Show.S02E05.1080p.mkv</text>
+<rect x="20" y="82" width="282" height="36" rx="8" class="d-box"/>
+<text x="34" y="104.5" class="d-t" text-anchor="start" ></text>
+<text x="34" y="104" class="d-s d-m" text-anchor="start" >/data/media/tv/Show/Season 02/S02E05.mkv</text>
+<path d="M302,54 L330,54 L330,100" class="d-line"/>
+<path d="M302,100 L330,100" class="d-line"/>
+<path d="M330,100 L330,140" class="d-line" marker-end="url(#ah-arr-hardlinks)"/>
+<rect x="250" y="142" width="130" height="48" rx="8" class="d-box"/>
+<circle cx="264" cy="160" r="4" class="d-green d-fill"/>
+<text x="276" y="164" class="d-t" text-anchor="start" >2.1 GB on disk</text>
+<text x="276" y="180" class="d-s" text-anchor="start" >one copy, shared</text>
+<text x="20" y="150" class="d-s" text-anchor="start" >The client seeds from the first</text>
+<text x="20" y="164" class="d-s" text-anchor="start" >path, the library uses the second.</text>
+<text x="20" y="178" class="d-s d-green d-ct" text-anchor="start" >Import is instant.</text>
+<line x1="20" y1="208" x2="380" y2="208" class="d-line d-faint"/>
+<text x="20" y="234" class="d-t" text-anchor="start" >Separate /downloads and /tv volumes: copy</text>
+<rect x="20" y="248" width="170" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="266" r="4" class="d-rose d-fill"/>
+<text x="46" y="270" class="d-t" text-anchor="start" >/downloads</text>
+<text x="46" y="286" class="d-s" text-anchor="start" >2.1 GB</text>
+<rect x="210" y="248" width="170" height="48" rx="8" class="d-box"/>
+<circle cx="224" cy="266" r="4" class="d-rose d-fill"/>
+<text x="236" y="270" class="d-t" text-anchor="start" >/tv</text>
+<text x="236" y="286" class="d-s" text-anchor="start" >2.1 GB more</text>
+<path d="M190,272 L208,272" class="d-line" marker-end="url(#ah-arr-hardlinks)"/>
+<text x="20" y="322" class="d-s" text-anchor="start" >Docker treats each volume as its own filesystem, so the</text>
+<text x="20" y="337" class="d-s d-rose d-ct" text-anchor="start" >import copies every byte. Slow, double the disk, no warning.</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-arr-rss-sync"><title id="t-arr-rss-sync">Sonarr only sees what appears in indexer RSS feeds after the show is added; the backlog needs a one-time search</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-arr-rss-sync" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Indexer RSS feed (newest uploads)</text>
+<line x1="20" y1="112" x2="385" y2="112" class="d-line d-faint"/>
+<path d="M375,112 L385,112" class="d-line" marker-end="url(#ah-arr-rss-sync)"/>
+<text x="385" y="130" class="d-s" text-anchor="end" >time</text>
+<rect x="22" y="90" width="16" height="16" rx="3" class="d-ext"/>
+<rect x="44" y="90" width="16" height="16" rx="3" class="d-ext"/>
+<rect x="66" y="90" width="16" height="16" rx="3" class="d-ext"/>
+<rect x="88" y="90" width="16" height="16" rx="3" class="d-ext"/>
+<rect x="110" y="90" width="16" height="16" rx="3" class="d-ext"/>
+<text x="20" y="130" class="d-s" text-anchor="start" >S01E01–E05: uploaded</text>
+<text x="20" y="143" class="d-s" text-anchor="start" >long before, already gone</text>
+<text x="20" y="156" class="d-s" text-anchor="start" >from the feed</text>
+<line x1="146" y1="56" x2="146" y2="120" class="d-line d-violet d-stroke" stroke-width="1.5"/>
+<text x="146" y="50" class="d-s d-violet d-ct" text-anchor="middle" >you add the show</text>
+<rect x="166" y="94" width="12" height="12" rx="3" class="d-box"/>
+<rect x="192" y="94" width="12" height="12" rx="3" class="d-box"/>
+<rect x="222" y="94" width="12" height="12" rx="3" class="d-box"/>
+<rect x="300" y="94" width="12" height="12" rx="3" class="d-box"/>
+<rect x="322" y="94" width="12" height="12" rx="3" class="d-box"/>
+<rect x="352" y="94" width="12" height="12" rx="3" class="d-box"/>
+<rect x="250" y="88" width="20" height="20" rx="4" class="d-green d-fill"/>
+<text x="260" y="80" class="d-s d-green d-ct" text-anchor="middle" >S02E01</text>
+<line x1="176" y1="158" x2="176" y2="172" class="d-line"/>
+<line x1="221" y1="158" x2="221" y2="172" class="d-line"/>
+<line x1="266" y1="158" x2="266" y2="172" class="d-line"/>
+<line x1="311" y1="158" x2="311" y2="172" class="d-line"/>
+<line x1="356" y1="158" x2="356" y2="172" class="d-line"/>
+<line x1="176" y1="165" x2="356" y2="165" class="d-line d-faint"/>
+<text x="266" y="190" class="d-s" text-anchor="middle" >RSS sync every 15 min</text>
+<path d="M266,156 L261,114" class="d-line" marker-end="url(#ah-arr-rss-sync)"/>
+<text x="20" y="222" class="d-s d-green d-ct" text-anchor="start" >✓ New release matches the want list: grabbed within minutes.</text>
+<text x="20" y="240" class="d-s" text-anchor="start" >✗ The backlog never reappears in the feed. Tick “Search for</text>
+<text x="20" y="255" class="d-s" text-anchor="start" >   missing” when adding the show, or it stays missing.</text>
+</svg>

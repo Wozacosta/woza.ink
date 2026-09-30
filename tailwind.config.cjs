@@ -15,6 +15,16 @@ module.exports = {
       colors: {
         cream: "#faf8f5",
         ink: "#1a1a1a",
+        // Semantic tokens, defined per theme in globals.css
+        bg: "var(--background)",
+        fg: "var(--foreground)",
+        muted: "var(--muted)",
+        subtle: "var(--subtle)",
+        line: {
+          DEFAULT: "var(--line)",
+          strong: "var(--line-strong)",
+        },
+        surface: "var(--surface)",
       },
     },
   },

@@ -51,13 +51,13 @@ export function ThemeToggle() {
   };
 
   if (isDark === null) {
-    return <div className="w-9 h-9" aria-hidden="true" />;
+    return <div className="h-10 w-10" aria-hidden="true" />;
   }
 
   return (
     <button
       onClick={toggle}
-      className="p-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 dark:focus-visible:ring-gray-500 rounded-md transition-colors"
+      className="flex h-10 w-10 items-center justify-center rounded-md text-muted transition-colors hover:text-fg focus-visible:ring-2"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       {isDark ? (

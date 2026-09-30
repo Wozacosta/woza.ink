@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { type BlogPost, getReadTime } from "@/data/blog";
+import { formatDate } from "@/lib/format";
 import { TagBadge } from "@/components/TagBadge";
+
+/** Only the first few cards animate in; the rest are simply there */
+const ANIMATED_CARDS = 6;
 
 export function PostList({ posts }: { posts: BlogPost[] }) {
   return (
@@ -8,45 +12,32 @@ export function PostList({ posts }: { posts: BlogPost[] }) {
       {posts.map((post, index) => (
         <article
           key={post.slug}
-          className="group animate-fade-slide-up rounded-xl p-6 -mx-6
-            border border-transparent
-            hover:bg-gray-50 dark:hover:bg-gray-900/50
-            hover:border-gray-200 dark:hover:border-gray-700/60
-            transition-all duration-300"
-          style={{ animationDelay: `${index * 80}ms` }}
+          className={`group rounded-xl border border-transparent p-5 transition-colors duration-300
+            -mx-5 hover:border-line hover:bg-surface sm:-mx-6 sm:p-6
+            ${index < ANIMATED_CARDS ? "animate-fade-slide-up" : ""}`}
+          style={index < ANIMATED_CARDS ? { animationDelay: `${index * 60}ms` } : undefined}
         >
           <Link href={`/blog/${post.slug}`} className="block">
-            <div className="flex items-center gap-3">
-              <time className="text-xs text-gray-400 dark:text-gray-500 font-mono tracking-wide uppercase">
-                {new Date(post.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })}
+            <div className="flex items-center gap-3 font-mono text-xs text-subtle">
+              <time dateTime={post.date} className="uppercase tracking-wide">
+                {formatDate(post.date)}
               </time>
-              <span className="text-gray-300 dark:text-gray-600 text-xs">·</span>
-              <span className="text-xs text-gray-400 dark:text-gray-500 font-mono">
-                {getReadTime(post.content)} min read
-              </span>
+              <span aria-hidden="true">·</span>
+              <span>{getReadTime(post.content)} min read</span>
             </div>
             <h2
-              className={`font-semibold mt-2 dark:text-gray-100 transition-colors
-                relative inline-block
-                after:content-[''] after:absolute after:left-0 after:bottom-0
-                after:w-0 after:h-[2px] after:bg-ink dark:after:bg-cream
-                after:transition-[width] after:duration-300
-                group-hover:after:w-full
-                ${index === 0 ? "text-3xl" : "text-2xl"}`}
+              className={`relative mt-2 inline font-semibold text-fg
+                bg-gradient-to-r from-current to-current bg-[length:0%_2px] bg-left-bottom bg-no-repeat
+                transition-[background-size] duration-300 group-hover:bg-[length:100%_2px]
+                ${index === 0 ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl"}`}
             >
               {post.title}
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">
-              {post.description}
-            </p>
+            <p className="mt-2 leading-relaxed text-muted">{post.description}</p>
           </Link>
           {/* Tags link to their own pages, so they sit outside the card link */}
-          <div className="flex items-center justify-between mt-3">
-            <div className="flex gap-2 flex-wrap">
+          <div className="mt-3 flex items-center justify-between gap-4">
+            <div className="flex flex-wrap gap-2">
               {post.tags.map((tag) => (
                 <TagBadge key={tag} tag={tag} link />
               ))}
@@ -55,10 +46,8 @@ export function PostList({ posts }: { posts: BlogPost[] }) {
               href={`/blog/${post.slug}`}
               tabIndex={-1}
               aria-hidden="true"
-              className="text-xs font-mono text-gray-400 dark:text-gray-500
-                opacity-0 group-hover:opacity-100
-                -translate-x-2 group-hover:translate-x-0
-                transition-all duration-300 shrink-0"
+              className="hidden shrink-0 font-mono text-xs text-subtle opacity-0 transition-all duration-300
+                -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 sm:block"
             >
               Read more →
             </Link>

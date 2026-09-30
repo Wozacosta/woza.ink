@@ -42,8 +42,7 @@ const TAG_COLORS: Record<string, string> = {
     "bg-rose-50 text-rose-700 dark:bg-rose-950 dark:text-rose-300",
 };
 
-const DEFAULT_TAG =
-  "bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400";
+const DEFAULT_TAG = "bg-surface text-muted";
 
 export function TagBadge({
   tag,
@@ -57,7 +56,7 @@ export function TagBadge({
   count?: number;
 }) {
   const colors = TAG_COLORS[tag.toLowerCase()] ?? DEFAULT_TAG;
-  const className = `text-xs px-2 py-0.5 rounded-full font-medium transition-opacity ${colors}`;
+  const className = `inline-block rounded-full px-2.5 py-1 text-xs font-medium leading-none transition-opacity ${colors}`;
   const label = (
     <>
       #{tag}
@@ -68,7 +67,8 @@ export function TagBadge({
   if (!link) return <span className={className}>{label}</span>;
 
   return (
-    <Link href={tagHref(tag)} className={`${className} hover:opacity-75`}>
+    // Tag rows can hold dozens of links; don't prefetch them all on view
+    <Link href={tagHref(tag)} prefetch={false} className={`${className} hover:opacity-75`}>
       {label}
     </Link>
   );

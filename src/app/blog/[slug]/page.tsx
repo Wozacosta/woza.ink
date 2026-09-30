@@ -4,12 +4,15 @@ import { marked } from "marked";
 import { getPostBySlug, getAllSlugs, getAdjacentPosts, getReadTime } from "@/data/blog";
 import { addHeadingIds } from "@/lib/headings";
 import { injectSidenoteMarkers } from "@/lib/sidenotes";
-import { renderMarkdown } from "@/lib/render";
+import { renderMarkdown, stripLeadingH1 } from "@/lib/render";
+import { formatDate } from "@/lib/format";
+import { AUTHOR, SITE_TITLE, SITE_URL } from "@/lib/site";
 import { TagBadge } from "@/components/TagBadge";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { TableOfContents } from "@/components/TableOfContents";
 import { Sidenotes } from "@/components/Sidenotes";
 import { Endnotes } from "@/components/Endnotes";
+import { JsonLd } from "@/components/JsonLd";
 import { getSidenotes } from "@/data/sidenotes";
 
 // Only pre-rendered slugs are valid; unknown slugs 404 without touching the filesystem
@@ -32,9 +35,12 @@ export async function generateMetadata({
   return {
     title: `${post.title} — woza.ink`,
     description: post.description,
-    alternates: { canonical: `/blog/${slug}` },
+    alternates: {
+      canonical: `/blog/${slug}`,
+      types: { "text/markdown": `/blog/${slug}.md` },
+    },
     openGraph: {
-      siteName: "woza.ink",
+      siteName: SITE_TITLE,
       type: "article",
       title: post.title,
       description: post.description,
@@ -58,7 +64,7 @@ export default async function BlogPostPage({
   }
 
   const { html: withIds, headings } = addHeadingIds(
-    await renderMarkdown(post.content),
+    stripLeadingH1(await renderMarkdown(post.content)),
   );
   const { prev, next } = getAdjacentPosts(slug);
   const readTime = getReadTime(post.content);
@@ -70,116 +76,141 @@ export default async function BlogPostPage({
     ...note,
     html: marked.parseInline(note.content, { async: false }),
   }));
+  const url = `${SITE_URL}/blog/${slug}`;
 
   return (
-    <main className="min-h-screen">
+    <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.description,
+          datePublished: post.date,
+          url,
+          mainEntityOfPage: url,
+          image: `${url}/opengraph-image`,
+          keywords: post.tags.join(", "),
+          wordCount: post.content.trim().split(/\s+/).length,
+          author: { "@type": "Person", name: AUTHOR.name, url: `${SITE_URL}/about` },
+          publisher: { "@type": "Organization", name: SITE_TITLE, url: SITE_URL },
+        }}
+      />
       <ReadingProgress />
 
       <div className="article-layout">
-        {/* ── Left: Table of Contents ── */}
-        <aside className="hidden lg:block pt-16">
-          <div className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto pr-2 scrollbar-thin">
+        {/* ── Left: Table of Contents (lg and up) ── */}
+        <aside className="hidden pt-16 lg:block">
+          <div className="scrollbar-thin sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto pr-2">
             <TableOfContents headings={headings} />
           </div>
         </aside>
 
         {/* ── Center: Article ── */}
-        <div className="min-w-0">
-          <header className="py-16">
+        <article className="min-w-0">
+          <header className="pb-8 pt-8 sm:pb-12 sm:pt-16">
             <Link
               href="/blog"
-              className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors mb-8 inline-block"
+              className="inline-block font-mono text-xs uppercase tracking-widest text-subtle transition-colors hover:text-fg"
             >
-              &larr; Back to Blog
+              ← Blog
             </Link>
-            <div className="flex items-center gap-3 mt-4">
-              <time className="text-xs text-gray-400 dark:text-gray-500 font-mono tracking-wide uppercase">
-                {new Date(post.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })}
+            <div className="mt-6 flex items-center gap-3 font-mono text-xs text-subtle">
+              <time dateTime={post.date} className="uppercase tracking-wide">
+                {formatDate(post.date)}
               </time>
-              <span className="text-gray-300 dark:text-gray-600 text-xs">·</span>
-              <span className="text-xs text-gray-400 dark:text-gray-500 font-mono">
-                {readTime} min read
-              </span>
+              <span aria-hidden="true">·</span>
+              <span>{readTime} min read</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mt-4 mb-4">
+            <h1 className="mt-3 text-3xl font-bold leading-tight tracking-tight text-fg sm:text-4xl md:text-5xl">
               {post.title}
             </h1>
-            <div className="flex gap-2 flex-wrap mt-4">
+            <div className="mt-5 flex flex-wrap gap-2">
               {post.tags.map((tag) => (
                 <TagBadge key={tag} tag={tag} link />
               ))}
             </div>
             {post.description && (
-              <p className="text-lg text-gray-500 dark:text-gray-400 mt-6 max-w-2xl leading-relaxed border-t border-gray-200 dark:border-gray-700 pt-6">
+              <p className="mt-6 max-w-2xl border-t border-line pt-6 text-lg leading-relaxed text-muted">
                 {post.description}
               </p>
             )}
+
+            {/* Phones and tablets: collapsible contents */}
+            {headings.length > 2 && (
+              <details className="group mt-6 rounded-lg border border-line lg:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 font-mono text-xs uppercase tracking-widest text-subtle [&::-webkit-details-marker]:hidden">
+                  On this page
+                  <span aria-hidden="true" className="transition-transform group-open:rotate-180">
+                    ▾
+                  </span>
+                </summary>
+                <ol className="space-y-1 border-t border-line px-4 py-3 text-[15px]">
+                  {headings.map((h) => (
+                    <li key={h.id} className={h.level === 3 ? "pl-4" : ""}>
+                      <a href={`#${h.id}`} className="block py-1.5 text-muted hover:text-fg">
+                        {h.text}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </details>
+            )}
           </header>
 
-          <article className="pb-12">
-            <div
-              className="prose prose-lg prose-gray dark:prose-invert max-w-none prose-drop-cap
-                prose-headings:font-bold prose-headings:tracking-tight
-                prose-a:text-ink dark:prose-a:text-cream prose-a:underline prose-a:decoration-dotted
-                prose-a:decoration-gray-400 prose-a:underline-offset-2 hover:prose-a:decoration-solid
-                prose-code:before:content-none prose-code:after:content-none
-                prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:rounded
-                prose-code:px-1 prose-code:py-0.5 prose-code:text-sm
-                prose-blockquote:border-l-4 prose-blockquote:border-gray-300
-                dark:prose-blockquote:border-gray-600 prose-blockquote:not-italic
-                prose-blockquote:text-gray-600 dark:prose-blockquote:text-gray-400"
-              dangerouslySetInnerHTML={{ __html: contentHtml }}
-            />
-          </article>
+          <div
+            className="prose prose-base max-w-none prose-drop-cap sm:prose-lg
+              prose-headings:scroll-mt-6 prose-headings:font-bold prose-headings:tracking-tight"
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
+          />
 
           <Endnotes notes={notes} />
 
-          <div className="pb-4 flex justify-end">
+          <div className="flex justify-end pb-4">
             <a
-              href="#"
-              className="text-xs font-mono text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+              href="#main"
+              className="font-mono text-xs text-subtle transition-colors hover:text-fg"
             >
               ↑ back to top
             </a>
           </div>
 
           {(prev || next) && (
-            <nav className="pb-24 mt-8 flex justify-between gap-8 border-t border-gray-200 dark:border-gray-700 pt-8">
+            <nav
+              aria-label="More posts"
+              className="mt-8 grid grid-cols-1 gap-6 border-t border-line pb-20 pt-8 sm:grid-cols-2 sm:gap-8"
+            >
               {prev ? (
-                <Link href={`/blog/${prev.slug}`} className="group flex-1">
-                  <span className="text-xs text-gray-400 dark:text-gray-500 font-mono uppercase tracking-widest">
+                <Link href={`/blog/${prev.slug}`} className="group">
+                  <span className="font-mono text-xs uppercase tracking-widest text-subtle">
                     ← Newer
                   </span>
-                  <p className="mt-1 font-semibold group-hover:text-gray-500 dark:group-hover:text-gray-300 transition-colors line-clamp-2">
+                  <p className="mt-1 line-clamp-2 font-semibold text-fg transition-colors group-hover:text-muted">
                     {prev.title}
                   </p>
                 </Link>
               ) : (
-                <div className="flex-1" />
+                <div className="hidden sm:block" />
               )}
               {next && (
-                <Link href={`/blog/${next.slug}`} className="group flex-1 text-right">
-                  <span className="text-xs text-gray-400 dark:text-gray-500 font-mono uppercase tracking-widest">
+                <Link href={`/blog/${next.slug}`} className="group sm:text-right">
+                  <span className="font-mono text-xs uppercase tracking-widest text-subtle">
                     Older →
                   </span>
-                  <p className="mt-1 font-semibold group-hover:text-gray-500 dark:group-hover:text-gray-300 transition-colors line-clamp-2">
+                  <p className="mt-1 line-clamp-2 font-semibold text-fg transition-colors group-hover:text-muted">
                     {next.title}
                   </p>
                 </Link>
               )}
             </nav>
           )}
-        </div>
+        </article>
 
         {/* ── Right: Sidenotes (absolutely positioned to match marker Y) ── */}
-        <aside className="hidden xl:block pt-16 relative" data-sidenotes>
+        <aside className="relative hidden pt-16 xl:block" data-sidenotes>
           <Sidenotes notes={notes} />
         </aside>
       </div>
-    </main>
+    </>
   );
 }

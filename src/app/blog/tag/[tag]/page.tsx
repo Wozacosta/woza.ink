@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllTags, getPostsByTag } from "@/data/blog";
+import { PageHeader } from "@/components/PageHeader";
 import { PostList } from "@/components/PostList";
 
 // Only tags used by at least one post have a page
@@ -39,25 +40,23 @@ export default async function TagPage({
   const posts = getPostsByTag(tag.slug);
 
   return (
-    <main className="min-h-screen">
-      <header className="py-16 px-8 max-w-3xl mx-auto">
-        <Link
-          href="/blog"
-          className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors mb-8 inline-block"
-        >
-          &larr; All posts
-        </Link>
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-          #{tag.label}
-        </h1>
-        <p className="text-sm text-gray-400 dark:text-gray-500 font-mono mt-3">
-          {posts.length} post{posts.length !== 1 ? "s" : ""}
-        </p>
-      </header>
+    <>
+      <PageHeader
+        title={`#${tag.label}`}
+        meta={
+          <>
+            <Link href="/blog" className="underline decoration-dotted underline-offset-4 hover:text-fg">
+              All posts
+            </Link>
+            {" · "}
+            {posts.length} post{posts.length !== 1 ? "s" : ""}
+          </>
+        }
+      />
 
-      <section className="max-w-3xl mx-auto px-8 pb-24">
+      <section className="mx-auto max-w-3xl px-5 pb-24 sm:px-8">
         <PostList posts={posts} />
       </section>
-    </main>
+    </>
   );
 }

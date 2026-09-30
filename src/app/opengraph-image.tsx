@@ -25,7 +25,17 @@ export default async function Image() {
         <div style={{ display: "flex", fontSize: 128, fontWeight: 700, letterSpacing: -4 }}>
           woza.ink
         </div>
-        <div style={{ display: "flex", fontSize: 32, color: OG_COLORS.muted, marginTop: 24 }}>
+        <div
+          style={{
+            display: "flex",
+            fontSize: 32,
+            lineHeight: 1.4,
+            color: OG_COLORS.muted,
+            marginTop: 28,
+            maxWidth: 900,
+            textAlign: "center",
+          }}
+        >
           {SITE_DESCRIPTION}
         </div>
       </div>

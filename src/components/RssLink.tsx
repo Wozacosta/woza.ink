@@ -1,10 +1,8 @@
-import Link from "next/link";
-
 export function RssLink() {
   return (
-    <Link
+    <a
       href="/feed.xml"
-      className="p-2 text-gray-500 hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 dark:focus-visible:ring-gray-500 rounded-md transition-colors"
+      className="flex h-10 w-10 items-center justify-center rounded-md text-muted transition-colors hover:text-orange-500 dark:hover:text-orange-400"
       aria-label="RSS Feed"
       title="RSS Feed"
     >
@@ -23,6 +21,6 @@ export function RssLink() {
         <path d="M4 4a16 16 0 0 1 16 16" />
         <circle cx="5" cy="19" r="1" />
       </svg>
-    </Link>
+    </a>
   );
 }

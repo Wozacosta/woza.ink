@@ -1,5 +1,5 @@
 import { getAllPosts, BlogPost } from "@/data/blog";
-import { renderMarkdown } from "@/lib/render";
+import { renderMarkdown, stripLeadingH1 } from "@/lib/render";
 import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION } from "@/lib/site";
 
 const FEED_ITEM_LIMIT = 20;
@@ -30,10 +30,8 @@ function formatRFC822Date(dateString: string): string {
 
 /** Post HTML suitable for feed readers: absolute links, no duplicate title */
 export async function renderFeedContent(post: BlogPost): Promise<string> {
-  const html = await renderMarkdown(post.content);
-  return html
-    .replace(/^\s*<h1>[\s\S]*?<\/h1>\s*/, "") // readers already show the title
-    .replace(/(href|src)="\/(?!\/)/g, `$1="${SITE_URL}/`);
+  const html = stripLeadingH1(await renderMarkdown(post.content));
+  return html.replace(/(href|src)="\/(?!\/)/g, `$1="${SITE_URL}/`);
 }
 
 async function generateItemXml(post: BlogPost): Promise<string> {

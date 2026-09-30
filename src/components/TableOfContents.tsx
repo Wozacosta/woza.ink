@@ -66,8 +66,8 @@ export function TableOfContents({ headings }: { headings: Heading[] }) {
                 level === 3 ? "pl-5" : "pl-3"
               } ${
                 activeId === id
-                  ? "border-ink dark:border-cream text-ink dark:text-cream font-medium"
-                  : "border-transparent text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600"
+                  ? "border-fg text-fg font-medium"
+                  : "border-transparent text-subtle hover:text-fg hover:border-line-strong"
               }`}
             >
               {text}

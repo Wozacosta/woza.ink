@@ -1,28 +1,44 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
+/**
+ * Thin bar at the top of the viewport showing how far through the page you are.
+ * Updates the DOM directly once per frame (no React re-render per scroll event)
+ * and animates `transform`, which doesn't trigger layout.
+ */
 export function ReadingProgress() {
-  const [progress, setProgress] = useState(0);
+  const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    let frame = 0;
     const update = () => {
+      frame = 0;
       const el = document.documentElement;
-      const scrolled = el.scrollTop;
       const total = el.scrollHeight - el.clientHeight;
-      setProgress(total > 0 ? (scrolled / total) * 100 : 0);
+      const progress = total > 0 ? el.scrollTop / total : 0;
+      barRef.current?.style.setProperty("transform", `scaleX(${progress})`);
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
     };
 
-    window.addEventListener("scroll", update, { passive: true });
-    return () => window.removeEventListener("scroll", update);
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 h-[2px] z-50 bg-transparent pointer-events-none">
-      <div
-        className="h-full bg-ink dark:bg-cream transition-[width] duration-75 ease-out"
-        style={{ width: `${progress}%` }}
-      />
+    <div
+      aria-hidden="true"
+      className="pointer-events-none fixed inset-x-0 top-0 z-50 h-[2px]"
+    >
+      <div ref={barRef} className="h-full origin-left scale-x-0 bg-fg" />
     </div>
   );
 }

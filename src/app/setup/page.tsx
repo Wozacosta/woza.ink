@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PageHeader } from "@/components/PageHeader";
 import { getAllSetupCategories, SetupItem } from "@/data/setup";
 import { getPostBySlug } from "@/data/blog";
 
@@ -71,25 +72,25 @@ function SetupItemCard({ item }: { item: SetupItem }) {
     const post = getPostBySlug(item.slug);
     if (!post) return null;
     return (
-      <div className="group border border-gray-200 dark:border-gray-700/60 rounded-lg p-4 hover:border-gray-300 dark:hover:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-900/40 transition-all duration-200">
+      <div className="group border border-line rounded-lg p-4 hover:border-line-strong hover:bg-surface transition-all duration-200">
         <div className="flex items-start gap-3">
-          <span className="mt-0.5 text-gray-400 dark:text-gray-500">
+          <span className="mt-0.5 text-subtle">
             <PostIcon />
           </span>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
               <Link
                 href={`/blog/${post.slug}`}
-                className="font-medium text-ink dark:text-cream hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                className="font-medium text-fg hover:text-fg transition-colors"
               >
                 {post.title}
               </Link>
-              <span className="text-xs font-mono text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">
+              <span className="text-xs font-mono text-subtle bg-surface px-1.5 py-0.5 rounded">
                 my post
               </span>
             </div>
             {item.note && (
-              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-relaxed border-l-2 border-gray-200 dark:border-gray-700 pl-3 italic">
+              <p className="mt-2 text-sm text-muted leading-relaxed border-l-2 border-line pl-3 italic">
                 {item.note}
               </p>
             )}
@@ -101,9 +102,9 @@ function SetupItemCard({ item }: { item: SetupItem }) {
 
   if (item.type === "video") {
     return (
-      <div className="group border border-gray-200 dark:border-gray-700/60 rounded-lg p-4 hover:border-gray-300 dark:hover:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-900/40 transition-all duration-200">
+      <div className="group border border-line rounded-lg p-4 hover:border-line-strong hover:bg-surface transition-all duration-200">
         <div className="flex items-start gap-3">
-          <span className="mt-0.5 text-gray-400 dark:text-gray-500">
+          <span className="mt-0.5 text-subtle">
             <VideoIcon />
           </span>
           <div className="flex-1 min-w-0">
@@ -112,19 +113,19 @@ function SetupItemCard({ item }: { item: SetupItem }) {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-ink dark:text-cream hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                className="font-medium text-fg hover:text-fg transition-colors"
               >
                 {item.title}
                 <ExternalIcon />
               </a>
               {item.channel && (
-                <span className="text-xs text-gray-400 dark:text-gray-500 font-mono">
+                <span className="text-xs text-subtle font-mono">
                   {item.channel}
                 </span>
               )}
             </div>
             {item.note && (
-              <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-relaxed border-l-2 border-gray-200 dark:border-gray-700 pl-3 italic">
+              <p className="mt-2 text-sm text-muted leading-relaxed border-l-2 border-line pl-3 italic">
                 {item.note}
               </p>
             )}
@@ -136,9 +137,9 @@ function SetupItemCard({ item }: { item: SetupItem }) {
 
   // article
   return (
-    <div className="group border border-gray-200 dark:border-gray-700/60 rounded-lg p-4 hover:border-gray-300 dark:hover:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-900/40 transition-all duration-200">
+    <div className="group border border-line rounded-lg p-4 hover:border-line-strong hover:bg-surface transition-all duration-200">
       <div className="flex items-start gap-3">
-        <span className="mt-0.5 text-gray-400 dark:text-gray-500">
+        <span className="mt-0.5 text-subtle">
           <ArticleIcon />
         </span>
         <div className="flex-1 min-w-0">
@@ -147,13 +148,13 @@ function SetupItemCard({ item }: { item: SetupItem }) {
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-ink dark:text-cream hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+              className="font-medium text-fg hover:text-fg transition-colors"
             >
               {item.title}
               <ExternalIcon />
             </a>
             {(item.source || item.author) && (
-              <span className="text-xs text-gray-400 dark:text-gray-500 font-mono">
+              <span className="text-xs text-subtle font-mono">
                 {item.author ? `${item.author}` : ""}
                 {item.author && item.source ? " · " : ""}
                 {item.source ? item.source : ""}
@@ -161,7 +162,7 @@ function SetupItemCard({ item }: { item: SetupItem }) {
             )}
           </div>
           {item.note && (
-            <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-relaxed border-l-2 border-gray-200 dark:border-gray-700 pl-3 italic">
+            <p className="mt-2 text-sm text-muted leading-relaxed border-l-2 border-line pl-3 italic">
               {item.note}
             </p>
           )}
@@ -175,69 +176,48 @@ export default function SetupPage() {
   const categories = getAllSetupCategories();
 
   return (
-    <main className="min-h-screen">
-      <header className="py-16 px-8 max-w-3xl mx-auto">
-        <Link
-          href="/"
-          className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors mb-8 inline-block"
+    <>
+      <PageHeader
+        title="Setup"
+        description="My DX setup: the tools I use and the thinking behind them. Articles, videos, and my own notes."
+      >
+        {/* Category jump links: one swipeable row on phones */}
+        <nav
+          aria-label="Jump to section"
+          className="scroll-row -mx-5 mt-8 flex gap-2 overflow-x-auto px-5 pb-1 sm:mx-0 sm:flex-wrap sm:gap-3 sm:px-0"
         >
-          &larr; Back
-        </Link>
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-          Setup
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-md">
-          My DX setup — the tools I use and the thinking behind them. Articles, videos, and my own notes.
-        </p>
-
-        {/* Category jump links */}
-        <nav className="flex flex-wrap gap-3 mt-8" aria-label="Jump to section">
           {categories.map((cat) => (
             <a
               key={cat.id}
               href={`#${cat.id}`}
-              className="text-sm font-mono text-gray-500 dark:text-gray-400
-                hover:text-ink dark:hover:text-cream
-                border border-gray-200 dark:border-gray-700 rounded-full
-                px-3 py-1 transition-colors duration-150
-                hover:border-gray-400 dark:hover:border-gray-500"
+              className="shrink-0 rounded-full border border-line px-3.5 py-1.5 font-mono text-sm text-muted transition-colors duration-150 hover:border-line-strong hover:text-fg"
             >
               {cat.title}
             </a>
           ))}
         </nav>
-      </header>
+      </PageHeader>
 
-      <div className="max-w-3xl mx-auto px-8 pb-24 space-y-20">
-        {categories.map((category, catIndex) => (
-          <section
-            key={category.id}
-            id={category.id}
-            className="animate-fade-slide-up scroll-mt-8"
-            style={{ animationDelay: `${catIndex * 60}ms` }}
-          >
-            <div className="flex items-baseline gap-3 mb-2">
+      <div className="mx-auto max-w-3xl space-y-16 px-5 pb-24 sm:space-y-20 sm:px-8">
+        {categories.map((category) => (
+          <section key={category.id} id={category.id} className="scroll-mt-8">
+            <div className="mb-2 flex items-baseline gap-3">
               <h2 className="text-2xl font-bold tracking-tight">{category.title}</h2>
-              <span className="text-xs font-mono text-gray-400 dark:text-gray-500">
+              <span className="font-mono text-xs text-subtle">
                 {category.items.length} item{category.items.length !== 1 ? "s" : ""}
               </span>
             </div>
             {category.description && (
-              <p className="text-gray-500 dark:text-gray-400 mb-6 max-w-xl">
-                {category.description}
-              </p>
+              <p className="mb-6 max-w-xl text-muted">{category.description}</p>
             )}
             <div className="space-y-3">
               {category.items.map((item, itemIndex) => (
-                <SetupItemCard
-                  key={itemIndex}
-                  item={item}
-                />
+                <SetupItemCard key={itemIndex} item={item} />
               ))}
             </div>
           </section>
         ))}
       </div>
-    </main>
+    </>
   );
 }

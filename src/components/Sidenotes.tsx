@@ -82,19 +82,19 @@ export function Sidenotes({ notes }: { notes: RenderedSidenote[] }) {
                 <span
                   className={`w-1.5 h-1.5 rounded-full shrink-0 ${typeDot[note.type]}`}
                 />
-                <span className="font-mono text-[10px] uppercase tracking-wider text-gray-400 dark:text-gray-500">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-subtle">
                   {typeLabel[note.type]}
                 </span>
-                <span className="font-mono text-[10px] text-gray-300 dark:text-gray-600">
+                <span className="font-mono text-[10px] text-subtle">
                   {i + 1}
                 </span>
               </div>
               <p
-                className="sn-body text-gray-600 dark:text-gray-400"
+                className="sn-body text-muted"
                 dangerouslySetInnerHTML={{ __html: note.html }}
               />
               {note.attribution && (
-                <p className="mt-1 text-[11px] text-gray-400 dark:text-gray-500 italic">
+                <p className="mt-1 text-[11px] text-subtle italic">
                   — {note.attribution}
                 </p>
               )}
@@ -103,7 +103,7 @@ export function Sidenotes({ notes }: { notes: RenderedSidenote[] }) {
                   href={note.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block mt-1 text-[10px] font-mono text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 underline decoration-dotted underline-offset-2"
+                  className="inline-block mt-1 text-[10px] font-mono text-subtle hover:text-fg underline decoration-dotted underline-offset-2"
                 >
                   source →
                 </a>

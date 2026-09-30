@@ -2,21 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Design tokens ────────────────────────────────────────────
+   Every text token is ≥ 4.5:1 (WCAG AA) on both --background and
+   --surface, in both themes. Tailwind exposes them as fg / muted /
+   subtle / line / line-strong / surface (see tailwind.config.cjs). */
 :root {
     --background: #faf8f5;
     --foreground: #1a1a1a;
-    --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace;
+    --muted: #57534e; /* secondary text: descriptions, body copy in lists */
+    --subtle: #6b665f; /* tertiary text: dates, counts, labels */
+    --line: #e6e1d8; /* hairlines and card borders */
+    --line-strong: #cfc8bc; /* hover borders, bullets */
+    --surface: #f1ede6; /* chips, hover backgrounds */
+    --prose-body: #2e2b28;
+    --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
     color-scheme: light;
 }
 
 .dark {
     --background: #1a1a1a;
     --foreground: #faf8f5;
+    --muted: #b5b0a8;
+    --subtle: #938e86;
+    --line: #2d2b28;
+    --line-strong: #46433e;
+    --surface: #242321;
+    --prose-body: #d9d5ce;
     color-scheme: dark;
 }
 
 html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -33,11 +50,31 @@ body {
     color: var(--background);
 }
 
+:focus-visible {
+    outline: 2px solid var(--foreground);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-delay: 0ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
 /* ── Entrance animation ─────────────────────────────────────── */
 @keyframes fadeSlideUp {
     from {
         opacity: 0;
-        transform: translateY(16px);
+        transform: translateY(12px);
     }
     to {
         opacity: 1;
@@ -49,17 +86,110 @@ body {
     animation: fadeSlideUp 0.4s ease-out both;
 }
 
-/* ── Prose enhancements ─────────────────────────────────────── */
+/* ── Horizontal scroller (tag rows, nav on phones) ─────────── */
+.scroll-row {
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
 
-/* Drop cap on first paragraph of a post */
-.prose-drop-cap > p:first-of-type::first-letter {
-    float: left;
-    font-size: 3.5rem;
-    line-height: 0.8;
-    font-weight: 700;
-    margin-right: 0.1em;
-    margin-top: 0.05em;
-    color: var(--foreground);
+.scroll-row::-webkit-scrollbar {
+    display: none;
+}
+
+/* ── Prose ────────────────────────────────────────────────────
+   Point the typography plugin at our tokens so both themes share one
+   palette (no prose-invert needed). `:root .prose` beats the plugin's
+   own `.prose` variables. */
+:root .prose {
+    --tw-prose-body: var(--prose-body);
+    --tw-prose-headings: var(--foreground);
+    --tw-prose-lead: var(--muted);
+    --tw-prose-links: var(--foreground);
+    --tw-prose-bold: var(--foreground);
+    --tw-prose-counters: var(--subtle);
+    --tw-prose-bullets: var(--line-strong);
+    --tw-prose-hr: var(--line);
+    --tw-prose-quotes: var(--muted);
+    --tw-prose-quote-borders: var(--line-strong);
+    --tw-prose-captions: var(--subtle);
+    --tw-prose-kbd: var(--foreground);
+    --tw-prose-code: var(--foreground);
+    --tw-prose-pre-code: var(--foreground);
+    --tw-prose-pre-bg: var(--surface);
+    --tw-prose-th-borders: var(--line-strong);
+    --tw-prose-td-borders: var(--line);
+}
+
+.prose :where(a):not(:where(.sn-ref a, [class~="not-prose"] *)) {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--subtle);
+    text-underline-offset: 3px;
+}
+
+.prose :where(a):hover {
+    text-decoration-style: solid;
+}
+
+.prose :where(:not(pre) > code):not(:where([class~="not-prose"] *)) {
+    background: var(--surface);
+    border-radius: 0.25rem;
+    padding: 0.1em 0.35em;
+    font-size: 0.875em;
+    font-weight: 500;
+}
+
+.prose :where(:not(pre) > code)::before,
+.prose :where(:not(pre) > code)::after {
+    content: none;
+}
+
+.prose blockquote {
+    font-style: normal;
+}
+
+/* Wide tables scroll inside their own box instead of widening the page */
+.prose .table-wrap {
+    overflow-x: auto;
+    margin: 1.75em 0;
+    border: 1px solid var(--line);
+    border-radius: 0.5rem;
+}
+
+.prose .table-wrap table {
+    margin: 0;
+    min-width: 100%;
+}
+
+.prose .table-wrap th,
+.prose .table-wrap td {
+    padding: 0.6em 0.9em;
+    white-space: normal;
+}
+
+.prose .table-wrap thead {
+    background: var(--surface);
+}
+
+@media (max-width: 639px) {
+    .prose .table-wrap table {
+        font-size: 0.85em;
+        width: max-content;
+        max-width: 42rem;
+    }
+}
+
+/* Drop cap on first paragraph of a post (from sm up; cramped on phones) */
+@media (min-width: 640px) {
+    .prose-drop-cap > p:first-of-type::first-letter {
+        float: left;
+        font-size: 3.5rem;
+        line-height: 0.8;
+        font-weight: 700;
+        margin-right: 0.1em;
+        margin-top: 0.05em;
+        color: var(--foreground);
+    }
 }
 
 /* Decorative opening quote mark on blockquotes */
@@ -68,7 +198,7 @@ body {
 }
 
 .prose blockquote::before {
-    content: '\201C';
+    content: "\201C";
     position: absolute;
     left: -0.1em;
     top: -0.3em;
@@ -83,15 +213,21 @@ body {
 /* ── Article three-column layout ──────────────────────────── */
 .article-layout {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     max-width: 48rem;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.25rem;
+}
+
+@media (min-width: 640px) {
+    .article-layout {
+        padding: 0 2rem;
+    }
 }
 
 @media (min-width: 1024px) {
     .article-layout {
-        grid-template-columns: 13rem 1fr;
+        grid-template-columns: 13rem minmax(0, 1fr);
         max-width: 64rem;
         gap: 2rem;
     }
@@ -99,7 +235,7 @@ body {
 
 @media (min-width: 1280px) {
     .article-layout {
-        grid-template-columns: 13rem 1fr 15rem;
+        grid-template-columns: 13rem minmax(0, 1fr) 15rem;
         max-width: 82rem;
         gap: 2.5rem;
     }
@@ -112,11 +248,7 @@ body {
 }
 
 .scrollbar-thin:hover {
-    scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
-}
-
-.dark .scrollbar-thin:hover {
-    scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+    scrollbar-color: var(--line-strong) transparent;
 }
 
 /* ── Sidenote markers ─────────────────────────────────────── */
@@ -125,7 +257,7 @@ body {
     font-weight: 700;
     color: var(--background);
     background: var(--foreground);
-    opacity: 0.25;
+    opacity: 0.35;
     cursor: default;
     margin-left: 2px;
     vertical-align: super;
@@ -136,7 +268,7 @@ body {
 }
 
 .sn-ref:hover {
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .sn-ref a {
@@ -149,6 +281,7 @@ body {
 @media (max-width: 1279px) {
     .sn-ref {
         cursor: pointer;
+        padding: 2px 5px; /* bigger tap target */
     }
 }
 
@@ -187,14 +320,17 @@ body {
 }
 
 .prose .shiki {
-    padding: 1.25rem 1.5rem;
+    padding: 1rem 1.25rem;
     border-radius: 0.5rem;
     overflow-x: auto;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     line-height: 1.7;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--line);
 }
 
-.dark .prose .shiki {
-    border-color: rgba(255, 255, 255, 0.08);
+@media (min-width: 640px) {
+    .prose .shiki {
+        padding: 1.25rem 1.5rem;
+        font-size: 0.875rem;
+    }
 }

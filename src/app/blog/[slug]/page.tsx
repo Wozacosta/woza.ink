@@ -13,6 +13,7 @@ import { TableOfContents } from "@/components/TableOfContents";
 import { Sidenotes } from "@/components/Sidenotes";
 import { Endnotes } from "@/components/Endnotes";
 import { JsonLd } from "@/components/JsonLd";
+import { InteractiveDiagrams } from "@/components/InteractiveDiagrams";
 import { getSidenotes } from "@/data/sidenotes";
 
 // Only pre-rendered slugs are valid; unknown slugs 404 without touching the filesystem
@@ -162,6 +163,8 @@ export default async function BlogPostPage({
               prose-headings:scroll-mt-6 prose-headings:font-bold prose-headings:tracking-tight"
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
+
+          <InteractiveDiagrams />
 
           <Endnotes notes={notes} />
 

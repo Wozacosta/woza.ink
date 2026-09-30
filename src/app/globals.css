@@ -225,6 +225,51 @@ body {
     }
 }
 
+/* Interactive diagrams (src/components/InteractiveDiagrams.tsx) */
+.prose figure.diagram[data-interactive] [data-node] {
+    cursor: pointer;
+}
+
+.prose figure.diagram [data-node],
+.prose figure.diagram [data-edge] {
+    transition: opacity 0.25s ease;
+}
+
+.prose figure.diagram [data-node]:focus {
+    outline: none;
+}
+
+.prose figure.diagram[data-interactive] [data-node]:hover .d-box,
+.prose figure.diagram [data-node]:focus-visible .d-box,
+.prose figure.diagram [data-node].is-on .d-box {
+    stroke: var(--foreground);
+    stroke-width: 1.5;
+}
+
+.prose figure.diagram [data-node].is-focus .d-box {
+    stroke-width: 2;
+}
+
+/* Everything not involved fades back */
+.prose figure.diagram[data-active] [data-node]:not(.is-on),
+.prose figure.diagram[data-active] [data-edge]:not(.is-on) {
+    opacity: 0.2;
+}
+
+/* Arrows in the current tour step "flow" */
+.prose figure.diagram path.is-flow {
+    stroke: var(--foreground);
+    stroke-width: 1.75;
+    stroke-dasharray: 5 4;
+    animation: diagram-flow 0.7s linear infinite;
+}
+
+@keyframes diagram-flow {
+    to {
+        stroke-dashoffset: -9;
+    }
+}
+
 /* Drop cap on first paragraph of a post (from sm up; cramped on phones) */
 @media (min-width: 640px) {
     .prose-drop-cap > p:first-of-type::first-letter {

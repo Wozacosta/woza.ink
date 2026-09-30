@@ -13,48 +13,64 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-arr-architecture" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="indexers">
 <rect x="10" y="16" width="120" height="52" rx="8" class="d-ext"/>
 <text x="24" y="38" class="d-t" text-anchor="start" >Indexers</text>
 <text x="24" y="54" class="d-s" text-anchor="start" >trackers, Usenet</text>
+</g>
+<g data-node="seerr">
 <rect x="160" y="16" width="230" height="52" rx="8" class="d-box"/>
 <circle cx="174" cy="34" r="4" class="d-violet d-fill"/>
 <text x="186" y="38" class="d-t" text-anchor="start" >Seerr</text>
 <text x="186" y="54" class="d-s" text-anchor="start" >family asks for a title</text>
+</g>
+<g data-node="prowlarr">
 <rect x="10" y="124" width="120" height="52" rx="8" class="d-box"/>
 <circle cx="24" cy="142" r="4" class="d-amber d-fill"/>
 <text x="36" y="146" class="d-t" text-anchor="start" >Prowlarr</text>
 <text x="36" y="162" class="d-s" text-anchor="start" >syncs to apps</text>
+</g>
+<g data-node="managers">
 <rect x="160" y="124" width="230" height="52" rx="8" class="d-box"/>
 <circle cx="174" cy="142" r="4" class="d-blue d-fill"/>
 <text x="186" y="146" class="d-t" text-anchor="start" >Sonarr · Radarr · Lidarr</text>
 <text x="186" y="162" class="d-s" text-anchor="start" >want list vs files on disk</text>
+</g>
+<g data-node="download">
 <rect x="160" y="232" width="230" height="52" rx="8" class="d-box"/>
 <circle cx="174" cy="250" r="4" class="d-green d-fill"/>
 <text x="186" y="254" class="d-t" text-anchor="start" >qBittorrent · SABnzbd</text>
 <text x="186" y="270" class="d-s" text-anchor="start" >moves the bytes</text>
+</g>
+<g data-node="import">
 <rect x="160" y="340" width="230" height="52" rx="8" class="d-box"/>
 <circle cx="174" cy="358" r="4" class="d-blue d-fill"/>
 <text x="186" y="362" class="d-t" text-anchor="start" >Import</text>
 <text x="186" y="378" class="d-s" text-anchor="start" >rename, hardlink into /data/media</text>
+</g>
+<g data-node="media">
 <rect x="10" y="412" width="180" height="48" rx="8" class="d-box"/>
 <circle cx="24" cy="430" r="4" class="d-rose d-fill"/>
 <text x="36" y="434" class="d-t" text-anchor="start" >Jellyfin · Plex</text>
 <text x="36" y="450" class="d-s" text-anchor="start" >you press play</text>
+</g>
+<g data-node="bazarr">
 <rect x="210" y="412" width="180" height="48" rx="8" class="d-box"/>
 <circle cx="224" cy="430" r="4" class="d-rose d-fill"/>
 <text x="236" y="434" class="d-t" text-anchor="start" >Bazarr</text>
 <text x="236" y="450" class="d-s" text-anchor="start" >fetches subtitles</text>
-<path d="M70,68 L70,122" class="d-line" marker-end="url(#ah-arr-architecture)"/>
-<text x="78" y="99" class="d-s" text-anchor="start" >RSS + search</text>
-<path d="M130,150 L158,150" class="d-line" marker-end="url(#ah-arr-architecture)"/>
-<path d="M275.0,68 L275.0,122" class="d-line" marker-end="url(#ah-arr-architecture)"/>
-<text x="283.0" y="99" class="d-s" text-anchor="start" >adds title + profile</text>
-<path d="M255.0,176 L255.0,230" class="d-line" marker-end="url(#ah-arr-architecture)"/>
-<text x="247.0" y="207" class="d-s" text-anchor="end" >sends release</text>
-<path d="M295.0,232 L295.0,178" class="d-line" stroke-dasharray="4 3" marker-end="url(#ah-arr-architecture)"/>
-<text x="303.0" y="207" class="d-s" text-anchor="start" >polls status</text>
-<path d="M275.0,284 L275.0,338" class="d-line" marker-end="url(#ah-arr-architecture)"/>
-<text x="283.0" y="315" class="d-s" text-anchor="start" >download finished</text>
-<path d="M275.0,392 L275.0,400 L100,400 L100,410" class="d-line" marker-end="url(#ah-arr-architecture)"/>
-<path d="M275.0,400 L300,400 L300,410" class="d-line" marker-end="url(#ah-arr-architecture)"/>
+</g>
+<path d="M70,68 L70,122" class="d-line" data-edge="indexers-prowlarr" marker-end="url(#ah-arr-architecture)"/>
+<text x="78" y="99" class="d-s" text-anchor="start" data-edge="indexers-prowlarr">RSS + search</text>
+<path d="M130,150 L158,150" class="d-line" data-edge="prowlarr-managers" marker-end="url(#ah-arr-architecture)"/>
+<path d="M275.0,68 L275.0,122" class="d-line" data-edge="seerr-managers" marker-end="url(#ah-arr-architecture)"/>
+<text x="283.0" y="99" class="d-s" text-anchor="start" data-edge="seerr-managers">adds title + profile</text>
+<path d="M255.0,176 L255.0,230" class="d-line" data-edge="managers-download" marker-end="url(#ah-arr-architecture)"/>
+<text x="247.0" y="207" class="d-s" text-anchor="end" data-edge="managers-download">sends release</text>
+<path d="M295.0,232 L295.0,178" class="d-line" stroke-dasharray="4 3" data-edge="download-managers" marker-end="url(#ah-arr-architecture)"/>
+<text x="303.0" y="207" class="d-s" text-anchor="start" data-edge="download-managers">polls status</text>
+<path d="M275.0,284 L275.0,338" class="d-line" data-edge="download-import" marker-end="url(#ah-arr-architecture)"/>
+<text x="283.0" y="315" class="d-s" text-anchor="start" data-edge="download-import">download finished</text>
+<path d="M275.0,392 L275.0,400 L100,400 L100,410" class="d-line" data-edge="import-media" marker-end="url(#ah-arr-architecture)"/>
+<path d="M275.0,400 L300,400 L300,410" class="d-line" data-edge="import-bazarr" marker-end="url(#ah-arr-architecture)"/>
 </svg>

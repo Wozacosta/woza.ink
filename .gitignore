@@ -35,3 +35,6 @@ next-env.d.ts
 
 # bmad
 _bmad/
+
+# python
+__pycache__/

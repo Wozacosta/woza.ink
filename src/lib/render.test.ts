@@ -37,7 +37,7 @@ describe("renderMarkdown", () => {
 describe("diagrams", () => {
   it("inlines the SVG in a figure, not inside a paragraph", async () => {
     const html = await renderMarkdown("Intro.\n\n![The pipeline](diagram:arr-architecture)\n\nAfter.");
-    expect(html).toContain('<figure class="diagram"><svg');
+    expect(html).toContain('<figure class="diagram" data-diagram="arr-architecture"><svg');
     expect(html).toContain("<figcaption>The pipeline</figcaption>");
     expect(html).not.toMatch(/<p>\s*<figure/);
   });

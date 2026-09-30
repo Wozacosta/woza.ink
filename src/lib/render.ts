@@ -30,7 +30,8 @@ function renderDiagram(name: string, caption: string, mode: DiagramMode): string
       ? // Inline so the SVG's CSS variables follow the page theme
         fs.readFileSync(file, "utf-8").replace(/<\?xml[^>]*>\s*/, "")
       : `<img src="/diagrams/${name}.svg" alt="${escapeHtml(caption)}" />`;
-  return `<figure class="diagram">${body}${figcaption}</figure>`;
+  // data-diagram lets the client add interactivity where a config exists (src/data/diagrams)
+  return `<figure class="diagram" data-diagram="${name}">${body}${figcaption}</figure>`;
 }
 
 type DiagramMode = "inline" | "img";

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { getAllPosts, getPostBySlug } from "@/data/blog";
+import { getAllPosts, getPostBySlug, getPublishedPosts } from "@/data/blog";
 import { aboutToMarkdown, llmsFullTxt, llmsTxt, postToMarkdown } from "./agents";
 
 describe("llms.txt", () => {
@@ -13,7 +13,7 @@ describe("llms.txt", () => {
   });
 
   it("links every post to its markdown version", () => {
-    for (const post of getAllPosts()) {
+    for (const post of getPublishedPosts()) {
       expect(txt).toContain(`(https://www.woza.ink/blog/${post.slug}.md)`);
     }
   });
@@ -44,7 +44,16 @@ describe("postToMarkdown", () => {
 describe("llms-full.txt and about", () => {
   it("contains every post", () => {
     const full = llmsFullTxt();
-    for (const post of getAllPosts()) expect(full).toContain(`# ${post.title}`);
+    for (const post of getPublishedPosts()) expect(full).toContain(`# ${post.title}`);
+  });
+
+  it("leaves out work in progress", () => {
+    const full = llmsFullTxt();
+    const index = llmsTxt();
+    for (const post of getAllPosts().filter((p) => p.wip)) {
+      expect(full).not.toContain(`# ${post.title}`);
+      expect(index).not.toContain(`/blog/${post.slug}.md`);
+    }
   });
 
   it("renders the about page as markdown", () => {

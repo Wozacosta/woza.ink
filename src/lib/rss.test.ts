@@ -1,5 +1,7 @@
 // @vitest-environment node
 import { describe, it, expect, beforeAll } from "vitest";
+import { getAllPosts } from "@/data/blog";
+import { SITE_URL } from "@/lib/site";
 import { generateRssFeed } from "./rss";
 
 let feed: string;
@@ -9,6 +11,12 @@ beforeAll(async () => {
 
 describe("RSS feed generation", () => {
   describe("generateRssFeed", () => {
+    it("should leave out work in progress", () => {
+      for (const post of getAllPosts().filter((p) => p.wip)) {
+        expect(feed).not.toContain(`${SITE_URL}/blog/${post.slug}<`);
+      }
+    });
+
     it("should return a valid XML string", () => {
       expect(feed).toContain('<?xml version="1.0" encoding="UTF-8"?>');
       expect(feed).toContain("<rss");

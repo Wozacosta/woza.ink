@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getAllPosts, getReadTime } from "@/data/blog";
+import { getPublishedPosts, getReadTime } from "@/data/blog";
 import { projects } from "@/data/projects";
 import { formatDate } from "@/lib/format";
 import { AUTHOR, SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/site";
@@ -33,7 +33,7 @@ function SectionHeading({
 }
 
 export default function Home() {
-  const posts = getAllPosts().slice(0, LATEST_POSTS);
+  const posts = getPublishedPosts().slice(0, LATEST_POSTS);
   const featured = projects.filter((p) => p.active !== false).slice(0, FEATURED_PROJECTS);
 
   return (

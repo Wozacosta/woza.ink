@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { SERIES, type Series } from "@/data/series";
 import { tagSlug } from "@/lib/tags";
 
 export interface BlogPost {
@@ -10,47 +11,16 @@ export interface BlogPost {
   description: string;
   tags: string[];
   content: string;
+  /** Slug of a series in src/data/series.ts */
+  series?: string;
+  /** On the site with a label, but out of feeds and search until it's finished */
+  wip: boolean;
 }
 
 const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
 
-export function getAllPosts(): BlogPost[] {
-  if (!fs.existsSync(BLOG_DIR)) {
-    return [];
-  }
-
-  const files = fs.readdirSync(BLOG_DIR).filter((file) => file.endsWith(".md"));
-
-  const posts = files.map((filename) => {
-    const slug = filename.replace(".md", "");
-    const filePath = path.join(BLOG_DIR, filename);
-    const fileContent = fs.readFileSync(filePath, "utf-8");
-    const { data, content } = matter(fileContent);
-
-    return {
-      slug,
-      title: data.title,
-      date: data.date,
-      description: data.description,
-      tags: data.tags ?? [],
-      content,
-    };
-  });
-
-  // Sort by date, newest first
-  return posts.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-  );
-}
-
-export function getPostBySlug(slug: string): BlogPost | null {
-  const filePath = path.join(BLOG_DIR, `${slug}.md`);
-
-  if (!fs.existsSync(filePath)) {
-    return null;
-  }
-
-  const fileContent = fs.readFileSync(filePath, "utf-8");
+function readPost(slug: string): BlogPost {
+  const fileContent = fs.readFileSync(path.join(BLOG_DIR, `${slug}.md`), "utf-8");
   const { data, content } = matter(fileContent);
 
   return {
@@ -60,7 +30,30 @@ export function getPostBySlug(slug: string): BlogPost | null {
     description: data.description,
     tags: data.tags ?? [],
     content,
+    series: data.series,
+    wip: data.wip === true,
   };
+}
+
+/** Every post, finished or not: for pages on the site */
+export function getAllPosts(): BlogPost[] {
+  // Sort by date, newest first
+  return getAllSlugs()
+    .map(readPost)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+/** Finished posts only: for RSS, llms.txt, the sitemap and the home page */
+export function getPublishedPosts(): BlogPost[] {
+  return getAllPosts().filter((post) => !post.wip);
+}
+
+export function getPostBySlug(slug: string): BlogPost | null {
+  if (!fs.existsSync(path.join(BLOG_DIR, `${slug}.md`))) {
+    return null;
+  }
+
+  return readPost(slug);
 }
 
 export function getAllSlugs(): string[] {
@@ -125,4 +118,32 @@ export function getPostsByTag(slug: string): BlogPost[] {
   return getAllPosts().filter((post) =>
     post.tags.some((tag) => tagSlug(tag) === slug),
   );
+}
+
+/** A series' posts in reading order, oldest first */
+export function getPostsInSeries(slug: string): BlogPost[] {
+  return getAllPosts()
+    .filter((post) => post.series === slug)
+    .sort(
+      (a, b) =>
+        new Date(a.date).getTime() - new Date(b.date).getTime() ||
+        a.slug.localeCompare(b.slug),
+    );
+}
+
+export interface SeriesSummary extends Series {
+  count: number;
+  wipCount: number;
+}
+
+/** Series with at least one post */
+export function getAllSeries(): SeriesSummary[] {
+  return SERIES.map((series) => {
+    const posts = getPostsInSeries(series.slug);
+    return {
+      ...series,
+      count: posts.length,
+      wipCount: posts.filter((post) => post.wip).length,
+    };
+  }).filter((series) => series.count > 0);
 }

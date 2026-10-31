@@ -3,7 +3,7 @@
  * /llms.txt (index, llmstxt.org format), /llms-full.txt (all posts),
  * /blog/<slug>.md and /about.md.
  */
-import { getAllPosts, type BlogPost } from "@/data/blog";
+import { getPublishedPosts, type BlogPost } from "@/data/blog";
 import { getAboutContent } from "@/data/about";
 import { projects } from "@/data/projects";
 import { Marked } from "marked";
@@ -64,7 +64,7 @@ export function aboutToMarkdown(): string {
 }
 
 export function llmsTxt(): string {
-  const posts = getAllPosts();
+  const posts = getPublishedPosts();
   const live = projects.filter((p) => p.active !== false);
 
   return [
@@ -103,6 +103,6 @@ export function llmsTxt(): string {
 
 export function llmsFullTxt(): string {
   const header = [`# ${SITE_TITLE}`, "", `> ${SITE_DESCRIPTION}`, ""].join("\n");
-  const posts = getAllPosts().map(postToMarkdown);
+  const posts = getPublishedPosts().map(postToMarkdown);
   return [header, ...posts].join("\n---\n\n");
 }

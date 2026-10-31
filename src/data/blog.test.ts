@@ -1,5 +1,14 @@
 import { describe, it, expect } from "vitest";
-import { getAllPosts, getPostBySlug, getAllSlugs, type BlogPost } from "./blog";
+import {
+  getAllPosts,
+  getAllSeries,
+  getPostBySlug,
+  getAllSlugs,
+  getPostsInSeries,
+  getPublishedPosts,
+  type BlogPost,
+} from "./blog";
+import { getSeries, SERIES } from "./series";
 
 describe("blog utilities", () => {
   describe("getAllPosts", () => {
@@ -108,6 +117,45 @@ describe("blog utilities", () => {
       const postSlugs = posts.map((p) => p.slug);
 
       expect(slugs.sort()).toEqual(postSlugs.sort());
+    });
+  });
+
+  describe("getPublishedPosts", () => {
+    it("is every post except work in progress", () => {
+      const expected = getAllPosts().filter((post) => !post.wip);
+      expect(getPublishedPosts().map((p) => p.slug)).toEqual(expected.map((p) => p.slug));
+    });
+
+    it("only treats a literal true as wip", () => {
+      for (const post of getAllPosts()) expect(typeof post.wip).toBe("boolean");
+    });
+  });
+
+  describe("series", () => {
+    it("every post's series is registered in series.ts", () => {
+      for (const post of getAllPosts()) {
+        if (post.series) expect(getSeries(post.series), post.slug).not.toBeNull();
+      }
+    });
+
+    it("has unique slugs", () => {
+      const slugs = SERIES.map((series) => series.slug);
+      expect(new Set(slugs).size).toBe(slugs.length);
+    });
+
+    it("lists a series' posts oldest first", () => {
+      for (const { slug } of getAllSeries()) {
+        const dates = getPostsInSeries(slug).map((post) => new Date(post.date).getTime());
+        expect(dates).toEqual([...dates].sort((a, b) => a - b));
+      }
+    });
+
+    it("counts posts and work in progress", () => {
+      for (const series of getAllSeries()) {
+        const posts = getPostsInSeries(series.slug);
+        expect(series.count).toBe(posts.length);
+        expect(series.wipCount).toBe(posts.filter((post) => post.wip).length);
+      }
     });
   });
 

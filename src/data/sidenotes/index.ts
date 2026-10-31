@@ -21,6 +21,7 @@ import { sidenotes as mppVsX402 } from "./mpp-vs-x402";
 import { sidenotes as nestjs } from "./nestjs-framework";
 import { sidenotes as onchainPub } from "./onchain-publishing-platforms";
 import { sidenotes as opencode } from "./opencode-vs-claude-code";
+import { sidenotes as perpetualFutures } from "./perpetual-futures";
 import { sidenotes as rssSetup } from "./personal-rss-setup-2026";
 import { sidenotes as photographyCameras } from "./photography-cameras-2026";
 import { sidenotes as predictionMarkets } from "./prediction-markets";
@@ -36,7 +37,7 @@ import { sidenotes as whyIBuild } from "./why-i-build";
 const all: ArticleSidenotes[] = [
   arrStack, buildingPomo, clearSigning, cmux, contextMemory, decentSocial, dotfiles, erc8004, ercsEips, x402,
   ghostty, gitWorktrees, i3Mac, localFirst, matrix, megaeth, mppVsX402, nestjs, onchainPub,
-  opencode, rssSetup, photographyCameras, predictionMarkets, privacy, lightroomAlts, rulesCommands, signalTelegram, torrentArch,
+  opencode, perpetualFutures, rssSetup, photographyCameras, predictionMarkets, privacy, lightroomAlts, rulesCommands, signalTelegram, torrentArch,
   multisig, trueRandomness, whatIsRss, whyIBuild,
 ];
 

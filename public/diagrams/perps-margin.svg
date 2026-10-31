@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 376" role="img" aria-labelledby="t-perps-margin"><title id="t-perps-margin">A 10x long opened at 100,000 with 1,000 dollars of margin. With a 2.5 percent maintenance margin it is liquidated near 92,300. At 90,000 the margin is gone; below that the loss belongs to someone else</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-perps-margin" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >10x long: $1,000 margin, $10,000 position</text>
+<rect x="104" y="54" width="276" height="185" class="d-green d-fill" opacity="0.14"/>
+<rect x="104" y="239" width="276" height="55" class="d-amber d-fill" opacity="0.2"/>
+<rect x="104" y="294" width="276" height="52" class="d-rose d-fill" opacity="0.2"/>
+<line x1="104" y1="54" x2="104" y2="346" class="d-line"/>
+<line x1="99" y1="54" x2="109" y2="54" class="d-line"/>
+<text x="94" y="58" class="d-s d-green d-ct" text-anchor="end" >$100,000</text>
+<line x1="99" y1="239" x2="109" y2="239" class="d-line"/>
+<text x="94" y="243" class="d-s d-amber d-ct" text-anchor="end" >$92,308</text>
+<line x1="99" y1="294" x2="109" y2="294" class="d-line"/>
+<text x="94" y="298" class="d-s d-rose d-ct" text-anchor="end" >$90,000</text>
+<text x="118" y="76" class="d-t" text-anchor="start" >Entry. Equity $1,000</text>
+<text x="118" y="93" class="d-s" text-anchor="start" >Every 1% down costs $100 of your $1,000</text>
+<text x="118" y="227" class="d-s" text-anchor="start" >Equity falls to 2.5% of the position</text>
+<text x="118" y="259" class="d-t" text-anchor="start" >Liquidation. Equity $231</text>
+<text x="118" y="276" class="d-s" text-anchor="start" >The engine has this far to close you out</text>
+<text x="118" y="314" class="d-t" text-anchor="start" >Bankruptcy. Equity $0</text>
+<text x="118" y="331" class="d-s" text-anchor="start" >Past here the loss is someone else's</text>
+<text x="20" y="368" class="d-s" text-anchor="start" >Bitcoin price, to scale. The position is 0.1 BTC, 2.5% maintenance.</text>
+</svg>

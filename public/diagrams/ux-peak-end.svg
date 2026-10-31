@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 276" role="img" aria-labelledby="t-ux-peak-end"><title id="t-ux-peak-end">Two trials of cold water. The short one is 60 seconds at 14 degrees. The long one adds 30 seconds at 15 degrees: more discomfort in total, but a milder end. Most people chose to repeat the long one</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-ux-peak-end" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Short trial: 60 s at 14°C</text>
+<rect x="20" y="36" width="240" height="46" rx="3" class="d-rose d-fill" opacity="0.8"/>
+<text x="20" y="112" class="d-t" text-anchor="start" >Long trial: the same, then 30 s at 15°C</text>
+<rect x="20" y="126" width="240" height="46" rx="3" class="d-rose d-fill" opacity="0.8"/>
+<rect x="262" y="146" width="118" height="26" rx="3" class="d-amber d-fill" opacity="0.8"/>
+<line x1="20" y1="196" x2="380" y2="196" class="d-line d-faint"/>
+<text x="20" y="220" class="d-s" text-anchor="start" >The long trial is strictly more discomfort.</text>
+<text x="20" y="238" class="d-s" text-anchor="start" >Asked which to repeat, most people chose it anyway:</text>
+<text x="20" y="256" class="d-t" text-anchor="start" >they remembered the better ending.</text>
+</svg>

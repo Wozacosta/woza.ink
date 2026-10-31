@@ -23,7 +23,8 @@ Use **pnpm** only (`packageManager` is pinned; there is no npm lockfile).
 
 | Path | What |
 | --- | --- |
-| `src/content/blog/*.md` | Blog posts. Frontmatter: `title`, `date` (`"YYYY-MM-DD"`), `description`, `tags`. The body starts with `# Title`, which is stripped when rendering (the page shows the title itself). |
+| `src/content/blog/*.md` | Blog posts. Frontmatter: `title`, `date` (`"YYYY-MM-DD"`), `description`, `tags`, and optionally `series` and `wip: true`. The body starts with `# Title`, which is stripped when rendering (the page shows the title itself). |
+| `src/data/series.ts` | Series registry: slug, title and description. Pages at `/blog/series/<slug>` |
 | `src/content/about.md` | About page |
 | `src/data/sidenotes/<slug>.ts` | Margin notes for a post; register new files in `src/data/sidenotes/index.ts` |
 | `src/data/projects.ts` | Projects page and home page cards; categories in `PROJECT_CATEGORIES` |
@@ -43,6 +44,15 @@ Use **pnpm** only (`packageManager` is pinned; there is no npm lockfile).
 **Add a blog post**: create `src/content/blog/<slug>.md` with the frontmatter above. RSS,
 sitemap, tag pages, the social image, `llms.txt` and `/blog/<slug>.md` all pick it up
 automatically.
+
+**Start a work-in-progress post**: add `wip: true` to the frontmatter. It's on the site with a
+WIP label (blog list, tag and series pages, and its own URL), but out of RSS, `llms.txt`, the
+sitemap, the home page and search indexing. To publish, delete the line and set `date` to the day
+it's finished; it then enters the feeds as a new post.
+
+**Add a post to a series**: add `series: <slug>` to the frontmatter, using a slug from
+`src/data/series.ts` (a test fails if it isn't registered). Parts are ordered oldest first by
+`date`. A new series just needs an entry in that file.
 
 **Add sidenotes**: create `src/data/sidenotes/<slug>.ts` exporting `sidenotes` and add it
 to `index.ts`. Each `marker` must be a phrase that appears in the post; markdown in the
@@ -71,6 +81,8 @@ entry to the script (a different URL, or a `prepare` step that seeds demo data).
   `gray-*` classes. Tag chips in `TagBadge` are the one intentional exception.
 - **Layout**: pages render inside the root layout's `<main>`; start them with
   `<PageHeader>`. Use `px-5 sm:px-8` gutters and `max-w-3xl` (text) or `max-w-6xl` (grids).
+- **Feeds use `getPublishedPosts()`**, site pages use `getAllPosts()`. Anything aimed at readers
+  outside the site (feeds, sitemap, agents) must not include work in progress.
 - **Static by default**: dynamic routes export `generateStaticParams` and
   `dynamicParams = false`. Only `/reading` (ISR, 1h) and `/api/revalidate` run at request time.
 - **Dates** are `YYYY-MM-DD` strings; format them with `formatDate` (UTC) from `src/lib/format.ts`.

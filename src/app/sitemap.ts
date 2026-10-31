@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
-import { getAllPosts, getAllTags } from "@/data/blog";
+import { getAllSeries, getAllTags, getPublishedPosts } from "@/data/blog";
 import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getAllPosts();
+  const posts = getPublishedPosts();
   const latest = posts[0] ? new Date(posts[0].date) : new Date();
 
   const pages: MetadataRoute.Sitemap = [
@@ -28,5 +28,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.4,
   }));
 
-  return [...pages, ...postEntries, ...tagEntries];
+  const seriesEntries: MetadataRoute.Sitemap = getAllSeries().map((series) => ({
+    url: `${SITE_URL}/blog/series/${series.slug}`,
+    changeFrequency: "weekly",
+    priority: 0.5,
+  }));
+
+  return [...pages, ...postEntries, ...seriesEntries, ...tagEntries];
 }

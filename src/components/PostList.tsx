@@ -2,6 +2,7 @@ import Link from "next/link";
 import { type BlogPost, getReadTime } from "@/data/blog";
 import { formatDate } from "@/lib/format";
 import { TagBadge } from "@/components/TagBadge";
+import { WipBadge } from "@/components/WipBadge";
 
 /** Only the first few cards animate in; the rest are simply there */
 const ANIMATED_CARDS = 6;
@@ -24,6 +25,7 @@ export function PostList({ posts }: { posts: BlogPost[] }) {
               </time>
               <span aria-hidden="true">·</span>
               <span>{getReadTime(post.content)} min read</span>
+              {post.wip && <WipBadge />}
             </div>
             <h2
               className={`relative mt-2 inline font-semibold text-fg

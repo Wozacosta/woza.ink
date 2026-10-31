@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { marked } from "marked";
-import { getPostBySlug, getAllSlugs, getAdjacentPosts, getReadTime } from "@/data/blog";
+import {
+  getPostBySlug,
+  getAllSlugs,
+  getAdjacentPosts,
+  getPostsInSeries,
+  getReadTime,
+} from "@/data/blog";
+import { getSeries } from "@/data/series";
 import { addHeadingIds } from "@/lib/headings";
 import { injectSidenoteMarkers, orderByPosition } from "@/lib/sidenotes";
 import { renderMarkdown, stripLeadingH1 } from "@/lib/render";
@@ -12,6 +19,7 @@ import { ReadingProgress } from "@/components/ReadingProgress";
 import { TableOfContents } from "@/components/TableOfContents";
 import { Sidenotes } from "@/components/Sidenotes";
 import { Endnotes } from "@/components/Endnotes";
+import { SeriesNav } from "@/components/SeriesNav";
 import { JsonLd } from "@/components/JsonLd";
 import { InteractiveDiagrams } from "@/components/InteractiveDiagrams";
 import { getSidenotes } from "@/data/sidenotes";
@@ -36,6 +44,7 @@ export async function generateMetadata({
   return {
     title: `${post.title} — woza.ink`,
     description: post.description,
+    ...(post.wip && { robots: { index: false } }),
     alternates: {
       canonical: `/blog/${slug}`,
       types: { "text/markdown": `/blog/${slug}.md` },
@@ -77,6 +86,9 @@ export default async function BlogPostPage({
     html: marked.parseInline(note.content, { async: false }),
   }));
   const url = `${SITE_URL}/blog/${slug}`;
+  const series = post.series ? getSeries(post.series) : null;
+  const seriesParts = series ? getPostsInSeries(series.slug) : [];
+  const seriesPart = seriesParts.findIndex((part) => part.slug === slug) + 1;
 
   return (
     <>
@@ -122,6 +134,17 @@ export default async function BlogPostPage({
               <span aria-hidden="true">·</span>
               <span>{readTime} min read</span>
             </div>
+            {series && (
+              <p className="mt-2 font-mono text-xs text-subtle">
+                {seriesParts.length > 1 ? `Part ${seriesPart} of ${seriesParts.length} in ` : "Part of "}
+                <Link
+                  href={`/blog/series/${series.slug}`}
+                  className="underline decoration-dotted underline-offset-4 transition-colors hover:text-fg"
+                >
+                  {series.title}
+                </Link>
+              </p>
+            )}
             <h1 className="mt-3 text-3xl font-bold leading-tight tracking-tight text-fg sm:text-4xl md:text-5xl">
               {post.title}
             </h1>
@@ -133,6 +156,13 @@ export default async function BlogPostPage({
             {post.description && (
               <p className="mt-6 max-w-2xl border-t border-line pt-6 text-lg leading-relaxed text-muted">
                 {post.description}
+              </p>
+            )}
+            {post.wip && (
+              <p className="mt-6 rounded-lg border border-line bg-surface px-4 py-3 text-sm leading-relaxed text-muted">
+                <span className="font-medium text-fg">Work in progress.</span> I&apos;m still
+                researching and writing this, so expect gaps and changes. It stays out of the RSS
+                feed until it&apos;s finished.
               </p>
             )}
 
@@ -168,7 +198,11 @@ export default async function BlogPostPage({
 
           <Endnotes notes={notes} />
 
-          <div className="flex justify-end pb-4">
+          {series && seriesParts.length > 1 && (
+            <SeriesNav series={series} parts={seriesParts} current={slug} />
+          )}
+
+          <div className="flex justify-end pb-4 pt-8">
             <a
               href="#main"
               className="font-mono text-xs text-subtle transition-colors hover:text-fg"

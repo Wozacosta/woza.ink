@@ -1,4 +1,4 @@
-import { getAllPosts, BlogPost } from "@/data/blog";
+import { getPublishedPosts, BlogPost } from "@/data/blog";
 import { renderMarkdown, stripLeadingH1 } from "@/lib/render";
 import { SITE_URL, SITE_TITLE, SITE_DESCRIPTION } from "@/lib/site";
 
@@ -54,8 +54,7 @@ ${categories}
 }
 
 export async function generateRssFeed(): Promise<string> {
-  const allPosts = getAllPosts();
-  const posts = allPosts.slice(0, FEED_ITEM_LIMIT);
+  const posts = getPublishedPosts().slice(0, FEED_ITEM_LIMIT);
   const lastBuildDate =
     posts.length > 0
       ? formatRFC822Date(posts[0].date)

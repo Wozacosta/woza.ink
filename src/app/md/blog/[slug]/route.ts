@@ -17,6 +17,9 @@ export async function GET(
   if (!post) return new Response("Not found\n", { status: 404 });
 
   return new Response(postToMarkdown(post), {
-    headers: { "Content-Type": "text/markdown; charset=utf-8" },
+    headers: {
+      "Content-Type": "text/markdown; charset=utf-8",
+      ...(post.wip && { "X-Robots-Tag": "noindex" }),
+    },
   });
 }

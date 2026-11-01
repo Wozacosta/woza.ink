@@ -3,6 +3,7 @@ title: "Building Pomo: A Pomodoro Timer That Actually Helps You Focus"
 date: "2026-01-20"
 description: "The story behind building a minimalist Pomodoro timer with concentration music and productivity tracking."
 tags: ["project", "react", "productivity"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjzyswu2o"
 ---
 
 # Building Pomo: A Pomodoro Timer That Actually Helps You Focus

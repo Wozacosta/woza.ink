@@ -5,6 +5,7 @@ description: "Why a terminal designed around running multiple AI agents simultan
 tags: ["dx", "AI", "productivity", "tools"]
 series: agentic-coding
 part: 5
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjz44hk2a"
 ---
 
 # cmux: A Terminal Built for Agentic Workflows

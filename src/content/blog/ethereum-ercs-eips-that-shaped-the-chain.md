@@ -3,6 +3,7 @@ title: "The ERCs and EIPs That Shaped Ethereum"
 date: "2026-03-22"
 description: "A chronological tour of the Ethereum standards that actually mattered — from ERC-20 to account abstraction — and why each one changed what you could build."
 tags: ["ethereum", "web3", "protocols", "standards"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjxq2ky2x"
 ---
 
 # The ERCs and EIPs That Shaped Ethereum

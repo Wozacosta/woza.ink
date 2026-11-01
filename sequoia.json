@@ -1,0 +1,11 @@
+{
+  "$schema": "https://tangled.org/stevedylan.dev/sequoia/raw/main/sequoia.schema.json",
+  "siteUrl": "https://www.woza.ink",
+  "contentDir": "src/content/blog",
+  "pathPrefix": "/blog",
+  "publicationUri": "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.publication/3mzbwjfrek62i",
+  "frontmatter": {
+    "publishDate": "date",
+    "draft": "wip"
+  }
+}

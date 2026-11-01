@@ -3,6 +3,7 @@ title: "Dotfiles: Version Control Your Environment"
 date: "2026-03-14"
 description: "Your shell config, editor settings, and tool preferences are code. Treat them like it."
 tags: ["dx", "productivity", "tools", "tutorial"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjyuqud2m"
 ---
 
 # Dotfiles: Version Control Your Environment

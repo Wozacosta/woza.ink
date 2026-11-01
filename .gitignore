@@ -38,3 +38,6 @@ _bmad/
 
 # python
 __pycache__/
+
+# Sequoia publish state, rebuilt from the PDS when missing
+.sequoia-state.json

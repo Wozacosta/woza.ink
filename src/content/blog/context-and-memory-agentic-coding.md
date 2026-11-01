@@ -5,6 +5,7 @@ description: "AI coding agents don't have memory. They have context windows. Und
 tags: ["AI", "dx", "productivity"]
 series: agentic-coding
 part: 2
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjyygms2t"
 ---
 
 # Memory, Context, and Sessions in Agentic Coding

@@ -3,6 +3,7 @@ title: "Photography in 2026: A No-Nonsense Guide to Cameras for Beginners"
 date: "2026-04-02"
 description: "The camera market is confusing. Mirrorless won, DSLRs are dead, phones are scarily good, and film is back. Here's what actually matters if you're just getting started."
 tags: ["photography", "gear", "guide"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjwywyq2a"
 ---
 
 # Photography in 2026: A No-Nonsense Guide to Cameras for Beginners

@@ -3,6 +3,7 @@ title: "Ghostty: The Terminal Emulator That Shouldn't Need to Exist"
 date: "2026-03-22"
 description: "Mitchell Hashimoto built a terminal from scratch in Zig because every existing option forced a tradeoff between speed, features, and native feel. Here's why Ghostty matters."
 tags: ["dx", "tools", "productivity"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjxmeyw2i"
 ---
 
 # Ghostty: The Terminal Emulator That Shouldn't Need to Exist

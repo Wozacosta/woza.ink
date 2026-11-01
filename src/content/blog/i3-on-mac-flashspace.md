@@ -3,6 +3,7 @@ title: "Reproducing i3 on Mac: From Aerospace to Flashspace"
 date: "2026-03-22"
 description: "How I landed on a tiling + workspace setup on macOS that actually feels like i3. The journey from Aerospace to Flashspace, and why snappiness matters more than features."
 tags: ["dx", "productivity", "tools", "setup"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjxime22t"
 ---
 
 # Reproducing i3 on Mac: From Aerospace to Flashspace

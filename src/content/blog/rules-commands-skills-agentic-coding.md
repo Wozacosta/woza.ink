@@ -5,6 +5,7 @@ description: "Most developers use AI coding assistants as fancy autocomplete. Th
 tags: ["AI", "dx", "productivity", "tutorial"]
 series: agentic-coding
 part: 1
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjyf5zy2a"
 ---
 
 # Rules, Commands, and Skills: The Three Layers of Agentic Coding

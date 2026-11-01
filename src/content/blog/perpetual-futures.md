@@ -4,6 +4,7 @@ date: "2026-10-31"
 description: "How futures work, why crypto removed the expiry date, how funding keeps a perp near spot, what happens when a liquidation can't be filled, and how a bitcoin exchange's product reached oil, gold and the NYSE's parent company."
 tags: ["web3", "protocols"]
 series: defi-trading
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjw4sma2a"
 ---
 
 # Perpetual Futures: A Contract With No Expiry, and Who Pays When It Breaks

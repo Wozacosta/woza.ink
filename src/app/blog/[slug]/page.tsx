@@ -92,9 +92,7 @@ export default async function BlogPostPage({
 
   return (
     <>
-      {STANDARD_SITE_PUBLICATION && (
-        <link rel="site.standard.publication" href={STANDARD_SITE_PUBLICATION} />
-      )}
+      <link rel="site.standard.publication" href={STANDARD_SITE_PUBLICATION} />
       {post.atUri && <link rel="site.standard.document" href={post.atUri} />}
       <JsonLd
         data={{

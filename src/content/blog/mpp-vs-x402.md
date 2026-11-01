@@ -4,6 +4,7 @@ date: "2026-08-21"
 description: "Five protocols want to let AI agents pay for things. They turned out not to be competing — mostly. A map of who sits where, and which numbers you shouldn't trust."
 tags: ["web3", "protocols", "standards", "AI", "payments"]
 series: agent-payments
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjwv6oj2a"
 ---
 
 # The Agentic Payments Stack: x402, MPP, AP2, ACP, and L402

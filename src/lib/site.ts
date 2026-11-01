@@ -9,8 +9,9 @@ export const AUTHOR = {
   github: "https://github.com/Wozacosta",
 };
 
-/** AT-URI of the site.standard.publication record, once it exists */
-export const STANDARD_SITE_PUBLICATION: string | null = null;
+/** AT-URI of the site.standard.publication record. Also in sequoia.json and public/.well-known */
+export const STANDARD_SITE_PUBLICATION =
+  "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.publication/3mzbwjfrek62i";
 
 export const NAV_LINKS = [
   { href: "/blog", label: "Blog" },

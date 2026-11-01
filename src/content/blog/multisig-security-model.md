@@ -5,6 +5,7 @@ description: "How multisig works on Bitcoin and Ethereum, why MPC isn't the same
 tags: ["security", "web3", "bitcoin", "ethereum", "protocols"]
 series: wallets-keys
 part: 2
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjwr5zk2a"
 ---
 
 # Multisig: What It Actually Protects You From

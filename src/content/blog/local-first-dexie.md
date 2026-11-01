@@ -3,6 +3,7 @@ title: "Local-First Web Apps with Dexie and DexieCloud"
 date: "2026-02-06"
 description: "Your app should work without the internet. Here's how to build local-first web apps using IndexedDB, Dexie.js, and DexieCloud for seamless sync."
 tags: ["web", "local-first", "tutorial"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjzmjqg2i"
 ---
 
 # Local-First Web Apps with Dexie and DexieCloud

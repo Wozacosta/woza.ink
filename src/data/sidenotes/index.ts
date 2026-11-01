@@ -31,6 +31,7 @@ import { sidenotes as privacy } from "./privacy-in-crypto";
 import { sidenotes as rulesCommands } from "./rules-commands-skills-agentic-coding";
 import { sidenotes as searxngKagi } from "./searxng-vs-kagi";
 import { sidenotes as signalTelegram } from "./signal-vs-telegram";
+import { sidenotes as standardSite } from "./standard-site";
 import { sidenotes as torrentArch } from "./torrent-architecture";
 import { sidenotes as trueRandomness } from "./true-randomness-and-dice";
 import { sidenotes as whatIsRss } from "./what-is-rss";
@@ -40,7 +41,7 @@ import { sidenotes as whyIBuild } from "./why-i-build";
 const all: ArticleSidenotes[] = [
   arrStack, buildingPomo, clearSigning, cmux, contextMemory, decentSocial, dotfiles, erc8004, ercsEips, x402,
   ghostty, gitWorktrees, i3Mac, kohaku, lawsOfUx, localFirst, matrix, megaeth, mppVsX402, nestjs, onchainPub,
-  opencode, perpetualFutures, rssSetup, photographyCameras, predictionMarkets, privacy, lightroomAlts, rulesCommands, searxngKagi, signalTelegram, torrentArch,
+  opencode, perpetualFutures, rssSetup, photographyCameras, predictionMarkets, privacy, lightroomAlts, rulesCommands, searxngKagi, signalTelegram, standardSite, torrentArch,
   multisig, trueRandomness, whatIsRss, whyIBuild,
 ];
 

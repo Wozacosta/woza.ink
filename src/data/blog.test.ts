@@ -150,6 +150,14 @@ describe("blog utilities", () => {
       }
     });
 
+    it("points atUri at a Standard.site document record", () => {
+      for (const post of getAllPosts()) {
+        if (post.atUri) {
+          expect(post.atUri, post.slug).toMatch(/^at:\/\/did:[a-z]+:[^/]+\/site\.standard\.document\/[^/]+$/);
+        }
+      }
+    });
+
     it("orders posts on the same date by part", () => {
       expect(getPostsInSeries("agentic-coding").map((post) => post.part)).toEqual([1, 2, 3, 4, 5]);
     });

@@ -15,6 +15,8 @@ export interface BlogPost {
   series?: string;
   /** Orders posts within a series that share a date */
   part?: number;
+  /** AT-URI of this post's site.standard.document record, written by `sequoia publish` */
+  atUri?: string;
   /** On the site with a label, but out of feeds and search until it's finished */
   wip: boolean;
 }
@@ -34,6 +36,7 @@ function readPost(slug: string): BlogPost {
     content,
     series: data.series,
     part: data.part,
+    atUri: data.atUri,
     wip: data.wip === true,
   };
 }

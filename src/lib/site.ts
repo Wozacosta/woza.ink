@@ -9,6 +9,9 @@ export const AUTHOR = {
   github: "https://github.com/Wozacosta",
 };
 
+/** AT-URI of the site.standard.publication record, once it exists */
+export const STANDARD_SITE_PUBLICATION: string | null = null;
+
 export const NAV_LINKS = [
   { href: "/blog", label: "Blog" },
   { href: "/projects", label: "Projects" },

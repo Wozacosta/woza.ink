@@ -4,7 +4,7 @@ date: "2026-11-01"
 description: "A small set of AT Protocol schemas lets a self-hosted blog keep its domain and still show up across the network. How the records and the two-way check work, what you get, and what you don't."
 tags: ["web", "decentralized", "publishing", "protocols"]
 series: open-protocols
-wip: true
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwsui7vn2m"
 ---
 
 # Standard.site: Publishing to the Atmosphere Without Leaving Your Domain
@@ -96,4 +96,26 @@ This blog is markdown files built by Next.js, which is the case [Sequoia](https:
 
 Two details differ from its default flow here. Its recommended `inject` step edits built HTML, but Vercel does the building, so the post page renders the `<link>` tag from `atUri` itself. And its draft flag needs mapping to `wip`, so unfinished posts stay off the network the same way they stay out of RSS.
 
-The page side is ready. What's left is creating the identity and the records, and this post will be updated with how that went.
+The config is short:
+
+```json
+{
+  "siteUrl": "https://www.woza.ink",
+  "contentDir": "src/content/blog",
+  "pathPrefix": "/blog",
+  "publicationUri": "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.publication/3mzbwjfrek62i",
+  "frontmatter": { "publishDate": "date", "draft": "wip" }
+}
+```
+
+The identity was already there: `woza.ink` was my Bluesky handle, proven by a DNS record. So the rest came down to creating the publication record, writing its AT-URI to the well-known file, running `sequoia publish` with an app password, committing the new `atUri` lines and deploying. The first run created 35 records and skipped two drafts, one of which was this post.
+
+To check the result, I ran two posts through the [Standard.site validator](https://site-validator.fly.dev/). Both passed all 16 checks, from fetching the page to matching the well-known file. A small script then confirmed that all 35 live pages name the right record.
+
+A few things are worth knowing if you do the same:
+
+- **It isn't automatic.** Vercel doesn't publish records. A new post needs a Sequoia run and a commit, and an edited post needs another run to update its record.
+- **Your full text goes out by default.** I left that on, because the words are already public and search needs them.
+- **Bluesky posting is off.** Sequoia can announce each post on Bluesky, but I don't want publishing to post for me. That also means no `bskyPostRef` yet, so the comments route above isn't active.
+
+What I can't tell you yet is whether any of this brings readers. The records are brand new, so I don't know if the readers and search engines above will pick them up, and I haven't tested the Bluesky preview.

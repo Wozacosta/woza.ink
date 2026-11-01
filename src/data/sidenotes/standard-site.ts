@@ -35,7 +35,13 @@ export const sidenotes: ArticleSidenotes = {
       marker: "often Bluesky's servers for your PDS",
       type: "source",
       content:
-        "Redowan's did:plc entry, for example, points at a host.bsky.network server. That's one example, not a measurement across the network.",
+        "Redowan's did:plc entry points at a host.bsky.network server, and so does mine. That's two examples, not a measurement across the network.",
+    },
+    {
+      marker: "with an app password",
+      type: "note",
+      content:
+        "The login also accepts your main password, without a warning. You can tell them apart in the session token: `com.atproto.appPass` is an app password, `com.atproto.access` is the whole account.",
     },
   ],
 };

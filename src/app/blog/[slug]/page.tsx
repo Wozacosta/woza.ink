@@ -13,7 +13,7 @@ import { addHeadingIds } from "@/lib/headings";
 import { injectSidenoteMarkers, orderByPosition } from "@/lib/sidenotes";
 import { renderMarkdown, stripLeadingH1 } from "@/lib/render";
 import { formatDate } from "@/lib/format";
-import { AUTHOR, SITE_TITLE, SITE_URL } from "@/lib/site";
+import { AUTHOR, SITE_TITLE, SITE_URL, STANDARD_SITE_PUBLICATION } from "@/lib/site";
 import { TagBadge } from "@/components/TagBadge";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { TableOfContents } from "@/components/TableOfContents";
@@ -92,6 +92,10 @@ export default async function BlogPostPage({
 
   return (
     <>
+      {STANDARD_SITE_PUBLICATION && (
+        <link rel="site.standard.publication" href={STANDARD_SITE_PUBLICATION} />
+      )}
+      {post.atUri && <link rel="site.standard.document" href={post.atUri} />}
       <JsonLd
         data={{
           "@context": "https://schema.org",

@@ -1,7 +1,7 @@
 ---
 title: "Decentralized Social Networks: The Full Map"
 date: "2026-03-15"
-description: "Mastodon, Bluesky, Farcaster, Nostr, Loops, Pixelfed, PeerTube — what they are, how they work, and what each one is actually betting on."
+description: "Mastodon, Bluesky, Farcaster, Lens, Nostr, Loops, Pixelfed, PeerTube — what they are, how they work, and what each one is actually betting on."
 tags: ["web", "decentralized", "social", "protocols"]
 ---
 
@@ -68,15 +68,36 @@ These are concrete proof that the protocol's promise extends beyond microbloggin
 
 ## Farcaster — crypto-native social
 
-[Farcaster](https://farcaster.xyz/) is built differently from the start. Identities are onchain (on Optimism). Posts ("casts") are stored off-chain on "Hubs" but linked to your onchain identity. The result: your social graph is owned by your wallet key, not any server or company.
+[Farcaster](https://farcaster.xyz/) is built differently from the start. Identities are onchain (on Optimism). Posts ("casts") are stored on Snapchain, Farcaster's own data network, but linked to your onchain identity. The result: your social graph is owned by your wallet key, not any server or company.
 
-The primary client is [Warpcast](https://warpcast.com/), but because identities and social graphs are onchain, anyone can build a client on the same data. Several alternative clients exist.
+The primary client is the [Farcaster app](https://farcaster.xyz/), [formerly Warpcast](https://www.bankless.com/read/farcaster-fires-up), but because identities and social graphs are onchain, anyone can build a client on the same data. Several alternative clients exist.
 
-The big Farcaster-native feature is Frames — interactive mini-apps that run inside casts. You can build a poll, a game, a mint button, or a payment flow that works directly in the feed. This is only possible because Farcaster's architecture treats the feed as a programmable surface.
+The big Farcaster-native feature is Mini Apps, [formerly Frames](https://docs.farcaster.xyz/reference/frames-redirect) — interactive apps that run inside the feed. You can build a poll, a game, a mint button, or a payment flow that works directly in the feed. This is only possible because Farcaster's architecture treats the feed as a programmable surface.
 
 The community is heavily developer and crypto-native. The conversations you'll find are different from Mastodon or Bluesky — more technical, more crypto-adjacent, more experimentation. Whether that's a feature or a bug depends on who you are.
 
 Honest tradeoff: the onchain identity layer adds friction. Creating a Farcaster account costs a small amount (for storage units). The crypto-native design is a real strength for certain use cases and a real barrier for mainstream adoption.
+
+It also changed hands recently. In January 2026, [Neynar acquired Farcaster](https://www.theblock.co/post/386549/haun-backed-neynar-acquires-farcaster-after-founders-pivot-to-wallet-app) from Merkle Manufactory, after the founders had shifted to building a wallet app.
+
+---
+
+## Lens — one graph, many apps
+
+[Lens](https://lens.xyz/) is the other crypto-native social protocol. Stani Kulechov, the founder of Aave, launched it on Polygon in 2022, and in April 2025 it [moved to its own chain](https://blockeden.xyz/blog/2026/04/21/lens-protocol-v3-zksync-socialfi-layer-2/) built on ZKsync. Your account and followers aren't tied to an app, so any Lens app shows you the same profile and the same audience.
+
+Since the network is shared, apps can't compete on who's there. They compete on who they're for:
+
+- [Orb](https://orb.club/) — the mainstream option, a mobile app on iOS and Android.
+- [Hey](https://hey.xyz/) — a general feed built around social payments: pay to post, earn from what you post.
+- [Palus](https://palus.app/) — the open-source client, which Lens describes as "free, open-source Lens activity across every app."
+- [Soclly](https://app.soclly.com/) — the publishing tool. You can draft and schedule posts, which makes it closer to Buffer than to a place to browse.
+- [Cantuum](https://www.cantuum.xyz/) — a music player, and the only one here built around a single type of content.
+- [Firefly](https://apps.apple.com/app/id1640183078) — the odd one out. It's an aggregator more than a Lens client: X, Farcaster and Lens in one app, with cross-posting to reach all of them.
+
+Ownership is more concentrated than that list suggests. In January 2026, a day before the Neynar deal, [Mask Network took over stewardship of Lens](https://www.theblock.co/post/386293/mask-network-takes-over-lens-protocol-with-goal-to-build-products-people-actually-use). Mask builds Firefly and [has acquired Orb](https://blockeden.xyz/blog/2026/04/21/lens-protocol-v3-zksync-socialfi-layer-2/), so the two apps Lens features first now belong to its steward. Portability is the check on that: if those apps go bad, your account and followers still work in the others.
+
+Honest tradeoff: it's small. Lens had [roughly 22,000 daily active users](https://blog.thirdweb.com/decentralized-social-2026-lens-farcaster-on-chain-identity/) at mainnet launch in 2025, the latest count I could find. A portable audience is only worth as much as the audience.
 
 ---
 
@@ -131,6 +152,7 @@ PeerTube is most meaningful for creators who want to publish content that can't 
 | Mastodon | ActivityPub | Microblogging | Instance choice | Federation of servers |
 | Bluesky | AT Protocol | Microblogging | Easy | PDS portability |
 | Farcaster | Custom + onchain | Microblogging | Wallet required | Onchain identity |
+| Lens | Custom + onchain | Microblogging, music | Wallet | Onchain social graph |
 | Nostr | Nostr | General / social | Keypair | Relay-based |
 | Loops | ActivityPub | Short video | Instance choice | Federation of servers |
 | Pixelfed | ActivityPub | Photos/video | Instance choice | Federation of servers |
@@ -144,7 +166,9 @@ PeerTube is most meaningful for creators who want to publish content that can't 
 
 **Bluesky** has better UX than Mastodon for most users and is growing fast. The AT Protocol architecture is technically superior for portability. The main open question is whether the federation actually gets used, or whether Bluesky becomes the dominant centralized node on its own network — which would be a disappointment architecturally even if the product is good.
 
-**Farcaster** is building crypto-native identity with programmable social primitives. Frames let posts run interactive apps in the feed. The audience is self-selecting and that's fine; not everything has to be for everyone. If you're building things at the intersection of social and web3, this is the most interesting platform.
+**Farcaster** is building crypto-native identity with programmable social primitives. Mini Apps let posts run interactive apps in the feed. The audience is self-selecting and that's fine; not everything has to be for everyone. If you're building things at the intersection of social and web3, this is the most interesting platform.
+
+**Lens** is the cleanest demonstration of one graph with many apps, and one of the smallest networks here. With Mask behind both the protocol and its most prominent apps, the question to watch is whether it stays a shared network or turns into one company's product with an open API.
 
 **Nostr** is the most censorship-resistant and the most experimental. If you're in a country with aggressive internet censorship, or you're building on a very minimal decentralized primitive, Nostr is worth understanding. For casual social media users it's too rough.
 
@@ -169,7 +193,8 @@ The interesting signal: every major Twitter/X crisis sent a wave of users to Mas
 - [Nostr.com](https://nostr.com/) — approachable intro, apps directory, NIPs browser
 - [AT Protocol documentation](https://atproto.com/) — specs, SDKs, and developer guides for Bluesky's underlying protocol
 - [ActivityPub W3C specification](https://www.w3.org/TR/activitypub/) — the actual standard; [activitypub.rocks](https://activitypub.rocks/) is a more readable entry point
-- [Farcaster documentation](https://docs.farcaster.xyz/) — protocol specs, Frames API, developer guides
+- [Farcaster documentation](https://docs.farcaster.xyz/) — protocol specs, Mini Apps, developer guides
+- [Lens](https://lens.xyz/) — the protocol, and its current list of apps
 - [Loops](https://joinloops.org/) — short-form video for the fediverse; currently in open beta
 - [Pixelfed](https://pixelfed.org/) — federated photo sharing
 - [PeerTube](https://joinpeertube.org/) — federated video hosting by Framasoft

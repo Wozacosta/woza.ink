@@ -37,11 +37,19 @@ export const sidenotes: ArticleSidenotes = {
     },
     {
       marker:
-        "stored off-chain on \"Hubs\" but linked to your onchain identity",
+        "stored on Snapchain, Farcaster's own data network",
       type: "source",
       content:
         "Snapchain launched on mainnet in April 2025, replacing Farcaster's CRDT-based Hub system with a BFT consensus layer using Malachite (a Rust Tendermint implementation from Starknet). It delivers 10K+ TPS with 780ms average finality at 100 validators. The architecture uses account-level sharding -- each Farcaster ID's data lives in an isolated shard requiring no cross-shard communication.",
       url: "https://cuckoo.network/blog/2025/04/07/farcasters-snapchain-a-novel-data-layer-solution-for-web3-social-networks",
+    },
+    {
+      marker:
+        "Mask Network took over stewardship of Lens",
+      type: "counter",
+      content:
+        "Both sides said this wasn't an acquisition, sale or exit, and that Lens stays open source with no transfer of ownership, IP or governance control. Lens Labs reportedly keeps maintaining the protocol while Mask leads the consumer side. Lens's own site now puts it more simply: \"Lens is part of MaskDAO.\"",
+      url: "https://coincentral.com/aave-reverts-to-defi-as-mask-network-takes-charge-of-lens-protocol/",
     },
     {
       marker:

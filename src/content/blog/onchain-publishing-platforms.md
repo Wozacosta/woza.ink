@@ -67,13 +67,15 @@ Mirror was the OG. Founded by Denis Nazarov (ex-a16z), it was "the Medium of web
 Lens isn't a publishing platform. It's the infrastructure layer that publishing platforms can build on. Created by the Aave team, it's a decentralized social graph protocol — your profile, followers, and content are portable across every app in the ecosystem.
 
 **The architecture:**
-- Originally on Polygon, now migrated to **Lens Chain** (a dedicated L2 powered by zkSync).
+- Originally on Polygon, now on **Lens Chain** (a dedicated L2 powered by zkSync), live since April 2025.
 - Social graph data lives onchain. Content is stored on **Grove** (decentralized storage built on IPFS).
-- ~647K profiles, 640K handles, and 31 million publications migrated to Lens Chain.
+- [About 650K profiles and handles, 28 million follows and 16 million posts](https://lens.xyz/news/migrating-the-lens-ecosystem-to-lens-chain) migrated to Lens Chain, out of 31 million publications. Mirrors and collects didn't come across.
 
 **Why it matters for publishing:** If you publish on a Lens-powered app and that app dies, your audience and content survive. Your followers carry over to the next app. This is the portability promise that web2 platforms can never make — Medium can't export your follower relationships.
 
-**Publishing apps on Lens:** Hey (social), Tape (video), Orb, and others. No single dominant blogging frontend yet — the ecosystem is still maturing.
+**Apps on Lens:** [Lens's own list](https://lens.xyz/) features Orb and Firefly, alongside Hey, Palus, Soclly, Cantuum and others. Soclly is the closest to a publishing tool, with [drafts and scheduling](https://app.soclly.com/). No single dominant blogging frontend yet — the ecosystem is still maturing.
+
+**Who runs it now:** In January 2026, [Mask Network took over stewardship](https://www.theblock.co/post/386293/mask-network-takes-over-lens-protocol-with-goal-to-build-products-people-actually-use) of Lens and Aave [moved to an advisory role](https://coincentral.com/aave-reverts-to-defi-as-mask-network-takes-charge-of-lens-protocol/). Mask also builds Firefly and [has acquired Orb](https://blockeden.xyz/blog/2026/04/21/lens-protocol-v3-zksync-socialfi-layer-2/), the two apps Lens features first.
 
 **Monetization:** Collect NFTs (followers mint your post), gated content based on token/NFT holdings, secondary market revenue sharing.
 
@@ -83,14 +85,14 @@ Lens isn't a publishing platform. It's the infrastructure layer that publishing 
 
 ## Farcaster — The "Sufficiently Decentralized" Social Layer
 
-Farcaster is a social protocol (think: decentralized Twitter). **Warpcast** is the main client app. It's not built for long-form publishing, but it's increasingly relevant to the publishing stack through its integration with Paragraph.
+Farcaster is a social protocol (think: decentralized Twitter). The main client app is now called **Farcaster** too, [rebranded from Warpcast](https://www.bankless.com/read/farcaster-fires-up) in 2025. It's not built for long-form publishing, but it's increasingly relevant to the publishing stack through its integration with Paragraph.
 
 **How it's built:**
 - Identity and account keys registered on **Ethereum** (OP Mainnet).
 - Social data (casts, reactions, follows) lives on **Snapchain** — a custom consensus layer with sub-second finality (10,000+ TPS, 780ms).
 - ~250K monthly active users, 100K+ funded wallets.
 
-**The publishing angle:** Write long-form on Paragraph, distribute via Farcaster. Posts appear in feeds natively. **Frames** (interactive in-feed mini apps) enable NFT minting, payments, and commerce directly in the social feed.
+**The publishing angle:** Write long-form on Paragraph, distribute via Farcaster. Posts appear in feeds natively. **Mini Apps** ([formerly Frames](https://docs.farcaster.xyz/reference/frames-redirect), interactive apps in the feed) enable NFT minting, payments, and commerce directly in the social feed.
 
 **The protocol paradox:** Farcaster raised $180M and hit a $1B valuation, but the user numbers tell a harder story. DAU peaked at ~100K in July 2024 and dropped 40%. New registrations fell 95.7% from 15,000 to ~650/day. Only ~4,360 Power Badge holders show authentic engagement. Monthly revenue cratered from $1.91M (peak) to ~$10K by October 2025. The strategy has shifted from competing with Twitter to [leaning into crypto-native strengths](https://blockeden.xyz/blog/2025/10/28/farcaster-in-2025-the-protocol-paradox/) — **Farcaster Pro** ($120/year, sold 10K subscriptions in 6 hours) and AI token deployment via **Clanker** (one AI agent created a token that hit $80M market cap).
 
@@ -210,7 +212,7 @@ It works. It's censorship-resistant. It's permanent (as long as someone pins the
 | **Content ownership** | Optional (Arweave) | Onchain | Onchain (Grove/IPFS) | Snapchain | Platform-owned | Platform-owned |
 | **Audience portability** | Partial | Yes (multi-frontend) | Yes (protocol-level) | Yes (protocol-level) | No | No |
 | **Discoverability** | Low | Very low | Very low | Moderate (crypto) | High | Very high |
-| **Monetization** | NFTs, paid subs | Reward pool | Collect NFTs | Tips, Frames | Paid subs (10% fee) | Partner Program |
+| **Monetization** | NFTs, paid subs | Reward pool | Collect NFTs | Tips, Mini Apps | Paid subs (10% fee) | Partner Program |
 | **UX for readers** | Good | Dated | Rough | Good | Excellent | Excellent |
 | **Censorship resistance** | Low-moderate | High | High | Moderate | Low | Low |
 

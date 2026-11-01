@@ -60,11 +60,14 @@ The AT Protocol ecosystem — the "Atmosphere" — is growing beyond Bluesky its
 - [Tangled](https://tangled.org/) — code collaboration (think GitHub) built on atproto. Your repos, issues, and PRs are tied to your AT Protocol identity, not a platform account.
 - [Popfeed](https://popfeed.social/) — a media tracking and review app. Log movies, TV shows, music, and games, share reviews, and build lists. You log in with your Bluesky identity and your social graph comes with you — no rebuilding your network from scratch. Like a Letterboxd/Trakt hybrid that runs on the protocol.
 - [Anisota](https://anisota.net/) — a radically different Bluesky client. It presents posts as collectible trading cards with rarity ratings and finite stamina-limited decks. The goal: slow you down. A calming, nature-themed interface designed to make you scroll less and read more intentionally.
+- [Leaflet](https://leaflet.pub/) — blogs and newsletters on the protocol, with posts stored on your own PDS. It helped create [Standard.site](https://standard.site/), a shared format for long-form writing that [any site can adopt](https://atproto.com/blog/standard-site-bluesky-timeline), and that Bluesky now renders with the publication and author.
 - [Graze](https://www.graze.social/) — a no-code custom feed builder for Bluesky. Drag-and-drop logic gates, regex filters, entity matching, hashtag exclusion. Feed operators get analytics (views, engagement) and can monetize through sponsorships. It's the power-user answer to "I want a feed that shows exactly what I want and nothing else."
 
 These are concrete proof that the protocol's promise extends beyond microblogging. If your identity is portable, every app can build on the same social graph.
 
 The easiest way to see all of it is [Atmosphere Account](https://atmosphereaccount.com/), an open-source directory of these apps and of the 200-plus account hosts behind them. Its pitch is the idea underneath all of this: "One account for all your apps." If you have a Bluesky login, you already have one. The site doesn't hold your account, which stays with your host. Its "Login with Atmosphere" just helps you pick which account to use.
+
+Below the apps, the infrastructure is starting to spread out too. [Microcosm](https://www.microcosm.blue/) is one developer's set of open-source building blocks for AT Protocol apps, funded by community donations. Its premise: "Every social interaction in ATProto is a link!" So [Constellation](https://constellation.microcosm.blue/) crawls every record on the network and indexes over 19 billion links, which lets an app ask who replied to something without building that index itself. [Leaflet uses it](https://updates.microcosm.blue/3mbfnzmdl7s2k) for quotes and mentions. The site also lists public relays in France and Canada, so a developer doesn't have to read the network through Bluesky's.
 
 ---
 

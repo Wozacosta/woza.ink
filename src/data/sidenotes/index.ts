@@ -13,6 +13,7 @@ import { sidenotes as x402 } from "./exploring-x402-standard";
 import { sidenotes as ghostty } from "./ghostty-terminal";
 import { sidenotes as gitWorktrees } from "./git-worktrees-parallel-agents";
 import { sidenotes as i3Mac } from "./i3-on-mac-flashspace";
+import { sidenotes as kohaku } from "./kohaku-private-wallets";
 import { sidenotes as lawsOfUx } from "./laws-of-ux";
 import { sidenotes as localFirst } from "./local-first-dexie";
 import { sidenotes as matrix } from "./matrix-protocol";
@@ -37,7 +38,7 @@ import { sidenotes as whyIBuild } from "./why-i-build";
 
 const all: ArticleSidenotes[] = [
   arrStack, buildingPomo, clearSigning, cmux, contextMemory, decentSocial, dotfiles, erc8004, ercsEips, x402,
-  ghostty, gitWorktrees, i3Mac, lawsOfUx, localFirst, matrix, megaeth, mppVsX402, nestjs, onchainPub,
+  ghostty, gitWorktrees, i3Mac, kohaku, lawsOfUx, localFirst, matrix, megaeth, mppVsX402, nestjs, onchainPub,
   opencode, perpetualFutures, rssSetup, photographyCameras, predictionMarkets, privacy, lightroomAlts, rulesCommands, signalTelegram, torrentArch,
   multisig, trueRandomness, whatIsRss, whyIBuild,
 ];

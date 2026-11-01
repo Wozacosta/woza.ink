@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 428" role="img" aria-labelledby="t-kohaku-withdraw"><title id="t-kohaku-withdraw">An ordinary address deposits into a shielded pool, in public. A proof goes to a bundler, a paymaster covers gas out of the withdrawal, and a fresh address with no ETH receives the funds. Nothing visible connects the deposit to the withdrawal</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-kohaku-withdraw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="16" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="34" r="4" class="d-rose d-fill"/>
+<text x="46" y="38" class="d-t" text-anchor="start" >Your address</text>
+<text x="46" y="54" class="d-s" text-anchor="start" >Public, with a history</text>
+<path d="M200,70 L200,104" class="d-line" marker-end="url(#ah-kohaku-withdraw)"/>
+<text x="210" y="91" class="d-s" text-anchor="start" >deposit, visible onchain</text>
+<rect x="20" y="106" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="124" r="4" class="d-blue d-fill"/>
+<text x="46" y="128" class="d-t" text-anchor="start" >Shielded pool</text>
+<text x="46" y="144" class="d-s" text-anchor="start" >Holds everyone's deposits together</text>
+<path d="M200,160 L200,194" class="d-line" marker-end="url(#ah-kohaku-withdraw)"/>
+<text x="210" y="181" class="d-s" text-anchor="start" >proof, not your address</text>
+<rect x="20" y="196" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="214" r="4" class="d-violet d-fill"/>
+<text x="46" y="218" class="d-t" text-anchor="start" >Bundler and paymaster</text>
+<text x="46" y="234" class="d-s" text-anchor="start" >Submits the proof, takes gas from the withdrawal</text>
+<path d="M200,250 L200,284" class="d-line" marker-end="url(#ah-kohaku-withdraw)"/>
+<text x="210" y="271" class="d-s" text-anchor="start" >withdrawal</text>
+<rect x="20" y="286" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="304" r="4" class="d-green d-fill"/>
+<text x="46" y="308" class="d-t" text-anchor="start" >Fresh address</text>
+<text x="46" y="324" class="d-s" text-anchor="start" >Holds no ETH, never needed any</text>
+<line x1="20" y1="362" x2="380" y2="362" class="d-line d-faint"/>
+<text x="20" y="386" class="d-t" text-anchor="start" >Nothing visible connects the top box to the bottom one.</text>
+<text x="20" y="406" class="d-s" text-anchor="start" >How well that hides you depends on who else is in the pool.</text>
+</svg>

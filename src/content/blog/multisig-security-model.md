@@ -3,6 +3,8 @@ title: "Multisig: What It Actually Protects You From"
 date: "2026-08-21"
 description: "How multisig works on Bitcoin and Ethereum, why MPC isn't the same thing, and why the largest multisig theft in history didn't break a single signature."
 tags: ["security", "web3", "bitcoin", "ethereum", "protocols"]
+series: wallets-keys
+part: 2
 ---
 
 # Multisig: What It Actually Protects You From

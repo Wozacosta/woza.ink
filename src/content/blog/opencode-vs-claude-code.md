@@ -3,6 +3,8 @@ title: "OpenCode vs Claude Code: Same Idea, Different Philosophy"
 date: "2026-03-14"
 description: "Both run AI agents in your terminal. Both support Claude. The differences are in architecture, openness, and what you can configure."
 tags: ["AI", "dx", "tools"]
+series: agentic-coding
+part: 3
 ---
 
 # OpenCode vs Claude Code: Same Idea, Different Philosophy

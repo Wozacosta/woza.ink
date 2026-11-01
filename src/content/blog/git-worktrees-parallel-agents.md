@@ -3,6 +3,8 @@ title: "Git Worktrees for Parallel Agent Work"
 date: "2026-03-14"
 description: "Running multiple AI agents in parallel means running multiple branches in parallel. Git worktrees are how you do that without thrashing your working directory."
 tags: ["dx", "AI", "git", "tutorial"]
+series: agentic-coding
+part: 4
 ---
 
 # Git Worktrees for Parallel Agent Work

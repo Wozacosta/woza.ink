@@ -3,6 +3,8 @@ title: "Memory, Context, and Sessions in Agentic Coding"
 date: "2026-03-14"
 description: "AI coding agents don't have memory. They have context windows. Understanding the difference changes how you work with them."
 tags: ["AI", "dx", "productivity"]
+series: agentic-coding
+part: 2
 ---
 
 # Memory, Context, and Sessions in Agentic Coding

@@ -3,6 +3,8 @@ title: "cmux: A Terminal Built for Agentic Workflows"
 date: "2026-03-14"
 description: "Why a terminal designed around running multiple AI agents simultaneously is worth paying attention to."
 tags: ["dx", "AI", "productivity", "tools"]
+series: agentic-coding
+part: 5
 ---
 
 # cmux: A Terminal Built for Agentic Workflows

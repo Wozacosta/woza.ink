@@ -3,6 +3,7 @@ title: "BitTorrent: The Protocol That Refuses to Die"
 date: "2026-03-22"
 description: "How BitTorrent actually works — peers, pieces, choking, DHT, magnet links — and why a 23-year-old protocol is still the best way to move large files across the internet."
 tags: ["web", "protocols", "decentralized", "open-source"]
+series: open-protocols
 ---
 
 # BitTorrent: The Protocol That Refuses to Die

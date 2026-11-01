@@ -3,6 +3,7 @@ title: "What is RSS? A Guide to Taking Back Control of Your Content"
 date: "2026-01-25"
 description: "RSS is the quiet rebel of the internet. Learn how this simple technology lets you follow websites without algorithms deciding what you see."
 tags: ["web", "rss", "tutorial"]
+series: open-protocols
 ---
 
 # What is RSS? A Guide to Taking Back Control of Your Content

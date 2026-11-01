@@ -3,6 +3,7 @@ title: "Exploring the x402 Standard"
 date: "2026-02-03"
 description: "A deep dive into the x402 standard — what it is, why it matters, and how it fits into the modern web ecosystem."
 tags: ["standards", "web", "learning"]
+series: agent-payments
 ---
 
 # Exploring the x402 Standard

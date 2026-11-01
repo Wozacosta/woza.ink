@@ -150,6 +150,10 @@ describe("blog utilities", () => {
       }
     });
 
+    it("orders posts on the same date by part", () => {
+      expect(getPostsInSeries("agentic-coding").map((post) => post.part)).toEqual([1, 2, 3, 4, 5]);
+    });
+
     it("counts posts and work in progress", () => {
       for (const series of getAllSeries()) {
         const posts = getPostsInSeries(series.slug);

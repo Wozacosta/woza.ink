@@ -23,7 +23,7 @@ Use **pnpm** only (`packageManager` is pinned; there is no npm lockfile).
 
 | Path | What |
 | --- | --- |
-| `src/content/blog/*.md` | Blog posts. Frontmatter: `title`, `date` (`"YYYY-MM-DD"`), `description`, `tags`, and optionally `series`, `part` and `wip: true`. The body starts with `# Title`, which is stripped when rendering (the page shows the title itself). |
+| `src/content/blog/*.md` | Blog posts. Frontmatter: `title`, `date` (`"YYYY-MM-DD"`), `description`, `tags`, and optionally `series`, `part`, `blueskyPost` and `wip: true`. The body starts with `# Title`, which is stripped when rendering (the page shows the title itself). |
 | `src/data/series.ts` | Series registry: slug, title and description. Pages at `/blog/series/<slug>` |
 | `src/content/about.md` | About page |
 | `src/data/sidenotes/<slug>.ts` | Margin notes for a post; register new files in `src/data/sidenotes/index.ts` |
@@ -60,6 +60,11 @@ skipped, and auto-posting to Bluesky is off.
 ```bash
 ATP_IDENTIFIER=woza.ink ATP_APP_PASSWORD=<app password> pnpm dlx sequoia-cli@0.5.7 publish
 ```
+
+**Add Bluesky comments to a post**: post its link on Bluesky, then set `blueskyPost` in the
+frontmatter to that post's `https://bsky.app/profile/.../post/...` URL. Replies load in the browser,
+so they appear without a deploy, and replies hidden on Bluesky stay hidden. Treat reply content as
+untrusted: render it through `splitFacets` in `src/lib/bluesky.ts`, never as HTML.
 
 **Add a post to a series**: add `series: <slug>` to the frontmatter, using a slug from
 `src/data/series.ts` (a test fails if it isn't registered). Parts are ordered oldest first by

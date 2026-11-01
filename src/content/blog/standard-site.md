@@ -5,6 +5,7 @@ description: "A small set of AT Protocol schemas lets a self-hosted blog keep it
 tags: ["web", "decentralized", "publishing", "protocols"]
 series: open-protocols
 atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwsui7vn2m"
+blueskyPost: "https://bsky.app/profile/woza.ink/post/3mzbxrgltfk22"
 ---
 
 # Standard.site: Publishing to the Atmosphere Without Leaving Your Domain
@@ -116,6 +117,8 @@ A few things are worth knowing if you do the same:
 
 - **It isn't automatic.** Vercel doesn't publish records. A new post needs a Sequoia run and a commit, and an edited post needs another run to update its record.
 - **Your full text goes out by default.** I left that on, because the words are already public and search needs them.
-- **Bluesky posting is off.** Sequoia can announce each post on Bluesky, but I don't want publishing to post for me. That also means no `bskyPostRef` yet, so the comments route above isn't active.
+- **Bluesky posting is off.** Sequoia can announce each post on Bluesky, but I don't want publishing to post for me. So I post by hand, and a `blueskyPost` field in the frontmatter points this page's comments at that post. The records have no `bskyPostRef` yet.
 
-What I can't tell you yet is whether any of this brings readers. The records are brand new, so I don't know if the readers and search engines above will pick them up, and I haven't tested the Bluesky preview.
+The Bluesky preview works. Posting this article's link attached both records to the post, along with the publication and a reading time.
+
+What I can't tell you yet is whether any of this brings readers. The records are brand new, so I don't know if the readers and search engines above will pick them up.

@@ -9,6 +9,7 @@ import {
   type BlogPost,
 } from "./blog";
 import { getSeries, SERIES } from "./series";
+import { isBlueskyPostUrl } from "@/lib/bluesky";
 
 describe("blog utilities", () => {
   describe("getAllPosts", () => {
@@ -154,6 +155,14 @@ describe("blog utilities", () => {
       for (const post of getAllPosts()) {
         if (post.atUri) {
           expect(post.atUri, post.slug).toMatch(/^at:\/\/did:[a-z]+:[^/]+\/site\.standard\.document\/[^/]+$/);
+        }
+      }
+    });
+
+    it("points blueskyPost at a post on bsky.app", () => {
+      for (const post of getAllPosts()) {
+        if (post.blueskyPost) {
+          expect(isBlueskyPostUrl(post.blueskyPost), post.slug).toBe(true);
         }
       }
     });

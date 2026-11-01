@@ -91,7 +91,7 @@ The first major Ethereum privacy tool was [Tornado Cash](https://github.com/torn
 
 Tornado Cash worked. It also became the primary tool for laundering crypto stolen in major hacks — the Lazarus Group (a North Korea state hacking outfit) used it extensively after the Ronin Bridge hack, the Harmony Bridge hack, and others. In August 2022, the US Treasury's OFAC [sanctioned Tornado Cash](https://home.treasury.gov/news/press-releases/jy0916), designating it as a Specially Designated National — the same classification used for terrorist organizations and state adversaries.
 
-The sanctions were unprecedented and legally contested. OFAC wasn't sanctioning a company or a person — they were sanctioning immutable open-source code deployed on a blockchain. A Dutch court initially convicted the protocol's developer Roman Storm on money laundering charges; the legal fight over whether writing and deploying privacy software constitutes a crime is ongoing.
+The sanctions were unprecedented and legally contested. OFAC wasn't sanctioning a company or a person — they were sanctioning immutable open-source code deployed on a blockchain. A Dutch court convicted developer Alexey Pertsev of money laundering in 2024, and a US jury convicted Roman Storm of conspiring to run an unlicensed money-transmitting business in 2025; the legal fight over whether writing and deploying privacy software constitutes a crime is ongoing.
 
 The Tornado Cash episode established something important: a fully anonymous mixer with no compliance tooling will be targeted, and the people who built it will face legal consequences regardless of the tool's stated purpose.
 
@@ -142,7 +142,7 @@ The combination is deliberate: privacy for the public, disclosure for those you 
 
 Privacy in crypto exists in a hostile regulatory environment. The argument that privacy tools serve primarily criminal purposes conflates the tool with its worst use case. Cash is private. Lawyers are bound by confidentiality. Banking systems have privacy protections. The expectation that all financial activity should be permanently public is new, specific to blockchain, and not a principle that applies anywhere else.
 
-But the regulatory trajectory is real. OFAC's Tornado Cash sanctions were upheld in key respects even as they were challenged. The EU's travel rule requires identifying information for crypto transfers. Exchanges face pressure to delist assets with strong privacy features.
+But the regulatory trajectory is real. The Treasury [lifted its Tornado Cash sanctions](https://home.treasury.gov/news/press-releases/sb0057) in March 2025, but the developers' prosecutions continued. The EU's travel rule requires identifying information for crypto transfers. Exchanges face pressure to delist assets with strong privacy features.
 
 The practical consequence: privacy tools that offer no compliance path face increasing legal risk. Monero and Zcash have faced and will continue to face exchange delistings. RAILGUN's compliance architecture is a deliberate attempt to offer a different answer — not "trust the tool," but "here's cryptographic proof of legitimacy, verifiable without revealing private information."
 
@@ -197,4 +197,5 @@ The direction matters: Ethereum's privacy future is probably not a separate priv
 - [OFAC Tornado Cash sanctions](https://home.treasury.gov/news/press-releases/jy0916) — the August 2022 press release, worth reading to understand what regulators actually said
 - [Haveno](https://haveno.exchange/) — decentralized P2P Monero exchange, built on Tor and Monero multisig; the current best attempt at a LocalMonero successor
 - [Bisq](https://bisq.network/) — the reference implementation for decentralized P2P Bitcoin exchange; the codebase Haveno forked from
+- [Kohaku](/blog/kohaku-private-wallets) — the Ethereum Foundation's attempt to bring these protocols into ordinary wallets
 - [Decentralized Social Protocols](/blog/decentralized-social-protocols) — the same tension between openness and privacy shows up in identity and social layers

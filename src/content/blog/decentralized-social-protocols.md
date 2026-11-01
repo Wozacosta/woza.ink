@@ -3,6 +3,7 @@ title: "Decentralized Social Networks: The Full Map"
 date: "2026-03-15"
 description: "Mastodon, Bluesky, Farcaster, Lens, Nostr, Loops, Pixelfed, PeerTube — what they are, how they work, and what each one is actually betting on."
 tags: ["web", "decentralized", "social", "protocols"]
+series: open-protocols
 ---
 
 # Decentralized Social Networks: The Full Map

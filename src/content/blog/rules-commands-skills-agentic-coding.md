@@ -3,6 +3,8 @@ title: "Rules, Commands, and Skills: The Three Layers of Agentic Coding"
 date: "2026-03-14"
 description: "Most developers use AI coding assistants as fancy autocomplete. The ones getting 10x more out of them understand the difference between rules, commands, and skills — and use all three deliberately."
 tags: ["AI", "dx", "productivity", "tutorial"]
+series: agentic-coding
+part: 1
 ---
 
 # Rules, Commands, and Skills: The Three Layers of Agentic Coding

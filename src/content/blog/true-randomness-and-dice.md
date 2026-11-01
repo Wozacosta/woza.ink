@@ -3,6 +3,8 @@ title: "Where Randomness Actually Comes From"
 date: "2026-08-21"
 description: "True RNG vs pseudorandom, how your machine actually collects entropy, why 100 dice rolls make a Bitcoin seed, and the three different things people mean when they say 'random'."
 tags: ["security", "cryptography", "protocols", "bitcoin"]
+series: wallets-keys
+part: 1
 ---
 
 # Where Randomness Actually Comes From

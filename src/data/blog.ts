@@ -13,6 +13,8 @@ export interface BlogPost {
   content: string;
   /** Slug of a series in src/data/series.ts */
   series?: string;
+  /** Orders posts within a series that share a date */
+  part?: number;
   /** On the site with a label, but out of feeds and search until it's finished */
   wip: boolean;
 }
@@ -31,6 +33,7 @@ function readPost(slug: string): BlogPost {
     tags: data.tags ?? [],
     content,
     series: data.series,
+    part: data.part,
     wip: data.wip === true,
   };
 }
@@ -127,6 +130,7 @@ export function getPostsInSeries(slug: string): BlogPost[] {
     .sort(
       (a, b) =>
         new Date(a.date).getTime() - new Date(b.date).getTime() ||
+        (a.part ?? Infinity) - (b.part ?? Infinity) ||
         a.slug.localeCompare(b.slug),
     );
 }

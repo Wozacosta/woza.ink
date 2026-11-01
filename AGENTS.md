@@ -23,7 +23,7 @@ Use **pnpm** only (`packageManager` is pinned; there is no npm lockfile).
 
 | Path | What |
 | --- | --- |
-| `src/content/blog/*.md` | Blog posts. Frontmatter: `title`, `date` (`"YYYY-MM-DD"`), `description`, `tags`, and optionally `series` and `wip: true`. The body starts with `# Title`, which is stripped when rendering (the page shows the title itself). |
+| `src/content/blog/*.md` | Blog posts. Frontmatter: `title`, `date` (`"YYYY-MM-DD"`), `description`, `tags`, and optionally `series`, `part` and `wip: true`. The body starts with `# Title`, which is stripped when rendering (the page shows the title itself). |
 | `src/data/series.ts` | Series registry: slug, title and description. Pages at `/blog/series/<slug>` |
 | `src/content/about.md` | About page |
 | `src/data/sidenotes/<slug>.ts` | Margin notes for a post; register new files in `src/data/sidenotes/index.ts` |
@@ -52,7 +52,8 @@ it's finished; it then enters the feeds as a new post.
 
 **Add a post to a series**: add `series: <slug>` to the frontmatter, using a slug from
 `src/data/series.ts` (a test fails if it isn't registered). Parts are ordered oldest first by
-`date`. A new series just needs an entry in that file.
+`date`; if two share a date, set `part: <n>` on them to order them. A new series just needs an
+entry in that file.
 
 **Add sidenotes**: create `src/data/sidenotes/<slug>.ts` exporting `sidenotes` and add it
 to `index.ts`. Each `marker` must be a phrase that appears in the post; markdown in the

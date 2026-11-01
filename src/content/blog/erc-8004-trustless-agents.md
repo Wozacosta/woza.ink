@@ -3,6 +3,7 @@ title: "ERC-8004: Building a Trust Layer for AI Agents Onchain"
 date: "2026-03-20"
 description: "ERC-8004 gives AI agents verifiable identity, reputation, and validation on Ethereum. Here's what the standard actually defines, why it matters, and where it's headed."
 tags: ["web3", "ethereum", "ai", "protocols", "standards"]
+series: agent-payments
 ---
 
 # ERC-8004: Building a Trust Layer for AI Agents Onchain

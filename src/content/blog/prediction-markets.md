@@ -3,6 +3,7 @@ title: "Prediction Markets: What the Price Knows, and Who Decides What Happened"
 date: "2026-09-30"
 description: "How prediction markets turn bets into probabilities, why the price is sometimes wrong, why the oracle is the real product, and how Trueo is trying to build the version Vitalik Buterin has been asking for."
 tags: ["web3", "ethereum", "protocols"]
+series: defi-trading
 ---
 
 # Prediction Markets: What the Price Knows, and Who Decides What Happened

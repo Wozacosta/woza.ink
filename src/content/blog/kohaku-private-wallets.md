@@ -3,6 +3,7 @@ title: "Kohaku: Ethereum's Privacy Problem Is in the Wallet"
 date: "2026-11-01"
 description: "Ethereum already has private transactions, and almost nobody uses them. Kohaku is the Ethereum Foundation's attempt to fix that in the wallet: what a wallet leaks, what Kohaku does about it, and what works today."
 tags: ["web3", "ethereum", "privacy", "protocols"]
+series: wallets-keys
 ---
 
 # Kohaku: Ethereum's Privacy Problem Is in the Wallet

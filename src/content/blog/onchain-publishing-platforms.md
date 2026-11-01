@@ -156,6 +156,8 @@ The pitch: your identity is your AT Protocol handle, not a platform account. Pub
 
 It's not decentralized storage (no IPFS, no Arweave). It's decentralized *identity and social graph*. Your readers follow you across any app on the protocol. If Leaflet disappears tomorrow, your identity, followers, and social connections don't. That's a different bet than the crypto-native platforms above, but it's solving the same core problem: your audience shouldn't be hostage to any single service.
 
+Leaflet has since moved to [Standard.site](https://standard.site/), a shared format for long-form posts that it [created with pckt and Offprint](https://atproto.com/blog/standard-site-bluesky-timeline), so writing is easier to carry between these apps. Custom domains are free, and a [$120/year Pro plan](https://leaflet.pub/) adds analytics, post scheduling and email subscribers. It's still labelled beta, from a team of three.
+
 ### pckt.blog — AT Protocol Blogging
 
 [pckt.blog](https://pckt.blog/) is another AT Protocol-native blogging platform — simpler than Leaflet, closer to a traditional blog host. Multi-blog support, custom domains, sections/tags, RSS feeds, analytics, image galleries. Your identity is your atproto handle. Content syncs across the Atmosphere. Think of it as the "just give me a blog" option for people already in the Bluesky ecosystem — no collaborative editing, no publications, just clean personal blogging with decentralized identity baked in.

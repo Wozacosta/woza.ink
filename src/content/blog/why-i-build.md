@@ -3,6 +3,7 @@ title: "Why I Build Things"
 date: "2026-01-15"
 description: "Reflections on why building small projects keeps me sane and sharp as a developer."
 tags: ["personal", "career", "motivation"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwk24hkb2c"
 ---
 
 # Why I Build Things

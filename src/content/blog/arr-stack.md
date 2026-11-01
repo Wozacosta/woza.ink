@@ -3,6 +3,7 @@ title: "The *arr Stack: How Self-Hosted Media Automation Actually Works"
 date: "2026-09-30"
 description: "Sonarr, Radarr, Prowlarr, Seerr and friends: what each piece does, how they talk to each other, why hardlinks matter, and where the whole thing breaks."
 tags: ["self-hosting", "open-source", "tools", "protocols"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjwj57j2v"
 ---
 
 # The *arr Stack: How Self-Hosted Media Automation Actually Works

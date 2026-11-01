@@ -5,6 +5,7 @@ description: "True RNG vs pseudorandom, how your machine actually collects entro
 tags: ["security", "cryptography", "protocols", "bitcoin"]
 series: wallets-keys
 part: 1
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjwn2nm2v"
 ---
 
 # Where Randomness Actually Comes From

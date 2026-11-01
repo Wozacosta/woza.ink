@@ -3,6 +3,7 @@ title: "Lightroom and Its Alternatives: The State of Photo Editing in 2026"
 date: "2026-04-02"
 description: "Adobe owns the photo editing market. You don't have to let it own your wallet. A deep look at Capture One, DxO PhotoLab, Photomator, darktable, and the rest — who they're for, what they cost, and whether they can actually replace Lightroom."
 tags: ["photography", "tools", "guide"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjx4ofz2b"
 ---
 
 # Lightroom and Its Alternatives: The State of Photo Editing in 2026

@@ -4,6 +4,7 @@ date: "2026-09-30"
 description: "Why hardware wallets showed hashes for a decade, why decoding the ABI isn't enough, and how ERC-7730 descriptors, a public registry and auditor attestations are finally making transactions readable."
 tags: ["web3", "ethereum", "security", "standards"]
 series: wallets-keys
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjwexxq2a"
 ---
 
 # Clear Signing: Teaching Wallets to Say What You're Signing

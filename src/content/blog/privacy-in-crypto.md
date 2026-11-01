@@ -3,6 +3,7 @@ title: "Privacy in Crypto: Monero, Zcash, and What Ethereum Is Trying to Become"
 date: "2026-03-15"
 description: "Every transaction on a public blockchain is permanently visible to anyone. Here's how Monero, Zcash, and Ethereum's RAILGUN are trying to fix that — and what they're each betting on."
 tags: ["web3", "ethereum", "privacy", "protocols", "blockchain"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjxyeiq2a"
 ---
 
 # Privacy in Crypto: Monero, Zcash, and What Ethereum Is Trying to Become

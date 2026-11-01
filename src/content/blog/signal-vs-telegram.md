@@ -3,6 +3,7 @@ title: "Signal vs Telegram: The Encryption Gap Nobody Talks About"
 date: "2026-02-18"
 description: "Telegram markets itself as secure. Signal actually is. A look at the architecture, cryptography, and trust models behind two very different messengers."
 tags: ["privacy", "security", "open-source"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjzf32m2v"
 ---
 
 # Signal vs Telegram: The Encryption Gap Nobody Talks About

@@ -4,6 +4,7 @@ date: "2026-02-06"
 description: "Matrix is an open protocol for real-time, decentralized, encrypted communication. Here's why it matters and how to get started."
 tags: ["web", "privacy", "open-source"]
 series: open-protocols
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjziqj32m"
 ---
 
 # Matrix: The Protocol That Wants to Fix Messaging

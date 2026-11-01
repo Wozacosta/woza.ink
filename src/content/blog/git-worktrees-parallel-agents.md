@@ -5,6 +5,7 @@ description: "Running multiple AI agents in parallel means running multiple bran
 tags: ["dx", "AI", "git", "tutorial"]
 series: agentic-coding
 part: 4
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjyqegq2a"
 ---
 
 # Git Worktrees for Parallel Agent Work

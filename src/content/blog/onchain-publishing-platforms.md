@@ -4,6 +4,7 @@ date: "2026-02-22"
 description: "A tour of web3 alternatives to Medium and Substack — what works, what died, and what the trade-offs actually are."
 tags: ["web3", "decentralized", "publishing", "open-source"]
 series: open-protocols
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjz7vcj2a"
 ---
 
 # Paragraph, Mirror, and the Onchain Publishing Landscape

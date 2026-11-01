@@ -3,6 +3,7 @@ title: "MegaETH: The Case for a Real-Time Blockchain"
 date: "2026-03-15"
 description: "MegaETH claims 100,000 TPS and sub-10ms block times on Ethereum. Here's what the architecture actually does, what it enables, and what it's betting on."
 tags: ["web3", "ethereum", "blockchain", "protocols"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjy47uz2c"
 ---
 
 # MegaETH: The Case for a Real-Time Blockchain

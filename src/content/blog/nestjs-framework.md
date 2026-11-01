@@ -3,6 +3,7 @@ title: "NestJS: The Framework Node.js Was Missing"
 date: "2026-03-22"
 description: "NestJS brought structure, dependency injection, and real architecture to Node.js backends. Here's what it does, how it works, when to use it, and when it's overkill."
 tags: ["backend", "node", "typescript", "architecture"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjxettj2c"
 ---
 
 # NestJS: The Framework Node.js Was Missing

@@ -3,6 +3,7 @@ title: "SearXNG vs Kagi: Two Layers on Top of Someone Else's Index"
 date: "2026-11-01"
 description: "One is free and you run it yourself. The other costs $10 a month. Both sit on indexes they don't own, and that decides how they rank, how they break and who you end up trusting."
 tags: ["web", "privacy", "open-source"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjvuquj2v"
 ---
 
 # SearXNG vs Kagi: Two Layers on Top of Someone Else's Index

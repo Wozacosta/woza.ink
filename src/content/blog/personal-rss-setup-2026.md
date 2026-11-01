@@ -3,6 +3,7 @@ title: "My RSS Setup in 2026"
 date: "2026-03-14"
 description: "The reader, the feeds, and the workflow I actually use. Opinionated and practical."
 tags: ["rss", "productivity", "tools", "setup"]
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjyiy4a2a"
 ---
 
 # My RSS Setup in 2026

@@ -33,7 +33,8 @@ Use **pnpm** only (`packageManager` is pinned; there is no npm lockfile).
 | `src/lib/render.ts` | Markdown → HTML (marked + Shiki; wraps tables for mobile) |
 | `src/lib/sidenotes.ts` | Places sidenote markers by matching rendered text |
 | `src/lib/agents.ts` | `/llms.txt`, `/llms-full.txt` and the markdown views of posts |
-| `src/lib/site.ts` | Canonical URL (`https://www.woza.ink`), site copy, nav links |
+| `src/lib/site.ts` | Canonical URL (`https://www.woza.ink`), site copy, nav links, Standard.site publication URI |
+| `sequoia.json` | Standard.site publishing config (Sequoia CLI) |
 | `src/app/` | Routes. `md/*` is internal: `/blog/<slug>.md` and `/about.md` rewrite to it (`next.config.ts`) |
 | `scripts/capture-project-screenshots.ts` | Screenshot capture; per-project setup lives in its `CAPTURE` map |
 | `scripts/diagrams/` | Generators for the SVG diagrams in `public/diagrams/` |
@@ -49,6 +50,16 @@ automatically.
 WIP label (blog list, tag and series pages, and its own URL), but out of RSS, `llms.txt`, the
 sitemap, the home page and search indexing. To publish, delete the line and set `date` to the day
 it's finished; it then enters the feeds as a new post.
+
+**Publish to Standard.site**: each published post has a `site.standard.document` record in the
+`woza.ink` AT Protocol repo, and its `atUri` frontmatter renders the post's `<link>` tag. After
+adding or editing posts, run the command below with `--dry-run`, then without it, and commit the
+new `atUri` lines. It needs a Bluesky app password, never the account password. `wip` posts are
+skipped, and auto-posting to Bluesky is off.
+
+```bash
+ATP_IDENTIFIER=woza.ink ATP_APP_PASSWORD=<app password> pnpm dlx sequoia-cli@0.5.7 publish
+```
 
 **Add a post to a series**: add `series: <slug>` to the frontmatter, using a slug from
 `src/data/series.ts` (a test fails if it isn't registered). Parts are ordered oldest first by

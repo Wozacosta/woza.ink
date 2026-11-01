@@ -5,6 +5,7 @@ description: "Both run AI agents in your terminal. Both support Claude. The diff
 tags: ["AI", "dx", "tools"]
 series: agentic-coding
 part: 3
+atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjymnu42o"
 ---
 
 # OpenCode vs Claude Code: Same Idea, Different Philosophy

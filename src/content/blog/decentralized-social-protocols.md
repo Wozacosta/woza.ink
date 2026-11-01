@@ -64,6 +64,8 @@ The AT Protocol ecosystem — the "Atmosphere" — is growing beyond Bluesky its
 
 These are concrete proof that the protocol's promise extends beyond microblogging. If your identity is portable, every app can build on the same social graph.
 
+The easiest way to see all of it is [Atmosphere Account](https://atmosphereaccount.com/), an open-source directory of these apps and of the 200-plus account hosts behind them. Its pitch is the idea underneath all of this: "One account for all your apps." If you have a Bluesky login, you already have one. The site doesn't hold your account, which stays with your host. Its "Login with Atmosphere" just helps you pick which account to use.
+
 ---
 
 ## Farcaster — crypto-native social

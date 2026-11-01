@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t-searxng-kagi-sources"><title id="t-searxng-kagi-sources">SearXNG and Kagi draw on the same indexes by different routes. Google: SearXNG uses a custom search workaround, Kagi buys results from third-party providers. Bing: off by default in SearXNG, third-party providers for Kagi. Brave: SearXNG reads its result pages, Kagi has a direct license. Mojeek: off by default in SearXNG because of a CAPTCHA, a direct license for Kagi. Only Kagi has an index of its own, for small-web pages and news</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-searxng-kagi-sources" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Same indexes, different routes</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Who built the results, and how each one gets them</text>
+<rect x="20" y="56" width="360" height="60" rx="8" class="d-box"/>
+<text x="34" y="90" class="d-t" text-anchor="start" >Google</text>
+<text x="124" y="81" class="d-s d-blue d-ct" text-anchor="start" >SearXNG: Custom search workaround</text>
+<text x="124" y="99" class="d-s d-violet d-ct" text-anchor="start" >Kagi: Bought from third-party providers</text>
+<rect x="20" y="124" width="360" height="60" rx="8" class="d-box"/>
+<text x="34" y="158" class="d-t" text-anchor="start" >Bing</text>
+<text x="124" y="149" class="d-s d-blue d-ct" text-anchor="start" >SearXNG: Off by default</text>
+<text x="124" y="167" class="d-s d-violet d-ct" text-anchor="start" >Kagi: Bought from third-party providers</text>
+<rect x="20" y="192" width="360" height="60" rx="8" class="d-box"/>
+<text x="34" y="226" class="d-t" text-anchor="start" >Brave</text>
+<text x="124" y="217" class="d-s d-blue d-ct" text-anchor="start" >SearXNG: Reads its result pages</text>
+<text x="124" y="235" class="d-s d-violet d-ct" text-anchor="start" >Kagi: Direct license</text>
+<rect x="20" y="260" width="360" height="60" rx="8" class="d-box"/>
+<text x="34" y="294" class="d-t" text-anchor="start" >Mojeek</text>
+<text x="124" y="285" class="d-s d-blue d-ct" text-anchor="start" >SearXNG: Off by default, CAPTCHA</text>
+<text x="124" y="303" class="d-s d-violet d-ct" text-anchor="start" >Kagi: Direct license</text>
+<rect x="20" y="328" width="360" height="60" rx="8" class="d-box"/>
+<text x="34" y="362" class="d-t" text-anchor="start" >Own index</text>
+<text x="124" y="353" class="d-s d-blue d-ct" text-anchor="start" >SearXNG: None</text>
+<text x="124" y="371" class="d-s d-violet d-ct" text-anchor="start" >Kagi: Small web and news only</text>
+</svg>

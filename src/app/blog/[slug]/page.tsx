@@ -14,6 +14,7 @@ import { injectSidenoteMarkers, orderByPosition } from "@/lib/sidenotes";
 import { renderMarkdown, stripLeadingH1 } from "@/lib/render";
 import { formatDate } from "@/lib/format";
 import { AUTHOR, SITE_TITLE, SITE_URL, STANDARD_SITE_PUBLICATION } from "@/lib/site";
+import { BlueskyComments } from "@/components/BlueskyComments";
 import { TagBadge } from "@/components/TagBadge";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { TableOfContents } from "@/components/TableOfContents";
@@ -203,6 +204,8 @@ export default async function BlogPostPage({
           {series && seriesParts.length > 1 && (
             <SeriesNav series={series} parts={seriesParts} current={slug} />
           )}
+
+          {post.blueskyPost && <BlueskyComments postUrl={post.blueskyPost} />}
 
           <div className="flex justify-end pb-4 pt-8">
             <a

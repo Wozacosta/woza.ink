@@ -17,6 +17,8 @@ export interface BlogPost {
   part?: number;
   /** AT-URI of this post's site.standard.document record, written by `sequoia publish` */
   atUri?: string;
+  /** bsky.app URL of the post whose replies appear as comments */
+  blueskyPost?: string;
   /** On the site with a label, but out of feeds and search until it's finished */
   wip: boolean;
 }
@@ -37,6 +39,7 @@ function readPost(slug: string): BlogPost {
     series: data.series,
     part: data.part,
     atUri: data.atUri,
+    blueskyPost: data.blueskyPost,
     wip: data.wip === true,
   };
 }

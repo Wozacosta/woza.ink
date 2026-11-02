@@ -110,7 +110,9 @@ function Diagram({ figure, config }: { figure: HTMLElement; config: InteractiveD
       el.classList.toggle("is-focus", el.dataset.node === focus);
     });
     figure.querySelectorAll<SVGElement>("[data-edge]").forEach((el) => {
-      const on = edges.includes(el.dataset.edge!);
+      const id = el.dataset.edge!;
+      // A selected box lights all its exchanges, such as agent-server and agent-server-paid
+      const on = edges.some((e) => id === e || (step === null && id.startsWith(`${e}-`)));
       el.classList.toggle("is-on", on);
       el.classList.toggle("is-flow", on && step !== null && el.tagName === "path");
     });

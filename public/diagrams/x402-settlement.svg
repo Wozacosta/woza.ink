@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 506" role="img" aria-labelledby="t-x402-settlement"><title id="t-x402-settlement">The agent requests a resource, gets a 402 with the price, and retries with a signed payment. The server asks the facilitator to verify it, does the work, then asks the facilitator to settle. The facilitator sends the transaction onchain, pays the gas and confirms, and the server returns the data. Verifying is read-only, so nothing moves until settle</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-x402-settlement" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="16" width="80" height="36" rx="8" class="d-box"/>
+<text x="60.0" y="38.5" class="d-t" text-anchor="middle" >Agent</text>
+<rect x="150" y="16" width="100" height="36" rx="8" class="d-box"/>
+<text x="200.0" y="38.5" class="d-t" text-anchor="middle" >Server</text>
+<rect x="280" y="16" width="100" height="36" rx="8" class="d-box"/>
+<text x="330.0" y="38.5" class="d-t" text-anchor="middle" >Facilitator</text>
+<line x1="60" y1="52" x2="60" y2="456" class="d-line d-faint" stroke-dasharray="4 3"/>
+<line x1="200" y1="52" x2="200" y2="456" class="d-line d-faint" stroke-dasharray="4 3"/>
+<line x1="330" y1="52" x2="330" y2="456" class="d-line d-faint" stroke-dasharray="4 3"/>
+<path d="M62,84 L197.0,84" class="d-line" marker-end="url(#ah-x402-settlement)"/>
+<text x="130.0" y="76" class="d-s d-m" text-anchor="middle" >GET /weather</text>
+<path d="M198,124 L63.0,124" class="d-line" marker-end="url(#ah-x402-settlement)"/>
+<text x="130.0" y="116" class="d-s d-m" text-anchor="middle" >402 and the price</text>
+<path d="M62,164 L197.0,164" class="d-line" marker-end="url(#ah-x402-settlement)"/>
+<text x="130.0" y="156" class="d-s d-m" text-anchor="middle" >Signed payment</text>
+<path d="M202,204 L327.0,204" class="d-line" marker-end="url(#ah-x402-settlement)"/>
+<text x="265.0" y="196" class="d-s d-m" text-anchor="middle" >/verify</text>
+<path d="M328,240 L203.0,240" class="d-line" marker-end="url(#ah-x402-settlement)"/>
+<text x="265.0" y="232" class="d-s d-m" text-anchor="middle" >valid</text>
+<path d="M202,316 L327.0,316" class="d-line" marker-end="url(#ah-x402-settlement)"/>
+<text x="265.0" y="308" class="d-s d-m" text-anchor="middle" >/settle</text>
+<path d="M328,398 L203.0,398" class="d-line" marker-end="url(#ah-x402-settlement)"/>
+<text x="265.0" y="390" class="d-s d-m" text-anchor="middle" >confirmed</text>
+<path d="M198,444 L63.0,444" class="d-line" marker-end="url(#ah-x402-settlement)"/>
+<text x="130.0" y="436" class="d-s d-m" text-anchor="middle" >200 and the data</text>
+<rect x="150" y="254" width="100" height="32" rx="6" class="d-box"/>
+<text x="200" y="274" class="d-s d-green d-ct" text-anchor="middle" >Does the work</text>
+<rect x="272" y="328" width="108" height="46" rx="6" class="d-box"/>
+<text x="326" y="347" class="d-s d-amber d-ct" text-anchor="middle" >Sends it onchain,</text>
+<text x="326" y="363" class="d-s d-amber d-ct" text-anchor="middle" >pays the gas</text>
+<line x1="20" y1="470" x2="380" y2="470" class="d-line d-faint"/>
+<text x="20" y="494" class="d-t" text-anchor="start" >Verify is read-only. Nothing moves until settle.</text>
+</svg>

@@ -148,6 +148,7 @@ body {
     padding: 0.1em 0.35em;
     font-size: 0.875em;
     font-weight: 500;
+    overflow-wrap: break-word; /* long addresses and hashes must not scroll a phone sideways */
 }
 
 .prose :where(:not(pre) > code)::before,

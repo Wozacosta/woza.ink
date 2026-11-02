@@ -16,7 +16,7 @@ This post cuts through the marketing and the fear-mongering. I’ll show you wha
 > If your threat model includes servers, corporations, or nation-states, the details below change outcomes. If you're just texting friends, you might prefer convenience. Know the difference. Choose deliberately.
 
 TL;DR
-- Signal = end-to-end encryption by default, minimal metadata, open-source clients, strong cryptography (Olm/Megolm family for groups), focused threat model: protect message content and many metadata-layer protections.
+- Signal = end-to-end encryption by default, minimal metadata, open-source clients, strong cryptography (the Signal Protocol: X3DH and the Double Ratchet), focused threat model: protect message content and many metadata-layer protections.
 - Telegram = server-client encryption by default for cloud chats (your server can read that), optional end-to-end `Secret Chats` for one-to-one only, proprietary components, feature-rich and fast, but less defensible for high-threat scenarios.
 - Pick Signal for privacy and security. Pick Telegram for features, scale, and convenience — but don’t assume it’s private.
 

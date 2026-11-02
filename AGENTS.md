@@ -15,6 +15,7 @@ pnpm build                   # production build (also type-checks scripts/)
 pnpm test:watch              # Vitest in watch mode (`pnpm test` runs once)
 pnpm screenshots [slug...]   # refresh public/projects/<slug>.webp using local Chrome
 pnpm sync                    # revalidate /reading in production (needs REVALIDATE_SECRET in .env)
+pnpm standard [--dry-run]    # publish posts to Standard.site (app password from the macOS Keychain)
 ```
 
 Use **pnpm** only (`packageManager` is pinned; there is no npm lockfile).
@@ -54,11 +55,18 @@ it's finished; it then enters the feeds as a new post.
 **Publish to Standard.site**: each published post has a `site.standard.document` record in the
 `woza.ink` AT Protocol repo, and its `atUri` frontmatter renders the post's `<link>` tag. After
 adding or editing posts, run the command below with `--dry-run`, then without it, and commit the
-new `atUri` lines. It needs a Bluesky app password, never the account password. `wip` posts are
-skipped, and auto-posting to Bluesky is off.
+new `atUri` lines. It reads a Bluesky app password, never the account password, from the macOS
+Keychain, so don't ask for one. `wip` posts are skipped, and auto-posting to Bluesky is off.
 
 ```bash
-ATP_IDENTIFIER=woza.ink ATP_APP_PASSWORD=<app password> pnpm dlx sequoia-cli@0.5.7 publish
+pnpm standard --dry-run
+pnpm standard
+```
+
+To store the password on a new machine, run this in a terminal:
+
+```bash
+security add-generic-password -a woza.ink -s sequoia-atp -w
 ```
 
 **Add Bluesky comments to a post**: post its link on Bluesky, then set `blueskyPost` in the

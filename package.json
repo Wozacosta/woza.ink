@@ -14,6 +14,7 @@
     "test:coverage": "vitest run --coverage",
     "check": "pnpm lint && pnpm typecheck && pnpm test",
     "screenshots": "node scripts/capture-project-screenshots.ts",
+    "standard": "sh scripts/publish-standard-site.sh",
     "sync": "set -a && . ./.env && set +a && curl -s -X POST -H \"x-revalidate-secret: ${REVALIDATE_SECRET}\" \"https://www.woza.ink/api/revalidate?path=/reading\""
   },
   "dependencies": {

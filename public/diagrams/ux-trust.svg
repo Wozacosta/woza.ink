@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 360" role="img" aria-labelledby="t-ux-trust"><title id="t-ux-trust">The nine laws sorted into three tiers. Measured: Fitts's law and Hick's law. Real findings with fine print: Miller's law, choice overload, the peak-end rule and the aesthetic-usability effect. Good advice with a law's name: the Doherty threshold, Jakob's law and Tesler's law</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-ux-trust" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Nine laws, sorted by trust</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >From fitted equations down to well-argued opinions</text>
+<text x="20" y="62" class="d-s d-green d-ct" text-anchor="start" >Measured: you can calculate these</text>
+<g data-node="fitts">
+<rect x="20" y="70" width="176" height="38" rx="8" class="d-box"/>
+<circle cx="34" cy="89.0" r="4" class="d-green d-fill"/>
+<text x="46" y="93.5" class="d-t" text-anchor="start" >Fitts's law</text>
+</g>
+<g data-node="hick">
+<rect x="204" y="70" width="176" height="38" rx="8" class="d-box"/>
+<circle cx="218" cy="89.0" r="4" class="d-green d-fill"/>
+<text x="230" y="93.5" class="d-t" text-anchor="start" >Hick's law</text>
+</g>
+<text x="20" y="134" class="d-s d-amber d-ct" text-anchor="start" >Real findings, with fine print</text>
+<g data-node="miller">
+<rect x="20" y="142" width="176" height="38" rx="8" class="d-box"/>
+<circle cx="34" cy="161.0" r="4" class="d-amber d-fill"/>
+<text x="46" y="165.5" class="d-t" text-anchor="start" >Miller's law</text>
+</g>
+<g data-node="choice">
+<rect x="204" y="142" width="176" height="38" rx="8" class="d-box"/>
+<circle cx="218" cy="161.0" r="4" class="d-amber d-fill"/>
+<text x="230" y="165.5" class="d-t" text-anchor="start" >Choice overload</text>
+</g>
+<g data-node="peak-end">
+<rect x="20" y="188" width="176" height="38" rx="8" class="d-box"/>
+<circle cx="34" cy="207.0" r="4" class="d-amber d-fill"/>
+<text x="46" y="211.5" class="d-t" text-anchor="start" >Peak-end rule</text>
+</g>
+<g data-node="aesthetic">
+<rect x="204" y="188" width="176" height="38" rx="8" class="d-box"/>
+<circle cx="218" cy="207.0" r="4" class="d-amber d-fill"/>
+<text x="230" y="211.5" class="d-t" text-anchor="start" >Aesthetic-usability</text>
+</g>
+<text x="20" y="252" class="d-s d-rose d-ct" text-anchor="start" >Good advice with a law's name</text>
+<g data-node="doherty">
+<rect x="20" y="260" width="176" height="38" rx="8" class="d-box"/>
+<circle cx="34" cy="279.0" r="4" class="d-rose d-fill"/>
+<text x="46" y="283.5" class="d-t" text-anchor="start" >Doherty threshold</text>
+</g>
+<g data-node="jakob">
+<rect x="204" y="260" width="176" height="38" rx="8" class="d-box"/>
+<circle cx="218" cy="279.0" r="4" class="d-rose d-fill"/>
+<text x="230" y="283.5" class="d-t" text-anchor="start" >Jakob's law</text>
+</g>
+<g data-node="tesler">
+<rect x="20" y="306" width="176" height="38" rx="8" class="d-box"/>
+<circle cx="34" cy="325.0" r="4" class="d-rose d-fill"/>
+<text x="46" y="329.5" class="d-t" text-anchor="start" >Tesler's law</text>
+</g>
+</svg>

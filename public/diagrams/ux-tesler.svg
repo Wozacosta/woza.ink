@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 216" role="img" aria-labelledby="t-ux-tesler"><title id="t-ux-tesler">Two bars of the same length. Signing raw calldata leaves most of the complexity with the person signing. Clear signing moves most of it to the people writing the descriptors. The total doesn't change</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-ux-tesler" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Complexity moves, it doesn't shrink</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Same total length. A sketch: nobody can measure this.</text>
+<text x="20" y="66" class="d-t" text-anchor="start" >Signing raw calldata</text>
+<rect x="20" y="74" width="299" height="26" rx="2" class="d-rose d-fill" opacity="0.8"/>
+<rect x="321" y="74" width="59" height="26" rx="2" class="d-blue d-fill" opacity="0.8"/>
+<text x="20" y="124" class="d-t" text-anchor="start" >Clear signing with ERC-7730</text>
+<rect x="20" y="132" width="59" height="26" rx="2" class="d-rose d-fill" opacity="0.8"/>
+<rect x="81" y="132" width="299" height="26" rx="2" class="d-blue d-fill" opacity="0.8"/>
+<circle cx="24" cy="188" r="4" class="d-rose d-fill"/>
+<text x="34" y="192" class="d-s" text-anchor="start" >Person signing</text>
+<circle cx="144" cy="188" r="4" class="d-blue d-fill"/>
+<text x="154" y="192" class="d-s" text-anchor="start" >People writing and auditing descriptors</text>
+</svg>

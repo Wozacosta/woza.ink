@@ -1,31 +1,35 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { interactiveDiagrams } from "@/data/diagrams";
 import type { InteractiveDiagramConfig } from "@/data/diagrams/types";
+import { diagramWidgets } from "./DiagramWidgets";
 
 const STEP_MS = 3200;
 
 /**
  * Progressive enhancement for diagrams rendered from markdown: finds
- * <figure data-diagram> elements that have a config in src/data/diagrams and
- * mounts controls into them. Without JS the static SVG is unchanged.
+ * <figure data-diagram> elements that have a config in src/data/diagrams or a
+ * widget in DiagramWidgets and mounts controls into them. Without JS the
+ * static SVG is unchanged.
  */
 export function InteractiveDiagrams() {
   const [mounts, setMounts] = useState<
-    { figure: HTMLElement; container: HTMLElement; config: InteractiveDiagramConfig }[]
+    { figure: HTMLElement; container: HTMLElement; node: ReactNode }[]
   >([]);
 
   useEffect(() => {
     const created: typeof mounts = [];
     document.querySelectorAll<HTMLElement>("figure.diagram[data-diagram]").forEach((figure) => {
-      const config = interactiveDiagrams[figure.dataset.diagram ?? ""];
-      if (!config || figure.dataset.interactive) return;
+      const name = figure.dataset.diagram ?? "";
+      const config = interactiveDiagrams[name];
+      const Widget = diagramWidgets[name];
+      if ((!config && !Widget) || figure.dataset.interactive) return;
       const container = document.createElement("div");
       figure.insertBefore(container, figure.querySelector("figcaption"));
       figure.dataset.interactive = "true";
-      created.push({ figure, container, config });
+      created.push({ figure, container, node: config ? <Diagram figure={figure} config={config} /> : <Widget /> });
     });
     // Portals need the containers created above, which only exist after mount
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -40,9 +44,7 @@ export function InteractiveDiagrams() {
 
   return (
     <>
-      {mounts.map(({ figure, container, config }, i) =>
-        createPortal(<Diagram figure={figure} config={config} />, container, String(i)),
-      )}
+      {mounts.map(({ container, node }, i) => createPortal(node, container, String(i)))}
     </>
   );
 }

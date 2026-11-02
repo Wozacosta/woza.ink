@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 206" role="img" aria-labelledby="t-ux-chunks"><title id="t-ux-chunks">The same ten digits held three ways: ten separate items, five pairs, or one number you know by heart</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-ux-chunks" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Same digits, fewer things to hold</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Memory counts meaningful units, not information</text>
+<text x="20" y="66" class="d-s" text-anchor="start" >Ten items</text>
+<rect x="20" y="74" width="32" height="32" rx="4" class="d-box"/>
+<text x="36" y="95" class="d-t d-m" text-anchor="middle" style="font-size:13px">0</text>
+<rect x="56" y="74" width="32" height="32" rx="4" class="d-box"/>
+<text x="72" y="95" class="d-t d-m" text-anchor="middle" style="font-size:13px">6</text>
+<rect x="92" y="74" width="32" height="32" rx="4" class="d-box"/>
+<text x="108" y="95" class="d-t d-m" text-anchor="middle" style="font-size:13px">1</text>
+<rect x="128" y="74" width="32" height="32" rx="4" class="d-box"/>
+<text x="144" y="95" class="d-t d-m" text-anchor="middle" style="font-size:13px">2</text>
+<rect x="164" y="74" width="32" height="32" rx="4" class="d-box"/>
+<text x="180" y="95" class="d-t d-m" text-anchor="middle" style="font-size:13px">3</text>
+<rect x="200" y="74" width="32" height="32" rx="4" class="d-box"/>
+<text x="216" y="95" class="d-t d-m" text-anchor="middle" style="font-size:13px">4</text>
+<rect x="236" y="74" width="32" height="32" rx="4" class="d-box"/>
+<text x="252" y="95" class="d-t d-m" text-anchor="middle" style="font-size:13px">5</text>
+<rect x="272" y="74" width="32" height="32" rx="4" class="d-box"/>
+<text x="288" y="95" class="d-t d-m" text-anchor="middle" style="font-size:13px">6</text>
+<rect x="308" y="74" width="32" height="32" rx="4" class="d-box"/>
+<text x="324" y="95" class="d-t d-m" text-anchor="middle" style="font-size:13px">7</text>
+<rect x="344" y="74" width="32" height="32" rx="4" class="d-box"/>
+<text x="360" y="95" class="d-t d-m" text-anchor="middle" style="font-size:13px">8</text>
+<text x="20" y="130" class="d-s" text-anchor="start" >Five chunks</text>
+<rect x="20" y="138" width="68" height="32" rx="4" class="d-amber d-fill" opacity="0.2"/>
+<rect x="20" y="138" width="68" height="32" rx="4" class="d-line d-amber d-stroke"/>
+<text x="54" y="159" class="d-t d-m" text-anchor="middle" style="font-size:13px">06</text>
+<rect x="92" y="138" width="68" height="32" rx="4" class="d-amber d-fill" opacity="0.2"/>
+<rect x="92" y="138" width="68" height="32" rx="4" class="d-line d-amber d-stroke"/>
+<text x="126" y="159" class="d-t d-m" text-anchor="middle" style="font-size:13px">12</text>
+<rect x="164" y="138" width="68" height="32" rx="4" class="d-amber d-fill" opacity="0.2"/>
+<rect x="164" y="138" width="68" height="32" rx="4" class="d-line d-amber d-stroke"/>
+<text x="198" y="159" class="d-t d-m" text-anchor="middle" style="font-size:13px">34</text>
+<rect x="236" y="138" width="68" height="32" rx="4" class="d-amber d-fill" opacity="0.2"/>
+<rect x="236" y="138" width="68" height="32" rx="4" class="d-line d-amber d-stroke"/>
+<text x="270" y="159" class="d-t d-m" text-anchor="middle" style="font-size:13px">56</text>
+<rect x="308" y="138" width="68" height="32" rx="4" class="d-amber d-fill" opacity="0.2"/>
+<rect x="308" y="138" width="68" height="32" rx="4" class="d-line d-amber d-stroke"/>
+<text x="342" y="159" class="d-t d-m" text-anchor="middle" style="font-size:13px">78</text>
+<text x="20" y="194" class="d-s" text-anchor="start" >One chunk, if you know the number by heart</text>
+<text x="380" y="194" class="d-t d-m d-green d-ct" text-anchor="end" style="font-size:13px">0612345678</text>
+</svg>

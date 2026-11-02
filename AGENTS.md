@@ -90,7 +90,10 @@ fails if a marker isn't found, which usually means the post was reworded.
 `diagram_lib.py`). Reference one from a post with `![caption](diagram:name)`: it's inlined so it
 follows the theme, and feeds get a plain `<img>`. To make it interactive, give boxes `node=` and
 arrows `edge=` ids in the script, then add a config in `src/data/diagrams/` (descriptions and a
-guided tour) and register it in `index.ts`. A test checks the config against the SVG.
+guided tour) and register it in `index.ts`. A test checks the config against the SVG. For something
+hands-on (sliders, live numbers), add a component to `diagramWidgets` in
+`src/components/DiagramWidgets.tsx`; it mounts under the static SVG, which stays as the fallback
+for feeds and no-JS readers.
 
 **Add a project**: append to `src/data/projects.ts` (tagline in `description`, 2–3
 sentences in `summary`), then run `pnpm screenshots <slug>`. A test fails if a live project

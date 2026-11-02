@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 232" role="img" aria-labelledby="t-ux-jakob"><title id="t-ux-jakob">Two page wireframes. On the left the logo is top left and the cart top right, where people learned to expect them. On the right they've moved, so visitors have to learn the page first</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-ux-jakob" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Conventions are learned somewhere else</text>
+<text x="20" y="52" class="d-s d-green d-ct" text-anchor="start" >Where you expect them</text>
+<rect x="20" y="60" width="170" height="126" rx="4" class="d-box"/>
+<rect x="36" y="112" width="130" height="6" rx="1" class="d-line d-faint"/>
+<rect x="36" y="126" width="110" height="6" rx="1" class="d-line d-faint"/>
+<rect x="36" y="140" width="120" height="6" rx="1" class="d-line d-faint"/>
+<text x="34" y="84" class="d-t d-green d-ct" text-anchor="start" >logo</text>
+<text x="176" y="84" class="d-t d-green d-ct" text-anchor="end" >cart</text>
+<line x1="20" y1="96" x2="190" y2="96" class="d-line d-faint"/>
+<text x="210" y="52" class="d-s d-rose d-ct" text-anchor="start" >Somewhere you'd have to learn</text>
+<rect x="210" y="60" width="170" height="126" rx="4" class="d-box"/>
+<rect x="226" y="112" width="130" height="6" rx="1" class="d-line d-faint"/>
+<rect x="226" y="126" width="110" height="6" rx="1" class="d-line d-faint"/>
+<rect x="226" y="140" width="120" height="6" rx="1" class="d-line d-faint"/>
+<text x="366" y="176" class="d-t d-rose d-ct" text-anchor="end" >logo</text>
+<text x="224" y="84" class="d-t d-rose d-ct" text-anchor="start" >cart</text>
+<line x1="210" y1="96" x2="380" y2="96" class="d-line d-faint"/>
+<text x="20" y="212" class="d-s" text-anchor="start" >Every break is something a user has to relearn</text>
+</svg>

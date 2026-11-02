@@ -206,7 +206,7 @@ The open question is still the one from March, and it's a demand question rather
 
 ## Further reading
 
-- [x402 V2 launch announcement](https://x402.org/x402-v2-launch/) — the primary source for what V2 changed; note that several secondary trackers date V2 to December 2025, which is wrong
+- [x402 V2 launch announcement](https://x402.org/x402-v2-launch/) — the primary source for what V2 changed; several secondary trackers date V2 to December 2025, which is when the spec's v2.0 was written, not when it launched
 - [x402 Foundation at the Linux Foundation](https://www.linuxfoundation.org/press/linux-foundation-is-launching-the-x402-foundation-and-welcoming-the-contribution-of-the-x402-protocol) — the governance handoff, and the member list
 - [Chainalysis: Inside x402](https://www.chainalysis.com/blog/x402-agentic-payments-adoption/) — the only adoption analysis here that's honest about what it doesn't know
 - [L402 protocol spec](https://github.com/lightninglabs/L402) — macaroons plus Lightning; the Bitcoin answer to the same question

@@ -81,7 +81,7 @@ s.render()
 s = Svg("ux-hick", 400, 236, "A logarithmic curve of reaction time against number of options. Four options cost 2.3 units, eight cost 3.2 and sixteen cost 4.1. Reading an unfamiliar list grows in a straight line instead")
 s.text(20, 22, "Each doubling adds about the same", "d-t")
 s.text(20, 38, "Time = log2(n + 1), in units of b", "d-s")
-x0, y0, px, py = 40, 190, 10, 26
+x0, y0, px, py = 60, 190, 9.5, 26
 X = lambda n: x0 + n * px
 Y = lambda v: y0 - v * py
 s.add(f'<line x1="{x0}" y1="{y0}" x2="{X(33)}" y2="{y0}" class="d-line d-faint"/>')

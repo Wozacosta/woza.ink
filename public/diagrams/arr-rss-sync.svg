@@ -44,6 +44,6 @@
 <text x="266" y="190" class="d-s" text-anchor="middle" >RSS sync every 15 min</text>
 <path d="M266,156 L261,114" class="d-line" marker-end="url(#ah-arr-rss-sync)"/>
 <text x="20" y="222" class="d-s d-green d-ct" text-anchor="start" >✓ New release matches the want list: grabbed within minutes.</text>
-<text x="20" y="240" class="d-s" text-anchor="start" >✗ The backlog never reappears in the feed. Tick “Search for</text>
-<text x="20" y="255" class="d-s" text-anchor="start" >   missing” when adding the show, or it stays missing.</text>
+<text x="20" y="240" class="d-s" text-anchor="start" >✗ The backlog never reappears in the feed. Tick “Start search</text>
+<text x="20" y="255" class="d-s" text-anchor="start" >   for missing” when adding the show, or it stays missing.</text>
 </svg>

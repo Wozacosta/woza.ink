@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 292" role="img" aria-labelledby="t-arr-keys"><title id="t-arr-keys">Anyone who can reach Huntarr's unauthenticated endpoint gets its settings, which hold the API keys of every connected app, such as Sonarr, Radarr and Prowlarr. Each key is full admin access</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-arr-keys" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One add-on, every key</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >What the Huntarr review found</text>
+<g data-node="anyone">
+<rect x="20" y="54" width="360" height="46" rx="8" class="d-ext"/>
+<text x="34" y="76" class="d-t" text-anchor="start" >Anyone who can reach it</text>
+<text x="34" y="92" class="d-s" text-anchor="start" >No login needed</text>
+</g>
+<g data-node="huntarr">
+<rect x="20" y="136" width="360" height="46" rx="8" class="d-box"/>
+<circle cx="34" cy="154" r="4" class="d-rose d-fill"/>
+<text x="46" y="158" class="d-t" text-anchor="start" >Huntarr</text>
+<text x="46" y="174" class="d-s" text-anchor="start" >Settings hold every connected app's API key</text>
+</g>
+<path d="M200,100 L200,134" class="d-line" data-edge="anyone-huntarr" marker-end="url(#ah-arr-keys)"/>
+<text x="208" y="121" class="d-s" text-anchor="start" data-edge="anyone-huntarr">cleartext settings</text>
+<g data-node="sonarr">
+<rect x="20" y="222" width="112" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="240" r="4" class="d-amber d-fill"/>
+<text x="46" y="244" class="d-t" text-anchor="start" >Sonarr</text>
+<text x="46" y="260" class="d-s" text-anchor="start" >Full admin key</text>
+</g>
+<path d="M76,182 L76,220" class="d-line" data-edge="huntarr-sonarr" marker-end="url(#ah-arr-keys)"/>
+<g data-node="radarr">
+<rect x="144" y="222" width="112" height="52" rx="8" class="d-box"/>
+<circle cx="158" cy="240" r="4" class="d-amber d-fill"/>
+<text x="170" y="244" class="d-t" text-anchor="start" >Radarr</text>
+<text x="170" y="260" class="d-s" text-anchor="start" >Full admin key</text>
+</g>
+<path d="M200,182 L200,220" class="d-line" data-edge="huntarr-radarr" marker-end="url(#ah-arr-keys)"/>
+<g data-node="prowlarr">
+<rect x="268" y="222" width="112" height="52" rx="8" class="d-box"/>
+<circle cx="282" cy="240" r="4" class="d-amber d-fill"/>
+<text x="294" y="244" class="d-t" text-anchor="start" >Prowlarr</text>
+<text x="294" y="260" class="d-s" text-anchor="start" >Full admin key</text>
+</g>
+<path d="M324,182 L324,220" class="d-line" data-edge="huntarr-prowlarr" marker-end="url(#ah-arr-keys)"/>
+</svg>

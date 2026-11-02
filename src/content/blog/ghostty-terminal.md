@@ -20,7 +20,7 @@ Ghostty is what happens when someone with a track record of building developer i
 
 Ghostty is a terminal emulator for macOS and Linux. GPU-accelerated. Written in Zig. Uses platform-native UI — Swift and AppKit on macOS, GTK4 on Linux. Not Electron. Not a thin wrapper around a web view. Actual native widgets for tabs, splits, dialogs, everything.
 
-It launched publicly in December 2024 after two years of closed development and a private beta of around 5,000 users. It went open source under the MIT license on day one of the public release. Within 15 months it hit 45,000 GitHub stars — more than Kitty, WezTerm, and Alacritty.
+It launched publicly in December 2024 after two years of closed development and a private beta of around 5,000 users. It went open source under the MIT license on day one of the public release. Within 15 months it hit 45,000 GitHub stars — more than Kitty and WezTerm.
 
 The pitch is simple: fastest-in-class rendering, deep feature set, and a UI that feels like it belongs on your OS. No compromises between those three.
 
@@ -29,6 +29,8 @@ The pitch is simple: fastest-in-class rendering, deep feature set, and a UI that
 ## Why Zig
 
 Hashimoto chose Zig for the core — over 90% of the codebase is shared Zig across platforms. The platform-specific GUI layers are thin: Swift on macOS, Zig calling GTK4's C API on Linux.
+
+![Over 90% of the code is shared, with a thin GUI on each platform.](diagram:ghostty-shared-core)
 
 Zig gives you C-level performance with better ergonomics for the kind of low-level work a terminal demands: custom memory allocators, direct GPU API access, zero-cost abstractions. No garbage collector pauses. No runtime. Hashimoto has called Zig "an absolute joy to work with" for this kind of project.
 
@@ -60,7 +62,7 @@ The terminal space has real options now. Here's where each one sits:
 
 **Alacritty** — The minimalist. Rust, GPU-accelerated, extremely fast, deliberately stripped down. No ligatures, no image protocol, no tabs or splits (use tmux). If you want a fast rectangle that renders text and nothing else, Alacritty is honest about what it is.
 
-**Kitty** — The platform. Python-based configuration, its own graphics protocol (now a de facto standard), "kittens" for extending functionality, opinionated about how terminals should work. Feature-rich and fast, but the configuration has a learning curve and it doesn't use native UI.
+**Kitty** — The platform. Extensible in Python, its own graphics protocol (now a de facto standard), "kittens" for extending functionality, opinionated about how terminals should work. Feature-rich and fast, but the configuration has a learning curve and it doesn't use native UI.
 
 **WezTerm** — The programmer's terminal. Lua-based configuration that's basically a scripting language. First-class remote multiplexing, WebGPU rendering, deep customizability. If you want to script your terminal behavior programmatically, WezTerm is unmatched. The tradeoff is complexity.
 
@@ -87,7 +89,7 @@ cursor-style = block
 
 That's a complete, functional config. Most people need fewer lines than that. Ghostty's defaults are good enough to start without a config file.
 
-This is a deliberate choice. WezTerm gives you a full Lua runtime. Kitty has its own config syntax with conditionals and includes. Ghostty says: you don't need a programming language to configure a terminal. If the option exists, it's a key-value pair. If it doesn't exist as an option, file an issue.
+This is a deliberate choice. WezTerm gives you a full Lua runtime. Kitty has its own config syntax with includes, and can generate config from a script. Ghostty says: you don't need a programming language to configure a terminal. If the option exists, it's a key-value pair. If it doesn't exist as an option, file an issue.
 
 The community has debated adding a scripting language. The project has consistently declined. The philosophy is that configuration complexity is a cost, not a feature.
 
@@ -120,6 +122,8 @@ When 1.0 launched in December 2024, it went fully open source under MIT. No dela
 Then in December 2025, Hashimoto went further: Ghostty became a non-profit project, fiscally sponsored by Hack Club under their 501(c)(3) status. His stated reason: "I believe infrastructure of this kind should be stewarded by a mission-driven, non-commercial entity that prioritizes public benefit over private profit."
 
 No VC funding. No acquisition path. No funds going to Hashimoto personally — that's legally guaranteed by the non-profit structure. His family donated $150,000 to Hack Club separately. All financial transactions are transparent on Hack Club Bank's public ledger.
+
+![From a closed beta to a non-profit, to scale.](diagram:ghostty-timeline)
 
 This is a rare move. Most developer tools either stay side projects until they die, get acquired, or take VC and pivot to enterprise. Ghostty chose a fourth path.
 

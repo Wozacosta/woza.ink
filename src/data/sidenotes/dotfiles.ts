@@ -16,7 +16,7 @@ export const sidenotes: ArticleSidenotes = {
         "it takes a directory tree and creates symlinks into a target directory",
       type: "context",
       content:
-        "GNU Stow was originally written in 1993 by Bob Glickstein for managing software installed from source in `/usr/local/stow/`. Its use for dotfiles management is a creative repurposing of a tool designed for a completely different problem. The entire implementation is a single Perl script with no dependencies beyond core Perl -- which is why it's available in every package manager and never breaks.",
+        "GNU Stow was originally written in 1993 by Bob Glickstein for managing software installed from source in `/usr/local/stow/`. Its use for dotfiles management is a creative repurposing of a tool designed for a completely different problem. The implementation is a small Perl script plus a backend Perl module -- which is why it's available in every package manager.",
       url: "https://www.gnu.org/software/stow/",
     },
     {

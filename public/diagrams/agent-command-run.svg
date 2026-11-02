@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 358" role="img" aria-labelledby="t-agent-command-run"><title id="t-agent-command-run">You type a slash command with an argument. The agent reads the command's markdown file, fills in the argument, runs the steps in order and returns the result: a component, an index file and a test</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-agent-command-run" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What /new-component Button does</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >The markdown file is the program</text>
+<g data-node="type">
+<rect x="20" y="54" width="360" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="72" r="4" class="d-blue d-fill"/>
+<text x="46" y="76" class="d-t" text-anchor="start" >You type it</text>
+<text x="46" y="92" class="d-s" text-anchor="start" >/new-component Button</text>
+</g>
+<path d="M200,102 L200,118" class="d-line" data-edge="type-read" marker-end="url(#ah-agent-command-run)"/>
+<g data-node="read">
+<rect x="20" y="120" width="360" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="138" r="4" class="d-violet d-fill"/>
+<text x="46" y="142" class="d-t" text-anchor="start" >The agent reads the file</text>
+<text x="46" y="158" class="d-s" text-anchor="start" >.claude/commands/new-component.md</text>
+</g>
+<path d="M200,168 L200,184" class="d-line" data-edge="read-args" marker-end="url(#ah-agent-command-run)"/>
+<g data-node="args">
+<rect x="20" y="186" width="360" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="204" r="4" class="d-amber d-fill"/>
+<text x="46" y="208" class="d-t" text-anchor="start" >$ARGUMENTS is filled in</text>
+<text x="46" y="224" class="d-s" text-anchor="start" >Every $ARGUMENTS becomes Button</text>
+</g>
+<path d="M200,234 L200,250" class="d-line" data-edge="args-run" marker-end="url(#ah-agent-command-run)"/>
+<g data-node="run">
+<rect x="20" y="252" width="360" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="270" r="4" class="d-green d-fill"/>
+<text x="46" y="274" class="d-t" text-anchor="start" >Steps run in order</text>
+<text x="46" y="290" class="d-s" text-anchor="start" >Create, re-export, test, follow patterns</text>
+</g>
+<path d="M200,300 L200,316" class="d-line" data-edge="run-result" marker-end="url(#ah-agent-command-run)"/>
+<g data-node="result">
+<rect x="20" y="318" width="360" height="30" rx="6" class="d-box"/>
+<text x="200" y="338" class="d-s d-m" text-anchor="middle" >Button.tsx, index.ts, Button.test.tsx</text>
+</g>
+</svg>

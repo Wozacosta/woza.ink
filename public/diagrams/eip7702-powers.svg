@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 352" role="img" aria-labelledby="t-eip7702-powers"><title id="t-eip7702-powers">Before 7702, your EOA has only a private key and just signs transactions. With 7702 the same address delegates to a smart wallet's code and gains batch transactions, gas sponsorship, passkeys, recovery, session keys and limits. The delegation stays until a later authorization changes or clears it</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-eip7702-powers" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Before 7702</text>
+<rect x="20" y="34" width="150" height="54" rx="8" class="d-box"/>
+<text x="34" y="56" class="d-t" text-anchor="start" >Your EOA</text>
+<text x="34" y="72" class="d-s" text-anchor="start" >private key only</text>
+<text x="188" y="65" class="d-s" text-anchor="start" >Just signs txs, nothing more</text>
+<line x1="20" y1="106" x2="380" y2="106" class="d-line d-faint"/>
+<text x="20" y="132" class="d-t" text-anchor="start" >With 7702</text>
+<rect x="20" y="144" width="150" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="162" r="4" class="d-violet d-fill"/>
+<text x="46" y="166" class="d-t" text-anchor="start" >Your EOA</text>
+<text x="46" y="182" class="d-s" text-anchor="start" >same address</text>
+<rect x="230" y="144" width="150" height="54" rx="8" class="d-box"/>
+<circle cx="244" cy="162" r="4" class="d-green d-fill"/>
+<text x="256" y="166" class="d-t" text-anchor="start" >Smart wallet</text>
+<text x="256" y="182" class="d-s" text-anchor="start" >delegated code</text>
+<path d="M170,171 L228,171" class="d-line" marker-end="url(#ah-eip7702-powers)"/>
+<text x="199" y="163" class="d-s" text-anchor="middle" >delegates</text>
+<path d="M305,198 L305,226" class="d-line" marker-end="url(#ah-eip7702-powers)"/>
+<text x="295" y="217" class="d-s" text-anchor="end" >gives the EOA</text>
+<rect x="20" y="228" width="112" height="30" rx="5" class="d-green d-fill" opacity="0.16"/>
+<rect x="20" y="228" width="112" height="30" rx="5" class="d-line d-green d-stroke"/>
+<text x="76.0" y="247.0" class="d-s" text-anchor="middle" >batch txs</text>
+<rect x="144" y="228" width="112" height="30" rx="5" class="d-green d-fill" opacity="0.16"/>
+<rect x="144" y="228" width="112" height="30" rx="5" class="d-line d-green d-stroke"/>
+<text x="200.0" y="247.0" class="d-s" text-anchor="middle" >gas sponsor</text>
+<rect x="268" y="228" width="112" height="30" rx="5" class="d-green d-fill" opacity="0.16"/>
+<rect x="268" y="228" width="112" height="30" rx="5" class="d-line d-green d-stroke"/>
+<text x="324.0" y="247.0" class="d-s" text-anchor="middle" >passkeys</text>
+<rect x="20" y="264" width="112" height="30" rx="5" class="d-green d-fill" opacity="0.16"/>
+<rect x="20" y="264" width="112" height="30" rx="5" class="d-line d-green d-stroke"/>
+<text x="76.0" y="283.0" class="d-s" text-anchor="middle" >recovery</text>
+<rect x="144" y="264" width="112" height="30" rx="5" class="d-green d-fill" opacity="0.16"/>
+<rect x="144" y="264" width="112" height="30" rx="5" class="d-line d-green d-stroke"/>
+<text x="200.0" y="283.0" class="d-s" text-anchor="middle" >session keys</text>
+<rect x="268" y="264" width="112" height="30" rx="5" class="d-green d-fill" opacity="0.16"/>
+<rect x="268" y="264" width="112" height="30" rx="5" class="d-line d-green d-stroke"/>
+<text x="324.0" y="283.0" class="d-s" text-anchor="middle" >limits</text>
+<text x="20" y="322" class="d-s" text-anchor="start" >The delegation stays in place until a later authorization</text>
+<text x="20" y="338" class="d-s" text-anchor="start" >changes it or clears it.</text>
+</svg>

@@ -63,6 +63,8 @@ Here's what `PAYMENT-REQUIRED` decodes to, trimmed from the spec's example:
 
 `accepts` is a menu: a server can list several chains and tokens, and the client picks one it can pay with. `network` is a CAIP-2 chain ID, here the Base Sepolia testnet. `amount` is in the token's smallest unit, so `10000` is 0.01 USDC.
 
+![One entry, decoded. The amount is in USDC's smallest unit.](diagram:x402-payment-anatomy)
+
 The client signs a payment matching one entry and resends the same request with it in `PAYMENT-SIGNATURE`. The server answers with the data and a `PAYMENT-RESPONSE` holding the transaction hash.
 
 Developers rarely touch any of this. A middleware does it: you declare a price per route, like `"$0.001"` on `GET /weather`, and it handles the rest.
@@ -91,11 +93,14 @@ Tokens without EIP-3009 go through Permit2 instead. That needs a one-time approv
 
 ---
 
-## Three ways to charge
+## Four ways to charge
 
 - **`exact`** transfers a specific amount. This is the weather API case.
 - **`upto`** authorizes a maximum, and the seller settles what was actually used, up to that cap. It suits anything priced by what the response turned out to cost.
 - **`batch-settlement`** uses escrow and offchain vouchers, redeemed onchain in batches, for high-frequency use.
+- **`auth-capture`** authorizes a maximum and gives the payment a lifecycle: funds can be held, captured for less, voided or refunded.
+
+![Four answers to how much the seller takes. A sketch, not data.](diagram:x402-schemes)
 
 ---
 
@@ -104,6 +109,8 @@ Tokens without EIP-3009 go through Permit2 instead. That needs a one-time approv
 **The server works before it's paid.** In the default flow the order is verify, resource, settle, respond. A payment can pass verification and still fail settlement, and the spec doesn't give the server anything back when that happens. For a cheap response that's noise. For an expensive job it's real exposure.
 
 **Clients can't safely retry.** Once `PAYMENT-SIGNATURE` is sent, the outcome is unknown until the server answers. The docs tell clients not to create a second payment automatically, and a `settlement_pending` error is "non-terminal, not permission to pay again." A timeout is harder to handle here than on a normal API call.
+
+![Only one of the three answers ends the matter.](diagram:x402-retry)
 
 **Confirmation is latency.** With `exact`, every call waits for a chain confirmation. That's quick on a fast L2, but it's still slower than checking an API key.
 

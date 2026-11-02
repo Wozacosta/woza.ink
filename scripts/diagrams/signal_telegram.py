@@ -81,3 +81,36 @@ s.arrow([(200, 202), (200, 240)], "reads the message", 210, 225, edge="tgserver-
 s.box(20, 242, 360, 54, "Stored on Telegram's servers", "History, search, bots and sync run on the plaintext", accent="rose", node="tgfeatures")
 s.text(20, 322, "The same design that enables the features exposes the message.", "d-s")
 s.render()
+
+# ── 4. What you can inspect ─────────────────────────────────────
+s = Svg("messenger-openness", 400, 300, "Signal and Telegram compared. Clients: open source for Signal, published with a lag for Telegram. Server code: open for Signal, closed for Telegram. Crypto: publicly documented Signal Protocol, custom MTProto for Telegram. Run by: a non-profit foundation, a private company")
+s.text(20, 22, "What you can check, and who runs it", "d-t")
+s.text(108, 50, "Signal", "d-t")
+s.text(248, 50, "Telegram", "d-t")
+rows = [
+    ("Clients", ("Open source", "green"), ("Open, with lag", "amber")),
+    ("Server", ("Open source", "green"), ("Closed", "rose")),
+    ("Crypto", ("Public specs", "green"), ("Custom MTProto", "amber")),
+    ("Run by", ("Non-profit", "green"), ("Private company", "amber")),
+]
+for i, (label, a, b) in enumerate(rows):
+    y = 62 + i * 58
+    s.text(20, y + 29, label, "d-s")
+    s.box(96, y, 134, 50, a[0], accent=a[1])
+    s.box(238, y, 142, 50, b[0], accent=b[1])
+s.render()
+
+# ── 5. Who are you protecting this from (interactive: src/data/diagrams/messenger-threats.ts) ──
+s = Svg("messenger-threats", 400, 268, "Three threat models. Against a nation-state or a coerced provider, use Signal. Against casual snoopers, when you want multi-device sync and big groups, Telegram may be okay as long as you know its servers can read your chats. For one sensitive chat on Telegram, use a Secret Chat")
+s.text(20, 22, "Who are you protecting this from?", "d-t")
+rows = [
+    ("state", "Nation-state", "Or a coerced provider", "signal", "Signal", "Private by default", "green"),
+    ("snoop", "Casual snoopers", "You want sync and big groups", "telegram", "Telegram", "Servers can read it", "amber"),
+    ("chat", "One sensitive chat", "On Telegram already", "secret", "Secret Chat", "One device pair", "amber"),
+]
+for i, (a, at, asub, b, bt, bsub, acc) in enumerate(rows):
+    y = 40 + i * 74
+    s.box(20, y, 194, 62, at, asub, node=a)
+    s.box(244, y, 136, 62, bt, bsub, accent=acc, node=b)
+    s.arrow([(214, y + 31), (242, y + 31)], edge=f"{a}-{b}")
+s.render()

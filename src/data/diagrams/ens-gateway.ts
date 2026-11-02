@@ -29,7 +29,7 @@ export const ensGateway: InteractiveDiagramConfig = {
       id: "gateway",
       title: "eth.limo gateway",
       description:
-        "Free, open source and DAO-governed. It serves ENS content over TLS 1.3 to any normal browser, with no tracking or logging, and supports CCIP for L2 names. It also powers eth.link now.",
+        "Free, open source and funded by grants and the ENS DAO. It serves ENS content over TLS 1.3 to any normal browser, with no tracking and anonymized logs, and supports CCIP for L2 names. It also powers eth.link now.",
       links: ["reader", "ens", "storage"],
     },
     {

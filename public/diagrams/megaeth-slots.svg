@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" role="img" aria-labelledby="t-megaeth-slots"><title id="t-megaeth-slots">One Ethereum block of about 12 seconds drawn as a grid of 1,200 cells. Each cell is one MegaETH mini-block of about 10 milliseconds. A 250 millisecond Arbitrum block fills 25 cells and a 2 second Optimism block fills 200</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-megaeth-slots" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One Ethereum block, to scale</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Each cell is one mini-block, about 10 ms: 1,200 fit in 12 s</text>
+<rect x="20" y="50" width="360" height="120" class="d-box"/>
+<rect x="20" y="50" width="360" height="20.0" class="d-amber d-fill" opacity="0.5"/>
+<rect x="20" y="50" width="150" height="6" class="d-violet d-fill" opacity="0.85"/>
+<rect x="20" y="50" width="6" height="6" class="d-green d-fill"/>
+<line x1="26" y1="50" x2="26" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="32" y1="50" x2="32" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="38" y1="50" x2="38" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="44" y1="50" x2="44" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="50" y1="50" x2="50" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="56" y1="50" x2="56" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="62" y1="50" x2="62" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="68" y1="50" x2="68" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="74" y1="50" x2="74" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="80" y1="50" x2="80" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="86" y1="50" x2="86" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="92" y1="50" x2="92" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="98" y1="50" x2="98" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="104" y1="50" x2="104" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="110" y1="50" x2="110" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="116" y1="50" x2="116" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="122" y1="50" x2="122" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="128" y1="50" x2="128" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="134" y1="50" x2="134" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="140" y1="50" x2="140" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="146" y1="50" x2="146" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="152" y1="50" x2="152" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="158" y1="50" x2="158" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="164" y1="50" x2="164" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="170" y1="50" x2="170" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="176" y1="50" x2="176" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="182" y1="50" x2="182" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="188" y1="50" x2="188" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="194" y1="50" x2="194" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="200" y1="50" x2="200" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="206" y1="50" x2="206" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="212" y1="50" x2="212" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="218" y1="50" x2="218" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="224" y1="50" x2="224" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="230" y1="50" x2="230" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="236" y1="50" x2="236" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="242" y1="50" x2="242" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="248" y1="50" x2="248" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="254" y1="50" x2="254" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="260" y1="50" x2="260" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="266" y1="50" x2="266" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="272" y1="50" x2="272" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="278" y1="50" x2="278" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="284" y1="50" x2="284" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="290" y1="50" x2="290" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="296" y1="50" x2="296" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="302" y1="50" x2="302" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="308" y1="50" x2="308" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="314" y1="50" x2="314" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="320" y1="50" x2="320" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="326" y1="50" x2="326" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="332" y1="50" x2="332" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="338" y1="50" x2="338" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="344" y1="50" x2="344" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="350" y1="50" x2="350" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="356" y1="50" x2="356" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="362" y1="50" x2="362" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="368" y1="50" x2="368" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="374" y1="50" x2="374" y2="170" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="56" x2="380" y2="56" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="62" x2="380" y2="62" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="68" x2="380" y2="68" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="74" x2="380" y2="74" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="80" x2="380" y2="80" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="86" x2="380" y2="86" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="92" x2="380" y2="92" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="98" x2="380" y2="98" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="104" x2="380" y2="104" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="110" x2="380" y2="110" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="116" x2="380" y2="116" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="122" x2="380" y2="122" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="128" x2="380" y2="128" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="134" x2="380" y2="134" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="140" x2="380" y2="140" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="146" x2="380" y2="146" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="152" x2="380" y2="152" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="158" x2="380" y2="158" class="d-line d-faint" style="stroke-width:.4"/>
+<line x1="20" y1="164" x2="380" y2="164" class="d-line d-faint" style="stroke-width:.4"/>
+<rect x="20" y="184" width="10" height="10" class="d-green d-fill"/>
+<text x="35" y="193" class="d-s" text-anchor="start" >Mini-block</text>
+<text x="35" y="209" class="d-s d-green d-ct" text-anchor="start" >1 cell</text>
+<rect x="144" y="184" width="10" height="10" class="d-violet d-fill"/>
+<text x="159" y="193" class="d-s" text-anchor="start" >Arbitrum, 250 ms</text>
+<text x="159" y="209" class="d-s d-violet d-ct" text-anchor="start" >25 cells</text>
+<rect x="268" y="184" width="10" height="10" class="d-amber d-fill"/>
+<text x="283" y="193" class="d-s" text-anchor="start" >Optimism, 2 s</text>
+<text x="283" y="209" class="d-s d-amber d-ct" text-anchor="start" >200 cells</text>
+</svg>

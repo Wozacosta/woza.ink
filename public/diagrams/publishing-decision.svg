@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 356" role="img" aria-labelledby="t-publishing-decision"><title id="t-publishing-decision">Three questions. Who is your audience: crypto-native readers point to Paragraph, general readers to Substack or Medium. What does ownership mean: exporting a file means Substack is fine, and nobody being able to delete it means Arweave-backed publishing. If you want a portable identity, that means Lens or Farcaster</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-publishing-decision" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="q1">
+<rect x="20" y="16" width="360" height="38" rx="8" class="d-box"/>
+<circle cx="34" cy="35.0" r="4" class="d-blue d-fill"/>
+<text x="46" y="39.5" class="d-t" text-anchor="start" >Who's your audience?</text>
+</g>
+<path d="M60,54 L60,78" class="d-line" data-edge="q1-paragraph" marker-end="url(#ah-publishing-decision)"/>
+<text x="68" y="70" class="d-s" text-anchor="start" data-edge="q1-paragraph">crypto-native</text>
+<path d="M245,54 L245,78" class="d-line" data-edge="q1-substack" marker-end="url(#ah-publishing-decision)"/>
+<text x="253" y="70" class="d-s" text-anchor="start" data-edge="q1-substack">general</text>
+<g data-node="paragraph">
+<rect x="20" y="80" width="175" height="38" rx="8" class="d-box"/>
+<text x="107.5" y="103.5" class="d-t" text-anchor="middle" >Paragraph</text>
+</g>
+<g data-node="substack">
+<rect x="205" y="80" width="175" height="38" rx="8" class="d-box"/>
+<text x="292.5" y="103.5" class="d-t" text-anchor="middle" >Substack or Medium</text>
+</g>
+<g data-node="q2">
+<rect x="20" y="130" width="360" height="38" rx="8" class="d-box"/>
+<circle cx="34" cy="149.0" r="4" class="d-blue d-fill"/>
+<text x="46" y="153.5" class="d-t" text-anchor="start" >What does ownership mean?</text>
+</g>
+<path d="M60,168 L60,192" class="d-line" data-edge="q2-export" marker-end="url(#ah-publishing-decision)"/>
+<text x="68" y="184" class="d-s" text-anchor="start" data-edge="q2-export">exporting a file</text>
+<path d="M245,168 L245,192" class="d-line" data-edge="q2-arweave" marker-end="url(#ah-publishing-decision)"/>
+<text x="253" y="184" class="d-s" text-anchor="start" data-edge="q2-arweave">nobody can delete it</text>
+<g data-node="export">
+<rect x="20" y="194" width="175" height="38" rx="8" class="d-box"/>
+<text x="107.5" y="217.5" class="d-t" text-anchor="middle" >Substack is fine</text>
+</g>
+<g data-node="arweave">
+<rect x="205" y="194" width="175" height="38" rx="8" class="d-box"/>
+<text x="292.5" y="217.5" class="d-t" text-anchor="middle" >Arweave-backed</text>
+</g>
+<g data-node="q3">
+<rect x="20" y="244" width="360" height="38" rx="8" class="d-box"/>
+<circle cx="34" cy="263.0" r="4" class="d-blue d-fill"/>
+<text x="46" y="267.5" class="d-t" text-anchor="start" >Want an identity that outlives any app?</text>
+</g>
+<path d="M60,282 L60,306" class="d-line" data-edge="q3-lens" marker-end="url(#ah-publishing-decision)"/>
+<text x="68" y="298" class="d-s" text-anchor="start" data-edge="q3-lens">yes, a bet on portability</text>
+<g data-node="lens">
+<rect x="20" y="308" width="360" height="38" rx="8" class="d-box"/>
+<text x="200.0" y="331.5" class="d-t" text-anchor="middle" >Lens or Farcaster</text>
+</g>
+</svg>

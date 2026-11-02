@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" role="img" aria-labelledby="t-multisig-safe-flow"><title id="t-multisig-safe-flow">Owners sign EIP-712 messages off-chain and the signatures are collected. Once the threshold is met they go on-chain to the Safe, a smart contract that holds the funds, stores the owner list and threshold, and executes the transaction</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-multisig-safe-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="owners">
+<rect x="20" y="14" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="32" r="4" class="d-violet d-fill"/>
+<text x="46" y="36" class="d-t" text-anchor="start" >Owners</text>
+<text x="46" y="52" class="d-s" text-anchor="start" >Each signs an EIP-712 message</text>
+</g>
+<path d="M200,68 L200,94" class="d-line" data-edge="owners-signatures" marker-end="url(#ah-multisig-safe-flow)"/>
+<g data-node="signatures">
+<rect x="20" y="96" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="114" r="4" class="d-blue d-fill"/>
+<text x="46" y="118" class="d-t" text-anchor="start" >Signatures collected</text>
+<text x="46" y="134" class="d-s" text-anchor="start" >Until the threshold is met</text>
+</g>
+<line x1="20" y1="174" x2="380" y2="174" class="d-line d-faint" stroke-dasharray="3 4"/>
+<text x="380" y="168" class="d-s" text-anchor="end" >off-chain</text>
+<text x="380" y="188" class="d-s" text-anchor="end" >on-chain</text>
+<path d="M200,150 L200,196" class="d-line" data-edge="signatures-safe" marker-end="url(#ah-multisig-safe-flow)"/>
+<text x="192" y="168" class="d-s" text-anchor="end" data-edge="signatures-safe">one transaction</text>
+<g data-node="safe">
+<rect x="20" y="198" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="216" r="4" class="d-green d-fill"/>
+<text x="46" y="220" class="d-t" text-anchor="start" >The Safe contract</text>
+<text x="46" y="236" class="d-s" text-anchor="start" >Holds the funds, checks owners and threshold</text>
+</g>
+<path d="M200,252 L200,278" class="d-line" data-edge="safe-target" marker-end="url(#ah-multisig-safe-flow)"/>
+<g data-node="target">
+<rect x="20" y="280" width="360" height="48" rx="8" class="d-box"/>
+<text x="34" y="308.5" class="d-t" text-anchor="start" >The transaction runs</text>
+</g>
+</svg>

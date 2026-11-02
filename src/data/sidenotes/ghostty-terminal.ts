@@ -8,7 +8,7 @@ export const sidenotes: ArticleSidenotes = {
         "He'd shipped Vagrant, co-founded HashiCorp, helped build Terraform",
       type: "context",
       content:
-        "Mitchell Hashimoto co-founded HashiCorp in 2012. The company created Vagrant, Terraform, Vault, Consul, and Nomad — infrastructure tools used across the industry. HashiCorp went public in 2021 (NYSE: HCP) and was acquired by IBM in 2024 for $6.4 billion. Hashimoto had stepped back from day-to-day operations in 2023 to focus on personal projects, including Ghostty.",
+        "Mitchell Hashimoto co-founded HashiCorp in 2012. The company created Vagrant, Terraform, Vault, Consul, and Nomad — infrastructure tools used across the industry. HashiCorp went public in 2021 (Nasdaq: HCP), and IBM announced a $6.4 billion acquisition in 2024 that closed in February 2025. Hashimoto left the company in December 2023.",
       url: "https://www.hashicorp.com/en/blog/mitchell-reflects-as-hashicorp-turns-10",
     },
     {
@@ -16,7 +16,7 @@ export const sidenotes: ArticleSidenotes = {
         "Within 15 months it hit 45,000 GitHub stars",
       type: "source",
       content:
-        "As of March 2026, Ghostty has approximately 45,247 GitHub stars — surpassing Hyper (~44,600), Kitty (~23,200), and WezTerm (~22,900). This makes it the most-starred terminal emulator on GitHub, reaching that position in under 15 months from its December 2024 public launch.",
+        "As of March 2026, Ghostty had approximately 45,247 GitHub stars, past Hyper (~44,600), Kitty and WezTerm, in under 15 months from its December 2024 public launch. Alacritty stayed ahead: in November 2026 it had about 66,000 stars to Ghostty's 63,000.",
       url: "https://github.com/ghostty-org/ghostty",
     },
     {
@@ -24,7 +24,7 @@ export const sidenotes: ArticleSidenotes = {
         "Hashimoto has called Zig \"an absolute joy to work with\"",
       type: "quote",
       content:
-        "From Hashimoto's 1.0 reflection post: \"It's not perfect, it's not done, it's not for everyone. But it's mine. It's a reflection of my values and my vision for what a terminal could be.\" He also noted that Zig's lack of a garbage collector and its direct hardware access made it ideal for the kind of low-latency rendering a terminal requires.",
+        "From Hashimoto's 1.0 reflection post: \"Zig has been an absolute joy to work with. I have fun writing Zig every single day and that fun hasn't diminished a bit over two years. The build system is fantastic, the community is amazing, and the core maintainers are brilliant.\"",
       attribution: "Mitchell Hashimoto",
       url: "https://mitchellh.com/writing/ghostty-1-0-reflection",
     },

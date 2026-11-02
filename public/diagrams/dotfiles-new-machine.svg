@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 318" role="img" aria-labelledby="t-dotfiles-new-machine"><title id="t-dotfiles-new-machine">One repo on GitHub is cloned to every machine. A laptop stows all four packages, a server stows only git and zsh. Either way the result is symlinks in the home directory that the tools read</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-dotfiles-new-machine" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One repo, each machine picks</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Clone everywhere, stow what that machine needs</text>
+<g data-node="repo">
+<rect x="20" y="54" width="360" height="46" rx="8" class="d-box"/>
+<circle cx="34" cy="72" r="4" class="d-violet d-fill"/>
+<text x="46" y="76" class="d-t" text-anchor="start" >you/dotfiles</text>
+<text x="46" y="92" class="d-s" text-anchor="start" >On GitHub, the one copy you edit and push</text>
+</g>
+<g data-node="laptop">
+<rect x="20" y="132" width="170" height="104" rx="8" class="d-box"/>
+<text x="34" y="154" class="d-t" text-anchor="start" >Laptop</text>
+<text x="176" y="154" class="d-s" text-anchor="end" >stows 4</text>
+<rect x="34" y="166" width="68" height="24" rx="5" class="d-green d-fill" opacity="0.25"/>
+<text x="68" y="182" class="d-s d-m" text-anchor="middle" >zsh</text>
+<rect x="108" y="166" width="68" height="24" rx="5" class="d-green d-fill" opacity="0.25"/>
+<text x="142" y="182" class="d-s d-m" text-anchor="middle" >git</text>
+<rect x="34" y="196" width="68" height="24" rx="5" class="d-green d-fill" opacity="0.25"/>
+<text x="68" y="212" class="d-s d-m" text-anchor="middle" >nvim</text>
+<rect x="108" y="196" width="68" height="24" rx="5" class="d-green d-fill" opacity="0.25"/>
+<text x="142" y="212" class="d-s d-m" text-anchor="middle" >ghostty</text>
+</g>
+<path d="M105,100 L105,130" class="d-line" data-edge="repo-laptop" marker-end="url(#ah-dotfiles-new-machine)"/>
+<text x="113" y="120" class="d-s" text-anchor="start" data-edge="repo-laptop">clone</text>
+<path d="M105,236 L105,262" class="d-line" data-edge="laptop-links" marker-end="url(#ah-dotfiles-new-machine)"/>
+<g data-node="server">
+<rect x="210" y="132" width="170" height="104" rx="8" class="d-box"/>
+<text x="224" y="154" class="d-t" text-anchor="start" >Server</text>
+<text x="366" y="154" class="d-s" text-anchor="end" >stows 2</text>
+<rect x="224" y="166" width="68" height="24" rx="5" class="d-green d-fill" opacity="0.25"/>
+<text x="258" y="182" class="d-s d-m" text-anchor="middle" >zsh</text>
+<rect x="298" y="166" width="68" height="24" rx="5" class="d-green d-fill" opacity="0.25"/>
+<text x="332" y="182" class="d-s d-m" text-anchor="middle" >git</text>
+<rect x="224" y="196" width="68" height="24" rx="5" class="d-ext"/>
+<text x="258" y="212" class="d-s d-m" text-anchor="middle" >nvim</text>
+<rect x="298" y="196" width="68" height="24" rx="5" class="d-ext"/>
+<text x="332" y="212" class="d-s d-m" text-anchor="middle" >ghostty</text>
+</g>
+<path d="M295,100 L295,130" class="d-line" data-edge="repo-server" marker-end="url(#ah-dotfiles-new-machine)"/>
+<text x="303" y="120" class="d-s" text-anchor="start" data-edge="repo-server">clone</text>
+<path d="M295,236 L295,262" class="d-line" data-edge="server-links" marker-end="url(#ah-dotfiles-new-machine)"/>
+<g data-node="links">
+<rect x="20" y="264" width="360" height="44" rx="8" class="d-box"/>
+<circle cx="34" cy="282" r="4" class="d-amber d-fill"/>
+<text x="46" y="286" class="d-t" text-anchor="start" >Symlinks in ~</text>
+<text x="46" y="302" class="d-s" text-anchor="start" >Your tools read them as if nothing changed</text>
+</g>
+</svg>

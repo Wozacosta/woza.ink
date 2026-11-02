@@ -31,6 +31,8 @@ If your inbox had a rebellious cousin who ran their own server and refused ads, 
 
 Matrix = interoperable, federated chat where you can run the server, choose the client, and avoid vendor lock-in. Think: "chat as a platform, not a walled garden."
 
+![A Matrix ID reads like an email address with the punctuation moved.](diagram:matrix-id)
+
 ---
 
 ## Why Matrix Actually Matters (and why you should care)
@@ -38,7 +40,7 @@ Matrix = interoperable, federated chat where you can run the server, choose the 
 - Ownership: Run a homeserver, keep your data. No single company can change the rules overnight.
 - Portability: Change clients or servers without losing your identity (mostly — account migration between servers still needs work).
 - Interop: Bridges mean your Matrix client can talk to Slack channels, IRC rooms, Telegram groups, and more.
-- Open governance: The spec and reference implementations are public, maintained by a non-profit foundation.
+- Open governance: The spec is public and maintained by a non-profit foundation, and the reference implementations are open source.
 
 This has practical consequences. Governments, enterprises, and open-source communities use Matrix because it is reliable and auditable.
 
@@ -68,6 +70,8 @@ This has practical consequences. Governments, enterprises, and open-source commu
   - Client (the app UI you use)
   - Bridges (if you want interoperability)
 - That means: greater agency and more complexity. You trade friction for freedom.
+
+![The bundle you normally get, and the three parts Matrix lets you pick.](diagram:matrix-stack)
 
 ---
 
@@ -118,6 +122,8 @@ Bridges are great for gradual migration: you can bring a community into Matrix w
 - Device sync: Matrix supports multiple devices; encryption keys are managed so your other devices can decrypt messages.
 
 Practical tip: enable E2EE for sensitive rooms and register your devices. Treat bridges with caution — they can expose content to external services.
+
+![E2EE seals the letter, not the envelope.](diagram:matrix-metadata)
 
 ---
 

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 232" role="img" aria-labelledby="t-pm-strategy"><title id="t-pm-strategy">The Strategy dispute, to scale. Strategy sold 32 BTC between May 26 and May 31. The market's deadline was May 31. The SEC filing came out on June 1, and a UMA vote finalized No on June 3. Two traders sued on July 3</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-pm-strategy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One day late</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >To scale, May 26 to June 3, 2026</text>
+<rect x="28" y="102" width="215" height="20" rx="3" class="d-green d-fill" opacity="0.75"/>
+<text x="28" y="94" class="d-s d-green d-ct" text-anchor="start" >32 BTC sold, May 26–31</text>
+<line x1="28" y1="122" x2="372" y2="122" class="d-line"/>
+<line x1="28" y1="119" x2="28" y2="125" class="d-line"/>
+<line x1="71" y1="119" x2="71" y2="125" class="d-line"/>
+<line x1="114" y1="119" x2="114" y2="125" class="d-line"/>
+<line x1="157" y1="119" x2="157" y2="125" class="d-line"/>
+<line x1="200" y1="119" x2="200" y2="125" class="d-line"/>
+<line x1="243" y1="119" x2="243" y2="125" class="d-line"/>
+<line x1="286" y1="119" x2="286" y2="125" class="d-line"/>
+<line x1="329" y1="119" x2="329" y2="125" class="d-line"/>
+<line x1="372" y1="119" x2="372" y2="125" class="d-line"/>
+<line x1="243" y1="122" x2="243" y2="166" class="d-line d-amber d-stroke"/>
+<text x="237" y="150" class="d-t d-amber d-ct" text-anchor="end" >Deadline</text>
+<text x="237" y="165" class="d-s" text-anchor="end" >May 31</text>
+<line x1="286" y1="122" x2="286" y2="166" class="d-line d-rose d-stroke"/>
+<text x="292" y="150" class="d-t d-rose d-ct" text-anchor="start" >Filing published</text>
+<text x="292" y="165" class="d-s" text-anchor="start" >June 1</text>
+<line x1="372" y1="122" x2="372" y2="54" class="d-line d-violet d-stroke"/>
+<text x="366" y="66" class="d-t d-violet d-ct" text-anchor="end" >UMA vote: No</text>
+<text x="366" y="81" class="d-s" text-anchor="end" >June 3</text>
+<text x="20" y="222" class="d-s" text-anchor="start" >Two traders sued on July 3, off this chart.</text>
+</svg>

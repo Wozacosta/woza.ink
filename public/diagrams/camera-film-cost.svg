@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 196" role="img" aria-labelledby="t-camera-film-cost"><title id="t-camera-film-cost">A strip of 36 frames. A roll at 10 dollars plus development and scanning at 15 to 20 dollars is 25 to 30 dollars, or 69 to 83 cents a frame</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-camera-film-cost" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What each frame costs</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >One roll of Kodak Gold 200, developed and scanned</text>
+<rect x="20" y="52" width="360" height="38" rx="2" style="fill:var(--foreground,#1a1a1a)" opacity="0.82"/>
+<rect x="23" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="26" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="34" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="26" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="34" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="43" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="46" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="54" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="46" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="54" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="63" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="66" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="74" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="66" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="74" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="83" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="86" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="94" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="86" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="94" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="103" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="106" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="114" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="106" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="114" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="123" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="126" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="134" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="126" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="134" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="143" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="146" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="154" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="146" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="154" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="163" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="166" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="174" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="166" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="174" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="183" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="186" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="194" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="186" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="194" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="203" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="206" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="214" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="206" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="214" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="223" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="226" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="234" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="226" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="234" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="243" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="246" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="254" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="246" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="254" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="263" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="266" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="274" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="266" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="274" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="283" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="286" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="294" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="286" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="294" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="303" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="306" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="314" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="306" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="314" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="323" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="326" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="334" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="326" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="334" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="343" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="346" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="354" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="346" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="354" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="363" y="60" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="366" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="374" y="54.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="366" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="374" y="84.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="20" y="96" width="360" height="38" rx="2" style="fill:var(--foreground,#1a1a1a)" opacity="0.82"/>
+<rect x="23" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="26" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="34" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="26" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="34" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="43" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="46" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="54" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="46" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="54" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="63" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="66" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="74" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="66" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="74" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="83" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="86" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="94" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="86" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="94" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="103" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="106" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="114" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="106" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="114" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="123" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="126" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="134" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="126" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="134" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="143" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="146" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="154" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="146" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="154" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="163" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="166" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="174" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="166" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="174" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="183" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="186" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="194" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="186" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="194" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="203" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="206" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="214" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="206" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="214" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="223" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="226" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="234" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="226" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="234" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="243" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="246" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="254" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="246" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="254" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="263" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="266" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="274" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="266" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="274" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="283" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="286" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="294" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="286" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="294" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="303" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="306" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="314" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="306" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="314" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="323" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="326" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="334" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="326" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="334" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="343" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="346" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="354" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="346" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="354" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="363" y="104" width="17" height="22" rx="1" class="d-amber d-fill" opacity="0.75"/>
+<rect x="366" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="374" y="98.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="366" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<rect x="374" y="128.5" width="3" height="3" style="fill:var(--background,#faf8f5)"/>
+<text x="20" y="160" class="d-s" text-anchor="start" >$10 roll + $15-20 lab = $25-30</text>
+<text x="380" y="160" class="d-s" text-anchor="end" >36 frames</text>
+<text x="20" y="182" class="d-t" text-anchor="start" >69 to 83 cents every time you press the shutter</text>
+</svg>

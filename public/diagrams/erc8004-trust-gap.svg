@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 218" role="img" aria-labelledby="t-erc8004-trust-gap"><title id="t-erc8004-trust-gap">In a closed system trust is inherited: you deployed your own agents and signed a contract with your partner. In an open system a stranger agent has only its claims, and could be competent, incompetent or malicious</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-erc8004-trust-gap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Closed: trust is inherited</text>
+<rect x="20" y="34" width="172" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="52" r="4" class="d-green d-fill"/>
+<text x="46" y="56" class="d-t" text-anchor="start" >Your agent</text>
+<text x="46" y="72" class="d-s" text-anchor="start" >you deployed it</text>
+<rect x="208" y="34" width="172" height="54" rx="8" class="d-box"/>
+<circle cx="222" cy="52" r="4" class="d-green d-fill"/>
+<text x="234" y="56" class="d-t" text-anchor="start" >Partner's agent</text>
+<text x="234" y="72" class="d-s" text-anchor="start" >you signed a contract</text>
+<line x1="20" y1="106" x2="380" y2="106" class="d-line d-faint"/>
+<text x="20" y="132" class="d-t" text-anchor="start" >Open: nothing to inherit</text>
+<rect x="20" y="144" width="172" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="162" r="4" class="d-green d-fill"/>
+<text x="46" y="166" class="d-t" text-anchor="start" >Your agent</text>
+<text x="46" y="182" class="d-s" text-anchor="start" >no prior relationship</text>
+<rect x="208" y="144" width="172" height="54" rx="8" class="d-ext"/>
+<circle cx="222" cy="162" r="4" class="d-rose d-fill"/>
+<text x="234" y="166" class="d-t" text-anchor="start" >A stranger</text>
+<text x="234" y="182" class="d-s" text-anchor="start" >claims are cheap</text>
+<path d="M192,171 H207" class="d-line d-rose d-stroke" stroke-dasharray="3 3"/>
+</svg>

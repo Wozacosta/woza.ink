@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 332" role="img" aria-labelledby="t-lightroom-recipe"><title id="t-lightroom-recipe">The original RAW file is read-only. The catalog stores a list of edit instructions. Processing applies that list to the original to draw the preview on screen, and again to write the exported file</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-lightroom-recipe" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Edits are a recipe, not a change</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >The instruction values here are just examples</text>
+<g data-node="original">
+<rect x="20" y="58" width="150" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="76" r="4" class="d-blue d-fill"/>
+<text x="46" y="80" class="d-t" text-anchor="start" >Original RAW</text>
+<text x="46" y="96" class="d-s" text-anchor="start" >Read-only</text>
+</g>
+<g data-node="catalog">
+<rect x="230" y="58" width="150" height="96" rx="8" class="d-box"/>
+<circle cx="244" cy="76" r="4" class="d-amber d-fill"/>
+<text x="256" y="80" class="d-t" text-anchor="start" >Catalog</text>
+<text x="244" y="102" class="d-s d-m" text-anchor="start" >Exposure +0.30</text>
+<text x="244" y="118" class="d-s d-m" text-anchor="start" >Contrast +12</text>
+<text x="244" y="134" class="d-s d-m" text-anchor="start" >Crop 3:2</text>
+</g>
+<g data-node="processing">
+<rect x="110" y="176" width="180" height="52" rx="8" class="d-box"/>
+<circle cx="124" cy="194" r="4" class="d-violet d-fill"/>
+<text x="136" y="198" class="d-t" text-anchor="start" >Processing</text>
+<text x="136" y="214" class="d-s" text-anchor="start" >Applies the list on the fly</text>
+</g>
+<g data-node="preview">
+<rect x="20" y="268" width="150" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="286" r="4" class="d-green d-fill"/>
+<text x="46" y="290" class="d-t" text-anchor="start" >Preview</text>
+<text x="46" y="306" class="d-s" text-anchor="start" >What you see</text>
+</g>
+<g data-node="export">
+<rect x="230" y="268" width="150" height="52" rx="8" class="d-box"/>
+<circle cx="244" cy="286" r="4" class="d-green d-fill"/>
+<text x="256" y="290" class="d-t" text-anchor="start" >Export</text>
+<text x="256" y="306" class="d-s" text-anchor="start" >A new JPEG or TIFF</text>
+</g>
+<path d="M95,110 L95,202 L108,202" class="d-line" data-edge="original-processing" marker-end="url(#ah-lightroom-recipe)"/>
+<path d="M305,154 L305,202 L292,202" class="d-line" data-edge="catalog-processing" marker-end="url(#ah-lightroom-recipe)"/>
+<path d="M170,228 L170,248 L95,248 L95,266" class="d-line" data-edge="processing-preview" marker-end="url(#ah-lightroom-recipe)"/>
+<path d="M230,228 L230,248 L305,248 L305,266" class="d-line" data-edge="processing-export" marker-end="url(#ah-lightroom-recipe)"/>
+</svg>

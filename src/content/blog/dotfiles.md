@@ -30,11 +30,13 @@ The obvious move is to make `~` a git repo. It works until it doesn't — `git s
 
 The slightly better approach is symlinking: keep your dotfiles in `~/dotfiles/`, and manually `ln -s ~/dotfiles/.zshrc ~/.zshrc` for each file. This works. It's also tedious to maintain, easy to forget a file, and annoying to replicate on a new machine.
 
+![Three ways to version a dotfile, and what each one costs you.](diagram:dotfiles-approaches)
+
 ---
 
 ## stow
 
-[GNU Stow](https://www.gnu.org/software/stow/) is the standard solution to this. It's a symlink manager — it takes a directory tree and creates symlinks into a target directory (your home folder by default), mirroring the structure exactly.
+[GNU Stow](https://www.gnu.org/software/stow/) is the standard solution to this. It's a symlink manager — it takes a directory tree and creates symlinks into a target directory (by default the parent of the stow directory, so your home folder if the repo is `~/dotfiles`), mirroring the structure exactly.
 
 You structure your dotfiles repo like this:
 
@@ -121,6 +123,8 @@ stow zsh git nvim
 ```
 
 Done.
+
+![One repo cloned everywhere, and each machine stows what it needs.](diagram:dotfiles-new-machine)
 
 ---
 

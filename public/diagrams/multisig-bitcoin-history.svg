@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 296" role="img" aria-labelledby="t-multisig-bitcoin-history"><title id="t-multisig-bitcoin-history">Four steps in Bitcoin multisig. Bare multisig in 2011 shows every key. P2SH in 2012 shows a hash until you spend. P2WSH in 2017 moves the script to the witness and cuts fees. Taproot in 2021 shows one key and one signature</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-multisig-bitcoin-history" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What the chain sees</text>
+<line x1="72" y1="52" x2="72" y2="256" class="d-line d-faint"/>
+<text x="20" y="60" class="d-t" text-anchor="start" >2011</text>
+<circle cx="72" cy="56" r="5" class="d-rose d-fill"/>
+<text x="88" y="60" class="d-t" text-anchor="start" >Bare multisig</text>
+<text x="88" y="76" class="d-s" text-anchor="start" >Every public key, in the output</text>
+<text x="20" y="126" class="d-t" text-anchor="start" >2012</text>
+<circle cx="72" cy="122" r="5" class="d-amber d-fill"/>
+<text x="88" y="126" class="d-t" text-anchor="start" >P2SH</text>
+<text x="88" y="142" class="d-s" text-anchor="start" >A hash, until you spend</text>
+<text x="20" y="192" class="d-t" text-anchor="start" >2017</text>
+<circle cx="72" cy="188" r="5" class="d-blue d-fill"/>
+<text x="88" y="192" class="d-t" text-anchor="start" >P2WSH</text>
+<text x="88" y="208" class="d-s" text-anchor="start" >The script in a witness, lower fees</text>
+<text x="20" y="258" class="d-t" text-anchor="start" >2021</text>
+<circle cx="72" cy="254" r="5" class="d-green d-fill"/>
+<text x="88" y="258" class="d-t" text-anchor="start" >Taproot</text>
+<text x="88" y="274" class="d-s" text-anchor="start" >One key, one signature</text>
+<circle cx="311" cy="56" r="4.5" class="d-line d-green d-stroke"/>
+<path d="M315.5,56 h13 M324,56 v4 M328,56 v4" class="d-line d-green d-stroke"/>
+<circle cx="337" cy="56" r="4.5" class="d-line d-green d-stroke"/>
+<path d="M341.5,56 h13 M350,56 v4 M354,56 v4" class="d-line d-green d-stroke"/>
+<circle cx="363" cy="56" r="4.5" class="d-line d-green d-stroke"/>
+<path d="M367.5,56 h13 M376,56 v4 M380,56 v4" class="d-line d-green d-stroke"/>
+<rect x="316" y="108" width="64" height="28" rx="5" class="d-box"/>
+<text x="348" y="127" class="d-s" text-anchor="middle" >hash</text>
+<rect x="316" y="174" width="64" height="28" rx="5" class="d-box"/>
+<text x="348" y="193" class="d-s" text-anchor="middle" >witness</text>
+<circle cx="357" cy="254" r="4.5" class="d-line d-green d-stroke"/>
+<path d="M361.5,254 h13 M370,254 v4 M374,254 v4" class="d-line d-green d-stroke"/>
+</svg>

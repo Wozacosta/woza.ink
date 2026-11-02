@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-x402-payment-anatomy"><title id="t-x402-payment-anatomy">One entry from the accepts list, field by field. Scheme exact, network eip155:84532 is Base Sepolia, amount 10000 is 0.01 USDC, asset is the token contract, payTo is the seller, and maxTimeoutSeconds 60 is the time limit</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-x402-payment-anatomy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One entry in the accepts menu</text>
+<g data-node="scheme">
+<rect x="20" y="34" width="360" height="32" rx="6" class="d-box"/>
+<text x="32" y="54" class="d-s d-m" text-anchor="start" >scheme</text>
+<text x="146" y="54" class="d-s d-m d-blue d-ct" text-anchor="start" >exact</text>
+<text x="370" y="54" class="d-s" text-anchor="end" >how to charge</text>
+</g>
+<g data-node="network">
+<rect x="20" y="71" width="360" height="32" rx="6" class="d-box"/>
+<text x="32" y="91" class="d-s d-m" text-anchor="start" >network</text>
+<text x="146" y="91" class="d-s d-m d-blue d-ct" text-anchor="start" >eip155:84532</text>
+<text x="370" y="91" class="d-s" text-anchor="end" >Base Sepolia testnet</text>
+</g>
+<g data-node="amount">
+<rect x="20" y="108" width="360" height="32" rx="6" class="d-box"/>
+<text x="32" y="128" class="d-s d-m" text-anchor="start" >amount</text>
+<text x="146" y="128" class="d-s d-m d-blue d-ct" text-anchor="start" >10000</text>
+<text x="370" y="128" class="d-t d-green d-ct" text-anchor="end" >0.01 USDC</text>
+</g>
+<g data-node="asset">
+<rect x="20" y="145" width="360" height="32" rx="6" class="d-box"/>
+<text x="32" y="165" class="d-s d-m" text-anchor="start" >asset</text>
+<text x="146" y="165" class="d-s d-m d-blue d-ct" text-anchor="start" >0x036C…CF7e</text>
+<text x="370" y="165" class="d-s" text-anchor="end" >which token</text>
+</g>
+<g data-node="payto">
+<rect x="20" y="182" width="360" height="32" rx="6" class="d-box"/>
+<text x="32" y="202" class="d-s d-m" text-anchor="start" >payTo</text>
+<text x="146" y="202" class="d-s d-m d-blue d-ct" text-anchor="start" >0x2096…287C</text>
+<text x="370" y="202" class="d-s" text-anchor="end" >who gets paid</text>
+</g>
+<g data-node="timeout">
+<rect x="20" y="219" width="360" height="32" rx="6" class="d-box"/>
+<text x="32" y="239" class="d-s d-m" text-anchor="start" >maxTimeoutSeconds</text>
+<text x="146" y="239" class="d-s d-m d-blue d-ct" text-anchor="start" >60</text>
+<text x="370" y="239" class="d-s" text-anchor="end" >time limit</text>
+</g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-labelledby="t-lightroom-upscale"><title id="t-lightroom-upscale">Three rectangles to scale. Doubling a photo's width and height gives four times the pixels. Quadrupling them gives sixteen times the pixels</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-lightroom-upscale" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Double the sides, quadruple the pixels</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >To scale. A big print needs width, and a crop eats it.</text>
+<rect x="20" y="56.0" width="360" height="210.0" rx="2" class="d-blue d-fill" opacity="0.14"/>
+<rect x="20" y="56.0" width="360" height="210.0" rx="2" class="d-line d-blue d-stroke"/>
+<text x="28" y="72.0" class="d-s d-blue d-ct" text-anchor="start" >4× the sides: 16× the pixels</text>
+<rect x="20" y="161.0" width="180" height="105.0" rx="2" class="d-green d-fill" opacity="0.14"/>
+<rect x="20" y="161.0" width="180" height="105.0" rx="2" class="d-line d-green d-stroke"/>
+<text x="28" y="177.0" class="d-s d-green d-ct" text-anchor="start" >2× the sides: 4× the pixels</text>
+<rect x="20" y="213.5" width="90" height="52.5" rx="2" class="d-rose d-fill" opacity="0.14"/>
+<rect x="20" y="213.5" width="90" height="52.5" rx="2" class="d-line d-rose d-stroke"/>
+<text x="28" y="258" class="d-s d-rose d-ct" text-anchor="start" >Original</text>
+</svg>

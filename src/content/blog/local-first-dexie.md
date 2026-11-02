@@ -39,6 +39,8 @@ Benefits:
 
 Trade-offs exist (storage limits, conflict resolution), but we'll cover those.
 
+![A sketch of where the wait goes.](diagram:local-first-click)
+
 ---
 
 ## IndexedDB: the browser's built-in DB (and why it's awkward)
@@ -127,8 +129,8 @@ import dexieCloud from "dexie-cloud-addon";
 
 const db = new Dexie("TaskManager", { addons: [dexieCloud] });
 db.version(1).stores({
-  tasks: "++id, status, project, dueDate",
-  projects: "++id, name",
+  tasks: "@id, status, project, dueDate", // synced tables need global ids, not ++id
+  projects: "@id, name",
 });
 
 db.cloud.configure({
@@ -137,7 +139,7 @@ db.cloud.configure({
 });
 ```
 
-One line summary: your Dexie code keeps working. DexieCloud sneaks in and makes it sync.
+One line summary: swap `++id` for `@id` and your Dexie code keeps working. DexieCloud sneaks in and makes it sync.
 
 ---
 
@@ -147,6 +149,8 @@ One line summary: your Dexie code keeps working. DexieCloud sneaks in and makes 
 - Conflict resolution: DexieCloud does last-write-wins at property level by default. For complex domains, design merge logic or use CRDTs.
 - Initial sync size: syncing millions of records to a client is unrealistic. Keep per-user datasets reasonable.
 - Pricing & hosting: DexieCloud has free tiers and pricing; self-hosting is an option if you need full control.
+
+![Merging by property, with two offline edits.](diagram:dexie-conflict)
 
 ---
 
@@ -166,7 +170,7 @@ One line summary: your Dexie code keeps working. DexieCloud sneaks in and makes 
 - Field work: apps used offline in the wild (surveys, inspections)
 - Privacy-first apps: users own their data
 
-Not ideal when the server must be the sole authority (banking ledgers, some legal workflows) or when real-time collaborative CRDT-level sync is the requirement.
+Not ideal when the server must be the sole authority (banking ledgers, some legal workflows). Real-time collaborative editing needs more than property-level merges, though DexieCloud has a [Y.js integration](https://dexie.org/docs/cloud/consistency) for it.
 
 ---
 

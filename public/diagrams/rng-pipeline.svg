@@ -13,37 +13,53 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-rng-pipeline" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="interrupts">
 <rect x="20" y="16" width="150" height="30" rx="8" class="d-box"/>
 <text x="34" y="35.5" class="d-t" text-anchor="start" >Interrupt timing</text>
+</g>
 <line x1="170" y1="31" x2="190" y2="31" class="d-line"/>
+<g data-node="io">
 <rect x="20" y="54" width="150" height="30" rx="8" class="d-box"/>
 <text x="34" y="73.5" class="d-t" text-anchor="start" >Disk and network</text>
+</g>
 <line x1="170" y1="69" x2="190" y2="69" class="d-line"/>
+<g data-node="input">
 <rect x="20" y="92" width="150" height="30" rx="8" class="d-box"/>
 <text x="34" y="111.5" class="d-t" text-anchor="start" >Keyboard and mouse</text>
+</g>
 <line x1="170" y1="107" x2="190" y2="107" class="d-line"/>
+<g data-node="rdrand">
 <rect x="20" y="130" width="150" height="30" rx="8" class="d-box"/>
 <text x="34" y="149.5" class="d-t" text-anchor="start" >RDRAND</text>
+</g>
 <line x1="170" y1="145" x2="190" y2="145" class="d-line"/>
+<g data-node="jitter">
 <rect x="20" y="168" width="150" height="30" rx="8" class="d-box"/>
 <text x="34" y="187.5" class="d-t" text-anchor="start" >CPU jitter</text>
+</g>
 <line x1="170" y1="183" x2="190" y2="183" class="d-line"/>
 <line x1="190" y1="31" x2="190" y2="183" class="d-line"/>
 <path d="M190,40 L218,40" class="d-line" marker-end="url(#ah-rng-pipeline)"/>
+<g data-node="pool">
 <rect x="220" y="16" width="160" height="48" rx="8" class="d-box"/>
 <circle cx="234" cy="34" r="4" class="d-violet d-fill"/>
 <text x="246" y="38" class="d-t" text-anchor="start" >Entropy pool</text>
 <text x="246" y="54" class="d-s" text-anchor="start" >Mixes every source</text>
-<path d="M300,64 L300,82" class="d-line" marker-end="url(#ah-rng-pipeline)"/>
+</g>
+<path d="M300,64 L300,82" class="d-line" data-edge="pool-csprng" marker-end="url(#ah-rng-pipeline)"/>
+<g data-node="csprng">
 <rect x="220" y="84" width="160" height="48" rx="8" class="d-box"/>
 <circle cx="234" cy="102" r="4" class="d-blue d-fill"/>
 <text x="246" y="106" class="d-t" text-anchor="start" >CSPRNG</text>
 <text x="246" y="122" class="d-s" text-anchor="start" >Seed in, gigabytes out</text>
-<path d="M300,132 L300,150" class="d-line" marker-end="url(#ah-rng-pipeline)"/>
+</g>
+<path d="M300,132 L300,150" class="d-line" data-edge="csprng-getrandom" marker-end="url(#ah-rng-pipeline)"/>
+<g data-node="getrandom">
 <rect x="220" y="152" width="160" height="48" rx="8" class="d-box"/>
 <circle cx="234" cy="170" r="4" class="d-green d-fill"/>
 <text x="246" y="174" class="d-t" text-anchor="start" >getrandom()</text>
 <text x="246" y="190" class="d-s" text-anchor="start" >What your code calls</text>
+</g>
 <line x1="20" y1="216" x2="380" y2="216" class="d-line d-faint"/>
 <text x="20" y="240" class="d-s" text-anchor="start" >You need true randomness once. After that it's arithmetic.</text>
 </svg>

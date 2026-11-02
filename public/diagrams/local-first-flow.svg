@@ -15,29 +15,37 @@
 <defs><marker id="ah-local-first-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
 <rect x="20" y="16" width="360" height="112" rx="8" class="d-ext"/>
 <text x="34" y="36" class="d-s" text-anchor="start" >Your device</text>
+<g data-node="ui">
 <rect x="34" y="48" width="124" height="64" rx="8" class="d-box"/>
 <circle cx="48" cy="66" r="4" class="d-green d-fill"/>
 <text x="60" y="70" class="d-t" text-anchor="start" >UI</text>
 <text x="60" y="86" class="d-s" text-anchor="start" >Updates at once</text>
+</g>
+<g data-node="db">
 <rect x="242" y="48" width="124" height="64" rx="8" class="d-box"/>
 <circle cx="256" cy="66" r="4" class="d-blue d-fill"/>
 <text x="268" y="70" class="d-t" text-anchor="start" >Local database</text>
 <text x="268" y="86" class="d-s" text-anchor="start" >IndexedDB, Dexie</text>
-<path d="M158,72 L240,72" class="d-line" marker-end="url(#ah-local-first-flow)"/>
-<text x="199" y="66" class="d-s" text-anchor="middle" >writes</text>
-<path d="M242,92 L160,92" class="d-line" marker-end="url(#ah-local-first-flow)"/>
-<text x="201" y="106" class="d-s" text-anchor="middle" >reads</text>
-<path d="M304,128 L304,170" class="d-line" stroke-dasharray="4 3" marker-end="url(#ah-local-first-flow)"/>
-<text x="294" y="153" class="d-s" text-anchor="end" >background sync</text>
+</g>
+<path d="M158,72 L240,72" class="d-line" data-edge="ui-db" marker-end="url(#ah-local-first-flow)"/>
+<text x="199" y="66" class="d-s" text-anchor="middle" data-edge="ui-db">writes</text>
+<path d="M242,92 L160,92" class="d-line" data-edge="db-ui" marker-end="url(#ah-local-first-flow)"/>
+<text x="201" y="106" class="d-s" text-anchor="middle" data-edge="db-ui">reads</text>
+<path d="M304,128 L304,170" class="d-line" stroke-dasharray="4 3" data-edge="db-cloud" marker-end="url(#ah-local-first-flow)"/>
+<text x="294" y="153" class="d-s" text-anchor="end" data-edge="db-cloud">background sync</text>
+<g data-node="cloud">
 <rect x="208" y="172" width="172" height="54" rx="8" class="d-box"/>
 <circle cx="222" cy="190" r="4" class="d-violet d-fill"/>
 <text x="234" y="194" class="d-t" text-anchor="start" >DexieCloud</text>
 <text x="234" y="210" class="d-s" text-anchor="start" >An eventual replica</text>
-<path d="M208,199 L154,199" class="d-line" stroke-dasharray="4 3" marker-end="url(#ah-local-first-flow)"/>
+</g>
+<path d="M208,199 L154,199" class="d-line" stroke-dasharray="4 3" data-edge="cloud-other" marker-end="url(#ah-local-first-flow)"/>
+<g data-node="other">
 <rect x="20" y="172" width="132" height="54" rx="8" class="d-box"/>
 <circle cx="34" cy="190" r="4" class="d-amber d-fill"/>
 <text x="46" y="194" class="d-t" text-anchor="start" >Other devices</text>
 <text x="46" y="210" class="d-s" text-anchor="start" >Pull the changes</text>
+</g>
 <line x1="20" y1="246" x2="380" y2="246" class="d-line d-faint"/>
 <text x="20" y="270" class="d-t" text-anchor="start" >Cut the network and the top box keeps working.</text>
 <text x="20" y="288" class="d-s" text-anchor="start" >The device is the source of truth. The cloud is a replica,</text>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 276" role="img" aria-labelledby="t-worktree-keystrokes"><title id="t-worktree-keystrokes">Characters to type for each task in the comparison table, to scale. worktrunk needs 17, 27 and 9 characters. Plain git needs 56, 66 and 68</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-worktree-keystrokes" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Characters to type</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Counted from the commands in the table, to scale</text>
+<text x="20" y="62" class="d-t" text-anchor="start" >Create + switch</text>
+<text x="20" y="83" class="d-s d-m" text-anchor="start" >wt</text>
+<rect x="48" y="72" width="74.8" height="14" rx="2" class="d-green d-fill"/>
+<text x="129" y="83" class="d-s" text-anchor="start" >17</text>
+<text x="20" y="103" class="d-s d-m" text-anchor="start" >git</text>
+<rect x="48" y="92" width="246.4" height="14" rx="2" class="d-box"/>
+<text x="300" y="103" class="d-s" text-anchor="start" >56</text>
+<text x="20" y="134" class="d-t" text-anchor="start" >Launch agent</text>
+<text x="20" y="155" class="d-s d-m" text-anchor="start" >wt</text>
+<rect x="48" y="144" width="118.8" height="14" rx="2" class="d-green d-fill"/>
+<text x="173" y="155" class="d-s" text-anchor="start" >27</text>
+<text x="20" y="175" class="d-s d-m" text-anchor="start" >git</text>
+<rect x="48" y="164" width="290.4" height="14" rx="2" class="d-box"/>
+<text x="344" y="175" class="d-s" text-anchor="start" >66</text>
+<text x="20" y="206" class="d-t" text-anchor="start" >Clean up</text>
+<text x="20" y="227" class="d-s d-m" text-anchor="start" >wt</text>
+<rect x="48" y="216" width="39.6" height="14" rx="2" class="d-green d-fill"/>
+<text x="94" y="227" class="d-s" text-anchor="start" >9</text>
+<text x="20" y="247" class="d-s d-m" text-anchor="start" >git</text>
+<rect x="48" y="236" width="299.2" height="14" rx="2" class="d-box"/>
+<text x="353" y="247" class="d-s" text-anchor="start" >68</text>
+</svg>

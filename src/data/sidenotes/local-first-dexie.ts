@@ -46,7 +46,7 @@ export const sidenotes: ArticleSidenotes = {
       marker: "Chrome is generous; Safari can be pruney.",
       type: "note",
       content:
-        "Safari's storage behavior is the main cross-browser pain point. In non-PWA Safari, IndexedDB data can be evicted after 7 days of inactivity. Installing the app as a PWA (Add to Home Screen) lifts this restriction. Chrome is far more generous, typically allowing IndexedDB to use up to 80% of total disk space per origin.",
+        "Safari's storage behavior is the main cross-browser pain point. In non-PWA Safari, IndexedDB data can be evicted after 7 days of inactivity. Installing the app as a PWA (Add to Home Screen) lifts this restriction. Chrome is far more generous, letting one origin use up to 60% of total disk space, per MDN.",
     },
     {
       marker: "Personal tools: notes, journals, habit trackers",
@@ -60,7 +60,7 @@ export const sidenotes: ArticleSidenotes = {
       marker: "DexieCloud plugs into your Dexie DB and handles two-way sync, auth, access control, and conflict resolution",
       type: "note",
       content:
-        "DexieCloud's property-level merge strategy means that if two users edit *different* fields of the same record concurrently, both changes are preserved. If they edit the *same* field, last-write-wins applies. For most CRUD apps (task managers, notes, trackers) this is sufficient. For collaborative text editing or complex data structures, you'll want a full CRDT like Automerge or Yjs.",
+        "DexieCloud's property-level merge strategy means that if two users edit *different* fields of the same record concurrently, both changes are preserved. If they edit the *same* field, last-write-wins applies. For most CRUD apps (task managers, notes, trackers) this is sufficient. For collaborative text editing or complex data structures, you'll want a full CRDT like Automerge or Yjs, and DexieCloud can sync Yjs documents.",
     },
   ],
 };

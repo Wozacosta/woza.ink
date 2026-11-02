@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 214" role="img" aria-labelledby="t-agent-file-map"><title id="t-agent-file-map">A file tree of a project. AGENTS.md at the root is always loaded. A file in .claude/commands runs when you trigger it. A SKILL.md in a skills folder loads when the task type matches</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-agent-file-map" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >The three layers on disk</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Paths from the examples below</text>
+<text x="20" y="66" class="d-s d-m" text-anchor="start" >myapp/</text>
+<path d="M26,74 L26,86 L35,86" class="d-line d-faint"/>
+<text x="38" y="90" class="d-s d-m" text-anchor="start" >AGENTS.md</text>
+<line x1="196" y1="86" x2="256" y2="86" class="d-line d-faint"/>
+<circle cx="264" cy="86" r="4" class="d-green d-fill"/>
+<text x="276" y="90" class="d-t" text-anchor="start" >Always loaded</text>
+<path d="M26,98 L26,110 L35,110" class="d-line d-faint"/>
+<text x="38" y="114" class="d-s d-m" text-anchor="start" >.claude/commands/</text>
+<path d="M44,122 L44,134 L53,134" class="d-line d-faint"/>
+<text x="56" y="138" class="d-s d-m" text-anchor="start" >new-component.md</text>
+<line x1="196" y1="134" x2="256" y2="134" class="d-line d-faint"/>
+<circle cx="264" cy="134" r="4" class="d-blue d-fill"/>
+<text x="276" y="138" class="d-t" text-anchor="start" >You trigger it</text>
+<path d="M26,146 L26,158 L35,158" class="d-line d-faint"/>
+<text x="38" y="162" class="d-s d-m" text-anchor="start" >skills/create-prd/</text>
+<path d="M44,170 L44,182 L53,182" class="d-line d-faint"/>
+<text x="56" y="186" class="d-s d-m" text-anchor="start" >SKILL.md</text>
+<line x1="196" y1="182" x2="256" y2="182" class="d-line d-faint"/>
+<circle cx="264" cy="182" r="4" class="d-violet d-fill"/>
+<text x="276" y="186" class="d-t" text-anchor="start" >Task type matches</text>
+</svg>

@@ -5,10 +5,10 @@ export const sidenotes: ArticleSidenotes = {
   notes: [
     {
       marker:
-        "The ring size (number of decoys) has grown over time",
+        "The ring size (your output plus the decoys) has grown over time",
       type: "source",
       content:
-        "Monero upgraded to Bulletproofs+ in June 2022, reducing transaction sizes by 5-7%. The next major leap is FCMP++ (Full-Chain Membership Proofs), currently on testnet since October 2025, which replaces ring signatures entirely with zero-knowledge proofs. This expands the anonymity set from 16 decoys to potentially 100 million outputs across the entire chain -- a qualitative change in privacy guarantees. Mainnet activation is tentatively planned for mid-2026.",
+        "Monero upgraded to Bulletproofs+ in August 2022, reducing transaction sizes by 5-7%. The next major leap is FCMP++ (Full-Chain Membership Proofs), currently on testnet since October 2025, which replaces ring signatures entirely with zero-knowledge proofs. This expands the anonymity set from a ring of 16 to potentially 100 million outputs across the entire chain -- a qualitative change in privacy guarantees. Mainnet activation is tentatively planned for mid-2026.",
       url: "https://www.getmonero.org/2024/04/27/fcmps.html",
     },
     {
@@ -49,7 +49,7 @@ export const sidenotes: ArticleSidenotes = {
         "OFAC [sanctioned Tornado Cash](https://home.treasury.gov/news/press-releases/jy0916)",
       type: "source",
       content:
-        "The Tornado Cash legal saga reached a split verdict in August 2025. Roman Storm was convicted of conspiracy to operate an unlicensed money transmitting business (up to 5 years), but the jury deadlocked on the more serious charges: conspiracy to commit money laundering and conspiracy to violate sanctions (each carrying up to 20 years). Earlier, in December 2024, the Fifth Circuit ruled OFAC exceeded its authority by sanctioning autonomous smart contract code, and in March 2025 the Trump administration officially removed Tornado Cash from the sanctions list.",
+        "The Tornado Cash legal saga reached a split verdict in August 2025. Roman Storm was convicted of conspiracy to operate an unlicensed money transmitting business (up to 5 years), but the jury deadlocked on the more serious charges: conspiracy to commit money laundering and conspiracy to violate sanctions (each carrying up to 20 years). Earlier, in November 2024, the Fifth Circuit ruled OFAC exceeded its authority by sanctioning autonomous smart contract code, and in March 2025 the Trump administration officially removed Tornado Cash from the sanctions list.",
       url: "https://www.coindesk.com/policy/2025/08/06/roman-storm-guilty-of-unlicensed-money-transmitting-conspiracy-in-partial-verdict",
     },
     {

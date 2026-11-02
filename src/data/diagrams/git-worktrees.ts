@@ -37,7 +37,7 @@ export const gitWorktrees: InteractiveDiagramConfig = {
     {
       id: "tree3",
       title: "myapp-fix-bug-42/",
-      description: "An additional worktree on fix/bug-42. Each worktree has its own index and stash, so you can't stash in one and pop in another.",
+      description: "An additional worktree on fix/bug-42. Each worktree has its own index, but the stash is shared, so a stash made here shows up in the other two.",
       links: ["agent3", "git"],
     },
     {

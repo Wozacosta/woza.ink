@@ -18,11 +18,15 @@ This is what Lightroom does, why people stay, why they leave, and what its alter
 
 Lightroom is two things: a RAW processor and a digital asset manager (DAM). You import photos, organize them with folders, collections, keywords, and star ratings, then edit them non-destructively. Your original files are never touched — edits are stored as metadata instructions and applied on export.
 
+![Your originals stay untouched. An edit is a line in a list, and the list is applied whenever something needs the picture.](diagram:lightroom-recipe)
+
 There are two versions and they're confusingly named.
 
 **Lightroom Classic** is the desktop-first application. It uses a local catalog file (an SQLite database) that tracks every photo you've ever imported. The catalog system is powerful — smart collections, virtual copies, history states — but it's also the source of most complaints. Large catalogs with 100,000+ images get sluggish. The catalog file is a single point of failure. Corruption happens.
 
 **Lightroom CC** (now just "Lightroom") is the cloud-first version. Photos sync to Adobe's servers, edits happen anywhere — desktop, tablet, phone, browser. It's simpler, cleaner, and aimed at people who don't want to manage files. The trade-off: less control, fewer features, and your photos live on Adobe's servers behind a subscription paywall.
+
+![The two apps keep your photos in different places.](diagram:lightroom-two-apps)
 
 Both require a Creative Cloud subscription. There is no way to buy Lightroom outright. The Photography Plan — which bundles Lightroom, Lightroom Classic, and Photoshop — runs $19.99/month with 1TB of cloud storage. Legacy subscribers on the old 20GB plan pay $14.99/month. The pre-paid annual rate of $9.99/month is only available to existing subscribers. New customers pay more. This is the Adobe playbook: raise prices on the people who can't easily leave.
 
@@ -52,6 +56,8 @@ Capture One is what working professionals reach for when Lightroom isn't enough.
 
 **The case for it:** Capture One's color grading tools are in a different league. The Color Editor lets you select and adjust individual hues with a precision Lightroom can't match. Tethered shooting — connecting your camera directly and shooting into the software — is fast and reliable where Lightroom's tethering is an afterthought. The session-based workflow (project folders instead of a monolithic catalog) is cleaner for commercial work where each shoot is its own deliverable.
 
+![A catalog holds every shoot in one place. A Capture One session gives each job its own folder, with the same folders inside.](diagram:lightroom-sessions)
+
 **Pricing:** Here's the key — Capture One still offers a perpetual license. $299 one-time for Capture One Pro. You own that version forever. Updates within that major version are included; upgrading to the next major version costs extra, but it's your choice. They also offer subscriptions starting at around $15/month if you prefer.
 
 **The downsides:** The learning curve is real. Capture One's interface is powerful but dense. The DAM features are weaker than Lightroom's — no smart collections in the same way, less mature keyword management. The preset/plugin ecosystem is smaller. And the perpetual license, while available, has been getting more expensive with each release. Capture One has also drawn criticism for steep multi-seat pricing increases.
@@ -66,9 +72,11 @@ DxO approaches photo editing from a science-first angle. They've been measuring 
 
 **DeepPRIME XD3** is DxO's latest neural network denoising engine. It recovers detail from high-ISO RAW files that other tools simply can't. Shooting at ISO 12800 on an older APS-C sensor? DxO will pull out a usable image where Lightroom's AI denoise produces mush. Independent tests consistently rate it the best noise reduction available — the equivalent of roughly two to three extra stops of ISO performance.
 
+![Each stop is a doubling, so a cleaned ISO 12800 file holds up like one shot at a quarter or an eighth of that.](diagram:lightroom-iso-stops)
+
 **Optical corrections** use DxO's proprietary lens/body database to automatically fix distortion, vignetting, chromatic aberration, and sharpness falloff for your specific camera-lens combination. It's not applying a generic profile — it's using lab-measured data for that exact pairing.
 
-**Pricing:** One-time purchase. PhotoLab 9 costs around $230 for the Elite edition. No subscription. You buy it, you own it. Major version upgrades are separate purchases at a discount.
+**Pricing:** One-time purchase. PhotoLab 9 costs around $240 for the Elite edition. No subscription. You buy it, you own it. Major version upgrades are separate purchases at a discount.
 
 **The downsides:** PhotoLab's DAM capabilities are minimal. It's a photo editor, not an organizer. If you have 80,000 photos to manage, you'll need a separate tool for that. The interface is functional but dated compared to Lightroom or Capture One. Export is slower because DeepPRIME processing is computationally expensive (though GPU acceleration helps significantly). And the local adjustment tools, while improved, still trail Lightroom's masking system.
 
@@ -79,6 +87,8 @@ DxO approaches photo editing from a science-first angle. They've been measuring 
 ## Photomator: the Apple ecosystem pick
 
 Photomator — formerly Pixelmator Photo before Apple acquired the Pixelmator team in early 2025 — is what happens when a photo editor is built entirely for Apple's stack. SwiftUI, Core ML, Metal, Apple silicon optimization. It's fast in a way that cross-platform tools can't match on a Mac.
+
+![Everything under the app comes from one company, which is why it can be tuned so closely.](diagram:lightroom-apple-stack)
 
 **What it does well:** ML-powered auto-adjustments that work well out of the box. One-tap color correction that understands scenes. RAW processing that uses Apple's Neural Engine. Batch editing across entire shoots. The interface is clean and focused — it does less than Lightroom, but what it does, it does elegantly.
 
@@ -104,13 +114,15 @@ darktable is the most direct open-source alternative to Lightroom. It's a non-de
 
 darktable is capable software that rewards investment. But "investment" means hours of learning before you're as productive as you'd be in Lightroom on day one.
 
+![A slow start, then more control than Lightroom gives you. A sketch.](diagram:lightroom-learning-curve)
+
 ### RawTherapee
 
 RawTherapee is a pure RAW processor — no DAM, no library management. It's a photo-by-photo editor with extremely detailed control over demosaicing, noise reduction, sharpening, and color. Think of it as a darkroom tool, not an organizer.
 
 **Strengths:** Excellent demosaicing algorithms (AMaZE, RCD). Fine-grained control over every processing step. Lightweight and fast. Great for processing a handful of files with maximum quality.
 
-**Weakness:** No library. No batch workflow to speak of. The interface looks like it was designed by engineers for engineers (because it was). Not a Lightroom replacement — more of a complement.
+**Weakness:** No library. The interface looks like it was designed by engineers for engineers (because it was). Not a Lightroom replacement — more of a complement.
 
 ### digiKam
 
@@ -122,11 +134,13 @@ digiKam is the open-source answer to the DAM problem. It handles photo managemen
 
 ## Other notables
 
-**ON1 Photo RAW** — An all-in-one editor and organizer. One-time purchase (~$100) or subscription. Decent at everything, exceptional at nothing. The AI masking is solid. It works as a Lightroom plugin or standalone. A good choice if you want to own your software and need basic DAM plus editing.
+**ON1 Photo RAW** — An all-in-one editor and organizer. One-time purchase (~$100) or subscription. Decent at everything, exceptional at nothing. The AI masking is solid. It runs standalone, and the MAX edition also works as a Lightroom plugin. A good choice if you want to own your software and need basic DAM plus editing.
 
 **Luminar Neo** — Skylum's AI-heavy editor. Sky replacement, face retouching, generative AI tools (GenErase, GenSwap, GenExpand). Available as a lifetime purchase or subscription. It's the Instagram filter philosophy applied to desktop editing — fast results, less control. Photographers who want one-click transformations will love it. Purists will hate it.
 
-**Affinity Photo 2** — This is more of a Photoshop replacement than a Lightroom alternative. Pixel-level editing, layers, masks, compositing. One-time purchase of $70. Outstanding value. But it lacks a DAM, doesn't do non-destructive RAW workflow the way Lightroom does, and is better thought of as a companion tool than a replacement.
+**Affinity** — This is more of a Photoshop replacement than a Lightroom alternative. Pixel-level editing, layers, masks, compositing. Canva merged Affinity Photo into a single Affinity app in October 2025 and made it free for individuals. Outstanding value. But it lacks a DAM, doesn't do non-destructive RAW workflow the way Lightroom does, and is better thought of as a companion tool than a replacement.
+
+![The field at a glance. Linux users get three choices, and all three are free.](diagram:lightroom-field)
 
 ---
 
@@ -140,6 +154,8 @@ DxO's demosaicing and denoising are measurably superior for high-ISO files. Capt
 
 This is why serious photographers sometimes use multiple tools. Process your cleanest files in Lightroom for speed. Send your high-ISO keepers through DxO for noise reduction. Use Capture One for the hero shots that need perfect color. The tools aren't mutually exclusive.
 
+![One way to split a shoot across tools.](diagram:lightroom-triage)
+
 ---
 
 ## DAM: the unsexy essential
@@ -148,9 +164,11 @@ Digital Asset Management is the boring part that determines whether you can actu
 
 **Catalog-based (Lightroom, Capture One):** A database tracks your files, edits, keywords, ratings, and collections. Powerful search. Smart collections. The downside: the catalog is a proprietary file that ties you to the software.
 
-**Folder-based (DxO, darktable, most others):** Your filesystem is your organization. Edits are stored in sidecar files alongside your originals. More portable, less powerful. You need disciplined folder naming and can't do complex cross-folder searches without external tools.
+**Folder-based (DxO, RawTherapee, most others):** Your filesystem is your organization. Edits are stored in sidecar files alongside your originals. More portable, less powerful. You need disciplined folder naming and can't do complex cross-folder searches without external tools.
 
 **Cloud-based (Lightroom CC, Apple Photos):** The platform handles everything. Accessible anywhere. The trade-off: you're dependent on the service, storage costs money, and migration is painful.
+
+![The three kinds of library, and what each one trades away. A sketch.](diagram:lightroom-dam)
 
 No tool has cracked the DAM problem perfectly. Lightroom Classic's catalog is the most capable but also the most fragile and vendor-locked. The honest answer is that any DAM system requires discipline from the photographer — no software compensates for chaotic file management.
 
@@ -167,6 +185,8 @@ Every photo editor now has AI features. Here's what's real and what's hype:
 **Sky replacement, object removal, generative fill** — Luminar Neo and Lightroom both offer these. They work for social media. They fall apart under scrutiny. A generative sky composited onto a landscape is obvious to anyone who looks closely. Use with caution.
 
 **Upscaling** — AI upscalers (Topaz Gigapixel, Lightroom's Super Resolution) can double or quadruple resolution with impressive detail. Useful for cropping or printing large from smaller sensors.
+
+![Doubling a photo's resolution means four times the pixels, to scale.](diagram:lightroom-upscale)
 
 The pattern: AI is transformative for technical tasks (denoising, masking, upscaling) and gimmicky for creative tasks (sky replacement, style transfer). Invest your attention accordingly.
 

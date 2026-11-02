@@ -13,10 +13,10 @@ export const sidenotes: ArticleSidenotes = {
     },
     {
       marker:
-        "Canon discontinued its entire DSLR lineup",
+        "Canon hasn't launched a DSLR since 2020",
       type: "source",
       content:
-        "Canon CEO Fujio Mitarai confirmed the 1D X Mark III would be the final Canon DSLR in production, and there would be no future 5D beyond the Mark IV, no new 7D. The EOS 5D Mark IV was added to Canon Japan's discontinuation list before the camera's 10th birthday in August 2026. Mitarai stated: \"The market needs are acceleratingly shifting to mirrorless cameras.\"",
+        "Canon CEO Fujio Mitarai confirmed the 1D X Mark III would be the final Canon DSLR in production, and there would be no future 5D beyond the Mark IV, no new 7D. The EOS 5D Mark IV was added to Canon Japan's discontinuation list before the camera's 10th birthday in August 2026. Mitarai stated: \"The market needs are acceleratingly shifting to mirrorless cameras.\" Canon still [sold three DSLRs in July 2026](https://www.digitalcameraworld.com/cameras/dslr-cameras/canon-still-sells-600-000-dslrs-a-year-as-long-as-there-are-still-customers-we-would-like-to-continue-to-offer-our-products): the 1D X Mark III, the 5D Mark IV and the Rebel T7.",
       attribution: "Fujio Mitarai, Canon CEO",
       url: "https://www.eoshd.com/news/canon-officially-discontinue-entire-dslr-range-1d-x-mark-iii-to-cease-production/",
     },
@@ -33,7 +33,7 @@ export const sidenotes: ArticleSidenotes = {
         "Google's Night Sight, Apple's Smart HDR, Samsung's AI processing",
       type: "context",
       content:
-        "Google's Night Sight captures 15-30 frames at varying exposures, aligns them to compensate for hand movement, then merges and denoises the result. Apple's Smart HDR uses the Neural Engine to segment scenes — processing skies, faces, and shadows independently. Samsung's AI processing in the Galaxy S series applies scene-specific optimization across 30+ recognized categories. These techniques let phone cameras produce images that rival APS-C cameras with fast lenses in many conditions.",
+        "Google's Night Sight [captures 6 to 15 frames](https://research.google/blog/night-sight-seeing-in-the-dark-on-pixel-phones/), aligns them to compensate for hand movement, then merges and denoises the result. Apple's Smart HDR uses the Neural Engine to segment scenes — processing skies, faces, and shadows independently. Samsung's AI processing in the Galaxy S series applies scene-specific optimization across 30+ recognized categories. These techniques let phone cameras produce images that rival APS-C cameras with fast lenses in many conditions.",
       url: "https://fstoppers.com/gear/real-future-photography-computational-not-optical-712081",
     },
     {

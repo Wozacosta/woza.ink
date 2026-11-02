@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-labelledby="t-kohaku-today"><title id="t-kohaku-today">The four leaks and how far Kohaku had got on November 1, 2026. Dapp: one address per dapp is on the roadmap. RPC: light client adapters exist and private reads are experimental. Broadcast: direct P2P sending is on the roadmap. Chain: Privacy Pools and Tornado Cash plugins are alpha, and Railgun is a placeholder</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-kohaku-today" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >The four leaks, November 1, 2026</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A reading of the repositories, not a score</text>
+<text x="170" y="60" class="d-s" text-anchor="middle" >Planned</text>
+<text x="256" y="60" class="d-s" text-anchor="middle" >Experimental</text>
+<text x="342" y="60" class="d-s" text-anchor="middle" >Alpha</text>
+<text x="20" y="96" class="d-t" text-anchor="start" >Dapp</text>
+<line x1="170" y1="83" x2="342" y2="83" class="d-line d-faint"/>
+<circle cx="170" cy="83" r="6" class="d-green d-fill"/>
+<circle cx="256" cy="83" r="5" class="d-line d-faint"/>
+<circle cx="342" cy="83" r="5" class="d-line d-faint"/>
+<text x="100" y="112" class="d-s" text-anchor="start" >One address per dapp: roadmap</text>
+<text x="20" y="146" class="d-t" text-anchor="start" >RPC</text>
+<line x1="170" y1="133" x2="342" y2="133" class="d-line d-faint"/>
+<circle cx="170" cy="133" r="6" class="d-green d-fill"/>
+<circle cx="256" cy="133" r="6" class="d-green d-fill"/>
+<circle cx="342" cy="133" r="5" class="d-line d-faint"/>
+<text x="100" y="162" class="d-s" text-anchor="start" >Light clients ship, private reads experimental</text>
+<text x="20" y="196" class="d-t" text-anchor="start" >Broadcast</text>
+<line x1="170" y1="183" x2="342" y2="183" class="d-line d-faint"/>
+<circle cx="170" cy="183" r="6" class="d-green d-fill"/>
+<circle cx="256" cy="183" r="5" class="d-line d-faint"/>
+<circle cx="342" cy="183" r="5" class="d-line d-faint"/>
+<text x="100" y="212" class="d-s" text-anchor="start" >P2P sending: roadmap</text>
+<text x="20" y="246" class="d-t" text-anchor="start" >Chain</text>
+<line x1="170" y1="233" x2="342" y2="233" class="d-line d-faint"/>
+<circle cx="170" cy="233" r="6" class="d-green d-fill"/>
+<circle cx="256" cy="233" r="6" class="d-green d-fill"/>
+<circle cx="342" cy="233" r="6" class="d-green d-fill"/>
+<text x="100" y="262" class="d-s" text-anchor="start" >Two pool plugins in alpha, Railgun a stub</text>
+</svg>

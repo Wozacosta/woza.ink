@@ -41,7 +41,7 @@ export const sidenotes: ArticleSidenotes = {
       marker: "A draft standard, ERC-8176",
       type: "source",
       content:
-        "ERC-8176, \"Descriptor Attestations for ERC-7730\", was opened as a pull request to the ERCs repository on 26 February 2026 and is still under review. Another open proposal would put the descriptor registry itself on-chain.",
+        "ERC-8176, \"Descriptor Attestations for ERC-7730\", was opened as a pull request to the ERCs repository on 26 February 2026 and merged as a draft on 8 October 2026. Another open proposal would put the descriptor registry itself on-chain.",
       url: "https://github.com/ethereum/ERCs/pull/1576",
     },
     {

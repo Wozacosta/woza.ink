@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 268" role="img" aria-labelledby="t-worktree-parallel"><title id="t-worktree-parallel">A sketch of three branches leaving main at the same point. Each runs an agent in its own directory at the same time, then is pushed, its worktree removed and a PR opened, at different moments</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-worktree-parallel" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Three branches, all live at once</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A sketch: lengths aren't measured</text>
+<line x1="20" y1="66" x2="380" y2="66" class="d-line d-faint"/>
+<text x="380" y="58" class="d-s d-m" text-anchor="end" >main</text>
+<circle cx="44" cy="66" r="4" class="d-green d-fill"/>
+<text x="44" y="58" class="d-s" text-anchor="start" >add 3 worktrees</text>
+<path d="M44,66 L44,110 L60,110" class="d-line d-faint"/>
+<text x="64" y="97" class="d-s d-m" text-anchor="start" >feat/user-auth</text>
+<rect x="60" y="102" width="230" height="16" rx="3" class="d-blue d-fill" opacity="0.8"/>
+<circle cx="302" cy="110" r="4" class="d-blue d-fill"/>
+<text x="312" y="114" class="d-s" text-anchor="start" >PR</text>
+<path d="M44,66 L44,162 L60,162" class="d-line d-faint"/>
+<text x="64" y="149" class="d-s d-m" text-anchor="start" >fix/session-leak</text>
+<rect x="60" y="154" width="150" height="16" rx="3" class="d-rose d-fill" opacity="0.8"/>
+<circle cx="222" cy="162" r="4" class="d-rose d-fill"/>
+<text x="232" y="166" class="d-s" text-anchor="start" >PR</text>
+<path d="M44,66 L44,214 L60,214" class="d-line d-faint"/>
+<text x="64" y="201" class="d-s d-m" text-anchor="start" >refactor/db-layer</text>
+<rect x="60" y="206" width="280" height="16" rx="3" class="d-violet d-fill" opacity="0.8"/>
+<circle cx="352" cy="214" r="4" class="d-violet d-fill"/>
+<text x="362" y="218" class="d-s" text-anchor="start" >PR</text>
+<line x1="20" y1="232" x2="380" y2="232" class="d-line d-faint"/>
+<text x="20" y="254" class="d-s" text-anchor="start" >Each bar is one agent in its own directory. Finish in any order.</text>
+</svg>

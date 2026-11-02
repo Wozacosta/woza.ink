@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 244" role="img" aria-labelledby="t-flashspace-spaces"><title id="t-flashspace-spaces">Four spaces, each one keystroke away. Alt+1 is the terminal with Ghostty, Alt+2 the browser with Firefox, Alt+3 communication with Slack, Discord and email, and Alt+4 everything else. Alt+Shift plus a number moves the focused window there</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 244" role="img" aria-labelledby="t-flashspace-spaces"><title id="t-flashspace-spaces">Four workspaces, each one keystroke away. Alt+1 is the terminal with Ghostty, Alt+2 the browser with Firefox, Alt+3 communication with Slack, Discord and email, and Alt+4 everything else. Alt+Shift plus a number moves the focused window there</title>
 <style>
 .d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
 .d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
@@ -38,5 +38,5 @@
 <text x="218" y="160" class="d-t" text-anchor="start" >Misc</text>
 <text x="218" y="175" class="d-s" text-anchor="start" >Finder, settings</text>
 <line x1="20" y1="196" x2="380" y2="196" class="d-line d-faint"/>
-<text x="20" y="220" class="d-s" text-anchor="start" >Alt+Shift+number moves the focused window to that space.</text>
+<text x="20" y="220" class="d-s" text-anchor="start" >Alt+Shift+number moves the focused window to that workspace.</text>
 </svg>

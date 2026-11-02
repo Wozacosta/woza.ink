@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-eip155-replay"><title id="t-eip155-replay">Before EIP-155, sending 10 ETH on Ethereum could be replayed on Ethereum Classic, draining 10 ETC too. After it, a transaction signed for chain 1 is rejected by chain 61, because the chain ID doesn't match</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-eip155-replay" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Before EIP-155</text>
+<rect x="20" y="34" width="130" height="44" rx="8" class="d-box"/>
+<text x="85.0" y="60.5" class="d-t" text-anchor="middle" >Ethereum (ETH)</text>
+<rect x="250" y="34" width="130" height="44" rx="8" class="d-box"/>
+<text x="315.0" y="60.5" class="d-t" text-anchor="middle" >Eth Classic (ETC)</text>
+<path d="M150,56 L248,56" class="d-line" marker-end="url(#ah-eip155-replay)"/>
+<text x="199" y="48" class="d-s" text-anchor="middle" >send 10 ETH</text>
+<text x="200" y="100" class="d-s d-rose d-ct" text-anchor="middle" >The same tx replayed: 10 ETC also drained</text>
+<line x1="20" y1="118" x2="380" y2="118" class="d-line d-faint"/>
+<text x="20" y="144" class="d-t" text-anchor="start" >After EIP-155</text>
+<rect x="20" y="156" width="130" height="54" rx="8" class="d-box"/>
+<text x="85.0" y="178" class="d-t" text-anchor="middle" >ETH (chain 1)</text>
+<text x="85.0" y="194" class="d-s" text-anchor="middle" >tx signed for chain 1</text>
+<rect x="250" y="156" width="130" height="54" rx="8" class="d-box"/>
+<text x="315.0" y="178" class="d-t" text-anchor="middle" >ETC (chain 61)</text>
+<text x="315.0" y="194" class="d-s" text-anchor="middle" >rejects chain 1 tx</text>
+<path d="M150,183 L206,183" class="d-line d-rose d-stroke" stroke-dasharray="4 3"/>
+<path d="M212,177 L224,189 M224,177 L212,189" class="d-line d-rose d-stroke" stroke-width="2"/>
+<text x="200" y="238" class="d-s d-green d-ct" text-anchor="middle" >chainId mismatch: the tx is invalid</text>
+</svg>

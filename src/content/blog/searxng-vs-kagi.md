@@ -61,6 +61,8 @@ That has been a long, losing arms race, and 2026 has been rough:
 - **Mojeek.** Also inactive by default, because its CAPTCHA "requires much computer power to solve."
 - **Bing.** Off by default for at least three years.
 
+![The same year on a calendar.](diagram:searxng-breakage)
+
 What's left on by default is DuckDuckGo, Brave, that Google workaround, and a set of smaller sources. It's still useful, but it isn't what the video showed, and that's nobody's fault: the video was accurate in February.
 
 The practical cost is that you're the ops team. The docs include a page on [solving a CAPTCHA from your server's IP](https://docs.searxng.org/admin/answer-captcha.html) through an SSH tunnel. Public instances avoid the setup, and [searx.space](https://searx.space/) listed 73 online when I checked, but the docs warn that poorly protected ones are [more vulnerable](https://docs.searxng.org/own-instance.html) to abuse, which brings CAPTCHAs and IP bans.
@@ -74,6 +76,8 @@ Kagi has [three paid plans](https://kagi.com/pricing): $5 for 300 searches, $10 
 Its claim is that incentives do most of the work. Since subscribers pay and advertisers don't, it can [push down pages full of ads and trackers](https://help.kagi.com/kagi/search-details/search-sources.html), which it says correlate with low quality. That's a cheap signal against SEO spam, because the spam has to monetize somehow.
 
 On CJ's actual complaint, Kagi has something SearXNG doesn't. [SlopStop](https://help.kagi.com/kagi/features/slopstop.html) lets users report AI slop, each report gets reviewed, and a domain that's mostly AI-generated (typically more than 80% of its pages) gets flagged and downranked. You can also block or promote domains for yourself and scope a search with Lenses, which is the hostnames plugin with a UI.
+
+![A sketch of what sits between Kagi's sources and your page.](diagram:kagi-filters)
 
 Then there's the part the pricing page doesn't cover. Kagi [licenses directly](https://blog.kagi.com/waiting-dawn-search) from Mojeek, Brave, Yandex, Wikipedia, Apple and others. It failed with the two that matter most. Microsoft banned reordering or merging results, and then retired the Bing Search APIs in August 2025. Google offers no general search API at all. So Kagi says it uses third-party providers for "SERP-style results," and it's blunt about why:
 
@@ -99,6 +103,8 @@ Self-hosting at home has a catch CJ states directly: "they still know me by my I
 
 Kagi's default is a policy promise from a closed-source service that holds your email and payment details. Its better option is [Privacy Pass](https://blog.kagi.com/kagi-privacy-pass), where the server can verify that a client has paid but can't tell which client is connecting. That's the strongest guarantee in the table, because it replaces a promise with cryptography, and Kagi also runs a Tor onion service.
 
+![The two phases of Privacy Pass.](diagram:kagi-privacy-pass)
+
 The trust question isn't only technical either. Kagi [pays Yandex](https://ounapuu.ee/posts/2025/07/17/kagi/), and some customers have left over it.
 
 ---
@@ -108,6 +114,8 @@ The trust question isn't only technical either. Kagi [pays Yandex](https://ounap
 This is where SearXNG is hardest to beat. JSON output is off by default, but adding `json` to `search.formats` in `settings.yml` turns any query into an API call with `&format=json`. There's a popular [MCP server](https://github.com/ihor-sokoliuk/mcp-searxng), and CJ just vibe coded one. It costs nothing per query, though an agent searching in a loop from one IP is exactly the traffic that gets instances blocked.
 
 Kagi's equivalent is a [paid API](https://kagi.com/api/pricing): $12 per 1,000 searches and $4 per 1,000 extracted pages. That's fine for a product, and steep for a coding agent that searches all day.
+
+![What that price means at an example rate: 1,000 a day is 30,000 a month, or $360.](diagram:searxng-agent-cost)
 
 The video's other tool has moved too. Perplexica, the self-hosted Perplexity clone, is now [Vane](https://github.com/ItzCrazyKns/Vane), with about 38,000 stars and SearXNG underneath. It's the most complete version of this setup, as long as you remember what "local" covers: your queries still go out to the search engines, and to your LLM provider unless you run the model yourself through Ollama.
 
@@ -120,6 +128,8 @@ All of this rests on one company's refusal to sell access, and that may be chang
 Meanwhile, Google's [case against SerpApi](https://searchengineland.com/google-loses-key-dmca-claims-against-serpapi-in-scraping-lawsuit-483185) hasn't gone the way it wanted: a judge dismissed its DMCA claims in July, leaving it room to replead part of them.
 
 If the front door opens, Kagi gets a legal, stable route to Google's results. SearXNG doesn't. A hobbyist's container was never going to be a Qualified Competitor, so it stays at the back door, and the back door keeps getting narrower.
+
+![Who stands at which door.](diagram:searxng-doors)
 
 ---
 

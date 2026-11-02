@@ -46,6 +46,8 @@ Paragraph ([paragraph.com](https://paragraph.com/)) is the closest thing to a "w
 
 **The honest take:** Paragraph is the pragmatic choice. It bridges web2 and web3 without forcing you to pick a side. If you're writing for a crypto-native audience and want onchain primitives, it's the best option right now.
 
+![Paragraph's two layers. The newsletter works without touching the second one.](diagram:publishing-paragraph-layers)
+
 ---
 
 ## Mirror.xyz — The Pioneer That Didn't Survive
@@ -63,6 +65,8 @@ Mirror was the OG. Founded by Denis Nazarov (ex-a16z), it was "the Medium of web
 **Current status:** Dead as a standalone product. Sold to Paragraph in May 2024. All posts and subscribers migrated to Paragraph by November 2025. The original team pivoted to building **Kiosk**, a Farcaster-based social/commerce app.
 
 > ⚠️ Callout: If you had content on Mirror, it's now on Paragraph. Your Arweave copies still exist independently — that's the permanence promise actually delivering.
+
+![The page moved. The Arweave copy never had to.](diagram:publishing-mirror-fate)
 
 ---
 
@@ -102,6 +106,8 @@ Farcaster is a social protocol (think: decentralized Twitter). The main client a
 
 **The protocol paradox:** Farcaster raised $180M and hit a $1B valuation, but the user numbers tell a harder story. DAU peaked at ~100K in July 2024 and dropped 40%. New registrations fell 95.7% from 15,000 to ~650/day. Only ~4,360 Power Badge holders show authentic engagement. Monthly revenue cratered from $1.91M (peak) to ~$10K by October 2025. The strategy has shifted from competing with Twitter to [leaning into crypto-native strengths](https://blockeden.xyz/blog/2025/10/28/farcaster-in-2025-the-protocol-paradox/) — **Farcaster Pro** ($120/year, sold 10K subscriptions in 6 hours) and AI token deployment via **Clanker** (one AI agent created a token that hit $80M market cap).
 
+![Three of those numbers against their own peaks. The ~60K is that 40% drop from ~100K.](diagram:publishing-farcaster-decline)
+
 **Recent drama:** In January 2026, **Neynar acquired the Farcaster protocol** from Merkle Manufactory (which returned ~$180M in venture funding). The "sufficiently decentralized" claim has been challenged — only 11 validators on Snapchain, selected via community vote every 6 months.
 
 **The honest take:** World-class infrastructure, insufficient users. Farcaster is where the most interesting crypto-native conversations happen — but "sufficiently decentralized" is doing a lot of heavy lifting in that tagline, and the user retention problem is real.
@@ -122,11 +128,13 @@ The original blockchain blogging platform. Pioneered earning crypto for creating
 
 The community's response to the Justin Sun takeover. Forked from Steem, community-governed, no single controlling entity.
 
+![How one chain became two.](diagram:publishing-steem-fork)
+
 **How it works:**
 - Content stored **directly on the Hive blockchain** (not IPFS, not Arweave — actually onchain).
 - Reward pool model: 65% of HIVE inflation feeds rewards, split between creators and curators.
 - Multiple competing frontends: Peakd (~3.1K MAU), Ecency (~2.2K), Hive.Blog (~1K).
-- HBD (stablecoin) savings earn ~20% APR from the blockchain itself.
+- HBD (stablecoin) savings earn ~10% APR from the blockchain itself.
 
 **The problem:** Whale-dominated voting, self-voting schemes, reward pool gaming, declining user base, and a steep learning curve (Hive Power, delegations, resource credits). The token price decline has made the dollar value of rewards less compelling.
 
@@ -145,6 +153,8 @@ Built on **Stacks** (Bitcoin L2). The unique angle: inscribe your writing as **B
 ### friend.tech — The SocialFi Cautionary Tale
 [friend.tech](https://www.friend.tech/) launched on Base in 2023 with a simple hook: buy "keys" to access exclusive chat rooms with creators. It exploded — $52M in deposits at peak, $2M/day in fees. Then it collapsed just as fast. By late 2024, daily new users dropped to single digits, fees fell under $100/day, and deposits were down 92%. The founders transferred smart contract ownership to a null address — effectively making it immutable but abandoned — and walked away with roughly $44M. The FRIEND token crashed 98% from its launch. A textbook example of what happens when speculation is the product and there's no underlying utility once the hype fades.
 
+![The same collapse as areas. The ~$4.2M is 92% off $52M.](diagram:publishing-friendtech)
+
 ### DeSo — Purpose-Built Social Chain
 Its own L1 blockchain designed specifically for social media. Formerly BitClout (the one that launched by scraping Twitter profiles without consent). Content stored directly onchain at ~1/10,000th the cost of Ethereum. Creator Coins let you speculate on people, which is either innovative or dystopian depending on your perspective.
 
@@ -161,6 +171,8 @@ Built on Lens Protocol, designed as a direct Medium alternative. Interesting con
 The pitch: your identity is your AT Protocol handle, not a platform account. Publish long-form documents and they're interoperable with the entire Atmosphere ecosystem — engagement from Bluesky flows back to your Leaflet posts. You can create instant collaborative docs without even signing up, or run full publications as AT Protocol-native blogs.
 
 It's not decentralized storage (no IPFS, no Arweave). It's decentralized *identity and social graph*. Your readers follow you across any app on the protocol. If Leaflet disappears tomorrow, your identity, followers, and social connections don't. That's a different bet than the crypto-native platforms above, but it's solving the same core problem: your audience shouldn't be hostage to any single service.
+
+![Two different things to take off a platform.](diagram:publishing-leaflet-bet)
 
 Leaflet has since moved to [Standard.site](https://standard.site/), a shared format for long-form posts that it [created with pckt and Offprint](https://atproto.com/blog/standard-site-bluesky-timeline), so writing is easier to carry between these apps. Custom domains are free, and a [$120/year Pro plan](https://leaflet.pub/) adds analytics, post scheduling and email subscribers. It's still labelled beta, from a team of three.
 
@@ -181,16 +193,18 @@ Publishing onchain is one thing. Actually serving that content to readers throug
 **Why it matters for publishing:** If you host your blog on IPFS and point your ENS name at it, eth.limo is what makes it accessible without requiring readers to run a special browser or extension. It's the bridge between the decentralized web and the one people actually use.
 
 **Key details:**
-- DAO-governed, no centralized censorship
-- TLSv1.3 encryption by default, privacy-preserving (no tracking, no logging)
+- A public good run by a small team, funded by grants and the ENS DAO
+- TLSv1.3 encryption by default, privacy-preserving (no tracking, anonymized logs)
 - Supports CCIP (Cross Chain Interoperability Protocol) for L2 name resolution
 - Also powers **eth.link** now, after that gateway had years of spotty availability under Cloudflare
 
 ### eth.link / eth.domains — The Alternatives
 
-**eth.link** was the original ENS gateway, run with Cloudflare. It was unreliable for years and performed content censorship. It's now powered by eth.limo's infrastructure, so functionally they're the same service. **eth.domains** is another gateway set up in collaboration with Cloudflare — same idea, different URL suffix.
+**eth.link** was the original ENS gateway, run with Cloudflare. It was unreliable for years and performed content censorship. It's now powered by eth.limo's infrastructure, so functionally they're the same service. **eth.domains** was another gateway set up in collaboration with Cloudflare — same idea, different URL suffix — but the name no longer resolves.
 
-The difference: eth.limo is DAO-governed and censorship-resistant. The Cloudflare-backed gateways have historically applied content filtering. If you care about censorship resistance, eth.limo is the one to use.
+The difference: eth.limo is a small team living on grants, and the Cloudflare-backed gateways have historically applied content filtering. If you care about censorship resistance, eth.limo is the one to use, though it still has abuse and DMCA channels.
+
+![Where the gateways stand. In practice there's one operator behind the two names that still work.](diagram:publishing-gateways)
 
 ### Fleek (RIP) and the Hosting Gap
 
@@ -240,6 +254,8 @@ If "I own my content" means "I can export a markdown file," Substack is fine. If
 
 **3. Are you building a long-term portable identity?**
 Lens and Farcaster offer something no web2 platform can: a social graph that survives platform death. If you believe the future is protocol-level audiences rather than platform-locked ones, investing in these ecosystems now is a bet on portability.
+
+![The three questions as a map.](diagram:publishing-decision)
 
 **The honest assessment:** The onchain publishing space is still early. Mirror died. t2 stalled. Steemit got hijacked. The platforms that survived (Paragraph, Hive, Lens, Farcaster) each made real trade-offs. None of them match the distribution power of Substack or Medium.
 

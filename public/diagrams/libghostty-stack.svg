@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 288" role="img" aria-labelledby="t-libghostty-stack"><title id="t-libghostty-stack">Ghostty, cmux and any other app can sit on libghostty. libghostty-vt, which parses terminal sequences and keeps terminal state with no dependencies, is taking shape. Input handling, GPU rendering and GTK and Swift widgets are planned</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 278" role="img" aria-labelledby="t-libghostty-stack"><title id="t-libghostty-stack">Ghostty, cmux and any other app can sit on libghostty. libghostty-vt, which parses terminal sequences and keeps terminal state with no dependencies, is taking shape. Input handling, GPU rendering and GTK and Swift widgets are planned</title>
 <style>
 .d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
 .d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
@@ -13,26 +13,40 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-libghostty-stack" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="88" width="360" height="178" rx="8" class="d-box"/>
+<g data-node="ghostty">
 <rect x="20" y="16" width="112" height="42" rx="8" class="d-box"/>
 <text x="76.0" y="41.5" class="d-t" text-anchor="middle" >Ghostty</text>
-<path d="M76,58 L76,88" class="d-line" marker-end="url(#ah-libghostty-stack)"/>
+</g>
+<path d="M76,58 L76,110" class="d-line" data-edge="ghostty-vt" marker-end="url(#ah-libghostty-stack)"/>
+<g data-node="cmux">
 <rect x="144" y="16" width="112" height="42" rx="8" class="d-box"/>
 <text x="200.0" y="41.5" class="d-t" text-anchor="middle" >cmux</text>
-<path d="M200,58 L200,88" class="d-line" marker-end="url(#ah-libghostty-stack)"/>
+</g>
+<path d="M200,58 L200,110" class="d-line" data-edge="cmux-vt" marker-end="url(#ah-libghostty-stack)"/>
+<g data-node="app">
 <rect x="268" y="16" width="112" height="42" rx="8" class="d-ext"/>
 <text x="324.0" y="41.5" class="d-t" text-anchor="middle" >Your app</text>
-<path d="M324,58 L324,88" class="d-line" marker-end="url(#ah-libghostty-stack)"/>
-<rect x="20" y="90" width="360" height="168" rx="8" class="d-box"/>
-<text x="34" y="114" class="d-t" text-anchor="start" >libghostty</text>
-<rect x="34" y="124" width="332" height="54" rx="8" class="d-box"/>
-<circle cx="48" cy="142" r="4" class="d-green d-fill"/>
-<text x="60" y="146" class="d-t" text-anchor="start" >libghostty-vt</text>
-<text x="60" y="162" class="d-s" text-anchor="start" >Terminal sequences and state, no dependencies</text>
-<rect x="34" y="188" width="106" height="42" rx="8" class="d-ext"/>
-<text x="87.0" y="213.5" class="d-t" text-anchor="middle" >Input</text>
-<rect x="147" y="188" width="106" height="42" rx="8" class="d-ext"/>
-<text x="200.0" y="213.5" class="d-t" text-anchor="middle" >GPU rendering</text>
-<rect x="260" y="188" width="106" height="42" rx="8" class="d-ext"/>
-<text x="313.0" y="213.5" class="d-t" text-anchor="middle" >Widgets</text>
-<text x="34" y="248" class="d-s" text-anchor="start" >Dashed: planned</text>
+</g>
+<path d="M324,58 L324,110" class="d-line" data-edge="app-vt" marker-end="url(#ah-libghostty-stack)"/>
+<g data-node="vt">
+<rect x="34" y="112" width="332" height="54" rx="8" class="d-box"/>
+<circle cx="48" cy="130" r="4" class="d-green d-fill"/>
+<text x="60" y="134" class="d-t" text-anchor="start" >libghostty-vt</text>
+<text x="60" y="150" class="d-s" text-anchor="start" >Terminal sequences and state, no dependencies</text>
+</g>
+<g data-node="input">
+<rect x="34" y="176" width="106" height="42" rx="8" class="d-ext"/>
+<text x="87.0" y="201.5" class="d-t" text-anchor="middle" >Input</text>
+</g>
+<g data-node="gpu">
+<rect x="147" y="176" width="106" height="42" rx="8" class="d-ext"/>
+<text x="200.0" y="201.5" class="d-t" text-anchor="middle" >GPU rendering</text>
+</g>
+<g data-node="widgets">
+<rect x="260" y="176" width="106" height="42" rx="8" class="d-ext"/>
+<text x="313.0" y="201.5" class="d-t" text-anchor="middle" >Widgets</text>
+</g>
+<text x="34" y="248" class="d-t" text-anchor="start" >libghostty</text>
+<text x="366" y="248" class="d-s" text-anchor="end" >Dashed: planned</text>
 </svg>

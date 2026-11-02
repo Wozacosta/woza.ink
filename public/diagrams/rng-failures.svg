@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 286" role="img" aria-labelledby="t-rng-failures"><title id="t-rng-failures">Three randomness failures on a timeline to scale. Debian OpenSSL from 2006 to 2008 cut the seed to 15 bits. The PlayStation 3 in 2010 signed with a constant nonce. Android SecureRandom in 2013 repeated nonces. In each case the cryptography above was sound</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-rng-failures" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Sound cryptography, bad randomness</text>
+<line x1="20" y1="54" x2="380" y2="54" class="d-line d-faint"/>
+<text x="20.0" y="46" class="d-s" text-anchor="start" >2006</text>
+<line x1="20.0" y1="51" x2="20.0" y2="57" class="d-line d-faint"/>
+<text x="110.0" y="46" class="d-s" text-anchor="middle" >2008</text>
+<line x1="110.0" y1="51" x2="110.0" y2="57" class="d-line d-faint"/>
+<text x="200.0" y="46" class="d-s" text-anchor="middle" >2010</text>
+<line x1="200.0" y1="51" x2="200.0" y2="57" class="d-line d-faint"/>
+<text x="290.0" y="46" class="d-s" text-anchor="middle" >2012</text>
+<line x1="290.0" y1="51" x2="290.0" y2="57" class="d-line d-faint"/>
+<text x="380.0" y="46" class="d-s" text-anchor="end" >2014</text>
+<line x1="380.0" y1="51" x2="380.0" y2="57" class="d-line d-faint"/>
+<rect x="51.5" y="50" width="75.1" height="8" rx="2" class="d-rose d-fill"/>
+<circle cx="244.1" cy="54" r="5" class="d-amber d-fill"/>
+<circle cx="362.0" cy="54" r="5" class="d-violet d-fill"/>
+<rect x="20" y="76" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="94" r="4" class="d-rose d-fill"/>
+<text x="46" y="98" class="d-t" text-anchor="start" >Debian OpenSSL, 2006–2008</text>
+<text x="46" y="114" class="d-s" text-anchor="start" >Seed cut to the process ID: 15 bits</text>
+<rect x="20" y="142" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="160" r="4" class="d-amber d-fill"/>
+<text x="46" y="164" class="d-t" text-anchor="start" >PlayStation 3, 2010</text>
+<text x="46" y="180" class="d-s" text-anchor="start" >One nonce for every signature</text>
+<rect x="20" y="208" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="226" r="4" class="d-violet d-fill"/>
+<text x="46" y="230" class="d-t" text-anchor="start" >Android SecureRandom, 2013</text>
+<text x="46" y="246" class="d-s" text-anchor="start" >Repeated ECDSA nonces</text>
+</svg>

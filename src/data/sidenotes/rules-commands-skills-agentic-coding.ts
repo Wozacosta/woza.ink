@@ -40,7 +40,7 @@ export const sidenotes: ArticleSidenotes = {
         "detailed instructions, workflows, domain knowledge, and reference material",
       type: "note",
       content:
-        "A SKILL.md file requires a YAML frontmatter header with `name` and `description`. But the real power is in the optional supporting files: templates for the agent to fill in, example outputs showing expected format, shell scripts the agent can execute to inject live data, and reference documentation. A well-built skill directory is essentially a self-contained expert system.",
+        "A SKILL.md file opens with YAML frontmatter, and in Claude Code every field is optional, though `description` is recommended because it's how the agent decides when to load the skill. But the real power is in the optional supporting files: templates for the agent to fill in, example outputs showing expected format, shell scripts the agent can execute to inject live data, and reference documentation. A well-built skill directory is essentially a self-contained expert system.",
       url: "https://code.claude.com/docs/en/skills",
     },
     {
@@ -48,7 +48,7 @@ export const sidenotes: ArticleSidenotes = {
         "The three layers compound. Rules set the baseline. Commands handle the repetitive. Skills handle the complex",
       type: "quote",
       content:
-        "Simon Willison, speaking at the Pragmatic Engineering Summit in March 2026, described a pivotal moment: \"the moment where the agent writes more code than you do.\" At that point, the developer's primary output shifts from code to context — the rules, commands, and skills that shape agent behavior become the actual product of your engineering work.",
+        "Simon Willison, speaking at the Pragmatic Summit in February 2026, described a pivotal moment: \"that moment where the agent writes more code than you do.\" At that point, the developer's primary output shifts from code to context — the rules, commands, and skills that shape agent behavior become the actual product of your engineering work.",
     },
     {
       marker:

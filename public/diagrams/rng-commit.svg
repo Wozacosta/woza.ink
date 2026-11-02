@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 306" role="img" aria-labelledby="t-rng-commit"><title id="t-rng-commit">Provably fair commit-reveal. The operator publishes a hash of a server seed. The player supplies a client seed. Each round runs both seeds and a nonce through HMAC-SHA256. Later the operator reveals the server seed and the player recomputes every round</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-rng-commit" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="operator">
+<rect x="20" y="16" width="130" height="40" rx="8" class="d-box"/>
+<circle cx="34" cy="36.0" r="4" class="d-violet d-fill"/>
+<text x="46" y="40.5" class="d-t" text-anchor="start" >Operator</text>
+</g>
+<g data-node="player">
+<rect x="250" y="16" width="130" height="40" rx="8" class="d-box"/>
+<circle cx="264" cy="36.0" r="4" class="d-green d-fill"/>
+<text x="276" y="40.5" class="d-t" text-anchor="start" >Player</text>
+</g>
+<line x1="85" y1="56" x2="85" y2="296" class="d-line d-faint"/>
+<line x1="315" y1="56" x2="315" y2="296" class="d-line d-faint"/>
+<path d="M85,96 L315,96" class="d-line" data-edge="operator-player" marker-end="url(#ah-rng-commit)"/>
+<text x="200" y="88" class="d-s" text-anchor="middle" data-edge="operator-player">hash(server seed)</text>
+<path d="M315,146 L85,146" class="d-line" data-edge="player-operator" marker-end="url(#ah-rng-commit)"/>
+<text x="200" y="138" class="d-s" text-anchor="middle" data-edge="player-operator">client seed</text>
+<g data-node="round"><rect x="110" y="166" width="180" height="48" rx="8" class="d-box"/>
+<text x="200" y="186" class="d-t" text-anchor="middle" >Each round</text>
+<text x="200" y="203" class="d-s" text-anchor="middle" >HMAC-SHA256, nonce + 1</text>
+</g>
+<path d="M85,244 L315,244" class="d-line" data-edge="operator-player-reveal" marker-end="url(#ah-rng-commit)"/>
+<text x="200" y="236" class="d-s" text-anchor="middle" data-edge="operator-player-reveal">server seed revealed</text>
+<text x="307" y="276" class="d-s d-green d-ct" text-anchor="end" >Recompute every round</text>
+<circle cx="315" cy="272" r="5" class="d-green d-fill"/>
+</svg>

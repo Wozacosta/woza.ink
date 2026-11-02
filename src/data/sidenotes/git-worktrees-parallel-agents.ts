@@ -8,7 +8,7 @@ export const sidenotes: ArticleSidenotes = {
         "A worktree is an additional checkout of the same repo at a different path, on a different branch",
       type: "context",
       content:
-        "Git worktree was introduced in **Git 2.5**, released July 29, 2015. The announcement described linked working trees as \"pseudo-repositories\" — each with its own checked-out working copy, whose `.git` is actually a file that refers back to the main repository's history and refs. The feature was marked experimental at launch and took years to gain mainstream awareness.",
+        "Git worktree was introduced in **Git 2.5**, released July 27, 2015. The announcement described linked working trees as \"pseudo-repositories\" — each with its own checked-out working copy, whose `.git` is actually a file that refers back to the main repository's history and refs. The feature was marked experimental at launch and took years to gain mainstream awareness.",
       url: "https://github.blog/open-source/git/git-2-5-including-multiple-worktrees-and-triangular-workflows/",
     },
     {
@@ -41,7 +41,7 @@ export const sidenotes: ArticleSidenotes = {
         "Git enforces this — it prevents two worktrees from getting out of sync on the same branch",
       type: "context",
       content:
-        "The single-branch-per-worktree constraint exists because Git's ref system assumes one HEAD per working directory. If two worktrees shared a branch, a commit in one would silently move HEAD in the other, leaving it with a dirty diff it never created. This is also why `git worktree lock` was added in Git 2.15 — to prevent accidental cleanup of worktrees on network or removable drives.",
+        "The single-branch-per-worktree constraint exists because Git's ref system assumes one HEAD per working directory. If two worktrees shared a branch, a commit in one would silently move HEAD in the other, leaving it with a dirty diff it never created. This is also why `git worktree lock` was added in Git 2.10 — to prevent accidental cleanup of worktrees on network or removable drives.",
     },
     {
       marker: "If you're doing this frequently, a small alias saves typing",

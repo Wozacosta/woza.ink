@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 372" role="img" aria-labelledby="t-nest-di"><title id="t-nest-di">UsersController declares UsersService in its constructor. The TypeScript compiler stores that type as metadata, the DI container reads it, finds the provider in UsersModule, and builds the controller with the service injected</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-nest-di" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >From a constructor to an instance</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >You declare the dependency, the framework resolves it</text>
+<g data-node="controller">
+<rect x="20" y="54" width="360" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="72" r="4" class="d-blue d-fill"/>
+<text x="46" y="76" class="d-t" text-anchor="start" >UsersController</text>
+<text x="46" y="92" class="d-s" text-anchor="start" >constructor(usersService: UsersService)</text>
+</g>
+<g data-node="compiler">
+<rect x="20" y="140" width="360" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="158" r="4" class="d-violet d-fill"/>
+<text x="46" y="162" class="d-t" text-anchor="start" >TypeScript compiler</text>
+<text x="46" y="178" class="d-s" text-anchor="start" >Keeps the type as design:paramtypes metadata</text>
+</g>
+<g data-node="container">
+<rect x="20" y="226" width="216" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="244" r="4" class="d-amber d-fill"/>
+<text x="46" y="248" class="d-t" text-anchor="start" >DI container</text>
+<text x="46" y="264" class="d-s" text-anchor="start" >Reads the types at runtime</text>
+</g>
+<g data-node="module">
+<rect x="262" y="226" width="118" height="52" rx="8" class="d-box"/>
+<circle cx="276" cy="244" r="4" class="d-green d-fill"/>
+<text x="288" y="248" class="d-t" text-anchor="start" >UsersModule</text>
+<text x="288" y="264" class="d-s" text-anchor="start" >providers</text>
+</g>
+<g data-node="instance">
+<rect x="20" y="312" width="360" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="330" r="4" class="d-green d-fill"/>
+<text x="46" y="334" class="d-t" text-anchor="start" >A ready controller</text>
+<text x="46" y="350" class="d-s" text-anchor="start" >UsersService injected, no new anywhere</text>
+</g>
+<path d="M128,106 L128,138" class="d-line" data-edge="controller-compiler" marker-end="url(#ah-nest-di)"/>
+<path d="M128,192 L128,224" class="d-line" data-edge="compiler-container" marker-end="url(#ah-nest-di)"/>
+<path d="M262,252 L238,252" class="d-line" data-edge="module-container" marker-end="url(#ah-nest-di)"/>
+<path d="M128,278 L128,310" class="d-line" data-edge="container-instance" marker-end="url(#ah-nest-di)"/>
+</svg>

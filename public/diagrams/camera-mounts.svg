@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 272" role="img" aria-labelledby="t-camera-mounts"><title id="t-camera-mounts">When each mount arrived, to scale: Micro Four Thirds in 2008, Sony E in 2010, Fujifilm X in 2012, and Nikon Z and Canon RF in 2018. All five are still running</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-camera-mounts" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Five mounts, by age</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >To scale, from launch to 2026</text>
+<g data-node="mft">
+<rect x="20" y="54" width="360" height="28" rx="8" class="d-box"/>
+<circle cx="34" cy="68.0" r="4" class="d-rose d-fill"/>
+<text x="46" y="72.5" class="d-t" text-anchor="start" >Micro Four Thirds</text>
+</g>
+<g data-node="sony">
+<rect x="60" y="88" width="320" height="28" rx="8" class="d-box"/>
+<circle cx="74" cy="102.0" r="4" class="d-blue d-fill"/>
+<text x="86" y="106.5" class="d-t" text-anchor="start" >Sony E</text>
+</g>
+<g data-node="fuji">
+<rect x="100" y="122" width="280" height="28" rx="8" class="d-box"/>
+<circle cx="114" cy="136.0" r="4" class="d-green d-fill"/>
+<text x="126" y="140.5" class="d-t" text-anchor="start" >Fujifilm X</text>
+</g>
+<g data-node="nikon">
+<rect x="220" y="156" width="160" height="28" rx="8" class="d-box"/>
+<circle cx="234" cy="170.0" r="4" class="d-blue d-fill"/>
+<text x="246" y="174.5" class="d-t" text-anchor="start" >Nikon Z</text>
+</g>
+<g data-node="canon">
+<rect x="220" y="190" width="160" height="28" rx="8" class="d-box"/>
+<circle cx="234" cy="204.0" r="4" class="d-blue d-fill"/>
+<text x="246" y="208.5" class="d-t" text-anchor="start" >Canon RF</text>
+</g>
+<line x1="20" y1="228" x2="380" y2="228" class="d-line d-faint"/>
+<text x="29" y="242" class="d-s" text-anchor="middle" >2008</text>
+<text x="100" y="242" class="d-s" text-anchor="middle" >2012</text>
+<text x="180" y="242" class="d-s" text-anchor="middle" >2016</text>
+<text x="260" y="242" class="d-s" text-anchor="middle" >2020</text>
+<text x="340" y="242" class="d-s" text-anchor="middle" >2024</text>
+<circle cx="24" cy="260" r="4" class="d-blue d-fill"/>
+<text x="34" y="264" class="d-s" text-anchor="start" >Full-frame and APS-C</text>
+<circle cx="170" cy="260" r="4" class="d-green d-fill"/>
+<text x="180" y="264" class="d-s" text-anchor="start" >APS-C only</text>
+<circle cx="254" cy="260" r="4" class="d-rose d-fill"/>
+<text x="264" y="264" class="d-s" text-anchor="start" >Micro Four Thirds</text>
+</svg>

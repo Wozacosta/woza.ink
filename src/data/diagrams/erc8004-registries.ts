@@ -36,7 +36,7 @@ export const erc8004Registries: InteractiveDiagramConfig = {
       id: "offchain",
       title: "Offchain data",
       description:
-        "The registration file can sit on IPFS, Arweave or HTTPS, and detailed feedback and evidence stay offchain too. Onchain there's only a URI and a KECCAK-256 hash, which keeps the footprint small.",
+        "The registration file can sit on IPFS, Arweave or HTTPS, and detailed feedback and evidence stay offchain too. Onchain there's only a URI, plus a KECCAK-256 hash for feedback and validation data, which keeps the footprint small.",
       links: ["identity", "reputation", "validation"],
     },
   ],
@@ -52,7 +52,7 @@ export const erc8004Registries: InteractiveDiagramConfig = {
       edges: ["client-identity"],
     },
     {
-      text: "The URI leads to the Agent Registration File: its name, services and endpoints. The onchain hash commits to the content.",
+      text: "The URI leads to the Agent Registration File: its name, services and endpoints. The contract keeps no hash of it, so an IPFS URI is what pins the content.",
       nodes: ["identity", "offchain"],
       edges: ["identity-offchain"],
     },

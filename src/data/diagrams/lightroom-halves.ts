@@ -63,7 +63,7 @@ export const lightroomHalves: InteractiveDiagramConfig = {
       id: "dxo",
       title: "DxO PhotoLab",
       description:
-        "The noise reduction leader, with lens corrections from lab-measured data. A one-time purchase at around $230, but its DAM is minimal, so it needs a separate tool for organization.",
+        "The noise reduction leader, with lens corrections from lab-measured data. A one-time purchase at around $240, but its DAM is minimal, so it needs a separate tool for organization.",
       links: [],
     },
   ],

@@ -22,6 +22,8 @@ The headline feature is the **notification rings**. When an agent finishes a tas
 
 This sounds small. It isn't. The normal workflow without it: run an agent, stare at the terminal waiting to see if it's done, or compulsively switch tabs. With notification rings you can just let it run and glance over when it calls for you. That's a different relationship with the tool.
 
+![The same run, checked over and over or looked at once. A sketch.](diagram:cmux-attention)
+
 The **vertical tab sidebar** shows git branch, working directory, open ports, and notification text for each tab. At a glance you know which agent is on which branch doing what. With four agents running in parallel, that context matters.
 
 The **embedded browser** lets you split a browser pane alongside your terminal, with a scriptable API. The use case is keeping PRs, docs, or design references pinned next to the code — without context-switching to a separate app.

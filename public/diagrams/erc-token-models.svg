@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 312" role="img" aria-labelledby="t-erc-token-models"><title id="t-erc-token-models">ERC-20 is fungible, with one contract per token and one transaction per transfer. ERC-721 is non-fungible, with one contract per collection and one transaction per transfer. ERC-1155 holds both in one contract for everything, with one transaction for a batch transfer</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-erc-token-models" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="8" width="360" height="92" rx="8" class="d-box"/>
+<text x="34" y="30" class="d-t" text-anchor="start" >ERC-20</text>
+<text x="34" y="46" class="d-s" text-anchor="start" >fungible: all identical</text>
+<text x="366" y="30" class="d-s" text-anchor="end" >1 contract per token</text>
+<text x="366" y="46" class="d-s" text-anchor="end" >1 tx per transfer</text>
+<rect x="34" y="60" width="50" height="28" rx="5" class="d-blue d-fill" opacity="0.16"/>
+<rect x="34" y="60" width="50" height="28" rx="5" class="d-line d-blue d-stroke"/>
+<text x="59.0" y="78.0" class="d-s" text-anchor="middle" >USDC</text>
+<rect x="90" y="60" width="50" height="28" rx="5" class="d-blue d-fill" opacity="0.16"/>
+<rect x="90" y="60" width="50" height="28" rx="5" class="d-line d-blue d-stroke"/>
+<text x="115.0" y="78.0" class="d-s" text-anchor="middle" >USDC</text>
+<rect x="146" y="60" width="50" height="28" rx="5" class="d-blue d-fill" opacity="0.16"/>
+<rect x="146" y="60" width="50" height="28" rx="5" class="d-line d-blue d-stroke"/>
+<text x="171.0" y="78.0" class="d-s" text-anchor="middle" >USDC</text>
+<rect x="20" y="108" width="360" height="92" rx="8" class="d-box"/>
+<text x="34" y="130" class="d-t" text-anchor="start" >ERC-721</text>
+<text x="34" y="146" class="d-s" text-anchor="start" >non-fungible: all unique</text>
+<text x="366" y="130" class="d-s" text-anchor="end" >1 contract per collection</text>
+<text x="366" y="146" class="d-s" text-anchor="end" >1 tx per transfer</text>
+<rect x="34" y="160" width="50" height="28" rx="5" class="d-violet d-fill" opacity="0.16"/>
+<rect x="34" y="160" width="50" height="28" rx="5" class="d-line d-violet d-stroke"/>
+<text x="59.0" y="178.0" class="d-s" text-anchor="middle" >#01</text>
+<rect x="90" y="160" width="50" height="28" rx="5" class="d-rose d-fill" opacity="0.16"/>
+<rect x="90" y="160" width="50" height="28" rx="5" class="d-line d-rose d-stroke"/>
+<text x="115.0" y="178.0" class="d-s" text-anchor="middle" >#02</text>
+<rect x="146" y="160" width="50" height="28" rx="5" class="d-green d-fill" opacity="0.16"/>
+<rect x="146" y="160" width="50" height="28" rx="5" class="d-line d-green d-stroke"/>
+<text x="171.0" y="178.0" class="d-s" text-anchor="middle" >#03</text>
+<rect x="20" y="208" width="360" height="92" rx="8" class="d-box"/>
+<text x="34" y="230" class="d-t" text-anchor="start" >ERC-1155</text>
+<text x="34" y="246" class="d-s" text-anchor="start" >both: multi-token</text>
+<text x="366" y="230" class="d-s d-green d-ct" text-anchor="end" >1 contract for everything</text>
+<text x="366" y="246" class="d-s d-green d-ct" text-anchor="end" >1 tx for batch transfer</text>
+<rect x="34" y="260" width="50" height="28" rx="5" class="d-amber d-fill" opacity="0.16"/>
+<rect x="34" y="260" width="50" height="28" rx="5" class="d-line d-amber d-stroke"/>
+<text x="59.0" y="278.0" class="d-s" text-anchor="middle" >gold</text>
+<rect x="90" y="260" width="50" height="28" rx="5" class="d-amber d-fill" opacity="0.16"/>
+<rect x="90" y="260" width="50" height="28" rx="5" class="d-line d-amber d-stroke"/>
+<text x="115.0" y="278.0" class="d-s" text-anchor="middle" >gold</text>
+<rect x="146" y="260" width="50" height="28" rx="5" class="d-amber d-fill" opacity="0.16"/>
+<rect x="146" y="260" width="50" height="28" rx="5" class="d-line d-amber d-stroke"/>
+<text x="171.0" y="278.0" class="d-s" text-anchor="middle" >gold</text>
+<rect x="202" y="260" width="50" height="28" rx="5" class="d-violet d-fill" opacity="0.16"/>
+<rect x="202" y="260" width="50" height="28" rx="5" class="d-line d-violet d-stroke"/>
+<text x="227.0" y="278.0" class="d-s" text-anchor="middle" >#01</text>
+</svg>

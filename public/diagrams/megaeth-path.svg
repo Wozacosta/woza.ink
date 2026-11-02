@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 374" role="img" aria-labelledby="t-megaeth-path"><title id="t-megaeth-path">A transaction on MegaETH. An RPC endpoint checks it and forwards it to the sequencer. The sequencer executes it and seals a mini-block about every 10 milliseconds. RPC nodes receive the stream, so the result is queryable. About every second an EVM block bundles the mini-blocks. Block data goes to EigenDA, and a certificate goes to Ethereum</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-megaeth-path" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="rpc">
+<rect x="20" y="16" width="290" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="34" r="4" class="d-blue d-fill"/>
+<text x="46" y="38" class="d-t" text-anchor="start" >RPC endpoint</text>
+<text x="46" y="54" class="d-s" text-anchor="start" >checks it, forwards it</text>
+</g>
+<path d="M64,70 L64,86" class="d-line" data-edge="rpc-sequencer" marker-end="url(#ah-megaeth-path)"/>
+<g data-node="sequencer">
+<rect x="20" y="88" width="290" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="106" r="4" class="d-violet d-fill"/>
+<text x="46" y="110" class="d-t" text-anchor="start" >Sequencer</text>
+<text x="46" y="126" class="d-s" text-anchor="start" >executes, seals a mini-block</text>
+</g>
+<text x="380" y="120" class="d-t d-violet d-ct" text-anchor="end" >~10 ms</text>
+<path d="M64,142 L64,158" class="d-line" data-edge="sequencer-stream" marker-end="url(#ah-megaeth-path)"/>
+<g data-node="stream">
+<rect x="20" y="160" width="290" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="178" r="4" class="d-green d-fill"/>
+<text x="46" y="182" class="d-t" text-anchor="start" >RPC nodes</text>
+<text x="46" y="198" class="d-s" text-anchor="start" >receive it, result is queryable</text>
+</g>
+<text x="380" y="192" class="d-t d-green d-ct" text-anchor="end" >at once</text>
+<path d="M64,214 L64,230" class="d-line" data-edge="stream-evm" marker-end="url(#ah-megaeth-path)"/>
+<g data-node="evm">
+<rect x="20" y="232" width="290" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="250" r="4" class="d-amber d-fill"/>
+<text x="46" y="254" class="d-t" text-anchor="start" >EVM block</text>
+<text x="46" y="270" class="d-s" text-anchor="start" >bundles the mini-blocks</text>
+</g>
+<text x="380" y="264" class="d-t d-amber d-ct" text-anchor="end" >~1 s</text>
+<path d="M64,286 L64,302" class="d-line" data-edge="evm-l1" marker-end="url(#ah-megaeth-path)"/>
+<g data-node="l1">
+<rect x="20" y="304" width="290" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="322" r="4" class="d-rose d-fill"/>
+<text x="46" y="326" class="d-t" text-anchor="start" >EigenDA, then Ethereum</text>
+<text x="46" y="342" class="d-s" text-anchor="start" >data, then a certificate on L1</text>
+</g>
+<text x="380" y="336" class="d-t d-rose d-ct" text-anchor="end" >later</text>
+</svg>

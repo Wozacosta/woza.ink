@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 288" role="img" aria-labelledby="t-agent-payments-stack"><title id="t-agent-payments-stack">ACP handles the purchase and AP2 proves a valid spending mandate. Below them, x402, MPP and L402 compete in the settlement layer, and one purchase can run through ACP, AP2 and x402 in turn</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-agent-payments-stack" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="acp">
+<rect x="20" y="14" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="32" r="4" class="d-blue d-fill"/>
+<text x="46" y="36" class="d-t" text-anchor="start" >ACP</text>
+<text x="46" y="52" class="d-s" text-anchor="start" >Checkout: what is the agent buying?</text>
+</g>
+<path d="M84,68 L84,98" class="d-line" data-edge="acp-ap2" marker-end="url(#ah-agent-payments-stack)"/>
+<text x="94" y="88" class="d-s" text-anchor="start" data-edge="acp-ap2">the purchase</text>
+<g data-node="ap2">
+<rect x="20" y="100" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="118" r="4" class="d-violet d-fill"/>
+<text x="46" y="122" class="d-t" text-anchor="start" >AP2</text>
+<text x="46" y="138" class="d-s" text-anchor="start" >Authorization: may it spend, and how much?</text>
+</g>
+<rect x="20" y="176" width="360" height="100" rx="8" class="d-ext"/>
+<text x="368" y="196" class="d-s" text-anchor="end" >Settlement: the real contest</text>
+<path d="M84,154 L84,208" class="d-line" data-edge="ap2-x402" marker-end="url(#ah-agent-payments-stack)"/>
+<text x="94" y="170" class="d-s" text-anchor="start" data-edge="ap2-x402">a mandate</text>
+<g data-node="x402">
+<rect x="32" y="210" width="104" height="54" rx="8" class="d-box"/>
+<circle cx="46" cy="228" r="4" class="d-green d-fill"/>
+<text x="58" y="232" class="d-t" text-anchor="start" >x402</text>
+<text x="58" y="248" class="d-s" text-anchor="start" >stablecoins</text>
+</g>
+<g data-node="mpp">
+<rect x="148" y="210" width="104" height="54" rx="8" class="d-box"/>
+<circle cx="162" cy="228" r="4" class="d-amber d-fill"/>
+<text x="174" y="232" class="d-t" text-anchor="start" >MPP</text>
+<text x="174" y="248" class="d-s" text-anchor="start" >sessions</text>
+</g>
+<g data-node="l402">
+<rect x="264" y="210" width="104" height="54" rx="8" class="d-box"/>
+<circle cx="278" cy="228" r="4" class="d-rose d-fill"/>
+<text x="290" y="232" class="d-t" text-anchor="start" >L402</text>
+<text x="290" y="248" class="d-s" text-anchor="start" >Lightning</text>
+</g>
+</svg>

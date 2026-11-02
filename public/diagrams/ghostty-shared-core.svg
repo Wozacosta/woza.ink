@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 196" role="img" aria-labelledby="t-ghostty-shared-core"><title id="t-ghostty-shared-core">A bar to scale. Over 90 percent of the code is the shared Zig core. The rest is the platform GUIs: Swift and AppKit on macOS, and Zig calling GTK4 on Linux</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-ghostty-shared-core" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One core, two thin GUIs</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Share of the code, to scale</text>
+<rect x="20" y="54" width="322" height="46" rx="4" class="d-green d-fill" opacity="0.85"/>
+<rect x="344" y="54" width="36" height="46" rx="4" class="d-amber d-fill" opacity="0.85"/>
+<text x="20" y="120" class="d-t" text-anchor="start" >Over 90%: shared Zig core</text>
+<text x="20" y="136" class="d-s" text-anchor="start" >Parsing, state, rendering</text>
+<text x="380" y="120" class="d-t" text-anchor="end" >The rest</text>
+<text x="380" y="136" class="d-s" text-anchor="end" >Platform GUIs</text>
+<line x1="20" y1="150" x2="380" y2="150" class="d-line d-faint"/>
+<text x="20" y="174" class="d-s" text-anchor="start" >macOS: Swift and AppKit</text>
+<text x="380" y="174" class="d-s" text-anchor="end" >Linux: Zig calling GTK4</text>
+</svg>

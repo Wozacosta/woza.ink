@@ -13,6 +13,8 @@ In 1993 the economist Robert Shiller proposed a futures contract that would neve
 
 It became the most traded product in crypto. In 2025, perps did [about $62 trillion of volume](https://whale-alert.io/stories/9c7941c063fa/Global-crypto-exchange-volume-reached-79T-in-2025-as-perpetual-futures-618T-far-outpaced-spot-186T-Binance-was-the-largest-contributor), more than three times spot, according to CryptoQuant. On a single day that October, over $19 billion of positions were force-closed. And in 2026 perps left crypto altogether: oil, gold and the S&P 500 now trade this way, US regulators have approved them, and the company that owns the New York Stock Exchange wants to list them.
 
+![Crypto trading volume in 2025, to scale: perps about $61.8 trillion, spot about $18.6 trillion.](diagram:perps-volume)
+
 This post is about how a contract with no end date stays tied to the price of anything, what happens when it doesn't, and who pays.
 
 ---
@@ -59,6 +61,8 @@ I = interest rate, 0.01% per 8 hours
 Say the perp averaged 0.10% above the index during the interval. Then `I - P` is -0.09%, the clamp limits it to -0.05%, and the rate is 0.05%. A $10,000 long pays a short $5. That sounds small until you remember it happens three times a day: 0.05% every 8 hours is about 55% a year.
 
 The clamp has a side effect. Any premium between -0.04% and +0.06% produces exactly 0.01%, so in calm markets funding sits at that one number. Longs then pay shorts about 11% a year by default. The interest term exists because a long perp is economically like borrowing dollars to hold the asset, and borrowing should cost something.
+
+![The formula plotted. Inside the band funding is exactly 0.01%. Outside it, the rate follows the premium.](diagram:perps-funding)
 
 Hyperliquid, the largest on-chain venue, [uses the same formula](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding) but pays every hour at one eighth of the rate. A faster loop means less drift between payments.
 
@@ -118,7 +122,11 @@ On October 10, 2025, Donald Trump announced a 100% tariff on Chinese imports. Ov
 
 The cascade is the mechanism working against itself. Liquidations are market sells, market sells push the price down, and a lower price triggers the next liquidations. Hyperliquid alone recorded about $10 billion. Its book couldn't absorb the flow, and [ADL closed profitable shorts](https://thedefiant.io/newsletter/defi-daily/the-ultimate-10-10-crash-autopsy). Its vault, buying at distressed prices, reportedly made over $40 million.
 
+![Each forced sale can cause the next one.](diagram:perps-cascade)
+
 The sharpest failure was about collateral. Binance's unified accounts let traders post other assets as margin, and it valued those using its own order books. During the crash, Ethena's USDe fell to $0.65 on Binance while it stayed around $0.99 on Curve and Uniswap. Cross-margined accounts were marked down against a price that existed on one exchange, and some were liquidated on it. wBETH and BNSOL slipped the same way. Binance later paid out $283 million.
+
+![The same dollar token, priced on two sets of venues during the crash.](diagram:perps-usde)
 
 Binance's position is that this wasn't the cause: in [its post-mortem](https://ambcrypto.com/binance-says-macro-shock-not-exchange-failure-drove-octobers-19b-liquidation-cascade/) it says roughly 75% of the day's liquidations came before those prices deviated. Both things can be true. The market was going down regardless, and a bad mark price still took people out who shouldn't have gone.
 
@@ -138,6 +146,8 @@ So far Hyperliquid has won this contest. It holds 53–57% of on-chain open inte
 
 The cost showed up on March 26, 2025. A trader opened a large short on JELLYJELLY, a thin memecoin, and the price moved until the position was liquidated. The book couldn't absorb it, so HLP inherited the short and sat on [about $12 million](https://www.theblock.co/post/348314/hyperliquid-delists-jellyjelly-memecoin-amid-whale-manipulation-fiasco) of unrealized losses as the price kept rising. Then, within hours, Hyperliquid's validators voted to delist the market and [settled it at $0.0095](https://decrypt.co/311713/hyperliquid-delists-solana-meme-coin-liquidation-crisis), well below where it was trading. HLP's loss disappeared.
 
+![How a liquidation on a thin market ended in a validator vote.](diagram:perps-jelly)
+
 That's the backstop being rescued by the people who run the chain. It's the same question as in my post on [prediction markets](/blog/prediction-markets): the mechanism is fine until something goes wrong, and then it matters who decides.
 
 ---
@@ -151,6 +161,8 @@ Under Hyperliquid's [HIP-3](https://hyperliquid.gitbook.io/hyperliquid-docs/hype
 The attraction is the hours. A perp on oil trades on Sunday. Over the weekend of February 28, as crude surged, Hyperliquid's builder markets [did nearly $720 million](https://oakresearch.io/en/analyses/innovations/what-is-hyperliquid-hip-3-how-it-works-and-use-cases) of volume, while the futures markets that normally set the oil price were closed for the weekend.
 
 There's a design problem hiding in that, though. Funding needs an index to compare against, and on a Sunday the reference market is shut. The thermostat loses its thermometer. The perp trades mostly on its own flow until the market reopens, when it can reprice in one jump, past anyone's liquidation price.
+
+![A sketch: with the index frozen, nothing pulls the perp back until the reference market reopens.](diagram:perps-weekend)
 
 The US, meanwhile, is catching up. On May 29, 2026 the CFTC [approved Kalshi's bitcoin perpetual](https://www.pymnts.com/cpi-posts/cftc-opens-door-to-perpetual-crypto-futures-trading-in-us/), the first in the country, and cleared Coinbase to give US customers access to perps on Deribit. Kalshi added [gold and silver](https://www.pymnts.com/legal/2026/kalshi-gets-cftc-ok-list-precious-metals-futures/) in September. Coinbase has filed for single-stock perps.
 

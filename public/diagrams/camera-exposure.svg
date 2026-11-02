@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 346" role="img" aria-labelledby="t-camera-exposure"><title id="t-camera-exposure">A triangle of aperture, shutter speed and ISO. Aperture also changes background blur, shutter speed changes motion blur and ISO changes noise. Three example settings give the same exposure by trading one stop between them</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-camera-exposure" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Three settings, one exposure</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Each one has a side effect</text>
+<line x1="200" y1="104" x2="98" y2="206" class="d-line" data-edge="aperture-shutter"/>
+<line x1="200" y1="104" x2="302" y2="206" class="d-line" data-edge="aperture-iso"/>
+<line x1="154" y1="232" x2="246" y2="232" class="d-line" data-edge="shutter-iso"/>
+<text x="200" y="186" class="d-t" text-anchor="middle" >Exposure</text>
+<g data-node="aperture">
+<rect x="120" y="54" width="160" height="50" rx="8" class="d-box"/>
+<circle cx="134" cy="72" r="4" class="d-blue d-fill"/>
+<text x="146" y="76" class="d-t" text-anchor="start" >Aperture</text>
+<text x="146" y="92" class="d-s" text-anchor="start" >Background blur</text>
+</g>
+<g data-node="shutter">
+<rect x="20" y="206" width="134" height="50" rx="8" class="d-box"/>
+<circle cx="34" cy="224" r="4" class="d-green d-fill"/>
+<text x="46" y="228" class="d-t" text-anchor="start" >Shutter speed</text>
+<text x="46" y="244" class="d-s" text-anchor="start" >Motion blur</text>
+</g>
+<g data-node="iso">
+<rect x="246" y="206" width="134" height="50" rx="8" class="d-box"/>
+<circle cx="260" cy="224" r="4" class="d-rose d-fill"/>
+<text x="272" y="228" class="d-t" text-anchor="start" >ISO</text>
+<text x="272" y="244" class="d-s" text-anchor="start" >Noise</text>
+</g>
+<text x="20" y="280" class="d-s" text-anchor="start" >Same brightness, three ways</text>
+<text x="20" y="298" class="d-s d-m" text-anchor="start" >f/2.8</text>
+<text x="66" y="298" class="d-s d-m" text-anchor="start" >1/250</text>
+<text x="116" y="298" class="d-s d-m" text-anchor="start" >ISO 400</text>
+<text x="380" y="298" class="d-s" text-anchor="end" >Start here</text>
+<text x="20" y="315" class="d-s d-m" text-anchor="start" >f/4</text>
+<text x="66" y="315" class="d-s d-m" text-anchor="start" >1/125</text>
+<text x="116" y="315" class="d-s d-m" text-anchor="start" >ISO 400</text>
+<text x="380" y="315" class="d-s" text-anchor="end" >Less light in, for longer</text>
+<text x="20" y="332" class="d-s d-m" text-anchor="start" >f/4</text>
+<text x="66" y="332" class="d-s d-m" text-anchor="start" >1/250</text>
+<text x="116" y="332" class="d-s d-m" text-anchor="start" >ISO 800</text>
+<text x="380" y="332" class="d-s" text-anchor="end" >Less light in, amplified</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-labelledby="t-publishing-friendtech"><title id="t-publishing-friendtech">friend.tech as two pairs of squares with areas to scale. Deposits went from 52 million dollars at peak to about 4.2 million, down 92 percent. Daily fees went from 2 million dollars to under 100 dollars, which is a dot in the corner of the square</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-publishing-friendtech" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >friend.tech, peak against late 2024</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Areas to scale. The outline is the peak.</text>
+<text x="20" y="64" class="d-t" text-anchor="start" >Deposits</text>
+<rect x="20" y="72" width="150" height="150" rx="2" class="d-box"/>
+<rect x="20" y="179.57" width="42.43" height="42.43" class="d-rose d-fill" opacity="0.9"/>
+<text x="20" y="242" class="d-s" text-anchor="start" >$52M at peak</text>
+<text x="20" y="258" class="d-s d-rose d-ct" text-anchor="start" >~$4.2M late 2024, down 92%</text>
+<text x="210" y="64" class="d-t" text-anchor="start" >Fees a day</text>
+<rect x="210" y="72" width="150" height="150" rx="2" class="d-box"/>
+<rect x="210" y="220.94" width="1.06" height="1.06" class="d-rose d-fill" opacity="0.9"/>
+<text x="210" y="242" class="d-s" text-anchor="start" >$2M at peak</text>
+<text x="210" y="258" class="d-s d-rose d-ct" text-anchor="start" >Under $100 by late 2024</text>
+<text x="222" y="182" class="d-s" text-anchor="start" >$100 is this speck</text>
+<path d="M226,190 L213,218" class="d-line" marker-end="url(#ah-publishing-friendtech)"/>
+</svg>

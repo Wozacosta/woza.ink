@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-labelledby="t-multisig-one-screen"><title id="t-multisig-one-screen">Three signers or nine, each one reviews the same compromised screen. Below them the signature layer works perfectly and every signature is valid, so adding signers adds nothing here</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-multisig-one-screen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="14" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="32" r="4" class="d-rose d-fill"/>
+<text x="46" y="36" class="d-t" text-anchor="start" >One compromised screen</text>
+<text x="46" y="52" class="d-s" text-anchor="start" >The display layer, shared by everyone</text>
+<path d="M40,68 V110" class="d-line"/>
+<circle cx="40" cy="122" r="11" class="d-amber d-fill"/>
+<path d="M80,68 V110" class="d-line"/>
+<circle cx="80" cy="122" r="11" class="d-amber d-fill"/>
+<path d="M120,68 V110" class="d-line"/>
+<circle cx="120" cy="122" r="11" class="d-amber d-fill"/>
+<path d="M160,68 V110" class="d-line d-faint"/>
+<circle cx="160" cy="122" r="11" class="d-ext"/>
+<path d="M200,68 V110" class="d-line d-faint"/>
+<circle cx="200" cy="122" r="11" class="d-ext"/>
+<path d="M240,68 V110" class="d-line d-faint"/>
+<circle cx="240" cy="122" r="11" class="d-ext"/>
+<path d="M280,68 V110" class="d-line d-faint"/>
+<circle cx="280" cy="122" r="11" class="d-ext"/>
+<path d="M320,68 V110" class="d-line d-faint"/>
+<circle cx="320" cy="122" r="11" class="d-ext"/>
+<path d="M360,68 V110" class="d-line d-faint"/>
+<circle cx="360" cy="122" r="11" class="d-ext"/>
+<text x="29" y="152" class="d-s" text-anchor="start" >3 signers</text>
+<text x="371" y="152" class="d-s" text-anchor="end" >or 9, the same screen</text>
+<rect x="20" y="170" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="188" r="4" class="d-green d-fill"/>
+<text x="46" y="192" class="d-t" text-anchor="start" >The signature layer</text>
+<text x="46" y="208" class="d-s" text-anchor="start" >Held: every signature valid</text>
+</svg>

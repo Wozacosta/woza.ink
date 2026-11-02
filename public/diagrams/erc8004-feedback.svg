@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 290" role="img" aria-labelledby="t-erc8004-feedback"><title id="t-erc8004-feedback">Clients give and revoke feedback, and anyone can append a response. The Reputation Registry stores raw values, like 9977 with 2 decimals tagged uptime, meaning 99.77 percent. A DeFi protocol, a code review service and a data pipeline each read the same data with their own rules</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-erc8004-feedback" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="client">
+<rect x="20" y="14" width="172" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="32" r="4" class="d-blue d-fill"/>
+<text x="46" y="36" class="d-t" text-anchor="start" >Client</text>
+<text x="46" y="52" class="d-s" text-anchor="start" >giveFeedback, revoke</text>
+</g>
+<g data-node="responder">
+<rect x="208" y="14" width="172" height="54" rx="8" class="d-box"/>
+<circle cx="222" cy="32" r="4" class="d-amber d-fill"/>
+<text x="234" y="36" class="d-t" text-anchor="start" >Anyone</text>
+<text x="234" y="52" class="d-s" text-anchor="start" >appendResponse</text>
+</g>
+<path d="M106,68 L106,94" class="d-line" data-edge="client-registry" marker-end="url(#ah-erc8004-feedback)"/>
+<path d="M294,68 L294,94" class="d-line" data-edge="responder-registry" marker-end="url(#ah-erc8004-feedback)"/>
+<g data-node="registry">
+<rect x="20" y="96" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="114" r="4" class="d-green d-fill"/>
+<text x="46" y="118" class="d-t" text-anchor="start" >Reputation Registry</text>
+<text x="46" y="134" class="d-s" text-anchor="start" >uptime, value 9977, 2 decimals: 99.77%</text>
+</g>
+<path d="M76,150 L76,184" class="d-line" data-edge="registry-defi" marker-end="url(#ah-erc8004-feedback)"/>
+<g data-node="defi">
+<rect x="20" y="186" width="112" height="54" rx="8" class="d-box"/>
+<text x="76.0" y="208" class="d-t" text-anchor="middle" >DeFi protocol</text>
+<text x="76.0" y="224" class="d-s" text-anchor="middle" >recent trading</text>
+</g>
+<path d="M200,150 L200,184" class="d-line" data-edge="registry-review" marker-end="url(#ah-erc8004-feedback)"/>
+<g data-node="review">
+<rect x="144" y="186" width="112" height="54" rx="8" class="d-box"/>
+<text x="200.0" y="208" class="d-t" text-anchor="middle" >Code review</text>
+<text x="200.0" y="224" class="d-s" text-anchor="middle" >long-term record</text>
+</g>
+<path d="M324,150 L324,184" class="d-line" data-edge="registry-pipeline" marker-end="url(#ah-erc8004-feedback)"/>
+<g data-node="pipeline">
+<rect x="268" y="186" width="112" height="54" rx="8" class="d-box"/>
+<text x="324.0" y="208" class="d-t" text-anchor="middle" >Data pipeline</text>
+<text x="324.0" y="224" class="d-s" text-anchor="middle" >uptime only</text>
+</g>
+<text x="20" y="268" class="d-t" text-anchor="start" >No formula in the standard. Each reader decides.</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 256" role="img" aria-labelledby="t-lightroom-triage"><title id="t-lightroom-triage">One shoot split across three tools. The cleanest files go through Lightroom for speed, high-ISO keepers through DxO for noise reduction, and the hero shots through Capture One for color</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-lightroom-triage" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Same shoot, three tools</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >The tools aren't mutually exclusive</text>
+<g data-node="shoot">
+<rect x="20" y="124" width="96" height="52" rx="8" class="d-box"/>
+<text x="34" y="146" class="d-t" text-anchor="start" >One shoot</text>
+<text x="34" y="162" class="d-s" text-anchor="start" >Sort by need</text>
+</g>
+<g data-node="lightroom">
+<rect x="226" y="58" width="154" height="52" rx="8" class="d-box"/>
+<circle cx="240" cy="76" r="4" class="d-rose d-fill"/>
+<text x="252" y="80" class="d-t" text-anchor="start" >Lightroom</text>
+<text x="252" y="96" class="d-s" text-anchor="start" >For speed</text>
+</g>
+<path d="M116,150 L146,150 L146,84 L224,84" class="d-line" data-edge="shoot-lightroom" marker-end="url(#ah-lightroom-triage)"/>
+<text x="154" y="79" class="d-s" text-anchor="start" data-edge="shoot-lightroom">Cleanest</text>
+<g data-node="dxo">
+<rect x="226" y="124" width="154" height="52" rx="8" class="d-box"/>
+<circle cx="240" cy="142" r="4" class="d-amber d-fill"/>
+<text x="252" y="146" class="d-t" text-anchor="start" >DxO PhotoLab</text>
+<text x="252" y="162" class="d-s" text-anchor="start" >For noise reduction</text>
+</g>
+<path d="M116,150 L224,150" class="d-line" data-edge="shoot-dxo" marker-end="url(#ah-lightroom-triage)"/>
+<text x="154" y="145" class="d-s" text-anchor="start" data-edge="shoot-dxo">High ISO</text>
+<g data-node="capture-one">
+<rect x="226" y="190" width="154" height="52" rx="8" class="d-box"/>
+<circle cx="240" cy="208" r="4" class="d-violet d-fill"/>
+<text x="252" y="212" class="d-t" text-anchor="start" >Capture One</text>
+<text x="252" y="228" class="d-s" text-anchor="start" >For perfect color</text>
+</g>
+<path d="M116,150 L146,150 L146,216 L224,216" class="d-line" data-edge="shoot-capture-one" marker-end="url(#ah-lightroom-triage)"/>
+<text x="154" y="211" class="d-s" text-anchor="start" data-edge="shoot-capture-one">Hero shots</text>
+</svg>

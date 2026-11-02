@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 388" role="img" aria-labelledby="t-build-experiment"><title id="t-build-experiment">One experiment from start to finish. An idea gets a two-hour prototype, then a weekend MVP that ships. It then gets either a polish pass or a graceful sunset. Both end the same way: log one lesson and carry it into the next idea</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-build-experiment" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One experiment, either way it goes</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Time goes in small bets, and every path ends in a lesson</text>
+<g data-node="idea">
+<rect x="20" y="56" width="170" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="74" r="4" class="d-violet d-fill"/>
+<text x="46" y="78" class="d-t" text-anchor="start" >Idea</text>
+<text x="46" y="94" class="d-s" text-anchor="start" >One feature, one goal</text>
+</g>
+<g data-node="prototype">
+<rect x="20" y="136" width="170" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="154" r="4" class="d-blue d-fill"/>
+<text x="46" y="158" class="d-t" text-anchor="start" >Two-hour prototype</text>
+<text x="46" y="174" class="d-s" text-anchor="start" >Is it worth a weekend?</text>
+</g>
+<g data-node="mvp">
+<rect x="20" y="216" width="170" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="234" r="4" class="d-blue d-fill"/>
+<text x="46" y="238" class="d-t" text-anchor="start" >Weekend MVP</text>
+<text x="46" y="254" class="d-s" text-anchor="start" >Ship the core</text>
+</g>
+<g data-node="polish">
+<rect x="236" y="150" width="144" height="52" rx="8" class="d-box"/>
+<circle cx="250" cy="168" r="4" class="d-green d-fill"/>
+<text x="262" y="172" class="d-t" text-anchor="start" >Polish pass</text>
+<text x="262" y="188" class="d-s" text-anchor="start" >It earned more time</text>
+</g>
+<g data-node="sunset">
+<rect x="236" y="230" width="144" height="52" rx="8" class="d-box"/>
+<circle cx="250" cy="248" r="4" class="d-amber d-fill"/>
+<text x="262" y="252" class="d-t" text-anchor="start" >Graceful sunset</text>
+<text x="262" y="268" class="d-s" text-anchor="start" >It taught enough</text>
+</g>
+<g data-node="lesson">
+<rect x="20" y="324" width="360" height="44" rx="8" class="d-box"/>
+<text x="200.0" y="350.5" class="d-t" text-anchor="middle" >Log one concrete lesson</text>
+</g>
+<path d="M105,108 L105,134" class="d-line" data-edge="idea-prototype" marker-end="url(#ah-build-experiment)"/>
+<path d="M105,188 L105,214" class="d-line" data-edge="prototype-mvp" marker-end="url(#ah-build-experiment)"/>
+<path d="M190,242 L212,242 L212,176 L234,176" class="d-line" data-edge="mvp-polish" marker-end="url(#ah-build-experiment)"/>
+<path d="M190,242 L212,242 L212,256 L234,256" class="d-line" data-edge="mvp-sunset" marker-end="url(#ah-build-experiment)"/>
+<path d="M380,176 L392,176 L392,346 L382,346" class="d-line" data-edge="polish-lesson" marker-end="url(#ah-build-experiment)"/>
+<path d="M308,282 L308,322" class="d-line" data-edge="sunset-lesson" marker-end="url(#ah-build-experiment)"/>
+<path d="M20,346 L8,346 L8,82 L18,82" class="d-line" data-edge="lesson-idea" marker-end="url(#ah-build-experiment)"/>
+</svg>

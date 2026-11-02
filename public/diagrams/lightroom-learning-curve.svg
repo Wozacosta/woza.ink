@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 232" role="img" aria-labelledby="t-lightroom-learning-curve"><title id="t-lightroom-learning-curve">A sketch of productivity over hours of use. Lightroom starts high on day one. darktable starts low and takes hours of learning to catch up, then ends with more control</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-lightroom-learning-curve" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Hours of learning before day one</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A sketch of the shape, not a measurement</text>
+<line x1="36" y1="190" x2="380" y2="190" class="d-line d-faint"/>
+<line x1="36" y1="58" x2="36" y2="190" class="d-line d-faint"/>
+<text x="380" y="206" class="d-s" text-anchor="end" >Hours of use</text>
+<path d="M36,116 C110,100 170,96 370,92" class="d-line d-rose d-stroke" stroke-width="2"/>
+<path d="M36,182 C150,186 190,120 250,92 S340,66 370,62" class="d-line d-green d-stroke" stroke-width="2"/>
+<text x="370" y="112" class="d-s d-rose d-ct" text-anchor="end" >Lightroom</text>
+<text x="370" y="54" class="d-s d-green d-ct" text-anchor="end" >darktable</text>
+<line x1="244" y1="96" x2="244" y2="190" class="d-line d-faint" stroke-dasharray="4 3"/>
+<text x="236" y="180" class="d-s" text-anchor="end" >Caught up</text>
+</svg>

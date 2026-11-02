@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 362" role="img" aria-labelledby="t-erc8004-identity"><title id="t-erc8004-identity">Onchain, an agent is an NFT in the Identity Registry, named by its registry and agentId, with an agentWallet that needs that wallet's signature, key-value metadata and an agentURI. The URI resolves to an offchain Agent Registration File listing its name, description and services such as A2A, MCP and OASF. No hash of the file is stored</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-erc8004-identity" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="14" width="360" height="212" rx="8" class="d-ext"/>
+<text x="34" y="36" class="d-s" text-anchor="start" >Onchain: an NFT in the Identity Registry</text>
+<g data-node="id">
+<rect x="32" y="46" width="336" height="37" rx="6" class="d-box"/>
+<text x="44" y="69" class="d-s d-m d-blue d-ct" text-anchor="start" >eip155:1:0x8004…a432</text>
+<text x="356" y="69" class="d-s" text-anchor="end" >plus the agentId</text>
+</g>
+<g data-node="wallet">
+<rect x="32" y="89" width="336" height="37" rx="6" class="d-box"/>
+<text x="44" y="112" class="d-s d-m d-blue d-ct" text-anchor="start" >agentWallet</text>
+<text x="356" y="112" class="d-s" text-anchor="end" >needs that wallet's signature</text>
+</g>
+<g data-node="metadata">
+<rect x="32" y="132" width="336" height="37" rx="6" class="d-box"/>
+<text x="44" y="155" class="d-s d-m d-blue d-ct" text-anchor="start" >metadata</text>
+<text x="356" y="155" class="d-s" text-anchor="end" >key-value pairs</text>
+</g>
+<g data-node="uri">
+<rect x="32" y="175" width="336" height="37" rx="6" class="d-box"/>
+<text x="44" y="198" class="d-s d-m d-blue d-ct" text-anchor="start" >agentURI</text>
+<text x="356" y="198" class="d-s" text-anchor="end" >ipfs://, https:// or data:</text>
+</g>
+<path d="M200,212 L200,256" class="d-line" data-edge="uri-file" marker-end="url(#ah-erc8004-identity)"/>
+<text x="210" y="244" class="d-s" text-anchor="start" data-edge="uri-file">resolves to, with no hash stored</text>
+<g data-node="file">
+<rect x="20" y="258" width="360" height="92" rx="8" class="d-ext"/>
+<text x="34" y="280" class="d-t" text-anchor="start" >Agent Registration File</text>
+<text x="34" y="296" class="d-s" text-anchor="start" >Offchain: name, description, services</text>
+<rect x="34" y="310" width="56" height="26" rx="5" class="d-box"/>
+<text x="62" y="327" class="d-s" text-anchor="middle" >A2A</text>
+<rect x="98" y="310" width="56" height="26" rx="5" class="d-box"/>
+<text x="126" y="327" class="d-s" text-anchor="middle" >MCP</text>
+<rect x="162" y="310" width="56" height="26" rx="5" class="d-box"/>
+<text x="190" y="327" class="d-s" text-anchor="middle" >OASF</text>
+</g>
+</svg>

@@ -36,6 +36,8 @@ I use folders, but not many. The goal is to keep things simple enough that I act
 
 That's it. Four folders. Everything else I've tried — more granular categorization, smart folders, rules — added overhead without improving what I actually read.
 
+![The folders by how much arrives and how closely I read it.](diagram:rss-attention)
+
 ---
 
 ## Feeds worth subscribing to
@@ -74,6 +76,8 @@ The hardest part of RSS isn't setup. It's not letting the unread count become a 
 A few things that help:
 
 **Mark all as read without guilt.** If I haven't opened my reader in a few days and there are 300 unread items, I mark all read and start fresh. The articles aren't going anywhere; the good ones surface again through other means. Feeling behind is worse than missing something.
+
+![A sketch of the reset. Without it the line only goes up.](diagram:rss-unread)
 
 **Prune regularly.** Every few months I go through subscriptions and delete anything I've been consistently skipping. The signal-to-noise ratio of a feed degrades over time as publications change focus or increase volume. Unsubscribe early.
 

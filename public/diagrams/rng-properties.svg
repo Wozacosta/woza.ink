@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 296" role="img" aria-labelledby="t-rng-properties"><title id="t-rng-properties">Five randomness tools against three properties. dev urandom is only unpredictable. Commit-reveal is verifiable, can be made unbiasable, and is often predictable to the first participant. PREVRANDAO is verifiable, but the last proposer can bias it one bit. A VRF is unbiasable and verifiable, though the oracle sees the value first. drand offers all three, and its values are public the moment they exist</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-rng-properties" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Three properties, five tools</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Filled: yes. Half: partly. Empty: no.</text>
+<text x="212" y="66" class="d-s" text-anchor="middle" >Unpredictable</text>
+<text x="288" y="66" class="d-s" text-anchor="middle" >Unbiasable</text>
+<text x="354" y="66" class="d-s" text-anchor="middle" >Verifiable</text>
+<g data-node="urandom">
+<rect x="20" y="76" width="360" height="36" rx="8" class="d-box"/>
+<text x="32" y="92" class="d-t" text-anchor="start" >/dev/urandom</text>
+<text x="32" y="106" class="d-s" text-anchor="start" >Your own machine</text>
+<circle cx="212" cy="94" r="7" class="d-green d-fill"/>
+<circle cx="288" cy="94" r="6.5" class="d-line d-faint"/>
+<circle cx="354" cy="94" r="6.5" class="d-line d-faint"/>
+</g>
+<g data-node="commit">
+<rect x="20" y="118" width="360" height="36" rx="8" class="d-box"/>
+<text x="32" y="134" class="d-t" text-anchor="start" >Commit-reveal</text>
+<text x="32" y="148" class="d-s" text-anchor="start" >Publish a hash, reveal later</text>
+<circle cx="212" cy="136" r="6.5" class="d-line d-faint"/>
+<circle cx="288" cy="136" r="6.5" class="d-line d-amber d-stroke"/>
+<path d="M288,129.5 A6.5,6.5 0 0 0 288,142.5 z" class="d-amber d-fill"/>
+<circle cx="354" cy="136" r="7" class="d-green d-fill"/>
+</g>
+<g data-node="randao">
+<rect x="20" y="160" width="360" height="36" rx="8" class="d-box"/>
+<text x="32" y="176" class="d-t" text-anchor="start" >PREVRANDAO</text>
+<text x="32" y="190" class="d-s" text-anchor="start" >Beacon chain RANDAO</text>
+<circle cx="212" cy="178" r="6.5" class="d-line d-amber d-stroke"/>
+<path d="M212,171.5 A6.5,6.5 0 0 0 212,184.5 z" class="d-amber d-fill"/>
+<circle cx="288" cy="178" r="6.5" class="d-line d-amber d-stroke"/>
+<path d="M288,171.5 A6.5,6.5 0 0 0 288,184.5 z" class="d-amber d-fill"/>
+<circle cx="354" cy="178" r="7" class="d-green d-fill"/>
+</g>
+<g data-node="vrf">
+<rect x="20" y="202" width="360" height="36" rx="8" class="d-box"/>
+<text x="32" y="218" class="d-t" text-anchor="start" >VRF</text>
+<text x="32" y="232" class="d-s" text-anchor="start" >Value plus a proof</text>
+<circle cx="212" cy="220" r="6.5" class="d-line d-amber d-stroke"/>
+<path d="M212,213.5 A6.5,6.5 0 0 0 212,226.5 z" class="d-amber d-fill"/>
+<circle cx="288" cy="220" r="7" class="d-green d-fill"/>
+<circle cx="354" cy="220" r="7" class="d-green d-fill"/>
+</g>
+<g data-node="drand">
+<rect x="20" y="244" width="360" height="36" rx="8" class="d-box"/>
+<text x="32" y="260" class="d-t" text-anchor="start" >drand</text>
+<text x="32" y="274" class="d-s" text-anchor="start" >Threshold beacon</text>
+<circle cx="212" cy="262" r="7" class="d-green d-fill"/>
+<circle cx="288" cy="262" r="7" class="d-green d-fill"/>
+<circle cx="354" cy="262" r="7" class="d-green d-fill"/>
+</g>
+</svg>

@@ -38,7 +38,7 @@ The demand for something better is real and legitimate. Doctors can't reveal tha
 
 Three cryptographic mechanisms do the work:
 
-**Ring signatures** obscure the sender. When you send XMR, your transaction is bundled with a ring of other outputs from the blockchain — decoys. An observer can see that one of the ring members sent funds, but can't determine which one. The ring size (number of decoys) has grown over time; it's currently 16, making the decoy set large enough to provide meaningful cover.
+**Ring signatures** obscure the sender. When you send XMR, your transaction is bundled with a ring of other outputs from the blockchain — decoys. An observer can see that one of the ring members sent funds, but can't determine which one. The ring size (your output plus the decoys) has grown over time; it's currently 16, making the decoy set large enough to provide meaningful cover.
 
 **Stealth addresses** obscure the receiver. Rather than sending to a static public address (as you would on Ethereum), each Monero transaction generates a one-time address for that specific payment. The sender derives it from the recipient's public key; only the recipient can identify it as theirs. To an outside observer, there's no link between a payment and the recipient's known address.
 
@@ -72,7 +72,9 @@ This duality is both Zcash's strength and its persistent weakness. In theory, op
 
 ![Privacy depends on how many people you could be. On Zcash that's only the people using shielded addresses. A sketch, not data.](diagram:privacy-anonymity-set)
 
-The cryptography is impressive. The original Groth16 zk-SNARK that Zcash used required a trusted setup — a ceremony where participants generated cryptographic parameters that had to be discarded. If anyone in the ceremony kept their "toxic waste" portion, they could theoretically forge transactions undetected. Zcash ran elaborate multi-party ceremonies (Sprout and Sapling) to mitigate this. Electric Coin Co.'s subsequent breakthrough, [Halo](https://electriccoin.co/blog/explaining-halo-2/), eliminates the trusted setup requirement entirely — a significant cryptographic advance.
+The cryptography is impressive. The zk-SNARKs Zcash first used, BCTV14 and then Groth16, required a trusted setup — a ceremony where participants generated cryptographic parameters that had to be discarded. If anyone in the ceremony kept their "toxic waste" portion, they could theoretically forge transactions undetected. Zcash ran elaborate multi-party ceremonies (Sprout and Sapling) to mitigate this. Electric Coin Co.'s subsequent breakthrough, [Halo](https://electriccoin.co/blog/explaining-halo-2/), eliminates the trusted setup requirement entirely — a significant cryptographic advance.
+
+![Halo is what let Zcash drop the ceremonies. Dates from the Zcash protocol specification.](diagram:zcash-proofs)
 
 **The tradeoffs:** Generating a shielded Zcash transaction is computationally expensive (though this has improved significantly with newer proving systems). Zcash has faced similar exchange delistings as Monero, despite the transparent/shielded choice. And Zcash, like Monero, is a standalone chain — it doesn't compose with Ethereum's DeFi ecosystem.
 
@@ -85,6 +87,8 @@ Zcash is the most cryptographically sophisticated privacy coin, with a research 
 Monero and Zcash are impressive solutions, but they exist in isolation. The vast majority of DeFi — lending, trading, yield, NFTs, DAOs — lives on Ethereum and EVM-compatible chains. You can't use Monero to interact with Aave. You can't use Zcash to swap on Uniswap.
 
 This creates a fork-in-road for users who want privacy: either stay in the isolated Monero/Zcash ecosystems, or accept full transparency whenever you want to participate in Ethereum's financial infrastructure.
+
+![Private coins can't reach the place where DeFi lives.](diagram:privacy-islands)
 
 The privacy problem on Ethereum is also qualitatively different from just "who sent money to whom." On Ethereum, every DeFi interaction — every swap, every liquidity position, every loan — is on-chain. Sophisticated traders have entire strategies that get front-run because they're visible in the mempool before confirmation. Professional traders and funds have alpha that's systematically exploited because their positions are readable. Lawyers and doctors who accept crypto payments can't maintain client confidentiality on a public ledger.
 
@@ -99,6 +103,8 @@ The first major Ethereum privacy tool was [Tornado Cash](https://github.com/torn
 Tornado Cash worked. It also became the primary tool for laundering crypto stolen in major hacks — the Lazarus Group (a North Korea state hacking outfit) used it extensively after the Ronin Bridge hack, the Harmony Bridge hack, and others. In August 2022, the US Treasury's OFAC [sanctioned Tornado Cash](https://home.treasury.gov/news/press-releases/jy0916), designating it as a Specially Designated National — the same classification used for terrorist organizations and state adversaries.
 
 The sanctions were unprecedented and legally contested. OFAC wasn't sanctioning a company or a person — they were sanctioning immutable open-source code deployed on a blockchain. A Dutch court convicted developer Alexey Pertsev of money laundering in 2024, and a US jury convicted Roman Storm of conspiring to run an unlicensed money-transmitting business in 2025; the legal fight over whether writing and deploying privacy software constitutes a crime is ongoing.
+
+![Sanctions and prosecutions moved on separate tracks.](diagram:tornado-timeline)
 
 The Tornado Cash episode established something important: a fully anonymous mixer with no compliance tooling will be targeted, and the people who built it will face legal consequences regardless of the tool's stated purpose.
 
@@ -126,7 +132,7 @@ The combination is deliberate: privacy for the public, disclosure for those you 
 
 ![Hidden from the public, with disclosure limited to the people you pick.](diagram:railgun-shielded)
 
-**Governance and decentralization.** RAILGUN has no company behind it — it's governed by `$RAIL` token holders. The contracts are immutable and publicly verifiable. The RAIL token is purely for governance, not required to use the protocol.
+**Governance and decentralization.** RAILGUN has no company behind it — it's governed by `$RAIL` token holders. The contracts are publicly verifiable, and upgrades only happen through a token-holder vote. The RAIL token is purely for governance, not required to use the protocol.
 
 **Honest limitations.** RAILGUN is newer than Monero or Zcash, and its anonymity set is still growing. The privacy guarantee is only as strong as the number of users shielding assets — a small shielded pool is more traceable than a large one. ZK proof generation on mobile has improved dramatically but is still non-trivial. And the regulatory environment for any privacy tool is uncertain; RAILGUN's compliance features don't guarantee it won't face the same treatment as Tornado Cash.
 
@@ -157,6 +163,8 @@ The practical consequence: privacy tools that offer no compliance path face incr
 
 Whether that's sufficient legally is an open question. Whether it's the right design direction is a different question, and most people who think about this seriously say yes — privacy with selective disclosure is more defensible than either full transparency or full opacity.
 
+![Selective disclosure sits between the two extremes.](diagram:privacy-disclosure)
+
 ---
 
 ## P2P exchanges: the last mile problem
@@ -173,15 +181,19 @@ This is why peer-to-peer exchanges exist — platforms where you can buy and sel
 
 Both shut down in May 2024. The team cited "a changed landscape," a phrase widely understood to mean regulatory pressure, and gave users six months to withdraw funds. The closures removed the Monero ecosystem's largest on-ramps. No successor platform of the same scale has fully emerged.
 
+![LocalMonero's run, and the gap Haveno stepped into.](diagram:privacy-localmonero)
+
 **Haveno** is the most serious attempt to fill the gap. It's a decentralized, non-custodial exchange built specifically for Monero, forked from the Bisq codebase and modified to use XMR as the base currency. Trades run on Tor, there's no central server, and the protocol uses Monero's multisig for escrow — the exchange itself holds nothing. 
 
 Haveno reached mainnet readiness in late 2024, with third-party networks operating since then. The user experience is still rough in places (it's desktop software, not a slick web app), and liquidity is thin compared to LocalMonero at its peak. But the architecture is more censorship-resistant than any hosted platform — there's nothing to shut down because there's no company and no central server.
 
-**Bisq** is the equivalent for Bitcoin — a long-running decentralized P2P exchange with a desktop client, Tor routing, no KYC, and multisig escrow. It doesn't support Monero directly, but it's the reference implementation for the P2P exchange model that Haveno is built on. If you're buying BTC privately and then converting to XMR, Bisq + an atomic swap is one path.
+**Bisq** is the equivalent for Bitcoin — a long-running decentralized P2P exchange with a desktop client, Tor routing, no KYC, and multisig escrow. It lists Monero trades, but Bitcoin is its base currency, and it's the reference implementation for the P2P exchange model that Haveno is built on. If you're buying BTC privately and then converting to XMR, Bisq + an atomic swap is one path.
 
 **Atomic swaps** between Bitcoin and Monero are worth mentioning: the [COMIT](https://github.com/comit-network/xmr-btc-swap) `xmr-btc-swap` tool lets you trade BTC for XMR directly peer-to-peer with no exchange at all — just two wallets, a cryptographic protocol, and no intermediary. It's technically sound but not consumer-friendly; you're running command-line tools and finding a trading partner yourself. Haveno is partly trying to build a better UX layer on top of this pattern.
 
 **RoboSats** is a Lightning-native P2P Bitcoin exchange that runs over Tor, uses disposable robot identities (no account, no persistence), and Lightning HODL invoices for escrow. It's not a Monero exchange, but it illustrates the direction the P2P space is moving: ephemeral identities, no registration, Tor by default, Lightning for settlement speed.
+
+![With the hosted platforms gone, what's left is harder to use and harder to shut down.](diagram:privacy-p2p)
 
 **The broader problem the P2P layer is solving** is entry and exit without identity linkage. Privacy coins can make everything that happens on-chain private. They can't make the on-ramp private if you bought through a KYC'd exchange. The P2P layer is where that linkage gets broken — or doesn't. LocalMonero's closure exposed how fragile this layer is when it's built on hosted platforms rather than decentralized protocols.
 

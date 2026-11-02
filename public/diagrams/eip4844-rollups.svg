@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 334" role="img" aria-labelledby="t-eip4844-rollups"><title id="t-eip4844-rollups">Before 4844, Arbitrum, Optimism and Base posted data to the L1 block as calldata, expensive and permanent, at about 10 to 50 cents per transaction. After it they post blobs, cheap and pruned after about 18 days, at about a tenth of a cent, 10 to 100 times cheaper</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-eip4844-rollups" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Before 4844: L2 data as calldata</text>
+<rect x="20" y="32" width="112" height="36" rx="8" class="d-box"/>
+<text x="76.0" y="54.5" class="d-t" text-anchor="middle" >Arbitrum</text>
+<path d="M76,68 v14" class="d-line"/>
+<rect x="144" y="32" width="112" height="36" rx="8" class="d-box"/>
+<text x="200.0" y="54.5" class="d-t" text-anchor="middle" >Optimism</text>
+<path d="M200,68 v14" class="d-line"/>
+<rect x="268" y="32" width="112" height="36" rx="8" class="d-box"/>
+<text x="324.0" y="54.5" class="d-t" text-anchor="middle" >Base</text>
+<path d="M324,68 v14" class="d-line"/>
+<path d="M76,82 H324" class="d-line"/>
+<path d="M106,82 L106,100" class="d-line" marker-end="url(#ah-eip4844-rollups)"/>
+<rect x="20" y="102" width="172" height="44" rx="8" class="d-box"/>
+<text x="106.0" y="128.5" class="d-t" text-anchor="middle" >L1 block</text>
+<text x="208" y="118" class="d-t d-rose d-ct" text-anchor="start" >$0.10-0.50/tx</text>
+<text x="208" y="136" class="d-s" text-anchor="start" >calldata: expensive, permanent</text>
+<line x1="20" y1="166" x2="380" y2="166" class="d-line d-faint"/>
+<text x="20" y="192" class="d-t" text-anchor="start" >After 4844: L2 data as blobs</text>
+<rect x="20" y="202" width="112" height="36" rx="8" class="d-box"/>
+<text x="76.0" y="224.5" class="d-t" text-anchor="middle" >Arbitrum</text>
+<path d="M76,238 v14" class="d-line"/>
+<rect x="144" y="202" width="112" height="36" rx="8" class="d-box"/>
+<text x="200.0" y="224.5" class="d-t" text-anchor="middle" >Optimism</text>
+<path d="M200,238 v14" class="d-line"/>
+<rect x="268" y="202" width="112" height="36" rx="8" class="d-box"/>
+<text x="324.0" y="224.5" class="d-t" text-anchor="middle" >Base</text>
+<path d="M324,238 v14" class="d-line"/>
+<path d="M76,252 H324" class="d-line"/>
+<path d="M106,252 L106,270" class="d-line" marker-end="url(#ah-eip4844-rollups)"/>
+<rect x="20" y="272" width="52" height="44" rx="5" class="d-green d-fill" opacity="0.16"/>
+<rect x="20" y="272" width="52" height="44" rx="5" class="d-line d-green d-stroke"/>
+<text x="46.0" y="298.0" class="d-s" text-anchor="middle" >blob</text>
+<rect x="80" y="272" width="52" height="44" rx="5" class="d-green d-fill" opacity="0.16"/>
+<rect x="80" y="272" width="52" height="44" rx="5" class="d-line d-green d-stroke"/>
+<text x="106.0" y="298.0" class="d-s" text-anchor="middle" >blob</text>
+<rect x="140" y="272" width="52" height="44" rx="5" class="d-green d-fill" opacity="0.16"/>
+<rect x="140" y="272" width="52" height="44" rx="5" class="d-line d-green d-stroke"/>
+<text x="166.0" y="298.0" class="d-s" text-anchor="middle" >blob</text>
+<text x="208" y="288" class="d-t d-green d-ct" text-anchor="start" >~$0.001/tx</text>
+<text x="208" y="306" class="d-s" text-anchor="start" >cheap, pruned after ~18 days</text>
+<text x="208" y="322" class="d-s" text-anchor="start" >10-100x cheaper</text>
+</svg>

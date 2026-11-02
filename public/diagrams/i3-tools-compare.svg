@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 258" role="img" aria-labelledby="t-i3-tools-compare"><title id="t-i3-tools-compare">A table comparing i3, Aerospace and Flashspace. Instant workspaces: yes for i3 and Flashspace, a beat of delay on Aerospace. Apps go to their workspace and keyboard control: yes for all three. A tiling tree: yes for i3 and Aerospace, no for Flashspace. Fights macOS: Aerospace sometimes, Flashspace no</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-i3-tools-compare" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What each tool gave me</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >On my setup, not a benchmark</text>
+<text x="206" y="64" class="d-s" text-anchor="middle" >i3</text>
+<text x="276" y="64" class="d-s" text-anchor="middle" >Aerospace</text>
+<text x="354" y="64" class="d-s" text-anchor="middle" >Flashspace</text>
+<line x1="20" y1="72" x2="380" y2="72" class="d-line d-faint"/>
+<text x="20" y="96" class="d-t" text-anchor="start" >Instant workspaces</text>
+<text x="206" y="96" class="d-t d-green d-ct" text-anchor="middle" >✓</text>
+<text x="276" y="96" class="d-s d-amber d-ct" text-anchor="middle" >a beat</text>
+<text x="354" y="96" class="d-t d-green d-ct" text-anchor="middle" >✓</text>
+<line x1="20" y1="109" x2="380" y2="109" class="d-line d-faint"/>
+<text x="20" y="130" class="d-t" text-anchor="start" >Apps follow rules</text>
+<text x="206" y="130" class="d-t d-green d-ct" text-anchor="middle" >✓</text>
+<text x="276" y="130" class="d-t d-green d-ct" text-anchor="middle" >✓</text>
+<text x="354" y="130" class="d-t d-green d-ct" text-anchor="middle" >✓</text>
+<line x1="20" y1="143" x2="380" y2="143" class="d-line d-faint"/>
+<text x="20" y="164" class="d-t" text-anchor="start" >Keyboard-first</text>
+<text x="206" y="164" class="d-t d-green d-ct" text-anchor="middle" >✓</text>
+<text x="276" y="164" class="d-t d-green d-ct" text-anchor="middle" >✓</text>
+<text x="354" y="164" class="d-t d-green d-ct" text-anchor="middle" >✓</text>
+<line x1="20" y1="177" x2="380" y2="177" class="d-line d-faint"/>
+<text x="20" y="198" class="d-t" text-anchor="start" >A tiling tree</text>
+<text x="206" y="198" class="d-t d-green d-ct" text-anchor="middle" >✓</text>
+<text x="276" y="198" class="d-t d-green d-ct" text-anchor="middle" >✓</text>
+<text x="354" y="198" class="d-t d-rose d-ct" text-anchor="middle" >✗</text>
+<line x1="20" y1="211" x2="380" y2="211" class="d-line d-faint"/>
+<text x="20" y="232" class="d-t" text-anchor="start" >Fights macOS</text>
+<text x="206" y="232" class="d-s" text-anchor="middle" >n/a</text>
+<text x="276" y="232" class="d-s d-amber d-ct" text-anchor="middle" >at times</text>
+<text x="354" y="232" class="d-s d-green d-ct" text-anchor="middle" >no</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-opencode-compare"><title id="t-opencode-compare">A table of Claude Code and OpenCode. Claude Code is from Anthropic, proprietary, Claude-only and driven from the terminal. OpenCode is MIT licensed, supports many models through providers, and runs in the terminal or neovim. Claude Code keeps commands in .claude/commands and OpenCode keeps config in opencode.json</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-opencode-compare" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >The two CLIs, side by side</text>
+<text x="112" y="56" class="d-t" text-anchor="start" >Claude Code</text>
+<text x="236" y="56" class="d-t" text-anchor="start" >OpenCode</text>
+<line x1="20" y1="66" x2="380" y2="66" class="d-line d-faint"/>
+<text x="20" y="88" class="d-s" text-anchor="start" >From</text>
+<text x="112" y="88" class="d-s" text-anchor="start" >Anthropic</text>
+<text x="236" y="88" class="d-s" text-anchor="start" >The SST team</text>
+<line x1="20" y1="99" x2="380" y2="99" class="d-line d-faint"/>
+<text x="20" y="118" class="d-s" text-anchor="start" >Source</text>
+<text x="112" y="118" class="d-s" text-anchor="start" >Proprietary</text>
+<text x="236" y="118" class="d-s" text-anchor="start" >MIT, on GitHub</text>
+<line x1="20" y1="129" x2="380" y2="129" class="d-line d-faint"/>
+<text x="20" y="148" class="d-s" text-anchor="start" >Models</text>
+<text x="112" y="148" class="d-s" text-anchor="start" >Claude only</text>
+<text x="236" y="148" class="d-s" text-anchor="start" >Claude, GPT, Gemini, local</text>
+<line x1="20" y1="159" x2="380" y2="159" class="d-line d-faint"/>
+<text x="20" y="178" class="d-s" text-anchor="start" >Runs in</text>
+<text x="112" y="178" class="d-s" text-anchor="start" >The terminal</text>
+<text x="236" y="178" class="d-s" text-anchor="start" >The terminal or neovim</text>
+<line x1="20" y1="189" x2="380" y2="189" class="d-line d-faint"/>
+<text x="20" y="208" class="d-s" text-anchor="start" >Rules</text>
+<text x="112" y="208" class="d-s d-m" text-anchor="start" >AGENTS.md</text>
+<text x="236" y="208" class="d-s d-m" text-anchor="start" >AGENTS.md</text>
+<line x1="20" y1="219" x2="380" y2="219" class="d-line d-faint"/>
+<text x="20" y="238" class="d-s" text-anchor="start" >Project config</text>
+<text x="112" y="238" class="d-s d-m" text-anchor="start" >.claude/</text>
+<text x="236" y="238" class="d-s d-m" text-anchor="start" >opencode.json</text>
+</svg>

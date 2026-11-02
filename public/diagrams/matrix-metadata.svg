@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-matrix-metadata"><title id="t-matrix-metadata">One encrypted Matrix message as a homeserver sees it. The content is ciphertext. The sender, the room and the time are all visible, and those are enough to show who is talking to whom and when</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-matrix-metadata" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One message, as a homeserver sees it</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >With E2EE on</text>
+<g data-node="sender">
+<rect x="20" y="54" width="360" height="50" rx="8" class="d-box"/>
+<circle cx="34" cy="72" r="4" class="d-rose d-fill"/>
+<text x="46" y="76" class="d-t" text-anchor="start" >Who sent it</text>
+<text x="46" y="92" class="d-s" text-anchor="start" >@alice:example.com</text>
+</g>
+<text x="366" y="84" class="d-s d-rose d-ct" text-anchor="end" >Readable</text>
+<g data-node="room">
+<rect x="20" y="112" width="360" height="50" rx="8" class="d-box"/>
+<circle cx="34" cy="130" r="4" class="d-rose d-fill"/>
+<text x="46" y="134" class="d-t" text-anchor="start" >Which room</text>
+<text x="46" y="150" class="d-s" text-anchor="start" >Who else is in it, too</text>
+</g>
+<text x="366" y="142" class="d-s d-rose d-ct" text-anchor="end" >Readable</text>
+<g data-node="time">
+<rect x="20" y="170" width="360" height="50" rx="8" class="d-box"/>
+<circle cx="34" cy="188" r="4" class="d-rose d-fill"/>
+<text x="46" y="192" class="d-t" text-anchor="start" >When</text>
+<text x="46" y="208" class="d-s" text-anchor="start" >Every message, timestamped</text>
+</g>
+<text x="366" y="200" class="d-s d-rose d-ct" text-anchor="end" >Readable</text>
+<g data-node="content">
+<rect x="20" y="228" width="360" height="50" rx="8" class="d-box"/>
+<circle cx="34" cy="246" r="4" class="d-green d-fill"/>
+<text x="46" y="250" class="d-t" text-anchor="start" >The message</text>
+<text x="46" y="266" class="d-s" text-anchor="start" >Ciphertext</text>
+</g>
+<text x="366" y="258" class="d-s d-green d-ct" text-anchor="end" >Sealed</text>
+</svg>

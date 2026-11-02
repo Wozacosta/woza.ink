@@ -7,9 +7,9 @@ export const sidenotes: ArticleSidenotes = {
       marker: "Side projects are where I break rules, try new tools, and learn how things actually fail in the wild",
       type: "quote",
       content:
-        "\"You mostly learn hacking by hacking.\" Paul Graham has consistently argued that the best way to learn is by building — original ideas don't come from trying to have original ideas, they come from trying to build or understand something slightly too difficult.",
+        "\"Even in college classes, you learn to hack mostly by hacking.\" Paul Graham has consistently argued that the best way to learn is by building — [original ideas](https://paulgraham.com/greatwork.html) don't come from trying to have original ideas, they come from trying to build or understand something slightly too difficult.",
       attribution: "Paul Graham",
-      url: "https://paulgraham.com/newthings.html",
+      url: "https://paulgraham.com/hp.html",
     },
     {
       marker: "*permission* to be weird, to `refactor` with abandon, and to throw away things that don't work",
@@ -47,7 +47,7 @@ export const sidenotes: ArticleSidenotes = {
       marker: "Shipping makes learning visible. It transforms private experiments into public signals.",
       type: "note",
       content:
-        "Pieter Levels describes how he \"hit publish again and again, learning on the fly.\" The act of shipping transforms private experiments into public accountability. Building in public — sharing progress, failures, and lessons — creates a feedback loop that accelerates learning far beyond solo tinkering.",
+        "Pieter Levels built his career by publishing over and over and learning as he went. The act of shipping transforms private experiments into public accountability. Building in public — sharing progress, failures, and lessons — creates a feedback loop that accelerates learning far beyond solo tinkering.",
       attribution: "Pieter Levels",
       url: "https://levels.io/startups/",
     },
@@ -57,7 +57,7 @@ export const sidenotes: ArticleSidenotes = {
       content:
         "\"I'm proud of being used as an example for people who wish to bootstrap, become profitable, stay small, or any of the other motivations for being in business that have little commercial and industrial backing.\" DHH has long argued that a dent in the universe is plenty — you don't need venture capital or unicorn ambitions to build something meaningful.",
       attribution: "David Heinemeier Hansson",
-      url: "https://medium.com/signal-v-noise/reconsider-41adf356857f",
+      url: "https://www.startups.com/library/founder-stories/david-heinemeier-hansson",
     },
   ],
 };

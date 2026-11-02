@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 156" role="img" aria-labelledby="t-erc8004-status"><title id="t-erc8004-status">A timeline to scale. Draft from August 2025, Review from October 2025, back to Draft on January 13, 2026. The contracts reach mainnet on January 29 while the spec is a Draft</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-erc8004-status" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="295.8878504672897" y="28" class="d-s d-green d-ct" text-anchor="end" >Jan 29: mainnet</text>
+<text x="295.8878504672897" y="44" class="d-s d-green d-ct" text-anchor="end" >and 30+ chains</text>
+<line x1="295.9" y1="50" x2="295.9" y2="104" class="d-line d-green d-stroke"/>
+<rect x="20.0" y="60" width="83.8" height="34" rx="4" class="d-amber d-fill" opacity="0.22"/>
+<text x="28" y="81" class="d-t" text-anchor="start" >Draft</text>
+<rect x="105.8" y="60" width="161.2" height="34" rx="4" class="d-blue d-fill" opacity="0.22"/>
+<text x="113.79439252336448" y="81" class="d-t" text-anchor="start" >Review</text>
+<rect x="269.0" y="60" width="109.0" height="34" rx="4" class="d-amber d-fill" opacity="0.22"/>
+<text x="372" y="81" class="d-t" text-anchor="end" >Draft</text>
+<text x="20" y="122" class="d-s" text-anchor="start" >Aug 2025</text>
+<text x="105.8" y="122" class="d-s" text-anchor="start" >Oct 2025</text>
+<text x="269.0" y="122" class="d-s" text-anchor="end" >Jan 2026</text>
+<text x="380" y="122" class="d-s" text-anchor="end" >Mar 2026</text>
+<text x="20" y="148" class="d-s" text-anchor="start" >To scale, by day.</text>
+</svg>

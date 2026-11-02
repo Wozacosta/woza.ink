@@ -52,7 +52,7 @@ export const sidenotes: ArticleSidenotes = {
         "more ETH is burned than is issued to validators — making ETH deflationary",
       type: "context",
       content:
-        "The \"ultrasound money\" meme emerged from this dynamic. Post-merge (September 2022), ETH issuance dropped ~90% (from ~13,000 ETH/day to ~1,700 ETH/day). Combined with 1559 burns, ETH's net supply has decreased by over 450,000 ETH since the merge. Whether this makes ETH a better monetary asset or just an interesting tokenomic property is one of crypto's ongoing debates — Bitcoin maximalists argue that predictable fixed supply beats dynamic deflation.",
+        "The \"ultrasound money\" meme emerged from this dynamic. Post-merge (September 2022), ETH issuance dropped ~90% (from ~13,000 ETH/day to ~1,700 ETH/day). Combined with 1559 burns, ETH's net supply fell through early 2024, then turned upward once blobs moved rollup data away from L1 fees: by March 2026 it was up about 1 million ETH since the merge. Whether this makes ETH a better monetary asset or just an interesting tokenomic property is one of crypto's ongoing debates — Bitcoin maximalists argue that predictable fixed supply beats dynamic deflation.",
       url: "https://ultrasound.money/",
     },
     {
@@ -67,7 +67,7 @@ export const sidenotes: ArticleSidenotes = {
         "also laid the groundwork for full danksharding",
       type: "context",
       content:
-        "Full danksharding (sometimes called \"PeerDAS\" in its current form) aims to scale blob count from 6 per block at launch to 64-256+ through **data availability sampling** — a technique where nodes verify data availability by randomly sampling small portions rather than downloading everything. This is the endgame for Ethereum's rollup-centric roadmap: enough cheap data space for hundreds of rollups to post simultaneously. Timeline is uncertain but actively researched.",
+        "Full danksharding aims to scale blob count from 6 per block at launch to 64-256+ through **data availability sampling** — a technique where nodes verify data availability by randomly sampling small portions rather than downloading everything. This is the endgame for Ethereum's rollup-centric roadmap: enough cheap data space for hundreds of rollups to post simultaneously. PeerDAS (EIP-7594), a first form of sampling, went live in the Fusaka upgrade in December 2025; the rest of the timeline is uncertain.",
     },
     {
       marker:

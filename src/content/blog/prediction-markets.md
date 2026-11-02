@@ -11,7 +11,7 @@ atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjwaqub
 
 On election night 2024, while TV pundits kept hinting at a comeback, Polymarket's price said it plainly: Trump was over 95% to win. A few days later Vitalik Buterin wrote that Polymarket had shown "the direct truth" while other sources kept stringing viewers along. Prediction markets had their moment.
 
-Two years later they're enormous. Combined monthly volume on Kalshi and Polymarket went from under $5 billion in September 2025 to more than $50 billion in July 2026, when the World Cup kicked off. And in February 2026 the same Vitalik warned that the industry was sliding toward sports betting and short-term crypto wagers: dopamine, not information.
+Two years later they're enormous. Combined monthly volume on Kalshi and Polymarket went from under $5 billion in September 2025 to more than $50 billion in July 2026, during the World Cup. And in February 2026 the same Vitalik warned that the industry was sliding toward sports betting and short-term crypto wagers: dopamine, not information.
 
 Both things are true, and the tension between them is the story of this post. How a prediction market turns bets into probabilities. Why the price is sometimes wrong. Why the hardest part isn't the market at all, but deciding what actually happened. And how Trueo, a small protocol moving to Ethereum mainnet, is trying to build the version Vitalik has been asking for.
 
@@ -37,6 +37,8 @@ In his November 2024 essay ["From prediction markets to info finance"](https://v
 
 He generalizes this into **info finance**: a discipline where you "start from a fact that you want to know", then deliberately design a market to get people to reveal it. Prediction markets are the simplest case. **Decision markets** are the ambitious one: to choose between policies A and B, you run conditional markets on some metric (a token price, a health outcome) under each policy and pick the one the market prices higher. That's futarchy, Hanson's old idea of "vote on values, bet on beliefs."
 
+![A decision market prices the same metric under each policy.](diagram:pm-decision)
+
 Two things make this more practical now than it was: blockchains cheap enough to run many small markets, and AI. Vitalik's argument is that AI traders make it possible to have markets on questions too small for humans to bother with, while the market still aggregates and checks what the AIs believe.
 
 ---
@@ -46,6 +48,8 @@ Two things make this more practical now than it was: blockchains cheap enough to
 Markets aggregate information, but only through people who are willing and able to trade. Several frictions get in the way.
 
 **Capital has a cost.** Vitalik's 2021 post ["Prediction markets: tales from the election"](https://vitalik.eth.limo/general/2021/02/18/election.html) is the best case study. After the 2020 election was called, the market on whether Trump would lose stayed stuck at around 85 cents for over a month, pricing a 15% chance that he'd overturn the result. Vitalik bet against that, locking up 308,249 DAI for about two months to earn $56,803. That's roughly 175% annualized, which sounds great until you account for the collateral he needed to borrow that DAI: around a million dollars of capital tied up in total. Most rational traders had better things to do with their money. Trump supporters, meanwhile, offset his entire position with about $60,000.
+
+![Correcting a 15-cent mispricing took far more capital than holding it in place.](diagram:pm-capital)
 
 The lesson generalizes. Near 0 or 1, the side that's wrong can hold the price up cheaply, and the side that's right earns little for a lot of locked capital. Long-dated markets make it worse: nobody wants to park money for a year at a zero percent return to correct a small mispricing.
 
@@ -63,9 +67,13 @@ There's a part of every prediction market that isn't a market at all: **resoluti
 
 Polymarket uses UMA's **optimistic oracle**. Someone proposes an answer and posts a bond. If nobody challenges it within a window, it stands. If someone does, the dispute goes to a vote of UMA token holders, weighted by how many tokens they hold. It's fast and cheap when everyone agrees, which is almost always. The weak spots show up in the rest.
 
+![An optimistic oracle only calls a vote if someone objects.](diagram:pm-uma)
+
 **Token-weighted votes can be bought.** In March 2025, a $7 million market on whether Ukraine would sign a minerals deal with the US before April resolved "Yes", although no deal had been signed. Analysts traced it to one UMA holder voting about 5 million tokens across three accounts, roughly a quarter of the votes cast. Polymarket said it wasn't a market failure and declined to refund.
 
 **Ambiguous rules get interpreted after the fact.** In 2026 a market asked whether Strategy would sell any bitcoin before May 31. Strategy's SEC filing, the market's named resolution source, confirmed it had sold 32 BTC between May 26 and May 31, inside the window. But the filing was published on June 1. The market resolved "No", with a clarification added that confirmation received after the deadline doesn't count. Two traders sued in July, claiming at least $797,198 in damages and asking the court to stop Polymarket from changing settlement rules after outcomes are known.
+
+![The sale fell inside the window. The filing that proved it came a day after the deadline.](diagram:pm-strategy)
 
 Both cases are about the same thing: who decides, under which rules, fixed when. That's the gap Trueo is aimed at.
 
@@ -77,9 +85,13 @@ In February 2026, Vitalik, an early Polymarket backer, posted a long critique of
 
 The numbers back him up. By August 2026 Kalshi handled about 82% of combined monthly volume, driven heavily by sports contracts.
 
+![The August split is The Block's count across Kalshi, Polymarket and Polymarket US.](diagram:pm-volume)
+
 His argument turns on a simple question: who loses money, and why do they keep coming back? Every market needs informed traders and someone to trade against. If the counterparty is mostly people betting on hunches for fun, the business is a casino with better odds. He was blunt that there is "nothing fundamentally morally wrong with taking money from people with dumb opinions", but a platform that depends on it drifts toward whatever keeps them betting. He called that drift corposlop.
 
 His alternative was **hedging**. Instead of betting, people would use markets as insurance against the risks in their own lives: a local AI looks at what you spend money on and builds a basket of positions that pays out when those costs rise. Push that far enough, he argued, and "we do not need fiat currency at all": people hold productive assets, and personalized prediction-market positions when they want stability. Those are long-dated, low-dopamine markets, exactly the kind the current platforms aren't built for.
+
+![Hedging, as Vitalik sketches it: positions built from your own costs.](diagram:pm-hedge)
 
 ---
 
@@ -103,6 +115,8 @@ On Trueo you don't trade with bare USDC. You deposit it and receive **TYD**, the
 
 Go back to Vitalik's 2020 trade. The reason the market stayed wrong for a month was that correcting it meant locking capital at a zero percent return. If the locked collateral earns roughly what you'd get by lending it out, holding a position costs nothing but the risk of the bet itself. Trueo's docs say this is the point: yield-bearing collateral is what makes long-term markets viable.
 
+![A sketch of why yield-bearing collateral matters: the bet is the same, and waiting stops costing money.](diagram:pm-collateral)
+
 It also matters for the hedging vision. A market meant to insure you against something a year out only works if sitting in it isn't a guaranteed loss against a savings account.
 
 ### 3. An escalation ladder instead of a single vote
@@ -123,6 +137,8 @@ Trading itself is fully on-chain too: YES and NO tokens trade through a custom U
 ### Why Ethereum mainnet
 
 Trueo's stated reasons for leaving Base are integration potential, network effects, and a better fit for a product meant to be permissionless and largely immutable. The logic follows from the oracle: a market is only as credible as the chain that enforces its rules and holds its collateral, and for something meant to be neutral and hard to change, Ethereum L1 is the strongest base layer available. Existing TRUE holders get an open-ended window to migrate, and Base markets expiring after January 31, 2027 are meant to launch on Ethereum instead.
+
+![Where Trueo's design differs from the setup behind the two disputes above.](diagram:pm-oracles)
 
 ### What's still open
 

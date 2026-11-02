@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 142" role="img" aria-labelledby="t-privacy-disclosure"><title id="t-privacy-disclosure">A spectrum from full transparency to full opacity. Bitcoin and Ethereum sit at the transparent end, Zcash and RAILGUN in the middle with viewing keys for selective disclosure, and Monero at the opaque end</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-privacy-disclosure" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Who gets to see</text>
+<line x1="30" y1="70" x2="370" y2="70" class="d-line"/>
+<circle cx="30" cy="70" r="7" class="d-rose d-fill"/>
+<text x="20" y="96" class="d-t d-rose d-ct" text-anchor="start" >Bitcoin, Ethereum</text>
+<text x="20" y="112" class="d-s" text-anchor="start" >everyone sees</text>
+<circle cx="200" cy="70" r="7" class="d-green d-fill"/>
+<text x="200" y="96" class="d-t d-green d-ct" text-anchor="middle" >RAILGUN, Zcash</text>
+<text x="200" y="112" class="d-s" text-anchor="middle" >you pick who sees</text>
+<circle cx="370" cy="70" r="7" class="d-violet d-fill"/>
+<text x="370" y="96" class="d-t d-violet d-ct" text-anchor="end" >Monero</text>
+<text x="370" y="112" class="d-s" text-anchor="end" >nobody sees</text>
+<text x="20" y="132" class="d-s" text-anchor="start" >Positions show the design, not how much of each chain is private.</text>
+</svg>

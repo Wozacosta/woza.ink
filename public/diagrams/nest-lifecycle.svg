@@ -70,5 +70,5 @@
 <path d="M210,328 L238,328" class="d-line" stroke-dasharray="4 3" data-edge="handler-filters" marker-end="url(#ah-nest-lifecycle)"/>
 <path d="M372,292 L372,94" class="d-line" stroke-dasharray="4 3" data-edge="filters-response" marker-end="url(#ah-nest-lifecycle)"/>
 <line x1="20" y1="354" x2="380" y2="354" class="d-line d-faint"/>
-<text x="20" y="378" class="d-s" text-anchor="start" >Within a layer: global first, then controller, then route.</text>
+<text x="20" y="378" class="d-s" text-anchor="start" >On the way in: global first, then controller, then route.</text>
 </svg>

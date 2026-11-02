@@ -43,6 +43,8 @@ The key difference from ActivityPub: in AT Protocol, you can move your account �
 
 The experience: you join an instance — mastodon.social, fosstodon.org, hachyderm.io, or hundreds of others — and get a Twitter-like timeline. You can follow anyone on any instance. Your instance has its own moderators and rules. The "federated timeline" shows everything your instance's users follow. The "local timeline" shows just your instance.
 
+![A sketch of the two timelines.](diagram:social-mastodon-timelines)
+
 What works: it's production-grade. Mature apps on every platform (Ivory on iOS is excellent). A large enough user base that you can find a real community. Moderation that's distributed — your instance's rules don't have to match anyone else's.
 
 What doesn't: the instance model is confusing to new users ("which one do I join?"). Moving instances is possible but clunky. The algorithm is deliberately minimal — chronological by default, which some people love and others find noisy. Discovery is harder than on centralized platforms.
@@ -51,9 +53,11 @@ What doesn't: the instance model is confusing to new users ("which one do I join
 
 ## Bluesky — AT Protocol in practice
 
-[Bluesky](https://bsky.app/) started as a Twitter-incubated project and launched publicly in 2023. It runs on AT Protocol and has grown into one of the most active decentralized social platforms — several million daily active users as of early 2026.
+[Bluesky](https://bsky.app/) started as a Twitter-incubated project, launched as an invite-only beta in 2023 and [opened to everyone](https://bsky.social/about/blog/02-06-2024-join-bluesky) in February 2024. It runs on AT Protocol and has grown into one of the most active decentralized social platforms — several million daily active users as of early 2026.
 
 The product feels closer to Twitter than Mastodon does. Faster, more algorithmically surfaced, with a "starter packs" onboarding that made it easier to start. The big technical differentiator: custom feeds. Anyone can build and publish a feed algorithm — you can subscribe to "the best science posts" or "posts from people in my city" built by independent developers, not just Bluesky's default.
+
+![A feed is something you pick, and anyone can publish one.](diagram:social-custom-feeds)
 
 Custom domains as handles is notable: your Bluesky handle can be your own domain (`you.yourdomain.com`), which is a lightweight but real identity portability story — your identity is yours, not just bluesky.social's.
 
@@ -69,6 +73,8 @@ The AT Protocol ecosystem — the "Atmosphere" — is growing beyond Bluesky its
 
 These are concrete proof that the protocol's promise extends beyond microblogging. If your identity is portable, every app can build on the same social graph.
 
+![Separate apps, one login, and the account stays with your host.](diagram:social-atmosphere)
+
 The easiest way to see all of it is [Atmosphere Account](https://atmosphereaccount.com/), an open-source directory of these apps and of the 200-plus account hosts behind them. Its pitch is the idea underneath all of this: "One account for all your apps." If you have a Bluesky login, you already have one. The site doesn't hold your account, which stays with your host. Its "Login with Atmosphere" just helps you pick which account to use.
 
 Below the apps, the infrastructure is starting to spread out too. [Microcosm](https://www.microcosm.blue/) is one developer's set of open-source building blocks for AT Protocol apps, funded by community donations. Its premise: "Every social interaction in ATProto is a link!" So [Constellation](https://constellation.microcosm.blue/) crawls every record on the network and indexes over 19 billion links, which lets an app ask who replied to something without building that index itself. [Leaflet uses it](https://updates.microcosm.blue/3mbfnzmdl7s2k) for quotes and mentions. The site also lists public relays in France and Canada, so a developer doesn't have to read the network through Bluesky's.
@@ -82,6 +88,8 @@ Below the apps, the infrastructure is starting to spread out too. [Microcosm](ht
 The primary client is the [Farcaster app](https://farcaster.xyz/), [formerly Warpcast](https://www.bankless.com/read/farcaster-fires-up), but because identities and social graphs are onchain, anyone can build a client on the same data. Several alternative clients exist.
 
 The big Farcaster-native feature is Mini Apps, [formerly Frames](https://docs.farcaster.xyz/reference/frames-redirect) — interactive apps that run inside the feed. You can build a poll, a game, a mint button, or a payment flow that works directly in the feed. This is only possible because Farcaster's architecture treats the feed as a programmable surface.
+
+![A sketch of a Mini App sitting in the feed.](diagram:social-miniapp)
 
 The community is heavily developer and crypto-native. The conversations you'll find are different from Mastodon or Bluesky — more technical, more crypto-adjacent, more experimentation. Whether that's a feature or a bug depends on who you are.
 
@@ -116,7 +124,7 @@ Honest tradeoff: it's small. Lens had [roughly 22,000 daily active users](https:
 
 [Nostr](https://nostr.com/) stands for "Notes and Other Stuff Transmitted by Relays." The design is extreme minimalism: you have a keypair, you publish signed events, relays store and forward them. That's it.
 
-There's no protocol for following someone — your client handles that. There's no canonical server — you publish to whatever relays you like. Clients read from relays and show you what they want. The protocol defines the message format; everything else is up to clients and relays.
+Following someone isn't in the core protocol — it's an [optional follow list](https://github.com/nostr-protocol/nips/blob/master/02.md) your client publishes. There's no canonical server — you publish to whatever relays you like. Clients read from relays and show you what they want. The protocol defines the message format; everything else is up to clients and relays.
 
 The appeal: it's censorship-resistant in a real way. There's nothing to shut down. Your key is your identity — portable to any client, stored anywhere. A government can block relays but can't take your key or your content.
 
@@ -145,6 +153,8 @@ It's early. The community is small. The For You feed is only interesting once en
 The moderation and community quality on Pixelfed tends to be better than Instagram by default — smaller, more intentional communities with actual human moderators. The tradeoff is smaller audiences and less discovery infrastructure.
 
 If you're a photographer or visual artist who wants to own your work and not have it harvested for advertising models, Pixelfed is the most polished existing option.
+
+![Each fediverse app takes one incumbent's format, and they share a protocol.](diagram:social-fediverse-formats)
 
 ---
 
@@ -190,6 +200,8 @@ PeerTube is most meaningful for creators who want to publish content that can't 
 **Loops** is early but architecturally correct. Short-form video is where creators are; having a non-corporate, federated version is worth building. Check back in a year.
 
 **Pixelfed and PeerTube** are for specific use cases — visual creators and video publishers who care about ownership and moderation sovereignty. They're not trying to replace Instagram or YouTube at scale; they're trying to give creators an alternative that doesn't exploit them.
+
+![The scale of it, from the latest counts I found. Monthly and daily numbers stay in separate groups.](diagram:social-scale)
 
 ---
 

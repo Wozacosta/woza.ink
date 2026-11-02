@@ -34,11 +34,15 @@ Yes, sometimes they fail. Good. Failure is feedback served quickly — the most 
 
 I use tiny experiments to test ideas: a two-hour prototype, a weekend MVP, then either a polish pass or a graceful sunset. The iteration rhythm matters more than the idea quality.
 
+![One experiment, from idea to lesson. Both endings count.](diagram:build-experiment)
+
 ## What I learn (and what compounds)
 
 Each project teaches a micro-skill: state management patterns, deployment gotchas, API ergonomics, or the mental model behind a library. These micro-skills compound — they make the next project faster and better. It’s not just knowledge accumulation, it’s muscle memory.
 
 > Pull-quote: "Small projects are compound interest for craftsmanship."
+
+![Each project adds a skill, and every later project starts with it. A sketch.](diagram:build-compound)
 
 ## The joy of shipping
 

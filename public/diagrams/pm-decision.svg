@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 256" role="img" aria-labelledby="t-pm-decision"><title id="t-pm-decision">A decision market runs one conditional market per policy, both pricing the same metric. Whichever policy the market prices higher is the one adopted</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-pm-decision" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >To choose between two policies</text>
+<g data-node="a">
+<rect x="20" y="40" width="164" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="58" r="4" class="d-blue d-fill"/>
+<text x="46" y="62" class="d-t" text-anchor="start" >Market on A</text>
+<text x="46" y="78" class="d-s" text-anchor="start" >the metric if A happens</text>
+</g>
+<g data-node="b">
+<rect x="20" y="110" width="164" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="128" r="4" class="d-violet d-fill"/>
+<text x="46" y="132" class="d-t" text-anchor="start" >Market on B</text>
+<text x="46" y="148" class="d-s" text-anchor="start" >the metric if B happens</text>
+</g>
+<g data-node="compare">
+<rect x="232" y="74" width="148" height="54" rx="8" class="d-box"/>
+<circle cx="246" cy="92" r="4" class="d-amber d-fill"/>
+<text x="258" y="96" class="d-t" text-anchor="start" >Compare</text>
+<text x="258" y="112" class="d-s" text-anchor="start" >the two prices</text>
+</g>
+<g data-node="adopt">
+<rect x="232" y="182" width="148" height="54" rx="8" class="d-box"/>
+<circle cx="246" cy="200" r="4" class="d-green d-fill"/>
+<text x="258" y="204" class="d-t" text-anchor="start" >Adopt the winner</text>
+<text x="258" y="220" class="d-s" text-anchor="start" >priced higher</text>
+</g>
+<path d="M184,67 L208,67 L208,101 L230,101" class="d-line" data-edge="a-compare" marker-end="url(#ah-pm-decision)"/>
+<path d="M184,137 L208,137 L208,101 L230,101" class="d-line" data-edge="b-compare" marker-end="url(#ah-pm-decision)"/>
+<path d="M306,128 L306,180" class="d-line" data-edge="compare-adopt" marker-end="url(#ah-pm-decision)"/>
+<text x="20" y="196" class="d-s" text-anchor="start" >The metric could be</text>
+<text x="20" y="212" class="d-s" text-anchor="start" >a token price or</text>
+<text x="20" y="228" class="d-s" text-anchor="start" >a health outcome</text>
+</svg>

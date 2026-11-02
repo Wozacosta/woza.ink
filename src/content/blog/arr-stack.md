@@ -41,7 +41,9 @@ Each box is a separate program with its own web UI, database and REST API. They 
 
 The managers are the core. Each one keeps two lists: what you want (your watchlist, with a quality goal for each item) and what you have (the files on disk). Everything else in the stack exists to close the gap between those two lists.
 
-**Sonarr** handles TV. It's the original, the NzbDrone project renamed in 2014, and still the most popular, with about 16,700 GitHub stars. **Radarr** started in 2016 as a fork of Sonarr for films. **Lidarr** did the same for music in 2017. They share a codebase lineage and an umbrella organization, Servarr, which is why their interfaces and settings look almost identical.
+**Sonarr** handles TV. It's the original, the NzbDrone project renamed in 2014, and still the most popular, with about 17,500 GitHub stars. **Radarr** started in 2016 as a fork of Sonarr for films. **Lidarr** did the same for music in 2017. They share a codebase lineage and an umbrella organization, Servarr, which is why their interfaces and settings look almost identical.
+
+![Fifteen years from one Usenet watcher to a family of apps, with a retirement and a merger along the way.](diagram:arr-timeline)
 
 The managers don't know anything about shows or films on their own. They lean on metadata databases: Sonarr on TheTVDB, Radarr on TMDB, Lidarr on MusicBrainz. The metadata tells Sonarr that a show has five seasons, that season 2 has 13 episodes, and that episode 7 aired on a given date. Without it, Sonarr can't know what "missing" means.
 
@@ -93,9 +95,9 @@ Resolution, source (web, Blu-ray, broadcast), codec, HDR format, audio format, a
 
 **Quality profiles** set the floor and the goal. "Accept anything from 720p to 1080p, and stop upgrading once I have 1080p Web-DL." If the first release to appear is 720p, the manager grabs it. When a better one shows up later, it grabs that too and replaces the file. That's an upgrade, and it happens automatically until the cutoff is reached.
 
-**Custom formats** add scoring on top. Each one is a set of conditions matched against the release name ("contains DV or HDR10", "audio is Atmos", "release group is on this list") with a score. A release's total score decides between versions of the same quality, and a negative score can ban something outright.
+**Custom formats** add scoring on top. Each one is a set of conditions matched against the release name ("contains DV or HDR10", "audio is Atmos", "release group is on this list") with a score. A release's total score decides between versions of the same quality, and a negative score can ban something outright. Radarr had them first (and reworked them in v3); Sonarr added them in v4.
 
-![Example scores: the profile filters, custom formats rank what's left, and the winner is upgraded later if something better appears.](diagram:arr-release-scoring) Radarr had them first (and reworked them in v3); Sonarr added them in v4.
+![Example scores: the profile filters, custom formats rank what's left at the same quality, and the winner is upgraded later if something better appears.](diagram:arr-release-scoring)
 
 Writing good custom formats is fiddly, so almost nobody does it from scratch. The **TRaSH Guides** are a community-maintained set of recommended profiles, custom formats and scores. **Recyclarr** is a command-line tool that syncs them into your Sonarr and Radarr instances from a YAML file, so when the guides update, your setup follows.
 
@@ -140,7 +142,9 @@ Get this right and imports are instant: a hardlink for torrents, an atomic move 
 
 **Bazarr** handles subtitles. It reads your Sonarr and Radarr libraries, searches subtitle providers in the languages you choose, and downloads them next to each file. When a release is upgraded, Bazarr fetches subtitles that match the new version's timing.
 
-The **media server** is the part your family sees. **Plex** is the polished commercial option. In April 2025 it put remote streaming of your own media behind a paywall (a Plex Pass for the server owner, or a $1.99/month Remote Watch Pass per viewer) and more than doubled the lifetime pass, from $120 to $249.99. **Jellyfin** is the free, open-source alternative, with no account required and no paywalled features. At 57,000 GitHub stars it's the most popular project anywhere in this ecosystem, and the Plex changes pushed a lot of people toward it. **Emby** sits in between: Jellyfin forked from it in 2018 when Emby went closed source.
+The **media server** is the part your family sees. **Plex** is the polished commercial option. In April 2025 it put remote streaming of your own media behind a paywall (a Plex Pass for the server owner, or a $1.99/month Remote Watch Pass per viewer) and more than doubled the lifetime pass, from $120 to $249.99. **Jellyfin** is the free, open-source alternative, with no account required and no paywalled features. At almost 59,000 GitHub stars it's the most popular project anywhere in this ecosystem, and the Plex changes pushed a lot of people toward it. **Emby** sits in between: Jellyfin forked from it in 2018 when Emby went closed source.
+
+![The April 2025 Plex Pass increase, to scale.](diagram:arr-plex-prices)
 
 ---
 
@@ -149,6 +153,8 @@ The **media server** is the part your family sees. **Plex** is the polished comm
 **Metadata is a single point of failure.** Every manager depends on an outside database to know what exists. When that goes, the app goes with it. **Readarr**, the ebook and audiobook manager, was retired in June 2025: its metadata source had become unusable, and the team didn't have time to rebuild it. The repository is archived. **Lidarr** came close to the same fate the month before: a MusicBrainz schema change in May 2025 broke its metadata server, and volunteers had to rebuild it while searches failed. The *arr apps are only as healthy as their least-maintained dependency.
 
 **Add-ons hold the keys to everything.** Every connected app needs the others' API keys, and an *arr API key is full admin access. In February 2026 a security review of **Huntarr**, one of those popular backlog-hunting add-ons, found 21 issues. The worst was an unauthenticated endpoint that returned the settings of every connected app in cleartext, including all their API keys. The developer deleted the repositories and went offline, and users were told to take it down and rotate every key. The lesson generalizes: each tool you plug in is trusted with the whole stack.
+
+![An add-on with no login on one endpoint, holding the keys to every app it connects to.](diagram:arr-keys)
 
 **None of it should face the internet.** These web UIs were built for a home network. If you need remote access, put them behind a VPN like Tailscale or WireGuard, or a reverse proxy with real authentication, not an open port.
 
@@ -159,6 +165,8 @@ The **media server** is the part your family sees. **Plex** is the polished comm
 Strip away what it's used for and the *arr stack is a neat piece of systems design.
 
 It's **declarative**. You don't tell it to download episode 5. You declare what you want ("this show, 1080p, these formats preferred") and a reconciliation loop works to make reality match, continuously, including upgrading files you already have. That's the same idea as a Kubernetes controller or Terraform, applied to a media library.
+
+![One loop: compare what you want with what's on disk, close the gap, and go round again.](diagram:arr-reconcile)
 
 It's **composed of small services** with narrow jobs, talking over plain HTTP APIs. You can swap qBittorrent for Transmission or Plex for Jellyfin without touching anything else. When Overseerr and Jellyseerr merged, nothing downstream had to change.
 

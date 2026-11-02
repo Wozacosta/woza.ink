@@ -20,7 +20,9 @@ NestJS is a framework for building server-side Node.js applications. TypeScript-
 
 Under the hood, NestJS doesn't replace Express or Fastify. It wraps them. By default it uses Express as its HTTP adapter, but you can swap in Fastify for better performance with a one-line config change. NestJS is the architecture layer on top — the opinions, the structure, the dependency graph.
 
-Kamil Mysliwiec started building it in late 2016 as a side project he worked on late at night. It now has over 74,000 GitHub stars, roughly 4 million weekly npm downloads, and is used in production by Adidas, Autodesk, Roche, BMW, and GitLab, among others.
+![The HTTP server stays. NestJS sits on top of it, and the adapter underneath can be swapped.](diagram:nest-adapter)
+
+Kamil Mysliwiec started building it in late 2016 as a side project he worked on late at night. It now has over 74,000 GitHub stars, over 8 million weekly npm downloads, and is used in production by Adidas, Autodesk, Roche, BMW, and GitLab, among others.
 
 ---
 
@@ -59,6 +61,8 @@ NestJS chose TypeScript when it was still controversial in the Node.js world. Th
 
 This isn't just about type safety. TypeScript enables the decorator-based API that makes NestJS feel cohesive. Without `emitDecoratorMetadata`, the DI container can't inspect constructor parameters at runtime. Without interfaces and generics, the module system can't express its contracts cleanly. TypeScript isn't bolted on — it's load-bearing.
 
+![How a constructor argument becomes an injected service.](diagram:nest-di)
+
 ---
 
 ## The module system: enforced separation of concerns
@@ -93,7 +97,7 @@ NestJS gives you five layers between an incoming request and your handler. Each 
 4. **Pipes** — validation and transformation. Parse a string ID into a number. Validate a DTO against a schema. Reject bad input before it reaches your handler.
 5. **Exception filters** — catch errors and format responses. Global or scoped to specific controllers.
 
-The order is deterministic: middleware, then guards, then interceptors (pre), then pipes, then your handler, then interceptors (post), then exception filters if something went wrong. Global-scoped first, then controller-scoped, then route-scoped.
+The order is deterministic: middleware, then guards, then interceptors (pre), then pipes, then your handler, then interceptors (post), then exception filters if something went wrong. On the way in, global-scoped runs first, then controller-scoped, then route-scoped. Interceptors unwind in reverse on the way out, and exception filters start at the route.
 
 ![Down through the layers to your handler, then back out through the interceptors. If something throws, an exception filter writes the response.](diagram:nest-lifecycle)
 
@@ -117,6 +121,8 @@ The Node.js framework field in 2026 is crowded. Here's where NestJS sits:
 
 The pattern: NestJS is the heavy option. It's the choice when you need structure, when the team is large, when the project will live for years. The lighter frameworks win when you need speed, simplicity, or edge deployment.
 
+![The field at a glance.](diagram:nest-frameworks)
+
 ---
 
 ## GraphQL and microservices
@@ -137,6 +143,8 @@ export class UsersResolver {
 
 For microservices, NestJS provides transport-layer abstractions over TCP, Redis, NATS, RabbitMQ, Kafka, gRPC, and MQTT. You swap transports by changing a configuration option. Your service code stays the same, so you can develop locally with TCP and deploy with Kafka without rewriting handlers.
 
+![The handler stays put. A configuration option picks the transport.](diagram:nest-transports)
+
 ---
 
 ## The ecosystem
@@ -144,7 +152,7 @@ For microservices, NestJS provides transport-layer abstractions over TCP, Redis,
 The official packages cover the common needs:
 
 - **@nestjs/swagger** — auto-generates OpenAPI docs from your decorators and DTOs
-- **@nestjs/typeorm** / **@nestjs/prisma** — database integration with DI-managed connections
+- **@nestjs/typeorm** / **@nestjs/mongoose** — database integration with DI-managed connections
 - **@nestjs/config** — environment variable management with validation
 - **@nestjs/bull** — job queues via Redis
 - **@nestjs/cache-manager** — caching with pluggable stores

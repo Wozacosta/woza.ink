@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 324" role="img" aria-labelledby="t-kagi-filters"><title id="t-kagi-filters">A funnel with Kagi's stages. A dozen or so sources go in. Pages full of ads and trackers are pushed down. SlopStop downranks domains flagged as mostly AI-generated. Your own blocks, promotions and Lenses apply, and one list of results comes out. Widths are a sketch</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-kagi-filters" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Each step takes something out</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A sketch. Widths aren't measured.</text>
+<g data-node="sources">
+<rect x="20.0" y="54" width="360" height="40" rx="8" class="d-box"/>
+<text x="200.0" y="78.5" class="d-t" text-anchor="middle" >A dozen or so sources</text>
+</g>
+<circle cx="36.0" cy="74" r="4" class="d-blue d-fill"/>
+<path d="M200,94 L200,106" class="d-line" data-edge="sources-ads" marker-end="url(#ah-kagi-filters)"/>
+<g data-node="ads">
+<rect x="45.0" y="108" width="310" height="40" rx="8" class="d-box"/>
+<text x="200.0" y="132.5" class="d-t" text-anchor="middle" >Ad and tracker penalty</text>
+</g>
+<circle cx="61.0" cy="128" r="4" class="d-amber d-fill"/>
+<path d="M200,148 L200,160" class="d-line" data-edge="ads-slop" marker-end="url(#ah-kagi-filters)"/>
+<g data-node="slop">
+<rect x="70.0" y="162" width="260" height="40" rx="8" class="d-box"/>
+<text x="200.0" y="186.5" class="d-t" text-anchor="middle" >SlopStop flags</text>
+</g>
+<circle cx="86.0" cy="182" r="4" class="d-rose d-fill"/>
+<path d="M200,202 L200,214" class="d-line" data-edge="slop-you" marker-end="url(#ah-kagi-filters)"/>
+<g data-node="you">
+<rect x="95.0" y="216" width="210" height="40" rx="8" class="d-box"/>
+<text x="200.0" y="240.5" class="d-t" text-anchor="middle" >Your blocks and Lenses</text>
+</g>
+<circle cx="111.0" cy="236" r="4" class="d-violet d-fill"/>
+<path d="M200,256 L200,268" class="d-line" data-edge="you-results" marker-end="url(#ah-kagi-filters)"/>
+<g data-node="results">
+<rect x="120.0" y="270" width="160" height="40" rx="8" class="d-box"/>
+<text x="200.0" y="294.5" class="d-t" text-anchor="middle" >Your results</text>
+</g>
+<circle cx="136.0" cy="290" r="4" class="d-green d-fill"/>
+</svg>

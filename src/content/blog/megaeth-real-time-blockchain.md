@@ -25,13 +25,13 @@ Raw throughput numbers are easy to throw around. Here's what MegaETH's actually 
 | Ethereum mainnet | ~15 | ~12s |
 | Arbitrum / Optimism | ~100–2,000 | 250ms–2s |
 | Solana | ~3,000–4,000 sustained | ~400ms |
-| MegaETH | 100,000+ | <10ms |
+| MegaETH | 100,000+ | ~10ms mini-blocks, ~1s EVM blocks |
 
 ![The same block times on a log scale. Each gridline is ten times longer than the one before it.](diagram:megaeth-block-times)
 
-10ms is closer to a web request than a blockchain transaction. Visa's network processes around 1,700 TPS at peak. NASDAQ handles roughly 10 million trades per day. MegaETH's claimed throughput puts it in a different category than anything currently running on Ethereum's settlement layer.
+10ms is closer to a web request than a blockchain transaction. Visa's network averages around 8,000 TPS. NASDAQ handles roughly 10 million trades per day. MegaETH's claimed throughput puts it in a different category than anything currently running on Ethereum's settlement layer.
 
-The 10 Ggas/s figure matters for developers: Ethereum mainnet runs at roughly 1.5 MGas/s. More gas per second means more complex transactions, more contract interactions, more computational work per unit of time. An onchain game running logic or a DEX doing real-time price discovery needs gas budget, not just raw TPS.
+The 10 Ggas/s figure matters for developers: Ethereum mainnet runs at roughly 2.5 MGas/s. More gas per second means more complex transactions, more contract interactions, more computational work per unit of time. An onchain game running logic or a DEX doing real-time price discovery needs gas budget, not just raw TPS.
 
 ---
 
@@ -43,11 +43,11 @@ MegaETH separates node roles aggressively:
 
 **The sequencer** is one high-spec machine — terabytes of RAM, fast CPUs optimized for sequential EVM execution. It does all transaction execution. This is the design center: instead of constraining performance to what every node can handle, you let one purpose-built machine do the heavy lifting, then solve the trust problem separately.
 
-**Full nodes** don't re-execute transactions. They receive execution results from the sequencer and verify them using proof systems rather than replay. Verification is much cheaper than re-execution, so full nodes can run on modest hardware.
+**Full nodes** re-execute every transaction to validate blocks, so they don't have to trust the sequencer's results. They're for power users like bridge operators and market makers.
 
-**Replica nodes** stream state diffs in real-time — optimized for read performance, serving RPC requests and indexers without doing verification work.
+**Replica nodes** stream state diffs in real-time and apply them without re-executing, checking blocks through proofs from separate prover nodes — optimized for read performance, serving RPC requests and indexers on modest hardware.
 
-![A typical node does every job. MegaETH gives execution to one sequencer, verification to full nodes and reads to replicas.](diagram:megaeth-roles)
+![A typical node does every job. MegaETH gives execution to one sequencer, proofs to provers, independent checking to full nodes and reads to replicas.](diagram:megaeth-roles)
 
 This isn't a new concept. Solana uses specialized validators. Centralized databases have used leader-follower architectures forever. What MegaETH does differently is make node specialization the *explicit* design principle and push sequencer capability to an extreme, rather than treating it as an implementation detail to apologize for.
 
@@ -73,13 +73,15 @@ One sequencer doing all execution is centralized. MegaETH doesn't hide from it �
 
 Their answer has two parts.
 
-**Stateless validation:** Full nodes verify blocks without re-executing them. Rather than replaying every transaction to confirm the sequencer's output, they check cryptographic proofs. This means anyone with modest hardware can validate the chain — the sequencer's outputs are verifiable, even if the sequencer itself is the only thing producing them.
+**Stateless validation:** A stateless validator verifies every block without storing the chain's state. It re-executes each block against a compact cryptographic witness, then checks the result against the block header. This means anyone with modest hardware can validate the chain — the sequencer's outputs are verifiable, even if the sequencer itself is the only thing producing them.
 
 **Pi Squared semantic validation:** A formal verification layer where nodes confirm the *semantic correctness* of a computation — that the program behaved according to its specification — without running it. This is more than a validity proof for a specific EVM execution; it's a claim that the result is correct given what the program *means*.
 
-The honest assessment: stateless validation is cryptographically well-understood. Pi Squared's semantic validation is more novel and practical robustness at scale is still being demonstrated. The deeper issue is that a single sequencer is still a single point of censorship and liveness failure. If the sequencer goes down, the chain stops. If it decides to exclude your transaction, it can. MegaETH's architecture makes the sequencer's outputs *verifiable* — but not the sequencer's *behavior*.
+The honest assessment: stateless validation is cryptographically well-understood. Pi Squared's semantic validation is more novel and practical robustness at scale is still being demonstrated. The deeper issue is that a single sequencer is still a single point of censorship and liveness failure. If the sequencer goes down, the chain stops until a standby takes over. If it decides to exclude your transaction, it can, until you force it in through Ethereum, which can take up to 12 hours. MegaETH's architecture makes the sequencer's outputs *verifiable* — but not the sequencer's *behavior*.
 
 This is a known trade-off in the L2 design space. Arbitrum and Optimism also have centralized sequencers today, with decentralization on the roadmap. MegaETH is further toward the performance end of the spectrum than most. Whether that's acceptable depends on what you're building and who you're building for.
+
+![The path of one transaction, from MegaETH's architecture docs.](diagram:megaeth-path)
 
 ---
 
@@ -94,6 +96,8 @@ The interesting question isn't the numbers — it's what becomes possible that w
 **Live DeFi mechanics.** Liquidation bots, dynamic pricing, real-time rebalancing — these currently lag behind market moves because they're constrained by block times. At 10ms, a protocol can respond to price oracle updates in near-real-time, which changes the risk profiles of leveraged positions and the economics of liquidation.
 
 **UX that doesn't feel like a blockchain.** This is the "last mile" framing from the MegaETH team: the gap between crypto apps and mainstream apps is largely a latency gap. Users don't notice 10ms. They do notice 2 seconds. Getting below the threshold of perceptible delay changes what you can build at the application layer.
+
+![The grid is arithmetic on the block times above: 12 seconds divided by 10 milliseconds.](diagram:megaeth-slots)
 
 ---
 
@@ -116,6 +120,8 @@ MegaETH gets several things right. Node specialization as a first-class design p
 What it's betting on: that a single sequencer is acceptable in exchange for real-time performance, that stateless validation and Pi Squared stay reliable at scale, and that the app categories enabled by real-time blockchains — onchain order books, real-time games, reactive DeFi — develop into large user bases and not just proofs of concept.
 
 The competition is real. Monad takes a different approach: parallel EVM execution across decentralized validators, trading some throughput ceiling for better decentralization properties. Solana is already fast, already has liquidity, and is increasingly accessible to EVM developers via tooling. MegaETH's answer to both is that raw sequential execution latency — not parallel throughput, not validator count — is the binding constraint on the apps it cares about, and that Ethereum settlement is worth the architecture trade-off.
+
+![Three ways to chase speed, and what each one gives up or keeps.](diagram:megaeth-bets)
 
 Whether that's the right bet is something mainnet will answer over the next 12-18 months.
 

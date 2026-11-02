@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 232" role="img" aria-labelledby="t-arr-plex-prices"><title id="t-arr-plex-prices">Plex Pass prices before and after April 2025, to scale. Monthly went from $4.99 to $6.99, yearly from $39.99 to $69.99, and lifetime from $119.99 to $249.99</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-arr-plex-prices" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Plex Pass, before and after April 2025</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >US dollars, bars to scale</text>
+<text x="20" y="78" class="d-s" text-anchor="start" >Monthly</text>
+<rect x="84" y="58" width="4.6" height="14" rx="2" class="d-box"/>
+<text x="95" y="69" class="d-s" text-anchor="start" >$4.99</text>
+<rect x="84" y="76" width="6.4" height="14" rx="2" class="d-amber d-fill"/>
+<text x="96" y="87" class="d-s" text-anchor="start" >$6.99</text>
+<text x="20" y="128" class="d-s" text-anchor="start" >Yearly</text>
+<rect x="84" y="108" width="36.8" height="14" rx="2" class="d-box"/>
+<text x="127" y="119" class="d-s" text-anchor="start" >$39.99</text>
+<rect x="84" y="126" width="64.4" height="14" rx="2" class="d-amber d-fill"/>
+<text x="154" y="137" class="d-s" text-anchor="start" >$69.99</text>
+<text x="20" y="178" class="d-s" text-anchor="start" >Lifetime</text>
+<rect x="84" y="158" width="110.4" height="14" rx="2" class="d-box"/>
+<text x="200" y="169" class="d-s" text-anchor="start" >$119.99</text>
+<rect x="84" y="176" width="230.0" height="14" rx="2" class="d-amber d-fill"/>
+<text x="320" y="187" class="d-s" text-anchor="start" >$249.99</text>
+<line x1="20" y1="200" x2="380" y2="200" class="d-line d-faint"/>
+<text x="20" y="220" class="d-s" text-anchor="start" >Remote Watch Pass: $1.99 a month, per viewer.</text>
+</svg>

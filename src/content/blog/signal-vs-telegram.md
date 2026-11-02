@@ -16,7 +16,7 @@ This post cuts through the marketing and the fear-mongering. I’ll show you wha
 > If your threat model includes servers, corporations, or nation-states, the details below change outcomes. If you're just texting friends, you might prefer convenience. Know the difference. Choose deliberately.
 
 TL;DR
-- Signal = end-to-end encryption by default, minimal metadata, open-source clients, strong cryptography (the Signal Protocol: X3DH and the Double Ratchet), focused threat model: protect message content and many metadata-layer protections.
+- Signal = end-to-end encryption by default, minimal metadata, open-source clients, strong cryptography (the Signal Protocol: PQXDH and the Triple Ratchet), focused threat model: protect message content and many metadata-layer protections.
 - Telegram = server-client encryption by default for cloud chats (your server can read that), optional end-to-end `Secret Chats` for one-to-one only, proprietary components, feature-rich and fast, but less defensible for high-threat scenarios.
 - Pick Signal for privacy and security. Pick Telegram for features, scale, and convenience — but don’t assume it’s private.
 
@@ -36,7 +36,7 @@ Why it matters: defaults shape behavior. People rarely change settings. If priva
 ## How Signal's Encryption Works (at a glance)
 
 Signal's crypto is the gold standard for modern secure messaging:
-- Uses the Signal Protocol (double ratchet, X3DH for key agreement).
+- Uses the Signal Protocol ([PQXDH](https://signal.org/blog/pqxdh/), an upgrade of X3DH, for key agreement, and the double ratchet, now mixed with a post-quantum ratchet as the [Triple Ratchet](https://signal.org/blog/spqr/)).
 - Perfect Forward Secrecy (PFS) and future secrecy (post-compromise recovery).
 - Group chats use pairwise encrypted sessions and group keying primitives that avoid a single point-of-trust.
 
@@ -103,6 +103,8 @@ Open code doesn't magically make a system secure, but *closed* server-side logic
 
 Organizational incentives matter: when a company needs revenue, feature and product choices often win over tight privacy guarantees.
 
+![The last two sections side by side.](diagram:messenger-openness)
+
 ---
 
 ## The Trade-offs (the real engineering choices)
@@ -121,6 +123,8 @@ Pick based on threat model:
 - If adversary = nation-state or coerced provider → choose Signal.
 - If adversary = casual snoopers and you value multi-device convenience and large group features → Telegram may be okay, but be explicit about what you’re trusting.
 
+![The same advice as a map.](diagram:messenger-threats)
+
 ---
 
 ## Why Signal Rocks (and the small annoyances it embraces)
@@ -128,7 +132,7 @@ Pick based on threat model:
 Signal's philosophy: make the secure choice the easy choice. That means defaults that protect users and a design that limits what must be trusted.
 
 Annoyances to accept:
-- No searchable server-side history unless you choose backups.
+- No server-side search. Even the [opt-in backups](https://signal.org/blog/introducing-secure-backups/) are end-to-end encrypted.
 - Device linking requires scanning QR codes (a feature, not a bug — it’s safer).
 - Fewer bells and whistles compared to feature-heavy platforms.
 
@@ -149,12 +153,12 @@ If privacy is a priority, these are small prices to pay.
 
 Telegram's official clients are often cited as "open-source," but the reality is more nuanced:
 
-- The official iOS and Android clients are published on GitHub, but releases on app stores often lag behind the public source. You can't always verify that the binary you download matches the published code.
+- The official iOS and Android clients are published on GitHub, but releases on app stores often lag behind the public source. Telegram documents [reproducible builds](https://core.telegram.org/reproducible-builds) for both, but calls the process experimental, so you can't always verify that the binary you download matches the published code.
 - The server-side code is entirely closed. This means the most critical part of the system — the part that handles your cloud chat data — is unauditable.
 - Third-party Telegram clients exist and are allowed by Telegram's API terms, but they still connect to the same closed servers. Using an alternative client doesn't change the trust model for cloud chats.
 - Telegram Desktop and macOS clients have their own repos, but again, verifiable reproducible builds are not consistently available.
 
-Bottom line: "open-source clients" sounds reassuring, but without reproducible builds and open server code, you're still trusting Telegram's infrastructure with your cloud chat data. The openness of the client is a transparency gesture, not a security guarantee.
+Bottom line: "open-source clients" sounds reassuring, but without dependable reproducible builds and open server code, you're still trusting Telegram's infrastructure with your cloud chat data. The openness of the client is a transparency gesture, not a security guarantee.
 
 ---
 

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-labelledby="t-agent-payments-choice"><title id="t-agent-payments-choice">An open API, an agent builder and an enterprise all end up on x402, the enterprise with AP2 on top. A Stripe merchant uses MPP, and a Bitcoin-native service uses L402</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-agent-payments-choice" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="open">
+<rect x="20" y="14" width="196" height="44" rx="8" class="d-box"/>
+<text x="34" y="40.5" class="d-t" text-anchor="start" >Open API, indie service</text>
+</g>
+<g data-node="agents">
+<rect x="20" y="66" width="196" height="44" rx="8" class="d-box"/>
+<text x="34" y="92.5" class="d-t" text-anchor="start" >Building agents</text>
+</g>
+<g data-node="enterprise">
+<rect x="20" y="118" width="196" height="44" rx="8" class="d-box"/>
+<text x="34" y="144.5" class="d-t" text-anchor="start" >Must prove authorization</text>
+</g>
+<g data-node="stripe">
+<rect x="20" y="170" width="196" height="44" rx="8" class="d-box"/>
+<text x="34" y="196.5" class="d-t" text-anchor="start" >Already on Stripe</text>
+</g>
+<g data-node="bitcoin">
+<rect x="20" y="222" width="196" height="44" rx="8" class="d-box"/>
+<text x="34" y="248.5" class="d-t" text-anchor="start" >Bitcoin-native</text>
+</g>
+<g data-node="x402">
+<rect x="296" y="14" width="84" height="148" rx="8" class="d-green d-fill" opacity="0.16"/>
+<rect x="296" y="14" width="84" height="148" rx="8" class="d-line d-green d-stroke"/>
+<text x="338" y="92" class="d-t" text-anchor="middle" >x402</text>
+</g>
+<g data-node="ap2">
+<rect x="232" y="118" width="48" height="44" rx="8" class="d-box"/>
+<text x="256.0" y="144.5" class="d-t" text-anchor="middle" >AP2</text>
+</g>
+<g data-node="mpp">
+<rect x="296" y="170" width="84" height="44" rx="8" class="d-box"/>
+<text x="338.0" y="196.5" class="d-t" text-anchor="middle" >MPP</text>
+</g>
+<g data-node="l402">
+<rect x="296" y="222" width="84" height="44" rx="8" class="d-box"/>
+<text x="338.0" y="248.5" class="d-t" text-anchor="middle" >L402</text>
+</g>
+<path d="M216,36 L294,36" class="d-line" data-edge="open-x402" marker-end="url(#ah-agent-payments-choice)"/>
+<path d="M216,88 L294,88" class="d-line" data-edge="agents-x402" marker-end="url(#ah-agent-payments-choice)"/>
+<path d="M216,140 L230,140" class="d-line" data-edge="enterprise-ap2" marker-end="url(#ah-agent-payments-choice)"/>
+<path d="M280,140 L294,140" class="d-line" data-edge="ap2-x402" marker-end="url(#ah-agent-payments-choice)"/>
+<path d="M216,192 L294,192" class="d-line" data-edge="stripe-mpp" marker-end="url(#ah-agent-payments-choice)"/>
+<path d="M216,244 L294,244" class="d-line" data-edge="bitcoin-l402" marker-end="url(#ah-agent-payments-choice)"/>
+</svg>

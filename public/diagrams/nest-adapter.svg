@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-nest-adapter"><title id="t-nest-adapter">Layers from top to bottom: your code, NestJS, an HTTP adapter that is Express by default and can be swapped for Fastify, and Node.js</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-nest-adapter" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >NestJS wraps the server, it doesn't replace it</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >The layer you swap is one line of config</text>
+<rect x="20" y="54" width="360" height="44" rx="8" class="d-box"/>
+<circle cx="34" cy="72" r="4" class="d-green d-fill"/>
+<text x="46" y="76" class="d-t" text-anchor="start" >Your code</text>
+<text x="46" y="92" class="d-s" text-anchor="start" >Controllers, providers, modules</text>
+<rect x="20" y="106" width="360" height="44" rx="8" class="d-box"/>
+<circle cx="34" cy="124" r="4" class="d-violet d-fill"/>
+<text x="46" y="128" class="d-t" text-anchor="start" >NestJS</text>
+<text x="46" y="144" class="d-s" text-anchor="start" >The opinions, the structure, the dependency graph</text>
+<rect x="20" y="158" width="172" height="44" rx="8" class="d-box"/>
+<circle cx="34" cy="176" r="4" class="d-blue d-fill"/>
+<text x="46" y="180" class="d-t" text-anchor="start" >Express</text>
+<text x="46" y="196" class="d-s" text-anchor="start" >The default adapter</text>
+<rect x="208" y="158" width="172" height="44" rx="8" class="d-ext"/>
+<circle cx="222" cy="176" r="4" class="d-amber d-fill"/>
+<text x="234" y="180" class="d-t" text-anchor="start" >Fastify</text>
+<text x="234" y="196" class="d-s" text-anchor="start" >Swap it in</text>
+<text x="200" y="184" class="d-s" text-anchor="middle" >or</text>
+<rect x="20" y="210" width="360" height="40" rx="8" class="d-box"/>
+<text x="200.0" y="234.5" class="d-t" text-anchor="middle" >Node.js</text>
+</svg>

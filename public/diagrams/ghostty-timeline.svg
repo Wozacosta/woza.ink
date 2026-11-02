@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 206" role="img" aria-labelledby="t-ghostty-timeline"><title id="t-ghostty-timeline">A to-scale timeline from 2022 to March 2026. Closed development and a private beta run from 2022 to December 2024. Then the 1.0 release under MIT in December 2024, the non-profit in December 2025, and 45,000 stars in March 2026</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-ghostty-timeline" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >From closed beta to non-profit</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Years to scale</text>
+<rect x="39.6" y="84" width="223.00000000000003" height="24" rx="3" class="d-rose d-fill" opacity="0.25"/>
+<text x="49.6" y="100" class="d-s" text-anchor="start" >Closed source, private beta</text>
+<rect x="264.6" y="84" width="115.39999999999998" height="24" rx="3" class="d-green d-fill" opacity="0.3"/>
+<text x="274.6" y="100" class="d-s" text-anchor="start" >MIT</text>
+<line x1="101.8" y1="108" x2="101.8" y2="114" class="d-line d-faint"/>
+<text x="101.8" y="128" class="d-s" text-anchor="middle" >2023</text>
+<line x1="183.6" y1="108" x2="183.6" y2="114" class="d-line d-faint"/>
+<text x="183.6" y="128" class="d-s" text-anchor="middle" >2024</text>
+<line x1="265.5" y1="108" x2="265.5" y2="114" class="d-line d-faint"/>
+<text x="265.5" y="128" class="d-s" text-anchor="middle" >2025</text>
+<line x1="39.6" y1="108" x2="39.6" y2="146" class="d-line d-faint"/>
+<text x="37.6" y="164" class="d-t" text-anchor="start" >First commit</text>
+<text x="37.6" y="180" class="d-s" text-anchor="start" >Mar 2022</text>
+<line x1="264.6" y1="84" x2="264.6" y2="74" class="d-line d-faint"/>
+<text x="268.6" y="60" class="d-t" text-anchor="end" >1.0</text>
+<text x="268.6" y="72" class="d-s" text-anchor="end" >Dec 2024</text>
+<line x1="340.7" y1="108" x2="340.7" y2="146" class="d-line d-faint"/>
+<text x="344.7" y="164" class="d-t" text-anchor="end" >Non-profit</text>
+<text x="344.7" y="180" class="d-s" text-anchor="end" >Dec 2025</text>
+<line x1="365.3" y1="84" x2="365.3" y2="74" class="d-line d-faint"/>
+<text x="369.3" y="60" class="d-t" text-anchor="end" >45,000 stars</text>
+<text x="369.3" y="72" class="d-s" text-anchor="end" >Mar 2026</text>
+</svg>

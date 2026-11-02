@@ -13,31 +13,39 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-perps-waterfall" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="trigger">
 <rect x="20" y="16" width="262" height="52" rx="8" class="d-box"/>
 <circle cx="34" cy="34" r="4" class="d-blue d-fill"/>
 <text x="46" y="38" class="d-t" text-anchor="start" >Equity below maintenance</text>
 <text x="46" y="54" class="d-s" text-anchor="start" >measured at the mark price</text>
-<path d="M64,68 L64,108" class="d-line" marker-end="url(#ah-perps-waterfall)"/>
-<text x="74" y="92" class="d-s" text-anchor="start" >liquidation starts</text>
+</g>
+<path d="M64,68 L64,108" class="d-line" data-edge="trigger-book" marker-end="url(#ah-perps-waterfall)"/>
+<text x="74" y="92" class="d-s" text-anchor="start" data-edge="trigger-book">liquidation starts</text>
+<g data-node="book">
 <rect x="20" y="110" width="262" height="52" rx="8" class="d-box"/>
 <circle cx="34" cy="128" r="4" class="d-green d-fill"/>
 <text x="46" y="132" class="d-t" text-anchor="start" >Market orders to the book</text>
 <text x="46" y="148" class="d-s" text-anchor="start" >almost always the end of it</text>
+</g>
 <text x="296" y="132" class="d-s d-green d-ct" text-anchor="start" >absorbed</text>
 <text x="296" y="147" class="d-s d-green d-ct" text-anchor="start" >→ done</text>
-<path d="M64,162 L64,202" class="d-line" marker-end="url(#ah-perps-waterfall)"/>
-<text x="74" y="186" class="d-s" text-anchor="start" >the book can't absorb it</text>
+<path d="M64,162 L64,202" class="d-line" data-edge="book-backstop" marker-end="url(#ah-perps-waterfall)"/>
+<text x="74" y="186" class="d-s" text-anchor="start" data-edge="book-backstop">the book can't absorb it</text>
+<g data-node="backstop">
 <rect x="20" y="204" width="262" height="52" rx="8" class="d-box"/>
 <circle cx="34" cy="222" r="4" class="d-amber d-fill"/>
 <text x="46" y="226" class="d-t" text-anchor="start" >Backstop</text>
 <text x="46" y="242" class="d-s" text-anchor="start" >insurance fund or liquidator vault</text>
+</g>
 <text x="296" y="226" class="d-s d-green d-ct" text-anchor="start" >absorbed</text>
 <text x="296" y="241" class="d-s d-green d-ct" text-anchor="start" >→ done</text>
-<path d="M64,256 L64,296" class="d-line" marker-end="url(#ah-perps-waterfall)"/>
-<text x="74" y="280" class="d-s" text-anchor="start" >the backstop runs out</text>
+<path d="M64,256 L64,296" class="d-line" data-edge="backstop-adl" marker-end="url(#ah-perps-waterfall)"/>
+<text x="74" y="280" class="d-s" text-anchor="start" data-edge="backstop-adl">the backstop runs out</text>
+<g data-node="adl">
 <rect x="20" y="298" width="262" height="52" rx="8" class="d-box"/>
 <circle cx="34" cy="316" r="4" class="d-rose d-fill"/>
 <text x="46" y="320" class="d-t" text-anchor="start" >Auto-deleveraging</text>
 <text x="46" y="336" class="d-s" text-anchor="start" >winners on the other side are closed</text>
+</g>
 <text x="20" y="374" class="d-s" text-anchor="start" >Each step moves the loss further from the trader who took the risk.</text>
 </svg>

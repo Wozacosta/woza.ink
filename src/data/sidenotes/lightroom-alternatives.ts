@@ -56,7 +56,7 @@ export const sidenotes: ArticleSidenotes = {
         "darktable is the most direct open-source alternative to Lightroom",
       type: "context",
       content:
-        "darktable has been in continuous development since 2009. As of March 2026, version 5.4 added base support for new cameras including Canon EOS R1, Canon EOS R5 Mark II, and several Fujifilm models. The project is released under GPL-3.0-or-later and runs on Linux, macOS, Windows, and Solaris. Its scene-referred workflow (introduced in darktable 3.0) represented a fundamental rethinking of how non-destructive RAW editing should work.",
+        "darktable has been in continuous development since 2009. Version 5.4, released in December 2025, added base support for new cameras including Canon EOS R1, Canon EOS R5 Mark II, and several Fujifilm models. The project is released under GPL-3.0-or-later and runs on Linux, BSD, macOS, and Windows. Its scene-referred workflow (introduced in darktable 3.0) represented a fundamental rethinking of how non-destructive RAW editing should work.",
       url: "https://github.com/darktable-org/darktable",
     },
     {

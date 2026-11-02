@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 342" role="img" aria-labelledby="t-multisig-choosing"><title id="t-multisig-choosing">If the public must verify the rules, use on-chain multisig. If not and you're an institution across many chains, use MPC. If not and you're one person, use a 2-of-3. A team or DAO uses a Safe</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-multisig-choosing" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="q1">
+<rect x="20" y="14" width="212" height="54" rx="8" class="d-box"/>
+<text x="34" y="36" class="d-t" text-anchor="start" >Public must verify it?</text>
+<text x="34" y="52" class="d-s" text-anchor="start" >That the rules were followed</text>
+</g>
+<g data-node="q2">
+<rect x="20" y="100" width="212" height="54" rx="8" class="d-box"/>
+<text x="34" y="122" class="d-t" text-anchor="start" >Institution, many chains?</text>
+<text x="34" y="138" class="d-s" text-anchor="start" >Thousands of wallets</text>
+</g>
+<g data-node="q3">
+<rect x="20" y="186" width="212" height="54" rx="8" class="d-box"/>
+<text x="34" y="208" class="d-t" text-anchor="start" >Just one person?</text>
+<text x="34" y="224" class="d-s" text-anchor="start" >Meaningful savings</text>
+</g>
+<g data-node="onchain">
+<rect x="268" y="14" width="112" height="54" rx="8" class="d-box"/>
+<circle cx="282" cy="32" r="4" class="d-green d-fill"/>
+<text x="294" y="36" class="d-t" text-anchor="start" >On-chain</text>
+<text x="294" y="52" class="d-s" text-anchor="start" >multisig</text>
+</g>
+<g data-node="mpc">
+<rect x="268" y="100" width="112" height="54" rx="8" class="d-box"/>
+<circle cx="282" cy="118" r="4" class="d-amber d-fill"/>
+<text x="294" y="122" class="d-t" text-anchor="start" >MPC</text>
+<text x="294" y="138" class="d-s" text-anchor="start" >audit trail lost</text>
+</g>
+<g data-node="solo">
+<rect x="268" y="186" width="112" height="54" rx="8" class="d-box"/>
+<circle cx="282" cy="204" r="4" class="d-green d-fill"/>
+<text x="294" y="208" class="d-t" text-anchor="start" >2-of-3</text>
+<text x="294" y="224" class="d-s" text-anchor="start" >3 locations</text>
+</g>
+<g data-node="safe">
+<rect x="20" y="272" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="290" r="4" class="d-green d-fill"/>
+<text x="46" y="294" class="d-t" text-anchor="start" >Safe</text>
+<text x="46" y="310" class="d-s" text-anchor="start" >Threshold matched to governance, one signer verifying</text>
+</g>
+<path d="M232,41 L266,41" class="d-line" data-edge="q1-onchain" marker-end="url(#ah-multisig-choosing)"/>
+<text x="249" y="34" class="d-s" text-anchor="middle" data-edge="q1-onchain">yes</text>
+<path d="M232,127 L266,127" class="d-line" data-edge="q2-mpc" marker-end="url(#ah-multisig-choosing)"/>
+<text x="249" y="120" class="d-s" text-anchor="middle" data-edge="q2-mpc">yes</text>
+<path d="M232,213 L266,213" class="d-line" data-edge="q3-solo" marker-end="url(#ah-multisig-choosing)"/>
+<text x="249" y="206" class="d-s" text-anchor="middle" data-edge="q3-solo">yes</text>
+<path d="M126,68 L126,98" class="d-line" data-edge="q1-q2" marker-end="url(#ah-multisig-choosing)"/>
+<text x="136" y="88" class="d-s" text-anchor="start" data-edge="q1-q2">no</text>
+<path d="M126,154 L126,184" class="d-line" data-edge="q2-q3" marker-end="url(#ah-multisig-choosing)"/>
+<text x="136" y="174" class="d-s" text-anchor="start" data-edge="q2-q3">no</text>
+<path d="M126,240 L126,270" class="d-line" data-edge="q3-safe" marker-end="url(#ah-multisig-choosing)"/>
+<text x="136" y="260" class="d-s" text-anchor="start" data-edge="q3-safe">no</text>
+</svg>

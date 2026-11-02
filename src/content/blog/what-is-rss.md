@@ -45,6 +45,8 @@ That’s it. No accounts, no tracking, no weird engagement math.
 
 (If a site hides theirs, search in the footer or view the page source for `<link rel="alternate" type="application/rss+xml">`.)
 
+![An item is a handful of tags. Everything else is the reader's job.](diagram:rss-anatomy)
+
 ## Pick a reader — options for different vibes
 - [NetNewsWire](https://netnewswire.com/) (Mac/iOS) — free, open source, native, fast. The most Mac-native option.
 - [Feedly](https://feedly.com/) (Web/Mobile) — powerful, polished, freemium. Good if you want AI summaries and team features.
@@ -69,6 +71,8 @@ If you prefer control, self-hosted readers like Miniflux or [Tiny Tiny RSS](http
 ## RSS and privacy
 RSS readers fetch content, but they don't need to know who you are. If you use a cloud reader and log in, that reader will know your subscriptions — choose one you trust. For maximum privacy, self-host or use a local app.
 
+![The same readers, sorted by who ends up with your list.](diagram:rss-readers)
+
 ## Caveats and reality checks
 - Not everything advertises a feed. Some sites deliberately hide or remove feeds.
 - A feed is just a list of items — full content vs. excerpts depends on the publisher.
@@ -77,13 +81,15 @@ RSS readers fetch content, but they don't need to know who you are. If you use a
 
 ## Advanced tips (for power users)
 - Export/import your subscriptions with OPML (standard format). Move between readers painlessly.
-- Use filters and rules (Inoreader, Netvibes) to surface what you care about: keywords, tags, or authors.
-- Combine RSS with automation tools (IFTTT, Make) to push articles to Pocket, Notion, or Slack.
+- Use filters and rules (Inoreader, for example) to surface what you care about: keywords, tags, or authors.
+- Combine RSS with automation tools (IFTTT, Make) to push articles to Notion or Slack.
 - Use a sync-capable reader if you read on multiple devices to keep positions and read-status consistent.
 
 > Callout — Automation idea:
-> - Save any article that contains "tutorial" to your Pocket automatically.
+> - Save any article that contains "tutorial" to Notion automatically.
 > - Forward new release notes to a channel in Slack for your team.
+
+![Those two ideas as pipelines.](diagram:rss-automation)
 
 ## Quick steps to get started
 1. Choose a reader (local or cloud).

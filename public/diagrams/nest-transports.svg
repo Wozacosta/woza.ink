@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-nest-transports"><title id="t-nest-transports">One handler stays the same while a configuration option picks the transport from TCP, Redis, NATS, RabbitMQ, Kafka, gRPC and MQTT. TCP while developing locally, Kafka in production</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-nest-transports" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One handler, seven transports</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Change the option, not the code</text>
+<rect x="20" y="54" width="360" height="46" rx="8" class="d-box"/>
+<circle cx="34" cy="72" r="4" class="d-green d-fill"/>
+<text x="46" y="76" class="d-t" text-anchor="start" >Your handler</text>
+<text x="46" y="92" class="d-s" text-anchor="start" >Stays the same</text>
+<path d="M200,100 L200,128" class="d-line" marker-end="url(#ah-nest-transports)"/>
+<rect x="20" y="130" width="360" height="40" rx="8" class="d-box"/>
+<circle cx="34" cy="150.0" r="4" class="d-violet d-fill"/>
+<text x="46" y="154.5" class="d-t" text-anchor="start" >transport: the configuration option</text>
+<path d="M200,170 L200,192" class="d-line" marker-end="url(#ah-nest-transports)"/>
+<rect x="20.0" y="194" width="38" height="30" rx="6" class="d-green d-fill" opacity="0.22"/>
+<rect x="20.0" y="194" width="38" height="30" rx="6" fill="none" class="d-green d-stroke" stroke-width="1.5"/>
+<text x="39.0" y="213" class="d-s" text-anchor="middle" >TCP</text>
+<rect x="61.0" y="194" width="48" height="30" rx="6" class="d-box"/>
+<text x="85.0" y="213" class="d-s" text-anchor="middle" >Redis</text>
+<rect x="112.0" y="194" width="46" height="30" rx="6" class="d-box"/>
+<text x="135.0" y="213" class="d-s" text-anchor="middle" >NATS</text>
+<rect x="161.0" y="194" width="70" height="30" rx="6" class="d-box"/>
+<text x="196.0" y="213" class="d-s" text-anchor="middle" >RabbitMQ</text>
+<rect x="234.0" y="194" width="50" height="30" rx="6" class="d-blue d-fill" opacity="0.22"/>
+<rect x="234.0" y="194" width="50" height="30" rx="6" fill="none" class="d-blue d-stroke" stroke-width="1.5"/>
+<text x="259.0" y="213" class="d-s" text-anchor="middle" >Kafka</text>
+<rect x="287.0" y="194" width="44" height="30" rx="6" class="d-box"/>
+<text x="309.0" y="213" class="d-s" text-anchor="middle" >gRPC</text>
+<rect x="334.0" y="194" width="46" height="30" rx="6" class="d-box"/>
+<text x="357.0" y="213" class="d-s" text-anchor="middle" >MQTT</text>
+<text x="20" y="244" class="d-s" text-anchor="start" >Develop locally</text>
+<text x="380" y="244" class="d-s" text-anchor="end" >Deploy</text>
+<circle cx="108" cy="240" r="4" class="d-green d-fill"/>
+<circle cx="334" cy="240" r="4" class="d-blue d-fill"/>
+</svg>

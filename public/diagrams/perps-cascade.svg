@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-perps-cascade"><title id="t-perps-cascade">The liquidation cascade is a loop. Liquidations are market sells, market sells push the price down, and a lower price triggers the next liquidations. On October 10, 2025 over 19 billion dollars of positions were closed, with 3.21 billion going in one minute</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-perps-cascade" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >The mechanism working against itself</text>
+<g data-node="liquidations">
+<rect x="110" y="40" width="180" height="54" rx="8" class="d-box"/>
+<circle cx="124" cy="58" r="4" class="d-rose d-fill"/>
+<text x="136" y="62" class="d-t" text-anchor="start" >Liquidations</text>
+<text x="136" y="78" class="d-s" text-anchor="start" >the engine closes accounts</text>
+</g>
+<g data-node="sells">
+<rect x="216" y="142" width="164" height="54" rx="8" class="d-box"/>
+<circle cx="230" cy="160" r="4" class="d-amber d-fill"/>
+<text x="242" y="164" class="d-t" text-anchor="start" >Market sells</text>
+<text x="242" y="180" class="d-s" text-anchor="start" >hit the order book</text>
+</g>
+<g data-node="price">
+<rect x="20" y="142" width="164" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="160" r="4" class="d-violet d-fill"/>
+<text x="46" y="164" class="d-t" text-anchor="start" >Lower price</text>
+<text x="46" y="180" class="d-s" text-anchor="start" >trips the next accounts</text>
+</g>
+<path d="M290,67 L298,67 L298,140" class="d-line" data-edge="liquidations-sells" marker-end="url(#ah-perps-cascade)"/>
+<path d="M216,169 L186,169" class="d-line" data-edge="sells-price" marker-end="url(#ah-perps-cascade)"/>
+<path d="M102,142 L102,67 L108,67" class="d-line" data-edge="price-liquidations" marker-end="url(#ah-perps-cascade)"/>
+<line x1="20" y1="214" x2="380" y2="214" class="d-line d-faint"/>
+<text x="20" y="238" class="d-s" text-anchor="start" >October 10, 2025: over $19B closed, $3.21B of it in one minute</text>
+</svg>

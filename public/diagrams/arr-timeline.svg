@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 204" role="img" aria-labelledby="t-arr-timeline"><title id="t-arr-timeline">A to-scale timeline from 2011 to 2026. NzbDrone in 2011, renamed Sonarr in 2014, Radarr in 2016, Lidarr in 2017, Prowlarr in 2020, Readarr retired in 2025, and Overseerr and Jellyseerr merged into Seerr in 2026</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-arr-timeline" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >From one tool to a family</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Years to scale</text>
+<line x1="30.0" y1="116" x2="370.0" y2="116" class="d-line d-faint"/>
+<line x1="46.5" y1="116" x2="46.5" y2="92" class="d-line d-faint"/>
+<circle cx="46.5" cy="116" r="4" class="d-blue d-fill"/>
+<text x="42.5" y="73" class="d-t" text-anchor="start" >NzbDrone</text>
+<text x="42.5" y="87" class="d-s" text-anchor="start" >2011</text>
+<line x1="113.4" y1="116" x2="113.4" y2="140" class="d-line d-faint"/>
+<circle cx="113.4" cy="116" r="4" class="d-blue d-fill"/>
+<text x="113.4" y="155" class="d-t" text-anchor="middle" >Sonarr</text>
+<text x="113.4" y="169" class="d-s" text-anchor="middle" >2014</text>
+<line x1="161.2" y1="116" x2="161.2" y2="92" class="d-line d-faint"/>
+<circle cx="161.2" cy="116" r="4" class="d-blue d-fill"/>
+<text x="161.2" y="73" class="d-t" text-anchor="middle" >Radarr</text>
+<text x="161.2" y="87" class="d-s" text-anchor="middle" >2016</text>
+<line x1="169.3" y1="116" x2="169.3" y2="140" class="d-line d-faint"/>
+<circle cx="169.3" cy="116" r="4" class="d-blue d-fill"/>
+<text x="169.3" y="155" class="d-t" text-anchor="middle" >Lidarr</text>
+<text x="169.3" y="169" class="d-s" text-anchor="middle" >2017</text>
+<line x1="245.0" y1="116" x2="245.0" y2="92" class="d-line d-faint"/>
+<circle cx="245.0" cy="116" r="4" class="d-amber d-fill"/>
+<text x="245.0" y="73" class="d-t" text-anchor="middle" >Prowlarr</text>
+<text x="245.0" y="87" class="d-s" text-anchor="middle" >2020</text>
+<line x1="347.0" y1="116" x2="347.0" y2="140" class="d-line d-faint"/>
+<circle cx="347.0" cy="116" r="4" class="d-rose d-fill"/>
+<text x="353.0" y="155" class="d-t" text-anchor="end" >Readarr retired</text>
+<text x="353.0" y="169" class="d-s" text-anchor="end" >2025</text>
+<line x1="361.2" y1="116" x2="361.2" y2="92" class="d-line d-faint"/>
+<circle cx="361.2" cy="116" r="4" class="d-violet d-fill"/>
+<text x="367.2" y="73" class="d-t" text-anchor="end" >Seerr</text>
+<text x="367.2" y="87" class="d-s" text-anchor="end" >2026</text>
+</svg>

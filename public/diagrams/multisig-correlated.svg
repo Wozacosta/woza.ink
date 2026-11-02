@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-labelledby="t-multisig-correlated"><title id="t-multisig-correlated">Three keys look like three independent risks, but keys in one house share a fire, keys in one password manager share a breach, and keys held by three co-founders share a falling-out. One event can take them all</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-multisig-correlated" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Three keys, one event</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A sketch of the failures that take all of them at once</text>
+<rect x="20" y="54" width="360" height="62" rx="8" class="d-ext"/>
+<text x="34" y="79" class="d-t" text-anchor="start" >One house</text>
+<text x="34" y="97" class="d-s d-rose d-ct" text-anchor="start" >share a fire</text>
+<circle cx="267" cy="85" r="4.5" class="d-line d-rose d-stroke"/>
+<path d="M271.5,85 h13 M280,85 v4 M284,85 v4" class="d-line d-rose d-stroke"/>
+<circle cx="303" cy="85" r="4.5" class="d-line d-rose d-stroke"/>
+<path d="M307.5,85 h13 M316,85 v4 M320,85 v4" class="d-line d-rose d-stroke"/>
+<circle cx="339" cy="85" r="4.5" class="d-line d-rose d-stroke"/>
+<path d="M343.5,85 h13 M352,85 v4 M356,85 v4" class="d-line d-rose d-stroke"/>
+<rect x="20" y="126" width="360" height="62" rx="8" class="d-ext"/>
+<text x="34" y="151" class="d-t" text-anchor="start" >One password manager</text>
+<text x="34" y="169" class="d-s d-rose d-ct" text-anchor="start" >share a breach</text>
+<circle cx="267" cy="157" r="4.5" class="d-line d-rose d-stroke"/>
+<path d="M271.5,157 h13 M280,157 v4 M284,157 v4" class="d-line d-rose d-stroke"/>
+<circle cx="303" cy="157" r="4.5" class="d-line d-rose d-stroke"/>
+<path d="M307.5,157 h13 M316,157 v4 M320,157 v4" class="d-line d-rose d-stroke"/>
+<circle cx="339" cy="157" r="4.5" class="d-line d-rose d-stroke"/>
+<path d="M343.5,157 h13 M352,157 v4 M356,157 v4" class="d-line d-rose d-stroke"/>
+<rect x="20" y="198" width="360" height="62" rx="8" class="d-ext"/>
+<text x="34" y="223" class="d-t" text-anchor="start" >Three co-founders</text>
+<text x="34" y="241" class="d-s d-rose d-ct" text-anchor="start" >share a falling-out</text>
+<circle cx="267" cy="229" r="4.5" class="d-line d-rose d-stroke"/>
+<path d="M271.5,229 h13 M280,229 v4 M284,229 v4" class="d-line d-rose d-stroke"/>
+<circle cx="303" cy="229" r="4.5" class="d-line d-rose d-stroke"/>
+<path d="M307.5,229 h13 M316,229 v4 M320,229 v4" class="d-line d-rose d-stroke"/>
+<circle cx="339" cy="229" r="4.5" class="d-line d-rose d-stroke"/>
+<path d="M343.5,229 h13 M352,229 v4 M356,229 v4" class="d-line d-rose d-stroke"/>
+</svg>

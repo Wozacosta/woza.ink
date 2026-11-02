@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 276" role="img" aria-labelledby="t-standard-site-travels"><title id="t-standard-site-travels">A sketch of one post in two places. On the blog it has a title, text, margin sidenotes and an interactive diagram. In another app, through the record, it has only the title and plain text</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-standard-site-travels" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >The words travel, the layout doesn't</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A sketch of one post in two places</text>
+<text x="20" y="62" class="d-s" text-anchor="start" >On my site</text>
+<rect x="20" y="70" width="178" height="194" rx="8" class="d-box"/>
+<rect x="32" y="84" width="96" height="9" rx="3" class="d-blue d-fill"/>
+<rect x="32" y="104" width="100" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="32" y="116" width="92" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="32" y="128" width="104" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="32" y="140" width="84" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="32" y="156" width="104" height="58" rx="4" class="d-violet d-fill" opacity="0.3"/>
+<text x="84" y="189" class="d-s" text-anchor="middle" >diagram</text>
+<rect x="32" y="226" width="100" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="32" y="238" width="88" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="32" y="250" width="96" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="146" y="102" width="42" height="40" rx="3" class="d-amber d-fill" opacity="0.3"/>
+<text x="167" y="126" class="d-s" text-anchor="middle" >note</text>
+<path d="M202,150 L226,150" class="d-line" marker-end="url(#ah-standard-site-travels)"/>
+<text x="240" y="62" class="d-s" text-anchor="start" >In another app</text>
+<rect x="228" y="70" width="152" height="194" rx="8" class="d-box"/>
+<rect x="240" y="84" width="96" height="9" rx="3" class="d-blue d-fill"/>
+<rect x="240" y="104" width="120" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="240" y="116" width="112" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="240" y="128" width="124" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="240" y="140" width="104" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="240" y="152" width="118" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="240" y="164" width="96" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="240" y="176" width="122" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="240" y="188" width="110" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="240" y="200" width="120" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="240" y="212" width="88" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="240" y="224" width="116" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+<rect x="240" y="236" width="108" height="5" rx="2.5" style="fill:var(--line-strong,#cfc8bc)"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 256" role="img" aria-labelledby="t-dice-noise"><title id="t-dice-noise">How far one face of a fair die strays from one in six. After 100 rolls about 95 percent of runs fall between 9.2 and 24.1 percent, after 1,000 between 14.3 and 19.0 percent, and after 10,000 between 15.9 and 17.4 percent. A six that really lands 20 percent of the time sits inside the band at 100 rolls and well outside it at 10,000</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-dice-noise" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Noise shrinks slowly</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Share of rolls for one fair face: about 95% of runs land in the bar</text>
+<line x1="188.0" y1="52" x2="188.0" y2="208" class="d-line"/>
+<line x1="236.0" y1="52" x2="236.0" y2="208" class="d-line d-rose d-stroke" stroke-dasharray="4 3"/>
+<text x="20" y="70" class="d-s" text-anchor="start" >100 rolls</text>
+<text x="380" y="70" class="d-s d-blue d-ct" text-anchor="end" >9.2–24.1%</text>
+<rect x="80.7" y="77" width="214.7" height="16" rx="3" class="d-blue d-fill" opacity="0.55"/>
+<text x="20" y="118" class="d-s" text-anchor="start" >1,000 rolls</text>
+<text x="380" y="118" class="d-s d-blue d-ct" text-anchor="end" >14.3–19.0%</text>
+<rect x="154.1" y="125" width="67.9" height="16" rx="3" class="d-blue d-fill" opacity="0.55"/>
+<text x="20" y="166" class="d-s" text-anchor="start" >10,000 rolls</text>
+<text x="380" y="166" class="d-s d-blue d-ct" text-anchor="end" >15.9–17.4%</text>
+<rect x="177.3" y="173" width="21.5" height="16" rx="3" class="d-blue d-fill" opacity="0.55"/>
+<line x1="20" y1="208" x2="380" y2="208" class="d-line d-faint"/>
+<text x="20.0" y="223" class="d-s" text-anchor="start" >5%</text>
+<text x="92.0" y="223" class="d-s" text-anchor="middle" >10%</text>
+<text x="164.0" y="223" class="d-s" text-anchor="middle" >15%</text>
+<text x="236.0" y="223" class="d-s" text-anchor="middle" >20%</text>
+<text x="308.0" y="223" class="d-s" text-anchor="middle" >25%</text>
+<text x="380.0" y="223" class="d-s" text-anchor="end" >30%</text>
+<text x="184.0" y="240" class="d-s" text-anchor="end" >fair: 1 in 6</text>
+<text x="240.0" y="240" class="d-s d-rose d-ct" text-anchor="start" >a loaded six, for example</text>
+</svg>

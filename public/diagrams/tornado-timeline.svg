@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 248" role="img" aria-labelledby="t-tornado-timeline"><title id="t-tornado-timeline">Tornado Cash on a timeline to scale. OFAC sanctioned it in August 2022. A Dutch court convicted Alexey Pertsev in May 2024. The Fifth Circuit ruled against OFAC in November 2024. Treasury lifted the sanctions in March 2025. A US jury convicted Roman Storm on one count in August 2025</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-tornado-timeline" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >The code got cleared. The developers didn't.</text>
+<line x1="20" y1="56" x2="380" y2="56" class="d-line"/>
+<line x1="20.0" y1="52" x2="20.0" y2="60" class="d-line"/>
+<text x="20.0" y="47" class="d-s" text-anchor="start" >2022</text>
+<line x1="110.0" y1="52" x2="110.0" y2="60" class="d-line"/>
+<text x="110.0" y="47" class="d-s" text-anchor="middle" >2023</text>
+<line x1="200.0" y1="52" x2="200.0" y2="60" class="d-line"/>
+<text x="200.0" y="47" class="d-s" text-anchor="middle" >2024</text>
+<line x1="290.0" y1="52" x2="290.0" y2="60" class="d-line"/>
+<text x="290.0" y="47" class="d-s" text-anchor="middle" >2025</text>
+<line x1="380.0" y1="52" x2="380.0" y2="60" class="d-line"/>
+<text x="380.0" y="47" class="d-s" text-anchor="end" >2026</text>
+<line x1="72.5" y1="56" x2="72.5" y2="90" class="d-line d-rose d-stroke"/>
+<circle cx="72.5" cy="56" r="4" class="d-rose d-fill"/>
+<text x="78.5" y="86" class="d-s d-rose d-ct" text-anchor="start" >Aug 2022: OFAC sanctions</text>
+<line x1="230.0" y1="56" x2="230.0" y2="124" class="d-line d-amber d-stroke"/>
+<circle cx="230.0" cy="56" r="4" class="d-amber d-fill"/>
+<text x="224.0" y="120" class="d-s d-amber d-ct" text-anchor="end" >May 2024: Pertsev convicted</text>
+<line x1="275.0" y1="56" x2="275.0" y2="158" class="d-line d-green d-stroke"/>
+<circle cx="275.0" cy="56" r="4" class="d-green d-fill"/>
+<text x="269.0" y="154" class="d-s d-green d-ct" text-anchor="end" >Nov 2024: Fifth Circuit ruling</text>
+<line x1="305.0" y1="56" x2="305.0" y2="192" class="d-line d-green d-stroke"/>
+<circle cx="305.0" cy="56" r="4" class="d-green d-fill"/>
+<text x="299.0" y="188" class="d-s d-green d-ct" text-anchor="end" >Mar 2025: sanctions lifted</text>
+<line x1="342.5" y1="56" x2="342.5" y2="226" class="d-line d-amber d-stroke"/>
+<circle cx="342.5" cy="56" r="4" class="d-amber d-fill"/>
+<text x="336.5" y="222" class="d-s d-amber d-ct" text-anchor="end" >Aug 2025: Storm convicted</text>
+</svg>

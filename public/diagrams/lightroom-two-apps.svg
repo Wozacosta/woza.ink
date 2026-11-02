@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-lightroom-two-apps"><title id="t-lightroom-two-apps">Lightroom Classic keeps originals on your disks with one local catalog file, edits on the desktop, and suits people who manage files. Lightroom keeps originals on Adobe's servers, edits on any device, and suits people who don't want to manage files, with less control and fewer features</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-lightroom-two-apps" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Two apps, nearly one name</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Where each one puts things</text>
+<text x="116" y="64" class="d-t d-blue d-ct" text-anchor="start" >Classic</text>
+<text x="254" y="64" class="d-t d-violet d-ct" text-anchor="start" >Lightroom (cloud)</text>
+<line x1="20" y1="71" x2="380" y2="71" class="d-line d-faint"/>
+<text x="20" y="90" class="d-s" text-anchor="start" >Originals</text>
+<text x="116" y="90" class="d-s" text-anchor="start" >Your own disks</text>
+<text x="254" y="90" class="d-s" text-anchor="start" >Adobe's servers</text>
+<line x1="20" y1="105" x2="380" y2="105" class="d-line d-faint"/>
+<text x="20" y="124" class="d-s" text-anchor="start" >Catalog</text>
+<text x="116" y="124" class="d-s" text-anchor="start" >One local SQLite file</text>
+<text x="254" y="124" class="d-s" text-anchor="start" >Adobe's servers</text>
+<line x1="20" y1="139" x2="380" y2="139" class="d-line d-faint"/>
+<text x="20" y="158" class="d-s" text-anchor="start" >Edit on</text>
+<text x="116" y="158" class="d-s" text-anchor="start" >The desktop</text>
+<text x="254" y="158" class="d-s" text-anchor="start" >Any device or browser</text>
+<line x1="20" y1="173" x2="380" y2="173" class="d-line d-faint"/>
+<text x="20" y="192" class="d-s" text-anchor="start" >Weak spot</text>
+<text x="116" y="192" class="d-s" text-anchor="start" >100,000+ images</text>
+<text x="254" y="192" class="d-s" text-anchor="start" >Less control</text>
+<line x1="20" y1="207" x2="380" y2="207" class="d-line d-faint"/>
+<text x="20" y="226" class="d-s" text-anchor="start" >Made for</text>
+<text x="116" y="226" class="d-s" text-anchor="start" >Hands-on organizers</text>
+<text x="254" y="226" class="d-s" text-anchor="start" >Hands-off users</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 312" role="img" aria-labelledby="t-camera-focal-lengths"><title id="t-camera-focal-lengths">Horizontal angle of view on full-frame, drawn to scale from one camera position. 16mm sees 97 degrees, 35mm 54, 50mm 40, 85mm 24, 200mm 10 and 600mm 3.4 degrees</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-camera-focal-lengths" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What a focal length sees</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Full-frame, angles to scale</text>
+<path d="M200,296 L104.3,211.0 A128,128 0 0 1 295.7,211.0 Z" class="d-rose d-fill" opacity="0.12"/>
+<path d="M200,296 L104.3,211.0 A128,128 0 0 1 295.7,211.0 Z" class="d-line d-rose d-stroke"/>
+<text x="302.7" y="215.0" class="d-s d-rose d-ct" text-anchor="start" >16mm, 97°</text>
+<path d="M200,296 L127.7,155.5 A158,158 0 0 1 272.3,155.5 Z" class="d-amber d-fill" opacity="0.12"/>
+<path d="M200,296 L127.7,155.5 A158,158 0 0 1 272.3,155.5 Z" class="d-line d-amber d-stroke"/>
+<text x="279.3" y="159.5" class="d-s d-amber d-ct" text-anchor="start" >35mm, 54°</text>
+<path d="M200,296 L138.4,124.8 A182,182 0 0 1 261.6,124.8 Z" class="d-green d-fill" opacity="0.12"/>
+<path d="M200,296 L138.4,124.8 A182,182 0 0 1 261.6,124.8 Z" class="d-line d-green d-stroke"/>
+<text x="268.6" y="128.8" class="d-s d-green d-ct" text-anchor="start" >50mm, 40°</text>
+<path d="M200,296 L157.7,96.4 A204,204 0 0 1 242.3,96.4 Z" class="d-blue d-fill" opacity="0.12"/>
+<path d="M200,296 L157.7,96.4 A204,204 0 0 1 242.3,96.4 Z" class="d-line d-blue d-stroke"/>
+<text x="249.3" y="100.4" class="d-s d-blue d-ct" text-anchor="start" >85mm, 24°</text>
+<path d="M200,296 L179.9,72.9 A224,224 0 0 1 220.1,72.9 Z" class="d-violet d-fill" opacity="0.12"/>
+<path d="M200,296 L179.9,72.9 A224,224 0 0 1 220.1,72.9 Z" class="d-line d-violet d-stroke"/>
+<text x="227.1" y="76.9" class="d-s d-violet d-ct" text-anchor="start" >200mm, 10°</text>
+<path d="M200,296 L192.7,52.1 A244,244 0 0 1 207.3,52.1 Z" class="d-rose d-fill" opacity="0.12"/>
+<path d="M200,296 L192.7,52.1 A244,244 0 0 1 207.3,52.1 Z" class="d-line d-rose d-stroke"/>
+<text x="214.3" y="56.1" class="d-s d-rose d-ct" text-anchor="start" >600mm, 3.4°</text>
+<circle cx="200" cy="296" r="5" class="d-box" style="fill:var(--foreground,#1a1a1a);stroke:none"/>
+<text x="210" y="300" class="d-s" text-anchor="start" >Camera</text>
+</svg>

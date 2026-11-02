@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState, type ComponentType } from "react";
+import { DiceWidget } from "./widgets/DiceWidget";
+import { LiquidationWidget } from "./widgets/LiquidationWidget";
+import { ShareWidget } from "./widgets/ShareWidget";
 
 export function fittsBits(distance: number, width: number): number {
   return Math.log2(distance / width + 1);
@@ -140,4 +143,7 @@ export const diagramWidgets: Record<string, ComponentType> = {
   "ux-fitts": FittsWidget,
   "ux-hick": HickWidget,
   "ux-response": DelayWidget,
+  "perps-margin": LiquidationWidget,
+  "pm-shares": ShareWidget,
+  "dice-noise": DiceWidget,
 };

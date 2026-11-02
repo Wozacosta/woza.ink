@@ -4,12 +4,12 @@ export const sidenotes: ArticleSidenotes = {
   slug: "matrix-protocol",
   notes: [
     {
-      marker: "The spec and reference implementations are public, maintained by a non-profit foundation.",
+      marker: "The spec is public and maintained by a non-profit foundation",
       type: "quote",
       content:
         "The Matrix.org Foundation's stated mission is to \"empower users to control their communication data and have freedom over their communications infrastructure by creating, maintaining and promoting Matrix as an openly standardised secure decentralised communication protocol and network, open to all, and available to the public for no charge.\" It is incorporated as a non-profit UK Community Interest Company.",
       attribution: "The Matrix.org Foundation",
-      url: "https://matrix.org/foundation/about/",
+      url: "https://github.com/matrix-org/matrix-spec-proposals/blob/main/proposals/1779-open-governance.md",
     },
     {
       marker: "Governments, enterprises, and open-source communities use Matrix because it is reliable and auditable",
@@ -59,7 +59,7 @@ export const sidenotes: ArticleSidenotes = {
       content:
         "The Foundation defines a key objective as \"maximising the number of online servers in the open federation.\" Unlike Signal (one server, one company) or WhatsApp (one server, Meta), Matrix's value grows with every independent homeserver that joins the network. The protocol is designed so that no single entity — not even the Foundation — can control the ecosystem.",
       attribution: "The Matrix.org Foundation",
-      url: "https://matrix.org/foundation/about/",
+      url: "https://github.com/matrix-org/matrix-spec-proposals/blob/main/proposals/1779-open-governance.md",
     },
   ],
 };

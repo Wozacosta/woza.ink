@@ -15,26 +15,36 @@
 <defs><marker id="ah-kohaku-leaks" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
 <text x="20" y="22" class="d-t" text-anchor="start" >Four places a wallet leaks</text>
 <text x="20" y="38" class="d-s" text-anchor="start" >Each one has its own fix. Shielded pools only cover the last.</text>
+<g data-node="wallet">
 <rect x="20" y="175.0" width="74" height="56" rx="8" class="d-box"/>
 <text x="57.0" y="207.5" class="d-t" text-anchor="middle" >Wallet</text>
+</g>
+<g data-node="dapp">
 <rect x="130" y="56" width="250" height="66" rx="8" class="d-box"/>
 <text x="144" y="77" class="d-t" text-anchor="start" >Dapp</text>
 <text x="144" y="94" class="d-s d-rose d-ct" text-anchor="start" >Sees one address everywhere</text>
 <text x="144" y="110" class="d-s d-green d-ct" text-anchor="start" >One address per dapp</text>
-<path d="M94,203.0 L112,203.0 L112,89.0 L128,89.0" class="d-line" marker-end="url(#ah-kohaku-leaks)"/>
+</g>
+<path d="M94,203.0 L112,203.0 L112,89.0 L128,89.0" class="d-line" data-edge="wallet-dapp" marker-end="url(#ah-kohaku-leaks)"/>
+<g data-node="rpc">
 <rect x="130" y="132" width="250" height="66" rx="8" class="d-box"/>
 <text x="144" y="153" class="d-t" text-anchor="start" >RPC</text>
 <text x="144" y="170" class="d-s d-rose d-ct" text-anchor="start" >Sees your addresses and your IP</text>
 <text x="144" y="186" class="d-s d-green d-ct" text-anchor="start" >Light client, private reads</text>
-<path d="M94,203.0 L112,203.0 L112,165.0 L128,165.0" class="d-line" marker-end="url(#ah-kohaku-leaks)"/>
+</g>
+<path d="M94,203.0 L112,203.0 L112,165.0 L128,165.0" class="d-line" data-edge="wallet-rpc" marker-end="url(#ah-kohaku-leaks)"/>
+<g data-node="broadcast">
 <rect x="130" y="208" width="250" height="66" rx="8" class="d-box"/>
 <text x="144" y="229" class="d-t" text-anchor="start" >Broadcast</text>
 <text x="144" y="246" class="d-s d-rose d-ct" text-anchor="start" >Sees which IP sent it</text>
 <text x="144" y="262" class="d-s d-green d-ct" text-anchor="start" >P2P network, Tor</text>
-<path d="M94,203.0 L112,203.0 L112,241.0 L128,241.0" class="d-line" marker-end="url(#ah-kohaku-leaks)"/>
+</g>
+<path d="M94,203.0 L112,203.0 L112,241.0 L128,241.0" class="d-line" data-edge="wallet-broadcast" marker-end="url(#ah-kohaku-leaks)"/>
+<g data-node="chain">
 <rect x="130" y="284" width="250" height="66" rx="8" class="d-box"/>
 <text x="144" y="305" class="d-t" text-anchor="start" >Chain</text>
 <text x="144" y="322" class="d-s d-rose d-ct" text-anchor="start" >Shows everything, forever</text>
 <text x="144" y="338" class="d-s d-green d-ct" text-anchor="start" >Shielded pools</text>
-<path d="M94,203.0 L112,203.0 L112,317.0 L128,317.0" class="d-line" marker-end="url(#ah-kohaku-leaks)"/>
+</g>
+<path d="M94,203.0 L112,203.0 L112,317.0 L128,317.0" class="d-line" data-edge="wallet-chain" marker-end="url(#ah-kohaku-leaks)"/>
 </svg>

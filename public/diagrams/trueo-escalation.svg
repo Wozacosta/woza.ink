@@ -13,39 +13,49 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-trueo-escalation" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="created">
 <rect x="20" y="16" width="262" height="52" rx="8" class="d-box"/>
 <circle cx="34" cy="34" r="4" class="d-blue d-fill"/>
 <text x="46" y="38" class="d-t" text-anchor="start" >Market created</text>
 <text x="46" y="54" class="d-s" text-anchor="start" >question, criteria, sources fixed on-chain</text>
-<path d="M64,68 L64,108" class="d-line" marker-end="url(#ah-trueo-escalation)"/>
-<text x="74" y="92" class="d-s" text-anchor="start" >event happens</text>
+</g>
+<path d="M64,68 L64,108" class="d-line" data-edge="created-proposal" marker-end="url(#ah-trueo-escalation)"/>
+<text x="74" y="92" class="d-s" text-anchor="start" data-edge="created-proposal">event happens</text>
+<g data-node="proposal">
 <rect x="20" y="110" width="262" height="52" rx="8" class="d-box"/>
 <circle cx="34" cy="128" r="4" class="d-violet d-fill"/>
 <text x="46" y="132" class="d-t" text-anchor="start" >Proposal</text>
 <text x="46" y="148" class="d-s" text-anchor="start" >a resolver proposes, 250 TYD bond</text>
+</g>
 <text x="296" y="132" class="d-s d-green d-ct" text-anchor="start" >no challenge</text>
 <text x="296" y="147" class="d-s d-green d-ct" text-anchor="start" >→ resolved</text>
-<path d="M64,162 L64,202" class="d-line" marker-end="url(#ah-trueo-escalation)"/>
-<text x="74" y="186" class="d-s" text-anchor="start" >12 h to challenge, 250 TYD bond</text>
+<path d="M64,162 L64,202" class="d-line" data-edge="proposal-council" marker-end="url(#ah-trueo-escalation)"/>
+<text x="74" y="186" class="d-s" text-anchor="start" data-edge="proposal-council">12 h to challenge, 250 TYD bond</text>
+<g data-node="council">
 <rect x="20" y="204" width="262" height="52" rx="8" class="d-box"/>
 <circle cx="34" cy="222" r="4" class="d-amber d-fill"/>
 <text x="46" y="226" class="d-t" text-anchor="start" >Oracle Council</text>
 <text x="46" y="242" class="d-s" text-anchor="start" >5 members arbitrate, set who's slashed</text>
+</g>
 <text x="296" y="226" class="d-s d-green d-ct" text-anchor="start" >no challenge</text>
 <text x="296" y="241" class="d-s d-green d-ct" text-anchor="start" >→ resolved</text>
-<path d="M64,256 L64,296" class="d-line" marker-end="url(#ah-trueo-escalation)"/>
-<text x="74" y="280" class="d-s" text-anchor="start" >12 h to escalate, 750 TYD bond</text>
+<path d="M64,256 L64,296" class="d-line" data-edge="council-holders" marker-end="url(#ah-trueo-escalation)"/>
+<text x="74" y="280" class="d-s" text-anchor="start" data-edge="council-holders">12 h to escalate, 750 TYD bond</text>
+<g data-node="holders">
 <rect x="20" y="298" width="262" height="52" rx="8" class="d-box"/>
 <circle cx="34" cy="316" r="4" class="d-amber d-fill"/>
 <text x="46" y="320" class="d-t" text-anchor="start" >TRUE holders vote</text>
 <text x="46" y="336" class="d-s" text-anchor="start" >on the outcome and the slashing</text>
+</g>
 <text x="296" y="320" class="d-s d-green d-ct" text-anchor="start" >no challenge</text>
 <text x="296" y="335" class="d-s d-green d-ct" text-anchor="start" >→ resolved</text>
-<path d="M64,350 L64,390" class="d-line" marker-end="url(#ah-trueo-escalation)"/>
-<text x="74" y="374" class="d-s" text-anchor="start" >escalator holds ≥ 250k TRUE</text>
+<path d="M64,350 L64,390" class="d-line" data-edge="holders-attesters" marker-end="url(#ah-trueo-escalation)"/>
+<text x="74" y="374" class="d-s" text-anchor="start" data-edge="holders-attesters">escalator holds ≥ 250k TRUE</text>
+<g data-node="attesters">
 <rect x="20" y="392" width="262" height="52" rx="8" class="d-box"/>
 <circle cx="34" cy="410" r="4" class="d-rose d-fill"/>
 <text x="46" y="414" class="d-t" text-anchor="start" >11 random attesters</text>
 <text x="46" y="430" class="d-s" text-anchor="start" >final verdict</text>
+</g>
 <text x="20" y="480" class="d-s" text-anchor="start" >Each step costs more to reach and is more neutral than the last.</text>
 </svg>

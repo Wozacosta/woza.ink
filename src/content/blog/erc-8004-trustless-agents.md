@@ -35,6 +35,8 @@ In a closed system — agents within the same company, or agents from pre-approv
 
 In an open system, none of that exists. An agent advertising a service could be competent, incompetent, or actively malicious. There's no organizational hierarchy to fall back on. The agent might claim to be a financial advisor, a code reviewer, or a data analyst — but claims are cheap.
 
+![Inside a company, trust comes with the relationship. On the open internet, there isn't one.](diagram:erc8004-trust-gap)
+
 ERC-8004 provides three primitives that let agents establish trust without pre-existing relationships:
 
 1. **Identity**: a verifiable, onchain record of who an agent is
@@ -58,7 +60,7 @@ function register(
 ) external returns (uint256 agentId);
 ```
 
-The `agentURI` points to an off-chain JSON file — the Agent Registration File — that describes the agent: its name, description, services it offers, and endpoints for protocols like A2A, MCP, or OASF. The URI can point to IPFS, Arweave, or a traditional HTTPS endpoint. What matters is that the onchain record commits to the content via hash.
+The `agentURI` points to an off-chain JSON file — the Agent Registration File — that describes the agent: its name, description, services it offers, and endpoints for protocols like A2A, MCP, or OASF. The URI can point to IPFS, Arweave, or a traditional HTTPS endpoint. The contract stores only the URI, with no hash beside it, so a content-addressed URI like IPFS is what pins the content.
 
 Agents can store key-value metadata onchain:
 
@@ -72,7 +74,9 @@ function setMetadata(
 
 One reserved metadata key is `agentWallet` — the payment address for the agent. Setting it requires an EIP-712 or EIP-1271 signature, which means the wallet address must actively consent to being associated with the agent. This prevents impersonation: you can't point your agent's payment address at someone else's wallet without their signature.
 
-The global identifier format is `eip155:{chainId}:{identityRegistry}`, which makes agent identity chain-aware and interoperable across EVM networks.
+The global identifier is the registry, `eip155:{chainId}:{identityRegistry}`, plus the `agentId`, which makes agent identity chain-aware and interoperable across EVM networks.
+
+![The NFT holds the pointers, and the file holds the description.](diagram:erc8004-identity)
 
 **Why NFTs?** Because the entire ERC-721 ecosystem already exists. Agents can be transferred between owners, listed on marketplaces, held by multisigs, governed by DAOs, or used as collateral. Every wallet, explorer, and indexer already knows how to handle them. The standard gets composability for free.
 
@@ -97,7 +101,7 @@ function giveFeedback(
 
 This isn't a five-star review system. The `value` field is a signed 128-bit integer with configurable decimal precision. The `tag1` and `tag2` fields categorize the feedback — `starred` for general quality, `reachable` for endpoint liveness, `uptime` for availability, `tradingYield` with a time period as `tag2`. The `feedbackURI` links to detailed off-chain feedback data, committed with a hash.
 
-Agents can respond to feedback:
+Anyone can append a response to feedback, such as an agent showing a refund:
 
 ```solidity
 function appendResponse(
@@ -125,6 +129,8 @@ function getSummary(
 ```
 
 **What the standard intentionally doesn't do**: it doesn't define a reputation *formula*. It doesn't say "agents with score > X are trustworthy." That's a deliberate choice. Different applications need different trust models. A DeFi protocol might weight recent trading performance heavily. A code review service might care about long-term consistency. A data pipeline might only care about uptime. The registry provides the raw data; interpretation is left to the consumer.
+
+![The registry keeps raw data, so three readers can reach three answers.](diagram:erc8004-feedback)
 
 ---
 
@@ -159,6 +165,8 @@ This registry is intentionally generic because the standard supports multiple va
 
 The registry doesn't care which mechanism you use. It provides the interface for recording that validation happened and what the result was.
 
+![The owner asks, a named validator answers, and the registry records the score.](diagram:erc8004-validation)
+
 ---
 
 ## Design philosophy: minimal onchain surface
@@ -192,6 +200,8 @@ ERC-8004 contracts were deployed to Ethereum mainnet on January 29, 2026, using 
 As of early 2026, over 45,000 agents have been registered across these chains. Notable implementations include Phala Network (TEE-based agents), Vistara Agent Arena (CrewAI demo), and AgentStore (marketplace using ERC-8004 identity with x402 payments).
 
 The spec itself has had an interesting status journey: it moved from Draft to Review in October 2025, then back to Draft in January 2026 — likely because community feedback warranted significant changes. Multiple companion ERCs have been proposed: multichain agent relationships, zero-knowledge payment verification, agent subscriptions, and agentic commerce extensions.
+
+![The contracts went live sixteen days after the spec went back to Draft.](diagram:erc8004-status)
 
 ---
 

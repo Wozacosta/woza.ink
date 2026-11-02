@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 214" role="img" aria-labelledby="t-kohaku-pq"><title id="t-kohaku-pq">A post-quantum account checks two signatures on every operation, the current kind and a post-quantum one such as Falcon or ML-DSA. Both have to pass, so a break in either scheme alone isn't enough</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-kohaku-pq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Two signatures, one account</text>
+<rect x="20" y="40" width="170" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="58" r="4" class="d-blue d-fill"/>
+<text x="46" y="62" class="d-t" text-anchor="start" >Current signature</text>
+<text x="46" y="78" class="d-s" text-anchor="start" >today's kind</text>
+<rect x="210" y="40" width="170" height="54" rx="8" class="d-box"/>
+<circle cx="224" cy="58" r="4" class="d-violet d-fill"/>
+<text x="236" y="62" class="d-t" text-anchor="start" >Post-quantum</text>
+<text x="236" y="78" class="d-s" text-anchor="start" >Falcon or ML-DSA</text>
+<path d="M105,94 L105,118 L200,118 L200,134" class="d-line" marker-end="url(#ah-kohaku-pq)"/>
+<path d="M295,94 L295,118 L200,118 L200,134" class="d-line" marker-end="url(#ah-kohaku-pq)"/>
+<rect x="90" y="136" width="220" height="54" rx="8" class="d-box"/>
+<circle cx="104" cy="154" r="4" class="d-green d-fill"/>
+<text x="116" y="158" class="d-t" text-anchor="start" >4337 account</text>
+<text x="116" y="174" class="d-s" text-anchor="start" >both must verify</text>
+<text x="200" y="208" class="d-s" text-anchor="middle" >Breaking one scheme alone isn't enough.</text>
+</svg>

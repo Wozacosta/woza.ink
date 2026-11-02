@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-publishing-farcaster-decline"><title id="t-publishing-farcaster-decline">Three Farcaster numbers drawn against their own peaks. Daily active users fell from about 100,000 to about 60,000. New registrations fell from 15,000 to about 650 a day. Monthly revenue fell from 1.91 million dollars to about 10,000 dollars, a bar too thin to see well</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-publishing-farcaster-decline" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Peak against latest, to scale</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >The outline is the peak. The fill is what's left.</text>
+<text x="20" y="70" class="d-t" text-anchor="start" >Daily active users</text>
+<text x="380" y="70" class="d-s d-m" text-anchor="end" >~100K to ~60K</text>
+<rect x="20" y="80" width="360" height="26" rx="3" class="d-box"/>
+<rect x="20" y="80" width="216.0" height="26" rx="1" class="d-rose d-fill" opacity="0.85"/>
+<text x="20" y="134" class="d-t" text-anchor="start" >New registrations a day</text>
+<text x="380" y="134" class="d-s d-m" text-anchor="end" >15,000 to ~650</text>
+<rect x="20" y="144" width="360" height="26" rx="3" class="d-box"/>
+<rect x="20" y="144" width="15.6" height="26" rx="1" class="d-rose d-fill" opacity="0.85"/>
+<text x="20" y="198" class="d-t" text-anchor="start" >Monthly revenue</text>
+<text x="380" y="198" class="d-s d-m" text-anchor="end" >$1.91M to ~$10K</text>
+<rect x="20" y="208" width="360" height="26" rx="3" class="d-box"/>
+<rect x="20" y="208" width="1.9" height="26" rx="1" class="d-rose d-fill" opacity="0.85"/>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-messenger-openness"><title id="t-messenger-openness">Signal and Telegram compared. Clients: open source for Signal, published with a lag for Telegram. Server code: open for Signal, closed for Telegram. Crypto: publicly documented Signal Protocol, custom MTProto for Telegram. Run by: a non-profit foundation, a private company</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-messenger-openness" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What you can check, and who runs it</text>
+<text x="108" y="50" class="d-t" text-anchor="start" >Signal</text>
+<text x="248" y="50" class="d-t" text-anchor="start" >Telegram</text>
+<text x="20" y="91" class="d-s" text-anchor="start" >Clients</text>
+<rect x="96" y="62" width="134" height="50" rx="8" class="d-box"/>
+<circle cx="110" cy="87.0" r="4" class="d-green d-fill"/>
+<text x="122" y="91.5" class="d-t" text-anchor="start" >Open source</text>
+<rect x="238" y="62" width="142" height="50" rx="8" class="d-box"/>
+<circle cx="252" cy="87.0" r="4" class="d-amber d-fill"/>
+<text x="264" y="91.5" class="d-t" text-anchor="start" >Open, with lag</text>
+<text x="20" y="149" class="d-s" text-anchor="start" >Server</text>
+<rect x="96" y="120" width="134" height="50" rx="8" class="d-box"/>
+<circle cx="110" cy="145.0" r="4" class="d-green d-fill"/>
+<text x="122" y="149.5" class="d-t" text-anchor="start" >Open source</text>
+<rect x="238" y="120" width="142" height="50" rx="8" class="d-box"/>
+<circle cx="252" cy="145.0" r="4" class="d-rose d-fill"/>
+<text x="264" y="149.5" class="d-t" text-anchor="start" >Closed</text>
+<text x="20" y="207" class="d-s" text-anchor="start" >Crypto</text>
+<rect x="96" y="178" width="134" height="50" rx="8" class="d-box"/>
+<circle cx="110" cy="203.0" r="4" class="d-green d-fill"/>
+<text x="122" y="207.5" class="d-t" text-anchor="start" >Public specs</text>
+<rect x="238" y="178" width="142" height="50" rx="8" class="d-box"/>
+<circle cx="252" cy="203.0" r="4" class="d-amber d-fill"/>
+<text x="264" y="207.5" class="d-t" text-anchor="start" >Custom MTProto</text>
+<text x="20" y="265" class="d-s" text-anchor="start" >Run by</text>
+<rect x="96" y="236" width="134" height="50" rx="8" class="d-box"/>
+<circle cx="110" cy="261.0" r="4" class="d-green d-fill"/>
+<text x="122" y="265.5" class="d-t" text-anchor="start" >Non-profit</text>
+<rect x="238" y="236" width="142" height="50" rx="8" class="d-box"/>
+<circle cx="252" cy="261.0" r="4" class="d-amber d-fill"/>
+<text x="264" y="265.5" class="d-t" text-anchor="start" >Private company</text>
+</svg>

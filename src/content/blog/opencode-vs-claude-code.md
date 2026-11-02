@@ -60,6 +60,8 @@ Claude Code is [Anthropic's official CLI](https://code.claude.com/docs). It ship
 
 **Community-driven pace.** Because it's open source, features land based on what contributors care about. This means some rough edges persist longer, but also means the tool evolves in directions actual users want.
 
+![The facts side by side, before the opinions.](diagram:opencode-compare)
+
 ---
 
 ## The practical differences

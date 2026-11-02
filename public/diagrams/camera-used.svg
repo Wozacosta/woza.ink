@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 236" role="img" aria-labelledby="t-camera-used"><title id="t-camera-used">To scale. A body one generation behind costs 50 to 60 percent of the current price and gives 90 percent of the performance. A Canon EF 70-200mm f/2.8L IS II costs 2,000 dollars new and 900 to 1,100 used</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-camera-used" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What one generation back costs you</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Bars to scale, using the numbers above</text>
+<text x="20" y="66" class="d-t" text-anchor="start" >Body, one generation behind</text>
+<rect x="20" y="74" width="300" height="18" rx="2" class="d-line d-faint"/>
+<rect x="20" y="74" width="150.0" height="18" rx="2" class="d-green d-fill" opacity="0.8"/>
+<rect x="170.0" y="74" width="29.999999999999993" height="18" class="d-green d-fill" opacity="0.35"/>
+<text x="330" y="88" class="d-s d-green d-ct" text-anchor="start" >50-60%</text>
+<rect x="20" y="98" width="300" height="18" rx="2" class="d-line d-faint"/>
+<rect x="20" y="98" width="270.0" height="18" rx="2" class="d-blue d-fill" opacity="0.8"/>
+<text x="330" y="112" class="d-s d-blue d-ct" text-anchor="start" >90%</text>
+<text x="20" y="146" class="d-t" text-anchor="start" >Canon EF 70-200mm f/2.8L IS II</text>
+<rect x="20" y="154" width="300.0" height="18" rx="2" class="d-rose d-fill" opacity="0.8"/>
+<text x="330" y="168" class="d-s d-rose d-ct" text-anchor="start" >$2,000 new</text>
+<rect x="20" y="178" width="135.0" height="18" rx="2" class="d-green d-fill" opacity="0.8"/>
+<rect x="155.0" y="178" width="30.0" height="18" class="d-green d-fill" opacity="0.35"/>
+<text x="330" y="192" class="d-s d-green d-ct" text-anchor="start" >$900-1,100</text>
+<text x="20" y="222" class="d-s" text-anchor="start" >Pale ends show the range</text>
+</svg>

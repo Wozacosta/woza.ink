@@ -5,7 +5,7 @@ export const sidenotes: ArticleSidenotes = {
   notes: [
     {
       marker:
-        "Visa's network processes around 1,700 TPS at peak",
+        "Visa's network averages around 8,000 TPS",
       type: "note",
       content:
         "For calibration: Solana's real-world sustained TPS sits around 1,000-4,000 (vs 65,000 theoretical max). On testnet in March 2025, MegaETH demonstrated 1,700 MGas/s vs Monad's 300 MGas/s. The mainnet stress test in January 2026 targeted 15,000-35,000 TPS with 11 billion transactions over seven days. Claimed numbers and sustained production numbers always diverge -- mainnet data over the next year is what matters.",

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 292" role="img" aria-labelledby="t-camera-prices"><title id="t-camera-prices">Seven cameras by price, to scale. Canon EOS R100 with a kit lens 480 dollars, Fujifilm X-M5 800, Canon EOS R10 880, Nikon Z50 II 960, Sony A6700 1,500, Nikon Z6 III 2,000 and Sony A7C II 2,100. The last two are full-frame</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-camera-prices" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >The list, to scale</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Body prices, except the R100 kit. Prices move.</text>
+<text x="20" y="66" class="d-s" text-anchor="start" >Canon EOS R100 kit</text>
+<rect x="130" y="55" width="52.6" height="14" rx="2" class="d-green d-fill" opacity="0.8"/>
+<text x="188.6" y="66" class="d-s" text-anchor="start" >$480</text>
+<text x="20" y="94" class="d-s" text-anchor="start" >Fujifilm X-M5</text>
+<rect x="130" y="83" width="87.6" height="14" rx="2" class="d-green d-fill" opacity="0.8"/>
+<text x="223.6" y="94" class="d-s" text-anchor="start" >$800</text>
+<text x="20" y="122" class="d-s" text-anchor="start" >Canon EOS R10</text>
+<rect x="130" y="111" width="96.4" height="14" rx="2" class="d-green d-fill" opacity="0.8"/>
+<text x="232.4" y="122" class="d-s" text-anchor="start" >$880</text>
+<text x="20" y="150" class="d-s" text-anchor="start" >Nikon Z50 II</text>
+<rect x="130" y="139" width="105.1" height="14" rx="2" class="d-green d-fill" opacity="0.8"/>
+<text x="241.1" y="150" class="d-s" text-anchor="start" >$960</text>
+<text x="20" y="178" class="d-s" text-anchor="start" >Sony A6700</text>
+<rect x="130" y="167" width="164.3" height="14" rx="2" class="d-green d-fill" opacity="0.8"/>
+<text x="300.3" y="178" class="d-s" text-anchor="start" >$1,500</text>
+<text x="20" y="206" class="d-s" text-anchor="start" >Nikon Z6 III</text>
+<rect x="130" y="195" width="219.0" height="14" rx="2" class="d-blue d-fill" opacity="0.8"/>
+<text x="343.0" y="206" class="d-s" text-anchor="end" style="fill:var(--background,#faf8f5)">$2,000</text>
+<text x="20" y="234" class="d-s" text-anchor="start" >Sony A7C II</text>
+<rect x="130" y="223" width="230.0" height="14" rx="2" class="d-blue d-fill" opacity="0.8"/>
+<text x="354.0" y="234" class="d-s" text-anchor="end" style="fill:var(--background,#faf8f5)">$2,100</text>
+<circle cx="24" cy="268" r="4" class="d-green d-fill"/>
+<text x="34" y="272" class="d-s" text-anchor="start" >APS-C</text>
+<circle cx="94" cy="268" r="4" class="d-blue d-fill"/>
+<text x="104" y="272" class="d-s" text-anchor="start" >Full-frame</text>
+</svg>

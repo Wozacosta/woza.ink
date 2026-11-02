@@ -52,6 +52,8 @@ These are ordinary records in your own AT Protocol repo, on your PDS, the server
 
 `site` points at the publication record, and that record's URL plus this `path` gives the post's real address. So the original stays the original: the record doesn't replace the page, it describes it.
 
+![The same record, joined up into a URL.](diagram:standard-site-address)
+
 A record alone proves nothing, though, because anyone can write one claiming to be your site. So [verification](https://standard.site/docs/verification/) goes both ways:
 
 ![Your domain and your repo point at each other. The domain's well-known file and link tags name the AT-URI of each record. The records in your repo carry the site URL and path. A reader only trusts a record when both directions match.](diagram:standard-site-verify)
@@ -80,6 +82,8 @@ There's also a route to comments. Documents have a `bskyPostRef` field that link
 ## What you don't get
 
 **Rich content doesn't travel.** The `textContent` field is plain text, and the `content` field is an open union that each platform fills its own way. My sidenotes and interactive diagrams stay on my site. That's fine, since the page is the point, but other apps get the words without the layout.
+
+![What another app gets from the record.](diagram:standard-site-travels)
 
 **It's less decentralized in practice.** The format is open, but the easiest path still runs through Bluesky: a Bluesky account for your identity, and often Bluesky's servers for your PDS. You can leave. Most people won't.
 
@@ -110,6 +114,8 @@ The config is short:
 ```
 
 The identity was already there: `woza.ink` was my Bluesky handle, proven by a DNS record. So the rest came down to creating the publication record, writing its AT-URI to the well-known file, running `sequoia publish` with an app password, committing the new `atUri` lines and deploying. The first run created 35 records and skipped two drafts, one of which was this post.
+
+![The whole loop, from a markdown file to a checked page.](diagram:standard-site-publish)
 
 To check the result, I ran two posts through the [Standard.site validator](https://site-validator.fly.dev/). Both passed all 16 checks, from fetching the page to matching the well-known file. A small script then confirmed that all 35 live pages name the right record.
 

@@ -26,7 +26,7 @@ export const sidenotes: ArticleSidenotes = {
       type: "source",
       content:
         'Academic researchers at ETH Zurich and Royal Holloway found four concrete attacks against MTProto 2.0, including message reordering, a timing side-channel enabling plaintext recovery in official clients, and a rekeying protocol vulnerable to unknown-key-share attacks. Their conclusion: MTProto "fell short of the cryptographic guarantees enjoyed by other widely deployed cryptographic protocols such as TLS."',
-      attribution: "Albrecht, Marekov, Paterson, Stepanovs (2022)",
+      attribution: "Albrecht, Mareková, Paterson, Stepanovs (2022)",
       url: "https://mtpsym.github.io/paper.pdf",
     },
     {
@@ -34,9 +34,9 @@ export const sidenotes: ArticleSidenotes = {
         "Servers see everything for cloud chats",
       type: "quote",
       content:
-        "Telegram has launched a pretty intense campaign to malign Signal as insecure, with assistance from Elon Musk. The goal seems to be to get activists to switch away from encrypted Signal to mostly unencrypted Telegram.",
+        "Telegram has launched a pretty intense campaign to malign Signal as insecure, with assistance from Elon Musk. The goal seems to be to get activists to switch away from encrypted Signal to mostly-unencrypted Telegram.",
       attribution: "Matthew Green, Johns Hopkins cryptographer",
-      url: "https://www.schneier.com/blog/archives/2024/08/matthew-green-on-telegrams-encryption.html",
+      url: "https://x.com/matthew_d_green/status/1789687898863792453",
     },
     {
       marker:

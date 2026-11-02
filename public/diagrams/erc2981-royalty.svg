@@ -27,11 +27,11 @@
 <rect x="20" y="142" width="360" height="46" rx="8" class="d-box"/>
 <circle cx="34" cy="160" r="4" class="d-green d-fill"/>
 <text x="46" y="164" class="d-t" text-anchor="start" >Honors it</text>
-<text x="46" y="180" class="d-s" text-anchor="start" >OpenSea, Rarible: the creator is paid</text>
+<text x="46" y="180" class="d-s" text-anchor="start" >Rarible and others: the creator is paid</text>
 <rect x="20" y="196" width="360" height="46" rx="8" class="d-box"/>
 <circle cx="34" cy="214" r="4" class="d-amber d-fill"/>
 <text x="46" y="218" class="d-t" text-anchor="start" >Makes it optional</text>
-<text x="46" y="234" class="d-s" text-anchor="start" >Blur: the creator may get nothing</text>
+<text x="46" y="234" class="d-s" text-anchor="start" >Blur, OpenSea since 2023: may get nothing</text>
 <rect x="20" y="250" width="360" height="46" rx="8" class="d-box"/>
 <circle cx="34" cy="268" r="4" class="d-rose d-fill"/>
 <text x="46" y="272" class="d-t" text-anchor="start" >Never asks</text>

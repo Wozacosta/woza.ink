@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 318" role="img" aria-labelledby="t-matrix-stack"><title id="t-matrix-stack">A walled app bundles the client, the server and the network, and one company picks all three. With Matrix you choose each layer: a client such as Element, FluffyChat, Cinny, Nheko or SchildiChat, a homeserver such as matrix.org or your own Synapse or Conduit, and optional bridges to Slack, IRC, Telegram or SMS</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-matrix-stack" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One bundle, or three choices</text>
+<text x="20" y="46" class="d-s" text-anchor="start" >A walled app</text>
+<g data-node="walled">
+<rect x="20" y="54" width="360" height="44" rx="8" class="d-ext"/>
+<text x="34" y="80.5" class="d-t" text-anchor="start" >App, server and network: one company picks</text>
+</g>
+<text x="20" y="122" class="d-s" text-anchor="start" >Matrix</text>
+<g data-node="client">
+<rect x="20" y="130" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="148" r="4" class="d-violet d-fill"/>
+<text x="46" y="152" class="d-t" text-anchor="start" >Client</text>
+<text x="46" y="168" class="d-s" text-anchor="start" >Element, FluffyChat, Cinny, Nheko, SchildiChat</text>
+</g>
+<path d="M200,184 L200,208" class="d-line" data-edge="client-homeserver" marker-end="url(#ah-matrix-stack)"/>
+<g data-node="homeserver">
+<rect x="20" y="210" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="228" r="4" class="d-blue d-fill"/>
+<text x="46" y="232" class="d-t" text-anchor="start" >Homeserver</text>
+<text x="46" y="248" class="d-s" text-anchor="start" >matrix.org, or your own Synapse or Conduit</text>
+</g>
+<path d="M200,264 L200,278" class="d-line" data-edge="homeserver-bridges" marker-end="url(#ah-matrix-stack)"/>
+<g data-node="bridges">
+<rect x="20" y="280" width="360" height="30" rx="8" class="d-ext"/>
+<text x="34" y="299.5" class="d-t" text-anchor="start" >Bridges, optional: Slack, IRC, Telegram, SMS</text>
+</g>
+</svg>

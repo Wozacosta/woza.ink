@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 286" role="img" aria-labelledby="t-context-lost-middle"><title id="t-context-lost-middle">Accuracy of GPT-3.5-Turbo on 20 documents by where the answer sits: 75.8 percent in the first document, 57.2 in the fifth, 53.8 in the tenth, 55.4 in the fifteenth and 63.2 in the last. With no documents at all it scores 56.1 percent</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-context-lost-middle" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Lost in the middle</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >GPT-3.5-Turbo on 20 documents, Liu et al. 2023, table G.2</text>
+<line x1="48" y1="232.0" x2="372" y2="232.0" class="d-line d-faint"/>
+<text x="42" y="236.0" class="d-s" text-anchor="end" >50%</text>
+<line x1="48" y1="174.7" x2="372" y2="174.7" class="d-line d-faint"/>
+<text x="42" y="178.7" class="d-s" text-anchor="end" >60%</text>
+<line x1="48" y1="117.3" x2="372" y2="117.3" class="d-line d-faint"/>
+<text x="42" y="121.3" class="d-s" text-anchor="end" >70%</text>
+<line x1="48" y1="60.0" x2="372" y2="60.0" class="d-line d-faint"/>
+<text x="42" y="64.0" class="d-s" text-anchor="end" >80%</text>
+<line x1="48" y1="197.0" x2="372" y2="197.0" class="d-line d-rose d-stroke" stroke-dasharray="4 3"/>
+<text x="300" y="191.0" class="d-s" text-anchor="end" >No documents: 56.1%</text>
+<path d="M48.0,84.1 L116.2,190.7 L201.5,210.2 L286.7,201.0 L372.0,156.3" fill="none" stroke-width="2" stroke-linejoin="round" class="d-blue d-stroke"/>
+<circle cx="48.0" cy="84.1" r="4" class="d-blue d-fill"/>
+<text x="58.0" y="78.1" class="d-t" text-anchor="start" >75.8%</text>
+<circle cx="116.2" cy="190.7" r="4" class="d-blue d-fill"/>
+<text x="124.2" y="182.7" class="d-s" text-anchor="start" >57.2%</text>
+<circle cx="201.5" cy="210.2" r="4" class="d-blue d-fill"/>
+<text x="201.5" y="228.2" class="d-t" text-anchor="middle" >53.8%</text>
+<circle cx="286.7" cy="201.0" r="4" class="d-blue d-fill"/>
+<text x="286.7" y="219.0" class="d-s" text-anchor="middle" >55.4%</text>
+<circle cx="372.0" cy="156.3" r="4" class="d-blue d-fill"/>
+<text x="372.0" y="146.3" class="d-t" text-anchor="end" >63.2%</text>
+<text x="48" y="250" class="d-s" text-anchor="start" >First</text>
+<text x="210.0" y="250" class="d-s" text-anchor="middle" >Middle</text>
+<text x="372" y="250" class="d-s" text-anchor="end" >Last</text>
+<text x="210.0" y="268" class="d-s" text-anchor="middle" >Where the answer sits</text>
+</svg>

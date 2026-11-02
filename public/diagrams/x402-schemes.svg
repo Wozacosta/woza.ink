@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 348" role="img" aria-labelledby="t-x402-schemes"><title id="t-x402-schemes">A sketch of the four schemes. Exact moves the whole authorized amount. Upto authorizes a cap and the seller settles what was used. Batch-settlement collects offchain vouchers and redeems them onchain together. Auth-capture holds a maximum, then captures, voids or refunds it</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-x402-schemes" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-s" text-anchor="start" >Authorized against charged. A sketch, not data.</text>
+<text x="20" y="52" class="d-t d-m" text-anchor="start" >exact</text>
+<text x="380" y="52" class="d-s" text-anchor="end" >All of it, at once</text>
+<rect x="20" y="62" width="360" height="26" rx="4" class="d-ext"/>
+<text x="20" y="128" class="d-t d-m" text-anchor="start" >upto</text>
+<text x="380" y="128" class="d-s" text-anchor="end" >What was used, up to the cap</text>
+<rect x="20" y="138" width="360" height="26" rx="4" class="d-ext"/>
+<text x="20" y="204" class="d-t d-m" text-anchor="start" >batch-settlement</text>
+<text x="380" y="204" class="d-s" text-anchor="end" >Vouchers offchain, one redemption</text>
+<rect x="20" y="214" width="360" height="26" rx="4" class="d-ext"/>
+<text x="20" y="280" class="d-t d-m" text-anchor="start" >auth-capture</text>
+<text x="380" y="280" class="d-s" text-anchor="end" >Held, then captured, voided or refunded</text>
+<rect x="20" y="290" width="360" height="26" rx="4" class="d-ext"/>
+<rect x="20" y="62" width="360" height="26" rx="4" class="d-blue d-fill" opacity="0.8"/>
+<rect x="20" y="138" width="210" height="26" rx="4" class="d-blue d-fill" opacity="0.8"/>
+<text x="372" y="156" class="d-s" text-anchor="end" >cap</text>
+<rect x="26" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="42" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="58" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="74" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="90" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="106" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="122" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="138" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="154" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="170" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="186" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="202" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="218" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="234" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="250" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="266" y="220" width="10" height="14" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<path d="M292,227 H326" class="d-line"/>
+<circle cx="340" cy="227" r="9" class="d-green d-fill" opacity="0.85"/>
+<rect x="20" y="290" width="160" height="26" rx="4" class="d-blue d-fill" opacity="0.3"/>
+<rect x="182" y="290" width="198" height="26" rx="4" class="d-amber d-fill" opacity="0.25"/>
+<text x="100" y="308" class="d-s" text-anchor="middle" >captured</text>
+<text x="281" y="308" class="d-s" text-anchor="middle" >released to the client</text>
+</svg>

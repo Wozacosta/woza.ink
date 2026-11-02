@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 346" role="img" aria-labelledby="t-standard-site-publish"><title id="t-standard-site-publish">A post starts as markdown. Running sequoia publish writes a document record to your repo and writes its atUri back into the file. You commit and deploy, Vercel builds the page, and the page renders the link tag. A validator then checks the page against the record</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-standard-site-publish" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="post">
+<rect x="20" y="16" width="170" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="34" r="4" class="d-blue d-fill"/>
+<text x="46" y="38" class="d-t" text-anchor="start" >Markdown post</text>
+<text x="46" y="54" class="d-s" text-anchor="start" >Frontmatter and body</text>
+</g>
+<g data-node="sequoia">
+<rect x="210" y="16" width="170" height="54" rx="8" class="d-box"/>
+<circle cx="224" cy="34" r="4" class="d-violet d-fill"/>
+<text x="236" y="38" class="d-t" text-anchor="start" >sequoia publish</text>
+<text x="236" y="54" class="d-s" text-anchor="start" >Run by hand</text>
+</g>
+<path d="M190,43 L208,43" class="d-line" data-edge="post-sequoia" marker-end="url(#ah-standard-site-publish)"/>
+<g data-node="aturi">
+<rect x="20" y="102" width="170" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="120" r="4" class="d-blue d-fill"/>
+<text x="46" y="124" class="d-t" text-anchor="start" >atUri in the file</text>
+<text x="46" y="140" class="d-s" text-anchor="start" >Written back by Sequoia</text>
+</g>
+<g data-node="repo">
+<rect x="210" y="102" width="170" height="54" rx="8" class="d-box"/>
+<circle cx="224" cy="120" r="4" class="d-green d-fill"/>
+<text x="236" y="124" class="d-t" text-anchor="start" >Your repo</text>
+<text x="236" y="140" class="d-s" text-anchor="start" >One record per post</text>
+</g>
+<path d="M295,70 L295,100" class="d-line" data-edge="sequoia-repo" marker-end="url(#ah-standard-site-publish)"/>
+<path d="M232,70 L232,86 L105,86 L105,100" class="d-line" data-edge="sequoia-aturi" marker-end="url(#ah-standard-site-publish)"/>
+<g data-node="deploy">
+<rect x="20" y="188" width="170" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="206" r="4" class="d-amber d-fill"/>
+<text x="46" y="210" class="d-t" text-anchor="start" >Commit, deploy</text>
+<text x="46" y="226" class="d-s" text-anchor="start" >Vercel builds the site</text>
+</g>
+<path d="M105,156 L105,186" class="d-line" data-edge="aturi-deploy" marker-end="url(#ah-standard-site-publish)"/>
+<g data-node="page">
+<rect x="20" y="274" width="170" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="292" r="4" class="d-blue d-fill"/>
+<text x="46" y="296" class="d-t" text-anchor="start" >Post page</text>
+<text x="46" y="312" class="d-s" text-anchor="start" >Renders the &lt;link&gt; tag</text>
+</g>
+<path d="M105,242 L105,272" class="d-line" data-edge="deploy-page" marker-end="url(#ah-standard-site-publish)"/>
+<g data-node="validator">
+<rect x="210" y="274" width="170" height="54" rx="8" class="d-box"/>
+<circle cx="224" cy="292" r="4" class="d-green d-fill"/>
+<text x="236" y="296" class="d-t" text-anchor="start" >Validator</text>
+<text x="236" y="312" class="d-s" text-anchor="start" >Page and record match</text>
+</g>
+<path d="M190,301 L208,301" class="d-line" data-edge="page-validator" marker-end="url(#ah-standard-site-publish)"/>
+<path d="M295,156 L295,272" class="d-line" data-edge="repo-validator" marker-end="url(#ah-standard-site-publish)"/>
+</svg>

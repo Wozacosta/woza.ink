@@ -51,7 +51,7 @@ In 1952 William Hick, and a year later Ray Hyman, measured how long people took 
 T = b × log2(n + 1)
 ```
 
-Here `n` is the number of equally likely options. Doubling them doesn't double the time. It adds a fixed amount, so going from 8 options to 16 costs the same as going from 4 to 8.
+Here `n` is the number of equally likely options. Doubling them doesn't double the time. It adds about the same amount each time, so going from 8 options to 16 costs about as much as going from 4 to 8.
 
 ![Four options cost 2.3 units, eight cost 3.2, sixteen cost 4.1. Reading a list you don't know grows in a straight line instead.](diagram:ux-hick)
 

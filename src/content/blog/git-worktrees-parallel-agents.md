@@ -119,6 +119,8 @@ git worktree remove ../myapp-auth
 
 Then open a PR as usual.
 
+![Three branches leave main together and each finishes on its own schedule. A sketch.](diagram:worktree-parallel)
+
 ---
 
 ## A few gotchas
@@ -129,7 +131,9 @@ Then open a PR as usual.
 
 **Your editor might not know about them.** If you open the main repo in VSCode or Cursor, it won't automatically show the worktree directories. Open each worktree as a separate workspace window. This is fine — it's actually the point. Each agent and each editor window has its own isolated context.
 
-**Stash doesn't cross worktrees.** Each worktree has its own index and stash. You can't stash in one worktree and pop in another.
+**Stash crosses worktrees.** Each worktree has its own index, but the stash is shared. A stash made in one worktree shows up in `git stash list` in all of them, and popping it applies it wherever you are, so don't pop what another agent stashed.
+
+![What's private to a worktree and what every worktree shares, stash included.](diagram:worktree-shared)
 
 ---
 
@@ -170,7 +174,7 @@ Pair worktrees with [cmux](https://www.cmux.dev/) for terminal organization, and
 
 Raw git worktree commands are functional but verbose. Creating a worktree requires typing the branch name twice plus a path. Switching means a `cd`. Cleaning up is three commands. It works, but the friction adds up when you're spinning up and tearing down worktrees dozens of times a day.
 
-[Worktrunk](https://worktrunk.dev) (`wt`) is a Rust CLI built specifically to fix this. 3.3k stars on GitHub, released early 2026, and already the default tool for this workflow in the agentic coding community.
+[Worktrunk](https://worktrunk.dev) (`wt`) is a Rust CLI built specifically to fix this. 3.3k stars on GitHub, first released in late 2025, and already the default tool for this workflow in the agentic coding community.
 
 **Install:**
 
@@ -186,7 +190,7 @@ The shell integration is what makes `wt switch` actually switch your working dir
 # create a worktree + branch from main, switch to it
 wt switch --create feat/auth
 
-# list all worktrees with status (staged changes, unpushed commits, CI status)
+# list all worktrees with status (staged changes, unpushed commits)
 wt list
 
 # squash, rebase, merge, clean up — all in one
@@ -200,6 +204,8 @@ Compare this to plain git:
 | Create + switch | `wt switch -c feat` | `git worktree add -b feat ../repo.feat && cd ../repo.feat` |
 | Launch agent | `wt switch -c -x claude feat` | (above) + `claude` |
 | Clean up | `wt remove` | `cd ../repo && git worktree remove ../repo.feat && git branch -d feat` |
+
+![The same three tasks, counted in characters.](diagram:worktree-keystrokes)
 
 **Launching agents directly:**
 

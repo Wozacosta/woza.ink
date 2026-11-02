@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" role="img" aria-labelledby="t-social-fediverse-formats"><title id="t-social-fediverse-formats">Four incumbents and their fediverse counterparts. Twitter maps to Mastodon, TikTok to Loops, Instagram to Pixelfed and YouTube to PeerTube. All four counterparts speak ActivityPub, so one account can follow across them</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-social-fediverse-formats" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Different formats, one protocol</text>
+<rect x="20" y="40" width="120" height="46" rx="8" class="d-ext"/>
+<text x="80.0" y="67.5" class="d-t" text-anchor="middle" >Twitter/X</text>
+<path d="M140,63 L176,63" class="d-line" marker-end="url(#ah-social-fediverse-formats)"/>
+<rect x="178" y="40" width="170" height="46" rx="8" class="d-box"/>
+<circle cx="192" cy="58" r="4" class="d-blue d-fill"/>
+<text x="204" y="62" class="d-t" text-anchor="start" >Mastodon</text>
+<text x="204" y="78" class="d-s" text-anchor="start" >Short posts</text>
+<line x1="348" y1="63" x2="366" y2="63" class="d-line d-faint"/>
+<rect x="20" y="94" width="120" height="46" rx="8" class="d-ext"/>
+<text x="80.0" y="121.5" class="d-t" text-anchor="middle" >TikTok</text>
+<path d="M140,117 L176,117" class="d-line" marker-end="url(#ah-social-fediverse-formats)"/>
+<rect x="178" y="94" width="170" height="46" rx="8" class="d-box"/>
+<circle cx="192" cy="112" r="4" class="d-blue d-fill"/>
+<text x="204" y="116" class="d-t" text-anchor="start" >Loops</text>
+<text x="204" y="132" class="d-s" text-anchor="start" >Short video</text>
+<line x1="348" y1="117" x2="366" y2="117" class="d-line d-faint"/>
+<rect x="20" y="148" width="120" height="46" rx="8" class="d-ext"/>
+<text x="80.0" y="175.5" class="d-t" text-anchor="middle" >Instagram</text>
+<path d="M140,171 L176,171" class="d-line" marker-end="url(#ah-social-fediverse-formats)"/>
+<rect x="178" y="148" width="170" height="46" rx="8" class="d-box"/>
+<circle cx="192" cy="166" r="4" class="d-blue d-fill"/>
+<text x="204" y="170" class="d-t" text-anchor="start" >Pixelfed</text>
+<text x="204" y="186" class="d-s" text-anchor="start" >Photos</text>
+<line x1="348" y1="171" x2="366" y2="171" class="d-line d-faint"/>
+<rect x="20" y="202" width="120" height="46" rx="8" class="d-ext"/>
+<text x="80.0" y="229.5" class="d-t" text-anchor="middle" >YouTube</text>
+<path d="M140,225 L176,225" class="d-line" marker-end="url(#ah-social-fediverse-formats)"/>
+<rect x="178" y="202" width="170" height="46" rx="8" class="d-box"/>
+<circle cx="192" cy="220" r="4" class="d-blue d-fill"/>
+<text x="204" y="224" class="d-t" text-anchor="start" >PeerTube</text>
+<text x="204" y="240" class="d-s" text-anchor="start" >Long video</text>
+<line x1="348" y1="225" x2="366" y2="225" class="d-line d-faint"/>
+<line x1="366" y1="63" x2="366" y2="260" class="d-line d-faint"/>
+<path d="M366,225 L366,262" class="d-line" marker-end="url(#ah-social-fediverse-formats)"/>
+<rect x="20" y="264" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="282" r="4" class="d-green d-fill"/>
+<text x="46" y="286" class="d-t" text-anchor="start" >ActivityPub</text>
+<text x="46" y="302" class="d-s" text-anchor="start" >One account can follow across all four</text>
+</svg>

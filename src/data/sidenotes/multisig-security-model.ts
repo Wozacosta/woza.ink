@@ -12,7 +12,7 @@ export const sidenotes: ArticleSidenotes = {
     },
     {
       marker:
-        "**Bare multisig** (2010) put all the public keys directly in the output script",
+        "**Bare multisig** (BIP 11, 2011) put all the public keys directly in the output script",
       type: "context",
       content:
         "Bare multisig is still valid Bitcoin script and still occasionally used — mostly for data embedding rather than actual custody, since the public keys are arbitrary 33-byte fields nobody checks. It's also the origin of a persistent piece of chain trivia: a nontrivial amount of non-financial data lives in the UTXO set as fake pubkeys inside bare multisig outputs.",
@@ -59,10 +59,9 @@ export const sidenotes: ArticleSidenotes = {
     },
     {
       marker: "A hash is not information.",
-      type: "quote",
+      type: "source",
       content:
         "\"Blind signing\" is the industry's term for approving a transaction your device can only show you as a hash. It has been a known problem for years and remains largely unsolved for complex contract calls — the hardware wallet often lacks the screen, the parser, or the ABI to render what it's signing. The mitigation isn't better hardware, it's independent verification: decode the calldata on a second machine, on separate infrastructure, and compare.",
-      attribution: "a16z crypto, on the Bybit post-mortem",
       url: "https://a16zcrypto.com/posts/article/bybit-hack-lessons/",
     },
     {

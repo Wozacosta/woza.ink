@@ -48,10 +48,11 @@ export const sidenotes: ArticleSidenotes = {
       url: "https://research.google/pubs/pub41892/",
     },
     {
-      marker: "**Nostr Wallet Connect doesn't return preimages**",
+      marker: "**a wallet that doesn't return it can't do L402**",
       type: "counter",
       content:
-        "This is a small technical detail with outsized strategic consequences. L402 settlement requires the payment preimage as proof, and NWC — the connection standard used by CoinOS, CLINK, and Alby Hub — doesn't return one. In practice that limits L402 to LND, Strike, and similar. A protocol that only works with a subset of its own ecosystem's wallets has an adoption ceiling that no amount of architectural elegance fixes.",
+        "A small technical detail with real consequences. The preimage is the proof, so L402 depends on the wallet handing it back. NIP-47, the Nostr Wallet Connect spec, puts a `preimage` in every `pay_invoice` response, and Alby ships an L402 client that pays over NWC, so check the wallet you plan to use rather than the standard it speaks.",
+      url: "https://github.com/nostr-protocol/nips/blob/master/47.md",
     },
     {
       marker:
@@ -63,10 +64,10 @@ export const sidenotes: ArticleSidenotes = {
     },
     {
       marker:
-        "OpenAI pivoted to an app-based model within weeks of launch, in March",
+        "OpenAI pivoted to an app-based model within six months of launch, in March",
       type: "context",
       content:
-        "ACP is the clearest reminder that protocol adoption is a distribution problem, not a technical one. The spec was fine. Stripe, Shopify, Salesforce, and PayPal all shipped support. But the protocol's reason to exist was Instant Checkout inside ChatGPT, and when OpenAI restructured around apps a few weeks later, ACP lost the only distribution channel that made it inevitable. It survives as an open standard that works and that nobody urgently needs.",
+        "ACP is the clearest reminder that protocol adoption is a distribution problem, not a technical one. The spec was fine. Stripe, Shopify, Salesforce, and PayPal all shipped support. But the protocol's reason to exist was Instant Checkout inside ChatGPT, and when OpenAI moved checkout into apps in March 2026, ACP lost the only distribution channel that made it inevitable. It survives as an open standard that works and that nobody urgently needs.",
     },
     {
       marker: "declines to publish a cumulative USD volume figure at all",

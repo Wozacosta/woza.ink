@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 396" role="img" aria-labelledby="t-agent-payments-timeline"><title id="t-agent-payments-timeline">A timeline spaced by month. x402 launches in May 2025, ACP in September, x402 V2 in December. Lightning Agent Tools come in February 2026, MPP in March. x402 moves to the Linux Foundation in April, Binance brings it to BNB Chain in May, the foundation goes operational in July, and Binance Agent OS bundles x402 in August</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-agent-payments-timeline" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<circle cx="24" cy="16" r="4" class="d-blue d-fill"/>
+<text x="33" y="20" class="d-s" text-anchor="start" >x402 and who adopted it</text>
+<circle cx="194" cy="16" r="4" class="d-amber d-fill"/>
+<text x="203" y="20" class="d-s" text-anchor="start" >Everything else</text>
+<line x1="86" y1="40" x2="86" y2="382" class="d-line d-faint"/>
+<circle cx="86" cy="46" r="4.5" class="d-blue d-fill"/>
+<text x="20" y="50" class="d-s" text-anchor="start" >May 2025</text>
+<text x="100" y="50" class="d-s" text-anchor="start" >x402 launches at Coinbase</text>
+<circle cx="86" cy="134" r="4.5" class="d-amber d-fill"/>
+<text x="20" y="138" class="d-s" text-anchor="start" >Sep 2025</text>
+<text x="100" y="138" class="d-s" text-anchor="start" >ACP launches in ChatGPT</text>
+<circle cx="86" cy="200" r="4.5" class="d-blue d-fill"/>
+<text x="20" y="204" class="d-s" text-anchor="start" >Dec 2025</text>
+<text x="100" y="204" class="d-s" text-anchor="start" >x402 V2 ships, with sessions</text>
+<circle cx="86" cy="244" r="4.5" class="d-amber d-fill"/>
+<text x="20" y="248" class="d-s" text-anchor="start" >Feb 2026</text>
+<text x="100" y="248" class="d-s" text-anchor="start" >Lightning Agent Tools for L402</text>
+<circle cx="86" cy="266" r="4.5" class="d-amber d-fill"/>
+<text x="20" y="270" class="d-s" text-anchor="start" >Mar 2026</text>
+<text x="100" y="270" class="d-s" text-anchor="start" >MPP launches; OpenAI moves checkout to apps</text>
+<circle cx="86" cy="288" r="4.5" class="d-blue d-fill"/>
+<text x="20" y="292" class="d-s" text-anchor="start" >Apr 2026</text>
+<text x="100" y="292" class="d-s" text-anchor="start" >x402 goes to the Linux Foundation</text>
+<circle cx="86" cy="310" r="4.5" class="d-blue d-fill"/>
+<text x="20" y="314" class="d-s" text-anchor="start" >May 2026</text>
+<text x="100" y="314" class="d-s" text-anchor="start" >Binance brings x402 to BNB Chain</text>
+<circle cx="86" cy="354" r="4.5" class="d-blue d-fill"/>
+<text x="20" y="358" class="d-s" text-anchor="start" >Jul 2026</text>
+<text x="100" y="358" class="d-s" text-anchor="start" >Foundation operational; Binance wallet adds x402</text>
+<circle cx="86" cy="376" r="4.5" class="d-blue d-fill"/>
+<text x="20" y="380" class="d-s" text-anchor="start" >Aug 2026</text>
+<text x="100" y="380" class="d-s" text-anchor="start" >Binance Agent OS bundles x402</text>
+</svg>

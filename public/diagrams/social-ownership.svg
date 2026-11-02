@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 372" role="img" aria-labelledby="t-social-ownership"><title id="t-social-ownership">Where your account lives on each network. On the fediverse it is one instance, and on Bluesky one PDS. Farcaster splits identity on Optimism from posts on Snapchain. Lens keeps your account and followers on its own chain. Nostr splits a key you hold from the relays you pick</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 372" role="img" aria-labelledby="t-social-ownership"><title id="t-social-ownership">Where your account lives on each network. On the fediverse it is one instance, and on Bluesky one PDS. Farcaster splits identity on Optimism from posts on Snapchain. Lens keeps your account and followers on its own chain and posts on Grove. Nostr splits a key you hold from the relays you pick</title>
 <style>
 .d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
 .d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
@@ -39,10 +39,14 @@
 <text x="270" y="202" class="d-s" text-anchor="start" >Posts</text>
 <text x="20" y="241" class="d-t" text-anchor="start" >Lens</text>
 <text x="20" y="257" class="d-s" text-anchor="start" >Wallet</text>
-<rect x="100" y="220" width="280" height="48" rx="8" class="d-box"/>
+<rect x="100" y="220" width="136" height="48" rx="8" class="d-box"/>
 <circle cx="114" cy="238" r="4" class="d-amber d-fill"/>
-<text x="126" y="242" class="d-t" text-anchor="start" >Lens chain</text>
-<text x="126" y="258" class="d-s" text-anchor="start" >Account and followers</text>
+<text x="126" y="242" class="d-t" text-anchor="start" >Lens Chain</text>
+<text x="126" y="258" class="d-s" text-anchor="start" >Account, followers</text>
+<rect x="244" y="220" width="136" height="48" rx="8" class="d-box"/>
+<circle cx="258" cy="238" r="4" class="d-amber d-fill"/>
+<text x="270" y="242" class="d-t" text-anchor="start" >Grove</text>
+<text x="270" y="258" class="d-s" text-anchor="start" >Posts</text>
 <text x="20" y="297" class="d-t" text-anchor="start" >Nostr</text>
 <text x="20" y="313" class="d-s" text-anchor="start" >Keypair</text>
 <rect x="100" y="276" width="136" height="48" rx="8" class="d-box"/>

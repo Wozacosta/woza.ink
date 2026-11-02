@@ -21,7 +21,7 @@ export const sidenotes: ArticleSidenotes = {
       marker: "more granular categorization, smart folders, rules — added overhead without improving what I actually read",
       type: "counter",
       content:
-        "Some power users take the opposite approach: hundreds of feeds, aggressive filtering rules, and keyword-based \"must-read\" tags. Inoreader users, for example, often build complex rule chains (\"if title contains X and source is Y, star and push to Pocket\"). The tradeoff: more signal extraction, but the system requires maintenance and the rules themselves can become a source of information anxiety.",
+        "Some power users take the opposite approach: hundreds of feeds, aggressive filtering rules, and keyword-based \"must-read\" tags. Inoreader users, for example, often build complex rule chains (\"if title contains X and source is Y, star and send to a read-later app\"). The tradeoff: more signal extraction, but the system requires maintenance and the rules themselves can become a source of information anxiety.",
       url: "https://www.feedbucket.com/2026/02/18/master-your-rss-feed-how-to-organize-subscriptions-and-eliminate-clutter/",
     },
     {

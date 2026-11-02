@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 424" role="img" aria-labelledby="t-searxng-breakage"><title id="t-searxng-breakage">A 2026 timeline to scale, one row per event. In February the video shows Google and Startpage working. In July the main Google engine is switched off for a workaround. In August it gets a fix by posing as a Nokia phone. In September Startpage adds a proof-of-work wall. In October home connections get 403s. In November a fresh install has neither on by default</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-searxng-breakage" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Nine months of one arms race</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Spaced to scale by month</text>
+<line x1="68" y1="73" x2="68" y2="397" class="d-line d-faint"/>
+<text x="20" y="78" class="d-s" text-anchor="start" >Feb</text>
+<circle cx="68" cy="73" r="5" class="d-green d-fill"/>
+<g data-node="feb">
+<rect x="84" y="58" width="296" height="30" rx="8" class="d-box"/>
+<text x="98" y="77.5" class="d-t" text-anchor="start" >The video: Google, Startpage work</text>
+</g>
+<text x="20" y="258" class="d-s" text-anchor="start" >Jul</text>
+<circle cx="68" cy="253" r="5" class="d-rose d-fill"/>
+<g data-node="jul">
+<rect x="84" y="238" width="296" height="30" rx="8" class="d-box"/>
+<text x="98" y="257.5" class="d-t" text-anchor="start" >Google switched off, workaround in</text>
+</g>
+<text x="20" y="294" class="d-s" text-anchor="start" >Aug</text>
+<circle cx="68" cy="289" r="5" class="d-amber d-fill"/>
+<g data-node="aug">
+<rect x="84" y="274" width="296" height="30" rx="8" class="d-box"/>
+<text x="98" y="293.5" class="d-t" text-anchor="start" >Old engine fixed, as a Nokia phone</text>
+</g>
+<text x="20" y="330" class="d-s" text-anchor="start" >Sep</text>
+<circle cx="68" cy="325" r="5" class="d-rose d-fill"/>
+<g data-node="sep">
+<rect x="84" y="310" width="296" height="30" rx="8" class="d-box"/>
+<text x="98" y="329.5" class="d-t" text-anchor="start" >Startpage adds a proof-of-work wall</text>
+</g>
+<text x="20" y="366" class="d-s" text-anchor="start" >Oct</text>
+<circle cx="68" cy="361" r="5" class="d-rose d-fill"/>
+<g data-node="oct">
+<rect x="84" y="346" width="296" height="30" rx="8" class="d-box"/>
+<text x="98" y="365.5" class="d-t" text-anchor="start" >Home connections get 403s</text>
+</g>
+<text x="20" y="402" class="d-s" text-anchor="start" >Nov</text>
+<circle cx="68" cy="397" r="5" class="d-amber d-fill"/>
+<g data-node="nov">
+<rect x="84" y="382" width="296" height="30" rx="8" class="d-box"/>
+<text x="98" y="401.5" class="d-t" text-anchor="start" >A fresh install has neither on</text>
+</g>
+</svg>

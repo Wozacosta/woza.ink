@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 222" role="img" aria-labelledby="t-multisig-musig-frost"><title id="t-multisig-musig-frost">MuSig2 is n-of-n: with all three signing it works, and with one offline nobody can spend. FROST is a threshold: in a 2-of-3, one signer offline changes nothing. Both produce one aggregate signature</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-multisig-musig-frost" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >MuSig2</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >n-of-n: everyone signs</text>
+<text x="210" y="22" class="d-t" text-anchor="start" >FROST</text>
+<text x="210" y="38" class="d-s" text-anchor="start" >m-of-n: 2-of-3 here</text>
+<circle cx="32" cy="70" r="10" class="d-green d-fill"/>
+<circle cx="60" cy="70" r="10" class="d-green d-fill"/>
+<circle cx="88" cy="70" r="10" class="d-green d-fill"/>
+<text x="120" y="74" class="d-s d-green d-ct" text-anchor="start" >valid</text>
+<text x="20" y="104" class="d-s" text-anchor="start" >All three online</text>
+<circle cx="32" cy="138" r="10" class="d-green d-fill"/>
+<circle cx="60" cy="138" r="10" class="d-green d-fill"/>
+<circle cx="88" cy="138" r="10" class="d-ext"/>
+<text x="20" y="172" class="d-s" text-anchor="start" >One offline</text>
+<circle cx="222" cy="70" r="10" class="d-green d-fill"/>
+<circle cx="250" cy="70" r="10" class="d-green d-fill"/>
+<circle cx="278" cy="70" r="10" class="d-green d-fill"/>
+<text x="310" y="74" class="d-s d-green d-ct" text-anchor="start" >valid</text>
+<text x="210" y="104" class="d-s" text-anchor="start" >All three online</text>
+<circle cx="222" cy="138" r="10" class="d-green d-fill"/>
+<circle cx="250" cy="138" r="10" class="d-green d-fill"/>
+<circle cx="278" cy="138" r="10" class="d-ext"/>
+<text x="210" y="172" class="d-s" text-anchor="start" >One offline</text>
+<text x="120" y="142" class="d-s d-rose d-ct" text-anchor="start" >stuck</text>
+<text x="310" y="142" class="d-s d-green d-ct" text-anchor="start" >valid</text>
+<text x="20" y="206" class="d-t" text-anchor="start" >Either way, the chain sees one aggregate signature.</text>
+</svg>

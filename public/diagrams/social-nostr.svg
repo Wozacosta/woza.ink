@@ -13,32 +13,46 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-social-nostr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="key">
 <rect x="20" y="16" width="360" height="54" rx="8" class="d-box"/>
 <circle cx="34" cy="34" r="4" class="d-green d-fill"/>
 <text x="46" y="38" class="d-t" text-anchor="start" >Your keypair</text>
 <text x="46" y="54" class="d-s" text-anchor="start" >Your identity, portable to any client</text>
-<path d="M75,70 L75,116" class="d-line" marker-end="url(#ah-social-nostr)"/>
-<text x="83" y="97" class="d-s" text-anchor="start" >signed</text>
-<path d="M200,70 L200,116" class="d-line d-faint" stroke-dasharray="4 3" marker-end="url(#ah-social-nostr)"/>
-<path d="M325,70 L325,116" class="d-line" marker-end="url(#ah-social-nostr)"/>
-<text x="333" y="97" class="d-s" text-anchor="start" >signed</text>
+</g>
+<path d="M75,70 L75,116" class="d-line" data-edge="key-relaya" marker-end="url(#ah-social-nostr)"/>
+<text x="83" y="97" class="d-s" text-anchor="start" data-edge="key-relaya">signed</text>
+<path d="M200,70 L200,116" class="d-line d-faint" stroke-dasharray="4 3" data-edge="key-relayb" marker-end="url(#ah-social-nostr)"/>
+<path d="M325,70 L325,116" class="d-line" data-edge="key-relayc" marker-end="url(#ah-social-nostr)"/>
+<text x="333" y="97" class="d-s" text-anchor="start" data-edge="key-relayc">signed</text>
+<g data-node="relaya">
 <rect x="20" y="118" width="110" height="44" rx="8" class="d-box"/>
 <text x="75.0" y="144.5" class="d-t" text-anchor="middle" >Relay A</text>
+</g>
+<g data-node="relayb">
 <rect x="145" y="118" width="110" height="44" rx="8" class="d-ext"/>
 <text x="200.0" y="144.5" class="d-t" text-anchor="middle" >Relay B</text>
+</g>
+<g data-node="relayc">
 <rect x="270" y="118" width="110" height="44" rx="8" class="d-box"/>
 <text x="325.0" y="144.5" class="d-t" text-anchor="middle" >Relay C</text>
+</g>
 <text x="200" y="178" class="d-s d-rose d-ct" text-anchor="middle" >blocked</text>
-<path d="M55,162 L55,212" class="d-line" marker-end="url(#ah-social-nostr)"/>
-<path d="M112,162 L168,212" class="d-line" marker-end="url(#ah-social-nostr)"/>
-<path d="M288,162 L232,212" class="d-line" marker-end="url(#ah-social-nostr)"/>
-<path d="M345,162 L345,212" class="d-line" marker-end="url(#ah-social-nostr)"/>
+<path d="M55,162 L55,212" class="d-line" data-edge="relaya-primal" marker-end="url(#ah-social-nostr)"/>
+<path d="M112,162 L168,212" class="d-line" data-edge="relaya-snort" marker-end="url(#ah-social-nostr)"/>
+<path d="M288,162 L232,212" class="d-line" data-edge="relayc-snort" marker-end="url(#ah-social-nostr)"/>
+<path d="M345,162 L345,212" class="d-line" data-edge="relayc-damus" marker-end="url(#ah-social-nostr)"/>
+<g data-node="primal">
 <rect x="20" y="214" width="110" height="44" rx="8" class="d-box"/>
 <text x="75.0" y="240.5" class="d-t" text-anchor="middle" >Primal</text>
+</g>
+<g data-node="snort">
 <rect x="145" y="214" width="110" height="44" rx="8" class="d-box"/>
 <text x="200.0" y="240.5" class="d-t" text-anchor="middle" >Snort</text>
+</g>
+<g data-node="damus">
 <rect x="270" y="214" width="110" height="44" rx="8" class="d-box"/>
 <text x="325.0" y="240.5" class="d-t" text-anchor="middle" >Damus</text>
+</g>
 <line x1="20" y1="274" x2="380" y2="274" class="d-line d-faint"/>
 <text x="20" y="298" class="d-t" text-anchor="start" >Every client still got the event.</text>
 </svg>

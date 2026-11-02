@@ -60,8 +60,8 @@ s.text(200, 90, "receiver, amount", "d-s", "middle")
 s.rule(110)
 s.text(20, 132, "After that, nothing onchain enforces the answer", "d-s")
 outcomes = [
-    ("Honors it", "OpenSea, Rarible: the creator is paid", "green"),
-    ("Makes it optional", "Blur: the creator may get nothing", "amber"),
+    ("Honors it", "Rarible and others: the creator is paid", "green"),
+    ("Makes it optional", "Blur, OpenSea since 2023: may get nothing", "amber"),
     ("Never asks", "A P2P transfer: nothing routes funds", "rose"),
 ]
 for i, (title, sub, acc) in enumerate(outcomes):
@@ -179,4 +179,197 @@ s.box(280, 118, 100, 54, "Smart wallet", "contract", anchor="middle")
 s.text(280, 200, "Same address, so", "d-s")
 s.text(280, 216, "there's nothing", "d-s")
 s.text(280, 232, "to migrate.", "d-s")
+s.render()
+
+
+def chip(s, x, y, w, h, acc, lines, stroke=True):
+    """A tinted rectangle with one or two centered labels."""
+    s.add(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="5" class="d-{acc} d-fill" opacity="0.16"/>')
+    if stroke:
+        s.add(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="5" class="d-line d-{acc} d-stroke"/>')
+    cx = x + w / 2
+    if len(lines) == 1:
+        s.text(cx, y + h / 2 + 4, lines[0], "d-s", "middle")
+    else:
+        s.text(cx, y + h / 2 - 4, lines[0], "d-t", "middle")
+        s.text(cx, y + h / 2 + 12, lines[1], "d-s", "middle")
+
+
+# ── 9. The whole timeline (interactive: src/data/diagrams/eth-standards-timeline.ts) ──
+s = Svg("eth-standards-timeline", 400, 386, "Ten standards in order. Primitives: ERC-20 in 2015, EIP-155 in 2016, ERC-721 in 2018. Mechanics: ERC-1155 in 2019, ERC-2981 in 2020, EIP-1559 in 2021. Accounts: ERC-4337 and ERC-6551 in 2023, EIP-7702 in 2025. Scaling: EIP-4844 in 2024")
+for (x, label, acc) in ((20, "Primitives", "violet"), (108, "Mechanics", "blue"), (196, "Scaling", "green"), (270, "Accounts", "amber")):
+    s.add(f'<circle cx="{x + 4}" cy="16" r="4" class="d-{acc} d-fill"/>')
+    s.text(x + 13, 20, label, "d-s")
+rows = [
+    ("erc20", "ERC-20", "fungible tokens", "2015", "violet"),
+    ("eip155", "EIP-155", "replay protection", "2016", "violet"),
+    ("erc721", "ERC-721", "NFTs", "2018", "violet"),
+    ("erc1155", "ERC-1155", "multi-token contracts", "2019", "blue"),
+    ("erc2981", "ERC-2981", "NFT royalty info", "2020", "blue"),
+    ("eip1559", "EIP-1559", "fee market", "2021", "blue"),
+    ("erc4337", "ERC-4337", "smart wallets", "2023", "amber"),
+    ("erc6551", "ERC-6551", "token bound accounts", "2023", "amber"),
+    ("eip4844", "EIP-4844", "blobs", "2024", "green"),
+    ("eip7702", "EIP-7702", "EOAs delegate to code", "2025", "amber"),
+]
+for i, (node, title, sub, year, acc) in enumerate(rows):
+    y = 34 + i * 35
+    s.add(f'<g data-node="{node}">')
+    s.add(f'<rect x="20" y="{y}" width="360" height="30" rx="6" class="d-box"/>')
+    s.add(f'<circle cx="34" cy="{y + 15}" r="4" class="d-{acc} d-fill"/>')
+    s.text(46, y + 19.5, title, "d-t")
+    s.text(124, y + 19, sub, "d-s")
+    s.text(366, y + 19, year, "d-s", "end")
+    s.add("</g>")
+s.render()
+
+# ── 10. ERC-20: who sends what (interactive: src/data/diagrams/erc20-approve-flow.ts) ──
+s = Svg("erc20-approve-flow", 400, 244, "You send the first transaction, approve with an infinite amount, which sets an allowance on the token contract. The DEX sends the second, transferFrom, which spends your allowance")
+you, token, dex = 70, 200, 330
+s.box(20, 14, 100, 54, "You (EOA)", "wallet", anchor="middle", node="you")
+s.box(140, 14, 120, 54, "Token contract", "ERC-20", anchor="middle", node="token")
+s.box(280, 14, 100, 54, "DEX / DApp", "spender", anchor="middle", node="dex")
+for x in (you, token, dex):
+    s.add(f'<line x1="{x}" y1="68" x2="{x}" y2="232" class="d-line d-faint" stroke-dasharray="4 3"/>')
+a = 'data-edge="you-token"'
+s.text(135, 96, "Tx 1, from you", "d-s", "middle", a)
+s.text(135, 114, "approve(dex, ∞)", "d-s d-m", "middle", a)
+s.arrow([(you + 2, 124), (token - 3, 124)], edge="you-token")
+s.text(135, 140, "sets allowance", "d-s d-blue d-ct", "middle", a)
+a = 'data-edge="dex-token"'
+s.text(265, 168, "Tx 2, from the dex", "d-s", "middle", a)
+s.text(265, 186, "transferFrom(", "d-s d-m", "middle", a)
+s.text(265, 200, "you, dex, amt)", "d-s d-m", "middle", a)
+s.arrow([(dex - 2, 210), (token + 3, 210)], edge="dex-token")
+s.text(265, 226, "spends your allowance", "d-s d-amber d-ct", "middle", a)
+s.render()
+
+# ── 11. EIP-155: before and after ───────────────────────────────
+s = Svg("eip155-replay", 400, 262, "Before EIP-155, sending 10 ETH on Ethereum could be replayed on Ethereum Classic, draining 10 ETC too. After it, a transaction signed for chain 1 is rejected by chain 61, because the chain ID doesn't match")
+s.text(20, 22, "Before EIP-155", "d-t")
+s.box(20, 34, 130, 44, "Ethereum (ETH)", anchor="middle")
+s.box(250, 34, 130, 44, "Eth Classic (ETC)", anchor="middle")
+s.arrow([(150, 56), (248, 56)])
+s.text(199, 48, "send 10 ETH", "d-s", "middle")
+s.text(200, 100, "The same tx replayed: 10 ETC also drained", "d-s d-rose d-ct", "middle")
+s.rule(118)
+s.text(20, 144, "After EIP-155", "d-t")
+s.box(20, 156, 130, 54, "ETH (chain 1)", "tx signed for chain 1", anchor="middle")
+s.box(250, 156, 130, 54, "ETC (chain 61)", "rejects chain 1 tx", anchor="middle")
+s.add('<path d="M150,183 L206,183" class="d-line d-rose d-stroke" stroke-dasharray="4 3"/>')
+s.add('<path d="M212,177 L224,189 M224,177 L212,189" class="d-line d-rose d-stroke" stroke-width="2"/>')
+s.text(200, 238, "chainId mismatch: the tx is invalid", "d-s d-green d-ct", "middle")
+s.render()
+
+# ── 12. Three token models ──────────────────────────────────────
+s = Svg("erc-token-models", 400, 312, "ERC-20 is fungible, with one contract per token and one transaction per transfer. ERC-721 is non-fungible, with one contract per collection and one transaction per transfer. ERC-1155 holds both in one contract for everything, with one transaction for a batch transfer")
+models = [
+    ("ERC-20", "fungible: all identical", "1 contract per token", "1 tx per transfer", [("USDC", "blue")] * 3),
+    ("ERC-721", "non-fungible: all unique", "1 contract per collection", "1 tx per transfer", [("#01", "violet"), ("#02", "rose"), ("#03", "green")]),
+    ("ERC-1155", "both: multi-token", "1 contract for everything", "1 tx for batch transfer", [("gold", "amber")] * 3 + [("#01", "violet")]),
+]
+for i, (title, sub, contract, tx, items) in enumerate(models):
+    y = 8 + i * 100
+    last = i == 2
+    s.add(f'<rect x="20" y="{y}" width="360" height="92" rx="8" class="d-box"/>')
+    s.text(34, y + 22, title, "d-t")
+    s.text(34, y + 38, sub, "d-s")
+    s.text(366, y + 22, contract, "d-s d-green d-ct" if last else "d-s", "end")
+    s.text(366, y + 38, tx, "d-s d-green d-ct" if last else "d-s", "end")
+    for k, (label, acc) in enumerate(items):
+        chip(s, 34 + k * 56, y + 52, 50, 28, acc, [label])
+s.render()
+
+# ── 13. EIP-1559: where the fee goes ────────────────────────────
+s = Svg("eip1559-fee-split", 400, 268, "Before 1559 you guessed a gas price in a blind auction and all of it went to miners. After it, your max fee is a ceiling that splits into a base fee, set by the protocol and burned, a priority fee that tips the validator, and an unused part that is refunded")
+s.text(20, 22, "Before 1559", "d-t")
+s.add('<rect x="20" y="34" width="360" height="76" rx="8" class="d-box"/>')
+s.text(34, 56, "You pay: ??? gwei", "d-t")
+s.text(34, 76, "Blind auction: guess and hope", "d-s")
+s.text(34, 94, "100% goes to miners", "d-s d-rose d-ct")
+s.text(20, 144, "After 1559", "d-t")
+chip(s, 20, 156, 190, 50, "violet", ["Base fee", "algorithmic"])
+chip(s, 214, 156, 96, 50, "green", ["Priority fee", "tip"])
+s.add('<rect x="314" y="156" width="66" height="50" rx="5" class="d-ext"/>')
+s.text(347, 185, "Unused", "d-s", "middle")
+s.text(115, 224, "Burned: destroyed forever", "d-s d-rose d-ct", "middle")
+s.text(262, 224, "To the validator", "d-s d-green d-ct", "middle")
+s.text(347, 224, "Refunded", "d-s", "middle")
+s.add('<path d="M20,234 v6 h360 v-6" class="d-line d-faint"/>')
+s.text(200, 258, "Max fee: your ceiling", "d-s", "middle")
+s.render()
+
+# ── 14. EIP-4844: where rollup data goes ────────────────────────
+s = Svg("eip4844-rollups", 400, 334, "Before 4844, Arbitrum, Optimism and Base posted data to the L1 block as calldata, expensive and permanent, at about 10 to 50 cents per transaction. After it they post blobs, cheap and pruned after about 18 days, at about a tenth of a cent, 10 to 100 times cheaper")
+
+
+def rollups(y):
+    for i, name in enumerate(("Arbitrum", "Optimism", "Base")):
+        x = 20 + i * 124
+        s.box(x, y, 112, 36, name, anchor="middle")
+        s.add(f'<path d="M{x + 56},{y + 36} v14" class="d-line"/>')
+    s.add(f'<path d="M76,{y + 50} H324" class="d-line"/>')
+
+
+s.text(20, 22, "Before 4844: L2 data as calldata", "d-t")
+rollups(32)
+s.arrow([(106, 82), (106, 100)])
+s.box(20, 102, 172, 44, "L1 block", anchor="middle")
+s.text(208, 118, "$0.10-0.50/tx", "d-t d-rose d-ct")
+s.text(208, 136, "calldata: expensive, permanent", "d-s")
+s.rule(166)
+s.text(20, 192, "After 4844: L2 data as blobs", "d-t")
+rollups(202)
+s.arrow([(106, 252), (106, 270)])
+for i in range(3):
+    chip(s, 20 + i * 60, 272, 52, 44, "green", ["blob"])
+s.text(208, 288, "~$0.001/tx", "d-t d-green d-ct")
+s.text(208, 306, "cheap, pruned after ~18 days", "d-s")
+s.text(208, 322, "10-100x cheaper", "d-s")
+s.render()
+
+# ── 15. ERC-6551: what sits inside what ─────────────────────────
+s = Svg("erc6551-nesting", 400, 354, "You, at 0xABC, own Character NFT number 42, an ERC-721. Inside it sits a token bound account, ERC-6551, at 0xTBA, which holds a Sword NFT, 500 GOLD, a POAP and credentials")
+s.box(20, 14, 170, 54, "You (owner)", "0xABC...", accent="violet")
+s.arrow([(60, 68), (60, 96)], "owns", 70, 87)
+s.add('<rect x="20" y="98" width="360" height="242" rx="8" class="d-ext"/>')
+s.text(34, 120, "Character NFT #42 (ERC-721)", "d-t")
+s.add('<rect x="32" y="132" width="336" height="196" rx="8" class="d-box"/>')
+s.text(46, 154, "Token Bound Account (ERC-6551)", "d-t")
+s.text(46, 170, "0xTBA...", "d-s")
+items = [
+    ("Sword NFT", "ERC-721", "violet"), ("500 GOLD", "ERC-20", "amber"),
+    ("POAP", "ERC-721", "blue"), ("Credentials", "attestations", "green"),
+]
+for i, (title, sub, acc) in enumerate(items):
+    chip(s, 46 + (i % 2) * 158, 184 + (i // 2) * 66, 150, 58, acc, [title, sub])
+s.render()
+
+# ── 16. EIP-7702: what the delegation buys ──────────────────────
+s = Svg("eip7702-powers", 400, 352, "Before 7702, your EOA has only a private key and just signs transactions. With 7702 the same address delegates to a smart wallet's code and gains batch transactions, gas sponsorship, passkeys, recovery, session keys and limits. The delegation stays until a later authorization changes or clears it")
+s.text(20, 22, "Before 7702", "d-t")
+s.box(20, 34, 150, 54, "Your EOA", "private key only")
+s.text(188, 65, "Just signs txs, nothing more", "d-s")
+s.rule(106)
+s.text(20, 132, "With 7702", "d-t")
+s.box(20, 144, 150, 54, "Your EOA", "same address", accent="violet")
+s.box(230, 144, 150, 54, "Smart wallet", "delegated code", accent="green")
+s.arrow([(170, 171), (228, 171)])
+s.text(199, 163, "delegates", "d-s", "middle")
+s.arrow([(305, 198), (305, 226)], "gives the EOA", 295, 217, "end")
+powers = ["batch txs", "gas sponsor", "passkeys", "recovery", "session keys", "limits"]
+for i, label in enumerate(powers):
+    chip(s, 20 + (i % 3) * 124, 228 + (i // 3) * 36, 112, 30, "green", [label])
+s.text(20, 322, "The delegation stays in place until a later authorization", "d-s")
+s.text(20, 338, "changes it or clears it.", "d-s")
+s.render()
+
+# ── 17. The layers ──────────────────────────────────────────────
+s = Svg("eth-standards-layers", 400, 214, "Three layers stacked on each other. ERC-20 at the bottom gives you DeFi. EIP-1559 and EIP-4844 on top of it make DeFi cheap. ERC-4337 and EIP-7702 on top of that let you onboard normal users")
+for x, w, y, title, sub, acc in (
+    (100, 200, 14, "Normal users", "ERC-4337, EIP-7702", "amber"),
+    (60, 280, 76, "Cheap DeFi", "EIP-1559, EIP-4844", "green"),
+    (20, 360, 138, "DeFi", "ERC-20", "violet"),
+):
+    s.box(x, y, w, 54, title, sub, accent=acc)
 s.render()

@@ -16,9 +16,9 @@ export const sidenotes: ArticleSidenotes = {
         "**Keyboard-first everything.** Moving, resizing, focusing — all keys",
       type: "quote",
       content:
-        "From i3's own documentation: \"Only documented behavior is supported. Only add features which benefit many people, instead of going to great lengths to support rarely used workflows.\" This minimalist philosophy — the project is \"generally happy with the feature set\" — is what makes i3 feel fast. Every feature carries weight; nothing is there for show.",
-      attribution: "i3wm project documentation",
-      url: "https://i3wm.org/docs/userguide.html",
+        "From i3's own project goals: \"Only add features which benefit many people, instead of going to great lengths to support rarely used workflows. Only documented behavior is supported.\" This minimalist philosophy — the project is \"generally happy with the feature set\" — is what makes i3 feel fast. Every feature carries weight; nothing is there for show.",
+      attribution: "i3wm project goals",
+      url: "https://i3wm.org/",
     },
     {
       marker:
@@ -30,7 +30,7 @@ export const sidenotes: ArticleSidenotes = {
     },
     {
       marker:
-        "**Workspace switching felt heavy.** Aerospace manages its own workspace abstraction on top of macOS Spaces",
+        "**Workspace switching felt heavy.** Aerospace manages its own workspace abstraction instead of macOS Spaces",
       type: "context",
       content:
         "The macOS tiling WM landscape in 2025-2026: **yabai** is the most feature-complete but requires SIP disabled and frequently loses track of windows on monitor changes. **Amethyst** requires only accessibility permissions but has a steep learning curve. **Rectangle** is the simplest (keyboard-triggered snap zones) but doesn't auto-tile. **AeroSpace** sits in the middle — i3-like tree tiling without SIP, but still in public beta.",
@@ -48,7 +48,7 @@ export const sidenotes: ArticleSidenotes = {
         "the thing that makes i3 great isn't the feature set — it's the speed",
       type: "note",
       content:
-        "Research on perceived latency in UIs suggests that anything under ~100ms feels \"instant\" to humans, while delays of 200-300ms are perceptible and break the sense of direct manipulation. macOS Space transition animations typically take 300-700ms. Disabling them (which FlashSpace does) doesn't just feel faster — it crosses a perceptual threshold that changes the quality of the interaction from \"switching\" to \"being there.\"",
+        "Research on perceived latency in UIs suggests that anything under ~100ms feels \"instant\" to humans, while delays of 200-300ms are perceptible and break the sense of direct manipulation. macOS Space transition animations typically take 300-700ms. Skipping them, which FlashSpace does by never changing Space, doesn't just feel faster — it crosses a perceptual threshold that changes the quality of the interaction from \"switching\" to \"being there.\"",
     },
     {
       marker:

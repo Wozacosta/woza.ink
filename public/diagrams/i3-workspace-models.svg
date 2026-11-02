@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 258" role="img" aria-labelledby="t-i3-workspace-models"><title id="t-i3-workspace-models">Two wireframes. macOS Spaces slide a whole desktop in with an animation that can't be turned off. Aerospace keeps one Space and parks the windows of inactive workspaces off-screen, in a bottom corner</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-i3-workspace-models" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Two ways to get a workspace</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Wireframes of what happens on a switch</text>
+<text x="20" y="66" class="d-t" text-anchor="start" >macOS Spaces</text>
+<rect x="20" y="78" width="120" height="84" rx="4" class="d-box"/>
+<rect x="30" y="90" width="72" height="50" rx="3" class="d-blue d-fill" opacity="0.3"/>
+<rect x="146" y="78" width="46" height="84" rx="4" class="d-ext"/>
+<rect x="154" y="90" width="38" height="50" rx="3" class="d-violet d-fill" opacity="0.3"/>
+<path d="M166,172 L118,172" class="d-line" marker-end="url(#ah-i3-workspace-models)"/>
+<text x="20" y="192" class="d-s" text-anchor="start" >The whole desktop slides in</text>
+<text x="20" y="208" class="d-s d-rose d-ct" text-anchor="start" >Slow, and it can't be turned off</text>
+<text x="208" y="66" class="d-t" text-anchor="start" >Aerospace</text>
+<rect x="208" y="78" width="160" height="84" rx="4" class="d-box"/>
+<rect x="218" y="90" width="66" height="50" rx="3" class="d-blue d-fill" opacity="0.3"/>
+<rect x="290" y="90" width="66" height="50" rx="3" class="d-blue d-fill" opacity="0.3"/>
+<rect x="362" y="152" width="30" height="22" rx="3" class="d-violet d-fill" opacity="0.5"/>
+<text x="208" y="192" class="d-s" text-anchor="start" >One Space, windows parked</text>
+<text x="208" y="208" class="d-s" text-anchor="start" >off-screen in a bottom corner</text>
+<line x1="20" y1="222" x2="380" y2="222" class="d-line d-faint"/>
+<text x="20" y="246" class="d-s" text-anchor="start" >Neither is what Flashspace does, as you'll see.</text>
+</svg>

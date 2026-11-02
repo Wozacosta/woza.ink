@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 264" role="img" aria-labelledby="t-rss-readers"><title id="t-rss-readers">Readers sorted by who knows your subscriptions. A local app such as NetNewsWire keeps them on your own devices. A self-hosted reader such as Miniflux or Tiny Tiny RSS keeps them on your server. A cloud reader such as Feedly or Inoreader holds them on its own servers</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-rss-readers" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Who knows what you subscribe to</text>
+<text x="20" y="50" class="d-s d-green d-ct" text-anchor="start" >Only you: a local app</text>
+<g data-node="netnewswire">
+<rect x="20" y="58" width="176" height="46" rx="8" class="d-box"/>
+<circle cx="34" cy="81.0" r="4" class="d-green d-fill"/>
+<text x="46" y="85.5" class="d-t" text-anchor="start" >NetNewsWire</text>
+</g>
+<text x="20" y="120" class="d-s d-blue d-ct" text-anchor="start" >Your server: self-hosted</text>
+<g data-node="miniflux">
+<rect x="20" y="128" width="176" height="46" rx="8" class="d-box"/>
+<circle cx="34" cy="151.0" r="4" class="d-blue d-fill"/>
+<text x="46" y="155.5" class="d-t" text-anchor="start" >Miniflux</text>
+</g>
+<g data-node="ttrss">
+<rect x="204" y="128" width="176" height="46" rx="8" class="d-box"/>
+<circle cx="218" cy="151.0" r="4" class="d-blue d-fill"/>
+<text x="230" y="155.5" class="d-t" text-anchor="start" >Tiny Tiny RSS</text>
+</g>
+<text x="20" y="190" class="d-s d-amber d-ct" text-anchor="start" >The company: a cloud reader</text>
+<g data-node="feedly">
+<rect x="20" y="198" width="176" height="46" rx="8" class="d-box"/>
+<circle cx="34" cy="221.0" r="4" class="d-amber d-fill"/>
+<text x="46" y="225.5" class="d-t" text-anchor="start" >Feedly</text>
+</g>
+<g data-node="inoreader">
+<rect x="204" y="198" width="176" height="46" rx="8" class="d-box"/>
+<circle cx="218" cy="221.0" r="4" class="d-amber d-fill"/>
+<text x="230" y="225.5" class="d-t" text-anchor="start" >Inoreader</text>
+</g>
+</svg>

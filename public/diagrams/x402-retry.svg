@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 302" role="img" aria-labelledby="t-x402-retry"><title id="t-x402-retry">Once PAYMENT-SIGNATURE is sent the outcome is unknown. A 200 with PAYMENT-RESPONSE means it's done. settlement_pending is non-terminal, so reconcile the transaction hash onchain. With a timeout, don't create a second payment, because the server may have settled the first</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-x402-retry" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="14" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="32" r="4" class="d-amber d-fill"/>
+<text x="46" y="36" class="d-t" text-anchor="start" >PAYMENT-SIGNATURE sent</text>
+<text x="46" y="52" class="d-s" text-anchor="start" >From here the outcome is unknown</text>
+<text x="20" y="94" class="d-s" text-anchor="start" >What can come back</text>
+<rect x="20" y="104" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="122" r="4" class="d-green d-fill"/>
+<text x="46" y="126" class="d-t" text-anchor="start" >200 and the data</text>
+<text x="46" y="142" class="d-s" text-anchor="start" >PAYMENT-RESPONSE holds the hash</text>
+<text x="366" y="126" class="d-s d-green d-ct" text-anchor="end" >Done</text>
+<rect x="20" y="166" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="184" r="4" class="d-amber d-fill"/>
+<text x="46" y="188" class="d-t" text-anchor="start" >settlement_pending</text>
+<text x="46" y="204" class="d-s" text-anchor="start" >Non-terminal: it may still confirm</text>
+<text x="366" y="188" class="d-s d-amber d-ct" text-anchor="end" >Check the chain</text>
+<rect x="20" y="228" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="246" r="4" class="d-rose d-fill"/>
+<text x="46" y="250" class="d-t" text-anchor="start" >A timeout</text>
+<text x="46" y="266" class="d-s" text-anchor="start" >The first payment may have settled</text>
+<text x="366" y="250" class="d-s d-rose d-ct" text-anchor="end" >Don't pay again</text>
+</svg>

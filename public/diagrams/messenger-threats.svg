@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 268" role="img" aria-labelledby="t-messenger-threats"><title id="t-messenger-threats">Three threat models. Against a nation-state or a coerced provider, use Signal. Against casual snoopers, when you want multi-device sync and big groups, Telegram may be okay as long as you know its servers can read your chats. For one sensitive chat on Telegram, use a Secret Chat</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-messenger-threats" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Who are you protecting this from?</text>
+<g data-node="state">
+<rect x="20" y="40" width="194" height="62" rx="8" class="d-box"/>
+<text x="34" y="62" class="d-t" text-anchor="start" >Nation-state</text>
+<text x="34" y="78" class="d-s" text-anchor="start" >Or a coerced provider</text>
+</g>
+<g data-node="signal">
+<rect x="244" y="40" width="136" height="62" rx="8" class="d-box"/>
+<circle cx="258" cy="58" r="4" class="d-green d-fill"/>
+<text x="270" y="62" class="d-t" text-anchor="start" >Signal</text>
+<text x="270" y="78" class="d-s" text-anchor="start" >Private by default</text>
+</g>
+<path d="M214,71 L242,71" class="d-line" data-edge="state-signal" marker-end="url(#ah-messenger-threats)"/>
+<g data-node="snoop">
+<rect x="20" y="114" width="194" height="62" rx="8" class="d-box"/>
+<text x="34" y="136" class="d-t" text-anchor="start" >Casual snoopers</text>
+<text x="34" y="152" class="d-s" text-anchor="start" >You want sync and big groups</text>
+</g>
+<g data-node="telegram">
+<rect x="244" y="114" width="136" height="62" rx="8" class="d-box"/>
+<circle cx="258" cy="132" r="4" class="d-amber d-fill"/>
+<text x="270" y="136" class="d-t" text-anchor="start" >Telegram</text>
+<text x="270" y="152" class="d-s" text-anchor="start" >Servers can read it</text>
+</g>
+<path d="M214,145 L242,145" class="d-line" data-edge="snoop-telegram" marker-end="url(#ah-messenger-threats)"/>
+<g data-node="chat">
+<rect x="20" y="188" width="194" height="62" rx="8" class="d-box"/>
+<text x="34" y="210" class="d-t" text-anchor="start" >One sensitive chat</text>
+<text x="34" y="226" class="d-s" text-anchor="start" >On Telegram already</text>
+</g>
+<g data-node="secret">
+<rect x="244" y="188" width="136" height="62" rx="8" class="d-box"/>
+<circle cx="258" cy="206" r="4" class="d-amber d-fill"/>
+<text x="270" y="210" class="d-t" text-anchor="start" >Secret Chat</text>
+<text x="270" y="226" class="d-s" text-anchor="start" >One device pair</text>
+</g>
+<path d="M214,219 L242,219" class="d-line" data-edge="chat-secret" marker-end="url(#ah-messenger-threats)"/>
+</svg>

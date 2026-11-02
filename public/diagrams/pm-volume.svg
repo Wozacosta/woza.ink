@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 214" role="img" aria-labelledby="t-pm-volume"><title id="t-pm-volume">Combined monthly volume on Kalshi and Polymarket, to scale: under 5 billion dollars in September 2025, over 50 billion in July 2026, and 45.33 billion in August 2026, of which Kalshi handled 37.17 billion, about 82 percent</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-pm-volume" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Combined monthly volume</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Kalshi and Polymarket, to scale</text>
+<text x="20" y="60" class="d-s" text-anchor="start" >September 2025</text>
+<text x="380" y="60" class="d-s" text-anchor="end" >under $5B</text>
+<rect x="20" y="67" width="34.6" height="18" rx="3" class="d-blue d-fill" opacity="0.75"/>
+<text x="20" y="106" class="d-s" text-anchor="start" >July 2026</text>
+<text x="380" y="106" class="d-s" text-anchor="end" >over $50B</text>
+<rect x="20" y="113" width="346.2" height="18" rx="3" class="d-blue d-fill" opacity="0.75"/>
+<text x="20" y="152" class="d-s" text-anchor="start" >August 2026</text>
+<text x="380" y="152" class="d-s" text-anchor="end" >$45.33B</text>
+<rect x="20" y="159" width="257.3" height="18" rx="3" class="d-green d-fill" opacity="0.8"/>
+<rect x="279.3" y="159" width="54.5" height="18" rx="3" class="d-rose d-fill" opacity="0.8"/>
+<text x="20" y="194" class="d-s d-green d-ct" text-anchor="start" >Kalshi $37.17B</text>
+<text x="333.82307692307694" y="194" class="d-s d-rose d-ct" text-anchor="end" >Polymarket $8.16B</text>
+</svg>

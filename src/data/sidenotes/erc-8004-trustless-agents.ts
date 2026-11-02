@@ -62,7 +62,7 @@ export const sidenotes: ArticleSidenotes = {
         "open agent networks need onchain trust primitives the same way the web needed DNS and TLS",
       type: "quote",
       content:
-        "\"AI went from assistant to autonomous actor, and security never caught up.\" Autonomous agents now outnumber humans 82:1 in the average enterprise, and OWASP's 2025 LLM Top 10 ranks prompt injection as the #1 risk. ERC-8004's bet is that onchain trust primitives can provide the verification layer that centralized identity systems cannot — because in a permissionless network, there is no central authority to vouch for anyone.",
+        "\"AI went from assistant to autonomous actor, and security never caught up.\" OWASP's 2025 LLM Top 10 ranks prompt injection as the #1 risk. ERC-8004's bet is that onchain trust primitives can provide the verification layer that centralized identity systems cannot — because in a permissionless network, there is no central authority to vouch for anyone.",
       url: "https://www.helpnetsecurity.com/2026/03/03/enterprise-ai-agent-security-2026/",
     },
   ],

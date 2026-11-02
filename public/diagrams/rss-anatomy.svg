@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 282" role="img" aria-labelledby="t-rss-anatomy"><title id="t-rss-anatomy">One item from an RSS feed, annotated. title is the headline, link is where to read it, pubDate keeps items in order, description holds the full text or an excerpt, and enclosure attaches a file, which is what makes a podcast</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-rss-anatomy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One item in the file</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >An example, trimmed</text>
+<text x="20" y="62" class="d-s d-m" text-anchor="start" >&lt;item&gt;</text>
+<g data-node="title"><rect x="30" y="70" width="224" height="30" rx="6" class="d-box"/>
+<text x="40" y="89" class="d-s d-m" text-anchor="start" >&lt;title&gt;A new post&lt;/title&gt;</text>
+</g>
+<text x="264" y="89" class="d-s" text-anchor="start" >The headline</text>
+<g data-node="link"><rect x="30" y="106" width="224" height="30" rx="6" class="d-box"/>
+<text x="40" y="125" class="d-s d-m" text-anchor="start" >&lt;link&gt;https://…/new-post&lt;/link&gt;</text>
+</g>
+<text x="264" y="125" class="d-s" text-anchor="start" >Where to read it</text>
+<g data-node="pubdate"><rect x="30" y="142" width="224" height="30" rx="6" class="d-box"/>
+<text x="40" y="161" class="d-s d-m" text-anchor="start" >&lt;pubDate&gt;Sun, 25 Jan…&lt;/pubDate&gt;</text>
+</g>
+<text x="264" y="161" class="d-s" text-anchor="start" >Keeps things in order</text>
+<g data-node="description"><rect x="30" y="178" width="224" height="30" rx="6" class="d-box"/>
+<text x="40" y="197" class="d-s d-m" text-anchor="start" >&lt;description&gt;…&lt;/description&gt;</text>
+</g>
+<text x="264" y="197" class="d-s" text-anchor="start" >Full text or excerpt</text>
+<g data-node="enclosure"><rect x="30" y="214" width="224" height="30" rx="6" class="d-box"/>
+<text x="40" y="233" class="d-s d-m" text-anchor="start" >&lt;enclosure url="ep1.mp3" … /&gt;</text>
+</g>
+<text x="264" y="233" class="d-s" text-anchor="start" >Makes it a podcast</text>
+<text x="20" y="268" class="d-s d-m" text-anchor="start" >&lt;/item&gt;</text>
+</svg>

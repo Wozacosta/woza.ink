@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 252" role="img" aria-labelledby="t-context-opening"><title id="t-context-opening">Two opening messages. A vague one, hey continue where we left off, costs five minutes of re-orientation. A strong one states where things are, which files matter and the exact task, and gets working code in one pass</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-context-opening" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Two ways to open a session</text>
+<rect x="20" y="36" width="360" height="50" rx="8" class="d-box"/>
+<text x="34" y="57" class="d-s d-m" text-anchor="start" >hey continue where we left off</text>
+<text x="34" y="75" class="d-s d-rose d-ct" text-anchor="start" >Five minutes of re-orientation</text>
+<rect x="20" y="98" width="360" height="140" rx="8" class="d-box"/>
+<circle cx="38" cy="120" r="4" class="d-blue d-fill"/>
+<text x="50" y="124" class="d-t" text-anchor="start" >State</text>
+<text x="100" y="124" class="d-s" text-anchor="start" >Webhook handler done, fulfillment next.</text>
+<circle cx="38" cy="150" r="4" class="d-violet d-fill"/>
+<text x="50" y="154" class="d-t" text-anchor="start" >Files</text>
+<text x="100" y="154" class="d-s" text-anchor="start" >src/lib/payments/, src/app/api/webhooks/</text>
+<circle cx="38" cy="180" r="4" class="d-amber d-fill"/>
+<text x="50" y="184" class="d-t" text-anchor="start" >Task</text>
+<text x="100" y="184" class="d-s" text-anchor="start" >Implement fulfillOrder() like refund.ts.</text>
+<text x="34" y="222" class="d-s d-green d-ct" text-anchor="start" >Working code in one pass</text>
+</svg>

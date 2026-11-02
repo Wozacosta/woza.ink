@@ -25,8 +25,8 @@
 <path d="M330,100 L330,140" class="d-line" marker-end="url(#ah-arr-hardlinks)"/>
 <rect x="250" y="142" width="130" height="48" rx="8" class="d-box"/>
 <circle cx="264" cy="160" r="4" class="d-green d-fill"/>
-<text x="276" y="164" class="d-t" text-anchor="start" >2.1 GB on disk</text>
-<text x="276" y="180" class="d-s" text-anchor="start" >one copy, shared</text>
+<text x="276" y="164" class="d-t" text-anchor="start" >One copy</text>
+<text x="276" y="180" class="d-s" text-anchor="start" >on disk, shared</text>
 <text x="20" y="150" class="d-s" text-anchor="start" >The client seeds from the first</text>
 <text x="20" y="164" class="d-s" text-anchor="start" >path, the library uses the second.</text>
 <text x="20" y="178" class="d-s d-green d-ct" text-anchor="start" >Import is instant.</text>
@@ -35,11 +35,11 @@
 <rect x="20" y="248" width="170" height="48" rx="8" class="d-box"/>
 <circle cx="34" cy="266" r="4" class="d-rose d-fill"/>
 <text x="46" y="270" class="d-t" text-anchor="start" >/downloads</text>
-<text x="46" y="286" class="d-s" text-anchor="start" >2.1 GB</text>
+<text x="46" y="286" class="d-s" text-anchor="start" >the whole file</text>
 <rect x="210" y="248" width="170" height="48" rx="8" class="d-box"/>
 <circle cx="224" cy="266" r="4" class="d-rose d-fill"/>
 <text x="236" y="270" class="d-t" text-anchor="start" >/tv</text>
-<text x="236" y="286" class="d-s" text-anchor="start" >2.1 GB more</text>
+<text x="236" y="286" class="d-s" text-anchor="start" >the whole file again</text>
 <path d="M190,272 L208,272" class="d-line" marker-end="url(#ah-arr-hardlinks)"/>
 <text x="20" y="322" class="d-s" text-anchor="start" >Docker treats each volume as its own filesystem, so the</text>
 <text x="20" y="337" class="d-s d-rose d-ct" text-anchor="start" >import copies every byte. Slow, double the disk, no warning.</text>

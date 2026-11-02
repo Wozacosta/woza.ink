@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" role="img" aria-labelledby="t-publishing-steem-fork"><title id="t-publishing-steem-fork">Steemit launched in 2016. In 2020 Justin Sun bought Steemit Inc. and used exchange-held user funds to seize the top 20 witnesses. The chain split: Steem stayed under his control and the community forked to Hive</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-publishing-steem-fork" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="steemit">
+<rect x="20" y="16" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="34" r="4" class="d-green d-fill"/>
+<text x="46" y="38" class="d-t" text-anchor="start" >Steemit</text>
+<text x="46" y="54" class="d-s" text-anchor="start" >2016: crypto for creating and curating</text>
+</g>
+<path d="M200,70 L200,100" class="d-line" data-edge="steemit-sun" marker-end="url(#ah-publishing-steem-fork)"/>
+<g data-node="sun">
+<rect x="20" y="102" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="120" r="4" class="d-amber d-fill"/>
+<text x="46" y="124" class="d-t" text-anchor="start" >Justin Sun buys Steemit Inc.</text>
+<text x="46" y="140" class="d-s" text-anchor="start" >2020</text>
+</g>
+<path d="M200,156 L200,186" class="d-line" data-edge="sun-witnesses" marker-end="url(#ah-publishing-steem-fork)"/>
+<g data-node="witnesses">
+<rect x="20" y="188" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="206" r="4" class="d-rose d-fill"/>
+<text x="46" y="210" class="d-t" text-anchor="start" >Top 20 witnesses seized</text>
+<text x="46" y="226" class="d-s" text-anchor="start" >With exchange-held user funds</text>
+</g>
+<path d="M105,242 L105,272" class="d-line" data-edge="witnesses-steem" marker-end="url(#ah-publishing-steem-fork)"/>
+<text x="113" y="262" class="d-s" text-anchor="start" data-edge="witnesses-steem">stays</text>
+<path d="M295,242 L295,272" class="d-line" data-edge="witnesses-hive" marker-end="url(#ah-publishing-steem-fork)"/>
+<text x="303" y="262" class="d-s" text-anchor="start" data-edge="witnesses-hive">forks</text>
+<g data-node="steem">
+<rect x="20" y="274" width="170" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="292" r="4" class="d-amber d-fill"/>
+<text x="46" y="296" class="d-t" text-anchor="start" >Steem</text>
+<text x="46" y="312" class="d-s" text-anchor="start" >Under Tron and Sun</text>
+</g>
+<g data-node="hive">
+<rect x="210" y="274" width="170" height="54" rx="8" class="d-box"/>
+<circle cx="224" cy="292" r="4" class="d-green d-fill"/>
+<text x="236" y="296" class="d-t" text-anchor="start" >Hive</text>
+<text x="236" y="312" class="d-s" text-anchor="start" >Community-governed</text>
+</g>
+</svg>

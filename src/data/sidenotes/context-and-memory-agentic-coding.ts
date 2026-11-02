@@ -8,7 +8,7 @@ export const sidenotes: ArticleSidenotes = {
         "There's no database being queried. There's no long-term memory being updated",
       type: "context",
       content:
-        'As of early 2026, context windows have converged around 1M tokens for frontier models: Claude Opus 4 at 1M, GPT-5.4 at 1M, Gemini 2.5 Pro at 1M (Gemini 3 Pro pushes to 2M). Meta\'s Llama 4 Scout claims 10M. But effective capacity is typically **60-70% of advertised limits** — a model claiming 200K tokens becomes unreliable around 130K.',
+        'As of early 2026, context windows have converged around 1M tokens for frontier models: Claude Opus 4.6 at 1M, GPT-5.4 at 1M, Gemini 3 Pro at 1M. Meta\'s Llama 4 Scout claims 10M. But effective capacity is typically **60-70% of advertised limits** — a model claiming 200K tokens becomes unreliable around 130K.',
       url: "https://www.elvex.com/blog/context-length-comparison-ai-models-2026",
     },
     {
@@ -16,7 +16,7 @@ export const sidenotes: ArticleSidenotes = {
         "**Long conversations degrade.** As the window fills, earlier context gets less weight",
       type: "source",
       content:
-        'The landmark "Lost in the Middle" paper (Liu et al., 2023) showed that LLM accuracy forms a **U-shaped curve**: over 80% when the target fact is in the first or last documents, but under 40% when buried in the middle. This held across all tested models, even those designed for long contexts. The implication for agentic coding: where information sits in the context window matters as much as whether it\'s there at all.',
+        'The landmark "Lost in the Middle" paper (Liu et al., 2023) showed that LLM accuracy forms a **U-shaped curve**. With 20 documents, GPT-3.5-Turbo scored about 76% when the answer was in the first document, 63% in the last, and 54% in the middle, below its 56% with no documents at all. Models built for long contexts did no better. The implication for agentic coding: where information sits in the context window matters as much as whether it\'s there at all.',
       attribution: "Liu, Lin, Hewitt, Paranjape et al.",
       url: "https://arxiv.org/abs/2307.03172",
     },
@@ -25,8 +25,8 @@ export const sidenotes: ArticleSidenotes = {
         "Twenty sharp rules beats a hundred loose ones",
       type: "note",
       content:
-        "The Claude Code docs recommend keeping CLAUDE.md **under 300 lines**. Every line competes for attention with the actual work. The best rule files read like production config: short, explicit, human-readable. \"Use ES modules, prefer named exports, 2-space indentation\" beats \"format code properly.\"",
-      url: "https://code.claude.com/docs/en/best-practices",
+        "The Claude Code docs recommend keeping CLAUDE.md **under 200 lines**. Every line competes for attention with the actual work. The best rule files read like production config: short, explicit, human-readable. \"Use ES modules, prefer named exports, 2-space indentation\" beats \"format code properly.\"",
+      url: "https://code.claude.com/docs/en/memory",
     },
     {
       marker:

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" role="img" aria-labelledby="t-megaeth-roles"><title id="t-megaeth-roles">A typical node does everything. MegaETH splits the roles: one sequencer executes every transaction, full nodes verify its results without re-executing, and replica nodes stream state diffs to serve reads</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 388" role="img" aria-labelledby="t-megaeth-roles"><title id="t-megaeth-roles">A typical node does everything. MegaETH splits the roles: one sequencer orders and executes every transaction, provers re-execute blocks to produce proofs, full nodes re-execute every transaction to check it themselves, and replica nodes apply state diffs without re-executing and serve reads</title>
 <style>
 .d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
 .d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
@@ -13,30 +13,41 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-megaeth-roles" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="typical">
 <rect x="20" y="16" width="360" height="54" rx="8" class="d-box"/>
 <circle cx="34" cy="34" r="4" class="d-rose d-fill"/>
 <text x="46" y="38" class="d-t" text-anchor="start" >Typical node</text>
 <text x="46" y="54" class="d-s" text-anchor="start" >Executes, stores state, runs consensus, broadcasts</text>
-<path d="M200,70 L200,104" class="d-line" marker-end="url(#ah-megaeth-roles)"/>
-<text x="210" y="91" class="d-s" text-anchor="start" >MegaETH splits that up</text>
+</g>
+<path d="M200,70 L200,104" class="d-line" data-edge="typical-sequencer" marker-end="url(#ah-megaeth-roles)"/>
+<text x="210" y="91" class="d-s" text-anchor="start" data-edge="typical-sequencer">MegaETH splits that up</text>
+<g data-node="sequencer">
 <rect x="20" y="106" width="360" height="54" rx="8" class="d-box"/>
 <circle cx="34" cy="124" r="4" class="d-blue d-fill"/>
 <text x="46" y="128" class="d-t" text-anchor="start" >Sequencer</text>
 <text x="46" y="144" class="d-s" text-anchor="start" >One high-spec machine runs every transaction</text>
-<path d="M106,160 L106,210" class="d-line" marker-end="url(#ah-megaeth-roles)"/>
-<text x="116" y="189" class="d-s" text-anchor="start" >results</text>
-<path d="M294,160 L294,210" class="d-line" marker-end="url(#ah-megaeth-roles)"/>
-<text x="304" y="189" class="d-s" text-anchor="start" >state diffs</text>
-<rect x="20" y="212" width="172" height="64" rx="8" class="d-box"/>
-<circle cx="34" cy="230" r="4" class="d-green d-fill"/>
-<text x="46" y="234" class="d-t" text-anchor="start" >Full nodes</text>
-<text x="46" y="250" class="d-s" text-anchor="start" >Verify, don't re-execute</text>
-<text x="46" y="266" class="d-s" text-anchor="start" >Modest hardware</text>
-<rect x="208" y="212" width="172" height="64" rx="8" class="d-box"/>
-<circle cx="222" cy="230" r="4" class="d-violet d-fill"/>
-<text x="234" y="234" class="d-t" text-anchor="start" >Replica nodes</text>
-<text x="234" y="250" class="d-s" text-anchor="start" >Serve RPC and indexers</text>
-<text x="234" y="266" class="d-s" text-anchor="start" >No verification work</text>
-<line x1="20" y1="294" x2="380" y2="294" class="d-line d-faint"/>
-<text x="20" y="318" class="d-s" text-anchor="start" >One machine does the work. Everyone else checks it or reads it.</text>
+</g>
+<line x1="44" y1="160" x2="44" y2="344" class="d-line"/>
+<g data-node="provers">
+<rect x="70" y="178" width="310" height="54" rx="8" class="d-box"/>
+<circle cx="84" cy="196" r="4" class="d-amber d-fill"/>
+<text x="96" y="200" class="d-t" text-anchor="start" >Provers</text>
+<text x="96" y="216" class="d-s" text-anchor="start" >Re-execute blocks and prove the results</text>
+</g>
+<path d="M44,205 L68,205" class="d-line" data-edge="sequencer-provers" marker-end="url(#ah-megaeth-roles)"/>
+<g data-node="full">
+<rect x="70" y="244" width="310" height="54" rx="8" class="d-box"/>
+<circle cx="84" cy="262" r="4" class="d-green d-fill"/>
+<text x="96" y="266" class="d-t" text-anchor="start" >Full nodes</text>
+<text x="96" y="282" class="d-s" text-anchor="start" >Re-execute every transaction themselves</text>
+</g>
+<path d="M44,271 L68,271" class="d-line" data-edge="sequencer-full" marker-end="url(#ah-megaeth-roles)"/>
+<g data-node="replicas">
+<rect x="70" y="310" width="310" height="54" rx="8" class="d-box"/>
+<circle cx="84" cy="328" r="4" class="d-violet d-fill"/>
+<text x="96" y="332" class="d-t" text-anchor="start" >Replica nodes</text>
+<text x="96" y="348" class="d-s" text-anchor="start" >Apply state diffs, serve RPC and indexers</text>
+</g>
+<path d="M44,337 L68,337" class="d-line" data-edge="sequencer-replicas" marker-end="url(#ah-megaeth-roles)"/>
+<text x="20" y="378" class="d-s" text-anchor="start" >One machine does the work. Everyone else checks it or reads it.</text>
 </svg>

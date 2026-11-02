@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" role="img" aria-labelledby="t-perps-jelly"><title id="t-perps-jelly">March 26, 2025. A large short on the thin JELLYJELLY market is liquidated, the book can't absorb it, the HLP vault inherits it and sits on about 12 million dollars of unrealized losses, then Hyperliquid's validators delist the market and settle it at 0.0095 dollars, and the loss disappears</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-perps-jelly" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >March 26, 2025: JELLYJELLY</text>
+<g data-node="short">
+<rect x="20" y="40" width="360" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="58" r="4" class="d-blue d-fill"/>
+<text x="46" y="62" class="d-t" text-anchor="start" >A large short opens</text>
+<text x="46" y="78" class="d-s" text-anchor="start" >on a thin memecoin</text>
+</g>
+<path d="M40,92 L40,106" class="d-line" data-edge="short-liquidated" marker-end="url(#ah-perps-jelly)"/>
+<g data-node="liquidated">
+<rect x="20" y="108" width="360" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="126" r="4" class="d-amber d-fill"/>
+<text x="46" y="130" class="d-t" text-anchor="start" >It gets liquidated</text>
+<text x="46" y="146" class="d-s" text-anchor="start" >the book can't absorb it</text>
+</g>
+<path d="M40,160 L40,174" class="d-line" data-edge="liquidated-hlp" marker-end="url(#ah-perps-jelly)"/>
+<g data-node="hlp">
+<rect x="20" y="176" width="360" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="194" r="4" class="d-rose d-fill"/>
+<text x="46" y="198" class="d-t" text-anchor="start" >HLP inherits the short</text>
+<text x="46" y="214" class="d-s" text-anchor="start" >about $12M of unrealized losses</text>
+</g>
+<path d="M40,228 L40,242" class="d-line" data-edge="hlp-validators" marker-end="url(#ah-perps-jelly)"/>
+<g data-node="validators">
+<rect x="20" y="244" width="360" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="262" r="4" class="d-violet d-fill"/>
+<text x="46" y="266" class="d-t" text-anchor="start" >Validators delist the market</text>
+<text x="46" y="282" class="d-s" text-anchor="start" >settled at $0.0095, well below trading</text>
+</g>
+<text x="20" y="318" class="d-s" text-anchor="start" >A trader's bet became the vault's loss, then a governance decision.</text>
+</svg>

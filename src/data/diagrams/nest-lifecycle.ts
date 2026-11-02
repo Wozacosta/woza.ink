@@ -49,7 +49,7 @@ export const nestLifecycle: InteractiveDiagramConfig = {
     {
       id: "filters",
       title: "Exception filters",
-      description: "They catch errors and format the response. They can be global or scoped to specific controllers.",
+      description: "They catch errors and format the response. An uncaught exception skips the rest of the lifecycle and lands here. They can be global or scoped to specific controllers.",
       links: ["handler", "response"],
     },
   ],

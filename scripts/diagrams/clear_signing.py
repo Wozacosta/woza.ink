@@ -79,3 +79,78 @@ for i in range(3):
     s.arrow([(x + 55, 342), (x + 55, 366)])
     s.box(x, 368, 110, 52, f"Wallet {i + 1}", "Same parser", accent="green")
 s.render()
+
+# ── 4. The bytes, annotated ─────────────────────────────────────
+s = Svg("clear-signing-calldata", 400, 248, "The approve calldata split up. Four bytes select the function. The next 32 bytes are the spender, an address padded with zeros. The last 32 bytes are the amount, 2 to the 256 minus 1. None of these labels reach the device")
+s.text(20, 22, "What the device gets, labeled by hand", "d-t")
+
+
+def hexrow(y, parts):
+    spans = "".join(f'<tspan class="{cls}">{text}</tspan>' for text, cls in parts)
+    s.add(f'<text x="20" y="{y}" class="d-s d-m">{spans}</text>')
+
+
+s.rule(36)
+hexrow(60, [("0x095ea7b3", "d-violet d-ct")])
+s.text(380, 54, "4 bytes", "d-s", "end")
+s.text(380, 70, "Which function", "d-t d-violet d-ct", "end")
+s.rule(84)
+hexrow(108, [("0" * 24, ""), ("3fc91a3a", "d-blue d-ct")])
+hexrow(124, [("fd70395cd496c647d5a6cc9d4b2b7fad", "d-blue d-ct")])
+s.text(380, 108, "32 bytes", "d-s", "end")
+s.text(380, 124, "The spender", "d-t d-blue d-ct", "end")
+s.rule(138)
+hexrow(162, [("f" * 32, "d-rose d-ct")])
+hexrow(178, [("f" * 32, "d-rose d-ct")])
+s.text(380, 162, "32 bytes", "d-s", "end")
+s.text(380, 178, "The amount: 2²⁵⁶−1", "d-t d-rose d-ct", "end")
+s.rule(192)
+s.text(20, 216, "The labels are ours. The device has only the bytes, and", "d-s")
+s.text(20, 232, "no way to know that 0x095ea7b3 means approve.", "d-s")
+s.render()
+
+# ── 5. Raw, decoded, clear ──────────────────────────────────────
+s = Svg("clear-signing-ladder", 400, 282, "What each level gives you for the same approve. Raw hex gives nothing. A decoded ABI adds the function and field names. Only clear signing adds units and ticker, names for addresses, which fields matter and the intent")
+cols = ((168, "Raw hex"), (248, "Decoded"), (336, "Clear signing"))
+for x, label in cols:
+    s.text(x, 22, label, "d-t", "middle")
+s.add('<line x1="20" y1="32" x2="380" y2="32" class="d-line d-faint"/>')
+s.text(20, 54, "The amount reads", "d-s")
+for (x, _), value in zip(cols, ("ffff…ffff", "1157…9935", "Unlimited USDC")):
+    s.text(x, 54, value, "d-s d-m" if "U" not in value else "d-s d-green d-ct", "middle")
+s.add('<line x1="20" y1="66" x2="380" y2="66" class="d-line d-faint"/>')
+rows = [("Function name", 0, 1, 1), ("Field names", 0, 1, 1), ("Units and ticker", 0, 0, 1), ("Who the address is", 0, 0, 1), ("Which fields matter", 0, 0, 1), ("Intent in one word", 0, 0, 1)]
+for i, (label, *marks) in enumerate(rows):
+    y = 90 + i * 32
+    s.text(20, y + 4, label, "d-s")
+    for (x, _), ok in zip(cols, marks):
+        if ok:
+            s.add(f'<path d="M{x - 6},{y} l4,5 l8,-10" class="d-line d-green d-stroke" stroke-width="2"/>')
+        else:
+            s.add(f'<path d="M{x - 4},{y - 4} l8,8 M{x + 4},{y - 4} l-8,8" class="d-line d-faint"/>')
+s.render()
+
+# ── 6. Who vouches (interactive: src/data/diagrams/clear-signing-trust.ts) ──
+s = Svg("clear-signing-trust", 400, 262, "A protocol writes a descriptor and an auditor signs an attestation for it. Both go into a public registry that anyone can mirror. The wallet reads the registry, checks the binding and can require attestations from auditors it trusts")
+s.box(20, 14, 172, 54, "Protocol", "writes a descriptor", accent="blue", node="protocol")
+s.box(208, 14, 172, 54, "Auditor", "signs an attestation", accent="violet", node="auditor")
+s.arrow([(106, 68), (106, 102)], edge="protocol-registry")
+s.arrow([(294, 68), (294, 102)], edge="auditor-registry")
+s.box(20, 104, 360, 54, "Public registry", "387 descriptors from 57 organizations", accent="green", node="registry")
+s.arrow([(200, 158), (200, 192)], "anyone can mirror it", 210, 180, edge="registry-wallet")
+s.box(20, 194, 360, 54, "Wallet", "Checks the binding, can require attestations", accent="amber", node="wallet")
+s.render()
+
+# ── 7. sRFC 39: a template ──────────────────────────────────────
+s = Svg("clear-signing-template", 400, 212, "A template in the IDL, Transfer amount to destination. The amount format gives 10 SOL and the account name gives toly.sol, so the wallet shows Transfer 10 SOL to toly.sol")
+s.text(20, 22, "In the IDL", "d-s")
+s.text(20, 44, "Transfer {amount} to {destination}", "d-t d-m")
+s.arrow([(112, 52), (112, 78)])
+s.arrow([(192, 52), (192, 65), (294, 65), (294, 78)])
+s.box(20, 80, 172, 50, "10 SOL", "decimals and symbol", accent="blue")
+s.box(208, 80, 172, 50, "toly.sol", "account name", accent="green")
+s.arrow([(106, 130), (106, 154)])
+s.arrow([(294, 130), (294, 154)])
+s.add('<rect x="20" y="156" width="360" height="44" rx="12" class="d-box"/>')
+s.text(200, 183, "Transfer 10 SOL to toly.sol", "d-t", "middle")
+s.render()

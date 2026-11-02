@@ -78,7 +78,7 @@ s.text(210, 230, "the pointer stops at the edge", "d-s")
 s.render()
 
 # ── 5. Hick's law ───────────────────────────────────────────────
-s = Svg("ux-hick", 400, 236, "A logarithmic curve of reaction time against number of options. Four options cost 2.3 units, eight cost 3.2 and sixteen cost 4.1. Reading an unfamiliar list grows in a straight line instead")
+s = Svg("ux-hick", 400, 236, "A logarithmic curve of reaction time against number of options. Four options cost 2.3 units, eight cost 3.2 and sixteen cost 4.1. Reading an unfamiliar list grows in a straight, steeper line instead, sketched here")
 s.text(20, 22, "Each doubling adds about the same", "d-t")
 s.text(20, 38, "Time = log2(n + 1), in units of b", "d-s")
 x0, y0, px, py = 60, 190, 9.5, 26
@@ -88,15 +88,16 @@ s.add(f'<line x1="{x0}" y1="{y0}" x2="{X(33)}" y2="{y0}" class="d-line d-faint"/
 for n in (0, 8, 16, 32):
     s.text(X(n), y0 + 16, str(n), "d-s", "middle")
 s.text(X(16), y0 + 34, "Number of options", "d-s", "middle")
-s.add(f'<path d="M{X(0)},{Y(0)} L{X(32)},{Y(5)}" class="d-line d-faint" stroke-dasharray="4 3"/>')
+s.add(f'<path d="M{X(0)},{Y(0)} L{X(6)},{Y(5)}" class="d-line" stroke-dasharray="4 3"/>')
 curve = " L".join(f"{X(n / 4)},{Y(math.log2(n / 4 + 1)):.1f}" for n in range(129))
 s.add(f'<path d="M{curve}" class="d-line d-green d-stroke" stroke-width="2"/>')
 for n in (4, 8, 16):
     v = math.log2(n + 1)
     s.add(f'<circle cx="{X(n)}" cy="{Y(v):.1f}" r="4" class="d-green d-fill"/>')
-    s.text(X(n) - 7, Y(v) - 8, f"{n} options: {v:.1f}", "d-s", "end")
-s.text(X(32), Y(5) - 8, "Options you already know", "d-s d-green d-ct", "end")
-s.text(X(32), y0 - 12, "Reading a list you don't know", "d-s", "end")
+    s.text(X(n) + 9, round(Y(v) + 15, 1), f"{n} options: {v:.1f}", "d-s")
+s.text(X(32), 124, "Options you already know", "d-s d-green d-ct", "end")
+s.text(X(6) + 6, Y(5) + 2, "Reading a list you don't know", "d-s")
+s.text(X(6) + 6, Y(5) + 16, "(the slope is a sketch)", "d-s")
 s.render()
 
 # ── 6. Chunks ───────────────────────────────────────────────────

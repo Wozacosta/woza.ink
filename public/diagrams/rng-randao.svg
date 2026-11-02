@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 216" role="img" aria-labelledby="t-rng-randao"><title id="t-rng-randao">The last proposer in an epoch sees what RANDAO will be with and without their contribution. They can publish, or skip their slot and give up one block reward, so they choose between two outcomes: one bit of bias</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-rng-randao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >The last proposer gets a choice</text>
+<rect x="20" y="42" width="26" height="26" rx="4" class="d-green d-fill" opacity="0.7"/>
+<rect x="52" y="42" width="26" height="26" rx="4" class="d-green d-fill" opacity="0.7"/>
+<rect x="84" y="42" width="26" height="26" rx="4" class="d-green d-fill" opacity="0.7"/>
+<rect x="116" y="42" width="26" height="26" rx="4" class="d-green d-fill" opacity="0.7"/>
+<rect x="148" y="42" width="26" height="26" rx="4" class="d-green d-fill" opacity="0.7"/>
+<rect x="180" y="42" width="26" height="26" rx="4" class="d-green d-fill" opacity="0.7"/>
+<rect x="212" y="42" width="26" height="26" rx="4" class="d-green d-fill" opacity="0.7"/>
+<rect x="244" y="42" width="26" height="26" rx="4" class="d-green d-fill" opacity="0.7"/>
+<text x="20" y="86" class="d-s" text-anchor="start" >Earlier proposers mix in their signatures</text>
+<rect x="284" y="36" width="96" height="38" rx="6" class="d-box"/>
+<text x="332" y="60" class="d-t" text-anchor="middle" >Last slot</text>
+<path d="M310,74 L310,102 L106,102 L106,122" class="d-line d-faint" marker-end="url(#ah-rng-randao)"/>
+<path d="M354,74 L354,122" class="d-line d-faint" marker-end="url(#ah-rng-randao)"/>
+<rect x="20" y="124" width="172" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="142" r="4" class="d-green d-fill"/>
+<text x="46" y="146" class="d-t" text-anchor="start" >Publish</text>
+<text x="46" y="162" class="d-s" text-anchor="start" >the outcome with their mix</text>
+<rect x="208" y="124" width="172" height="54" rx="8" class="d-box"/>
+<circle cx="222" cy="142" r="4" class="d-rose d-fill"/>
+<text x="234" y="146" class="d-t" text-anchor="start" >Skip the slot</text>
+<text x="234" y="162" class="d-s" text-anchor="start" >the outcome without it</text>
+<text x="20" y="204" class="d-s" text-anchor="start" >They pick the better one, for one missed block reward.</text>
+</svg>

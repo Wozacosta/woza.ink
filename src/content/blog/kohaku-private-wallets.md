@@ -93,6 +93,8 @@ The other leaks and the security half are at different stages:
 - **Post-quantum accounts.** A [4337 account](https://github.com/ethereum/kohaku/tree/master/packages/pq-account) that verifies two signatures, the current kind and a post-quantum one (Falcon or ML-DSA), so you aren't betting everything on either.
 - **Hardware wallets.** Shielded protocols rely on ZK-friendly curves like Jubjub and Bandersnatch, so the roadmap wants a "ZK hardware signer" that lets a device work with them. This also raises the stakes for [clear signing](/blog/clear-signing): a device has to show you something meaningful about a private transaction it can only partly describe.
 
+![The account checks a current signature and a post-quantum one on every operation.](diagram:kohaku-pq)
+
 Further out, the roadmap wants the wallet "as close as possible to the silicon / kernel," which it says means a native Ethereum browser. The Rust repo also lists two experimental immutable privacy protocols, `tint` and `msp`, targeting the Hegota fork.
 
 ---
@@ -116,6 +118,8 @@ The coverage tends to describe the roadmap as if it were the product, so here's 
 The top of the repo carries the warning that matters: "NOT READY FOR PRODUCTION USE. Packages contain UNAUDITED CODE." There's [no public release date](https://crypto.news/ethereum-foundation-default-wallet-privacy-kohaku/).
 
 The Railgun line is the surprising one. Railgun is the protocol used in the [November 2025 demo](https://www.theblock.co/post/379149/vitalik-buterin-unveils-kohaku-privacy-focused-framework-ethereum), the one that saw its token jump, and the only one of the three offering private DeFi rather than private withdrawals. In the JavaScript SDK it's currently a stub, and the repo doesn't say why. That's a snapshot, not a verdict: the project is shipping alpha releases almost daily, and Ambire says it has spent months on integrations.
+
+![The same four leaks, by how far the code had got. My reading of the repositories on November 1, 2026.](diagram:kohaku-today)
 
 ---
 

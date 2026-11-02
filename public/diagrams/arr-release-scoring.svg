@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" role="img" aria-labelledby="t-arr-release-scoring"><title id="t-arr-release-scoring">Choosing a release: quality profile filters candidates, custom formats score them, the highest score is grabbed, then upgraded until the cutoff</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" role="img" aria-labelledby="t-arr-release-scoring"><title id="t-arr-release-scoring">Choosing a release: the quality profile filters candidates, custom formats score releases of the same quality, the best quality then the highest score is grabbed, and it is upgraded until the cutoff</title>
 <style>
 .d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
 .d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
@@ -52,19 +52,19 @@
 <path d="M200,150 L200,174" class="d-line" marker-end="url(#ah-arr-release-scoring)"/>
 <rect x="20" y="176" width="360" height="128" rx="8" class="d-box"/>
 <circle cx="34" cy="194" r="4" class="d-amber d-fill"/>
-<text x="46" y="200" class="d-t" text-anchor="start" >2 · Custom formats score what's left</text>
-<text x="46" y="222" class="d-s d-m" text-anchor="start" >2160p WEB-DL · DV · Atmos</text>
+<text x="46" y="200" class="d-t" text-anchor="start" >2 · Custom formats score each quality</text>
+<text x="46" y="222" class="d-s d-m" text-anchor="start" >1080p WEB-DL · DV · Atmos</text>
 <text x="364" y="222" class="d-s d-m d-green d-ct" text-anchor="end" >+3100</text>
 <text x="46" y="242" class="d-s d-m" text-anchor="start" >1080p WEB-DL · trusted group</text>
 <text x="364" y="242" class="d-s d-m" text-anchor="end" >+1750</text>
 <text x="46" y="262" class="d-s d-m" text-anchor="start" >1080p WEB-DL · unknown group</text>
 <text x="364" y="262" class="d-s d-m" text-anchor="end" >+0</text>
-<text x="46" y="282" class="d-s d-m" text-anchor="start" >720p HDTV · re-encode</text>
+<text x="46" y="282" class="d-s d-m" text-anchor="start" >1080p WEB-DL · banned group</text>
 <text x="364" y="282" class="d-s d-m d-rose d-ct" text-anchor="end" >−10000</text>
 <path d="M200,304 L200,328" class="d-line" marker-end="url(#ah-arr-release-scoring)"/>
 <rect x="20" y="330" width="360" height="44" rx="8" class="d-box"/>
 <circle cx="34" cy="352.0" r="4" class="d-green d-fill"/>
-<text x="46" y="356.5" class="d-t" text-anchor="start" >3 · Highest score wins → sent to the download client</text>
+<text x="46" y="356.5" class="d-t" text-anchor="start" >3 · Best quality, then top score → download client</text>
 <text x="20" y="398" class="d-s" text-anchor="start" >Later, a better release appears? It's grabbed again and replaces</text>
 <text x="20" y="413" class="d-s" text-anchor="start" >the file. Upgrades stop once the profile's cutoff is reached.</text>
 </svg>

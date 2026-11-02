@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 282" role="img" aria-labelledby="t-clear-signing-ladder"><title id="t-clear-signing-ladder">What each level gives you for the same approve. Raw hex gives nothing. A decoded ABI adds the function and field names. Only clear signing adds units and ticker, names for addresses, which fields matter and the intent</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-clear-signing-ladder" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="168" y="22" class="d-t" text-anchor="middle" >Raw hex</text>
+<text x="248" y="22" class="d-t" text-anchor="middle" >Decoded</text>
+<text x="336" y="22" class="d-t" text-anchor="middle" >Clear signing</text>
+<line x1="20" y1="32" x2="380" y2="32" class="d-line d-faint"/>
+<text x="20" y="54" class="d-s" text-anchor="start" >The amount reads</text>
+<text x="168" y="54" class="d-s d-m" text-anchor="middle" >ffff…ffff</text>
+<text x="248" y="54" class="d-s d-m" text-anchor="middle" >1157…9935</text>
+<text x="336" y="54" class="d-s d-green d-ct" text-anchor="middle" >Unlimited USDC</text>
+<line x1="20" y1="66" x2="380" y2="66" class="d-line d-faint"/>
+<text x="20" y="94" class="d-s" text-anchor="start" >Function name</text>
+<path d="M164,86 l8,8 M172,86 l-8,8" class="d-line d-faint"/>
+<path d="M242,90 l4,5 l8,-10" class="d-line d-green d-stroke" stroke-width="2"/>
+<path d="M330,90 l4,5 l8,-10" class="d-line d-green d-stroke" stroke-width="2"/>
+<text x="20" y="126" class="d-s" text-anchor="start" >Field names</text>
+<path d="M164,118 l8,8 M172,118 l-8,8" class="d-line d-faint"/>
+<path d="M242,122 l4,5 l8,-10" class="d-line d-green d-stroke" stroke-width="2"/>
+<path d="M330,122 l4,5 l8,-10" class="d-line d-green d-stroke" stroke-width="2"/>
+<text x="20" y="158" class="d-s" text-anchor="start" >Units and ticker</text>
+<path d="M164,150 l8,8 M172,150 l-8,8" class="d-line d-faint"/>
+<path d="M244,150 l8,8 M252,150 l-8,8" class="d-line d-faint"/>
+<path d="M330,154 l4,5 l8,-10" class="d-line d-green d-stroke" stroke-width="2"/>
+<text x="20" y="190" class="d-s" text-anchor="start" >Who the address is</text>
+<path d="M164,182 l8,8 M172,182 l-8,8" class="d-line d-faint"/>
+<path d="M244,182 l8,8 M252,182 l-8,8" class="d-line d-faint"/>
+<path d="M330,186 l4,5 l8,-10" class="d-line d-green d-stroke" stroke-width="2"/>
+<text x="20" y="222" class="d-s" text-anchor="start" >Which fields matter</text>
+<path d="M164,214 l8,8 M172,214 l-8,8" class="d-line d-faint"/>
+<path d="M244,214 l8,8 M252,214 l-8,8" class="d-line d-faint"/>
+<path d="M330,218 l4,5 l8,-10" class="d-line d-green d-stroke" stroke-width="2"/>
+<text x="20" y="254" class="d-s" text-anchor="start" >Intent in one word</text>
+<path d="M164,246 l8,8 M172,246 l-8,8" class="d-line d-faint"/>
+<path d="M244,246 l8,8 M252,246 l-8,8" class="d-line d-faint"/>
+<path d="M330,250 l4,5 l8,-10" class="d-line d-green d-stroke" stroke-width="2"/>
+</svg>

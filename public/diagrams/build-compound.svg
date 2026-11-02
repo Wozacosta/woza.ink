@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-build-compound"><title id="t-build-compound">Four small projects in a row. Each one teaches a micro-skill, drawn as a bar that starts at that project and runs on through every later one, so the last project starts with three skills in hand. A sketch, not a measurement</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-build-compound" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Each project starts further along</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A sketch, not a measurement</text>
+<text x="65" y="62" class="d-s" text-anchor="middle" >Project 1</text>
+<text x="147" y="62" class="d-s" text-anchor="middle" >Project 2</text>
+<line x1="102" y1="70" x2="102" y2="232" class="d-line d-faint" stroke-dasharray="4 3"/>
+<text x="229" y="62" class="d-s" text-anchor="middle" >Project 3</text>
+<line x1="184" y1="70" x2="184" y2="232" class="d-line d-faint" stroke-dasharray="4 3"/>
+<text x="311" y="62" class="d-s" text-anchor="middle" >Project 4</text>
+<line x1="266" y1="70" x2="266" y2="232" class="d-line d-faint" stroke-dasharray="4 3"/>
+<g data-node="state">
+<rect x="20" y="74" width="360" height="32" rx="6" class="d-box"/>
+<rect x="26" y="81" width="4" height="18" rx="2" class="d-blue d-fill"/>
+<text x="36" y="94.5" class="d-t" text-anchor="start" >State management</text>
+</g>
+<g data-node="deploy">
+<rect x="102" y="114" width="278" height="32" rx="6" class="d-box"/>
+<rect x="108" y="121" width="4" height="18" rx="2" class="d-violet d-fill"/>
+<text x="118" y="134.5" class="d-t" text-anchor="start" >Deployment gotchas</text>
+</g>
+<g data-node="api">
+<rect x="184" y="154" width="196" height="32" rx="6" class="d-box"/>
+<rect x="190" y="161" width="4" height="18" rx="2" class="d-green d-fill"/>
+<text x="200" y="174.5" class="d-t" text-anchor="start" >API ergonomics</text>
+</g>
+<g data-node="models">
+<rect x="266" y="194" width="114" height="32" rx="6" class="d-box"/>
+<rect x="272" y="201" width="4" height="18" rx="2" class="d-amber d-fill"/>
+<text x="282" y="214.5" class="d-t" text-anchor="start" >Mental models</text>
+</g>
+<text x="20" y="252" class="d-s" text-anchor="start" >Learned once, and in hand for everything after</text>
+</svg>

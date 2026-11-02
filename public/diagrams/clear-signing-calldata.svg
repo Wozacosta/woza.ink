@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 248" role="img" aria-labelledby="t-clear-signing-calldata"><title id="t-clear-signing-calldata">The approve calldata split up. Four bytes select the function. The next 32 bytes are the spender, an address padded with zeros. The last 32 bytes are the amount, 2 to the 256 minus 1. None of these labels reach the device</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-clear-signing-calldata" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What the device gets, labeled by hand</text>
+<line x1="20" y1="36" x2="380" y2="36" class="d-line d-faint"/>
+<text x="20" y="60" class="d-s d-m"><tspan class="d-violet d-ct">0x095ea7b3</tspan></text>
+<text x="380" y="54" class="d-s" text-anchor="end" >4 bytes</text>
+<text x="380" y="70" class="d-t d-violet d-ct" text-anchor="end" >Which function</text>
+<line x1="20" y1="84" x2="380" y2="84" class="d-line d-faint"/>
+<text x="20" y="108" class="d-s d-m"><tspan class="">000000000000000000000000</tspan><tspan class="d-blue d-ct">3fc91a3a</tspan></text>
+<text x="20" y="124" class="d-s d-m"><tspan class="d-blue d-ct">fd70395cd496c647d5a6cc9d4b2b7fad</tspan></text>
+<text x="380" y="108" class="d-s" text-anchor="end" >32 bytes</text>
+<text x="380" y="124" class="d-t d-blue d-ct" text-anchor="end" >The spender</text>
+<line x1="20" y1="138" x2="380" y2="138" class="d-line d-faint"/>
+<text x="20" y="162" class="d-s d-m"><tspan class="d-rose d-ct">ffffffffffffffffffffffffffffffff</tspan></text>
+<text x="20" y="178" class="d-s d-m"><tspan class="d-rose d-ct">ffffffffffffffffffffffffffffffff</tspan></text>
+<text x="380" y="162" class="d-s" text-anchor="end" >32 bytes</text>
+<text x="380" y="178" class="d-t d-rose d-ct" text-anchor="end" >The amount: 2²⁵⁶−1</text>
+<line x1="20" y1="192" x2="380" y2="192" class="d-line d-faint"/>
+<text x="20" y="216" class="d-s" text-anchor="start" >The labels are ours. The device has only the bytes, and</text>
+<text x="20" y="232" class="d-s" text-anchor="start" >no way to know that 0x095ea7b3 means approve.</text>
+</svg>

@@ -29,66 +29,7 @@ This is a chronological walkthrough of the ERCs and EIPs that actually mattered.
 
 ---
 
-<svg viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:800px;margin:2rem auto;display:block">
-  <style>
-    .tl-label { font: 600 11px ui-monospace, monospace; fill: currentColor; }
-    .tl-year { font: 700 12px ui-monospace, monospace; fill: currentColor; }
-    .tl-era { font: 600 10px ui-monospace, monospace; fill: currentColor; opacity: 0.5; }
-    .tl-line { stroke: currentColor; opacity: 0.15; }
-    .tl-dot { fill: currentColor; }
-    .tl-dot-ring { fill: none; stroke: currentColor; opacity: 0.2; }
-  </style>
-  <!-- main timeline -->
-  <line x1="40" y1="110" x2="760" y2="110" class="tl-line" stroke-width="2"/>
-  <!-- era brackets -->
-  <line x1="60" y1="170" x2="260" y2="170" class="tl-line" stroke-width="1.5"/>
-  <text x="160" y="190" text-anchor="middle" class="tl-era">PRIMITIVES</text>
-  <line x1="280" y1="170" x2="460" y2="170" class="tl-line" stroke-width="1.5"/>
-  <text x="370" y="190" text-anchor="middle" class="tl-era">MECHANICS</text>
-  <line x1="480" y1="170" x2="580" y2="170" class="tl-line" stroke-width="1.5"/>
-  <text x="530" y="190" text-anchor="middle" class="tl-era">SCALING</text>
-  <line x1="600" y1="170" x2="740" y2="170" class="tl-line" stroke-width="1.5"/>
-  <text x="670" y="190" text-anchor="middle" class="tl-era">ACCOUNTS</text>
-  <!-- ERC-20 2015 -->
-  <circle cx="80" cy="110" r="5" class="tl-dot"/><circle cx="80" cy="110" r="10" class="tl-dot-ring"/>
-  <text x="80" y="90" text-anchor="middle" class="tl-label">ERC-20</text>
-  <text x="80" y="140" text-anchor="middle" class="tl-year">2015</text>
-  <!-- EIP-155 2016 -->
-  <circle cx="160" cy="110" r="5" class="tl-dot"/><circle cx="160" cy="110" r="10" class="tl-dot-ring"/>
-  <text x="160" y="70" text-anchor="middle" class="tl-label">EIP-155</text>
-  <text x="160" y="140" text-anchor="middle" class="tl-year">2016</text>
-  <!-- ERC-721 2018 -->
-  <circle cx="240" cy="110" r="5" class="tl-dot"/><circle cx="240" cy="110" r="10" class="tl-dot-ring"/>
-  <text x="240" y="90" text-anchor="middle" class="tl-label">ERC-721</text>
-  <text x="240" y="140" text-anchor="middle" class="tl-year">2018</text>
-  <!-- ERC-1155 2019 -->
-  <circle cx="310" cy="110" r="5" class="tl-dot"/><circle cx="310" cy="110" r="10" class="tl-dot-ring"/>
-  <text x="310" y="70" text-anchor="middle" class="tl-label">ERC-1155</text>
-  <text x="310" y="140" text-anchor="middle" class="tl-year">2019</text>
-  <!-- ERC-2981 2020 -->
-  <circle cx="380" cy="110" r="5" class="tl-dot"/><circle cx="380" cy="110" r="10" class="tl-dot-ring"/>
-  <text x="380" y="90" text-anchor="middle" class="tl-label">ERC-2981</text>
-  <text x="380" y="140" text-anchor="middle" class="tl-year">2020</text>
-  <!-- EIP-1559 2021 -->
-  <circle cx="450" cy="110" r="5" class="tl-dot"/><circle cx="450" cy="110" r="10" class="tl-dot-ring"/>
-  <text x="450" y="70" text-anchor="middle" class="tl-label">EIP-1559</text>
-  <text x="450" y="140" text-anchor="middle" class="tl-year">2021</text>
-  <!-- ERC-4337 2023 -->
-  <circle cx="530" cy="110" r="5" class="tl-dot"/><circle cx="530" cy="110" r="10" class="tl-dot-ring"/>
-  <text x="530" y="90" text-anchor="middle" class="tl-label">ERC-4337</text>
-  <text x="530" y="140" text-anchor="middle" class="tl-year">2023</text>
-  <!-- EIP-4844 2024 -->
-  <circle cx="610" cy="110" r="5" class="tl-dot"/><circle cx="610" cy="110" r="10" class="tl-dot-ring"/>
-  <text x="610" y="70" text-anchor="middle" class="tl-label">EIP-4844</text>
-  <text x="610" y="140" text-anchor="middle" class="tl-year">2024</text>
-  <!-- ERC-6551 -->
-  <circle cx="670" cy="110" r="5" class="tl-dot"/><circle cx="670" cy="110" r="10" class="tl-dot-ring"/>
-  <text x="670" y="90" text-anchor="middle" class="tl-label">ERC-6551</text>
-  <!-- EIP-7702 2025 -->
-  <circle cx="740" cy="110" r="5" class="tl-dot"/><circle cx="740" cy="110" r="10" class="tl-dot-ring"/>
-  <text x="740" y="70" text-anchor="middle" class="tl-label">EIP-7702</text>
-  <text x="740" y="140" text-anchor="middle" class="tl-year">2025</text>
-</svg>
+![Ten standards in order. The colors follow the four eras at the end of this post.](diagram:eth-standards-timeline)
 
 ---
 
@@ -110,37 +51,7 @@ The simplicity was the point. Any contract implementing these six functions coul
 
 **What it broke:** The `approve` + `transferFrom` pattern requires two transactions to let a contract spend your tokens. Users have been approving infinite allowances since 2017 and getting drained by exploits since 2018. The "approve once, spend forever" UX is a security anti-pattern baked into the most successful standard in crypto.
 
-<svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;margin:1.5rem auto;display:block">
-  <style>
-    .af-box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; }
-    .af-box-fill { fill: currentColor; opacity: 0.05; rx: 6; }
-    .af-label { font: 600 12px ui-monospace, monospace; fill: currentColor; }
-    .af-sublabel { font: 400 10px ui-monospace, monospace; fill: currentColor; opacity: 0.5; }
-    .af-arrow { stroke: currentColor; stroke-width: 1.5; fill: none; marker-end: url(#af-head); }
-    .af-step { font: 700 11px ui-monospace, monospace; fill: currentColor; opacity: 0.35; }
-  </style>
-  <defs><marker id="af-head" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="currentColor" opacity="0.6"/></marker></defs>
-  <!-- actors -->
-  <rect x="20" y="30" width="120" height="50" class="af-box"/><rect x="20" y="30" width="120" height="50" class="af-box-fill"/>
-  <text x="80" y="52" text-anchor="middle" class="af-label">You (EOA)</text>
-  <text x="80" y="68" text-anchor="middle" class="af-sublabel">wallet</text>
-  <rect x="270" y="30" width="140" height="50" class="af-box"/><rect x="270" y="30" width="140" height="50" class="af-box-fill"/>
-  <text x="340" y="52" text-anchor="middle" class="af-label">Token Contract</text>
-  <text x="340" y="68" text-anchor="middle" class="af-sublabel">ERC-20</text>
-  <rect x="530" y="30" width="130" height="50" class="af-box"/><rect x="530" y="30" width="130" height="50" class="af-box-fill"/>
-  <text x="595" y="52" text-anchor="middle" class="af-label">DEX / DApp</text>
-  <text x="595" y="68" text-anchor="middle" class="af-sublabel">spender</text>
-  <!-- tx 1: approve -->
-  <text x="20" y="115" class="af-step">TX 1</text>
-  <path d="M140,105 L270,105" class="af-arrow"/>
-  <text x="205" y="100" text-anchor="middle" class="af-label">approve(dex, ∞)</text>
-  <text x="205" y="118" text-anchor="middle" class="af-sublabel">sets allowance</text>
-  <!-- tx 2: transferFrom -->
-  <text x="20" y="168" class="af-step">TX 2</text>
-  <path d="M530,155 L410,155" class="af-arrow"/>
-  <text x="470" y="150" text-anchor="middle" class="af-label">transferFrom(you, dex, amt)</text>
-  <text x="470" y="170" text-anchor="middle" class="af-sublabel">spends your allowance</text>
-</svg>
+![Two transactions from two senders: you set the allowance, then the spender draws on it.](diagram:erc20-approve-flow)
 
 ![An approval moves nothing, and spending against it doesn't close it. A sketch, not data.](diagram:erc20-allowance)
 
@@ -158,41 +69,7 @@ When Ethereum Classic forked from Ethereum after the DAO hack in July 2016, the 
 
 EIP-155, authored by Vitalik, added a `chainId` to the transaction signing scheme. Transactions are now bound to a specific chain. Ethereum mainnet is `chainId: 1`, Ethereum Classic is `chainId: 61`. A transaction signed for one chain is invalid on all others.
 
-<svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;margin:1.5rem auto;display:block">
-  <style>
-    .rp-box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; }
-    .rp-fill { fill: currentColor; opacity: 0.05; rx: 6; }
-    .rp-label { font: 600 12px ui-monospace, monospace; fill: currentColor; }
-    .rp-sub { font: 400 10px ui-monospace, monospace; fill: currentColor; opacity: 0.5; }
-    .rp-arrow { stroke: currentColor; stroke-width: 1.5; fill: none; marker-end: url(#rp-head); }
-    .rp-bad { stroke: currentColor; stroke-width: 1.5; stroke-dasharray: 5,4; fill: none; marker-end: url(#rp-head); }
-    .rp-x { font: 700 18px ui-monospace, monospace; fill: currentColor; }
-    .rp-sect { font: 700 11px ui-monospace, monospace; fill: currentColor; opacity: 0.3; }
-  </style>
-  <defs><marker id="rp-head" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="currentColor" opacity="0.6"/></marker></defs>
-  <!-- BEFORE -->
-  <text x="20" y="22" class="rp-sect">BEFORE EIP-155</text>
-  <rect x="20" y="35" width="640" height="90" rx="8" fill="none" stroke="currentColor" stroke-dasharray="3,3" opacity="0.1"/>
-  <rect x="50" y="50" width="150" height="40" class="rp-box"/><rect x="50" y="50" width="150" height="40" class="rp-fill"/>
-  <text x="125" y="75" text-anchor="middle" class="rp-label">Ethereum (ETH)</text>
-  <rect x="480" y="50" width="160" height="40" class="rp-box"/><rect x="480" y="50" width="160" height="40" class="rp-fill"/>
-  <text x="560" y="75" text-anchor="middle" class="rp-label">Eth Classic (ETC)</text>
-  <path d="M200,70 L480,70" class="rp-arrow"/>
-  <text x="340" y="63" text-anchor="middle" class="rp-label">send 10 ETH</text>
-  <text x="340" y="80" text-anchor="middle" class="rp-sub">same tx replayed → 10 ETC also drained</text>
-  <!-- AFTER -->
-  <text x="20" y="160" class="rp-sect">AFTER EIP-155</text>
-  <rect x="20" y="173" width="640" height="95" rx="8" fill="none" stroke="currentColor" stroke-dasharray="3,3" opacity="0.1"/>
-  <rect x="50" y="188" width="150" height="40" class="rp-box"/><rect x="50" y="188" width="150" height="40" class="rp-fill"/>
-  <text x="125" y="205" text-anchor="middle" class="rp-label">ETH (chain 1)</text>
-  <text x="125" y="220" text-anchor="middle" class="rp-sub">tx signed for chain 1</text>
-  <rect x="480" y="188" width="160" height="40" class="rp-box"/><rect x="480" y="188" width="160" height="40" class="rp-fill"/>
-  <text x="560" y="205" text-anchor="middle" class="rp-label">ETC (chain 61)</text>
-  <text x="560" y="220" text-anchor="middle" class="rp-sub">rejects chain 1 tx</text>
-  <path d="M200,208 L370,208" class="rp-bad"/>
-  <text x="395" y="213" class="rp-x">✗</text>
-  <text x="310" y="250" text-anchor="middle" class="rp-sub">chainId mismatch → tx invalid</text>
-</svg>
+![The same signed transaction worked on both chains until the signature covered a chain ID.](diagram:eip155-replay)
 
 **Why it matters:** Every EVM chain — Polygon, Arbitrum, Base, Optimism — has a unique chain ID because of this standard. It's the reason you can use MetaMask across dozens of networks without transactions leaking between them. Boring infrastructure that everything depends on.
 
@@ -224,51 +101,13 @@ CryptoKitties launched in late 2017 using a proto-721 interface and famously con
 
 ## ERC-1155 — The Multi-Token Standard (2019)
 
-**EIP-1155 | Proposed June 2018 | Final September 2019**
+**EIP-1155 | Proposed June 2018 | Final June 2019**
 
 Witek Radomski (Enjin) proposed ERC-1155 to solve a practical problem: games need both fungible items (gold coins, potions) and non-fungible items (unique swords, characters) — and managing them across separate ERC-20 and ERC-721 contracts is expensive and unwieldy.
 
 ERC-1155 lets a single contract manage multiple token types. Each `id` can represent a fungible token (many units) or a non-fungible token (one unit). The killer feature is batch operations:
 
-<svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;margin:1.5rem auto;display:block">
-  <style>
-    .ts-box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; }
-    .ts-fill { fill: currentColor; opacity: 0.04; rx: 6; }
-    .ts-title { font: 700 12px ui-monospace, monospace; fill: currentColor; }
-    .ts-sub { font: 400 10px ui-monospace, monospace; fill: currentColor; opacity: 0.5; }
-    .ts-item { fill: currentColor; opacity: 0.12; rx: 3; }
-    .ts-item-label { font: 600 9px ui-monospace, monospace; fill: currentColor; opacity: 0.6; }
-    .ts-contract { font: 600 9px ui-monospace, monospace; fill: currentColor; opacity: 0.35; }
-  </style>
-  <!-- ERC-20 -->
-  <rect x="15" y="30" width="200" height="170" class="ts-box"/><rect x="15" y="30" width="200" height="170" class="ts-fill"/>
-  <text x="115" y="55" text-anchor="middle" class="ts-title">ERC-20</text>
-  <text x="115" y="72" text-anchor="middle" class="ts-sub">fungible — all identical</text>
-  <rect x="40" y="90" width="36" height="36" class="ts-item"/><text x="58" y="113" text-anchor="middle" class="ts-item-label">USDC</text>
-  <rect x="86" y="90" width="36" height="36" class="ts-item"/><text x="104" y="113" text-anchor="middle" class="ts-item-label">USDC</text>
-  <rect x="132" y="90" width="36" height="36" class="ts-item"/><text x="150" y="113" text-anchor="middle" class="ts-item-label">USDC</text>
-  <text x="115" y="155" text-anchor="middle" class="ts-contract">1 contract per token</text>
-  <text x="115" y="172" text-anchor="middle" class="ts-contract">1 tx per transfer</text>
-  <!-- ERC-721 -->
-  <rect x="245" y="30" width="200" height="170" class="ts-box"/><rect x="245" y="30" width="200" height="170" class="ts-fill"/>
-  <text x="345" y="55" text-anchor="middle" class="ts-title">ERC-721</text>
-  <text x="345" y="72" text-anchor="middle" class="ts-sub">non-fungible — all unique</text>
-  <rect x="270" y="90" width="36" height="36" class="ts-item"/><text x="288" y="113" text-anchor="middle" class="ts-item-label">#01</text>
-  <rect x="316" y="90" width="36" height="36" class="ts-item"/><text x="334" y="113" text-anchor="middle" class="ts-item-label">#02</text>
-  <rect x="362" y="90" width="36" height="36" class="ts-item"/><text x="380" y="113" text-anchor="middle" class="ts-item-label">#03</text>
-  <text x="345" y="155" text-anchor="middle" class="ts-contract">1 contract per collection</text>
-  <text x="345" y="172" text-anchor="middle" class="ts-contract">1 tx per transfer</text>
-  <!-- ERC-1155 -->
-  <rect x="475" y="30" width="210" height="170" class="ts-box"/><rect x="475" y="30" width="210" height="170" class="ts-fill"/>
-  <text x="580" y="55" text-anchor="middle" class="ts-title">ERC-1155</text>
-  <text x="580" y="72" text-anchor="middle" class="ts-sub">both — multi-token</text>
-  <rect x="500" y="88" width="36" height="24" class="ts-item"/><text x="518" y="105" text-anchor="middle" class="ts-item-label">gold</text>
-  <rect x="542" y="88" width="36" height="24" class="ts-item"/><text x="560" y="105" text-anchor="middle" class="ts-item-label">gold</text>
-  <rect x="584" y="88" width="36" height="24" class="ts-item"/><text x="602" y="105" text-anchor="middle" class="ts-item-label">gold</text>
-  <rect x="632" y="88" width="36" height="24" class="ts-item"/><text x="650" y="105" text-anchor="middle" class="ts-item-label">#01</text>
-  <text x="580" y="155" text-anchor="middle" class="ts-contract">1 contract for everything</text>
-  <text x="580" y="172" text-anchor="middle" class="ts-contract">1 tx for batch transfer</text>
-</svg>
+![One contract per token, per collection, or for everything. Only the last can batch a transfer.](diagram:erc-token-models)
 
 ```solidity
 function safeBatchTransferFrom(
@@ -282,13 +121,13 @@ function safeBatchTransferFrom(
 
 One transaction to transfer a sword, 50 gold, and 3 health potions. In the ERC-20/721 world, that's three separate contract calls, three separate gas fees.
 
-**Why it matters:** Gas efficiency and developer ergonomics for any application managing diverse asset types. Gaming (Enjin, Gods Unchained), metaverse projects, and ticketing platforms adopted it. OpenSea supports it natively. It's the quiet workhorse behind a lot of multi-asset systems.
+**Why it matters:** Gas efficiency and developer ergonomics for any application managing diverse asset types. Gaming (Enjin), metaverse projects, and ticketing platforms adopted it. OpenSea supports it natively. It's the quiet workhorse behind a lot of multi-asset systems.
 
 ---
 
 ## ERC-2981 — NFT Royalties (2020)
 
-**EIP-2981 | Proposed September 2020 | Final September 2022**
+**EIP-2981 | Proposed September 2020 | Final July 2021**
 
 The NFT royalty wars of 2022-2023 were ugly. Creators expected perpetual royalties on secondary sales. Marketplaces like Blur undercut OpenSea by making royalties optional. Billions of dollars in expected creator revenue evaporated.
 
@@ -305,7 +144,7 @@ Simple: given a token ID and sale price, the contract returns who gets paid and 
 
 ![The contract answers the question. Whether anyone acts on the answer is up to the seller.](diagram:erc2981-royalty)
 
-**Why it matters anyway:** It established a common interface that well-intentioned marketplaces could implement consistently. OpenSea, Rarible, and others honor it. But the royalty debate exposed a fundamental tension: onchain ownership gives buyers the right to transfer freely, while creators want to tax those transfers. ERC-2981 didn't resolve that tension — it just gave both sides a shared vocabulary.
+**Why it matters anyway:** It established a common interface that well-intentioned marketplaces could implement consistently. Rarible and others honor it, while OpenSea made creator fees optional in 2023. But the royalty debate exposed a fundamental tension: onchain ownership gives buyers the right to transfer freely, while creators want to tax those transfers. ERC-2981 didn't resolve that tension — it just gave both sides a shared vocabulary.
 
 ---
 
@@ -325,40 +164,7 @@ The base fee mechanism targets 50% block utilization. If blocks are more than ha
 
 ![Fuller blocks push the base fee up and emptier ones pull it down, so it hunts for the target. A sketch, not data.](diagram:eip1559-base-fee)
 
-<svg viewBox="0 0 680 230" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;margin:1.5rem auto;display:block">
-  <style>
-    .fee-label { font: 600 12px ui-monospace, monospace; fill: currentColor; }
-    .fee-sub { font: 400 10px ui-monospace, monospace; fill: currentColor; opacity: 0.5; }
-    .fee-box { stroke: currentColor; stroke-width: 1.5; rx: 6; }
-    .fee-arrow { stroke: currentColor; stroke-width: 1.5; fill: none; marker-end: url(#fee-head); }
-    .fee-sect { font: 700 11px ui-monospace, monospace; fill: currentColor; opacity: 0.3; }
-  </style>
-  <defs><marker id="fee-head" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="currentColor" opacity="0.6"/></marker></defs>
-  <!-- BEFORE -->
-  <text x="20" y="22" class="fee-sect">BEFORE 1559</text>
-  <rect x="20" y="35" width="280" height="70" class="fee-box" fill="none"/>
-  <rect x="20" y="35" width="280" height="70" class="fee-box" fill="currentColor" opacity="0.04"/>
-  <text x="160" y="60" text-anchor="middle" class="fee-label">You pay: ??? gwei</text>
-  <text x="160" y="78" text-anchor="middle" class="fee-sub">blind auction — guess and hope</text>
-  <text x="160" y="92" text-anchor="middle" class="fee-sub">100% goes to miners</text>
-  <!-- AFTER -->
-  <text x="20" y="140" class="fee-sect">AFTER 1559</text>
-  <!-- total fee bar -->
-  <rect x="20" y="155" width="640" height="55" rx="6" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3,3" opacity="0.15"/>
-  <!-- base fee -->
-  <rect x="30" y="160" width="380" height="44" rx="4" fill="currentColor" opacity="0.08" stroke="currentColor" stroke-width="1.5"/>
-  <text x="220" y="180" text-anchor="middle" class="fee-label">Base Fee (algorithmic)</text>
-  <text x="220" y="196" text-anchor="middle" class="fee-sub">🔥 burned — destroyed forever</text>
-  <!-- priority fee -->
-  <rect x="420" y="160" width="160" height="44" rx="4" fill="currentColor" opacity="0.04" stroke="currentColor" stroke-width="1.5"/>
-  <text x="500" y="180" text-anchor="middle" class="fee-label">Priority Fee</text>
-  <text x="500" y="196" text-anchor="middle" class="fee-sub">tip → validator</text>
-  <!-- unused -->
-  <text x="610" y="184" text-anchor="middle" class="fee-sub" opacity="0.3">unused</text>
-  <text x="610" y="198" text-anchor="middle" class="fee-sub" opacity="0.3">refunded</text>
-  <!-- max fee label -->
-  <text x="340" y="225" text-anchor="middle" class="fee-sub">↑ max fee (your ceiling) ↑</text>
-</svg>
+![A guess that all went to miners became a burned base fee, a tip and a refund. A sketch, not to scale.](diagram:eip1559-fee-split)
 
 **The burn is the big deal.** Every transaction destroys ETH. During periods of high activity, more ETH is burned than is issued to validators — making ETH deflationary. Since the merge to proof-of-stake (September 2022), the combination of reduced issuance and 1559 burns has made ETH's supply dynamics fundamentally different from Bitcoin's fixed-inflation model. Over 4 million ETH has been burned since London.
 
@@ -378,70 +184,19 @@ Each blob is ~128 KB. At launch, each block could carry up to 6 blobs. Blobs hav
 
 ![Blobs are cheap because they don't stay: a short life in a small space with its own price. Sizes as activated at Dencun.](diagram:eip4844-blobs)
 
-<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;margin:1.5rem auto;display:block">
-  <style>
-    .bl-box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; }
-    .bl-fill { fill: currentColor; opacity: 0.04; rx: 6; }
-    .bl-label { font: 600 12px ui-monospace, monospace; fill: currentColor; }
-    .bl-sub { font: 400 10px ui-monospace, monospace; fill: currentColor; opacity: 0.5; }
-    .bl-arrow { stroke: currentColor; stroke-width: 1.5; fill: none; marker-end: url(#bl-head); }
-    .bl-sect { font: 700 11px ui-monospace, monospace; fill: currentColor; opacity: 0.3; }
-    .bl-blob { fill: currentColor; opacity: 0.08; stroke: currentColor; stroke-width: 1; rx: 4; }
-    .bl-calldata { fill: currentColor; opacity: 0.15; stroke: currentColor; stroke-width: 1; rx: 4; }
-  </style>
-  <defs><marker id="bl-head" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="currentColor" opacity="0.6"/></marker></defs>
-  <!-- BEFORE -->
-  <text x="20" y="22" class="bl-sect">BEFORE 4844: L2 DATA AS CALLDATA</text>
-  <!-- L2s -->
-  <rect x="30" y="40" width="100" height="40" class="bl-box"/><rect x="30" y="40" width="100" height="40" class="bl-fill"/>
-  <text x="80" y="65" text-anchor="middle" class="bl-label">Arbitrum</text>
-  <rect x="150" y="40" width="100" height="40" class="bl-box"/><rect x="150" y="40" width="100" height="40" class="bl-fill"/>
-  <text x="200" y="65" text-anchor="middle" class="bl-label">Optimism</text>
-  <rect x="270" y="40" width="100" height="40" class="bl-box"/><rect x="270" y="40" width="100" height="40" class="bl-fill"/>
-  <text x="320" y="65" text-anchor="middle" class="bl-label">Base</text>
-  <!-- arrows to L1 -->
-  <path d="M80,80 L80,105 L350,105 L350,120" class="bl-arrow"/>
-  <path d="M200,80 L200,105 L350,105" class="bl-arrow" style="marker-end:none"/>
-  <path d="M320,80 L320,105 L350,105" class="bl-arrow" style="marker-end:none"/>
-  <text x="420" y="108" class="bl-sub">calldata (expensive, permanent)</text>
-  <!-- L1 block -->
-  <rect x="300" y="120" width="120" height="50" class="bl-box"/><rect x="300" y="120" width="120" height="50" class="bl-calldata"/>
-  <text x="360" y="140" text-anchor="middle" class="bl-label">L1 Block</text>
-  <text x="360" y="158" text-anchor="middle" class="bl-sub">$0.10-0.50/tx</text>
-  <!-- AFTER -->
-  <text x="20" y="205" class="bl-sect">AFTER 4844: L2 DATA AS BLOBS</text>
-  <!-- L2s -->
-  <rect x="30" y="220" width="100" height="40" class="bl-box"/><rect x="30" y="220" width="100" height="40" class="bl-fill"/>
-  <text x="80" y="245" text-anchor="middle" class="bl-label">Arbitrum</text>
-  <rect x="150" y="220" width="100" height="40" class="bl-box"/><rect x="150" y="220" width="100" height="40" class="bl-fill"/>
-  <text x="200" y="245" text-anchor="middle" class="bl-label">Optimism</text>
-  <rect x="270" y="220" width="100" height="40" class="bl-box"/><rect x="270" y="220" width="100" height="40" class="bl-fill"/>
-  <text x="320" y="245" text-anchor="middle" class="bl-label">Base</text>
-  <!-- arrows to blobs -->
-  <path d="M80,260 L80,275 L430,275 L430,257" class="bl-arrow"/>
-  <path d="M200,260 L200,275 L430,275" class="bl-arrow" style="marker-end:none"/>
-  <path d="M320,260 L320,275 L430,275" class="bl-arrow" style="marker-end:none"/>
-  <!-- blob area -->
-  <rect x="410" y="218" width="40" height="36" class="bl-blob"/><text x="430" y="241" text-anchor="middle" class="bl-sub">blob</text>
-  <rect x="458" y="218" width="40" height="36" class="bl-blob"/><text x="478" y="241" text-anchor="middle" class="bl-sub">blob</text>
-  <rect x="506" y="218" width="40" height="36" class="bl-blob"/><text x="526" y="241" text-anchor="middle" class="bl-sub">blob</text>
-  <text x="478" y="275" text-anchor="middle" class="bl-sub">cheap, pruned after ~18 days</text>
-  <!-- cost -->
-  <text x="610" y="240" class="bl-label">~$0.001/tx</text>
-  <text x="610" y="256" class="bl-sub">10-100x cheaper</text>
-</svg>
+![The same rollups, posting the same data, to a different place.](diagram:eip4844-rollups)
 
 **The impact was immediate and dramatic:** L2 transaction fees dropped 10-100x overnight. Arbitrum and Optimism went from ~$0.10-0.50 per transaction to fractions of a cent. Base transactions became effectively free for users. This is the single biggest cost reduction in Ethereum's history.
 
 **Why it matters:** Cheap L2s are the Ethereum scaling roadmap. The thesis is: L1 for security and settlement, L2s for execution and users. 4844 made that thesis economically viable. It also laid the groundwork for full danksharding — the future upgrade where the blob count scales much higher, supporting even more L2 throughput.
 
-> "Proto-danksharding" is named after Dankrad Feist, the researcher who proposed the full danksharding design. 4844 is the first step — the "proto" version that introduces the blob format and fee market without the full data availability sampling mechanism.
+> "Proto-danksharding" is named after the two researchers who proposed it, Protolambda and Dankrad Feist. Feist also proposed the full danksharding design. 4844 is the first step — the version that introduces the blob format and fee market without the full data availability sampling mechanism.
 
 ---
 
 ## ERC-4337 — Account Abstraction via EntryPoint (2023)
 
-**EIP-4337 | Proposed September 2021 | Final March 2023**
+**EIP-4337 | Proposed September 2021 | EntryPoint live on mainnet March 2023 | Final June 2026**
 
 Every Ethereum account is one of two types: an externally owned account (EOA) controlled by a private key, or a contract account controlled by code. EOAs are what everyone uses — MetaMask, hardware wallets, seed phrases. They're also the source of most of Ethereum's worst UX problems:
 
@@ -483,7 +238,7 @@ struct PackedUserOperation {
 
 ## ERC-6551 — Token Bound Accounts (2023)
 
-**EIP-6551 | Proposed February 2023 | Final March 2024**
+**EIP-6551 | Proposed February 2023 | In Review since August 2023**
 
 ERC-6551 answers an odd but powerful question: what if every NFT had its own wallet?
 
@@ -503,37 +258,7 @@ function createAccount(
 
 **Why this is interesting:** An NFT is no longer just a pointer to metadata. It's an entity that can own things — other NFTs, ERC-20 tokens, POAPs, credentials. A game character NFT can carry its inventory. A profile NFT can accumulate reputation, memberships, and assets that are inseparable from the identity.
 
-<svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:600px;margin:1.5rem auto;display:block">
-  <style>
-    .tb-box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; }
-    .tb-fill { fill: currentColor; opacity: 0.04; rx: 6; }
-    .tb-label { font: 600 12px ui-monospace, monospace; fill: currentColor; }
-    .tb-sub { font: 400 10px ui-monospace, monospace; fill: currentColor; opacity: 0.5; }
-    .tb-item { fill: currentColor; opacity: 0.08; stroke: currentColor; stroke-width: 1; rx: 4; }
-    .tb-item-label { font: 600 9px ui-monospace, monospace; fill: currentColor; opacity: 0.6; }
-    .tb-arrow { stroke: currentColor; stroke-width: 1.5; fill: none; marker-end: url(#tb-head); }
-    .tb-brace { font: 300 36px serif; fill: currentColor; opacity: 0.2; }
-  </style>
-  <defs><marker id="tb-head" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="currentColor" opacity="0.6"/></marker></defs>
-  <!-- Owner -->
-  <rect x="20" y="20" width="120" height="45" class="tb-box"/><rect x="20" y="20" width="120" height="45" class="tb-fill"/>
-  <text x="80" y="40" text-anchor="middle" class="tb-label">You (owner)</text>
-  <text x="80" y="55" text-anchor="middle" class="tb-sub">0xABC...</text>
-  <!-- arrow to NFT -->
-  <path d="M80,65 L80,90" class="tb-arrow"/>
-  <text x="100" y="82" class="tb-sub">owns</text>
-  <!-- NFT -->
-  <rect x="20" y="92" width="560" height="155" class="tb-box" stroke-dasharray="5,4"/><rect x="20" y="92" width="560" height="155" class="tb-fill"/>
-  <text x="300" y="115" text-anchor="middle" class="tb-label">Character NFT #42 (ERC-721)</text>
-  <!-- TBA inside -->
-  <rect x="45" y="128" width="510" height="105" class="tb-box"/><rect x="45" y="128" width="510" height="105" class="tb-fill"/>
-  <text x="300" y="150" text-anchor="middle" class="tb-sub">Token Bound Account (ERC-6551) — 0xTBA...</text>
-  <!-- items inside TBA -->
-  <rect x="70" y="165" width="90" height="50" class="tb-item"/><text x="115" y="185" text-anchor="middle" class="tb-item-label">Sword NFT</text><text x="115" y="200" text-anchor="middle" class="tb-item-label">(ERC-721)</text>
-  <rect x="175" y="165" width="90" height="50" class="tb-item"/><text x="220" y="185" text-anchor="middle" class="tb-item-label">500 GOLD</text><text x="220" y="200" text-anchor="middle" class="tb-item-label">(ERC-20)</text>
-  <rect x="280" y="165" width="90" height="50" class="tb-item"/><text x="325" y="185" text-anchor="middle" class="tb-item-label">POAP</text><text x="325" y="200" text-anchor="middle" class="tb-item-label">(ERC-721)</text>
-  <rect x="385" y="165" width="110" height="50" class="tb-item"/><text x="440" y="185" text-anchor="middle" class="tb-item-label">Credentials</text><text x="440" y="200" text-anchor="middle" class="tb-item-label">(attestations)</text>
-</svg>
+![The NFT owns an account, and the account owns everything else.](diagram:erc6551-nesting)
 
 **Use cases already in the wild:**
 - **Composable characters**: game NFTs that carry their equipment, achievements, and currency
@@ -550,51 +275,13 @@ function createAccount(
 
 ERC-4337 brought account abstraction to Ethereum without a protocol change — clever, but it required users to migrate from their EOA to a new smart contract wallet. Your existing MetaMask address, with all its history, assets, and permissions, couldn't be upgraded in place. You had to start fresh.
 
-EIP-7702, authored by Vitalik Buterin and Sam Wilson, fixes this at the protocol level. It introduces a new transaction type that lets an EOA delegate to a smart contract. Your existing address — the one with your ENS name, your token approvals, your onchain history — can now behave like a smart wallet without migrating to a new address.
+EIP-7702, authored by Vitalik Buterin, Sam Wilson, Ansgar Dietrichs and lightclient, fixes this at the protocol level. It introduces a new transaction type that lets an EOA delegate to a smart contract. Your existing address — the one with your ENS name, your token approvals, your onchain history — can now behave like a smart wallet without migrating to a new address.
 
 The mechanism: a new transaction type includes an `authorization_list` — a signed statement saying "treat my EOA as if it were this contract." The EOA's code field is set to point at the specified contract, giving it smart wallet capabilities. The delegation stays in place until a later authorization changes it, and pointing it at the zero address clears it.
 
 ![The account keeps its address and everything attached to it. Only the code field changes.](diagram:eip7702-code)
 
-<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;margin:1.5rem auto;display:block">
-  <style>
-    .up-box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; }
-    .up-fill { fill: currentColor; opacity: 0.04; rx: 6; }
-    .up-label { font: 600 12px ui-monospace, monospace; fill: currentColor; }
-    .up-sub { font: 400 10px ui-monospace, monospace; fill: currentColor; opacity: 0.5; }
-    .up-arrow { stroke: currentColor; stroke-width: 1.5; fill: none; marker-end: url(#up-head); }
-    .up-sect { font: 700 11px ui-monospace, monospace; fill: currentColor; opacity: 0.3; }
-    .up-powers { fill: currentColor; opacity: 0.06; rx: 4; }
-    .up-power-label { font: 600 9px ui-monospace, monospace; fill: currentColor; opacity: 0.55; }
-  </style>
-  <defs><marker id="up-head" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="currentColor" opacity="0.6"/></marker></defs>
-  <!-- BEFORE -->
-  <text x="20" y="22" class="up-sect">BEFORE 7702</text>
-  <rect x="20" y="35" width="140" height="55" class="up-box"/><rect x="20" y="35" width="140" height="55" class="up-fill"/>
-  <text x="90" y="57" text-anchor="middle" class="up-label">Your EOA</text>
-  <text x="90" y="75" text-anchor="middle" class="up-sub">private key only</text>
-  <text x="195" y="65" class="up-sub">→ just signs txs, nothing more</text>
-  <!-- AFTER -->
-  <text x="20" y="120" class="up-sect">WITH 7702</text>
-  <rect x="20" y="133" width="140" height="55" class="up-box"/><rect x="20" y="133" width="140" height="55" class="up-fill"/>
-  <text x="90" y="155" text-anchor="middle" class="up-label">Your EOA</text>
-  <text x="90" y="172" text-anchor="middle" class="up-sub">same address</text>
-  <!-- delegation arrow -->
-  <path d="M160,160 L220,160" class="up-arrow"/>
-  <text x="190" y="152" class="up-sub">delegates</text>
-  <!-- Smart contract -->
-  <rect x="222" y="133" width="150" height="55" class="up-box"/><rect x="222" y="133" width="150" height="55" class="up-fill"/>
-  <text x="297" y="155" text-anchor="middle" class="up-label">Smart Wallet</text>
-  <text x="297" y="172" text-anchor="middle" class="up-sub">code (delegated)</text>
-  <!-- gained powers -->
-  <path d="M372,160 L410,160" class="up-arrow"/>
-  <rect x="415" y="133" width="85" height="28" class="up-powers"/><text x="457" y="152" text-anchor="middle" class="up-power-label">batch txs</text>
-  <rect x="508" y="133" width="90" height="28" class="up-powers"/><text x="553" y="152" text-anchor="middle" class="up-power-label">gas sponsor</text>
-  <rect x="606" y="133" width="75" height="28" class="up-powers"/><text x="644" y="152" text-anchor="middle" class="up-power-label">passkeys</text>
-  <rect x="415" y="166" width="85" height="28" class="up-powers"/><text x="457" y="185" text-anchor="middle" class="up-power-label">recovery</text>
-  <rect x="508" y="166" width="90" height="28" class="up-powers"/><text x="553" y="185" text-anchor="middle" class="up-power-label">session keys</text>
-  <rect x="606" y="166" width="75" height="28" class="up-powers"/><text x="644" y="185" text-anchor="middle" class="up-power-label">limits</text>
-</svg>
+![The EOA keeps its address and borrows a wallet's code, until a later authorization changes or clears it.](diagram:eip7702-powers)
 
 **What this means in practice:**
 - Existing EOAs get batch transactions, gas sponsorship, and custom validation — without creating a new account
@@ -622,6 +309,8 @@ This list is deliberately not exhaustive. Some notable omissions:
 ## The pattern
 
 Looking at this chronologically, there's a clear arc:
+
+![Each layer needs the one under it.](diagram:eth-standards-layers)
 
 **2015-2018: What can exist onchain?** ERC-20 (fungible tokens) and ERC-721 (non-fungible tokens) defined the primitive asset types. EIP-155 kept the chain from splitting into chaos. This era answered "what can we represent?"
 

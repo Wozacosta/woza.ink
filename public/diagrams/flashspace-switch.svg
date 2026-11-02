@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 272" role="img" aria-labelledby="t-flashspace-switch"><title id="t-flashspace-switch">Pressing Alt+2 goes to Flashspace, which shows the workspace's apps and hides every other app. All of it happens on one macOS Space, so there is no transition</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-flashspace-switch" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What one keypress does</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Workspaces are shown and hidden apps, not Spaces</text>
+<g data-node="key">
+<rect x="20" y="54" width="100" height="46" rx="8" class="d-box"/>
+<text x="70.0" y="81.5" class="d-t" text-anchor="middle" >Alt+2</text>
+</g>
+<g data-node="flashspace">
+<rect x="150" y="54" width="230" height="46" rx="8" class="d-box"/>
+<circle cx="164" cy="72" r="4" class="d-violet d-fill"/>
+<text x="176" y="76" class="d-t" text-anchor="start" >Flashspace</text>
+<text x="176" y="92" class="d-s" text-anchor="start" >Looks up workspace 2's apps</text>
+</g>
+<path d="M120,77 L148,77" class="d-line" data-edge="key-flashspace" marker-end="url(#ah-flashspace-switch)"/>
+<rect x="20" y="130" width="360" height="130" rx="8" class="d-ext"/>
+<g data-node="shown">
+<rect x="34" y="146" width="160" height="66" rx="8" class="d-box"/>
+<circle cx="48" cy="164" r="4" class="d-green d-fill"/>
+<text x="60" y="168" class="d-t" text-anchor="start" >Firefox</text>
+<text x="60" y="184" class="d-s" text-anchor="start" >Workspace 2: shown</text>
+</g>
+<g data-node="hidden">
+<rect x="206" y="146" width="160" height="66" rx="8" class="d-ext"/>
+<text x="220" y="168" class="d-t" text-anchor="start" >Everything else</text>
+<text x="220" y="184" class="d-s" text-anchor="start" >Hidden</text>
+</g>
+<text x="34" y="240" class="d-t" text-anchor="start" >One macOS Space, so no transition</text>
+<path d="M200,100 L200,118 L114,118 L114,144" class="d-line" data-edge="flashspace-shown" marker-end="url(#ah-flashspace-switch)"/>
+<path d="M300,100 L300,144" class="d-line" data-edge="flashspace-hidden" marker-end="url(#ah-flashspace-switch)"/>
+</svg>

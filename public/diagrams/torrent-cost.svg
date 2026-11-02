@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-labelledby="t-torrent-cost"><title id="t-torrent-cost">A sketch of cost for the source against the number of downloaders. For HTTP it climbs in a straight line. For BitTorrent it falls, because every downloader also uploads</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-torrent-cost" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What popularity costs the source</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A sketch of the shapes, not a measurement</text>
+<line x1="44" y1="212" x2="372" y2="212" class="d-line d-faint"/>
+<line x1="44" y1="60" x2="44" y2="212" class="d-line d-faint"/>
+<path d="M44,206 L372,60" fill="none" stroke-width="2" stroke-linecap="round" class="d-rose d-stroke"/>
+<path d="M44,150 C120,176 220,192 372,198" fill="none" stroke-width="2" stroke-linecap="round" class="d-green d-stroke"/>
+<text x="214" y="92" class="d-t" text-anchor="end" >HTTP: linear</text>
+<text x="214" y="108" class="d-s" text-anchor="end" >One more copy to serve</text>
+<text x="372" y="156" class="d-t" text-anchor="end" >BitTorrent: inverse</text>
+<text x="372" y="172" class="d-s" text-anchor="end" >One more uploader</text>
+<text x="372" y="230" class="d-s" text-anchor="end" >Downloaders</text>
+<text x="44" y="230" class="d-s" text-anchor="start" >Cost</text>
+</svg>

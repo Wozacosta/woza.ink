@@ -1,7 +1,7 @@
 ---
 title: "BitTorrent: The Protocol That Refuses to Die"
 date: "2026-03-22"
-description: "How BitTorrent actually works — peers, pieces, choking, DHT, magnet links — and why a 23-year-old protocol is still the best way to move large files across the internet."
+description: "How BitTorrent actually works — peers, pieces, choking, DHT, magnet links — and why a 25-year-old protocol is still the best way to move large files across the internet."
 tags: ["web", "protocols", "decentralized", "open-source"]
 series: open-protocols
 atUri: "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.document/3mzbwjxaaxe2o"
@@ -73,6 +73,8 @@ Everyone else: choked (no upload from you)
 
 Two BitTorrent peers connect over TCP. The handshake includes the protocol identifier, the infohash (so both sides confirm they're talking about the same torrent), and each peer's 20-byte ID.
 
+![The handshake is the same 68-byte greeting from each side.](diagram:torrent-handshake)
+
 After the handshake, communication happens through a simple message protocol:
 
 - `bitfield` — "here are the pieces I have"
@@ -98,7 +100,7 @@ This era gave birth to the iconic torrent sites. It also gave copyright holders 
 
 ### Phase 2: DHT and trackerless torrents (2005-2008)
 
-BEP 5 introduced the Mainline DHT in 2005. Based on the Kademlia distributed hash table, it let peers find each other without a centralized tracker. Millions of BitTorrent clients now form one of the largest DHTs ever deployed — measurements showed 16 to 28 million concurrent nodes by 2013.
+The Mainline DHT arrived in 2005, and BEP 5 wrote it down in 2008. Based on the Kademlia distributed hash table, it let peers find each other without a centralized tracker. Millions of BitTorrent clients now form one of the largest DHTs ever deployed — measurements showed 16 to 28 million concurrent nodes by 2013.
 
 The tracker became optional. Even if every tracker went down, existing swarms could survive through DHT.
 
@@ -112,12 +114,14 @@ Magnet links made BitTorrent nearly impossible to shut down at the infrastructur
 
 ### Phase 4: BEP extensions and modern clients (2012-present)
 
-The protocol kept evolving through the BEP (BitTorrent Enhancement Proposal) process:
+The protocol kept evolving through the BEP (BitTorrent Enhancement Proposal) process, and several of these drafts go back to 2008 and 2009:
 
 - **BEP 29** — uTorrent transport protocol (uTP), a UDP-based transport that plays nicer with home routers and ISP throttling
 - **BEP 10** — extension protocol, allowing clients to negotiate capabilities
 - **BEP 27** — private torrents, disabling DHT and peer exchange for controlled swarms
 - **BitTorrent v2** (BEP 52) — SHA-256 hashes, per-file Merkle trees, better deduplication
+
+![The headline dates, to scale, beside this post's four phases. Much of the spec work landed in 2008.](diagram:torrent-timeline)
 
 ---
 
@@ -129,9 +133,9 @@ The piracy narrative dominated BitTorrent's public perception for 15 years. That
 
 **Game distribution.** Blizzard's downloader used peer-to-peer. So did early Steam updates. When you're pushing a 50GB patch to millions of players at once, CDNs are expensive. Peer-to-peer is not.
 
-**Scientific datasets.** Academic institutions distribute large datasets via torrent. The Internet Archive hosts thousands of torrents. When a file is measured in terabytes and the audience is global, HTTP doesn't scale economically.
+**Scientific datasets.** Academic institutions distribute large datasets via torrent. The Internet Archive hosts over a million torrents. When a file is measured in terabytes and the audience is global, HTTP doesn't scale economically.
 
-**WebTorrent.** Created by Feross Aboukhadijeh, WebTorrent implements BitTorrent over WebRTC, making it work natively in browsers. No plugins, no extensions. A website can serve video via torrent connections between viewers. Brave browser ships with WebTorrent built in.
+**WebTorrent.** Created by Feross Aboukhadijeh, WebTorrent implements BitTorrent over WebRTC, making it work natively in browsers. No plugins, no extensions. A website can serve video via torrent connections between viewers. Brave browser shipped with WebTorrent built in until 2025.
 
 **IPFS lineage.** IPFS borrowed heavily from BitTorrent — content-addressing, Merkle trees, distributed hash tables, swarming. The key evolution: IPFS addresses individual blocks by content hash rather than grouping everything under one infohash, enabling deduplication across datasets. BitTorrent is the ancestor; IPFS is the mutation that tried to build a permanent web.
 
@@ -141,7 +145,9 @@ The piracy narrative dominated BitTorrent's public perception for 15 years. That
 
 BitTorrent solved a hard problem elegantly: distribute a large file to many recipients without bankrupting the source. The solution was not better servers. It was turning every consumer into a producer.
 
-Twenty-three years later, nothing has replaced it for this specific job. CDNs are fast but expensive. Cloud storage is convenient but centralized. HTTP downloads create a linear relationship between popularity and cost. BitTorrent creates an inverse one.
+Twenty-five years later, nothing has replaced it for this specific job. CDNs are fast but expensive. Cloud storage is convenient but centralized. HTTP downloads create a linear relationship between popularity and cost. BitTorrent creates an inverse one.
+
+![More downloaders cost a server more. In a swarm they share the load. A sketch of the shapes.](diagram:torrent-cost)
 
 The protocol also demonstrated something about system design that holds up: you don't need altruism for cooperation. You need aligned incentives. Tit-for-tat, rarest-first, and optimistic unchoking are not complicated algorithms. They're simple rules that produce emergent cooperation in a network of self-interested participants. Bram Cohen didn't build a charity. He built a market.
 

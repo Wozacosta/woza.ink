@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 314" role="img" aria-labelledby="t-rss-attention"><title id="t-rss-attention">A sketch placing the four folders on two axes. Tech is high volume and skimmed. Thinking is low volume and read properly. News is kept small. Releases are short signals</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-rss-attention" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Each folder gets a different kind of reading</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A sketch, not a measurement</text>
+<path d="M40,56 V280 H380" class="d-line d-faint"/>
+<text x="380" y="298" class="d-s" text-anchor="end" >more items a day</text>
+<text x="40" y="298" class="d-s" text-anchor="start" >fewer</text>
+<text x="28" y="168" class="d-s" text-anchor="middle" transform="rotate(-90 28 168)">how closely I read</text>
+<rect x="56" y="68" width="140" height="54" rx="8" class="d-box"/>
+<circle cx="70" cy="86" r="4" class="d-violet d-fill"/>
+<text x="82" y="90" class="d-t" text-anchor="start" >Thinking</text>
+<text x="82" y="106" class="d-s" text-anchor="start" >Read properly</text>
+<rect x="226" y="208" width="140" height="54" rx="8" class="d-box"/>
+<circle cx="240" cy="226" r="4" class="d-blue d-fill"/>
+<text x="252" y="230" class="d-t" text-anchor="start" >Tech</text>
+<text x="252" y="246" class="d-s" text-anchor="start" >Skim aggressively</text>
+<rect x="56" y="148" width="110" height="54" rx="8" class="d-box"/>
+<circle cx="70" cy="166" r="4" class="d-amber d-fill"/>
+<text x="82" y="170" class="d-t" text-anchor="start" >News</text>
+<text x="82" y="186" class="d-s" text-anchor="start" >Kept small</text>
+<rect x="52" y="216" width="150" height="48" rx="8" class="d-box"/>
+<circle cx="66" cy="234" r="4" class="d-green d-fill"/>
+<text x="78" y="238" class="d-t" text-anchor="start" >Releases</text>
+<text x="78" y="254" class="d-s" text-anchor="start" >Pure signal</text>
+</svg>

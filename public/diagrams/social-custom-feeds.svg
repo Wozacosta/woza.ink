@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-social-custom-feeds"><title id="t-social-custom-feeds">Every post on the network can go through any feed algorithm. Bluesky's default is one, and independent developers publish others, such as the best science posts or posts from people in your city. You subscribe to the ones you want</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-social-custom-feeds" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="network">
+<rect x="20" y="16" width="360" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="40.0" r="4" class="d-blue d-fill"/>
+<text x="46" y="44.5" class="d-t" text-anchor="start" >Every post on the network</text>
+</g>
+<path d="M76,64 L76,98" class="d-line" data-edge="network-default" marker-end="url(#ah-social-custom-feeds)"/>
+<g data-node="default">
+<rect x="20" y="100" width="112" height="54" rx="8" class="d-box"/>
+<text x="34" y="122" class="d-t" text-anchor="start" >Default</text>
+<text x="34" y="138" class="d-s" text-anchor="start" >From Bluesky</text>
+</g>
+<path d="M76,154 L76,188" class="d-line" data-edge="default-you" marker-end="url(#ah-social-custom-feeds)"/>
+<path d="M200,64 L200,98" class="d-line" data-edge="network-science" marker-end="url(#ah-social-custom-feeds)"/>
+<g data-node="science">
+<rect x="144" y="100" width="112" height="54" rx="8" class="d-box"/>
+<text x="158" y="122" class="d-t" text-anchor="start" >Best science</text>
+<text x="158" y="138" class="d-s" text-anchor="start" >By a developer</text>
+</g>
+<path d="M200,154 L200,188" class="d-line" data-edge="science-you" marker-end="url(#ah-social-custom-feeds)"/>
+<path d="M324,64 L324,98" class="d-line" data-edge="network-city" marker-end="url(#ah-social-custom-feeds)"/>
+<g data-node="city">
+<rect x="268" y="100" width="112" height="54" rx="8" class="d-box"/>
+<text x="282" y="122" class="d-t" text-anchor="start" >My city</text>
+<text x="282" y="138" class="d-s" text-anchor="start" >By a developer</text>
+</g>
+<path d="M324,154 L324,188" class="d-line" data-edge="city-you" marker-end="url(#ah-social-custom-feeds)"/>
+<g data-node="you">
+<rect x="20" y="190" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="208" r="4" class="d-green d-fill"/>
+<text x="46" y="212" class="d-t" text-anchor="start" >Your home screen</text>
+<text x="46" y="228" class="d-s" text-anchor="start" >You subscribe to the feeds you want</text>
+</g>
+</svg>

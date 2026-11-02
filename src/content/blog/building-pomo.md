@@ -52,6 +52,8 @@ Rather than embed a full player (hello complexity), I curated a handful of links
 ### 3) Simple Progress Tracking
 You can glance at how many pomodoros you finished that day. No streak shame. No gamified dopamine loop. Just a quiet record.
 
+![The three parts on one screen. A sketch.](diagram:pomo-screen)
+
 ---
 
 ## Tech Notes (for the curious engineer)
@@ -60,6 +62,8 @@ You can glance at how many pomodoros you finished that day. No streak shame. No 
 - Hosting: Vercel for instant deploys and effortless CI
 
 Minimal dependencies. Maximum focus.
+
+![Where things live. Only the first load touches a server.](diagram:pomo-data)
 
 ### Small example: the timer hook (concept)
 ```javascript

@@ -28,6 +28,8 @@ There are three properties, and almost nothing provides all of them.
 
 `/dev/urandom` gives you unpredictability. It gives you no verifiability whatsoever — you cannot prove to anyone that you didn't just pick your favorite number. A blockchain commit-reveal scheme gives you verifiability and can be made unbiasable, and is often entirely predictable to the first participant. These are different tools.
 
+![The five tools this post covers, against the three properties. Half circles mean a catch, which the later sections explain.](diagram:rng-properties)
+
 Pick the wrong one and the failure is usually silent, which is what makes this category of bug so nasty.
 
 ---
@@ -40,6 +42,8 @@ A **PRNG** is a deterministic algorithm. Feed it a seed, get a long stream that 
 
 A **CSPRNG** is a PRNG with an extra guarantee: given any amount of output, you cannot compute the next value or recover the seed in practical time. ChaCha20-based generators, HMAC-DRBG, and the Linux kernel's RNG are in this family.
 
+![Three kinds of generator, and what each one is for.](diagram:rng-families)
+
 The practical architecture nearly everything uses is **TRNG seeds a CSPRNG**. Collect a few hundred bits of real physical entropy — slow, awkward, once — then stretch it into gigabytes of unpredictable output with fast symmetric cryptography. You need true randomness exactly once, at the start. Everything after that is arithmetic.
 
 This is why the seed is where the bodies are buried.
@@ -50,9 +54,9 @@ This is why the seed is where the bodies are buried.
 
 The Linux kernel maintains an entropy pool fed from several sources: interrupt timing, disk and network jitter, keyboard and mouse events where available, and dedicated hardware.
 
-**RDRAND** is Intel's on-die generator — a circuit whose output depends on [thermal noise fluctuations inside the CPU](https://www.redhat.com/en/blog/understanding-random-number-generators-and-their-limitations-linux), conditioned and exposed as a single instruction. It's fast and it works. It is also completely unauditable: you cannot inspect it, and it's a single silicon block from a single vendor. After 2013 made state-level RNG sabotage a documented concern rather than a hypothetical, the kernel community settled on mixing RDRAND into the pool rather than using it directly. That way a backdoored RDRAND degrades your entropy instead of owning it outright.
+**RDRAND** is Intel's on-die generator — a circuit whose output depends on [thermal noise fluctuations inside the CPU](https://www.redhat.com/en/blog/understanding-random-number-generators-and-their-limitations-linux), conditioned and exposed as a single instruction. It's fast and it works. It is also completely unauditable: you cannot inspect it, and it's a single silicon block from a single vendor. Even before 2013 made state-level RNG sabotage a documented concern rather than a hypothetical, the kernel community settled on mixing RDRAND into the pool rather than using it directly. That way a backdoored RDRAND degrades your entropy instead of owning it outright.
 
-**Jitter entropy** exploits something less obvious: on a modern out-of-order CPU with caches, branch prediction, and DRAM refresh cycles, the *exact* cycle count of a fixed instruction sequence varies unpredictably. Measure that variance with `RDTSC` and you have an entropy source requiring no special hardware. The kernel's `jitterentropy` module does this, and it's the reason headless VMs with no keyboard and no disk activity can still boot with a properly seeded pool.
+**Jitter entropy** exploits something less obvious: on a modern out-of-order CPU with caches, branch prediction, and DRAM refresh cycles, the *exact* cycle count of a fixed instruction sequence varies unpredictably. Measure that variance with `RDTSC` and you have an entropy source requiring no special hardware. The kernel's boot-time `try_to_generate_entropy()` does this, and it's the reason headless VMs with no keyboard and no disk activity can still boot with a properly seeded pool.
 
 ![Several weak sources feed one pool, the pool seeds a CSPRNG, and getrandom() is what your code should call.](diagram:rng-pipeline)
 
@@ -65,6 +69,8 @@ Since Linux 5.6, `/dev/random` blocks only before the pool is first initialized.
 **Use `getrandom(2)`.** It blocks until the pool is initialized, then never blocks again, and it can't fail due to file descriptor exhaustion the way opening `/dev/urandom` can. In userland: `getrandom()` on Linux, `arc4random_buf()` on BSD and macOS, `BCryptGenRandom` on Windows, `crypto.randomBytes()` in Node, `secrets` in Python. Never the language's default random module.
 
 The dangerous window is **early boot**, especially on embedded devices and freshly cloned VM images — no disk history, no user input, no accumulated jitter. Devices have shipped SSH host keys generated seconds after first boot, and researchers have found thousands of them sharing keys across the internet.
+
+![Once the pool is ready the three interfaces are equivalent. The risk is all before that line.](diagram:rng-boot)
 
 ---
 
@@ -95,7 +101,7 @@ Dice fix this by moving the entropy source somewhere you can see it.
 A fair six-sided die produces log₂(6) ≈ **2.585 bits** per roll.
 
 - 128 bits (12-word seed): 128 / 2.585 ≈ **50 rolls**
-- 256 bits (24-word seed): 256 / 2.585 ≈ **99.04 → 100 rolls**
+- 256 bits (24-word seed): 256 / 2.585 ≈ **99.03 → 100 rolls**
 
 Rolling beyond the target adds nothing. Once you've supplied 256 bits into a 256-bit seed, additional rolls are discarded.
 
@@ -103,7 +109,9 @@ Rolling beyond the target adds nothing. Once you've supplied 256 bits into a 256
 
 This is where people go wrong, and the failure is invisible.
 
-**The trap.** Mapping a die to binary by taking the value mod 2, or mapping 1–6 onto 0–5 and then reducing mod 4, introduces **modulo bias** — some outputs become more likely than others. It still looks random. It still passes a casual eyeball test. You've quietly lost entropy in a way that's hard to detect and impossible to fix after the fact.
+**The trap.** Mapping a die to binary by taking 1–6 as 0–5 and then reducing mod 4 introduces **modulo bias** — some outputs become more likely than others. It still looks random. It still passes a casual eyeball test. You've quietly lost entropy in a way that's hard to detect and impossible to fix after the fact.
+
+![Six doesn't divide evenly by four, so two outputs get an extra face.](diagram:dice-mod4)
 
 Three correct approaches:
 
@@ -121,6 +129,8 @@ Three correct approaches:
 
 Fortunately, the hash-the-transcript method is fairly forgiving here. A slightly biased die reduces entropy per roll rather than destroying it, so rolling 120 times with mediocre dice comfortably clears 256 bits. Roll extra. It's cheap.
 
+![A small bias hides inside the noise at 100 rolls and only stands out after thousands. The 20% six is an example, not a measurement.](diagram:dice-noise)
+
 **Verify the tool offline.** Generating the seed on an airgapped machine and then typing it into a website defeats the entire exercise. The whole point was avoiding a black box.
 
 **Consider mixing rather than replacing.** Some wallets let you XOR dice entropy with the device's internal RNG. That's strictly better than either alone: you're protected if the hardware is backdoored *and* if your dice are loaded, because compromising the result requires compromising both.
@@ -133,11 +143,15 @@ Everything so far assumed you generate randomness for yourself. The problem chan
 
 **Commit-reveal** is the foundational trick. Publish `hash(secret)` first. Reveal `secret` later. Anyone can check the hash matches, so you're bound to a value you chose before seeing anything else. This is what "provably fair" online gambling runs on: a hashed **server seed** published up front, a player-supplied **client seed**, and a **nonce** incrementing per round, run through HMAC-SHA256. The player contributes entropy the operator can't control, and after the server seed is revealed every past round can be recomputed and checked.
 
+![The seed is locked in before the player's input, and every round can be checked afterward.](diagram:rng-commit)
+
 It's an elegant construction with a narrow guarantee: the operator did not change the outcome after your bet. It says nothing about whether the game's odds are what the operator claims, and it doesn't satisfy any major gaming regulator. Licensed markets require certification from labs like GLI or eCOGRA, which test the generator's statistical behavior over time rather than the integrity of individual rounds. The two mechanisms answer different questions, and crypto casinos advertising "provably fair" as equivalent to a license are eliding that.
 
 **Blockchain randomness** has the same shape with adversarial validators added.
 
 Ethereum's `PREVRANDAO` exposes the beacon chain's RANDAO accumulator — each proposer mixes in a BLS signature they can't forge. This works fine for consensus-internal purposes like committee assignment. It is *not* safe for high-value application randomness, because the last proposer in an epoch can see the result and choose to skip their slot, discarding an unfavorable outcome. One bit of bias, available for the price of one missed block reward. If your lottery pays more than that, someone will buy it.
+
+![Two possible outcomes, and one person who gets to pick.](diagram:rng-randao)
 
 **VRFs** solve this differently. A verifiable random function produces a value plus a proof that the value was derived correctly from a specific input and a specific private key. [Chainlink VRF](https://docs.chain.link/vrf) publishes both on-chain, so the contract verifies the proof before accepting the number. Nobody — not the oracle, not the developer, not a validator — can substitute a different value. You are still trusting that the oracle answers at all.
 
@@ -154,6 +168,8 @@ The failure cases are worth knowing because they're all the same failure.
 **Sony PlayStation 3 (2010).** ECDSA requires a fresh random nonce for every signature. Sony used a constant. With two signatures under the same nonce, the private key falls out by simple algebra. fail0verflow demonstrated it on stage. Sony's console signing key was recovered not through a cryptographic weakness but through a missing call to a random number generator.
 
 **Android SecureRandom (2013).** An initialization flaw caused repeated nonces in ECDSA signatures, and Bitcoin wallets on Android leaked their private keys on-chain to anyone watching for the pattern.
+
+![Three famous failures, all of them underneath the cryptography.](diagram:rng-failures)
 
 The common thread: in every case the cryptography was sound, correctly implemented, and standards-compliant. The randomness underneath it was not, and nothing in the layer above noticed. There is no test that distinguishes a good key from a predictable one by looking at it. The entropy is either there at generation time or it never was.
 

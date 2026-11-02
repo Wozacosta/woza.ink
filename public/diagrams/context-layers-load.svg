@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 232" role="img" aria-labelledby="t-context-layers-load"><title id="t-context-layers-load">A sketch grid of four sessions against three layers. Rules load in all four. Docs load in the two sessions that need them. A skill loads only in the session whose task matches it</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-context-layers-load" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What each session pays for</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A sketch of four sessions</text>
+<text x="146" y="66" class="d-s" text-anchor="middle" >Feature</text>
+<text x="214" y="66" class="d-s" text-anchor="middle" >Bug fix</text>
+<text x="282" y="66" class="d-s" text-anchor="middle" >PRD</text>
+<text x="350" y="66" class="d-s" text-anchor="middle" >Review</text>
+<text x="20" y="94" class="d-t" text-anchor="start" >Rules</text>
+<text x="20" y="109" class="d-s" text-anchor="start" >Always</text>
+<rect x="116" y="78" width="60" height="38" rx="4" class="d-green d-fill" opacity="0.7"/>
+<rect x="184" y="78" width="60" height="38" rx="4" class="d-green d-fill" opacity="0.7"/>
+<rect x="252" y="78" width="60" height="38" rx="4" class="d-green d-fill" opacity="0.7"/>
+<rect x="320" y="78" width="60" height="38" rx="4" class="d-green d-fill" opacity="0.7"/>
+<text x="20" y="140" class="d-t" text-anchor="start" >Docs</text>
+<text x="20" y="155" class="d-s" text-anchor="start" >On demand</text>
+<rect x="116" y="124" width="60" height="38" rx="4" class="d-violet d-fill" opacity="0.7"/>
+<rect x="184" y="124" width="60" height="38" rx="4" class="d-violet d-fill" opacity="0.7"/>
+<rect x="252" y="124" width="60" height="38" rx="4" class="d-ext"/>
+<rect x="320" y="124" width="60" height="38" rx="4" class="d-ext"/>
+<text x="20" y="186" class="d-t" text-anchor="start" >Skills</text>
+<text x="20" y="201" class="d-s" text-anchor="start" >By task</text>
+<rect x="116" y="170" width="60" height="38" rx="4" class="d-ext"/>
+<rect x="184" y="170" width="60" height="38" rx="4" class="d-ext"/>
+<rect x="252" y="170" width="60" height="38" rx="4" class="d-amber d-fill" opacity="0.7"/>
+<rect x="320" y="170" width="60" height="38" rx="4" class="d-amber d-fill" opacity="0.7"/>
+</svg>

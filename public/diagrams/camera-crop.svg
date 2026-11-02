@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 186" role="img" aria-labelledby="t-camera-crop"><title id="t-camera-crop">The same scene from the same spot with the same 50mm lens. On full-frame the bird is small. On APS-C it fills 1.5 times as much of the frame, as a 75mm lens would. On Micro Four Thirds it fills twice as much, like a 100mm lens</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-camera-crop" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Same lens, same spot, three sensors</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Enlarged to the same print width. An illustration.</text>
+<clipPath id="crop-fu"><rect x="20" y="52" width="116" height="76" rx="3"/></clipPath>
+<g clip-path="url(#crop-fu)">
+<rect x="20" y="52" width="116" height="76" class="d-box" style="stroke:none"/>
+<g transform="translate(78 90.0) scale(1)">
+<rect x="-116" y="16" width="232" height="60" class="d-green d-fill" opacity="0.22"/>
+<circle cx="-34" cy="-16" r="8" class="d-amber d-fill" opacity="0.45"/>
+<path d="M38,18 L38,-14" class="d-line d-amber d-stroke" stroke-width="2"/>
+<circle cx="38" cy="-18" r="11" class="d-green d-fill" opacity="0.55"/>
+<path d="M-10,2 q5,-7 10,-1 q5,-6 10,1 q-5,-3 -10,1 q-5,-4 -10,-1 z" class="d-violet d-fill"/>
+</g></g>
+<rect x="20" y="52" width="116" height="76" rx="3" class="d-line d-blue d-stroke"/>
+<text x="20" y="156" class="d-s" text-anchor="start" >Full-frame</text>
+<text x="20" y="172" class="d-s d-blue d-ct" text-anchor="start" >Looks like 50mm</text>
+<clipPath id="crop-ap"><rect x="142" y="52" width="116" height="76" rx="3"/></clipPath>
+<g clip-path="url(#crop-ap)">
+<rect x="142" y="52" width="116" height="76" class="d-box" style="stroke:none"/>
+<g transform="translate(200 90.0) scale(1.5)">
+<rect x="-116" y="16" width="232" height="60" class="d-green d-fill" opacity="0.22"/>
+<circle cx="-34" cy="-16" r="8" class="d-amber d-fill" opacity="0.45"/>
+<path d="M38,18 L38,-14" class="d-line d-amber d-stroke" stroke-width="2"/>
+<circle cx="38" cy="-18" r="11" class="d-green d-fill" opacity="0.55"/>
+<path d="M-10,2 q5,-7 10,-1 q5,-6 10,1 q-5,-3 -10,1 q-5,-4 -10,-1 z" class="d-violet d-fill"/>
+</g></g>
+<rect x="142" y="52" width="116" height="76" rx="3" class="d-line d-green d-stroke"/>
+<text x="142" y="156" class="d-s" text-anchor="start" >APS-C</text>
+<text x="142" y="172" class="d-s d-green d-ct" text-anchor="start" >Looks like 75mm</text>
+<clipPath id="crop-mi"><rect x="264" y="52" width="116" height="87" rx="3"/></clipPath>
+<g clip-path="url(#crop-mi)">
+<rect x="264" y="52" width="116" height="87" class="d-box" style="stroke:none"/>
+<g transform="translate(322 95.5) scale(2)">
+<rect x="-116" y="16" width="232" height="60" class="d-green d-fill" opacity="0.22"/>
+<circle cx="-34" cy="-16" r="8" class="d-amber d-fill" opacity="0.45"/>
+<path d="M38,18 L38,-14" class="d-line d-amber d-stroke" stroke-width="2"/>
+<circle cx="38" cy="-18" r="11" class="d-green d-fill" opacity="0.55"/>
+<path d="M-10,2 q5,-7 10,-1 q5,-6 10,1 q-5,-3 -10,1 q-5,-4 -10,-1 z" class="d-violet d-fill"/>
+</g></g>
+<rect x="264" y="52" width="116" height="87" rx="3" class="d-line d-rose d-stroke"/>
+<text x="264" y="156" class="d-s" text-anchor="start" >Micro Four Thirds</text>
+<text x="264" y="172" class="d-s d-rose d-ct" text-anchor="start" >Looks like 100mm</text>
+</svg>

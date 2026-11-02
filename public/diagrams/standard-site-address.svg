@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-standard-site-address"><title id="t-standard-site-address">An annotated document record. Its site field points at the publication record, whose url is https://rednafi.com. Its path is /go/patch-field-mask/. Joined together they give the post's real address, https://rednafi.com/go/patch-field-mask/</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-standard-site-address" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >From a record to a real address</text>
+<rect x="20" y="36" width="360" height="72" rx="8" class="d-box"/>
+<text x="34" y="56" class="d-t" text-anchor="start" >Document record</text>
+<text x="34" y="76" class="d-s d-m" text-anchor="start" >site: at://did:plc:fgtm2…/site.standard.publication/…</text>
+<text x="34" y="94" class="d-s d-m d-green d-ct" text-anchor="start" >path: /go/patch-field-mask/</text>
+<path d="M100,108 L100,146" class="d-line" marker-end="url(#ah-standard-site-address)"/>
+<text x="108" y="131" class="d-s" text-anchor="start" >site points here</text>
+<rect x="20" y="148" width="270" height="56" rx="8" class="d-box"/>
+<text x="34" y="170" class="d-t" text-anchor="start" >Publication record</text>
+<text x="34" y="190" class="d-s d-m d-blue d-ct" text-anchor="start" >url: https://rednafi.com</text>
+<path d="M335,108 L335,234" class="d-line" marker-end="url(#ah-standard-site-address)"/>
+<text x="327" y="131" class="d-s" text-anchor="end" >path</text>
+<path d="M100,204 L100,234" class="d-line" marker-end="url(#ah-standard-site-address)"/>
+<rect x="20" y="236" width="360" height="52" rx="8" class="d-box"/>
+<text x="200" y="258" class="d-t" text-anchor="middle">The post's real address</text>
+<text x="200" y="276" class="d-s d-m" text-anchor="middle"><tspan class="d-blue d-ct">https://rednafi.com</tspan><tspan class="d-green d-ct">/go/patch-field-mask/</tspan></text>
+</svg>

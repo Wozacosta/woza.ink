@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 342" role="img" aria-labelledby="t-social-atmosphere"><title id="t-social-atmosphere">Bluesky, Tangled, Popfeed, Anisota, Leaflet and Graze are separate apps. They all log in with one account, which is hosted by a provider you pick and can move away from</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-social-atmosphere" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="16" width="360" height="164" rx="8" class="d-ext"/>
+<text x="34" y="36" class="d-s" text-anchor="start" >Apps</text>
+<g data-node="bluesky">
+<rect x="32" y="46" width="108" height="54" rx="8" class="d-box"/>
+<text x="46" y="68" class="d-t" text-anchor="start" >Bluesky</text>
+<text x="46" y="84" class="d-s" text-anchor="start" >Microblogging</text>
+</g>
+<g data-node="tangled">
+<rect x="146" y="46" width="108" height="54" rx="8" class="d-box"/>
+<text x="160" y="68" class="d-t" text-anchor="start" >Tangled</text>
+<text x="160" y="84" class="d-s" text-anchor="start" >Code</text>
+</g>
+<g data-node="popfeed">
+<rect x="260" y="46" width="108" height="54" rx="8" class="d-box"/>
+<text x="274" y="68" class="d-t" text-anchor="start" >Popfeed</text>
+<text x="274" y="84" class="d-s" text-anchor="start" >Reviews</text>
+</g>
+<g data-node="anisota">
+<rect x="32" y="108" width="108" height="54" rx="8" class="d-box"/>
+<text x="46" y="130" class="d-t" text-anchor="start" >Anisota</text>
+<text x="46" y="146" class="d-s" text-anchor="start" >A slow client</text>
+</g>
+<g data-node="leaflet">
+<rect x="146" y="108" width="108" height="54" rx="8" class="d-box"/>
+<text x="160" y="130" class="d-t" text-anchor="start" >Leaflet</text>
+<text x="160" y="146" class="d-s" text-anchor="start" >Blogs</text>
+</g>
+<g data-node="graze">
+<rect x="260" y="108" width="108" height="54" rx="8" class="d-box"/>
+<text x="274" y="130" class="d-t" text-anchor="start" >Graze</text>
+<text x="274" y="146" class="d-s" text-anchor="start" >Feed builder</text>
+</g>
+<path d="M200,180 L200,216" class="d-line" data-edge="apps-account" marker-end="url(#ah-social-atmosphere)"/>
+<text x="208" y="202" class="d-s" text-anchor="start" data-edge="apps-account">log in</text>
+<g data-node="account">
+<rect x="20" y="218" width="360" height="44" rx="8" class="d-box"/>
+<circle cx="34" cy="240.0" r="4" class="d-green d-fill"/>
+<text x="46" y="244.5" class="d-t" text-anchor="start" >One account</text>
+</g>
+<path d="M200,262 L200,284" class="d-line" data-edge="account-host" marker-end="url(#ah-social-atmosphere)"/>
+<g data-node="host">
+<rect x="20" y="286" width="360" height="44" rx="8" class="d-box"/>
+<circle cx="34" cy="308.0" r="4" class="d-violet d-fill"/>
+<text x="46" y="312.5" class="d-t" text-anchor="start" >A host you pick and can leave</text>
+</g>
+</svg>

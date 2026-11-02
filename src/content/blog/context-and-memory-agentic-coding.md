@@ -30,6 +30,8 @@ The practical implications:
 - **What's in the window determines quality.** An agent with your `AGENTS.md`, relevant source files, and a clear task description will outperform the same agent with a blank slate and a vague question.
 - **You are the memory.** The parts that need to persist across sessions — architecture decisions, conventions, preferences — have to be written down somewhere the agent can read them.
 
+![Position matters as well as presence: accuracy drops when the answer sits mid-context. A 2023 model, and the vertical axis starts at 50%.](diagram:context-lost-middle)
+
 ---
 
 ## The three layers of persistent context
@@ -60,6 +62,8 @@ Skills are larger context packages that encode how to do specific things: write 
 
 The advantage: a skill can be very detailed without burdening every session with that detail. You only pay the context cost when you're actually doing the thing the skill is for.
 
+![Rules are paid for in every session, the other two only when they earn it.](diagram:context-layers-load)
+
 ---
 
 ## When to start a new session
@@ -75,6 +79,8 @@ Start a new session when:
 
 Start a new session confidently. The cost is the few seconds it takes to re-establish context. The benefit is a fresh, focused agent.
 
+![Four checks. One yes is enough.](diagram:context-new-session)
+
 ---
 
 ## Starting sessions well
@@ -86,6 +92,8 @@ The quality of a session is often determined in the first message. A strong open
 3. **State the task clearly.** "Implement `fulfillOrder()` in `src/lib/payments/fulfillment.ts` following the pattern in `src/lib/payments/refund.ts`."
 
 Compare this to opening with "hey continue where we left off" after a reset. The first gets you working code in one pass. The second gets you five minutes of re-orientation.
+
+![The same session, two first messages.](diagram:context-opening)
 
 ---
 

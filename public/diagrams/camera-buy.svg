@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 348" role="img" aria-labelledby="t-camera-buy"><title id="t-camera-buy">A decision path. If you're not sure, shoot with your phone for a month first. If you are, a tight budget leads to the Nikon Z50 II with its kit lens, a stretch budget to the Fujifilm X-M5 or Canon R10, and full-frame to the Sony A7C II. Every path ends with one body and two lenses</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-camera-buy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Which path are you on?</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >The picks above, as a map</text>
+<g data-node="sure">
+<rect x="20" y="54" width="170" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="72" r="4" class="d-violet d-fill"/>
+<text x="46" y="76" class="d-t" text-anchor="start" >Sure you want one?</text>
+<text x="46" y="92" class="d-s" text-anchor="start" >Starting from zero</text>
+</g>
+<g data-node="phone">
+<rect x="250" y="54" width="130" height="52" rx="8" class="d-box"/>
+<circle cx="264" cy="72" r="4" class="d-amber d-fill"/>
+<text x="276" y="76" class="d-t" text-anchor="start" >Phone first</text>
+<text x="276" y="92" class="d-s" text-anchor="start" >One careful month</text>
+</g>
+<g data-node="budget">
+<rect x="100" y="138" width="200" height="44" rx="8" class="d-box"/>
+<text x="200.0" y="164.5" class="d-t" text-anchor="middle" >How far can you go?</text>
+</g>
+<path d="M190,80 L248,80" class="d-line" data-edge="sure-phone" marker-end="url(#ah-camera-buy)"/>
+<text x="219" y="73" class="d-s" text-anchor="middle" data-edge="sure-phone">Not yet</text>
+<path d="M105,106 L105,122 L200,122 L200,136" class="d-line" data-edge="sure-budget" marker-end="url(#ah-camera-buy)"/>
+<text x="113" y="119" class="d-s" text-anchor="start" data-edge="sure-budget">Yes</text>
+<path d="M315,106 L315,160 L302,160" class="d-line" data-edge="phone-budget" marker-end="url(#ah-camera-buy)"/>
+<text x="323" y="136" class="d-s" text-anchor="start" data-edge="phone-budget">Frustrated?</text>
+<g data-node="tight">
+<rect x="20" y="216" width="114" height="52" rx="8" class="d-box"/>
+<text x="34" y="238" class="d-t" text-anchor="start" >Nikon Z50 II</text>
+<text x="34" y="254" class="d-s" text-anchor="start" >With the kit lens</text>
+</g>
+<path d="M146,182 L146,198 L77,198 L77,214" class="d-line" data-edge="budget-tight" marker-end="url(#ah-camera-buy)"/>
+<text x="70" y="210" class="d-s" text-anchor="end" data-edge="budget-tight">Tight</text>
+<path d="M77,268 L77,298" class="d-line" data-edge="tight-lenses" marker-end="url(#ah-camera-buy)"/>
+<g data-node="stretch">
+<rect x="143" y="216" width="114" height="52" rx="8" class="d-box"/>
+<text x="157" y="238" class="d-t" text-anchor="start" >X-M5 or R10</text>
+<text x="157" y="254" class="d-s" text-anchor="start" >Skip the kit lens</text>
+</g>
+<path d="M200,182 L200,214" class="d-line" data-edge="budget-stretch" marker-end="url(#ah-camera-buy)"/>
+<text x="206" y="195" class="d-s" text-anchor="start" data-edge="budget-stretch">Stretch</text>
+<path d="M200,268 L200,298" class="d-line" data-edge="stretch-lenses" marker-end="url(#ah-camera-buy)"/>
+<g data-node="full">
+<rect x="266" y="216" width="114" height="52" rx="8" class="d-box"/>
+<text x="280" y="238" class="d-t" text-anchor="start" >Sony A7C II</text>
+<text x="280" y="254" class="d-s" text-anchor="start" >Full-frame</text>
+</g>
+<path d="M254,182 L254,198 L323,198 L323,214" class="d-line" data-edge="budget-full" marker-end="url(#ah-camera-buy)"/>
+<text x="330" y="210" class="d-s" text-anchor="start" data-edge="budget-full">Full-frame</text>
+<path d="M323,268 L323,298" class="d-line" data-edge="full-lenses" marker-end="url(#ah-camera-buy)"/>
+<g data-node="lenses">
+<rect x="20" y="300" width="360" height="36" rx="8" class="d-box"/>
+<text x="200.0" y="322.5" class="d-t" text-anchor="middle" >One body, two lenses</text>
+</g>
+</svg>

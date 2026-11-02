@@ -66,7 +66,7 @@ export const sidenotes: ArticleSidenotes = {
         "Feross Aboukhadijeh, WebTorrent implements BitTorrent over WebRTC",
       type: "note",
       content:
-        "WebTorrent uses WebRTC data channels as its transport layer instead of TCP/UDP, which means it works in any modern browser without plugins. The tradeoff: WebTorrent peers can only connect to other WebTorrent peers (WebRTC) by default, not traditional BitTorrent peers (TCP). WebTorrent Desktop bridges this gap by speaking both protocols. Brave browser ships WebTorrent natively, and the library has been used for browser-based video streaming, decentralized CDNs, and peer-assisted delivery.",
+        "WebTorrent uses WebRTC data channels as its transport layer instead of TCP/UDP, which means it works in any modern browser without plugins. The tradeoff: WebTorrent peers can only connect to other WebTorrent peers (WebRTC) by default, not traditional BitTorrent peers (TCP). WebTorrent Desktop bridges this gap by speaking both protocols. Brave shipped WebTorrent natively until it removed it in 2025, and the library has been used for browser-based video streaming, decentralized CDNs, and peer-assisted delivery.",
       url: "https://webtorrent.io/faq",
     },
   ],

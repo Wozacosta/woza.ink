@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 318" role="img" aria-labelledby="t-worktree-shared"><title id="t-worktree-shared">Inside the main .git directory, objects, refs including refs/stash, and config are shared by every worktree. A private folder under worktrees/ holds that worktree's own HEAD and index. The linked directory has a .git file pointing to that private folder, and its own working files</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-worktree-shared" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What a linked worktree really is</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Most of it lives in the main .git</text>
+<rect x="20" y="54" width="204" height="252" rx="8" class="d-ext"/>
+<text x="34" y="76" class="d-s d-m" text-anchor="start" >myapp/.git/</text>
+<g data-node="shared">
+<rect x="32" y="86" width="180" height="108" rx="6" class="d-box"/>
+<circle cx="46" cy="104" r="4" class="d-amber d-fill"/>
+<text x="58" y="108" class="d-t" text-anchor="start" >Shared by all</text>
+<text x="46" y="128" class="d-s d-m" text-anchor="start" >objects/</text>
+<text x="46" y="144" class="d-s d-m" text-anchor="start" >refs/heads/</text>
+<text x="46" y="160" class="d-s d-m" text-anchor="start" >refs/stash</text>
+<text x="46" y="176" class="d-s d-m" text-anchor="start" >config</text>
+</g>
+<g data-node="private">
+<rect x="32" y="214" width="180" height="80" rx="6" class="d-box"/>
+<circle cx="46" cy="232" r="4" class="d-blue d-fill"/>
+<text x="58" y="236" class="d-t" text-anchor="start" >Private to one</text>
+<text x="46" y="254" class="d-s d-m" text-anchor="start" >worktrees/feat-auth/</text>
+<text x="60" y="270" class="d-s d-m" text-anchor="start" >HEAD</text>
+<text x="60" y="284" class="d-s d-m" text-anchor="start" >index</text>
+</g>
+<rect x="244" y="54" width="136" height="252" rx="8" class="d-ext"/>
+<text x="256" y="76" class="d-s d-m" text-anchor="start" >../feat-auth/</text>
+<g data-node="gitfile">
+<rect x="254" y="214" width="116" height="80" rx="8" class="d-box"/>
+<circle cx="268" cy="232" r="4" class="d-blue d-fill"/>
+<text x="280" y="236" class="d-t" text-anchor="start" >.git</text>
+<text x="280" y="252" class="d-s" text-anchor="start" >A plain file</text>
+</g>
+<g data-node="files">
+<rect x="254" y="86" width="116" height="80" rx="8" class="d-box"/>
+<circle cx="268" cy="104" r="4" class="d-green d-fill"/>
+<text x="280" y="108" class="d-t" text-anchor="start" >Working files</text>
+<text x="280" y="124" class="d-s" text-anchor="start" >Its own copy</text>
+</g>
+<path d="M254,254 L214,254" class="d-line" data-edge="gitfile-private" marker-end="url(#ah-worktree-shared)"/>
+<path d="M122,214 L122,196" class="d-line" data-edge="private-shared" marker-end="url(#ah-worktree-shared)"/>
+</svg>

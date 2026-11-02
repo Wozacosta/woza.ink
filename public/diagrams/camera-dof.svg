@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-camera-dof"><title id="t-camera-dof">How much stays sharp at f/1.8 with the same framing and a subject 2 meters away, to scale. About 17 centimeters on full-frame, 26 on APS-C, 34 on Micro Four Thirds and 47 on a 1-inch phone sensor</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-camera-dof" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >How much stays sharp</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Same framing, f/1.8, subject at 2 m. Computed, to scale.</text>
+<line x1="164.0" y1="50" x2="164.0" y2="222" class="d-line d-faint" stroke-dasharray="4 3"/>
+<g data-node="ff">
+<rect x="16" y="52" width="368" height="38" rx="6" class="d-ext" style="stroke-opacity:0"/>
+<text x="20" y="66" class="d-s" text-anchor="start" >Full-frame</text>
+<text x="380" y="66" class="d-t d-blue d-ct" text-anchor="end" >17 cm</text>
+<rect x="125.2" y="72" width="81.0" height="14" rx="3" class="d-blue d-fill" opacity="0.8"/>
+</g>
+<g data-node="apsc">
+<rect x="16" y="92" width="368" height="38" rx="6" class="d-ext" style="stroke-opacity:0"/>
+<text x="20" y="106" class="d-s" text-anchor="start" >APS-C</text>
+<text x="380" y="106" class="d-t d-green d-ct" text-anchor="end" >26 cm</text>
+<rect x="106.5" y="112" width="122.8" height="14" rx="3" class="d-green d-fill" opacity="0.8"/>
+</g>
+<g data-node="mft">
+<rect x="16" y="132" width="368" height="38" rx="6" class="d-ext" style="stroke-opacity:0"/>
+<text x="20" y="146" class="d-s" text-anchor="start" >Micro Four Thirds</text>
+<text x="380" y="146" class="d-t d-rose d-ct" text-anchor="end" >34 cm</text>
+<rect x="88.5" y="152" width="165.0" height="14" rx="3" class="d-rose d-fill" opacity="0.8"/>
+</g>
+<g data-node="phone">
+<rect x="16" y="172" width="368" height="38" rx="6" class="d-ext" style="stroke-opacity:0"/>
+<text x="20" y="186" class="d-s" text-anchor="start" >1-inch phone</text>
+<text x="380" y="186" class="d-t d-amber d-ct" text-anchor="end" >47 cm</text>
+<rect x="63.6" y="192" width="227.5" height="14" rx="3" class="d-amber d-fill" opacity="0.8"/>
+</g>
+<line x1="20" y1="226" x2="380" y2="226" class="d-line d-faint"/>
+<text x="68.0" y="242" class="d-s" text-anchor="middle" >1.8 m</text>
+<text x="164.0" y="242" class="d-s" text-anchor="middle" >2.0 m</text>
+<text x="260.0" y="242" class="d-s" text-anchor="middle" >2.2 m</text>
+<text x="356.0" y="242" class="d-s" text-anchor="middle" >2.4 m</text>
+<text x="20" y="256" class="d-s" text-anchor="start" >Subject on the dashed line</text>
+</svg>

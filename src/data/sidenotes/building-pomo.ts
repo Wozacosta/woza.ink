@@ -46,16 +46,16 @@ export const sidenotes: ArticleSidenotes = {
       marker: "Does this help people focus, or will it distract them?",
       type: "quote",
       content:
-        "\"Who you are, what you think, feel, and do, what you love — is the sum of what you focus on.\" Newport's central thesis is that our attention literally shapes our experience of reality. Tools that respect attention (rather than competing for it) are a form of user respect.",
-      attribution: "Cal Newport, *Deep Work*",
-      url: "https://calnewport.com/deep-work-rules-for-focused-success-in-a-distracted-world/",
+        "\"Who you are, what you think, feel, and do, what you love — is the sum of what you focus on.\" Gallagher's central thesis is that our attention literally shapes our experience of reality. Tools that respect attention (rather than competing for it) are a form of user respect.",
+      attribution: "Winifred Gallagher, *Rapt*",
+      url: "https://www.theglobeandmail.com/arts/sorry-i-wasnt-paying-attention/article4280360",
     },
     {
       marker: "Deep analytics dashboards (tempting, but noisy)",
       type: "counter",
       content:
-        "Interestingly, one study found Pomodoro breaks led to a *faster* increase in fatigue compared to self-regulated breaks, and a faster decrease in motivation. The technique works best for people who struggle with starting or who face constant interruptions — if you naturally enter flow states, rigid 25-minute blocks may actually break your rhythm.",
-      attribution: "Prem et al., 2023",
+        "A 2023 study of 87 students compared Pomodoro-style breaks with self-regulated ones. The Pomodoro group reported less fatigue and more motivation, but found no difference in mental effort or task completion. The benefit was mood and a shorter session, not more work done.",
+      attribution: "Biwer et al., 2023",
       url: "https://pubmed.ncbi.nlm.nih.gov/36859717/",
     },
   ],

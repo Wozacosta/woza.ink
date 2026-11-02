@@ -28,6 +28,8 @@ Think of it like onboarding a new engineer to your team.
 
 Rules govern behavior. Commands automate tasks. Skills encode expertise.
 
+![Where each layer lives on disk, and when it enters the context.](diagram:agent-file-map)
+
 ---
 
 ## Rules — always-on constraints
@@ -78,6 +80,8 @@ Steps:
 ```
 
 The key distinction from rules: **commands are imperative, rules are declarative**. A rule says "always do X." A command says "when I say so, do these steps."
+
+![One command, from what you type to the files it leaves behind.](diagram:agent-command-run)
 
 Commands fail when they are too general. A `/help-me-code` command is useless. A `/scaffold-api-route` command that knows exactly which folder to use, which middleware to apply, and which test pattern to follow saves time.
 

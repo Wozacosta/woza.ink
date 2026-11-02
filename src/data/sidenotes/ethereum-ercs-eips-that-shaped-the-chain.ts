@@ -67,14 +67,14 @@ export const sidenotes: ArticleSidenotes = {
         "also laid the groundwork for full danksharding",
       type: "context",
       content:
-        "Full danksharding (sometimes called \"PeerDAS\" in its current form) aims to scale blob count from 6 per block to 64-256+ through **data availability sampling** — a technique where nodes verify data availability by randomly sampling small portions rather than downloading everything. This is the endgame for Ethereum's rollup-centric roadmap: enough cheap data space for hundreds of rollups to post simultaneously. Timeline is uncertain but actively researched.",
+        "Full danksharding (sometimes called \"PeerDAS\" in its current form) aims to scale blob count from 6 per block at launch to 64-256+ through **data availability sampling** — a technique where nodes verify data availability by randomly sampling small portions rather than downloading everything. This is the endgame for Ethereum's rollup-centric roadmap: enough cheap data space for hundreds of rollups to post simultaneously. Timeline is uncertain but actively researched.",
     },
     {
       marker:
-        "a signed statement saying \"for this transaction, treat my EOA as if it were this contract.\"",
+        "a signed statement saying \"treat my EOA as if it were this contract.\"",
       type: "note",
       content:
-        "EIP-7702 replaced the earlier **EIP-3074** proposal, which used `AUTH` and `AUTHCALL` opcodes to let EOAs delegate to \"invoker\" contracts. 3074 was controversial because it gave invoker contracts permanent, broad authority over EOAs — a security surface that made many core devs uncomfortable. 7702's per-transaction delegation is more conservative: the smart wallet behavior only applies for the specific transaction that includes the authorization, reducing the blast radius of bugs or exploits.",
+        "EIP-7702 replaced the earlier **EIP-3074** proposal, which used `AUTH` and `AUTHCALL` opcodes to let EOAs delegate to \"invoker\" contracts. 3074 was controversial because it gave invoker contracts permanent, broad authority over EOAs — a security surface that made many core devs uncomfortable. 7702 took a different shape: the EOA signs an authorization for one delegate contract, and can replace or clear it later with another authorization.",
     },
     {
       marker:

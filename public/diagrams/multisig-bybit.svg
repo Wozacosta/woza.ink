@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 418" role="img" aria-labelledby="t-multisig-bybit"><title id="t-multisig-bybit">Attackers modified the multisig frontend. Signers saw a routine transfer while the payload replaced the wallet's code. Hardware wallets showed only a hash, so nobody could compare the two. The threshold was met, every signature was valid, and 1.44 billion dollars left the wallet</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 508" role="img" aria-labelledby="t-multisig-bybit"><title id="t-multisig-bybit">Attackers went from a Safe developer's machine to Safe's cloud and modified the multisig frontend. Signers saw a routine transfer while the payload replaced the wallet's code. Hardware wallets showed only a hash, so nobody could compare the two. The threshold was met, every signature was valid, and 1.44 billion dollars left the wallet</title>
 <style>
 .d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
 .d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
@@ -13,33 +13,57 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-multisig-bybit" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
-<rect x="20" y="16" width="360" height="54" rx="8" class="d-box"/>
+<g data-node="dev">
+<rect x="20" y="16" width="172" height="54" rx="8" class="d-box"/>
 <circle cx="34" cy="34" r="4" class="d-rose d-fill"/>
-<text x="46" y="38" class="d-t" text-anchor="start" >Compromised frontend</text>
-<text x="46" y="54" class="d-s" text-anchor="start" >Attackers modified the multisig UI's JavaScript</text>
-<path d="M106,70 L106,104" class="d-line" marker-end="url(#ah-multisig-bybit)"/>
-<path d="M294,70 L294,104" class="d-line" marker-end="url(#ah-multisig-bybit)"/>
-<rect x="20" y="106" width="172" height="54" rx="8" class="d-box"/>
-<circle cx="34" cy="124" r="4" class="d-green d-fill"/>
-<text x="46" y="128" class="d-t" text-anchor="start" >Screen showed</text>
-<text x="46" y="144" class="d-s" text-anchor="start" >A routine transfer</text>
-<rect x="208" y="106" width="172" height="54" rx="8" class="d-box"/>
-<circle cx="222" cy="124" r="4" class="d-rose d-fill"/>
-<text x="234" y="128" class="d-t" text-anchor="start" >Payload held</text>
-<text x="234" y="144" class="d-s" text-anchor="start" >Replace the wallet's code</text>
-<path d="M106,160 L106,194" class="d-line" marker-end="url(#ah-multisig-bybit)"/>
-<path d="M294,160 L294,194" class="d-line" marker-end="url(#ah-multisig-bybit)"/>
-<rect x="20" y="196" width="360" height="54" rx="8" class="d-box"/>
-<circle cx="34" cy="214" r="4" class="d-amber d-fill"/>
-<text x="46" y="218" class="d-t" text-anchor="start" >Hardware wallets</text>
-<text x="46" y="234" class="d-s" text-anchor="start" >Showed a hash, so nobody could compare the two</text>
-<path d="M200,250 L200,284" class="d-line" marker-end="url(#ah-multisig-bybit)"/>
-<text x="210" y="271" class="d-s" text-anchor="start" >signed</text>
+<text x="46" y="38" class="d-t" text-anchor="start" >Developer's machine</text>
+<text x="46" y="54" class="d-s" text-anchor="start" >Compromised first</text>
+</g>
+<g data-node="cloud">
+<rect x="208" y="16" width="172" height="54" rx="8" class="d-box"/>
+<circle cx="222" cy="34" r="4" class="d-rose d-fill"/>
+<text x="234" y="38" class="d-t" text-anchor="start" >Safe's cloud</text>
+<text x="234" y="54" class="d-s" text-anchor="start" >Reached from there</text>
+</g>
+<path d="M192,43 L206,43" class="d-line" data-edge="dev-cloud" marker-end="url(#ah-multisig-bybit)"/>
+<path d="M294,70 L294,104" class="d-line" data-edge="cloud-frontend" marker-end="url(#ah-multisig-bybit)"/>
+<g data-node="frontend">
+<rect x="20" y="106" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="124" r="4" class="d-rose d-fill"/>
+<text x="46" y="128" class="d-t" text-anchor="start" >Compromised frontend</text>
+<text x="46" y="144" class="d-s" text-anchor="start" >Attackers modified the multisig UI's JavaScript</text>
+</g>
+<path d="M106,160 L106,194" class="d-line" data-edge="frontend-screen" marker-end="url(#ah-multisig-bybit)"/>
+<path d="M294,160 L294,194" class="d-line" data-edge="frontend-payload" marker-end="url(#ah-multisig-bybit)"/>
+<g data-node="screen">
+<rect x="20" y="196" width="172" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="214" r="4" class="d-green d-fill"/>
+<text x="46" y="218" class="d-t" text-anchor="start" >Screen showed</text>
+<text x="46" y="234" class="d-s" text-anchor="start" >A routine transfer</text>
+</g>
+<g data-node="payload">
+<rect x="208" y="196" width="172" height="54" rx="8" class="d-box"/>
+<circle cx="222" cy="214" r="4" class="d-rose d-fill"/>
+<text x="234" y="218" class="d-t" text-anchor="start" >Payload held</text>
+<text x="234" y="234" class="d-s" text-anchor="start" >Replace the wallet's code</text>
+</g>
+<path d="M106,250 L106,284" class="d-line" data-edge="screen-hardware" marker-end="url(#ah-multisig-bybit)"/>
+<path d="M294,250 L294,284" class="d-line" data-edge="payload-hardware" marker-end="url(#ah-multisig-bybit)"/>
+<g data-node="hardware">
 <rect x="20" y="286" width="360" height="54" rx="8" class="d-box"/>
-<circle cx="34" cy="304" r="4" class="d-green d-fill"/>
-<text x="46" y="308" class="d-t" text-anchor="start" >The multisig</text>
-<text x="46" y="324" class="d-s" text-anchor="start" >Threshold met, every signature valid</text>
-<line x1="20" y1="358" x2="380" y2="358" class="d-line d-faint"/>
-<text x="20" y="382" class="d-t" text-anchor="start" >$1.44 billion gone, and no key was ever stolen.</text>
-<text x="20" y="400" class="d-s" text-anchor="start" >Multisig guards signatures. The attack came through the display.</text>
+<circle cx="34" cy="304" r="4" class="d-amber d-fill"/>
+<text x="46" y="308" class="d-t" text-anchor="start" >Hardware wallets</text>
+<text x="46" y="324" class="d-s" text-anchor="start" >Showed a hash, so nobody could compare the two</text>
+</g>
+<path d="M200,340 L200,374" class="d-line" data-edge="hardware-multisig" marker-end="url(#ah-multisig-bybit)"/>
+<text x="210" y="361" class="d-s" text-anchor="start" data-edge="hardware-multisig">signed</text>
+<g data-node="multisig">
+<rect x="20" y="376" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="394" r="4" class="d-green d-fill"/>
+<text x="46" y="398" class="d-t" text-anchor="start" >The multisig</text>
+<text x="46" y="414" class="d-s" text-anchor="start" >Threshold met, every signature valid</text>
+</g>
+<line x1="20" y1="448" x2="380" y2="448" class="d-line d-faint"/>
+<text x="20" y="472" class="d-t" text-anchor="start" >$1.44 billion gone, and no key was ever stolen.</text>
+<text x="20" y="490" class="d-s" text-anchor="start" >Multisig guards signatures. The attack came through the display.</text>
 </svg>

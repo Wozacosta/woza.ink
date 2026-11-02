@@ -13,36 +13,46 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-x402-settlement" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="agent">
 <rect x="20" y="16" width="80" height="36" rx="8" class="d-box"/>
 <text x="60.0" y="38.5" class="d-t" text-anchor="middle" >Agent</text>
+</g>
+<g data-node="server">
 <rect x="150" y="16" width="100" height="36" rx="8" class="d-box"/>
 <text x="200.0" y="38.5" class="d-t" text-anchor="middle" >Server</text>
+</g>
+<g data-node="facilitator">
 <rect x="280" y="16" width="100" height="36" rx="8" class="d-box"/>
 <text x="330.0" y="38.5" class="d-t" text-anchor="middle" >Facilitator</text>
+</g>
 <line x1="60" y1="52" x2="60" y2="456" class="d-line d-faint" stroke-dasharray="4 3"/>
 <line x1="200" y1="52" x2="200" y2="456" class="d-line d-faint" stroke-dasharray="4 3"/>
 <line x1="330" y1="52" x2="330" y2="456" class="d-line d-faint" stroke-dasharray="4 3"/>
-<path d="M62,84 L197.0,84" class="d-line" marker-end="url(#ah-x402-settlement)"/>
-<text x="130.0" y="76" class="d-s d-m" text-anchor="middle" >GET /weather</text>
-<path d="M198,124 L63.0,124" class="d-line" marker-end="url(#ah-x402-settlement)"/>
-<text x="130.0" y="116" class="d-s d-m" text-anchor="middle" >402 and the price</text>
-<path d="M62,164 L197.0,164" class="d-line" marker-end="url(#ah-x402-settlement)"/>
-<text x="130.0" y="156" class="d-s d-m" text-anchor="middle" >Signed payment</text>
-<path d="M202,204 L327.0,204" class="d-line" marker-end="url(#ah-x402-settlement)"/>
-<text x="265.0" y="196" class="d-s d-m" text-anchor="middle" >/verify</text>
-<path d="M328,240 L203.0,240" class="d-line" marker-end="url(#ah-x402-settlement)"/>
-<text x="265.0" y="232" class="d-s d-m" text-anchor="middle" >valid</text>
-<path d="M202,316 L327.0,316" class="d-line" marker-end="url(#ah-x402-settlement)"/>
-<text x="265.0" y="308" class="d-s d-m" text-anchor="middle" >/settle</text>
-<path d="M328,398 L203.0,398" class="d-line" marker-end="url(#ah-x402-settlement)"/>
-<text x="265.0" y="390" class="d-s d-m" text-anchor="middle" >confirmed</text>
-<path d="M198,444 L63.0,444" class="d-line" marker-end="url(#ah-x402-settlement)"/>
-<text x="130.0" y="436" class="d-s d-m" text-anchor="middle" >200 and the data</text>
+<path d="M62,84 L197.0,84" class="d-line" data-edge="agent-server" marker-end="url(#ah-x402-settlement)"/>
+<text x="130.0" y="76" class="d-s d-m" text-anchor="middle" data-edge="agent-server">GET /weather</text>
+<path d="M198,124 L63.0,124" class="d-line" data-edge="server-agent" marker-end="url(#ah-x402-settlement)"/>
+<text x="130.0" y="116" class="d-s d-m" text-anchor="middle" data-edge="server-agent">402 and the price</text>
+<path d="M62,164 L197.0,164" class="d-line" data-edge="agent-server-signed" marker-end="url(#ah-x402-settlement)"/>
+<text x="130.0" y="156" class="d-s d-m" text-anchor="middle" data-edge="agent-server-signed">Signed payment</text>
+<path d="M202,204 L327.0,204" class="d-line" data-edge="server-facilitator" marker-end="url(#ah-x402-settlement)"/>
+<text x="265.0" y="196" class="d-s d-m" text-anchor="middle" data-edge="server-facilitator">/verify</text>
+<path d="M328,240 L203.0,240" class="d-line" data-edge="facilitator-server" marker-end="url(#ah-x402-settlement)"/>
+<text x="265.0" y="232" class="d-s d-m" text-anchor="middle" data-edge="facilitator-server">valid</text>
+<path d="M202,316 L327.0,316" class="d-line" data-edge="server-facilitator-settle" marker-end="url(#ah-x402-settlement)"/>
+<text x="265.0" y="308" class="d-s d-m" text-anchor="middle" data-edge="server-facilitator-settle">/settle</text>
+<path d="M328,398 L203.0,398" class="d-line" data-edge="facilitator-server-confirmed" marker-end="url(#ah-x402-settlement)"/>
+<text x="265.0" y="390" class="d-s d-m" text-anchor="middle" data-edge="facilitator-server-confirmed">confirmed</text>
+<path d="M198,444 L63.0,444" class="d-line" data-edge="server-agent-data" marker-end="url(#ah-x402-settlement)"/>
+<text x="130.0" y="436" class="d-s d-m" text-anchor="middle" data-edge="server-agent-data">200 and the data</text>
+<g data-node="work">
 <rect x="150" y="254" width="100" height="32" rx="6" class="d-box"/>
 <text x="200" y="274" class="d-s d-green d-ct" text-anchor="middle" >Does the work</text>
+</g>
+<g data-node="chain">
 <rect x="272" y="328" width="108" height="46" rx="6" class="d-box"/>
 <text x="326" y="347" class="d-s d-amber d-ct" text-anchor="middle" >Sends it onchain,</text>
 <text x="326" y="363" class="d-s d-amber d-ct" text-anchor="middle" >pays the gas</text>
+</g>
 <line x1="20" y1="470" x2="380" y2="470" class="d-line d-faint"/>
 <text x="20" y="494" class="d-t" text-anchor="start" >Verify is read-only. Nothing moves until settle.</text>
 </svg>

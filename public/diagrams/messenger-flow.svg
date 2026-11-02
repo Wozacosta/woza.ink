@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 342" role="img" aria-labelledby="t-messenger-flow"><title id="t-messenger-flow">On Signal your device encrypts the message, the server passes on ciphertext and your friend's device decrypts it. In a Telegram cloud chat the message is encrypted only as far as Telegram's server, which holds the keys, reads the message and uses it for history, search, bots and sync before sending it on</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-messenger-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Signal</text>
+<g data-node="signalyou">
+<rect x="20" y="34" width="104" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="52" r="4" class="d-green d-fill"/>
+<text x="46" y="56" class="d-t" text-anchor="start" >You</text>
+<text x="46" y="72" class="d-s" text-anchor="start" >Has the keys</text>
+</g>
+<g data-node="signalserver">
+<rect x="148" y="34" width="104" height="54" rx="8" class="d-box"/>
+<circle cx="162" cy="52" r="4" class="d-green d-fill"/>
+<text x="174" y="56" class="d-t" text-anchor="start" >Server</text>
+<text x="174" y="72" class="d-s" text-anchor="start" >Can't read it</text>
+</g>
+<g data-node="signalfriend">
+<rect x="276" y="34" width="104" height="54" rx="8" class="d-box"/>
+<circle cx="290" cy="52" r="4" class="d-green d-fill"/>
+<text x="302" y="56" class="d-t" text-anchor="start" >Friend</text>
+<text x="302" y="72" class="d-s" text-anchor="start" >Has the keys</text>
+</g>
+<path d="M124,61 L146,61" class="d-line" data-edge="signalyou-signalserver" marker-end="url(#ah-messenger-flow)"/>
+<path d="M252,61 L274,61" class="d-line" data-edge="signalserver-signalfriend" marker-end="url(#ah-messenger-flow)"/>
+<line x1="20" y1="108" x2="380" y2="108" class="d-line d-faint"/>
+<text x="20" y="136" class="d-t" text-anchor="start" >Telegram cloud chat</text>
+<g data-node="tgyou">
+<rect x="20" y="148" width="104" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="166" r="4" class="d-amber d-fill"/>
+<text x="46" y="170" class="d-t" text-anchor="start" >You</text>
+<text x="46" y="186" class="d-s" text-anchor="start" >Transit only</text>
+</g>
+<g data-node="tgserver">
+<rect x="148" y="148" width="104" height="54" rx="8" class="d-box"/>
+<circle cx="162" cy="166" r="4" class="d-rose d-fill"/>
+<text x="174" y="170" class="d-t" text-anchor="start" >Server</text>
+<text x="174" y="186" class="d-s" text-anchor="start" >Has the keys</text>
+</g>
+<g data-node="tgfriend">
+<rect x="276" y="148" width="104" height="54" rx="8" class="d-box"/>
+<circle cx="290" cy="166" r="4" class="d-amber d-fill"/>
+<text x="302" y="170" class="d-t" text-anchor="start" >Friend</text>
+<text x="302" y="186" class="d-s" text-anchor="start" >Transit only</text>
+</g>
+<path d="M124,175 L146,175" class="d-line" data-edge="tgyou-tgserver" marker-end="url(#ah-messenger-flow)"/>
+<path d="M252,175 L274,175" class="d-line" data-edge="tgserver-tgfriend" marker-end="url(#ah-messenger-flow)"/>
+<path d="M200,202 L200,240" class="d-line" data-edge="tgserver-tgfeatures" marker-end="url(#ah-messenger-flow)"/>
+<text x="210" y="225" class="d-s" text-anchor="start" data-edge="tgserver-tgfeatures">reads the message</text>
+<g data-node="tgfeatures">
+<rect x="20" y="242" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="260" r="4" class="d-rose d-fill"/>
+<text x="46" y="264" class="d-t" text-anchor="start" >Stored on Telegram's servers</text>
+<text x="46" y="280" class="d-s" text-anchor="start" >History, search, bots and sync run on the plaintext</text>
+</g>
+<text x="20" y="322" class="d-s" text-anchor="start" >The same design that enables the features exposes the message.</text>
+</svg>

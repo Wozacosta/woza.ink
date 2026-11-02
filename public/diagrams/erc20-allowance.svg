@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-erc20-allowance"><title id="t-erc20-allowance">Three moments in an infinite approval. The approve transaction moves nothing. A later transferFrom lowers your balance but the allowance stays infinite. Later still, an exploit of the spender drains the balance through the same open allowance</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-erc20-allowance" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Approve once, spend forever</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >What the token contract records. A sketch, not data.</text>
+<text x="20" y="66" class="d-s" text-anchor="start" >Your balance</text>
+<text x="210" y="66" class="d-s" text-anchor="start" >Spender's allowance</text>
+<text x="20" y="92" class="d-s d-m" text-anchor="start" >Tx 1: approve(dex, ∞)</text>
+<text x="380" y="92" class="d-s" text-anchor="end" >nothing moved yet</text>
+<rect x="20" y="100" width="170" height="22" rx="4" class="d-ext"/>
+<rect x="20" y="100" width="170" height="22" rx="4" class="d-blue d-fill" opacity="0.8"/>
+<rect x="210" y="100" width="170" height="22" rx="4" class="d-amber d-fill" opacity="0.25"/>
+<rect x="210" y="100" width="170" height="22" rx="4" class="d-line d-amber d-stroke"/>
+<text x="295" y="116" class="d-t d-amber d-ct" text-anchor="middle" >∞</text>
+<text x="20" y="154" class="d-s d-m" text-anchor="start" >Tx 2: transferFrom(you, dex, amt)</text>
+<text x="380" y="154" class="d-s" text-anchor="end" >still infinite</text>
+<rect x="20" y="162" width="170" height="22" rx="4" class="d-ext"/>
+<rect x="20" y="162" width="110.5" height="22" rx="4" class="d-blue d-fill" opacity="0.8"/>
+<rect x="210" y="162" width="170" height="22" rx="4" class="d-amber d-fill" opacity="0.25"/>
+<rect x="210" y="162" width="170" height="22" rx="4" class="d-line d-amber d-stroke"/>
+<text x="295" y="178" class="d-t d-amber d-ct" text-anchor="middle" >∞</text>
+<text x="20" y="216" class="d-s d-m" text-anchor="start" >Later: the spender is exploited</text>
+<text x="380" y="216" class="d-s d-rose d-ct" text-anchor="end" >drained</text>
+<rect x="20" y="224" width="170" height="22" rx="4" class="d-ext"/>
+<rect x="210" y="224" width="170" height="22" rx="4" class="d-amber d-fill" opacity="0.25"/>
+<rect x="210" y="224" width="170" height="22" rx="4" class="d-line d-amber d-stroke"/>
+<text x="295" y="240" class="d-t d-amber d-ct" text-anchor="middle" >∞</text>
+<line x1="20" y1="264" x2="380" y2="264" class="d-line d-faint"/>
+<text x="20" y="286" class="d-s" text-anchor="start" >Nothing expires: the allowance outlives the trade it was for.</text>
+</svg>

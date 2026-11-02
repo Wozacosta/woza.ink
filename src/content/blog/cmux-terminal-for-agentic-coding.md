@@ -34,6 +34,8 @@ cmux is native Swift + AppKit. Not Electron. It uses libghostty for terminal ren
 
 It's not a fork, not a wrapper — it's a different app that happens to use the same rendering library.
 
+![A sketch of the window. One signal from an agent lights the ring, the sidebar badge and, if you want it, a desktop alert.](diagram:cmux-window)
+
 ---
 
 ## The tradeoff

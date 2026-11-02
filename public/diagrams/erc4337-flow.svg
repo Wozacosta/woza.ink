@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" role="img" aria-labelledby="t-erc4337-flow"><title id="t-erc4337-flow">You sign a UserOperation offchain and a bundler wraps it in a real transaction. Onchain, the EntryPoint contract has your smart wallet validate it, then executes it. An optional paymaster can sponsor the gas</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-erc4337-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-s" text-anchor="start" >Offchain: not a transaction yet</text>
+<g data-node="user">
+<rect x="20" y="32" width="142" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="50" r="4" class="d-violet d-fill"/>
+<text x="46" y="54" class="d-t" text-anchor="start" >You</text>
+<text x="46" y="70" class="d-s" text-anchor="start" >sign a UserOperation</text>
+</g>
+<g data-node="bundler">
+<rect x="222" y="32" width="158" height="54" rx="8" class="d-box"/>
+<circle cx="236" cy="50" r="4" class="d-blue d-fill"/>
+<text x="248" y="54" class="d-t" text-anchor="start" >Bundler</text>
+<text x="248" y="70" class="d-s" text-anchor="start" >wraps it in a real tx</text>
+</g>
+<path d="M162,59 L220,59" class="d-line" data-edge="user-bundler" marker-end="url(#ah-erc4337-flow)"/>
+<text x="191" y="53" class="d-s" text-anchor="middle" data-edge="user-bundler">UserOp</text>
+<line x1="20" y1="118" x2="380" y2="118" class="d-line d-faint"/>
+<text x="20" y="136" class="d-s" text-anchor="start" >Onchain</text>
+<path d="M301,86 L301,152" class="d-line" data-edge="bundler-entrypoint" marker-end="url(#ah-erc4337-flow)"/>
+<text x="293" y="108" class="d-s" text-anchor="end" data-edge="bundler-entrypoint">a real transaction</text>
+<g data-node="entrypoint">
+<rect x="20" y="154" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="172" r="4" class="d-blue d-fill"/>
+<text x="46" y="176" class="d-t" text-anchor="start" >EntryPoint</text>
+<text x="46" y="192" class="d-s" text-anchor="start" >singleton contract: validates, then executes</text>
+</g>
+<g data-node="paymaster">
+<rect x="20" y="272" width="142" height="54" rx="8" class="d-ext"/>
+<circle cx="34" cy="290" r="4" class="d-amber d-fill"/>
+<text x="46" y="294" class="d-t" text-anchor="start" >Paymaster</text>
+<text x="46" y="310" class="d-s" text-anchor="start" >optional</text>
+</g>
+<g data-node="wallet">
+<rect x="222" y="272" width="158" height="54" rx="8" class="d-box"/>
+<circle cx="236" cy="290" r="4" class="d-green d-fill"/>
+<text x="248" y="294" class="d-t" text-anchor="start" >Your smart wallet</text>
+<text x="248" y="310" class="d-s" text-anchor="start" >your account</text>
+</g>
+<path d="M91,272 L91,210" class="d-line" stroke-dasharray="4 3" data-edge="paymaster-entrypoint" marker-end="url(#ah-erc4337-flow)"/>
+<text x="99" y="245" class="d-s" text-anchor="start" data-edge="paymaster-entrypoint">sponsors gas</text>
+<path d="M272,272 L272,210" class="d-line" data-edge="wallet-entrypoint" marker-end="url(#ah-erc4337-flow)"/>
+<text x="264" y="245" class="d-s" text-anchor="end" data-edge="wallet-entrypoint">1 validate</text>
+<path d="M330,208 L330,270" class="d-line" data-edge="entrypoint-wallet" marker-end="url(#ah-erc4337-flow)"/>
+<text x="338" y="245" class="d-s" text-anchor="start" data-edge="entrypoint-wallet">2 execute</text>
+</svg>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 356" role="img" aria-labelledby="t-matrix-federation"><title id="t-matrix-federation">Two people on different homeservers share a room. Their servers talk to each other and to a third, and each keeps its own copy of the room. A bridge connects the room to networks like Slack, IRC and Telegram</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 372" role="img" aria-labelledby="t-matrix-federation"><title id="t-matrix-federation">Alice sends a message to her homeserver, example.com. It goes to the other homeservers in the room, other.org and third.net, and each keeps its own copy. other.org delivers it to Bob, and a bridge connects the room to networks like Slack, IRC and Telegram</title>
 <style>
 .d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
 .d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
@@ -13,32 +13,46 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-matrix-federation" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
-<text x="102" y="22" class="d-s d-m" text-anchor="middle" >@alice:example.com</text>
-<text x="298" y="22" class="d-s d-m" text-anchor="middle" >@bob:other.org</text>
-<path d="M102,30 L102,62" class="d-line" marker-end="url(#ah-matrix-federation)"/>
-<path d="M298,30 L298,62" class="d-line" marker-end="url(#ah-matrix-federation)"/>
-<rect x="20" y="64" width="165" height="54" rx="8" class="d-box"/>
-<circle cx="34" cy="82" r="4" class="d-blue d-fill"/>
-<text x="46" y="86" class="d-t" text-anchor="start" >example.com</text>
-<text x="46" y="102" class="d-s" text-anchor="start" >Its copy of the room</text>
-<rect x="215" y="64" width="165" height="54" rx="8" class="d-box"/>
-<circle cx="229" cy="82" r="4" class="d-green d-fill"/>
-<text x="241" y="86" class="d-t" text-anchor="start" >other.org</text>
-<text x="241" y="102" class="d-s" text-anchor="start" >Its copy of the room</text>
-<rect x="117" y="172" width="165" height="54" rx="8" class="d-box"/>
-<circle cx="131" cy="190" r="4" class="d-violet d-fill"/>
-<text x="143" y="194" class="d-t" text-anchor="start" >third.net</text>
-<text x="143" y="210" class="d-s" text-anchor="start" >Its copy of the room</text>
-<path d="M185,91 L213,91" class="d-line" marker-end="url(#ah-matrix-federation)"/>
-<path d="M215,91 L187,91" class="d-line" marker-end="url(#ah-matrix-federation)"/>
-<path d="M120,118 L160,170" class="d-line" marker-end="url(#ah-matrix-federation)"/>
-<path d="M160,170 L120,120" class="d-line" marker-end="url(#ah-matrix-federation)"/>
-<path d="M280,118 L240,170" class="d-line" marker-end="url(#ah-matrix-federation)"/>
-<path d="M240,170 L280,120" class="d-line" marker-end="url(#ah-matrix-federation)"/>
-<path d="M200,226 L200,272" class="d-line" marker-end="url(#ah-matrix-federation)"/>
-<text x="210" y="254" class="d-s" text-anchor="start" >bridge</text>
-<rect x="117" y="274" width="165" height="40" rx="8" class="d-ext"/>
-<text x="199.5" y="298.5" class="d-t" text-anchor="middle" >Slack, IRC, Telegram</text>
-<line x1="20" y1="330" x2="380" y2="330" class="d-line d-faint"/>
-<text x="20" y="350" class="d-s" text-anchor="start" >A message goes to every server in the room. Each one keeps a copy.</text>
+<g data-node="alice">
+<rect x="20" y="12" width="165" height="30" rx="8" class="d-box"/>
+<text x="102.5" y="31" class="d-s d-m" text-anchor="middle" >@alice:example.com</text>
+</g>
+<g data-node="bob">
+<rect x="215" y="12" width="165" height="30" rx="8" class="d-box"/>
+<text x="297.5" y="31" class="d-s d-m" text-anchor="middle" >@bob:other.org</text>
+</g>
+<path d="M102,42 L102,74" class="d-line" data-edge="alice-example" marker-end="url(#ah-matrix-federation)"/>
+<path d="M298,76 L298,44" class="d-line" data-edge="other-bob" marker-end="url(#ah-matrix-federation)"/>
+<g data-node="example">
+<rect x="20" y="76" width="165" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="94" r="4" class="d-blue d-fill"/>
+<text x="46" y="98" class="d-t" text-anchor="start" >example.com</text>
+<text x="46" y="114" class="d-s" text-anchor="start" >Its copy of the room</text>
+</g>
+<g data-node="other">
+<rect x="215" y="76" width="165" height="54" rx="8" class="d-box"/>
+<circle cx="229" cy="94" r="4" class="d-green d-fill"/>
+<text x="241" y="98" class="d-t" text-anchor="start" >other.org</text>
+<text x="241" y="114" class="d-s" text-anchor="start" >Its copy of the room</text>
+</g>
+<g data-node="third">
+<rect x="117" y="184" width="165" height="54" rx="8" class="d-box"/>
+<circle cx="131" cy="202" r="4" class="d-violet d-fill"/>
+<text x="143" y="206" class="d-t" text-anchor="start" >third.net</text>
+<text x="143" y="222" class="d-s" text-anchor="start" >Its copy of the room</text>
+</g>
+<path d="M185,97 L213,97" class="d-line" data-edge="example-other" marker-end="url(#ah-matrix-federation)"/>
+<path d="M215,109 L187,109" class="d-line" data-edge="other-example" marker-end="url(#ah-matrix-federation)"/>
+<path d="M112,130 L152,182" class="d-line" data-edge="example-third" marker-end="url(#ah-matrix-federation)"/>
+<path d="M164,184 L124,132" class="d-line" data-edge="third-example" marker-end="url(#ah-matrix-federation)"/>
+<path d="M276,130 L236,182" class="d-line" data-edge="other-third" marker-end="url(#ah-matrix-federation)"/>
+<path d="M248,184 L288,132" class="d-line" data-edge="third-other" marker-end="url(#ah-matrix-federation)"/>
+<path d="M200,238 L200,284" class="d-line" data-edge="third-bridged" marker-end="url(#ah-matrix-federation)"/>
+<text x="210" y="266" class="d-s" text-anchor="start" data-edge="third-bridged">bridge</text>
+<g data-node="bridged">
+<rect x="117" y="286" width="165" height="40" rx="8" class="d-ext"/>
+<text x="199.5" y="310.5" class="d-t" text-anchor="middle" >Slack, IRC, Telegram</text>
+</g>
+<line x1="20" y1="342" x2="380" y2="342" class="d-line d-faint"/>
+<text x="20" y="362" class="d-s" text-anchor="start" >A message goes to every server in the room. Each one keeps a copy.</text>
 </svg>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 372" role="img" aria-labelledby="t-clear-signing-render"><title id="t-clear-signing-render">The wallet takes the transaction's calldata and the ERC-7730 descriptor for that contract, checks that the descriptor is bound to the contract, and applies its formats. The screen says Approve, Uniswap Universal Router, Unlimited USDC. With no matching format it shows Unknown function and the raw arguments</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 392" role="img" aria-labelledby="t-clear-signing-render"><title id="t-clear-signing-render">The wallet takes the transaction's calldata and the ERC-7730 descriptor for that contract, checks that the descriptor is bound to the contract, and applies its formats. The screen says Approve, Uniswap Universal Router, Unlimited USDC. With no matching format it shows Unknown function and the raw arguments</title>
 <style>
 .d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
 .d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
@@ -13,29 +13,43 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-clear-signing-render" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="calldata">
 <rect x="20" y="16" width="172" height="54" rx="8" class="d-box"/>
 <circle cx="34" cy="34" r="4" class="d-rose d-fill"/>
 <text x="46" y="38" class="d-t" text-anchor="start" >Calldata</text>
 <text x="46" y="54" class="d-s" text-anchor="start" >0x095ea7b3…</text>
+</g>
+<g data-node="descriptor">
 <rect x="208" y="16" width="172" height="54" rx="8" class="d-box"/>
 <circle cx="222" cy="34" r="4" class="d-blue d-fill"/>
 <text x="234" y="38" class="d-t" text-anchor="start" >Descriptor</text>
 <text x="234" y="54" class="d-s" text-anchor="start" >ERC-7730, per contract</text>
-<path d="M106,70 L106,104" class="d-line" marker-end="url(#ah-clear-signing-render)"/>
-<path d="M294,70 L294,104" class="d-line" marker-end="url(#ah-clear-signing-render)"/>
+</g>
+<path d="M106,70 L106,104" class="d-line" data-edge="calldata-parser" marker-end="url(#ah-clear-signing-render)"/>
+<path d="M294,70 L294,104" class="d-line" data-edge="descriptor-parser" marker-end="url(#ah-clear-signing-render)"/>
+<g data-node="parser">
 <rect x="20" y="106" width="360" height="54" rx="8" class="d-box"/>
 <circle cx="34" cy="124" r="4" class="d-violet d-fill"/>
 <text x="46" y="128" class="d-t" text-anchor="start" >Wallet's parser</text>
 <text x="46" y="144" class="d-s" text-anchor="start" >Checks the binding, then applies each field's format</text>
-<path d="M200,160 L200,194" class="d-line" marker-end="url(#ah-clear-signing-render)"/>
-<text x="210" y="181" class="d-s" text-anchor="start" >plain words</text>
-<rect x="66" y="196" width="268" height="102" rx="12" class="d-box"/>
-<text x="86" y="224" class="d-t" text-anchor="start" >Approve</text>
-<text x="86" y="250" class="d-s" text-anchor="start" >Spender</text>
-<text x="142" y="250" class="d-t" text-anchor="start" >Uniswap Universal Router</text>
-<text x="86" y="274" class="d-s" text-anchor="start" >Amount</text>
-<text x="142" y="274" class="d-t d-rose d-ct" text-anchor="start" >Unlimited USDC</text>
-<line x1="20" y1="318" x2="380" y2="318" class="d-line d-faint"/>
-<text x="20" y="342" class="d-s" text-anchor="start" >No matching format? "Unknown function" and the raw arguments.</text>
-<text x="20" y="360" class="d-s" text-anchor="start" >Never a format borrowed from something nearby.</text>
+</g>
+<path d="M170,160 L170,194" class="d-line" data-edge="parser-screen" marker-end="url(#ah-clear-signing-render)"/>
+<text x="180" y="181" class="d-s" text-anchor="start" data-edge="parser-screen">format found</text>
+<path d="M352,160 L352,306" class="d-line" data-edge="parser-fallback" marker-end="url(#ah-clear-signing-render)"/>
+<text x="344" y="181" class="d-s" text-anchor="end" data-edge="parser-fallback">no format</text>
+<g data-node="screen">
+<rect x="20" y="196" width="300" height="102" rx="12" class="d-box"/>
+<text x="40" y="224" class="d-t" text-anchor="start" >Approve</text>
+<text x="40" y="250" class="d-s" text-anchor="start" >Spender</text>
+<text x="96" y="250" class="d-t" text-anchor="start" >Uniswap Universal Router</text>
+<text x="40" y="274" class="d-s" text-anchor="start" >Amount</text>
+<text x="96" y="274" class="d-t d-rose d-ct" text-anchor="start" >Unlimited USDC</text>
+</g>
+<g data-node="fallback">
+<rect x="20" y="308" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="326" r="4" class="d-amber d-fill"/>
+<text x="46" y="330" class="d-t" text-anchor="start" >Safe fallback</text>
+<text x="46" y="346" class="d-s" text-anchor="start" >"Unknown function" and the raw arguments</text>
+</g>
+<text x="20" y="384" class="d-s" text-anchor="start" >Never a format borrowed from something nearby.</text>
 </svg>

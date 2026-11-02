@@ -93,6 +93,8 @@ These get conflated constantly, including by people selling them. The distinctio
 
 The critical difference is **where the rule lives**. Multisig's threshold is enforced by consensus — the network itself will reject an under-signed transaction. MPC's threshold is enforced by the signing protocol. If that protocol is implemented incorrectly, or the machines running it are compromised together, nothing at the chain layer catches it.
 
+![Both end with a signature on the chain. In multisig the chain enforces the threshold. In MPC the threshold is enforced before the chain sees anything.](diagram:multisig-mpc)
+
 MPC's advantages are real: it works on chains with no multisig support, it's cheaper, it leaks nothing, and you can rotate shares without moving funds. It's the right answer for exchanges and custodians managing thousands of wallets across dozens of chains.
 
 But an MPC wallet does not leave an on-chain record that a policy was followed. A Safe does. For a DAO treasury where the point is public verifiability, that's disqualifying.

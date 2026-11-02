@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" role="img" aria-labelledby="t-terminal-tradeoff"><title id="t-terminal-tradeoff">A triangle with fast, feature-rich and native UI at its corners. Alacritty sits at fast, with no tabs or splits. Kitty sits between fast and feature-rich, with no native UI. iTerm2 sits between feature-rich and native, and is slower on large output. Ghostty aims for the middle</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-terminal-tradeoff" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >The tradeoff Ghostty rejects</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A sketch of this comparison, not a measurement</text>
+<polygon points="200,66 44,288 356,288" class="d-line d-faint" stroke-linejoin="round"/>
+<text x="200" y="58" class="d-t" text-anchor="middle" >Fast</text>
+<text x="20" y="308" class="d-t" text-anchor="start" >Feature-rich</text>
+<text x="380" y="308" class="d-t" text-anchor="end" >Native UI</text>
+<circle cx="200" cy="92" r="5" class="d-blue d-fill"/>
+<text x="234" y="90" class="d-t" text-anchor="start" >Alacritty</text>
+<text x="234" y="105" class="d-s" text-anchor="start" >No tabs or splits</text>
+<circle cx="122" cy="177" r="5" class="d-amber d-fill"/>
+<text x="110" y="175" class="d-t" text-anchor="end" >Kitty</text>
+<text x="110" y="190" class="d-s" text-anchor="end" >No native UI</text>
+<circle cx="200" cy="288" r="5" class="d-rose d-fill"/>
+<text x="200" y="260" class="d-t" text-anchor="middle" >iTerm2</text>
+<text x="200" y="275" class="d-s" text-anchor="middle" >Slower on large output</text>
+<circle cx="200" cy="192" r="8" class="d-green d-fill"/>
+<text x="200" y="176" class="d-t d-green d-ct" text-anchor="middle" >Ghostty</text>
+<text x="200" y="216" class="d-s" text-anchor="middle" >The bet: all three</text>
+</svg>

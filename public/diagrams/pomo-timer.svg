@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 318" role="img" aria-labelledby="t-pomo-timer"><title id="t-pomo-timer">The useTimer hook as four states. Ready at 25 minutes goes to Running with start. Running goes to Stopped with stop, and back with start. The last tick takes Running to Done at zero. reset returns to Ready from Stopped or Done</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-pomo-timer" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >useTimer as four states</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >All it stores is secondsLeft and running</text>
+<g data-node="ready">
+<rect x="100" y="60" width="140" height="52" rx="8" class="d-box"/>
+<circle cx="114" cy="78" r="4" class="d-blue d-fill"/>
+<text x="126" y="82" class="d-t" text-anchor="start" >Ready</text>
+<text x="126" y="98" class="d-s" text-anchor="start" >25:00</text>
+</g>
+<g data-node="running">
+<rect x="100" y="156" width="140" height="52" rx="8" class="d-box"/>
+<circle cx="114" cy="174" r="4" class="d-green d-fill"/>
+<text x="126" y="178" class="d-t" text-anchor="start" >Running</text>
+<text x="126" y="194" class="d-s" text-anchor="start" >-1 every second</text>
+</g>
+<g data-node="stopped">
+<rect x="290" y="156" width="90" height="52" rx="8" class="d-box"/>
+<text x="304" y="178" class="d-t" text-anchor="start" >Stopped</text>
+<text x="304" y="194" class="d-s" text-anchor="start" >Time kept</text>
+</g>
+<g data-node="done">
+<rect x="100" y="252" width="140" height="52" rx="8" class="d-box"/>
+<circle cx="114" cy="270" r="4" class="d-rose d-fill"/>
+<text x="126" y="274" class="d-t" text-anchor="start" >Done</text>
+<text x="126" y="290" class="d-s" text-anchor="start" >0:00</text>
+</g>
+<path d="M170,112 L170,154" class="d-line" data-edge="ready-running" marker-end="url(#ah-pomo-timer)"/>
+<text x="178" y="138" class="d-s" text-anchor="start" data-edge="ready-running">start()</text>
+<path d="M240,170 L288,170" class="d-line" data-edge="running-stopped" marker-end="url(#ah-pomo-timer)"/>
+<text x="264" y="164" class="d-s" text-anchor="middle" data-edge="running-stopped">stop()</text>
+<path d="M290,194 L242,194" class="d-line" data-edge="stopped-running" marker-end="url(#ah-pomo-timer)"/>
+<text x="266" y="208" class="d-s" text-anchor="middle" data-edge="stopped-running">start()</text>
+<path d="M170,208 L170,250" class="d-line" data-edge="running-done" marker-end="url(#ah-pomo-timer)"/>
+<text x="178" y="234" class="d-s" text-anchor="start" data-edge="running-done">last tick</text>
+<path d="M100,278 L56,278 L56,86 L98,86" class="d-line" data-edge="done-ready" marker-end="url(#ah-pomo-timer)"/>
+<text x="48" y="186" class="d-s" text-anchor="end" data-edge="done-ready">reset()</text>
+<path d="M335,156 L335,86 L242,86" class="d-line" data-edge="stopped-ready" marker-end="url(#ah-pomo-timer)"/>
+<text x="290" y="78" class="d-s" text-anchor="middle" data-edge="stopped-ready">reset()</text>
+</svg>

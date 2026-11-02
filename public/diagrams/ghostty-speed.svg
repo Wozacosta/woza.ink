@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 282" role="img" aria-labelledby="t-ghostty-speed"><title id="t-ghostty-speed">Key-to-screen latency is about 2 milliseconds for Ghostty and about 3 for Alacritty and Kitty. Printing 100,000 lines takes Ghostty about 0.7 seconds. Being 2 times faster than Terminal.app and 4 times faster than iTerm2 and Kitty puts those at about 1.4 and 2.8 seconds</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-ghostty-speed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Key-to-screen latency</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Lower is better</text>
+<text x="20" y="63" class="d-s" text-anchor="start" >Ghostty</text>
+<rect x="100" y="52" width="100" height="14" rx="2" class="d-green d-fill"/>
+<text x="208" y="63" class="d-s" text-anchor="start" >about 2 ms</text>
+<text x="20" y="87" class="d-s" text-anchor="start" >Alacritty</text>
+<rect x="100" y="76" width="150" height="14" rx="2" class="d-box"/>
+<text x="258" y="87" class="d-s" text-anchor="start" >about 3 ms</text>
+<text x="20" y="111" class="d-s" text-anchor="start" >Kitty</text>
+<rect x="100" y="100" width="150" height="14" rx="2" class="d-box"/>
+<text x="258" y="111" class="d-s" text-anchor="start" >about 3 ms</text>
+<line x1="20" y1="130" x2="380" y2="130" class="d-line d-faint"/>
+<text x="20" y="154" class="d-t" text-anchor="start" >Printing 100,000 lines</text>
+<text x="20" y="170" class="d-s" text-anchor="start" >Ghostty's 0.7 s times the multipliers, not a fresh test</text>
+<text x="20" y="195" class="d-s" text-anchor="start" >Ghostty</text>
+<rect x="100" y="184" width="49" height="14" rx="2" class="d-green d-fill"/>
+<text x="157" y="195" class="d-s" text-anchor="start" >about 0.7 s</text>
+<text x="20" y="219" class="d-s" text-anchor="start" >Terminal.app</text>
+<rect x="100" y="208" width="98" height="14" rx="2" class="d-box"/>
+<text x="206" y="219" class="d-s" text-anchor="start" >about 1.4 s</text>
+<text x="20" y="243" class="d-s" text-anchor="start" >iTerm2</text>
+<rect x="100" y="232" width="196" height="14" rx="2" class="d-box"/>
+<text x="304" y="243" class="d-s" text-anchor="start" >about 2.8 s</text>
+<text x="20" y="267" class="d-s" text-anchor="start" >Kitty</text>
+<rect x="100" y="256" width="196" height="14" rx="2" class="d-box"/>
+<text x="304" y="267" class="d-s" text-anchor="start" >about 2.8 s</text>
+</svg>

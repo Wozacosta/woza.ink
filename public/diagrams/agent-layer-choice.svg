@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 310" role="img" aria-labelledby="t-agent-layer-choice"><title id="t-agent-layer-choice">A decision tree. If an instruction applies in every session it's a rule. If not, and it's a checklist of steps, it's a command. Otherwise it needs depth and judgment, so it's a skill</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-agent-layer-choice" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Rule, command or skill?</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Where a new instruction belongs</text>
+<g data-node="q1">
+<rect x="20" y="58" width="196" height="52" rx="8" class="d-box"/>
+<text x="34" y="80" class="d-t" text-anchor="start" >Applies in every session?</text>
+<text x="34" y="96" class="d-s" text-anchor="start" >Short and unconditional</text>
+</g>
+<g data-node="q2">
+<rect x="20" y="152" width="196" height="52" rx="8" class="d-box"/>
+<text x="34" y="174" class="d-t" text-anchor="start" >A checklist of steps?</text>
+<text x="34" y="190" class="d-s" text-anchor="start" >Done more than twice</text>
+</g>
+<g data-node="rule">
+<rect x="256" y="58" width="124" height="52" rx="8" class="d-box"/>
+<circle cx="270" cy="76" r="4" class="d-green d-fill"/>
+<text x="282" y="80" class="d-t" text-anchor="start" >Rule</text>
+<text x="282" y="96" class="d-s" text-anchor="start" >Team handbook</text>
+</g>
+<g data-node="command">
+<rect x="256" y="152" width="124" height="52" rx="8" class="d-box"/>
+<circle cx="270" cy="170" r="4" class="d-blue d-fill"/>
+<text x="282" y="174" class="d-t" text-anchor="start" >Command</text>
+<text x="282" y="190" class="d-s" text-anchor="start" >Runbook</text>
+</g>
+<g data-node="skill">
+<rect x="256" y="246" width="124" height="52" rx="8" class="d-box"/>
+<circle cx="270" cy="264" r="4" class="d-violet d-fill"/>
+<text x="282" y="268" class="d-t" text-anchor="start" >Skill</text>
+<text x="282" y="284" class="d-s" text-anchor="start" >Training course</text>
+</g>
+<path d="M216,84 L254,84" class="d-line" data-edge="q1-rule" marker-end="url(#ah-agent-layer-choice)"/>
+<text x="235" y="77" class="d-s" text-anchor="middle" data-edge="q1-rule">yes</text>
+<path d="M118,110 L118,150" class="d-line" data-edge="q1-q2" marker-end="url(#ah-agent-layer-choice)"/>
+<text x="126" y="134" class="d-s" text-anchor="start" data-edge="q1-q2">no</text>
+<path d="M216,178 L254,178" class="d-line" data-edge="q2-command" marker-end="url(#ah-agent-layer-choice)"/>
+<text x="235" y="171" class="d-s" text-anchor="middle" data-edge="q2-command">yes</text>
+<path d="M118,204 L118,272 L254,272" class="d-line" data-edge="q2-skill" marker-end="url(#ah-agent-layer-choice)"/>
+<text x="126" y="264" class="d-s" text-anchor="start" data-edge="q2-skill">no: it needs judgment</text>
+</svg>

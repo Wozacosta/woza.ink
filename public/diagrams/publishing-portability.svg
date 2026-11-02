@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 282" role="img" aria-labelledby="t-publishing-portability"><title id="t-publishing-portability">On Medium the app, your followers and your posts are one thing, so they go together. On Lens, apps sit on a shared layer: followers onchain and posts on Grove. One app closing leaves that layer in place for the next app</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-publishing-portability" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What's left when the app closes</text>
+<text x="20" y="52" class="d-s" text-anchor="start" >Medium</text>
+<rect x="20" y="60" width="170" height="164" rx="8" class="d-ext"/>
+<rect x="34" y="72" width="142" height="40" rx="8" class="d-box"/>
+<text x="105.0" y="96.5" class="d-t" text-anchor="middle" >The app</text>
+<rect x="34" y="120" width="142" height="40" rx="8" class="d-box"/>
+<text x="105.0" y="144.5" class="d-t" text-anchor="middle" >Your followers</text>
+<rect x="34" y="168" width="142" height="40" rx="8" class="d-box"/>
+<text x="105.0" y="192.5" class="d-t" text-anchor="middle" >Your posts</text>
+<text x="20" y="246" class="d-s" text-anchor="start" >One company holds all three.</text>
+<text x="20" y="262" class="d-s d-rose d-ct" text-anchor="start" >When it goes, they go.</text>
+<text x="210" y="52" class="d-s" text-anchor="start" >An app on Lens</text>
+<rect x="210" y="60" width="80" height="40" rx="8" class="d-ext"/>
+<text x="250.0" y="84.5" class="d-t" text-anchor="middle" >App A</text>
+<rect x="300" y="60" width="80" height="40" rx="8" class="d-box"/>
+<text x="340.0" y="84.5" class="d-t" text-anchor="middle" >App B</text>
+<line x1="250" y1="100" x2="250" y2="136" class="d-line d-faint" stroke-dasharray="4 3"/>
+<path d="M340,100 L340,134" class="d-line" marker-end="url(#ah-publishing-portability)"/>
+<text x="258" y="121" class="d-s d-rose d-ct" text-anchor="start" >closes</text>
+<rect x="210" y="136" width="170" height="88" rx="8" class="d-box"/>
+<circle cx="224" cy="154" r="4" class="d-green d-fill"/>
+<text x="236" y="158" class="d-t" text-anchor="start" >Shared layer</text>
+<text x="224" y="180" class="d-s" text-anchor="start" >Followers: onchain</text>
+<text x="224" y="198" class="d-s" text-anchor="start" >Posts: Grove</text>
+<text x="210" y="246" class="d-s" text-anchor="start" >No app holds them.</text>
+<text x="210" y="262" class="d-s d-green d-ct" text-anchor="start" >The next app finds them there.</text>
+</svg>

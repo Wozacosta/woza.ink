@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 278" role="img" aria-labelledby="t-eip1559-base-fee"><title id="t-eip1559-base-fee">A sketch of twelve blocks. While blocks are more than half full the base fee climbs in steps, while they are less than half full it falls, and at exactly half full it holds</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-eip1559-base-fee" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >The base fee chases half-full blocks</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A sketch, not data</text>
+<path d="M20,122.0 L20,122.0 L44,122.0 L50,109.4 L74,109.4 L80,88.4 L104,88.4 L110,71.6 L134,71.6 L140,63.2 L164,63.2 L170,63.2 L194,63.2 L200,67.4 L224,67.4 L230,80.0 L254,80.0 L260,96.8 L284,96.8 L290,105.2 L314,105.2 L320,105.2 L344,105.2 L350,94.7 L374,94.7" class="d-line d-violet d-stroke" stroke-width="2"/>
+<text x="20" y="62" class="d-s d-violet d-ct" text-anchor="start" >Base fee</text>
+<text x="20" y="156" class="d-s" text-anchor="start" >Gas used in each block</text>
+<rect x="20" y="180" width="24" height="64" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="50" y="164" width="24" height="80" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="80" y="172" width="24" height="72" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="110" y="188" width="24" height="56" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="140" y="204" width="24" height="40" rx="2" class="d-head" opacity="0.8"/>
+<rect x="170" y="212" width="24" height="32" rx="2" class="d-blue d-fill" opacity="0.8"/>
+<rect x="200" y="228" width="24" height="16" rx="2" class="d-blue d-fill" opacity="0.8"/>
+<rect x="230" y="236" width="24" height="8" rx="2" class="d-blue d-fill" opacity="0.8"/>
+<rect x="260" y="220" width="24" height="24" rx="2" class="d-blue d-fill" opacity="0.8"/>
+<rect x="290" y="204" width="24" height="40" rx="2" class="d-head" opacity="0.8"/>
+<rect x="320" y="184" width="24" height="60" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<rect x="350" y="168" width="24" height="76" rx="2" class="d-amber d-fill" opacity="0.8"/>
+<line x1="20" y1="204" x2="380" y2="204" class="d-line" stroke-dasharray="4 3"/>
+<text x="245" y="199.0" class="d-s" text-anchor="middle" >target: 50% full</text>
+<line x1="20" y1="244" x2="380" y2="244" class="d-line d-faint"/>
+<text x="20" y="266" class="d-s d-amber d-ct" text-anchor="start" >Over target: the fee rises</text>
+<text x="380" y="266" class="d-s d-blue d-ct" text-anchor="end" >Under target: it falls</text>
+</svg>

@@ -25,6 +25,8 @@ TL;DR
 - **Hive** and **Steemit** proved blockchain blogging can work but also that reward pool economics get gamed.
 - The core trade-off: **ownership and censorship resistance vs. distribution and usability**. Web3 publishing wins on the first, loses badly on the second.
 
+![The platforms in this post, sorted by where the writing is stored. Several of them aren't onchain at all.](diagram:publishing-landscape)
+
 ---
 
 ## Paragraph — The One That's Actually Working
@@ -74,6 +76,8 @@ Lens isn't a publishing platform. It's the infrastructure layer that publishing 
 - [About 650K profiles and handles, 28 million follows and 16 million posts](https://lens.xyz/news/migrating-the-lens-ecosystem-to-lens-chain) migrated to Lens Chain, out of 31 million publications. Mirrors and collects didn't come across.
 
 **Why it matters for publishing:** If you publish on a Lens-powered app and that app dies, your audience and content survive. Your followers carry over to the next app. This is the portability promise that web2 platforms can never make — Medium can't export your follower relationships.
+
+![On Medium the audience belongs to the app. On Lens it sits underneath the apps.](diagram:publishing-portability)
 
 **Apps on Lens:** [Lens's own list](https://lens.xyz/) features Orb and Firefly, alongside Hey, Palus, Soclly, Cantuum and others. Soclly is the closest to a publishing tool, with [drafts and scheduling](https://app.soclly.com/). No single dominant blogging frontend yet — the ecosystem is still maturing.
 
@@ -202,6 +206,8 @@ If you wanted a fully decentralized blog today, the stack would look like:
 2. Deploy to **IPFS** (pin with Pinata, Filebase, or self-host)
 3. Point your **ENS name** at the IPFS content hash
 4. Readers access via **eth.limo** gateway or ENS-native browsers (Brave, Opera)
+
+![Two separate jobs: publishing once, then reading through a gateway or a browser that knows ENS.](diagram:ens-gateway)
 
 It works. It's censorship-resistant. It's permanent (as long as someone pins the content). But it's also manual, slow to update, and invisible to search engines. That's the honest trade-off.
 

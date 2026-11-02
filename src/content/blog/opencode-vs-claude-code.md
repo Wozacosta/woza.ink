@@ -38,6 +38,8 @@ Claude Code is [Anthropic's official CLI](https://code.claude.com/docs). It ship
 
 **The permission model.** Claude Code asks for explicit approval before running shell commands or writing to files (unless you configure it otherwise). This feels cautious at first. It's actually useful — you stay in the loop on what the agent is doing, and you build a clearer mental model of the task progression. You can turn this off for trusted operations.
 
+![The loop Claude Code runs. Each shell command or file write waits for you, unless it's an operation you trust.](diagram:claude-code-permissions)
+
 **AGENTS.md and skills.** Rules go in `AGENTS.md` at the project root. Slash commands live in `.claude/commands/`. Skills (larger context packages) are loaded by task type. This three-layer system is well-documented and plays nicely with tools like [BMAD](https://github.com/bmadcode/BMAD-METHOD) that build on it.
 
 **Closed source.** The CLI itself is proprietary. You can extend it through commands and skills, but you can't fork it or self-host the orchestration layer.
@@ -81,6 +83,8 @@ In practice I run both. Claude Code for most feature work — the permission mod
 They're not mutually exclusive. Both read the same codebase. Both respect the same `AGENTS.md`. You can switch between them mid-project without any migration cost.
 
 The tooling around agentic coding is moving fast enough that the right answer today might be different in six months. The more important investment is the context infrastructure — your rules, your docs, your skills — because that works regardless of which CLI you're running.
+
+![Models differ on top. Underneath, both CLIs work from the same project.](diagram:agent-cli-map)
 
 ---
 

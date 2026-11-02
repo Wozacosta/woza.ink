@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 222" role="img" aria-labelledby="t-pomo-features"><title id="t-pomo-features">Three rejected features and the lighter thing Pomo does instead. A built-in music player became playlist links. Analytics dashboards became a count for the day. Push notifications for every session became nudges only when it matters</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-pomo-features" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Cut, and what's left in its place</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Each feature had to help people focus</text>
+<rect x="20" y="56" width="176" height="46" rx="8" class="d-ext"/>
+<text x="34" y="78" class="d-t" text-anchor="start" >Built-in music player</text>
+<text x="34" y="94" class="d-s" text-anchor="start" >Too heavy</text>
+<rect x="236" y="56" width="144" height="46" rx="8" class="d-box"/>
+<circle cx="250" cy="74" r="4" class="d-green d-fill"/>
+<text x="262" y="78" class="d-t" text-anchor="start" >Playlist links</text>
+<text x="262" y="94" class="d-s" text-anchor="start" >One tap, new tab</text>
+<path d="M196,79 L234,79" class="d-line" marker-end="url(#ah-pomo-features)"/>
+<rect x="20" y="110" width="176" height="46" rx="8" class="d-ext"/>
+<text x="34" y="132" class="d-t" text-anchor="start" >Analytics dashboards</text>
+<text x="34" y="148" class="d-s" text-anchor="start" >Tempting, but noisy</text>
+<rect x="236" y="110" width="144" height="46" rx="8" class="d-box"/>
+<circle cx="250" cy="128" r="4" class="d-green d-fill"/>
+<text x="262" y="132" class="d-t" text-anchor="start" >Today's count</text>
+<text x="262" y="148" class="d-s" text-anchor="start" >A quiet record</text>
+<path d="M196,133 L234,133" class="d-line" marker-end="url(#ah-pomo-features)"/>
+<rect x="20" y="164" width="176" height="46" rx="8" class="d-ext"/>
+<text x="34" y="186" class="d-t" text-anchor="start" >Push notifications</text>
+<text x="34" y="202" class="d-s" text-anchor="start" >For every session</text>
+<rect x="236" y="164" width="144" height="46" rx="8" class="d-box"/>
+<circle cx="250" cy="182" r="4" class="d-green d-fill"/>
+<text x="262" y="186" class="d-t" text-anchor="start" >Nudges</text>
+<text x="262" y="202" class="d-s" text-anchor="start" >Only when it matters</text>
+<path d="M196,187 L234,187" class="d-line" marker-end="url(#ah-pomo-features)"/>
+</svg>

@@ -240,14 +240,14 @@ body {
     outline: none;
 }
 
-.prose figure.diagram[data-interactive] [data-node]:hover .d-box,
-.prose figure.diagram [data-node]:focus-visible .d-box,
-.prose figure.diagram [data-node].is-on .d-box {
+.prose figure.diagram[data-interactive] [data-node]:hover :is(.d-box, .d-ext),
+.prose figure.diagram [data-node]:focus-visible :is(.d-box, .d-ext),
+.prose figure.diagram [data-node].is-on :is(.d-box, .d-ext) {
     stroke: var(--foreground);
     stroke-width: 1.5;
 }
 
-.prose figure.diagram [data-node].is-focus .d-box {
+.prose figure.diagram [data-node].is-focus :is(.d-box, .d-ext) {
     stroke-width: 2;
 }
 

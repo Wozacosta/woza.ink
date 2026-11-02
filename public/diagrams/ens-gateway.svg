@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t-ens-gateway"><title id="t-ens-gateway">You deploy a static site to IPFS and point your ENS name at its content hash. A reader in a normal browser visits yourname.eth.limo: the gateway reads the ENS record, fetches the files and serves them. Brave and Opera resolve the name without a gateway</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-ens-gateway" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="publisher">
+<rect x="20" y="16" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="34" r="4" class="d-violet d-fill"/>
+<text x="46" y="38" class="d-t" text-anchor="start" >Your static site</text>
+<text x="46" y="54" class="d-s" text-anchor="start" >markdown, built to plain files</text>
+</g>
+<g data-node="ens">
+<rect x="20" y="128" width="165" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="146" r="4" class="d-blue d-fill"/>
+<text x="46" y="150" class="d-t" text-anchor="start" >ENS name</text>
+<text x="46" y="166" class="d-s" text-anchor="start" >holds the content hash</text>
+</g>
+<g data-node="storage">
+<rect x="215" y="128" width="165" height="54" rx="8" class="d-box"/>
+<circle cx="229" cy="146" r="4" class="d-green d-fill"/>
+<text x="241" y="150" class="d-t" text-anchor="start" >IPFS</text>
+<text x="241" y="166" class="d-s" text-anchor="start" >or Arweave, Swarm</text>
+</g>
+<g data-node="gateway">
+<rect x="20" y="240" width="220" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="258" r="4" class="d-amber d-fill"/>
+<text x="46" y="262" class="d-t" text-anchor="start" >eth.limo gateway</text>
+<text x="46" y="278" class="d-s" text-anchor="start" >turns a name into a web page</text>
+</g>
+<g data-node="brave">
+<rect x="256" y="240" width="124" height="54" rx="8" class="d-ext"/>
+<text x="270" y="262" class="d-t" text-anchor="start" >Brave, Opera</text>
+<text x="270" y="278" class="d-s" text-anchor="start" >no gateway</text>
+</g>
+<g data-node="reader">
+<rect x="20" y="346" width="360" height="42" rx="8" class="d-box"/>
+<circle cx="34" cy="367.0" r="4" class="d-rose d-fill"/>
+<text x="46" y="371.5" class="d-t" text-anchor="start" >A reader's browser</text>
+</g>
+<path d="M102,70 L102,126" class="d-line" data-edge="publisher-ens" marker-end="url(#ah-ens-gateway)"/>
+<text x="110" y="102" class="d-s" text-anchor="start" data-edge="publisher-ens">point it at the hash</text>
+<path d="M298,70 L298,126" class="d-line" data-edge="publisher-storage" marker-end="url(#ah-ens-gateway)"/>
+<text x="306" y="102" class="d-s" text-anchor="start" data-edge="publisher-storage">deploy and pin</text>
+<path d="M185,155 L213,155" class="d-line" data-edge="ens-storage" marker-end="url(#ah-ens-gateway)"/>
+<path d="M102,240 L102,184" class="d-line" data-edge="gateway-ens" marker-end="url(#ah-ens-gateway)"/>
+<text x="110" y="216" class="d-s" text-anchor="start" data-edge="gateway-ens">reads the record</text>
+<path d="M228,240 L228,184" class="d-line" data-edge="gateway-storage" marker-end="url(#ah-ens-gateway)"/>
+<text x="236" y="216" class="d-s" text-anchor="start" data-edge="gateway-storage">fetches</text>
+<path d="M330,240 L330,184" class="d-line" stroke-dasharray="4 3" data-edge="brave-storage" marker-end="url(#ah-ens-gateway)"/>
+<text x="338" y="216" class="d-s" text-anchor="start" data-edge="brave-storage">natively</text>
+<path d="M102,346 L102,296" class="d-line" data-edge="reader-gateway" marker-end="url(#ah-ens-gateway)"/>
+<text x="110" y="325" class="d-s" text-anchor="start" data-edge="reader-gateway">yourname.eth.limo</text>
+<path d="M330,346 L330,296" class="d-line" stroke-dasharray="4 3" data-edge="reader-brave" marker-end="url(#ah-ens-gateway)"/>
+<text x="322" y="325" class="d-s" text-anchor="end" data-edge="reader-brave">yourname.eth</text>
+</svg>

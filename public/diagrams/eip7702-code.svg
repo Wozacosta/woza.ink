@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 286" role="img" aria-labelledby="t-eip7702-code"><title id="t-eip7702-code">A transaction carrying an authorization_list, signed by your EOA, changes one field of your account: the code field goes from empty to a pointer at a smart wallet contract. The address, ENS name, approvals and history stay the same</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-eip7702-code" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Same account, one field changes</text>
+<rect x="20" y="36" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="54" r="4" class="d-blue d-fill"/>
+<text x="46" y="58" class="d-t" text-anchor="start" >A transaction with an authorization_list</text>
+<text x="46" y="74" class="d-s" text-anchor="start" >signed statement: treat my EOA as this contract</text>
+<rect x="20" y="104" width="230" height="166" rx="8" class="d-box"/>
+<text x="34" y="124" class="d-t" text-anchor="start" >Your EOA</text>
+<rect x="30" y="130" width="210" height="30" rx="4" class="d-green d-fill" opacity="0.18"/>
+<path d="M170,90 L170,128" class="d-line" marker-end="url(#ah-eip7702-code)"/>
+<text x="40" y="150" class="d-s" text-anchor="start" >Code</text>
+<text x="232" y="150" class="d-s d-green d-ct" text-anchor="end" >empty → pointer</text>
+<text x="40" y="180" class="d-s" text-anchor="start" >Address</text>
+<text x="232" y="180" class="d-s" text-anchor="end" >unchanged</text>
+<text x="40" y="204" class="d-s" text-anchor="start" >ENS name</text>
+<text x="232" y="204" class="d-s" text-anchor="end" >unchanged</text>
+<text x="40" y="228" class="d-s" text-anchor="start" >Token approvals</text>
+<text x="232" y="228" class="d-s" text-anchor="end" >unchanged</text>
+<text x="40" y="252" class="d-s" text-anchor="start" >History</text>
+<text x="232" y="252" class="d-s" text-anchor="end" >unchanged</text>
+<path d="M240,145 L278,145" class="d-line" marker-end="url(#ah-eip7702-code)"/>
+<rect x="280" y="118" width="100" height="54" rx="8" class="d-box"/>
+<text x="330.0" y="140" class="d-t" text-anchor="middle" >Smart wallet</text>
+<text x="330.0" y="156" class="d-s" text-anchor="middle" >contract</text>
+<text x="280" y="200" class="d-s" text-anchor="start" >Same address, so</text>
+<text x="280" y="216" class="d-s" text-anchor="start" >there's nothing</text>
+<text x="280" y="232" class="d-s" text-anchor="start" >to migrate.</text>
+</svg>

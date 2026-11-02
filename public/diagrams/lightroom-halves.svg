@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" role="img" aria-labelledby="t-lightroom-halves"><title id="t-lightroom-halves">Lightroom, Capture One, ON1 Photo RAW and darktable do both library management and RAW editing. digiKam and Apple Photos only do the library, and RawTherapee, Photomator and DxO PhotoLab only edit, so they get paired: digiKam with RawTherapee, Apple Photos with Photomator, and DxO PhotoLab with Lightroom or darktable</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-lightroom-halves" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Lightroom is two tools in one</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Full rows do both jobs. Half rows pair up.</text>
+<text x="104" y="62" class="d-s" text-anchor="middle" >Library</text>
+<text x="296" y="62" class="d-s" text-anchor="middle" >RAW editing</text>
+<g data-node="lightroom">
+<rect x="20" y="70" width="360" height="28" rx="8" class="d-box"/>
+<circle cx="34" cy="84.0" r="4" class="d-rose d-fill"/>
+<text x="46" y="88.5" class="d-t" text-anchor="start" >Lightroom</text>
+</g>
+<g data-node="capture-one">
+<rect x="20" y="106" width="360" height="28" rx="8" class="d-box"/>
+<circle cx="34" cy="120.0" r="4" class="d-amber d-fill"/>
+<text x="46" y="124.5" class="d-t" text-anchor="start" >Capture One</text>
+</g>
+<g data-node="on1">
+<rect x="20" y="142" width="360" height="28" rx="8" class="d-box"/>
+<circle cx="34" cy="156.0" r="4" class="d-amber d-fill"/>
+<text x="46" y="160.5" class="d-t" text-anchor="start" >ON1 Photo RAW</text>
+</g>
+<g data-node="darktable">
+<rect x="20" y="178" width="360" height="28" rx="8" class="d-box"/>
+<circle cx="34" cy="192.0" r="4" class="d-green d-fill"/>
+<text x="46" y="196.5" class="d-t" text-anchor="start" >darktable</text>
+</g>
+<g data-node="digikam">
+<rect x="20" y="214" width="168" height="28" rx="8" class="d-box"/>
+<circle cx="34" cy="228.0" r="4" class="d-green d-fill"/>
+<text x="46" y="232.5" class="d-t" text-anchor="start" >digiKam</text>
+</g>
+<g data-node="rawtherapee">
+<rect x="212" y="214" width="168" height="28" rx="8" class="d-box"/>
+<circle cx="226" cy="228.0" r="4" class="d-green d-fill"/>
+<text x="238" y="232.5" class="d-t" text-anchor="start" >RawTherapee</text>
+</g>
+<path d="M188,228 L210,228" class="d-line" data-edge="digikam-rawtherapee" marker-end="url(#ah-lightroom-halves)"/>
+<g data-node="apple-photos">
+<rect x="20" y="250" width="168" height="28" rx="8" class="d-box"/>
+<text x="34" y="268.5" class="d-t" text-anchor="start" >Apple Photos</text>
+</g>
+<g data-node="photomator">
+<rect x="212" y="250" width="168" height="28" rx="8" class="d-box"/>
+<circle cx="226" cy="264.0" r="4" class="d-amber d-fill"/>
+<text x="238" y="268.5" class="d-t" text-anchor="start" >Photomator</text>
+</g>
+<path d="M188,264 L210,264" class="d-line" data-edge="apple-photos-photomator" marker-end="url(#ah-lightroom-halves)"/>
+<rect x="20" y="286" width="168" height="28" rx="8" class="d-ext"/>
+<text x="104" y="304" class="d-s" text-anchor="middle" >Lightroom or darktable</text>
+<g data-node="dxo">
+<rect x="212" y="286" width="168" height="28" rx="8" class="d-box"/>
+<circle cx="226" cy="300.0" r="4" class="d-amber d-fill"/>
+<text x="238" y="304.5" class="d-t" text-anchor="start" >DxO PhotoLab</text>
+</g>
+<path d="M188,300 L210,300" class="d-line" marker-end="url(#ah-lightroom-halves)"/>
+<circle cx="24" cy="334" r="4" class="d-rose d-fill"/>
+<text x="34" y="338" class="d-s" text-anchor="start" >Subscription only</text>
+<circle cx="146" cy="334" r="4" class="d-amber d-fill"/>
+<text x="156" y="338" class="d-s" text-anchor="start" >Can buy once</text>
+<circle cx="248" cy="334" r="4" class="d-green d-fill"/>
+<text x="258" y="338" class="d-s" text-anchor="start" >Open source</text>
+</svg>

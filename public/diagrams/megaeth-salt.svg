@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 346" role="img" aria-labelledby="t-megaeth-salt"><title id="t-megaeth-salt">On a standard EVM node, every transaction that touches storage makes four trips to disk: look up the account, look up the storage slot, update the trie and write back. With SALT the authentication tree fits in RAM, so the hot path of every transaction stays off disk, and only the cold path of full proofs and syncing a new node uses it</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-megaeth-salt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Standard EVM node</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A transaction that touches storage waits on disk</text>
+<rect x="20" y="50" width="196" height="26" rx="6" class="d-box"/>
+<text x="34" y="67" class="d-s" text-anchor="start" >Look up the account</text>
+<path d="M216,63 L284,63" class="d-line" marker-end="url(#ah-megaeth-salt)"/>
+<rect x="20" y="82" width="196" height="26" rx="6" class="d-box"/>
+<text x="34" y="99" class="d-s" text-anchor="start" >Look up the storage slot</text>
+<path d="M216,95 L284,95" class="d-line" marker-end="url(#ah-megaeth-salt)"/>
+<rect x="20" y="114" width="196" height="26" rx="6" class="d-box"/>
+<text x="34" y="131" class="d-s" text-anchor="start" >Update the trie</text>
+<path d="M216,127 L284,127" class="d-line" marker-end="url(#ah-megaeth-salt)"/>
+<rect x="20" y="146" width="196" height="26" rx="6" class="d-box"/>
+<text x="34" y="163" class="d-s" text-anchor="start" >Write back</text>
+<path d="M216,159 L284,159" class="d-line" marker-end="url(#ah-megaeth-salt)"/>
+<rect x="286" y="50" width="94" height="122" rx="8" class="d-box"/>
+<circle cx="300" cy="68" r="4" class="d-rose d-fill"/>
+<text x="312" y="74" class="d-t" text-anchor="start" >Disk</text>
+<line x1="20" y1="190" x2="380" y2="190" class="d-line d-faint"/>
+<text x="20" y="216" class="d-t" text-anchor="start" >SALT</text>
+<text x="20" y="232" class="d-s" text-anchor="start" >The authentication tree fits in memory</text>
+<rect x="20" y="244" width="196" height="44" rx="8" class="d-box"/>
+<circle cx="34" cy="266.0" r="4" class="d-green d-fill"/>
+<text x="46" y="270.5" class="d-t" text-anchor="start" >Every transaction</text>
+<path d="M216,266 L284,266" class="d-line" marker-end="url(#ah-megaeth-salt)"/>
+<text x="250" y="260" class="d-s" text-anchor="middle" >hot path</text>
+<rect x="286" y="244" width="94" height="44" rx="8" class="d-box"/>
+<circle cx="300" cy="266.0" r="4" class="d-green d-fill"/>
+<text x="312" y="270.5" class="d-t" text-anchor="start" >RAM</text>
+<rect x="20" y="296" width="196" height="44" rx="8" class="d-box"/>
+<circle cx="34" cy="318.0" r="4" class="d-amber d-fill"/>
+<text x="46" y="322.5" class="d-t" text-anchor="start" >Full proofs, node sync</text>
+<path d="M216,318 L284,318" class="d-line d-faint" stroke-dasharray="4 3" marker-end="url(#ah-megaeth-salt)"/>
+<text x="250" y="312" class="d-s" text-anchor="middle" >cold path</text>
+<rect x="286" y="296" width="94" height="44" rx="8" class="d-box"/>
+<circle cx="300" cy="318.0" r="4" class="d-amber d-fill"/>
+<text x="312" y="322.5" class="d-t" text-anchor="start" >Disk</text>
+</svg>

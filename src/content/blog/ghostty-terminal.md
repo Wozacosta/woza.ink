@@ -46,6 +46,8 @@ Ghostty's numbers:
 - **Large output throughput:** Catting 100,000 lines of text takes ~0.7 seconds — faster than Alacritty in some benchmarks, roughly 4x faster than iTerm2 and Kitty, 2x faster than Terminal.app.
 - **Startup time:** Under 100ms on most systems.
 
+![Close on latency, further apart on throughput. The 1.4 s and 2.8 s bars are worked out from the multipliers above.](diagram:ghostty-speed)
+
 Hashimoto is honest about this. The official docs say Ghostty "aims to be in the same class as the fastest terminal emulators" and note that "in some benchmarks it is faster, in others it is slower." No inflated claims. The real-world difference: scrolling through a large log file feels instant, and you never see the terminal struggle to keep up with output.
 
 The GPU rendering uses Metal on macOS and OpenGL on Linux, with a custom rendering pipeline built specifically for terminal text. This isn't bolted-on GPU acceleration — it's the foundation of the rendering architecture.
@@ -65,6 +67,8 @@ The terminal space has real options now. Here's where each one sits:
 **iTerm2** — The macOS incumbent. Enormous feature set built over many years. Not GPU-accelerated in the same way, noticeably slower on large output. Still the most feature-complete option on macOS if you need every edge case covered. But it's showing its age in rendering performance.
 
 **Ghostty** — Fast like Alacritty, featured like Kitty, native like iTerm2. Supports the Kitty graphics protocol, styled underlines, the Kitty keyboard protocol, and more xterm escape sequences than any terminal besides xterm itself. Configuration is simple. UI is native. The bet is that you shouldn't have to choose.
+
+![The pick-two tradeoff, with the three terminals Ghostty measures itself against. A sketch, not a measurement.](diagram:terminal-tradeoff)
 
 ---
 

@@ -24,6 +24,8 @@ Bitcoin and Ethereum use a transparent ledger model. Every account balance, ever
 
 The consequence: if anyone ever links your wallet address to your real identity — through an exchange KYC, a public ENS name, a tweet with your address, anything — your entire transaction history becomes retroactively de-anonymized. Not just future transactions. Everything, going back to the first time that wallet was ever used.
 
+![One public link to a name exposes the whole history, before and after it.](diagram:privacy-link)
+
 "Pseudonymous" is the word people use. But pseudonymity is weak. Chain analysis firms have become sophisticated enough that even multi-hop transaction paths can often be traced. The privacy guarantee is much thinner than most users assume.
 
 The demand for something better is real and legitimate. Doctors can't reveal that a client paid for a consultation. Companies have competitive reasons not to broadcast who they're paying. Individuals have a basic interest in not having their spending patterns permanently visible to anyone who cares to look.
@@ -67,6 +69,8 @@ Zcash has two address types:
 **Shielded addresses** (z-addresses, and more recently unified addresses) use zk-SNARKs to fully encrypt the transaction. Sender, receiver, and amount are all hidden. The blockchain records that a valid shielded transaction occurred; it reveals nothing else.
 
 This duality is both Zcash's strength and its persistent weakness. In theory, optional privacy lets Zcash work with regulated exchanges and compliance tools that need some level of visibility. In practice, if most users stick to transparent addresses (which historically they have — shielded usage has been growing but took years to become significant), the anonymity set for shielded transactions is small. A small anonymity set weakens privacy guarantees: if very few people are using shielded addresses, the pool of possible senders and receivers is small enough to narrow inference.
+
+![Privacy depends on how many people you could be. On Zcash that's only the people using shielded addresses. A sketch, not data.](diagram:privacy-anonymity-set)
 
 The cryptography is impressive. The original Groth16 zk-SNARK that Zcash used required a trusted setup — a ceremony where participants generated cryptographic parameters that had to be discarded. If anyone in the ceremony kept their "toxic waste" portion, they could theoretically forge transactions undetected. Zcash ran elaborate multi-party ceremonies (Sprout and Sapling) to mitigate this. Electric Coin Co.'s subsequent breakthrough, [Halo](https://electriccoin.co/blog/explaining-halo-2/), eliminates the trusted setup requirement entirely — a significant cryptographic advance.
 
@@ -120,6 +124,8 @@ What makes RAILGUN different from a mixer:
 
 The combination is deliberate: privacy for the public, disclosure for those you choose, provable non-interaction with sanctioned entities. This is the design response to "but what about money launderers?" — not "trust us," but "here's a cryptographic proof that these funds didn't pass through sanctioned addresses."
 
+![Hidden from the public, with disclosure limited to the people you pick.](diagram:railgun-shielded)
+
 **Governance and decentralization.** RAILGUN has no company behind it — it's governed by `$RAIL` token holders. The contracts are immutable and publicly verifiable. The RAIL token is purely for governance, not required to use the protocol.
 
 **Honest limitations.** RAILGUN is newer than Monero or Zcash, and its anonymity set is still growing. The privacy guarantee is only as strong as the number of users shielding assets — a small shielded pool is more traceable than a large one. ZK proof generation on mobile has improved dramatically but is still non-trivial. And the regulatory environment for any privacy tool is uncertain; RAILGUN's compliance features don't guarantee it won't face the same treatment as Tornado Cash.
@@ -158,6 +164,8 @@ Whether that's sufficient legally is an open question. Whether it's the right de
 There's a practical problem that all privacy coins run into: how do you get them in the first place?
 
 The standard path — buy on a centralized exchange, withdraw to your wallet — immediately undermines the privacy. Coinbase, Kraken, Binance all require KYC. When you withdraw Monero from a KYC'd exchange, the exchange has a record of your identity linked to the receiving address. You've linked your real name to the first transaction in your shielded history. Everything after is private; the entry point isn't.
+
+![The chain can't erase a record kept off it: a KYC exchange ties your name to your first address.](diagram:privacy-onramp)
 
 This is why peer-to-peer exchanges exist — platforms where you can buy and sell crypto directly with another person, often for cash or bank transfer, without a central intermediary recording your identity. The privacy coin community has historically depended on them heavily.
 

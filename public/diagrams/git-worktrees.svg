@@ -13,31 +13,45 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-git-worktrees" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="agent1">
 <rect x="20" y="16" width="116" height="34" rx="8" class="d-box"/>
 <text x="78.0" y="37.5" class="d-t" text-anchor="middle" >Agent 1</text>
-<path d="M78,50 L78,82" class="d-line" marker-end="url(#ah-git-worktrees)"/>
+</g>
+<path d="M78,50 L78,82" class="d-line" data-edge="agent1-tree1" marker-end="url(#ah-git-worktrees)"/>
+<g data-node="tree1">
 <rect x="20" y="84" width="116" height="60" rx="8" class="d-box"/>
 <text x="78" y="109" class="d-s d-m" text-anchor="middle" >myapp/</text>
 <text x="78" y="128" class="d-t d-green d-ct" text-anchor="middle" >main</text>
-<path d="M78,144 L78,192" class="d-line" marker-end="url(#ah-git-worktrees)"/>
+</g>
+<path d="M78,144 L78,192" class="d-line" data-edge="tree1-git" marker-end="url(#ah-git-worktrees)"/>
+<g data-node="agent2">
 <rect x="142" y="16" width="116" height="34" rx="8" class="d-box"/>
 <text x="200.0" y="37.5" class="d-t" text-anchor="middle" >Agent 2</text>
-<path d="M200,50 L200,82" class="d-line" marker-end="url(#ah-git-worktrees)"/>
+</g>
+<path d="M200,50 L200,82" class="d-line" data-edge="agent2-tree2" marker-end="url(#ah-git-worktrees)"/>
+<g data-node="tree2">
 <rect x="142" y="84" width="116" height="60" rx="8" class="d-box"/>
 <text x="200" y="109" class="d-s d-m" text-anchor="middle" >myapp-feat-auth/</text>
 <text x="200" y="128" class="d-t d-blue d-ct" text-anchor="middle" >feat/auth</text>
-<path d="M200,144 L200,192" class="d-line" marker-end="url(#ah-git-worktrees)"/>
+</g>
+<path d="M200,144 L200,192" class="d-line" data-edge="tree2-git" marker-end="url(#ah-git-worktrees)"/>
+<g data-node="agent3">
 <rect x="264" y="16" width="116" height="34" rx="8" class="d-box"/>
 <text x="322.0" y="37.5" class="d-t" text-anchor="middle" >Agent 3</text>
-<path d="M322,50 L322,82" class="d-line" marker-end="url(#ah-git-worktrees)"/>
+</g>
+<path d="M322,50 L322,82" class="d-line" data-edge="agent3-tree3" marker-end="url(#ah-git-worktrees)"/>
+<g data-node="tree3">
 <rect x="264" y="84" width="116" height="60" rx="8" class="d-box"/>
 <text x="322" y="109" class="d-s d-m" text-anchor="middle" >myapp-fix-bug-42/</text>
 <text x="322" y="128" class="d-t d-violet d-ct" text-anchor="middle" >fix/bug-42</text>
-<path d="M322,144 L322,192" class="d-line" marker-end="url(#ah-git-worktrees)"/>
+</g>
+<path d="M322,144 L322,192" class="d-line" data-edge="tree3-git" marker-end="url(#ah-git-worktrees)"/>
+<g data-node="git">
 <rect x="20" y="194" width="360" height="54" rx="8" class="d-box"/>
 <circle cx="34" cy="212" r="4" class="d-amber d-fill"/>
 <text x="46" y="216" class="d-t" text-anchor="start" >One .git directory</text>
 <text x="46" y="232" class="d-s" text-anchor="start" >History, remotes and refs are shared</text>
+</g>
 <line x1="20" y1="266" x2="380" y2="266" class="d-line d-faint"/>
 <text x="20" y="290" class="d-t" text-anchor="start" >Every branch live at once.</text>
 <text x="20" y="308" class="d-s" text-anchor="start" >Each agent has its own files, so nobody steps on anybody.</text>

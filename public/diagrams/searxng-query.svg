@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 402" role="img" aria-labelledby="t-searxng-query"><title id="t-searxng-query">A query goes from your browser to SearXNG, which removes cookies and uses a random browser profile. It asks several engines at once: DuckDuckGo, Brave, the Google workaround and smaller sources. Their answers are merged and ranked by agreement and your hostname rules into one list</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-searxng-query" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One query, several engines, one list</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >On a fresh install</text>
+<g data-node="browser">
+<rect x="20" y="54" width="360" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="72" r="4" class="d-blue d-fill"/>
+<text x="46" y="76" class="d-t" text-anchor="start" >Your browser</text>
+<text x="46" y="92" class="d-s" text-anchor="start" >localhost:8080/?q=%s</text>
+</g>
+<g data-node="searxng">
+<rect x="20" y="120" width="360" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="138" r="4" class="d-violet d-fill"/>
+<text x="46" y="142" class="d-t" text-anchor="start" >SearXNG</text>
+<text x="46" y="158" class="d-s" text-anchor="start" >No cookies, a random browser profile per request</text>
+</g>
+<path d="M200,102 L200,118" class="d-line" data-edge="browser-searxng" marker-end="url(#ah-searxng-query)"/>
+<g data-node="ddg">
+<rect x="20" y="198" width="96" height="48" rx="8" class="d-box"/>
+<text x="68.0" y="220" class="d-t" text-anchor="middle" >DuckDuckGo</text>
+<text x="68.0" y="236" class="d-s" text-anchor="middle" >Result pages</text>
+</g>
+<path d="M68.0,168 L68.0,196" class="d-line" data-edge="searxng-ddg" marker-end="url(#ah-searxng-query)"/>
+<path d="M68.0,246 L68.0,274" class="d-line" data-edge="ddg-merge" marker-end="url(#ah-searxng-query)"/>
+<g data-node="brave">
+<rect x="122" y="198" width="82" height="48" rx="8" class="d-box"/>
+<text x="163.0" y="220" class="d-t" text-anchor="middle" >Brave</text>
+<text x="163.0" y="236" class="d-s" text-anchor="middle" >Result pages</text>
+</g>
+<path d="M163.0,168 L163.0,196" class="d-line" data-edge="searxng-brave" marker-end="url(#ah-searxng-query)"/>
+<path d="M163.0,246 L163.0,274" class="d-line" data-edge="brave-merge" marker-end="url(#ah-searxng-query)"/>
+<g data-node="google">
+<rect x="210" y="198" width="82" height="48" rx="8" class="d-box"/>
+<text x="251.0" y="220" class="d-t" text-anchor="middle" >Google</text>
+<text x="251.0" y="236" class="d-s" text-anchor="middle" >Workaround</text>
+</g>
+<path d="M251.0,168 L251.0,196" class="d-line" data-edge="searxng-google" marker-end="url(#ah-searxng-query)"/>
+<path d="M251.0,246 L251.0,274" class="d-line" data-edge="google-merge" marker-end="url(#ah-searxng-query)"/>
+<g data-node="others">
+<rect x="298" y="198" width="82" height="48" rx="8" class="d-box"/>
+<text x="339.0" y="220" class="d-t" text-anchor="middle" >Others</text>
+<text x="339.0" y="236" class="d-s" text-anchor="middle" >Small sources</text>
+</g>
+<path d="M339.0,168 L339.0,196" class="d-line" data-edge="searxng-others" marker-end="url(#ah-searxng-query)"/>
+<path d="M339.0,246 L339.0,274" class="d-line" data-edge="others-merge" marker-end="url(#ah-searxng-query)"/>
+<g data-node="merge">
+<rect x="20" y="276" width="360" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="294" r="4" class="d-amber d-fill"/>
+<text x="46" y="298" class="d-t" text-anchor="start" >Merge and rank</text>
+<text x="46" y="314" class="d-s" text-anchor="start" >Engine agreement, plus your hostname rules</text>
+</g>
+<g data-node="results">
+<rect x="20" y="342" width="360" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="360" r="4" class="d-green d-fill"/>
+<text x="46" y="364" class="d-t" text-anchor="start" >Your results</text>
+<text x="46" y="380" class="d-s" text-anchor="start" >One list, highest score first</text>
+</g>
+<path d="M200,324 L200,340" class="d-line" data-edge="merge-results" marker-end="url(#ah-searxng-query)"/>
+</svg>

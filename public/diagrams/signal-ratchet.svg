@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 214" role="img" aria-labelledby="t-signal-ratchet"><title id="t-signal-ratchet">A sketch of a row of nine messages, each with its own key. A key is stolen at the fifth message. The four earlier messages stay locked, which is forward secrecy. The thief can read on until the next ratchet step, after which messages lock again, which is future secrecy</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-signal-ratchet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Each message gets its own key</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Stealing one doesn't open the conversation</text>
+<rect x="20.0" y="98" width="30" height="30" rx="5" class="d-box"/>
+<rect x="26.0" y="104" width="18" height="18" rx="4" class="d-box"/>
+<path d="M32.0,112 v-2 a3,3 0 0 1 6,0 v2" class="d-line d-green d-stroke"/>
+<rect x="30.5" y="112" width="9" height="6" rx="1" class="d-green d-fill"/>
+<line x1="51.0" y1="113" x2="59.25" y2="113" class="d-line d-faint"/>
+<rect x="61.25" y="98" width="30" height="30" rx="5" class="d-box"/>
+<rect x="67.25" y="104" width="18" height="18" rx="4" class="d-box"/>
+<path d="M73.25,112 v-2 a3,3 0 0 1 6,0 v2" class="d-line d-green d-stroke"/>
+<rect x="71.75" y="112" width="9" height="6" rx="1" class="d-green d-fill"/>
+<line x1="92.25" y1="113" x2="100.5" y2="113" class="d-line d-faint"/>
+<rect x="102.5" y="98" width="30" height="30" rx="5" class="d-box"/>
+<rect x="108.5" y="104" width="18" height="18" rx="4" class="d-box"/>
+<path d="M114.5,112 v-2 a3,3 0 0 1 6,0 v2" class="d-line d-green d-stroke"/>
+<rect x="113.0" y="112" width="9" height="6" rx="1" class="d-green d-fill"/>
+<line x1="133.5" y1="113" x2="141.75" y2="113" class="d-line d-faint"/>
+<rect x="143.75" y="98" width="30" height="30" rx="5" class="d-box"/>
+<rect x="149.75" y="104" width="18" height="18" rx="4" class="d-box"/>
+<path d="M155.75,112 v-2 a3,3 0 0 1 6,0 v2" class="d-line d-green d-stroke"/>
+<rect x="154.25" y="112" width="9" height="6" rx="1" class="d-green d-fill"/>
+<line x1="174.75" y1="113" x2="183.0" y2="113" class="d-line d-faint"/>
+<rect x="185.0" y="98" width="30" height="30" rx="5" class="d-rose d-fill" opacity="0.85"/>
+<line x1="216.0" y1="113" x2="224.25" y2="113" class="d-line d-faint"/>
+<rect x="226.25" y="98" width="30" height="30" rx="5" class="d-rose d-fill" opacity="0.85"/>
+<line x1="257.25" y1="113" x2="265.5" y2="113" class="d-line d-faint"/>
+<rect x="267.5" y="98" width="30" height="30" rx="5" class="d-box"/>
+<rect x="273.5" y="104" width="18" height="18" rx="4" class="d-box"/>
+<path d="M279.5,112 v-2 a3,3 0 0 1 6,0 v2" class="d-line d-green d-stroke"/>
+<rect x="278.0" y="112" width="9" height="6" rx="1" class="d-green d-fill"/>
+<line x1="298.5" y1="113" x2="306.75" y2="113" class="d-line d-faint"/>
+<rect x="308.75" y="98" width="30" height="30" rx="5" class="d-box"/>
+<rect x="314.75" y="104" width="18" height="18" rx="4" class="d-box"/>
+<path d="M320.75,112 v-2 a3,3 0 0 1 6,0 v2" class="d-line d-green d-stroke"/>
+<rect x="319.25" y="112" width="9" height="6" rx="1" class="d-green d-fill"/>
+<line x1="339.75" y1="113" x2="348.0" y2="113" class="d-line d-faint"/>
+<rect x="350.0" y="98" width="30" height="30" rx="5" class="d-box"/>
+<rect x="356.0" y="104" width="18" height="18" rx="4" class="d-box"/>
+<path d="M362.0,112 v-2 a3,3 0 0 1 6,0 v2" class="d-line d-green d-stroke"/>
+<rect x="360.5" y="112" width="9" height="6" rx="1" class="d-green d-fill"/>
+<text x="200.0" y="62" class="d-s d-rose d-ct" text-anchor="middle" >key stolen</text>
+<path d="M200.0,68 L200.0,96" class="d-line" marker-end="url(#ah-signal-ratchet)"/>
+<text x="261.875" y="80" class="d-s d-violet d-ct" text-anchor="middle" >next ratchet step</text>
+<line x1="261.875" y1="86" x2="261.875" y2="134" class="d-line d-violet d-stroke" stroke-dasharray="3 3"/>
+<path d="M20.0,142 v6 H173.75 v-6" class="d-line d-faint"/>
+<text x="96.875" y="170" class="d-t" text-anchor="middle" >Forward secrecy</text>
+<text x="96.875" y="186" class="d-s" text-anchor="middle" >Stay locked</text>
+<path d="M185.0,142 v6 H256.25 v-6" class="d-line d-faint"/>
+<text x="220.625" y="170" class="d-t d-rose d-ct" text-anchor="middle" >Readable</text>
+<text x="220.625" y="186" class="d-s" text-anchor="middle" >By the thief</text>
+<path d="M267.5,142 v6 H380.0 v-6" class="d-line d-faint"/>
+<text x="323.75" y="170" class="d-t" text-anchor="middle" >Future secrecy</text>
+<text x="323.75" y="186" class="d-s" text-anchor="middle" >Lock again</text>
+</svg>

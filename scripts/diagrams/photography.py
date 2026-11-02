@@ -60,3 +60,53 @@ for i, (name, w, h, acc, size) in enumerate(sensors):
     s.text(260, y, name, "d-t")
     s.text(260, y + 16, size, "d-s")
 s.render()
+
+# ── 3. Bodies vs lenses ─────────────────────────────────────────
+s = Svg("camera-lens-life", 400, 234, "A ten-year timeline. Three camera bodies follow each other, replaced every three to four years, each worth 40 to 60 percent less after two years. One lens runs across the whole decade and holds its value")
+s.text(20, 22, "What you keep for a decade", "d-t")
+s.text(20, 38, "A sketch, with a new body every 3.5 years", "d-s")
+X = lambda year: 20 + year * 36
+on_fill = 'style="fill:var(--background,#faf8f5)"'
+s.text(20, 62, "Bodies, replaced every 3 to 4 years", "d-s")
+for i, (start, end) in enumerate(((0, 3.5), (3.5, 7), (7, 10))):
+    s.add(f'<rect x="{X(start)}" y="70" width="{(end - start) * 36 - 3}" height="32" rx="3" class="d-rose d-fill" opacity="0.8"/>')
+    s.text(X(start) + 10, 90, f"Body {i + 1}", "d-t", "start", on_fill)
+s.add(f'<line x1="{X(2)}" y1="102" x2="{X(2)}" y2="112" class="d-line"/>')
+s.text(X(2) + 6, 118, "After two years: worth 40-60% less", "d-s")
+s.text(20, 146, "One good lens, holding its value", "d-s")
+s.add(f'<rect x="{X(0)}" y="154" width="{10 * 36}" height="32" rx="3" class="d-green d-fill" opacity="0.85"/>')
+s.text(X(0) + 10, 174, "Lens", "d-t", "start", on_fill)
+s.add(f'<line x1="{X(0)}" y1="198" x2="{X(10)}" y2="198" class="d-line d-faint"/>')
+for year in (0, 2, 4, 6, 8):
+    s.text(X(year), 214, str(year), "d-s", "middle")
+s.text(X(10), 214, "10 years", "d-s", "end")
+s.render()
+
+# ── 4. Merged frames vs one capture ─────────────────────────────
+s = Svg("camera-night-stack", 400, 268, "A phone in Night Sight captures 15 to 30 frames, aligns them, removes noise and adjusts the tones, and finishes one image in under two seconds. A dedicated camera gives you a single raw capture and you decide how it looks")
+s.text(20, 22, "Who finishes the picture", "d-t")
+s.text(20, 38, "Software on a phone, you on a camera", "d-s")
+s.text(20, 66, "Phone, Night Sight", "d-t")
+for i in range(5, -1, -1):
+    s.add(f'<rect x="{20 + i * 2}" y="{78 + i * 2}" width="44" height="32" rx="2" class="d-box"/>')
+s.arrow([(78, 100), (92, 100)])
+for i, name in enumerate(("Align", "Denoise", "Tones")):
+    x = 94 + i * 74
+    s.box(x, 78, 60, 44, name, anchor="middle")
+    if i < 2:
+        s.arrow([(x + 60, 100), (x + 72, 100)])
+s.arrow([(302, 100), (322, 100)])
+s.add('<rect x="324" y="78" width="56" height="44" rx="3" class="d-green d-fill" opacity="0.8"/>')
+s.text(20, 142, "15-30 frames", "d-s")
+s.text(198, 142, "Under two seconds, by software", "d-s", "middle")
+s.text(380, 142, "One image", "d-s", "end")
+s.rule(158)
+s.text(20, 186, "Dedicated camera", "d-t")
+s.add('<rect x="20" y="198" width="44" height="32" rx="2" class="d-box"/>')
+s.arrow([(68, 214), (92, 214)])
+s.box(94, 192, 208, 44, "You decide how it looks", anchor="middle")
+s.arrow([(302, 214), (322, 214)])
+s.add('<rect x="324" y="192" width="56" height="44" rx="3" class="d-green d-fill" opacity="0.8"/>')
+s.text(20, 256, "One raw capture", "d-s")
+s.text(380, 256, "One image", "d-s", "end")
+s.render()

@@ -88,6 +88,8 @@ Here's the practical reality: in good light, you cannot tell these apart in a fi
 
 This is the oldest advice in photography and it's still true. Camera bodies depreciate fast — a two-year-old body loses 40-60% of its value. A good lens holds its value for a decade and optically performs just as well. Bodies get replaced every 3-4 years. Lenses last a career.
 
+![Bodies come and go while the lens stays. A sketch, using the numbers above.](diagram:camera-lens-life)
+
 A $500 body with a $800 lens will produce better images than a $1,200 body with a kit lens. The lens determines sharpness, bokeh character, maximum aperture (how much light it lets in), and focal length. The body processes what the lens gives it.
 
 Start with one or two good lenses rather than the cheapest kit zoom. A 35mm f/1.8 or 50mm f/1.8 prime will teach you more about photography in a month than a body upgrade ever will. Primes force you to move, to compose with your feet, and they're optically superior to zooms at similar price points.
@@ -127,6 +129,8 @@ If you only share photos on social media and shoot in decent light, your phone i
 Phones compensate for their tiny sensors with software. Google's Night Sight, Apple's Smart HDR, Samsung's AI processing — these systems capture multiple frames at different exposures and merge them computationally into a single image that no single exposure could produce.
 
 The engineering is impressive. A Pixel phone in Night Sight mode can produce a usable image in conditions where a dedicated camera with a kit lens would give you a noisy mess. The phone captures 15-30 frames, aligns them, removes noise, adjusts the tones for the scene, and finishes in under two seconds.
+
+![A phone merges a burst into one image by itself. A camera gives you one raw capture and leaves the rest to you.](diagram:camera-night-stack)
 
 Dedicated cameras are slowly adopting some of these techniques. In-camera HDR modes, pixel-shift high resolution, and AI-based autofocus are all computational photography. But cameras remain fundamentally conservative — they give you a single raw capture and let you process it yourself. That's a feature, not a limitation. You decide what the final image looks like, not an algorithm.
 

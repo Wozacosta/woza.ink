@@ -38,11 +38,15 @@ The interesting part is the ranking, because it's [about ten lines of Python](ht
 - First place on two engines scores 4.
 - Fifth place on three engines scores 1.8.
 
+![Bars to scale, with one segment per engine. Being found by more engines raises what each one adds.](diagram:searxng-score)
+
 So a page that's mediocre everywhere beats a page one engine loved. CJ's argument is that this filters slop, since something that shows up across engines is "more than likely going to be a good result."
 
 That's only as good as the engines' independence, and they aren't very independent. If DuckDuckGo mostly reflects Bing, and Startpage reflects Google, then two engines agreeing can be one index counted twice. A content farm that has beaten Google's ranking gets rewarded for it, twice. Agreement measures how widely a page has won at SEO, which isn't the same as whether it's any good.
 
 What SearXNG gives you instead is control. The [hostnames plugin](https://github.com/searxng/searxng/blob/master/searx/plugins/hostnames.py) can remove, demote or boost domains by regex, and each engine has its own weight. You can build a very good personal filter in YAML, by hand, and keep it up yourself.
+
+![What a fresh install does with one query. The row of engines is the part that breaks.](diagram:searxng-query)
 
 ---
 

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 318" role="img" aria-labelledby="t-standard-site-verify"><title id="t-standard-site-verify">Your domain and your repo point at each other. The domain's well-known file and link tags name the AT-URI of each record. The records in your repo carry the site URL and path. A reader only trusts a record when both directions match</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 402" role="img" aria-labelledby="t-standard-site-verify"><title id="t-standard-site-verify">Your domain and your repo point at each other. The well-known file names the publication record and each post's link tag names its document record. The records carry the site URL and path. An app that finds a document record follows its site field to the publication, then checks both directions. A record only counts when both match</title>
 <style>
 .d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
 .d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
@@ -13,18 +13,45 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-standard-site-verify" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
-<rect x="20" y="16" width="360" height="62" rx="8" class="d-box"/>
-<circle cx="34" cy="34" r="4" class="d-blue d-fill"/>
-<text x="46" y="38" class="d-t" text-anchor="start" >Your domain</text>
-<text x="46" y="54" class="d-s" text-anchor="start" >.well-known file and a &lt;link&gt; tag on each post</text>
-<rect x="20" y="196" width="360" height="62" rx="8" class="d-box"/>
-<circle cx="34" cy="214" r="4" class="d-green d-fill"/>
-<text x="46" y="218" class="d-t" text-anchor="start" >Your repo on a PDS</text>
-<text x="46" y="234" class="d-s" text-anchor="start" >One publication record, one document per post</text>
-<path d="M70,78 L70,194" class="d-line" marker-end="url(#ah-standard-site-verify)"/>
-<text x="80" y="141" class="d-s" text-anchor="start" >names the record</text>
-<path d="M330,196 L330,80" class="d-line" marker-end="url(#ah-standard-site-verify)"/>
-<text x="320" y="141" class="d-s" text-anchor="end" >names the URL</text>
-<line x1="20" y1="274" x2="380" y2="274" class="d-line d-faint"/>
-<text x="20" y="298" class="d-t" text-anchor="start" >A record only counts when both directions match.</text>
+<rect x="20" y="16" width="360" height="100" rx="8" class="d-ext"/>
+<text x="34" y="40" class="d-t" text-anchor="start" >Your domain</text>
+<g data-node="wellknown">
+<rect x="32" y="50" width="148" height="54" rx="8" class="d-box"/>
+<text x="46" y="72" class="d-t" text-anchor="start" >Well-known file</text>
+<text x="46" y="88" class="d-s" text-anchor="start" >Names the publication</text>
+</g>
+<g data-node="link">
+<rect x="220" y="50" width="148" height="54" rx="8" class="d-box"/>
+<text x="234" y="72" class="d-t" text-anchor="start" >&lt;link&gt; tag on a post</text>
+<text x="234" y="88" class="d-s" text-anchor="start" >Names the document</text>
+</g>
+<rect x="20" y="190" width="360" height="100" rx="8" class="d-ext"/>
+<g data-node="publication">
+<rect x="32" y="200" width="148" height="54" rx="8" class="d-box"/>
+<text x="46" y="222" class="d-t" text-anchor="start" >Publication record</text>
+<text x="46" y="238" class="d-s" text-anchor="start" >Holds the site's URL</text>
+</g>
+<g data-node="document">
+<rect x="220" y="200" width="148" height="54" rx="8" class="d-box"/>
+<text x="234" y="222" class="d-t" text-anchor="start" >Document record</text>
+<text x="234" y="238" class="d-s" text-anchor="start" >Holds the post's path</text>
+</g>
+<text x="34" y="276" class="d-t" text-anchor="start" >Your repo on a PDS</text>
+<path d="M70,104 L70,198" class="d-line" data-edge="wellknown-publication" marker-end="url(#ah-standard-site-verify)"/>
+<text x="62" y="151" class="d-s" text-anchor="end" data-edge="wellknown-publication">AT-URI</text>
+<path d="M100,200 L100,106" class="d-line" data-edge="publication-wellknown" marker-end="url(#ah-standard-site-verify)"/>
+<text x="108" y="151" class="d-s" text-anchor="start" data-edge="publication-wellknown">URL</text>
+<path d="M300,104 L300,198" class="d-line" data-edge="link-document" marker-end="url(#ah-standard-site-verify)"/>
+<text x="308" y="151" class="d-s" text-anchor="start" data-edge="link-document">AT-URI</text>
+<path d="M270,200 L270,106" class="d-line" data-edge="document-link" marker-end="url(#ah-standard-site-verify)"/>
+<text x="262" y="151" class="d-s" text-anchor="end" data-edge="document-link">URL + path</text>
+<path d="M220,227 L182,227" class="d-line" data-edge="document-publication" marker-end="url(#ah-standard-site-verify)"/>
+<text x="200" y="220" class="d-s" text-anchor="middle" data-edge="document-publication">site</text>
+<path d="M294,322 L294,256" class="d-line" data-edge="app-document" marker-end="url(#ah-standard-site-verify)"/>
+<g data-node="app">
+<rect x="20" y="324" width="360" height="40" rx="8" class="d-box"/>
+<circle cx="34" cy="344.0" r="4" class="d-violet d-fill"/>
+<text x="46" y="348.5" class="d-t" text-anchor="start" >An app that finds a record</text>
+</g>
+<text x="20" y="390" class="d-t" text-anchor="start" >A record only counts when both directions match.</text>
 </svg>

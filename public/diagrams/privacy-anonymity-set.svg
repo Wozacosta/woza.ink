@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-labelledby="t-privacy-anonymity-set"><title id="t-privacy-anonymity-set">A sketch with sixty users on each side. On Monero all of them are possible senders. On Zcash only the few using shielded addresses are, because transparent users are visibly someone else</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-privacy-anonymity-set" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Who could the sender be?</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Each dot is a user. A sketch: the counts aren't data.</text>
+<text x="20" y="66" class="d-t" text-anchor="start" >Monero</text>
+<text x="20" y="82" class="d-s" text-anchor="start" >Every user is cover</text>
+<circle cx="26.0" cy="100" r="6" class="d-green d-fill"/>
+<circle cx="43.5" cy="100" r="6" class="d-green d-fill"/>
+<circle cx="61.0" cy="100" r="6" class="d-green d-fill"/>
+<circle cx="78.5" cy="100" r="6" class="d-green d-fill"/>
+<circle cx="96.0" cy="100" r="6" class="d-green d-fill"/>
+<circle cx="113.5" cy="100" r="6" class="d-green d-fill"/>
+<circle cx="131.0" cy="100" r="6" class="d-green d-fill"/>
+<circle cx="148.5" cy="100" r="6" class="d-green d-fill"/>
+<circle cx="166.0" cy="100" r="6" class="d-green d-fill"/>
+<circle cx="183.5" cy="100" r="6" class="d-green d-fill"/>
+<circle cx="26.0" cy="117" r="6" class="d-green d-fill"/>
+<circle cx="43.5" cy="117" r="6" class="d-green d-fill"/>
+<circle cx="61.0" cy="117" r="6" class="d-green d-fill"/>
+<circle cx="78.5" cy="117" r="6" class="d-green d-fill"/>
+<circle cx="96.0" cy="117" r="6" class="d-green d-fill"/>
+<circle cx="113.5" cy="117" r="6" class="d-green d-fill"/>
+<circle cx="131.0" cy="117" r="6" class="d-green d-fill"/>
+<circle cx="148.5" cy="117" r="6" class="d-green d-fill"/>
+<circle cx="166.0" cy="117" r="6" class="d-green d-fill"/>
+<circle cx="183.5" cy="117" r="6" class="d-green d-fill"/>
+<circle cx="26.0" cy="134" r="6" class="d-green d-fill"/>
+<circle cx="43.5" cy="134" r="6" class="d-green d-fill"/>
+<circle cx="61.0" cy="134" r="6" class="d-green d-fill"/>
+<circle cx="78.5" cy="134" r="6" class="d-green d-fill"/>
+<circle cx="96.0" cy="134" r="6" class="d-green d-fill"/>
+<circle cx="113.5" cy="134" r="6" class="d-green d-fill"/>
+<circle cx="131.0" cy="134" r="6" class="d-green d-fill"/>
+<circle cx="148.5" cy="134" r="6" class="d-green d-fill"/>
+<circle cx="166.0" cy="134" r="6" class="d-green d-fill"/>
+<circle cx="183.5" cy="134" r="6" class="d-green d-fill"/>
+<circle cx="26.0" cy="151" r="6" class="d-green d-fill"/>
+<circle cx="43.5" cy="151" r="6" class="d-green d-fill"/>
+<circle cx="61.0" cy="151" r="6" class="d-green d-fill"/>
+<circle cx="78.5" cy="151" r="6" class="d-green d-fill"/>
+<circle cx="96.0" cy="151" r="6" class="d-green d-fill"/>
+<circle cx="113.5" cy="151" r="6" class="d-green d-fill"/>
+<circle cx="131.0" cy="151" r="6" class="d-green d-fill"/>
+<circle cx="148.5" cy="151" r="6" class="d-green d-fill"/>
+<circle cx="166.0" cy="151" r="6" class="d-green d-fill"/>
+<circle cx="183.5" cy="151" r="6" class="d-green d-fill"/>
+<circle cx="26.0" cy="168" r="6" class="d-green d-fill"/>
+<circle cx="43.5" cy="168" r="6" class="d-green d-fill"/>
+<circle cx="61.0" cy="168" r="6" class="d-green d-fill"/>
+<circle cx="78.5" cy="168" r="6" class="d-green d-fill"/>
+<circle cx="96.0" cy="168" r="6" class="d-green d-fill"/>
+<circle cx="113.5" cy="168" r="6" class="d-green d-fill"/>
+<circle cx="131.0" cy="168" r="6" class="d-green d-fill"/>
+<circle cx="148.5" cy="168" r="6" class="d-green d-fill"/>
+<circle cx="166.0" cy="168" r="6" class="d-green d-fill"/>
+<circle cx="183.5" cy="168" r="6" class="d-green d-fill"/>
+<circle cx="26.0" cy="185" r="6" class="d-green d-fill"/>
+<circle cx="43.5" cy="185" r="6" class="d-green d-fill"/>
+<circle cx="61.0" cy="185" r="6" class="d-green d-fill"/>
+<circle cx="78.5" cy="185" r="6" class="d-green d-fill"/>
+<circle cx="96.0" cy="185" r="6" class="d-green d-fill"/>
+<circle cx="113.5" cy="185" r="6" class="d-green d-fill"/>
+<circle cx="131.0" cy="185" r="6" class="d-green d-fill"/>
+<circle cx="148.5" cy="185" r="6" class="d-green d-fill"/>
+<circle cx="166.0" cy="185" r="6" class="d-green d-fill"/>
+<circle cx="183.5" cy="185" r="6" class="d-green d-fill"/>
+<text x="210" y="66" class="d-t" text-anchor="start" >Zcash</text>
+<text x="210" y="82" class="d-s" text-anchor="start" >Only shielded users are</text>
+<circle cx="216.0" cy="100" r="5.5" class="d-line d-faint"/>
+<circle cx="233.5" cy="100" r="5.5" class="d-line d-faint"/>
+<circle cx="251.0" cy="100" r="5.5" class="d-line d-faint"/>
+<circle cx="268.5" cy="100" r="5.5" class="d-line d-faint"/>
+<circle cx="286.0" cy="100" r="5.5" class="d-line d-faint"/>
+<circle cx="303.5" cy="100" r="5.5" class="d-line d-faint"/>
+<circle cx="321.0" cy="100" r="5.5" class="d-line d-faint"/>
+<circle cx="338.5" cy="100" r="5.5" class="d-line d-faint"/>
+<circle cx="356.0" cy="100" r="5.5" class="d-line d-faint"/>
+<circle cx="373.5" cy="100" r="5.5" class="d-line d-faint"/>
+<circle cx="216.0" cy="117" r="5.5" class="d-line d-faint"/>
+<circle cx="233.5" cy="117" r="5.5" class="d-line d-faint"/>
+<circle cx="251.0" cy="117" r="5.5" class="d-line d-faint"/>
+<circle cx="268.5" cy="117" r="5.5" class="d-line d-faint"/>
+<circle cx="286.0" cy="117" r="6" class="d-green d-fill"/>
+<circle cx="303.5" cy="117" r="5.5" class="d-line d-faint"/>
+<circle cx="321.0" cy="117" r="6" class="d-green d-fill"/>
+<circle cx="338.5" cy="117" r="5.5" class="d-line d-faint"/>
+<circle cx="356.0" cy="117" r="5.5" class="d-line d-faint"/>
+<circle cx="373.5" cy="117" r="5.5" class="d-line d-faint"/>
+<circle cx="216.0" cy="134" r="5.5" class="d-line d-faint"/>
+<circle cx="233.5" cy="134" r="5.5" class="d-line d-faint"/>
+<circle cx="251.0" cy="134" r="5.5" class="d-line d-faint"/>
+<circle cx="268.5" cy="134" r="6" class="d-green d-fill"/>
+<circle cx="286.0" cy="134" r="5.5" class="d-line d-faint"/>
+<circle cx="303.5" cy="134" r="6" class="d-green d-fill"/>
+<circle cx="321.0" cy="134" r="5.5" class="d-line d-faint"/>
+<circle cx="338.5" cy="134" r="6" class="d-green d-fill"/>
+<circle cx="356.0" cy="134" r="5.5" class="d-line d-faint"/>
+<circle cx="373.5" cy="134" r="5.5" class="d-line d-faint"/>
+<circle cx="216.0" cy="151" r="5.5" class="d-line d-faint"/>
+<circle cx="233.5" cy="151" r="5.5" class="d-line d-faint"/>
+<circle cx="251.0" cy="151" r="5.5" class="d-line d-faint"/>
+<circle cx="268.5" cy="151" r="5.5" class="d-line d-faint"/>
+<circle cx="286.0" cy="151" r="6" class="d-green d-fill"/>
+<circle cx="303.5" cy="151" r="5.5" class="d-line d-faint"/>
+<circle cx="321.0" cy="151" r="6" class="d-green d-fill"/>
+<circle cx="338.5" cy="151" r="5.5" class="d-line d-faint"/>
+<circle cx="356.0" cy="151" r="5.5" class="d-line d-faint"/>
+<circle cx="373.5" cy="151" r="5.5" class="d-line d-faint"/>
+<circle cx="216.0" cy="168" r="5.5" class="d-line d-faint"/>
+<circle cx="233.5" cy="168" r="5.5" class="d-line d-faint"/>
+<circle cx="251.0" cy="168" r="5.5" class="d-line d-faint"/>
+<circle cx="268.5" cy="168" r="5.5" class="d-line d-faint"/>
+<circle cx="286.0" cy="168" r="5.5" class="d-line d-faint"/>
+<circle cx="303.5" cy="168" r="6" class="d-green d-fill"/>
+<circle cx="321.0" cy="168" r="5.5" class="d-line d-faint"/>
+<circle cx="338.5" cy="168" r="5.5" class="d-line d-faint"/>
+<circle cx="356.0" cy="168" r="5.5" class="d-line d-faint"/>
+<circle cx="373.5" cy="168" r="5.5" class="d-line d-faint"/>
+<circle cx="216.0" cy="185" r="5.5" class="d-line d-faint"/>
+<circle cx="233.5" cy="185" r="5.5" class="d-line d-faint"/>
+<circle cx="251.0" cy="185" r="5.5" class="d-line d-faint"/>
+<circle cx="268.5" cy="185" r="5.5" class="d-line d-faint"/>
+<circle cx="286.0" cy="185" r="5.5" class="d-line d-faint"/>
+<circle cx="303.5" cy="185" r="5.5" class="d-line d-faint"/>
+<circle cx="321.0" cy="185" r="5.5" class="d-line d-faint"/>
+<circle cx="338.5" cy="185" r="5.5" class="d-line d-faint"/>
+<circle cx="356.0" cy="185" r="5.5" class="d-line d-faint"/>
+<circle cx="373.5" cy="185" r="5.5" class="d-line d-faint"/>
+<circle cx="26" cy="216" r="6" class="d-green d-fill"/>
+<text x="38" y="220" class="d-s" text-anchor="start" >Could be the sender</text>
+<circle cx="216" cy="216" r="5.5" class="d-line d-faint"/>
+<text x="228" y="220" class="d-s" text-anchor="start" >Public, so ruled out</text>
+</svg>

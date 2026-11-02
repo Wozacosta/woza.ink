@@ -84,6 +84,8 @@ After the handshake, communication happens through a simple message protocol:
 
 It's remarkably minimal. The entire wire protocol fits in a few pages of spec.
 
+![Your client finds peers through a tracker or the DHT, then decides who to upload to. A sketch: the four peers stand for the kinds it will meet.](diagram:torrent-peers)
+
 ---
 
 ## The evolution

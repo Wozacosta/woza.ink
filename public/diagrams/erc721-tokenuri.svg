@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 294" role="img" aria-labelledby="t-erc721-tokenuri"><title id="t-erc721-tokenuri">The contract onchain answers two questions: ownerOf returns an address and tokenURI returns a URL. The URL points offchain to a JSON file, which points to the image</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-erc721-tokenuri" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Onchain: who owns it. Offchain: what it is.</text>
+<rect x="20" y="36" width="360" height="112" rx="8" class="d-ext"/>
+<text x="34" y="56" class="d-s" text-anchor="start" >Onchain, in the ERC-721 contract</text>
+<rect x="34" y="66" width="180" height="32" rx="6" class="d-box"/>
+<text x="46" y="86" class="d-s d-m" text-anchor="start" >ownerOf(tokenId)</text>
+<path d="M214,82 L262,82" class="d-line" marker-end="url(#ah-erc721-tokenuri)"/>
+<text x="270" y="86" class="d-t" text-anchor="start" >an address</text>
+<rect x="34" y="106" width="180" height="32" rx="6" class="d-box"/>
+<text x="46" y="126" class="d-s d-m" text-anchor="start" >tokenURI(tokenId)</text>
+<path d="M214,122 L262,122" class="d-line" marker-end="url(#ah-erc721-tokenuri)"/>
+<text x="270" y="126" class="d-t d-amber d-ct" text-anchor="start" >a URL</text>
+<path d="M310,134 L310,186" class="d-line" marker-end="url(#ah-erc721-tokenuri)"/>
+<text x="20" y="176" class="d-s" text-anchor="start" >Offchain, wherever the URL points</text>
+<rect x="200" y="188" width="180" height="90" rx="8" class="d-box"/>
+<circle cx="214" cy="206" r="4" class="d-amber d-fill"/>
+<text x="226" y="212" class="d-t" text-anchor="start" >JSON file</text>
+<text x="226" y="226" class="d-s d-m" text-anchor="start" >image</text>
+<text x="226" y="242" class="d-s d-m" text-anchor="start" >description</text>
+<text x="226" y="258" class="d-s d-m" text-anchor="start" >attributes</text>
+<path d="M200,233 L152,233" class="d-line" marker-end="url(#ah-erc721-tokenuri)"/>
+<rect x="20" y="206" width="130" height="54" rx="8" class="d-ext"/>
+<text x="34" y="228" class="d-t" text-anchor="start" >Image</text>
+<text x="34" y="244" class="d-s" text-anchor="start" >a link away</text>
+</svg>

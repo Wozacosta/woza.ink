@@ -93,6 +93,8 @@ function useTimer(initialSeconds = 25 * 60) {
 
 (Yes, `useReducer` + effects gives you better control for a production hook — this is the idea.)
 
+![The hook only stores two values, but they add up to four states.](diagram:pomo-timer)
+
 ---
 
 ## UX Decisions I Stand By (short, opinionated)
@@ -107,6 +109,8 @@ Features that were rejected:
 - Built-in music player (too heavy)
 - Push notifications for every session (nope)
 - Deep analytics dashboards (tempting, but noisy)
+
+![Each rejected feature left something lighter in its place.](diagram:pomo-features)
 
 ---
 

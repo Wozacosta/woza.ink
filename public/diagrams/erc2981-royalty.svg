@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 306" role="img" aria-labelledby="t-erc2981-royalty"><title id="t-erc2981-royalty">A marketplace asks the NFT contract for the royalty and gets a receiver and an amount. What happens next is up to the seller: some marketplaces honor it, some make it optional, and a peer-to-peer transfer never has to ask</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-erc2981-royalty" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >royaltyInfo answers. It can't make anyone pay.</text>
+<rect x="20" y="38" width="120" height="54" rx="8" class="d-box"/>
+<text x="80.0" y="69.5" class="d-t" text-anchor="middle" >Marketplace</text>
+<rect x="260" y="38" width="120" height="54" rx="8" class="d-box"/>
+<text x="320.0" y="69.5" class="d-t" text-anchor="middle" >NFT contract</text>
+<path d="M140,56 L258,56" class="d-line" marker-end="url(#ah-erc2981-royalty)"/>
+<text x="200" y="50" class="d-s" text-anchor="middle" >tokenId, salePrice</text>
+<path d="M260,76 L142,76" class="d-line" marker-end="url(#ah-erc2981-royalty)"/>
+<text x="200" y="90" class="d-s" text-anchor="middle" >receiver, amount</text>
+<line x1="20" y1="110" x2="380" y2="110" class="d-line d-faint"/>
+<text x="20" y="132" class="d-s" text-anchor="start" >After that, nothing onchain enforces the answer</text>
+<rect x="20" y="142" width="360" height="46" rx="8" class="d-box"/>
+<circle cx="34" cy="160" r="4" class="d-green d-fill"/>
+<text x="46" y="164" class="d-t" text-anchor="start" >Honors it</text>
+<text x="46" y="180" class="d-s" text-anchor="start" >OpenSea, Rarible: the creator is paid</text>
+<rect x="20" y="196" width="360" height="46" rx="8" class="d-box"/>
+<circle cx="34" cy="214" r="4" class="d-amber d-fill"/>
+<text x="46" y="218" class="d-t" text-anchor="start" >Makes it optional</text>
+<text x="46" y="234" class="d-s" text-anchor="start" >Blur: the creator may get nothing</text>
+<rect x="20" y="250" width="360" height="46" rx="8" class="d-box"/>
+<circle cx="34" cy="268" r="4" class="d-rose d-fill"/>
+<text x="46" y="272" class="d-t" text-anchor="start" >Never asks</text>
+<text x="46" y="288" class="d-s" text-anchor="start" >A P2P transfer: nothing routes funds</text>
+</svg>

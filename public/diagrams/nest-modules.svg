@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 352" role="img" aria-labelledby="t-nest-modules"><title id="t-nest-modules">UsersModule contains UsersController, which injects UsersService, and it imports DatabaseModule. UsersService is exported, so another module can inject it. Anything not exported stays out of reach</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-nest-modules" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >A module shares only what it exports</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >UsersModule from the example above</text>
+<rect x="20" y="52" width="236" height="214" rx="8" class="d-ext"/>
+<text x="34" y="74" class="d-t" text-anchor="start" >UsersModule</text>
+<rect x="34" y="86" width="208" height="40" rx="8" class="d-box"/>
+<circle cx="48" cy="106.0" r="4" class="d-blue d-fill"/>
+<text x="60" y="110.5" class="d-t" text-anchor="start" >UsersController</text>
+<path d="M138,126 L138,146" class="d-line" marker-end="url(#ah-nest-modules)"/>
+<text x="146" y="140" class="d-s" text-anchor="start" >injects</text>
+<rect x="34" y="148" width="208" height="40" rx="8" class="d-box"/>
+<circle cx="48" cy="168.0" r="4" class="d-green d-fill"/>
+<text x="60" y="172.5" class="d-t" text-anchor="start" >UsersService</text>
+<rect x="34" y="212" width="208" height="40" rx="8" class="d-box"/>
+<circle cx="48" cy="232.0" r="4" class="d-rose d-fill"/>
+<text x="60" y="236.5" class="d-t" text-anchor="start" >Anything not exported</text>
+<rect x="316" y="148" width="64" height="104" rx="8" class="d-box"/>
+<text x="348" y="194" class="d-t" text-anchor="middle" >Another</text>
+<text x="348" y="212" class="d-t" text-anchor="middle" >module</text>
+<path d="M314,168 L244,168" class="d-line" marker-end="url(#ah-nest-modules)"/>
+<text x="286" y="160" class="d-s d-green d-ct" text-anchor="middle" >exported</text>
+<path d="M316,232 L274,232" class="d-line d-rose d-stroke" stroke-dasharray="4 3"/>
+<text x="267" y="236.5" class="d-t d-rose d-ct" text-anchor="middle" >✗</text>
+<text x="294" y="222" class="d-s d-rose d-ct" text-anchor="middle" >blocked</text>
+<rect x="20" y="300" width="236" height="40" rx="8" class="d-box"/>
+<circle cx="34" cy="320.0" r="4" class="d-amber d-fill"/>
+<text x="46" y="324.5" class="d-t" text-anchor="start" >DatabaseModule</text>
+<path d="M138,300 L138,268" class="d-line" marker-end="url(#ah-nest-modules)"/>
+<text x="146" y="288" class="d-s" text-anchor="start" >imports</text>
+</svg>

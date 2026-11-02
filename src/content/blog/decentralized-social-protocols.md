@@ -106,6 +106,8 @@ Since the network is shared, apps can't compete on who's there. They compete on 
 
 Ownership is more concentrated than that list suggests. In January 2026, a day before the Neynar deal, [Mask Network took over stewardship of Lens](https://www.theblock.co/post/386293/mask-network-takes-over-lens-protocol-with-goal-to-build-products-people-actually-use). Mask builds Firefly and [has acquired Orb](https://blockeden.xyz/blog/2026/04/21/lens-protocol-v3-zksync-socialfi-layer-2/), so the two apps Lens features first now belong to its steward. Portability is the check on that: if those apps go bad, your account and followers still work in the others.
 
+![Six apps share one network. Mask Network stewards it, builds Firefly and has acquired Orb.](diagram:social-lens)
+
 Honest tradeoff: it's small. Lens had [roughly 22,000 daily active users](https://blog.thirdweb.com/decentralized-social-2026-lens-farcaster-on-chain-identity/) at mainnet launch in 2025, the latest count I could find. A portable audience is only worth as much as the audience.
 
 ---
@@ -117,6 +119,8 @@ Honest tradeoff: it's small. Lens had [roughly 22,000 daily active users](https:
 There's no protocol for following someone — your client handles that. There's no canonical server — you publish to whatever relays you like. Clients read from relays and show you what they want. The protocol defines the message format; everything else is up to clients and relays.
 
 The appeal: it's censorship-resistant in a real way. There's nothing to shut down. Your key is your identity — portable to any client, stored anywhere. A government can block relays but can't take your key or your content.
+
+![A sketch with three relays and three of the clients named below. You publish the same signed event to several relays, so blocking one doesn't remove it.](diagram:social-nostr)
 
 The cost: UX varies wildly by client. Discovery is hard. Spam filtering is a client-side problem. The ecosystem is more experimental than production-grade. [Primal](https://primal.net/) and [Snort](https://snort.social/) are among the better current clients; [Damus](https://damus.io/) for iOS.
 
@@ -166,6 +170,8 @@ PeerTube is most meaningful for creators who want to publish content that can't 
 | Loops | ActivityPub | Short video | Instance choice | Federation of servers |
 | Pixelfed | ActivityPub | Photos/video | Instance choice | Federation of servers |
 | PeerTube | ActivityPub | Long video | Instance choice | Federation of servers |
+
+![The same networks by where your account lives: on one server, split between a chain and a data network, or split between a key you hold and relays you pick.](diagram:social-ownership)
 
 ---
 

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-agent-cli-map"><title id="t-agent-cli-map">Claude Code talks only to Claude. OpenCode can talk to Claude, GPT-4o, Gemini or a local model through Ollama. Both sit on the same codebase and the same AGENTS.md, so you can switch between them without a migration</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-agent-cli-map" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Different models, same project</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Swap the CLI and everything below it stays put</text>
+<g data-node="claude">
+<rect x="64" y="58" width="82" height="36" rx="8" class="d-box"/>
+<text x="105.0" y="80.5" class="d-t" text-anchor="middle" >Claude</text>
+</g>
+<g data-node="gpt">
+<rect x="166" y="58" width="64" height="36" rx="8" class="d-box"/>
+<text x="198.0" y="80.5" class="d-t" text-anchor="middle" >GPT-4o</text>
+</g>
+<g data-node="gemini">
+<rect x="240" y="58" width="64" height="36" rx="8" class="d-box"/>
+<text x="272.0" y="80.5" class="d-t" text-anchor="middle" >Gemini</text>
+</g>
+<g data-node="ollama">
+<rect x="314" y="58" width="64" height="36" rx="8" class="d-box"/>
+<text x="346.0" y="80.5" class="d-t" text-anchor="middle" >Ollama</text>
+</g>
+<g data-node="claude-code">
+<rect x="20" y="142" width="170" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="160" r="4" class="d-violet d-fill"/>
+<text x="46" y="164" class="d-t" text-anchor="start" >Claude Code</text>
+<text x="46" y="180" class="d-s" text-anchor="start" >Terminal. Proprietary</text>
+</g>
+<g data-node="opencode">
+<rect x="210" y="142" width="170" height="52" rx="8" class="d-box"/>
+<circle cx="224" cy="160" r="4" class="d-green d-fill"/>
+<text x="236" y="164" class="d-t" text-anchor="start" >OpenCode</text>
+<text x="236" y="180" class="d-s" text-anchor="start" >Terminal or neovim. MIT</text>
+</g>
+<path d="M105,142 L105,96" class="d-line" data-edge="claude-code-claude" marker-end="url(#ah-agent-cli-map)"/>
+<path d="M232,142 L136,96" class="d-line" data-edge="opencode-claude" marker-end="url(#ah-agent-cli-map)"/>
+<path d="M262,142 L200,96" class="d-line" data-edge="opencode-gpt" marker-end="url(#ah-agent-cli-map)"/>
+<path d="M295,142 L272,96" class="d-line" data-edge="opencode-gemini" marker-end="url(#ah-agent-cli-map)"/>
+<path d="M340,142 L346,96" class="d-line" data-edge="opencode-ollama" marker-end="url(#ah-agent-cli-map)"/>
+<g data-node="project">
+<rect x="20" y="236" width="360" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="254" r="4" class="d-amber d-fill"/>
+<text x="46" y="258" class="d-t" text-anchor="start" >Same codebase, same AGENTS.md</text>
+<text x="46" y="274" class="d-s" text-anchor="start" >Your rules, docs and skills work under either CLI</text>
+</g>
+<path d="M105,194 L105,234" class="d-line" data-edge="claude-code-project" marker-end="url(#ah-agent-cli-map)"/>
+<path d="M295,194 L295,234" class="d-line" data-edge="opencode-project" marker-end="url(#ah-agent-cli-map)"/>
+</svg>

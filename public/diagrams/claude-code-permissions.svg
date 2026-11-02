@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 230" role="img" aria-labelledby="t-claude-code-permissions"><title id="t-claude-code-permissions">A loop: the agent proposes a step, you approve it, it runs, and the result feeds the next step. For operations you've marked as trusted the approval is skipped</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-claude-code-permissions" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >A loop with you in it</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Claude Code stops before shell commands and file writes</text>
+<rect x="20" y="58" width="140" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="76" r="4" class="d-violet d-fill"/>
+<text x="46" y="80" class="d-t" text-anchor="start" >Agent</text>
+<text x="46" y="96" class="d-s" text-anchor="start" >Proposes a step</text>
+<rect x="240" y="58" width="140" height="52" rx="8" class="d-box"/>
+<circle cx="254" cy="76" r="4" class="d-amber d-fill"/>
+<text x="266" y="80" class="d-t" text-anchor="start" >You</text>
+<text x="266" y="96" class="d-s" text-anchor="start" >Approve it</text>
+<rect x="240" y="164" width="140" height="52" rx="8" class="d-box"/>
+<circle cx="254" cy="182" r="4" class="d-green d-fill"/>
+<text x="266" y="186" class="d-t" text-anchor="start" >Runs</text>
+<text x="266" y="202" class="d-s" text-anchor="start" >Shell or file write</text>
+<rect x="20" y="164" width="140" height="52" rx="8" class="d-box"/>
+<circle cx="34" cy="182" r="4" class="d-blue d-fill"/>
+<text x="46" y="186" class="d-t" text-anchor="start" >Result</text>
+<text x="46" y="202" class="d-s" text-anchor="start" >Feeds the next step</text>
+<path d="M160,84 L238,84" class="d-line" marker-end="url(#ah-claude-code-permissions)"/>
+<path d="M310,110 L310,162" class="d-line" marker-end="url(#ah-claude-code-permissions)"/>
+<path d="M240,190 L162,190" class="d-line" marker-end="url(#ah-claude-code-permissions)"/>
+<path d="M90,164 L90,112" class="d-line" marker-end="url(#ah-claude-code-permissions)"/>
+<path d="M160,104 L238,170" class="d-line" stroke-dasharray="4 3" marker-end="url(#ah-claude-code-permissions)"/>
+<text x="202" y="122" class="d-s" text-anchor="start" >if trusted</text>
+</svg>

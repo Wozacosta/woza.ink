@@ -142,6 +142,8 @@ The simplicity was the point. Any contract implementing these six functions coul
   <text x="470" y="170" text-anchor="middle" class="af-sublabel">spends your allowance</text>
 </svg>
 
+![An approval moves nothing, and spending against it doesn't close it. A sketch, not data.](diagram:erc20-allowance)
+
 **Why it matters:** ERC-20 didn't just create tokens. It created the idea that a standard interface, agreed upon by the community, could bootstrap an entire ecosystem of interoperable applications. Every standard on this list follows the template ERC-20 set.
 
 ---
@@ -209,6 +211,8 @@ function tokenURI(uint256 tokenId) external view returns (string);
 ```
 
 The `tokenURI` function is what links onchain ownership to off-chain metadata — typically a JSON file pointing to an image, description, and attributes. This is also where most "your NFT is actually just a URL" critiques come from, and they're not entirely wrong.
+
+![The contract stores ownership and a pointer. The metadata and the image sit at the other end of that URL.](diagram:erc721-tokenuri)
 
 CryptoKitties launched in late 2017 using a proto-721 interface and famously congested the entire Ethereum network. That congestion was both proof of concept and warning sign — the chain couldn't handle one popular collectibles game. It also accelerated work on scaling solutions that wouldn't bear fruit for years.
 
@@ -299,6 +303,8 @@ Simple: given a token ID and sale price, the contract returns who gets paid and 
 
 **The catch:** ERC-2981 is informational, not enforceable. It tells you what royalty the creator wants. It doesn't make you pay it. There's no onchain mechanism to force a marketplace or P2P transfer to route funds to the creator. The standard explicitly acknowledges this — enforcement is left to marketplaces and platforms.
 
+![The contract answers the question. Whether anyone acts on the answer is up to the seller.](diagram:erc2981-royalty)
+
 **Why it matters anyway:** It established a common interface that well-intentioned marketplaces could implement consistently. OpenSea, Rarible, and others honor it. But the royalty debate exposed a fundamental tension: onchain ownership gives buyers the right to transfer freely, while creators want to tax those transfers. ERC-2981 didn't resolve that tension — it just gave both sides a shared vocabulary.
 
 ---
@@ -316,6 +322,8 @@ EIP-1559 restructured the entire model:
 - **Max fee**: the ceiling you're willing to pay, protecting against spikes.
 
 The base fee mechanism targets 50% block utilization. If blocks are more than half full, the base fee goes up. Less than half, it goes down. This creates a predictable, self-adjusting fee market instead of a chaotic auction.
+
+![Fuller blocks push the base fee up and emptier ones pull it down, so it hunts for the target. A sketch, not data.](diagram:eip1559-base-fee)
 
 <svg viewBox="0 0 680 230" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;margin:1.5rem auto;display:block">
   <style>
@@ -366,7 +374,9 @@ L2 rollups (Arbitrum, Optimism, Base, zkSync) execute transactions off Ethereum 
 
 EIP-4844 introduced **blobs** — a new data type that's cheaper than calldata because it's temporary. Blobs are available for ~18 days (enough for fraud proofs and data availability checks), then pruned. The chain doesn't store them forever because it doesn't need to.
 
-Each blob is ~128 KB. Each block can carry up to 6 blobs. Blobs have their own fee market (separate from execution gas), with a target of 3 blobs per block and the same 1559-style dynamic pricing.
+Each blob is ~128 KB. At launch, each block could carry up to 6 blobs. Blobs have their own fee market (separate from execution gas), with a launch target of 3 blobs per block and the same 1559-style dynamic pricing. Pectra later raised those numbers to 9 and 6.
+
+![Blobs are cheap because they don't stay: a short life in a small space with its own price. Sizes as activated at Dencun.](diagram:eip4844-blobs)
 
 <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;margin:1.5rem auto;display:block">
   <style>
@@ -444,45 +454,7 @@ ERC-4337 introduced account abstraction *without* changing the protocol. Instead
 
 The flow: your wallet is a smart contract. You sign a `UserOperation` (not a transaction). A **bundler** picks it up, wraps it in a real transaction, and submits it to the `EntryPoint` contract, which validates and executes your operation. Optionally, a **paymaster** contract can sponsor the gas — meaning the user pays nothing.
 
-<svg viewBox="0 0 720 180" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;margin:1.5rem auto;display:block">
-  <style>
-    .aa-box { fill: none; stroke: currentColor; stroke-width: 1.5; rx: 6; }
-    .aa-fill { fill: currentColor; opacity: 0.04; rx: 6; }
-    .aa-label { font: 600 11px ui-monospace, monospace; fill: currentColor; }
-    .aa-sub { font: 400 9px ui-monospace, monospace; fill: currentColor; opacity: 0.5; }
-    .aa-arrow { stroke: currentColor; stroke-width: 1.5; fill: none; marker-end: url(#aa-head); }
-    .aa-opt { stroke: currentColor; stroke-width: 1.5; stroke-dasharray: 5,4; fill: none; marker-end: url(#aa-head); }
-  </style>
-  <defs><marker id="aa-head" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="currentColor" opacity="0.6"/></marker></defs>
-  <!-- User -->
-  <rect x="10" y="50" width="100" height="55" class="aa-box"/><rect x="10" y="50" width="100" height="55" class="aa-fill"/>
-  <text x="60" y="73" text-anchor="middle" class="aa-label">User</text>
-  <text x="60" y="90" text-anchor="middle" class="aa-sub">signs UserOp</text>
-  <!-- arrow -->
-  <path d="M110,78 L160,78" class="aa-arrow"/>
-  <!-- Bundler -->
-  <rect x="162" y="50" width="110" height="55" class="aa-box"/><rect x="162" y="50" width="110" height="55" class="aa-fill"/>
-  <text x="217" y="73" text-anchor="middle" class="aa-label">Bundler</text>
-  <text x="217" y="90" text-anchor="middle" class="aa-sub">wraps into tx</text>
-  <!-- arrow -->
-  <path d="M272,78 L320,78" class="aa-arrow"/>
-  <!-- EntryPoint -->
-  <rect x="322" y="40" width="130" height="75" class="aa-box"/><rect x="322" y="40" width="130" height="75" class="aa-fill"/>
-  <text x="387" y="65" text-anchor="middle" class="aa-label">EntryPoint</text>
-  <text x="387" y="82" text-anchor="middle" class="aa-sub">singleton contract</text>
-  <text x="387" y="98" text-anchor="middle" class="aa-sub">validate + execute</text>
-  <!-- arrow -->
-  <path d="M452,78 L500,78" class="aa-arrow"/>
-  <!-- Smart Wallet -->
-  <rect x="502" y="50" width="120" height="55" class="aa-box"/><rect x="502" y="50" width="120" height="55" class="aa-fill"/>
-  <text x="562" y="73" text-anchor="middle" class="aa-label">Smart Wallet</text>
-  <text x="562" y="90" text-anchor="middle" class="aa-sub">your account</text>
-  <!-- Paymaster (optional, below) -->
-  <rect x="322" y="140" width="130" height="35" class="aa-box" stroke-dasharray="5,4"/><rect x="322" y="140" width="130" height="35" class="aa-fill"/>
-  <text x="387" y="163" text-anchor="middle" class="aa-label">Paymaster</text>
-  <path d="M387,140 L387,115" class="aa-opt"/>
-  <text x="477" y="163" text-anchor="middle" class="aa-sub">optional: sponsors gas</text>
-</svg>
+![Everything above the line is only a signature. The transaction exists once a bundler makes one.](diagram:erc4337-flow)
 
 ```solidity
 struct PackedUserOperation {
@@ -516,6 +488,8 @@ struct PackedUserOperation {
 ERC-6551 answers an odd but powerful question: what if every NFT had its own wallet?
 
 The standard defines a registry that deploys a smart contract account for any ERC-721 token. The NFT owner controls the account. Transfer the NFT, and the account (and everything in it) transfers with it.
+
+![The account stays put and answers to whoever owns the NFT, so changing that owner hands over everything inside.](diagram:erc6551-transfer)
 
 ```solidity
 function createAccount(
@@ -572,13 +546,15 @@ function createAccount(
 
 ## EIP-7702 — Native Account Abstraction (2025)
 
-**EIP-7702 | Proposed May 2024 | Activated in Pectra hard fork, March 2025**
+**EIP-7702 | Proposed May 2024 | Activated in Pectra hard fork, May 2025**
 
 ERC-4337 brought account abstraction to Ethereum without a protocol change — clever, but it required users to migrate from their EOA to a new smart contract wallet. Your existing MetaMask address, with all its history, assets, and permissions, couldn't be upgraded in place. You had to start fresh.
 
-EIP-7702, authored by Vitalik Buterin and Sam Wilson, fixes this at the protocol level. It introduces a new transaction type that lets an EOA temporarily delegate to a smart contract. Your existing address — the one with your ENS name, your token approvals, your onchain history — can now behave like a smart wallet without migrating to a new address.
+EIP-7702, authored by Vitalik Buterin and Sam Wilson, fixes this at the protocol level. It introduces a new transaction type that lets an EOA delegate to a smart contract. Your existing address — the one with your ENS name, your token approvals, your onchain history — can now behave like a smart wallet without migrating to a new address.
 
-The mechanism: a new transaction type includes an `authorization_list` — a signed statement saying "for this transaction, treat my EOA as if it were this contract." The EOA's code field is temporarily set to point at the specified contract, giving it smart wallet capabilities for the duration of the transaction.
+The mechanism: a new transaction type includes an `authorization_list` — a signed statement saying "treat my EOA as if it were this contract." The EOA's code field is set to point at the specified contract, giving it smart wallet capabilities. The delegation stays in place until a later authorization changes it, and pointing it at the zero address clears it.
+
+![The account keeps its address and everything attached to it. Only the code field changes.](diagram:eip7702-code)
 
 <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;margin:1.5rem auto;display:block">
   <style>
@@ -609,7 +585,7 @@ The mechanism: a new transaction type includes an `authorization_list` — a sig
   <!-- Smart contract -->
   <rect x="222" y="133" width="150" height="55" class="up-box"/><rect x="222" y="133" width="150" height="55" class="up-fill"/>
   <text x="297" y="155" text-anchor="middle" class="up-label">Smart Wallet</text>
-  <text x="297" y="172" text-anchor="middle" class="up-sub">code (per-tx)</text>
+  <text x="297" y="172" text-anchor="middle" class="up-sub">code (delegated)</text>
   <!-- gained powers -->
   <path d="M372,160 L410,160" class="up-arrow"/>
   <rect x="415" y="133" width="85" height="28" class="up-powers"/><text x="457" y="152" text-anchor="middle" class="up-power-label">batch txs</text>
@@ -625,7 +601,7 @@ The mechanism: a new transaction type includes an `authorization_list` — a sig
 - Wallets can upgrade users silently: your address stays the same, but gains smart wallet powers
 - The migration problem disappears: 4337 infrastructure works with 7702-enabled EOAs
 
-**Why it matters:** 7702 is the bridge between Ethereum's current account model and the smart-wallet future. Instead of asking 100 million EOA holders to migrate, it brings smart wallet capabilities to them. Pectra (March 2025) made this live on mainnet — every EOA on Ethereum can now opt into account abstraction.
+**Why it matters:** 7702 is the bridge between Ethereum's current account model and the smart-wallet future. Instead of asking 100 million EOA holders to migrate, it brings smart wallet capabilities to them. Pectra (May 2025) made this live on mainnet — every EOA on Ethereum can now opt into account abstraction.
 
 Together, 4337 and 7702 complete the account abstraction story: 4337 defines the smart wallet infrastructure (bundlers, paymasters, entry point), 7702 makes it accessible to existing accounts. It's rare that two standards complement each other this cleanly.
 

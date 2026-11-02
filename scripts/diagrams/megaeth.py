@@ -41,3 +41,25 @@ s.text(234, 266, "No verification work", "d-s")
 s.rule(294)
 s.text(20, 318, "One machine does the work. Everyone else checks it or reads it.", "d-s")
 s.render()
+
+# ── 3. SALT: what the hot path touches ──────────────────────────
+s = Svg("megaeth-salt", 400, 346, "On a standard EVM node, every transaction that touches storage makes four trips to disk: look up the account, look up the storage slot, update the trie and write back. With SALT the authentication tree fits in RAM, so the hot path of every transaction stays off disk, and only the cold path of full proofs and syncing a new node uses it")
+s.text(20, 22, "Standard EVM node", "d-t")
+s.text(20, 38, "A transaction that touches storage waits on disk", "d-s")
+steps = ["Look up the account", "Look up the storage slot", "Update the trie", "Write back"]
+for i, label in enumerate(steps):
+    y = 50 + i * 32
+    s.add(f'<rect x="20" y="{y}" width="196" height="26" rx="6" class="d-box"/>')
+    s.text(34, y + 17, label, "d-s")
+    s.arrow([(216, y + 13), (284, y + 13)])
+s.box(286, 50, 94, 122, "Disk", accent="rose")
+s.rule(190)
+s.text(20, 216, "SALT", "d-t")
+s.text(20, 232, "The authentication tree fits in memory", "d-s")
+s.box(20, 244, 196, 44, "Every transaction", accent="green")
+s.arrow([(216, 266), (284, 266)], "hot path", 250, 260, "middle")
+s.box(286, 244, 94, 44, "RAM", accent="green")
+s.box(20, 296, 196, 44, "Full proofs, node sync", accent="amber")
+s.arrow([(216, 318), (284, 318)], "cold path", 250, 312, "middle", faint=True, dashed=True)
+s.box(286, 296, 94, 44, "Disk", accent="amber")
+s.render()

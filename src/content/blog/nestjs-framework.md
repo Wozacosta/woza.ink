@@ -77,6 +77,8 @@ export class UsersModule {}
 
 The `exports` array is key. If `UsersService` isn't exported, other modules can't inject it. This creates explicit boundaries between features. You can't accidentally reach into another module's internals — you have to import the module and it has to export what you need.
 
+![UsersService is exported, so another module can inject it. Anything else stays inside UsersModule.](diagram:nest-modules)
+
 For small projects, this feels like ceremony. For a team of fifteen working on a monolith with forty features, it's the difference between maintainable and unmaintainable.
 
 ---

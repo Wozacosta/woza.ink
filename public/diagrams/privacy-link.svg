@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 222" role="img" aria-labelledby="t-privacy-link"><title id="t-privacy-link">A wallet's transactions look anonymous until one of them is tied to a real name. Then every transaction, back to the wallet's first use, is linked to that person</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-privacy-link" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One link reveals the whole wallet</text>
+<text x="20" y="52" class="d-s" text-anchor="start" >A pseudonym: an address and no name</text>
+<line x1="30" y1="72" x2="370" y2="72" class="d-line d-faint"/>
+<circle cx="30" cy="72" r="6" class="d-box"/>
+<circle cx="64" cy="72" r="6" class="d-box"/>
+<circle cx="98" cy="72" r="6" class="d-box"/>
+<circle cx="132" cy="72" r="6" class="d-box"/>
+<circle cx="166" cy="72" r="6" class="d-box"/>
+<circle cx="200" cy="72" r="6" class="d-box"/>
+<circle cx="234" cy="72" r="6" class="d-box"/>
+<circle cx="268" cy="72" r="6" class="d-box"/>
+<circle cx="302" cy="72" r="6" class="d-box"/>
+<circle cx="336" cy="72" r="6" class="d-box"/>
+<circle cx="370" cy="72" r="6" class="d-box"/>
+<line x1="20" y1="100" x2="380" y2="100" class="d-line d-faint"/>
+<text x="20" y="124" class="d-s" text-anchor="start" >One transaction gets tied to you</text>
+<line x1="30" y1="168" x2="370" y2="168" class="d-line d-faint"/>
+<circle cx="30" cy="168" r="6" class="d-rose d-fill"/>
+<circle cx="64" cy="168" r="6" class="d-rose d-fill"/>
+<circle cx="98" cy="168" r="6" class="d-rose d-fill"/>
+<circle cx="132" cy="168" r="6" class="d-rose d-fill"/>
+<circle cx="166" cy="168" r="6" class="d-rose d-fill"/>
+<circle cx="200" cy="168" r="6" class="d-rose d-fill"/>
+<circle cx="234" cy="168" r="6" class="d-rose d-fill"/>
+<circle cx="302" cy="168" r="6" class="d-rose d-fill"/>
+<circle cx="336" cy="168" r="6" class="d-rose d-fill"/>
+<circle cx="370" cy="168" r="6" class="d-rose d-fill"/>
+<circle cx="268" cy="168" r="9" class="d-violet d-fill"/>
+<text x="268" y="150" class="d-s d-violet d-ct" text-anchor="middle" >KYC, ENS name or a tweet</text>
+<path d="M254,190 L30,190" class="d-line" marker-end="url(#ah-privacy-link)"/>
+<path d="M282,190 L370,190" class="d-line" marker-end="url(#ah-privacy-link)"/>
+<text x="30" y="208" class="d-s d-rose d-ct" text-anchor="start" >All the way back to the wallet's first use</text>
+<text x="370" y="208" class="d-s d-rose d-ct" text-anchor="end" >and onward</text>
+</svg>

@@ -123,6 +123,8 @@ Skills are what take an AI assistant from "fast search engine" to "actual collab
 
 > The rule of thumb: if you'd send a junior developer to a training course to learn it, encode it as a skill. If you'd put it in a team handbook, make it a rule. If you'd write it in a runbook, make it a command.
 
+![The rule of thumb as a decision tree.](diagram:agent-layer-choice)
+
 ---
 
 ## How they work together

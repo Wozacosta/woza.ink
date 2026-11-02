@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 288" role="img" aria-labelledby="t-lightroom-cost"><title id="t-lightroom-cost">Total paid over two years. Lightroom at 19.99 dollars a month rises in a straight line. It passes ON1 Photo RAW at about 100 dollars after 5 months, DxO PhotoLab at about 230 after 12 months, and Capture One at 299 after 15 months. darktable stays at zero</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-lightroom-cost" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >When buying beats renting</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Total paid over two years. Paid major upgrades not included.</text>
+<line x1="30.0" y1="244.0" x2="378.0" y2="244.0" class="d-line"/>
+<text x="30.0" y="260" class="d-s" text-anchor="middle" >0</text>
+<text x="117.0" y="260" class="d-s" text-anchor="middle" >6</text>
+<text x="204.0" y="260" class="d-s" text-anchor="middle" >12</text>
+<text x="291.0" y="260" class="d-s" text-anchor="middle" >18</text>
+<text x="378.0" y="260" class="d-s" text-anchor="middle" >24</text>
+<text x="204.0" y="278" class="d-s" text-anchor="middle" >Months</text>
+<line x1="30.0" y1="206.0" x2="378.0" y2="206.0" class="d-line d-blue d-stroke"/>
+<text x="378.0" y="220.0" class="d-s d-blue d-ct" text-anchor="end" >ON1 Photo RAW, about $100</text>
+<line x1="30.0" y1="156.6" x2="378.0" y2="156.6" class="d-line d-amber d-stroke"/>
+<text x="378.0" y="170.6" class="d-s d-amber d-ct" text-anchor="end" >DxO PhotoLab, about $230</text>
+<line x1="30.0" y1="130.4" x2="378.0" y2="130.4" class="d-line d-violet d-stroke"/>
+<text x="378.0" y="144.4" class="d-s d-violet d-ct" text-anchor="end" >Capture One Pro, $299</text>
+<line x1="30.0" y1="244.0" x2="378.0" y2="61.7" class="d-line d-rose d-stroke" stroke-width="2.25"/>
+<circle cx="102.5" cy="206.0" r="4" class="d-blue d-fill"/>
+<text x="94.5" y="199.0" class="d-s d-blue d-ct" text-anchor="end" >5 months</text>
+<circle cx="196.8" cy="156.6" r="4" class="d-amber d-fill"/>
+<text x="188.8" y="149.6" class="d-s d-amber d-ct" text-anchor="end" >12 months</text>
+<circle cx="246.9" cy="130.4" r="4" class="d-violet d-fill"/>
+<text x="238.9" y="123.4" class="d-s d-violet d-ct" text-anchor="end" >15 months</text>
+<text x="334.0" y="72" class="d-s d-rose d-ct" text-anchor="end" >Lightroom, $19.99 a month</text>
+<text x="378.0" y="238.0" class="d-s d-green d-ct" text-anchor="end" >darktable, free</text>
+</svg>

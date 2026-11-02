@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 288" role="img" aria-labelledby="t-railgun-shielded"><title id="t-railgun-shielded">Tokens are shielded from a public address into an encrypted 0zk balance on Ethereum. From there a ZK proof authorizes DeFi calls without showing who made them, a viewing key discloses to an auditor you choose, and a Proof of Innocence shows anyone there was no contact with flagged addresses</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-railgun-shielded" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="wallet">
+<rect x="20" y="16" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="34" r="4" class="d-rose d-fill"/>
+<text x="46" y="38" class="d-t" text-anchor="start" >Your public address</text>
+<text x="46" y="54" class="d-s" text-anchor="start" >every token and every move is visible</text>
+</g>
+<g data-node="pool">
+<rect x="20" y="110" width="130" height="168" rx="8" class="d-box"/>
+<circle cx="34" cy="128" r="4" class="d-green d-fill"/>
+<text x="46" y="132" class="d-t" text-anchor="start" >0zk balance</text>
+<text x="46" y="148" class="d-s" text-anchor="start" >encrypted onchain</text>
+<text x="46" y="176" class="d-s" text-anchor="start" >While shielded:</text>
+<text x="46" y="196" class="d-s d-green d-ct" text-anchor="start" >trade</text>
+<text x="46" y="214" class="d-s d-green d-ct" text-anchor="start" >borrow</text>
+<text x="46" y="232" class="d-s d-green d-ct" text-anchor="start" >earn</text>
+<text x="46" y="250" class="d-s d-green d-ct" text-anchor="start" >transfer</text>
+</g>
+<g data-node="defi">
+<rect x="222" y="110" width="158" height="50" rx="8" class="d-box"/>
+<circle cx="236" cy="128" r="4" class="d-blue d-fill"/>
+<text x="248" y="132" class="d-t" text-anchor="start" >Uniswap, Aave</text>
+<text x="248" y="148" class="d-s" text-anchor="start" >see the call, not who</text>
+</g>
+<g data-node="auditor">
+<rect x="222" y="169" width="158" height="50" rx="8" class="d-box"/>
+<circle cx="236" cy="187" r="4" class="d-amber d-fill"/>
+<text x="248" y="191" class="d-t" text-anchor="start" >Your auditor</text>
+<text x="248" y="207" class="d-s" text-anchor="start" >sees where funds began</text>
+</g>
+<g data-node="checker">
+<rect x="222" y="228" width="158" height="50" rx="8" class="d-box"/>
+<circle cx="236" cy="246" r="4" class="d-violet d-fill"/>
+<text x="248" y="250" class="d-t" text-anchor="start" >Anyone checking</text>
+<text x="248" y="266" class="d-s" text-anchor="start" >no flagged addresses</text>
+</g>
+<path d="M85,70 L85,108" class="d-line" data-edge="wallet-pool" marker-end="url(#ah-railgun-shielded)"/>
+<text x="93" y="94" class="d-s" text-anchor="start" data-edge="wallet-pool">shield</text>
+<path d="M150,135 L220,135" class="d-line" data-edge="pool-defi" marker-end="url(#ah-railgun-shielded)"/>
+<text x="185" y="128" class="d-s" text-anchor="middle" data-edge="pool-defi">ZK proof</text>
+<path d="M150,194 L220,194" class="d-line" stroke-dasharray="4 3" data-edge="pool-auditor" marker-end="url(#ah-railgun-shielded)"/>
+<text x="185" y="187" class="d-s" text-anchor="middle" data-edge="pool-auditor">viewing key</text>
+<path d="M150,253 L220,253" class="d-line" stroke-dasharray="4 3" data-edge="pool-checker" marker-end="url(#ah-railgun-shielded)"/>
+<text x="185" y="246" class="d-s" text-anchor="middle" data-edge="pool-checker">POI proof</text>
+</svg>

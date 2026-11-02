@@ -13,22 +13,30 @@
 .d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
 </style>
 <defs><marker id="ah-x402-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<g data-node="agent">
 <rect x="20" y="16" width="110" height="36" rx="8" class="d-box"/>
 <text x="75.0" y="38.5" class="d-t" text-anchor="middle" >Agent</text>
+</g>
+<g data-node="server">
 <rect x="270" y="16" width="110" height="36" rx="8" class="d-box"/>
 <text x="325.0" y="38.5" class="d-t" text-anchor="middle" >Server</text>
+</g>
 <line x1="75" y1="52" x2="75" y2="298" class="d-line d-faint" stroke-dasharray="4 3"/>
 <line x1="325" y1="52" x2="325" y2="298" class="d-line d-faint" stroke-dasharray="4 3"/>
-<path d="M77,100 L322,100" class="d-line" marker-end="url(#ah-x402-flow)"/>
-<text x="200" y="92" class="d-t d-m" text-anchor="middle" >GET /api/weather</text>
-<path d="M323,156 L78,156" class="d-line" marker-end="url(#ah-x402-flow)"/>
-<text x="200" y="135" class="d-t d-m" text-anchor="middle" >402 Payment Required</text>
-<text x="200" y="149" class="d-s" text-anchor="middle" >PAYMENT-REQUIRED: price, token, chain</text>
-<path d="M77,212 L322,212" class="d-line" marker-end="url(#ah-x402-flow)"/>
-<text x="200" y="191" class="d-t d-m" text-anchor="middle" >GET /api/weather</text>
-<text x="200" y="205" class="d-s" text-anchor="middle" >PAYMENT-SIGNATURE: the signed payment</text>
-<path d="M323,286 L78,286" class="d-line" marker-end="url(#ah-x402-flow)"/>
-<text x="200" y="278" class="d-t d-m" text-anchor="middle" >200 and the resource</text>
-<text x="317" y="240" class="d-s d-amber d-ct" text-anchor="end" >Server or facilitator checks</text>
-<text x="317" y="255" class="d-s d-amber d-ct" text-anchor="end" >that it settled onchain</text>
+<path d="M77,100 L322,100" class="d-line" data-edge="agent-server" marker-end="url(#ah-x402-flow)"/>
+<text x="200" y="92" class="d-t d-m" text-anchor="middle" data-edge="agent-server">GET /api/weather</text>
+<path d="M323,156 L78,156" class="d-line" data-edge="server-agent" marker-end="url(#ah-x402-flow)"/>
+<text x="200" y="135" class="d-t d-m" text-anchor="middle" data-edge="server-agent">402 Payment Required</text>
+<text x="200" y="149" class="d-s" text-anchor="middle" data-edge="server-agent">PAYMENT-REQUIRED: price, token, chain</text>
+<path d="M77,212 L322,212" class="d-line" data-edge="agent-server-paid" marker-end="url(#ah-x402-flow)"/>
+<text x="200" y="191" class="d-t d-m" text-anchor="middle" data-edge="agent-server-paid">GET /api/weather</text>
+<text x="200" y="205" class="d-s" text-anchor="middle" data-edge="agent-server-paid">PAYMENT-SIGNATURE: the signed payment</text>
+<path d="M323,286 L78,286" class="d-line" data-edge="server-agent-paid" marker-end="url(#ah-x402-flow)"/>
+<text x="200" y="278" class="d-t d-m" text-anchor="middle" data-edge="server-agent-paid">200 and the resource</text>
+<g data-node="check">
+<rect x="136" y="220" width="176" height="40" rx="6" class="d-box"/>
+<text x="224" y="236" class="d-s d-amber d-ct" text-anchor="middle" >Server or facilitator checks</text>
+<text x="224" y="251" class="d-s d-amber d-ct" text-anchor="middle" >that it settled onchain</text>
+</g>
+<path d="M323,240 L314,240" class="d-line" data-edge="server-check" marker-end="url(#ah-x402-flow)"/>
 </svg>

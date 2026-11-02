@@ -117,6 +117,8 @@ The registry now has descriptors for every recent Safe version. For `execTransac
 
 A routine transfer from a cold wallet never needs a delegatecall. With this descriptor, the device would have said "Delegate Call" in plain words, followed by a nested call to a contract it didn't recognize, which it can't prettify and would show as unknown. That doesn't make the attack impossible. It makes it visible, on the one screen the attacker couldn't touch.
 
+![With the Safe descriptor, two of the ten parameters reach the screen: the operation as Delegate Call, and the nested call as unknown.](diagram:clear-signing-bybit)
+
 ---
 
 ## Who vouches for the descriptor?
@@ -148,6 +150,8 @@ Clear signing started as a Ledger problem. Every new DeFi protocol meant a new o
 | May 2026 | The Ethereum Foundation launches Clear Signing as an ecosystem standard; its Trillion Dollar Security initiative stewards the registry at [clearsigning.org](https://clearsigning.org) |
 
 The shift from plugins to a generic parser is the key design move. Plugins meant every protocol needed firmware-level code, written or reviewed by the wallet maker. A parser plus data means a protocol can describe itself in JSON, and any wallet that implements the parser can show it. That's what makes it a standard instead of a product feature.
+
+![A sketch, not a count. Plugins need new device code for every protocol. A parser needs one JSON file per protocol, and every wallet that has the parser can read it.](diagram:clear-signing-parser)
 
 The contributor list at launch reads like a map of the industry: Ledger, Trezor, MetaMask, WalletConnect, Fireblocks, Keycard, Sourcify, Cyfrin, Argot, ZKnox and Zama. Trezor said it would ship full human-readable signing in the second quarter of 2026.
 

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 268" role="img" aria-labelledby="t-camera-night-stack"><title id="t-camera-night-stack">A phone in Night Sight captures 15 to 30 frames, aligns them, removes noise and adjusts the tones, and finishes one image in under two seconds. A dedicated camera gives you a single raw capture and you decide how it looks</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-camera-night-stack" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Who finishes the picture</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Software on a phone, you on a camera</text>
+<text x="20" y="66" class="d-t" text-anchor="start" >Phone, Night Sight</text>
+<rect x="30" y="88" width="44" height="32" rx="2" class="d-box"/>
+<rect x="28" y="86" width="44" height="32" rx="2" class="d-box"/>
+<rect x="26" y="84" width="44" height="32" rx="2" class="d-box"/>
+<rect x="24" y="82" width="44" height="32" rx="2" class="d-box"/>
+<rect x="22" y="80" width="44" height="32" rx="2" class="d-box"/>
+<rect x="20" y="78" width="44" height="32" rx="2" class="d-box"/>
+<path d="M78,100 L92,100" class="d-line" marker-end="url(#ah-camera-night-stack)"/>
+<rect x="94" y="78" width="60" height="44" rx="8" class="d-box"/>
+<text x="124.0" y="104.5" class="d-t" text-anchor="middle" >Align</text>
+<path d="M154,100 L166,100" class="d-line" marker-end="url(#ah-camera-night-stack)"/>
+<rect x="168" y="78" width="60" height="44" rx="8" class="d-box"/>
+<text x="198.0" y="104.5" class="d-t" text-anchor="middle" >Denoise</text>
+<path d="M228,100 L240,100" class="d-line" marker-end="url(#ah-camera-night-stack)"/>
+<rect x="242" y="78" width="60" height="44" rx="8" class="d-box"/>
+<text x="272.0" y="104.5" class="d-t" text-anchor="middle" >Tones</text>
+<path d="M302,100 L322,100" class="d-line" marker-end="url(#ah-camera-night-stack)"/>
+<rect x="324" y="78" width="56" height="44" rx="3" class="d-green d-fill" opacity="0.8"/>
+<text x="20" y="142" class="d-s" text-anchor="start" >15-30 frames</text>
+<text x="198" y="142" class="d-s" text-anchor="middle" >Under two seconds, by software</text>
+<text x="380" y="142" class="d-s" text-anchor="end" >One image</text>
+<line x1="20" y1="158" x2="380" y2="158" class="d-line d-faint"/>
+<text x="20" y="186" class="d-t" text-anchor="start" >Dedicated camera</text>
+<rect x="20" y="198" width="44" height="32" rx="2" class="d-box"/>
+<path d="M68,214 L92,214" class="d-line" marker-end="url(#ah-camera-night-stack)"/>
+<rect x="94" y="192" width="208" height="44" rx="8" class="d-box"/>
+<text x="198.0" y="218.5" class="d-t" text-anchor="middle" >You decide how it looks</text>
+<path d="M302,214 L322,214" class="d-line" marker-end="url(#ah-camera-night-stack)"/>
+<rect x="324" y="192" width="56" height="44" rx="3" class="d-green d-fill" opacity="0.8"/>
+<text x="20" y="256" class="d-s" text-anchor="start" >One raw capture</text>
+<text x="380" y="256" class="d-s" text-anchor="end" >One image</text>
+</svg>

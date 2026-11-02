@@ -34,6 +34,8 @@ Why does it dominate? Three reasons. First, it was early — Lightroom launched 
 
 **Subscription fatigue.** Paying $240/year forever for software you used to buy once for $150 doesn't sit right with a lot of people. Miss a payment and you lose access to your editing tools — though not your files.
 
+![Lightroom's $19.99 a month against one-time prices. The dots mark when the subscription has cost more.](diagram:lightroom-cost)
+
 **Performance.** Lightroom Classic in 2026 is still sluggish on large catalogs. Users on Adobe's own forums report lag on M4 MacBook Pros with 24GB of RAM. The Develop module stutters when applying brushes. AI features eat memory. Import and export can crawl. For software that costs $240/year, this is hard to defend.
 
 **Catalog lock-in.** Your Lightroom catalog — all your edits, keywords, collections, ratings — is stored in a proprietary format. You can export metadata to XMP sidecar files, but the process is imperfect. Switching tools means losing some edit history. Adobe designed it this way.
@@ -187,6 +189,8 @@ This is opinionated. Disagree if you want.
 **You're already in Lightroom and it works:** Stay. Seriously. If your workflow is productive and the subscription doesn't bother you, switching costs are real. Migrate when you have a reason, not on principle.
 
 **You're just starting out:** Don't start with Lightroom. Start with darktable (free, forces you to learn) or Photomator (cheap, gets out of your way). You can always move to Lightroom later if you need it. But starting with a subscription creates a dependency before you know what you actually need.
+
+![Who does which job. Full rows can replace Lightroom alone, and half rows are the pairings above.](diagram:lightroom-halves)
 
 ---
 

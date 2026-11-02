@@ -87,6 +87,8 @@ All of this is exportable as [OPML](https://opml.org/) — a standard format for
 
 This is the portability promise of RSS that social platforms can't match. My subscription list isn't locked to a platform. It's a file.
 
+![Four folders in one reader, and the whole list leaves as a file.](diagram:rss-setup)
+
 ---
 
 ## Further reading

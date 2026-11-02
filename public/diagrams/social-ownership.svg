@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 372" role="img" aria-labelledby="t-social-ownership"><title id="t-social-ownership">Where your account lives on each network. On the fediverse it is one instance, and on Bluesky one PDS. Farcaster splits identity on Optimism from posts on Snapchain. Lens keeps your account and followers on its own chain. Nostr splits a key you hold from the relays you pick</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-social-ownership" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Where your account lives</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >One box holds it all. Two boxes split identity from posts.</text>
+<text x="20" y="73" class="d-t" text-anchor="start" >Fediverse</text>
+<text x="20" y="89" class="d-s" text-anchor="start" >ActivityPub</text>
+<rect x="100" y="52" width="280" height="48" rx="8" class="d-box"/>
+<circle cx="114" cy="70" r="4" class="d-blue d-fill"/>
+<text x="126" y="74" class="d-t" text-anchor="start" >One instance</text>
+<text x="126" y="90" class="d-s" text-anchor="start" >Account and posts together</text>
+<text x="20" y="129" class="d-t" text-anchor="start" >Bluesky</text>
+<text x="20" y="145" class="d-s" text-anchor="start" >AT Protocol</text>
+<rect x="100" y="108" width="280" height="48" rx="8" class="d-box"/>
+<circle cx="114" cy="126" r="4" class="d-blue d-fill"/>
+<text x="126" y="130" class="d-t" text-anchor="start" >Your PDS</text>
+<text x="126" y="146" class="d-s" text-anchor="start" >Identity, followers and posts</text>
+<text x="20" y="185" class="d-t" text-anchor="start" >Farcaster</text>
+<text x="20" y="201" class="d-s" text-anchor="start" >Wallet key</text>
+<rect x="100" y="164" width="136" height="48" rx="8" class="d-box"/>
+<circle cx="114" cy="182" r="4" class="d-amber d-fill"/>
+<text x="126" y="186" class="d-t" text-anchor="start" >Optimism</text>
+<text x="126" y="202" class="d-s" text-anchor="start" >Identity</text>
+<rect x="244" y="164" width="136" height="48" rx="8" class="d-box"/>
+<circle cx="258" cy="182" r="4" class="d-amber d-fill"/>
+<text x="270" y="186" class="d-t" text-anchor="start" >Snapchain</text>
+<text x="270" y="202" class="d-s" text-anchor="start" >Posts</text>
+<text x="20" y="241" class="d-t" text-anchor="start" >Lens</text>
+<text x="20" y="257" class="d-s" text-anchor="start" >Wallet</text>
+<rect x="100" y="220" width="280" height="48" rx="8" class="d-box"/>
+<circle cx="114" cy="238" r="4" class="d-amber d-fill"/>
+<text x="126" y="242" class="d-t" text-anchor="start" >Lens chain</text>
+<text x="126" y="258" class="d-s" text-anchor="start" >Account and followers</text>
+<text x="20" y="297" class="d-t" text-anchor="start" >Nostr</text>
+<text x="20" y="313" class="d-s" text-anchor="start" >Keypair</text>
+<rect x="100" y="276" width="136" height="48" rx="8" class="d-box"/>
+<circle cx="114" cy="294" r="4" class="d-green d-fill"/>
+<text x="126" y="298" class="d-t" text-anchor="start" >Your key</text>
+<text x="126" y="314" class="d-s" text-anchor="start" >Identity</text>
+<rect x="244" y="276" width="136" height="48" rx="8" class="d-box"/>
+<circle cx="258" cy="294" r="4" class="d-blue d-fill"/>
+<text x="270" y="298" class="d-t" text-anchor="start" >Relays you pick</text>
+<text x="270" y="314" class="d-s" text-anchor="start" >Signed events</text>
+<circle cx="24" cy="344" r="4" class="d-blue d-fill"/>
+<text x="34" y="348" class="d-s" text-anchor="start" >Servers</text>
+<circle cx="104" cy="344" r="4" class="d-amber d-fill"/>
+<text x="114" y="348" class="d-s" text-anchor="start" >Chains and data networks</text>
+<circle cx="266" cy="344" r="4" class="d-green d-fill"/>
+<text x="276" y="348" class="d-s" text-anchor="start" >A key you hold</text>
+</svg>

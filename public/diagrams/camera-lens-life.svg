@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 234" role="img" aria-labelledby="t-camera-lens-life"><title id="t-camera-lens-life">A ten-year timeline. Three camera bodies follow each other, replaced every three to four years, each worth 40 to 60 percent less after two years. One lens runs across the whole decade and holds its value</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-camera-lens-life" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >What you keep for a decade</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A sketch, with a new body every 3.5 years</text>
+<text x="20" y="62" class="d-s" text-anchor="start" >Bodies, replaced every 3 to 4 years</text>
+<rect x="20" y="70" width="123.0" height="32" rx="3" class="d-rose d-fill" opacity="0.8"/>
+<text x="30" y="90" class="d-t" text-anchor="start" style="fill:var(--background,#faf8f5)">Body 1</text>
+<rect x="146.0" y="70" width="123.0" height="32" rx="3" class="d-rose d-fill" opacity="0.8"/>
+<text x="156.0" y="90" class="d-t" text-anchor="start" style="fill:var(--background,#faf8f5)">Body 2</text>
+<rect x="272" y="70" width="105" height="32" rx="3" class="d-rose d-fill" opacity="0.8"/>
+<text x="282" y="90" class="d-t" text-anchor="start" style="fill:var(--background,#faf8f5)">Body 3</text>
+<line x1="92" y1="102" x2="92" y2="112" class="d-line"/>
+<text x="98" y="118" class="d-s" text-anchor="start" >After two years: worth 40-60% less</text>
+<text x="20" y="146" class="d-s" text-anchor="start" >One good lens, holding its value</text>
+<rect x="20" y="154" width="360" height="32" rx="3" class="d-green d-fill" opacity="0.85"/>
+<text x="30" y="174" class="d-t" text-anchor="start" style="fill:var(--background,#faf8f5)">Lens</text>
+<line x1="20" y1="198" x2="380" y2="198" class="d-line d-faint"/>
+<text x="20" y="214" class="d-s" text-anchor="middle" >0</text>
+<text x="92" y="214" class="d-s" text-anchor="middle" >2</text>
+<text x="164" y="214" class="d-s" text-anchor="middle" >4</text>
+<text x="236" y="214" class="d-s" text-anchor="middle" >6</text>
+<text x="308" y="214" class="d-s" text-anchor="middle" >8</text>
+<text x="380" y="214" class="d-s" text-anchor="end" >10 years</text>
+</svg>

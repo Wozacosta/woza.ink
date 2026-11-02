@@ -101,6 +101,8 @@ These aren't just notes for future you. They're the context you'll inject into t
 
 The mental model shift: instead of "I'm coding with an AI assistant," think "I'm building a system where the agent is one component, and documentation is the interface between sessions." The agent is stateless. Your docs are the state.
 
+![Chat doesn't survive a reset. Decisions you wrote down do.](diagram:context-handoff)
+
 ---
 
 ## Practical patterns

@@ -36,3 +36,42 @@ s.add('<line x1="20" y1="362" x2="380" y2="362" class="d-line d-faint"/>')
 s.text(20, 386, "Nothing visible connects the top box to the bottom one.", "d-t")
 s.text(20, 406, "How well that hides you depends on who else is in the pool.", "d-s")
 s.render()
+
+# ── 3. How the RPC undoes the pool ──────────────────────────────
+s = Svg("kohaku-relink", 400, 300, "After a shielded withdrawal nothing onchain links the old address and the fresh one. But the wallet then asks one RPC for both balances from one IP, so that server can link them anyway")
+s.text(20, 22, "After a shielded withdrawal", "d-t")
+s.box(20, 36, 120, 44, "Old address", anchor="middle")
+s.box(260, 36, 120, 44, "Fresh address", anchor="middle")
+s.add('<line x1="142" y1="58" x2="258" y2="58" class="d-line d-faint" stroke-dasharray="3 4"/>')
+s.text(200, 52, "no link onchain", "d-s d-green d-ct", "middle")
+s.arrow([(80, 80), (80, 126)])
+s.arrow([(320, 80), (320, 126)])
+s.box(20, 128, 360, 54, "Your wallet", "Checks both balances", accent="blue")
+s.arrow([(200, 182), (200, 228)], "one IP, both addresses", 210, 209)
+s.box(20, 230, 360, 54, "The RPC", "Sees that the two go together", accent="rose")
+s.render()
+
+# ── 4. What each read fix solves ────────────────────────────────
+s = Svg("kohaku-reads", 400, 298, "Four approaches to reading the chain, and the one problem each solves. A light client proves the answer is right. Tor hides your IP. TEE plus ORAM and PIR hide the question, the first by trusting Intel's hardware and the second with cryptography alone")
+s.text(20, 22, "Four read fixes, one problem each", "d-t")
+s.text(20, 38, "Filled: the problem it's built to solve", "d-s")
+cols = [(206, "Validity"), (270, "Your IP"), (338, "Your question")]
+for x, label in cols:
+    s.text(x, 66, label, "d-s", "middle")
+rows = [
+    ("Light client", "Helios and Colibri", 0),
+    ("Tor", "Browser-only for now", 1),
+    ("TEE plus ORAM", "Trusts Intel's hardware", 2),
+    ("PIR", "Cryptography alone", 2),
+]
+for i, (name, note, solved) in enumerate(rows):
+    y = 76 + i * 54
+    s.add(f'<rect x="20" y="{y}" width="360" height="46" rx="8" class="d-box"/>')
+    s.text(34, y + 20, name, "d-t")
+    s.text(34, y + 36, note, "d-s")
+    for c, (x, _) in enumerate(cols):
+        if c == solved:
+            s.add(f'<circle cx="{x}" cy="{y + 23}" r="7" class="d-green d-fill"/>')
+        else:
+            s.add(f'<circle cx="{x}" cy="{y + 23}" r="6" class="d-line d-faint"/>')
+s.render()

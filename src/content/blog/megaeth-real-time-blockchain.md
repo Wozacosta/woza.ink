@@ -61,6 +61,8 @@ On a standard EVM node, every transaction that touches storage triggers disk rea
 
 SALT (Small Authentication Large Trie) is MegaETH's solution. The key insight: the authentication structure — the part you hash on every state access — doesn't need to live on disk if you have enough RAM. SALT restructures the state trie so the authentication tree fits in memory, while the actual state data stays on disk. The hot path — every transaction, every state access — never touches disk. The cold path — reconstructing a full proof, syncing a new node — still uses disk, but it's not on the critical performance path.
 
+![A standard node goes to disk for every step of a storage access. SALT keeps the authentication tree in RAM, so disk is left to the cold path.](diagram:megaeth-salt)
+
 This is a systems engineering improvement that exists beyond the whitepaper. It's also why the sequencer needs to be a high-spec machine: you need enough RAM to hold the authentication structure for the full chain state. That hardware requirement is part of why the sequencer is centralized.
 
 ---

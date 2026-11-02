@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 272" role="img" aria-labelledby="t-privacy-onramp"><title id="t-privacy-onramp">Buying through a KYC exchange leaves a record tying your ID to your first address, though everything after it is private. Buying peer to peer has no central record of the same link</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-privacy-onramp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >The chain can't hide how you got in</text>
+<text x="20" y="50" class="d-s d-rose d-ct" text-anchor="start" >Through a KYC exchange</text>
+<rect x="20" y="58" width="94" height="38" rx="8" class="d-box"/>
+<text x="67.0" y="81.5" class="d-t" text-anchor="middle" >Your ID</text>
+<path d="M114,77 L128,77" class="d-line" marker-end="url(#ah-privacy-onramp)"/>
+<rect x="130" y="58" width="94" height="38" rx="8" class="d-box"/>
+<text x="177.0" y="81.5" class="d-t" text-anchor="middle" >Exchange</text>
+<path d="M224,77 L238,77" class="d-line" marker-end="url(#ah-privacy-onramp)"/>
+<rect x="240" y="58" width="94" height="38" rx="8" class="d-box"/>
+<text x="287.0" y="81.5" class="d-t" text-anchor="middle" >Your address</text>
+<path d="M334,77 L382,77" class="d-line" stroke-dasharray="4 3" marker-end="url(#ah-privacy-onramp)"/>
+<text x="358" y="71" class="d-s" text-anchor="middle" >private</text>
+<text x="20" y="170" class="d-s d-green d-ct" text-anchor="start" >Peer to peer</text>
+<rect x="20" y="178" width="94" height="38" rx="8" class="d-box"/>
+<text x="67.0" y="201.5" class="d-t" text-anchor="middle" >You</text>
+<path d="M114,197 L128,197" class="d-line" marker-end="url(#ah-privacy-onramp)"/>
+<rect x="130" y="178" width="94" height="38" rx="8" class="d-box"/>
+<text x="177.0" y="201.5" class="d-t" text-anchor="middle" >A seller</text>
+<path d="M224,197 L238,197" class="d-line" marker-end="url(#ah-privacy-onramp)"/>
+<rect x="240" y="178" width="94" height="38" rx="8" class="d-box"/>
+<text x="287.0" y="201.5" class="d-t" text-anchor="middle" >Your address</text>
+<path d="M334,197 L382,197" class="d-line" stroke-dasharray="4 3" marker-end="url(#ah-privacy-onramp)"/>
+<text x="358" y="191" class="d-s" text-anchor="middle" >private</text>
+<path d="M67,96 L67,110 L287,110 L287,96" class="d-line d-rose d-stroke"/>
+<text x="177" y="126" class="d-s d-rose d-ct" text-anchor="middle" >The exchange's record ties these two together</text>
+<text x="177" y="236" class="d-s d-green d-ct" text-anchor="middle" >No central record of who bought</text>
+</svg>

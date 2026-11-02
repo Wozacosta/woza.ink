@@ -30,6 +30,8 @@ Most writing on crypto privacy, mine included, starts with the public ledger. Bu
 
 A shielded pool only fixes the last one. Say you withdraw to a fresh address. The chain shows no link between the old address and the new one. But your wallet now checks both balances, from one IP, through one RPC, so that server can link them anyway. Privacy at one layer gets undone by the layer next to it.
 
+![The pool removes the link onchain. The balance check brings it back at the RPC.](diagram:kohaku-relink)
+
 That's the argument for doing this in the wallet: it's the only piece of software that touches all four.
 
 ---
@@ -76,6 +78,8 @@ Hiding the question is harder, and there are three approaches in progress:
 - **Tor.** The [`anon` provider](https://github.com/ethereum/kohaku/blob/master/packages/provider/README.md) hides your IP from the endpoint. It doesn't hide what you asked, and for now it's a browser-only proof of concept.
 - **TEE plus ORAM.** A server inside a secure enclave, using oblivious RAM so that even its memory access pattern doesn't reveal which addresses you read. [Oblivious Labs](https://hackmd.io/@tkmct/BywaGeY2le) is building this one, and it moves the trust to Intel's hardware.
 - **PIR.** Private information retrieval: the server answers your query without learning what it was, using cryptography alone. The roadmap calls this the longer-term goal. The Foundation's [Reads team](https://reads.ethereum.foundation/roadmap/) lists a mainnet demo with Kohaku for Q4 2026, serving ETH balances, nonces, top ERC-20 balances and ENS names from GPUs, with production-ready PIR in 2027.
+
+![A light client checks the answers, Tor hides your IP, and TEE plus ORAM and PIR hide what you asked.](diagram:kohaku-reads)
 
 ---
 

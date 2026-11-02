@@ -40,6 +40,8 @@ Signal's crypto is the gold standard for modern secure messaging:
 - Perfect Forward Secrecy (PFS) and future secrecy (post-compromise recovery).
 - Group chats use pairwise encrypted sessions and group keying primitives that avoid a single point-of-trust.
 
+![A sketch of what those two terms mean. A stolen key opens a few messages, not the ones before it, and the ratchet locks the thief out again.](diagram:signal-ratchet)
+
 Signal's implementation choices:
 - Keys are generated and stored on your device.
 - Sync between devices is handled via encrypted backups or secure device linking — not by storing cleartext on servers.
@@ -60,6 +62,8 @@ Consequences:
 - Secret Chats = secure, but clunky (device-scoped, no multi-device sync) and underused.
 
 A design trade-off: Telegram prioritized features and user experience (multi-device, server-side search, large-group capabilities) over default E2EE for all conversations.
+
+![One message through each design. Signal's server passes on what it can't read. Telegram's reads it, and that's what makes server-side features possible.](diagram:messenger-flow)
 
 ---
 

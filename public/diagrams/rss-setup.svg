@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 336" role="img" aria-labelledby="t-rss-setup"><title id="t-rss-setup">Four folders, Tech, Thinking, News and Releases, feed into NetNewsWire, which syncs between Mac and iOS through iCloud. The subscription list exports as an OPML file that can be imported into Miniflux or any other serious reader. Social posts, YouTube and newsletters stay out of the reader</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-rss-setup" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Four folders, and the exit is a file</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Each folder gets its own kind of attention</text>
+<g data-node="tech">
+<rect x="20" y="56" width="150" height="46" rx="8" class="d-box"/>
+<circle cx="34" cy="74" r="4" class="d-blue d-fill"/>
+<text x="46" y="78" class="d-t" text-anchor="start" >Tech</text>
+<text x="46" y="94" class="d-s" text-anchor="start" >High volume, skim</text>
+</g>
+<path d="M170,79 L193,79 L193,110 L214,110" class="d-line" data-edge="tech-reader" marker-end="url(#ah-rss-setup)"/>
+<g data-node="thinking">
+<rect x="20" y="110" width="150" height="46" rx="8" class="d-box"/>
+<circle cx="34" cy="128" r="4" class="d-violet d-fill"/>
+<text x="46" y="132" class="d-t" text-anchor="start" >Thinking</text>
+<text x="46" y="148" class="d-s" text-anchor="start" >Read properly</text>
+</g>
+<path d="M170,133 L193,133 L193,110 L214,110" class="d-line" data-edge="thinking-reader" marker-end="url(#ah-rss-setup)"/>
+<g data-node="news">
+<rect x="20" y="164" width="150" height="46" rx="8" class="d-box"/>
+<circle cx="34" cy="182" r="4" class="d-amber d-fill"/>
+<text x="46" y="186" class="d-t" text-anchor="start" >News</text>
+<text x="46" y="202" class="d-s" text-anchor="start" >Kept small</text>
+</g>
+<path d="M170,187 L193,187 L193,110 L214,110" class="d-line" data-edge="news-reader" marker-end="url(#ah-rss-setup)"/>
+<g data-node="releases">
+<rect x="20" y="218" width="150" height="46" rx="8" class="d-box"/>
+<circle cx="34" cy="236" r="4" class="d-green d-fill"/>
+<text x="46" y="240" class="d-t" text-anchor="start" >Releases</text>
+<text x="46" y="256" class="d-s" text-anchor="start" >Pure signal</text>
+</g>
+<path d="M170,241 L193,241 L193,110 L214,110" class="d-line" data-edge="releases-reader" marker-end="url(#ah-rss-setup)"/>
+<g data-node="reader">
+<rect x="216" y="84" width="164" height="52" rx="8" class="d-box"/>
+<circle cx="230" cy="102" r="4" class="d-green d-fill"/>
+<text x="242" y="106" class="d-t" text-anchor="start" >NetNewsWire</text>
+<text x="242" y="122" class="d-s" text-anchor="start" >Mac and iOS, iCloud sync</text>
+</g>
+<g data-node="opml">
+<rect x="216" y="176" width="164" height="52" rx="8" class="d-box"/>
+<circle cx="230" cy="194" r="4" class="d-amber d-fill"/>
+<text x="242" y="198" class="d-t" text-anchor="start" >OPML file</text>
+<text x="242" y="214" class="d-s" text-anchor="start" >Your subscription list</text>
+</g>
+<g data-node="miniflux">
+<rect x="216" y="268" width="164" height="52" rx="8" class="d-box"/>
+<circle cx="230" cy="286" r="4" class="d-blue d-fill"/>
+<text x="242" y="290" class="d-t" text-anchor="start" >Miniflux</text>
+<text x="242" y="306" class="d-s" text-anchor="start" >Or any serious reader</text>
+</g>
+<path d="M298,136 L298,174" class="d-line" data-edge="reader-opml" marker-end="url(#ah-rss-setup)"/>
+<text x="306" y="160" class="d-s" text-anchor="start" data-edge="reader-opml">export</text>
+<path d="M298,228 L298,266" class="d-line" data-edge="opml-miniflux" marker-end="url(#ah-rss-setup)"/>
+<text x="306" y="252" class="d-s" text-anchor="start" data-edge="opml-miniflux">import</text>
+<text x="20" y="296" class="d-s" text-anchor="start" >Stays out of the reader:</text>
+<text x="20" y="311" class="d-s" text-anchor="start" >social posts, YouTube,</text>
+<text x="20" y="326" class="d-s" text-anchor="start" >newsletters</text>
+</svg>

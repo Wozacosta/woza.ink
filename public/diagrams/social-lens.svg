@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 374" role="img" aria-labelledby="t-social-lens"><title id="t-social-lens">Six apps share one Lens network holding your account and followers. Mask Network stewards the protocol, builds Firefly and has acquired Orb. Hey, Palus, Soclly and Cantuum sit on the same network</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-social-lens" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="16" width="235" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="34" r="4" class="d-rose d-fill"/>
+<text x="46" y="38" class="d-t" text-anchor="start" >Mask Network</text>
+<text x="46" y="54" class="d-s" text-anchor="start" >Steward of Lens since January 2026</text>
+<path d="M75,70 L75,102" class="d-line" marker-end="url(#ah-social-lens)"/>
+<text x="83" y="91" class="d-s" text-anchor="start" >acquired</text>
+<path d="M200,70 L200,102" class="d-line" marker-end="url(#ah-social-lens)"/>
+<text x="208" y="91" class="d-s" text-anchor="start" >builds</text>
+<path d="M255,43 L262,43 L262,190" class="d-line" marker-end="url(#ah-social-lens)"/>
+<text x="270" y="91" class="d-s" text-anchor="start" >stewards</text>
+<rect x="20" y="104" width="110" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="122" r="4" class="d-rose d-fill"/>
+<text x="46" y="126" class="d-t" text-anchor="start" >Orb</text>
+<text x="46" y="142" class="d-s" text-anchor="start" >Mobile app</text>
+<rect x="145" y="104" width="110" height="54" rx="8" class="d-box"/>
+<circle cx="159" cy="122" r="4" class="d-rose d-fill"/>
+<text x="171" y="126" class="d-t" text-anchor="start" >Firefly</text>
+<text x="171" y="142" class="d-s" text-anchor="start" >Aggregator</text>
+<rect x="270" y="104" width="110" height="54" rx="8" class="d-box"/>
+<circle cx="284" cy="122" r="4" class="d-blue d-fill"/>
+<text x="296" y="126" class="d-t" text-anchor="start" >Hey</text>
+<text x="296" y="142" class="d-s" text-anchor="start" >Payments</text>
+<rect x="20" y="192" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="210" r="4" class="d-green d-fill"/>
+<text x="46" y="214" class="d-t" text-anchor="start" >Lens network</text>
+<text x="46" y="230" class="d-s" text-anchor="start" >Your account and followers, in every app here</text>
+<path d="M75,192 L75,160" class="d-line" marker-end="url(#ah-social-lens)"/>
+<path d="M75,246 L75,278" class="d-line" marker-end="url(#ah-social-lens)"/>
+<path d="M200,192 L200,160" class="d-line" marker-end="url(#ah-social-lens)"/>
+<path d="M200,246 L200,278" class="d-line" marker-end="url(#ah-social-lens)"/>
+<path d="M325,192 L325,160" class="d-line" marker-end="url(#ah-social-lens)"/>
+<path d="M325,246 L325,278" class="d-line" marker-end="url(#ah-social-lens)"/>
+<rect x="20" y="280" width="110" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="298" r="4" class="d-blue d-fill"/>
+<text x="46" y="302" class="d-t" text-anchor="start" >Palus</text>
+<text x="46" y="318" class="d-s" text-anchor="start" >Open source</text>
+<rect x="145" y="280" width="110" height="54" rx="8" class="d-box"/>
+<circle cx="159" cy="298" r="4" class="d-blue d-fill"/>
+<text x="171" y="302" class="d-t" text-anchor="start" >Soclly</text>
+<text x="171" y="318" class="d-s" text-anchor="start" >Publishing</text>
+<rect x="270" y="280" width="110" height="54" rx="8" class="d-box"/>
+<circle cx="284" cy="298" r="4" class="d-blue d-fill"/>
+<text x="296" y="302" class="d-t" text-anchor="start" >Cantuum</text>
+<text x="296" y="318" class="d-s" text-anchor="start" >Music player</text>
+<text x="20" y="360" class="d-s" text-anchor="start" >A shared audience, with two front doors under one owner.</text>
+</svg>

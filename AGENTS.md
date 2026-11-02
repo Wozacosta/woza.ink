@@ -75,8 +75,9 @@ so they appear without a deploy, and replies hidden on Bluesky stay hidden. Trea
 untrusted: render it through `splitFacets` in `src/lib/bluesky.ts`, never as HTML.
 
 **Add a post to a series**: add `series: <slug>` to the frontmatter, using a slug from
-`src/data/series.ts` (a test fails if it isn't registered). Parts are ordered oldest first by
-`date`; if two share a date, set `part: <n>` on them to order them. A new series just needs an
+`src/data/series.ts` (a test fails if it isn't registered). Parts are numbered oldest first by
+`date`, and the series page lists them newest first; if two share a date, set `part: <n>` on them
+to order them. A new series just needs an
 entry in that file.
 
 **Add sidenotes**: create `src/data/sidenotes/<slug>.ts` exporting `sidenotes` and add it

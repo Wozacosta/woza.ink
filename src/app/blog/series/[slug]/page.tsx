@@ -36,7 +36,8 @@ export default async function SeriesPage({
   const series = getSeries(slug);
   if (!series) notFound();
 
-  const posts = getPostsInSeries(slug);
+  // Newest first here; getPostsInSeries stays oldest first so part numbers hold
+  const posts = [...getPostsInSeries(slug)].reverse();
 
   return (
     <>

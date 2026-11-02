@@ -46,6 +46,8 @@ The flow is dead simple:
 3. The agent constructs a payment, signs it, and retries the request with a `PAYMENT-SIGNATURE` header
 4. The server (or a facilitator) verifies the payment settled on-chain and returns the resource
 
+![The agent asks, gets a 402 with the price, retries with a signed payment, and the server returns the resource once the payment has settled.](diagram:x402-flow)
+
 No accounts, no API keys, no sessions. One request, one payment, one response.
 
 Integration is a middleware call:
@@ -75,6 +77,8 @@ That members list is worth reading twice. Stripe is a premier member of the foun
 MPP takes the opposite approach. Where x402 is a thin shim, MPP is a full-stack payment system designed for high-frequency agent transactions.
 
 The key concept is **sessions**. Instead of one blockchain transaction per request, an agent opens a session, authorizes a spending limit upfront, and streams micropayments against it continuously. For an agent making hundreds of API calls in a single task, one on-chain transaction per call doesn't scale.
+
+![x402's basic flow attaches a payment to every call. MPP authorizes a spending limit once and streams micropayments against it.](diagram:agent-payments-sessions)
 
 MPP runs on [Tempo](https://www.tempo.network/), a purpose-built L1 that does 10,000+ TPS with sub-second finality and no native gas token — fees are paid in stablecoins. It also reaches beyond crypto: cards, buy-now-pay-later, and hybrid flows through Shared Payment Tokens. Visa extended it to card rails; Lightspark extended it to Bitcoin over Lightning.
 

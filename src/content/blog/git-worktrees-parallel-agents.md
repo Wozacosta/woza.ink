@@ -33,6 +33,8 @@ Normally your repo has one working tree — the directory where files exist on d
 
 All three point to the same `.git` directory. They share history, remotes, and refs. They don't share working files — each directory has its own copy of the branch it's checked out on.
 
+![Three directories on three branches, one agent in each, all sharing one .git directory.](diagram:git-worktrees)
+
 ---
 
 ## Why this matters for agents

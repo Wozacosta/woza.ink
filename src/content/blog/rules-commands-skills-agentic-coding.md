@@ -137,6 +137,8 @@ A concrete example — writing a new feature:
 
 Without rules, every session starts from scratch. Without commands, you repeat yourself constantly. Without skills, complex tasks get shallow, inconsistent results.
 
+![Rules run the whole session, a command runs when you trigger it, and a skill loads when the task calls for it.](diagram:agent-layers)
+
 ---
 
 ## The practical takeaway

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 288" role="img" aria-labelledby="t-libghostty-stack"><title id="t-libghostty-stack">Ghostty, cmux and any other app can sit on libghostty. libghostty-vt, which parses terminal sequences and keeps terminal state with no dependencies, is taking shape. Input handling, GPU rendering and GTK and Swift widgets are planned</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-libghostty-stack" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="16" width="112" height="42" rx="8" class="d-box"/>
+<text x="76.0" y="41.5" class="d-t" text-anchor="middle" >Ghostty</text>
+<path d="M76,58 L76,88" class="d-line" marker-end="url(#ah-libghostty-stack)"/>
+<rect x="144" y="16" width="112" height="42" rx="8" class="d-box"/>
+<text x="200.0" y="41.5" class="d-t" text-anchor="middle" >cmux</text>
+<path d="M200,58 L200,88" class="d-line" marker-end="url(#ah-libghostty-stack)"/>
+<rect x="268" y="16" width="112" height="42" rx="8" class="d-ext"/>
+<text x="324.0" y="41.5" class="d-t" text-anchor="middle" >Your app</text>
+<path d="M324,58 L324,88" class="d-line" marker-end="url(#ah-libghostty-stack)"/>
+<rect x="20" y="90" width="360" height="168" rx="8" class="d-box"/>
+<text x="34" y="114" class="d-t" text-anchor="start" >libghostty</text>
+<rect x="34" y="124" width="332" height="54" rx="8" class="d-box"/>
+<circle cx="48" cy="142" r="4" class="d-green d-fill"/>
+<text x="60" y="146" class="d-t" text-anchor="start" >libghostty-vt</text>
+<text x="60" y="162" class="d-s" text-anchor="start" >Terminal sequences and state, no dependencies</text>
+<rect x="34" y="188" width="106" height="42" rx="8" class="d-ext"/>
+<text x="87.0" y="213.5" class="d-t" text-anchor="middle" >Input</text>
+<rect x="147" y="188" width="106" height="42" rx="8" class="d-ext"/>
+<text x="200.0" y="213.5" class="d-t" text-anchor="middle" >GPU rendering</text>
+<rect x="260" y="188" width="106" height="42" rx="8" class="d-ext"/>
+<text x="313.0" y="213.5" class="d-t" text-anchor="middle" >Widgets</text>
+<text x="34" y="248" class="d-s" text-anchor="start" >Dashed: planned</text>
+</svg>

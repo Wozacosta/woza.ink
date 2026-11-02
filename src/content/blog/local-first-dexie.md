@@ -105,11 +105,7 @@ Design pattern checklist:
 4. Sync to the cloud in the background (DexieCloud or custom sync).
 5. Handle conflicts thoughtfully (merge strategies, last-write-wins, or CRDTs if needed).
 
-Architecture sketch:
-
-User Action
-→ Local IndexedDB (Dexie) — UI updates immediately
-→ Background Sync (DexieCloud) → Cloud DB → Other devices pull changes
+![Your UI reads and writes a local database, so it updates at once. Sync to the cloud and to other devices happens in the background.](diagram:local-first-flow)
 
 ---
 

@@ -37,6 +37,8 @@ RSS = Really Simple Syndication. It’s a standardized XML format websites use t
 
 That’s it. No accounts, no tracking, no weird engagement math.
 
+![On a platform something between you and the publisher picks what you see. With RSS your reader fetches the feed itself.](diagram:rss-flow)
+
 ## Quick examples (what you'll actually subscribe to)
 - For this site: `https://your-site.example.com/feed.xml` or `/feed.xml`
 - For many blogs: try appending `/feed` or `/rss` to the site URL

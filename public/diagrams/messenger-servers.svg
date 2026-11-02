@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 318" role="img" aria-labelledby="t-messenger-servers"><title id="t-messenger-servers">Signal encrypts every chat end to end, so its server only sees ciphertext. Telegram's default cloud chats are encrypted in transit but Telegram holds the keys and can read everything. Telegram's secret chats are end to end, but opt-in and one-to-one</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-messenger-servers" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Signal</text>
+<text x="380" y="22" class="d-s" text-anchor="end" >Every chat, by default</text>
+<rect x="20" y="34" width="70" height="38" rx="8" class="d-box"/>
+<text x="55.0" y="57.5" class="d-t" text-anchor="middle" >You</text>
+<rect x="160" y="34" width="80" height="38" rx="8" class="d-box"/>
+<text x="200.0" y="57.5" class="d-t" text-anchor="middle" >Server</text>
+<rect x="310" y="34" width="70" height="38" rx="8" class="d-box"/>
+<text x="345.0" y="57.5" class="d-t" text-anchor="middle" >Friend</text>
+<path d="M90,53 L158,53" class="d-line" marker-end="url(#ah-messenger-servers)"/>
+<path d="M240,53 L308,53" class="d-line" marker-end="url(#ah-messenger-servers)"/>
+<rect x="114" y="44" width="18" height="18" rx="4" class="d-box"/>
+<path d="M120,52 v-2 a3,3 0 0 1 6,0 v2" class="d-line d-green d-stroke"/>
+<rect x="118.5" y="52" width="9" height="6" rx="1" class="d-green d-fill"/>
+<rect x="264" y="44" width="18" height="18" rx="4" class="d-box"/>
+<path d="M270,52 v-2 a3,3 0 0 1 6,0 v2" class="d-line d-green d-stroke"/>
+<rect x="268.5" y="52" width="9" height="6" rx="1" class="d-green d-fill"/>
+<text x="200" y="89" class="d-s d-green d-ct" text-anchor="middle" >sees ciphertext only</text>
+<text x="20" y="112" class="d-t" text-anchor="start" >Telegram cloud chat</text>
+<text x="380" y="112" class="d-s" text-anchor="end" >The default</text>
+<rect x="20" y="124" width="70" height="38" rx="8" class="d-box"/>
+<text x="55.0" y="147.5" class="d-t" text-anchor="middle" >You</text>
+<rect x="160" y="124" width="80" height="38" rx="8" class="d-box"/>
+<text x="200.0" y="147.5" class="d-t" text-anchor="middle" >Server</text>
+<rect x="310" y="124" width="70" height="38" rx="8" class="d-box"/>
+<text x="345.0" y="147.5" class="d-t" text-anchor="middle" >Friend</text>
+<path d="M90,143 L158,143" class="d-line" marker-end="url(#ah-messenger-servers)"/>
+<path d="M240,143 L308,143" class="d-line" marker-end="url(#ah-messenger-servers)"/>
+<rect x="114" y="134" width="18" height="18" rx="4" class="d-box"/>
+<path d="M120,142 v-2 a3,3 0 0 1 6,0 v2" class="d-line d-amber d-stroke"/>
+<rect x="118.5" y="142" width="9" height="6" rx="1" class="d-amber d-fill"/>
+<rect x="264" y="134" width="18" height="18" rx="4" class="d-box"/>
+<path d="M270,142 v-2 a3,3 0 0 1 6,0 v2" class="d-line d-amber d-stroke"/>
+<rect x="268.5" y="142" width="9" height="6" rx="1" class="d-amber d-fill"/>
+<text x="200" y="179" class="d-s d-rose d-ct" text-anchor="middle" >holds the keys, reads everything</text>
+<text x="20" y="202" class="d-t" text-anchor="start" >Telegram secret chat</text>
+<text x="380" y="202" class="d-s" text-anchor="end" >Opt-in, one-to-one, one device pair</text>
+<rect x="20" y="214" width="70" height="38" rx="8" class="d-box"/>
+<text x="55.0" y="237.5" class="d-t" text-anchor="middle" >You</text>
+<rect x="160" y="214" width="80" height="38" rx="8" class="d-box"/>
+<text x="200.0" y="237.5" class="d-t" text-anchor="middle" >Server</text>
+<rect x="310" y="214" width="70" height="38" rx="8" class="d-box"/>
+<text x="345.0" y="237.5" class="d-t" text-anchor="middle" >Friend</text>
+<path d="M90,233 L158,233" class="d-line" marker-end="url(#ah-messenger-servers)"/>
+<path d="M240,233 L308,233" class="d-line" marker-end="url(#ah-messenger-servers)"/>
+<rect x="114" y="224" width="18" height="18" rx="4" class="d-box"/>
+<path d="M120,232 v-2 a3,3 0 0 1 6,0 v2" class="d-line d-green d-stroke"/>
+<rect x="118.5" y="232" width="9" height="6" rx="1" class="d-green d-fill"/>
+<rect x="264" y="224" width="18" height="18" rx="4" class="d-box"/>
+<path d="M270,232 v-2 a3,3 0 0 1 6,0 v2" class="d-line d-green d-stroke"/>
+<rect x="268.5" y="232" width="9" height="6" rx="1" class="d-green d-fill"/>
+<text x="200" y="269" class="d-s d-green d-ct" text-anchor="middle" >sees ciphertext only</text>
+<line x1="20" y1="282" x2="380" y2="282" class="d-line d-faint"/>
+<text x="20" y="306" class="d-t" text-anchor="start" >Encrypted in transit is not end-to-end.</text>
+</svg>

@@ -63,6 +63,8 @@ stow zsh
 
 Creates `~/.zshrc` → `~/dotfiles/zsh/.zshrc`. One command per package. Or `stow */` to stow everything at once.
 
+![The paths your tools read are symlinks. The real files live in the repo, one folder per tool.](diagram:dotfiles-stow)
+
 The package structure (one folder per tool) means you can selectively stow only what you need on a given machine — a server gets `git` and `zsh` but not `nvim` or `ghostty`.
 
 To unstow (remove the symlinks):

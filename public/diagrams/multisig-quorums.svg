@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 276" role="img" aria-labelledby="t-multisig-quorums"><title id="t-multisig-quorums">Compared with one key, 1-of-2 lets you lose a key but is easier to steal from. 3-of-3 needs three stolen keys but one lost key is fatal. 2-of-3 is the smallest setup that improves both: a thief needs two keys and you can lose one</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-multisig-quorums" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="240" y="22" class="d-s" text-anchor="middle" >Thief needs</text>
+<text x="332" y="22" class="d-s" text-anchor="middle" >You can lose</text>
+<text x="32" y="62.5" class="d-t" text-anchor="start" >1 key</text>
+<circle cx="97" cy="58" r="4.5" class="d-line d-green d-stroke"/>
+<path d="M101.5,58 h13 M110,58 v4 M114,58 v4" class="d-line d-green d-stroke"/>
+<text x="240" y="62.5" class="d-t" text-anchor="middle" >1</text>
+<text x="332" y="62.5" class="d-t" text-anchor="middle" >0</text>
+<text x="32" y="108.5" class="d-t" text-anchor="start" >1-of-2</text>
+<circle cx="97" cy="104" r="4.5" class="d-line d-green d-stroke"/>
+<path d="M101.5,104 h13 M110,104 v4 M114,104 v4" class="d-line d-green d-stroke"/>
+<circle cx="127" cy="104" r="4.5" class="d-line d-faint"/>
+<path d="M131.5,104 h13 M140,104 v4 M144,104 v4" class="d-line d-faint"/>
+<text x="240" y="108.5" class="d-t d-rose d-ct" text-anchor="middle" >1</text>
+<text x="332" y="108.5" class="d-t d-green d-ct" text-anchor="middle" >1</text>
+<rect x="20" y="128" width="360" height="44" rx="6" class="d-green d-fill" opacity="0.1"/>
+<text x="32" y="154.5" class="d-t" text-anchor="start" >2-of-3</text>
+<circle cx="97" cy="150" r="4.5" class="d-line d-green d-stroke"/>
+<path d="M101.5,150 h13 M110,150 v4 M114,150 v4" class="d-line d-green d-stroke"/>
+<circle cx="127" cy="150" r="4.5" class="d-line d-green d-stroke"/>
+<path d="M131.5,150 h13 M140,150 v4 M144,150 v4" class="d-line d-green d-stroke"/>
+<circle cx="157" cy="150" r="4.5" class="d-line d-faint"/>
+<path d="M161.5,150 h13 M170,150 v4 M174,150 v4" class="d-line d-faint"/>
+<text x="240" y="154.5" class="d-t d-green d-ct" text-anchor="middle" >2</text>
+<text x="332" y="154.5" class="d-t d-green d-ct" text-anchor="middle" >1</text>
+<text x="32" y="200.5" class="d-t" text-anchor="start" >3-of-3</text>
+<circle cx="97" cy="196" r="4.5" class="d-line d-green d-stroke"/>
+<path d="M101.5,196 h13 M110,196 v4 M114,196 v4" class="d-line d-green d-stroke"/>
+<circle cx="127" cy="196" r="4.5" class="d-line d-green d-stroke"/>
+<path d="M131.5,196 h13 M140,196 v4 M144,196 v4" class="d-line d-green d-stroke"/>
+<circle cx="157" cy="196" r="4.5" class="d-line d-green d-stroke"/>
+<path d="M161.5,196 h13 M170,196 v4 M174,196 v4" class="d-line d-green d-stroke"/>
+<text x="240" y="200.5" class="d-t d-green d-ct" text-anchor="middle" >3</text>
+<text x="332" y="200.5" class="d-t d-rose d-ct" text-anchor="middle" >0</text>
+<line x1="20" y1="232" x2="380" y2="232" class="d-line d-faint"/>
+<text x="20" y="256" class="d-t" text-anchor="start" >2-of-3 is the smallest setup that improves both.</text>
+</svg>

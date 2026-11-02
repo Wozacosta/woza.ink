@@ -67,6 +67,9 @@ class Svg:
         if label:
             self.text(lx, ly, label, "d-s", lanchor, attr.strip())
 
+    def rule(self, y):
+        self.add(f'<line x1="20" y1="{y}" x2="{self.w - 20}" y2="{y}" class="d-line d-faint"/>')
+
     def render(self):
         defs = (
             f'<defs><marker id="ah-{self.name}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" '

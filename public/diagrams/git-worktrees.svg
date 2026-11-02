@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 318" role="img" aria-labelledby="t-git-worktrees"><title id="t-git-worktrees">Three directories, each on its own branch and each with its own agent, all point at the same .git directory. They share history, remotes and refs, and keep separate working files</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-git-worktrees" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="16" width="116" height="34" rx="8" class="d-box"/>
+<text x="78.0" y="37.5" class="d-t" text-anchor="middle" >Agent 1</text>
+<path d="M78,50 L78,82" class="d-line" marker-end="url(#ah-git-worktrees)"/>
+<rect x="20" y="84" width="116" height="60" rx="8" class="d-box"/>
+<text x="78" y="109" class="d-s d-m" text-anchor="middle" >myapp/</text>
+<text x="78" y="128" class="d-t d-green d-ct" text-anchor="middle" >main</text>
+<path d="M78,144 L78,192" class="d-line" marker-end="url(#ah-git-worktrees)"/>
+<rect x="142" y="16" width="116" height="34" rx="8" class="d-box"/>
+<text x="200.0" y="37.5" class="d-t" text-anchor="middle" >Agent 2</text>
+<path d="M200,50 L200,82" class="d-line" marker-end="url(#ah-git-worktrees)"/>
+<rect x="142" y="84" width="116" height="60" rx="8" class="d-box"/>
+<text x="200" y="109" class="d-s d-m" text-anchor="middle" >myapp-feat-auth/</text>
+<text x="200" y="128" class="d-t d-blue d-ct" text-anchor="middle" >feat/auth</text>
+<path d="M200,144 L200,192" class="d-line" marker-end="url(#ah-git-worktrees)"/>
+<rect x="264" y="16" width="116" height="34" rx="8" class="d-box"/>
+<text x="322.0" y="37.5" class="d-t" text-anchor="middle" >Agent 3</text>
+<path d="M322,50 L322,82" class="d-line" marker-end="url(#ah-git-worktrees)"/>
+<rect x="264" y="84" width="116" height="60" rx="8" class="d-box"/>
+<text x="322" y="109" class="d-s d-m" text-anchor="middle" >myapp-fix-bug-42/</text>
+<text x="322" y="128" class="d-t d-violet d-ct" text-anchor="middle" >fix/bug-42</text>
+<path d="M322,144 L322,192" class="d-line" marker-end="url(#ah-git-worktrees)"/>
+<rect x="20" y="194" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="212" r="4" class="d-amber d-fill"/>
+<text x="46" y="216" class="d-t" text-anchor="start" >One .git directory</text>
+<text x="46" y="232" class="d-s" text-anchor="start" >History, remotes and refs are shared</text>
+<line x1="20" y1="266" x2="380" y2="266" class="d-line d-faint"/>
+<text x="20" y="290" class="d-t" text-anchor="start" >Every branch live at once.</text>
+<text x="20" y="308" class="d-s" text-anchor="start" >Each agent has its own files, so nobody steps on anybody.</text>
+</svg>

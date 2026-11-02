@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-megaeth-block-times"><title id="t-megaeth-block-times">Block times on a log scale: Ethereum about 12 seconds, Arbitrum and Optimism 250 milliseconds to 2 seconds, Solana about 400 milliseconds, MegaETH under 10 milliseconds</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-megaeth-block-times" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Block time, log scale</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Each gridline is ten times longer than the last</text>
+<line x1="20.0" y1="54" x2="20.0" y2="232" class="d-line d-faint" stroke-dasharray="3 3"/>
+<text x="20.0" y="248" class="d-s" text-anchor="start" >1 ms</text>
+<line x1="105.0" y1="54" x2="105.0" y2="232" class="d-line d-faint" stroke-dasharray="3 3"/>
+<text x="105.0" y="248" class="d-s" text-anchor="middle" >10 ms</text>
+<line x1="190.0" y1="54" x2="190.0" y2="232" class="d-line d-faint" stroke-dasharray="3 3"/>
+<text x="190.0" y="248" class="d-s" text-anchor="middle" >100 ms</text>
+<line x1="275.0" y1="54" x2="275.0" y2="232" class="d-line d-faint" stroke-dasharray="3 3"/>
+<text x="275.0" y="248" class="d-s" text-anchor="middle" >1 s</text>
+<line x1="360.0" y1="54" x2="360.0" y2="232" class="d-line d-faint" stroke-dasharray="3 3"/>
+<text x="360.0" y="248" class="d-s" text-anchor="middle" >10 s</text>
+<text x="20" y="70" class="d-t" text-anchor="start" >Ethereum</text>
+<text x="380" y="70" class="d-s d-rose d-ct" text-anchor="end" >~12 s</text>
+<rect x="20" y="77" width="346.7" height="14" rx="3" class="d-rose d-fill" opacity="0.85"/>
+<text x="20" y="114" class="d-t" text-anchor="start" >Arbitrum / Optimism</text>
+<text x="380" y="114" class="d-s d-amber d-ct" text-anchor="end" >250 ms–2 s</text>
+<rect x="20" y="121" width="280.6" height="14" rx="3" class="d-amber d-fill" opacity="0.35"/>
+<rect x="20" y="121" width="203.8" height="14" rx="3" class="d-amber d-fill" opacity="0.85"/>
+<text x="20" y="158" class="d-t" text-anchor="start" >Solana</text>
+<text x="380" y="158" class="d-s d-violet d-ct" text-anchor="end" >~400 ms</text>
+<rect x="20" y="165" width="221.2" height="14" rx="3" class="d-violet d-fill" opacity="0.85"/>
+<text x="20" y="202" class="d-t" text-anchor="start" >MegaETH</text>
+<text x="380" y="202" class="d-s d-green d-ct" text-anchor="end" >&lt;10 ms</text>
+<rect x="20" y="209" width="85.0" height="14" rx="3" class="d-green d-fill" opacity="0.85"/>
+</svg>

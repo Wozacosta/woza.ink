@@ -132,6 +132,8 @@ digiKam is the open-source answer to the DAM problem. It handles photo managemen
 
 Every tool in this article processes RAW files, but they don't all produce the same result from the same file. A RAW file is unprocessed sensor data — demosaicing (converting the Bayer pattern into RGB pixels), white balance, tone curve, noise reduction, and sharpening all happen in software. Different algorithms produce different results.
 
+![A RAW file is a mosaic of single-color readings. Everything that turns it into a picture is software, and every tool does it differently.](diagram:raw-pipeline)
+
 DxO's demosaicing and denoising are measurably superior for high-ISO files. Capture One's color rendering from RAW is widely considered the most pleasing for skin tones. Lightroom's defaults are neutral and predictable. darktable gives you the most control over the pipeline but demands you understand it.
 
 This is why serious photographers sometimes use multiple tools. Process your cleanest files in Lightroom for speed. Send your high-ISO keepers through DxO for noise reduction. Use Capture One for the hero shots that need perfect color. The tools aren't mutually exclusive.

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" role="img" aria-labelledby="t-camera-mirror"><title id="t-camera-mirror">Cross-sections of two cameras. In a DSLR a mirror bounces light up through a prism to an optical viewfinder. A mirrorless camera sends light straight to the sensor, and the viewfinder is a small screen</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-camera-mirror" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >DSLR</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >A mirror bounces the light up to an optical viewfinder</text>
+<rect x="130" y="78" width="190" height="72" rx="6" class="d-box"/>
+<rect x="84" y="90" width="46" height="48" rx="3" class="d-box"/>
+<ellipse cx="96" cy="114" rx="5" ry="20" class="d-blue d-fill" opacity="0.45"/>
+<rect x="296" y="92" width="5" height="44" rx="1" class="d-green d-fill"/>
+<text x="107" y="154" class="d-s" text-anchor="middle" >lens</text>
+<text x="326" y="118" class="d-s" text-anchor="start" >sensor</text>
+<polygon points="170,78 186,52 262,52 278,78" class="d-box"/>
+<rect x="278" y="57" width="16" height="15" rx="2" class="d-box"/>
+<line x1="196" y1="134" x2="236" y2="94" class="d-line d-rose d-stroke" stroke-width="2.5"/>
+<path d="M20,114 L216,114 L216,65 L304,65" class="d-line d-amber d-stroke" stroke-width="1.75" marker-end="url(#ah-camera-mirror)"/>
+<text x="310" y="69" class="d-s" text-anchor="start" >viewfinder</text>
+<text x="216" y="145" class="d-s d-rose d-ct" text-anchor="middle" >mirror</text>
+<line x1="20" y1="176" x2="380" y2="176" class="d-line d-faint"/>
+<text x="20" y="200" class="d-t" text-anchor="start" >Mirrorless</text>
+<text x="20" y="216" class="d-s" text-anchor="start" >Light goes straight to the sensor, all the time</text>
+<rect x="130" y="244" width="190" height="72" rx="6" class="d-box"/>
+<rect x="84" y="256" width="46" height="48" rx="3" class="d-box"/>
+<ellipse cx="96" cy="280" rx="5" ry="20" class="d-blue d-fill" opacity="0.45"/>
+<rect x="296" y="258" width="5" height="44" rx="1" class="d-green d-fill"/>
+<text x="107" y="320" class="d-s" text-anchor="middle" >lens</text>
+<text x="326" y="284" class="d-s" text-anchor="start" >sensor</text>
+<path d="M20,280 L294,280" class="d-line d-amber d-stroke" stroke-width="1.75" marker-end="url(#ah-camera-mirror)"/>
+<rect x="262" y="250" width="26" height="14" rx="2" class="d-violet d-fill" opacity="0.5"/>
+<path d="M296,257 h-7" class="d-line d-violet d-stroke" stroke-dasharray="2 2"/>
+<text x="250" y="261" class="d-s d-violet d-ct" text-anchor="end" >viewfinder screen</text>
+</svg>

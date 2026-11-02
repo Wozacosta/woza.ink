@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 390" role="img" aria-labelledby="t-nest-lifecycle"><title id="t-nest-lifecycle">A request goes through middleware, guards, interceptors and pipes to your handler. On the way out it passes back through the interceptors. If something throws, an exception filter formats the response instead.</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-nest-lifecycle" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="115" y="18" class="d-s" text-anchor="middle" >Request</text>
+<path d="M115,24 L115,42" class="d-line" marker-end="url(#ah-nest-lifecycle)"/>
+<rect x="20" y="44" width="190" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="62" r="4" class="d-blue d-fill"/>
+<text x="46" y="66" class="d-t" text-anchor="start" >Middleware</text>
+<text x="46" y="82" class="d-s" text-anchor="start" >Logging, CORS, body parsing</text>
+<path d="M115,92 L115,104" class="d-line" marker-end="url(#ah-nest-lifecycle)"/>
+<rect x="20" y="106" width="190" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="124" r="4" class="d-amber d-fill"/>
+<text x="46" y="128" class="d-t" text-anchor="start" >Guards</text>
+<text x="46" y="144" class="d-s" text-anchor="start" >Authorization: true or false</text>
+<path d="M115,154 L115,166" class="d-line" marker-end="url(#ah-nest-lifecycle)"/>
+<rect x="20" y="168" width="190" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="186" r="4" class="d-violet d-fill"/>
+<text x="46" y="190" class="d-t" text-anchor="start" >Interceptors</text>
+<text x="46" y="206" class="d-s" text-anchor="start" >Before the handler</text>
+<path d="M115,216 L115,228" class="d-line" marker-end="url(#ah-nest-lifecycle)"/>
+<rect x="20" y="230" width="190" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="248" r="4" class="d-blue d-fill"/>
+<text x="46" y="252" class="d-t" text-anchor="start" >Pipes</text>
+<text x="46" y="268" class="d-s" text-anchor="start" >Validate and transform</text>
+<path d="M115,278 L115,290" class="d-line" marker-end="url(#ah-nest-lifecycle)"/>
+<rect x="20" y="292" width="190" height="48" rx="8" class="d-box"/>
+<circle cx="34" cy="310" r="4" class="d-green d-fill"/>
+<text x="46" y="314" class="d-t" text-anchor="start" >Your handler</text>
+<text x="46" y="330" class="d-s" text-anchor="start" >Just handles</text>
+<rect x="240" y="44" width="140" height="48" rx="8" class="d-box"/>
+<text x="254" y="72.5" class="d-t" text-anchor="start" >Response</text>
+<rect x="240" y="168" width="122" height="48" rx="8" class="d-box"/>
+<circle cx="254" cy="186" r="4" class="d-violet d-fill"/>
+<text x="266" y="190" class="d-t" text-anchor="start" >Interceptors</text>
+<text x="266" y="206" class="d-s" text-anchor="start" >After the handler</text>
+<rect x="240" y="292" width="140" height="48" rx="8" class="d-ext"/>
+<circle cx="254" cy="310" r="4" class="d-rose d-fill"/>
+<text x="266" y="314" class="d-t" text-anchor="start" >Exception filters</text>
+<text x="266" y="330" class="d-s" text-anchor="start" >If something threw</text>
+<path d="M210,304 L225,304 L225,192 L238,192" class="d-line" marker-end="url(#ah-nest-lifecycle)"/>
+<path d="M301,168 L301,94" class="d-line" marker-end="url(#ah-nest-lifecycle)"/>
+<path d="M210,328 L238,328" class="d-line" stroke-dasharray="4 3" marker-end="url(#ah-nest-lifecycle)"/>
+<path d="M372,292 L372,94" class="d-line" stroke-dasharray="4 3" marker-end="url(#ah-nest-lifecycle)"/>
+<line x1="20" y1="354" x2="380" y2="354" class="d-line d-faint"/>
+<text x="20" y="378" class="d-s" text-anchor="start" >Within a layer: global first, then controller, then route.</text>
+</svg>

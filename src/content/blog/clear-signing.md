@@ -102,6 +102,8 @@ The formatter list is where the design shows: `tokenAmount`, `amount` for native
 
 If a wallet meets a function with no matching format, the spec tells it to show a safe fallback such as "Unknown function" with the raw arguments, and never to apply some unrelated format that happens to be nearby.
 
+![The wallet combines the calldata with the descriptor bound to that contract, and the device shows the result in plain words.](diagram:clear-signing-render)
+
 ---
 
 ## Bybit, replayed with a descriptor

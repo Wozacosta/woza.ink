@@ -27,6 +27,8 @@ Raw throughput numbers are easy to throw around. Here's what MegaETH's actually 
 | Solana | ~3,000–4,000 sustained | ~400ms |
 | MegaETH | 100,000+ | <10ms |
 
+![The same block times on a log scale. Each gridline is ten times longer than the one before it.](diagram:megaeth-block-times)
+
 10ms is closer to a web request than a blockchain transaction. Visa's network processes around 1,700 TPS at peak. NASDAQ handles roughly 10 million trades per day. MegaETH's claimed throughput puts it in a different category than anything currently running on Ethereum's settlement layer.
 
 The 10 Ggas/s figure matters for developers: Ethereum mainnet runs at roughly 1.5 MGas/s. More gas per second means more complex transactions, more contract interactions, more computational work per unit of time. An onchain game running logic or a DEX doing real-time price discovery needs gas budget, not just raw TPS.
@@ -44,6 +46,8 @@ MegaETH separates node roles aggressively:
 **Full nodes** don't re-execute transactions. They receive execution results from the sequencer and verify them using proof systems rather than replay. Verification is much cheaper than re-execution, so full nodes can run on modest hardware.
 
 **Replica nodes** stream state diffs in real-time — optimized for read performance, serving RPC requests and indexers without doing verification work.
+
+![A typical node does every job. MegaETH gives execution to one sequencer, verification to full nodes and reads to replicas.](diagram:megaeth-roles)
 
 This isn't a new concept. Solana uses specialized validators. Centralized databases have used leader-follower architectures forever. What MegaETH does differently is make node specialization the *explicit* design principle and push sequencer capability to an extreme, rather than treating it as an implementation detail to apologize for.
 

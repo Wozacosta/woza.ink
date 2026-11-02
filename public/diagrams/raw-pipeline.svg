@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-raw-pipeline"><title id="t-raw-pipeline">A RAW file is a mosaic of red, green and blue readings from the sensor. Software turns it into a picture through demosaicing, white balance, tone curve, noise reduction and sharpening, and every tool does each step differently</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-raw-pipeline" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One RAW file</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >One color per pixel</text>
+<rect x="20" y="76" width="15" height="15" class="d-rose d-fill" opacity="0.75"/>
+<rect x="36" y="76" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="52" y="76" width="15" height="15" class="d-rose d-fill" opacity="0.75"/>
+<rect x="68" y="76" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="84" y="76" width="15" height="15" class="d-rose d-fill" opacity="0.75"/>
+<rect x="100" y="76" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="20" y="92" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="36" y="92" width="15" height="15" class="d-blue d-fill" opacity="0.75"/>
+<rect x="52" y="92" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="68" y="92" width="15" height="15" class="d-blue d-fill" opacity="0.75"/>
+<rect x="84" y="92" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="100" y="92" width="15" height="15" class="d-blue d-fill" opacity="0.75"/>
+<rect x="20" y="108" width="15" height="15" class="d-rose d-fill" opacity="0.75"/>
+<rect x="36" y="108" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="52" y="108" width="15" height="15" class="d-rose d-fill" opacity="0.75"/>
+<rect x="68" y="108" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="84" y="108" width="15" height="15" class="d-rose d-fill" opacity="0.75"/>
+<rect x="100" y="108" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="20" y="124" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="36" y="124" width="15" height="15" class="d-blue d-fill" opacity="0.75"/>
+<rect x="52" y="124" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="68" y="124" width="15" height="15" class="d-blue d-fill" opacity="0.75"/>
+<rect x="84" y="124" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="100" y="124" width="15" height="15" class="d-blue d-fill" opacity="0.75"/>
+<rect x="20" y="140" width="15" height="15" class="d-rose d-fill" opacity="0.75"/>
+<rect x="36" y="140" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="52" y="140" width="15" height="15" class="d-rose d-fill" opacity="0.75"/>
+<rect x="68" y="140" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="84" y="140" width="15" height="15" class="d-rose d-fill" opacity="0.75"/>
+<rect x="100" y="140" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="20" y="156" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="36" y="156" width="15" height="15" class="d-blue d-fill" opacity="0.75"/>
+<rect x="52" y="156" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="68" y="156" width="15" height="15" class="d-blue d-fill" opacity="0.75"/>
+<rect x="84" y="156" width="15" height="15" class="d-green d-fill" opacity="0.75"/>
+<rect x="100" y="156" width="15" height="15" class="d-blue d-fill" opacity="0.75"/>
+<path d="M118,124 L146,124" class="d-line" marker-end="url(#ah-raw-pipeline)"/>
+<rect x="148" y="16" width="232" height="50" rx="8" class="d-box"/>
+<circle cx="162" cy="34" r="4" class="d-violet d-fill"/>
+<text x="174" y="38" class="d-t" text-anchor="start" >Demosaic</text>
+<text x="174" y="54" class="d-s" text-anchor="start" >Bayer pattern into RGB pixels</text>
+<rect x="148" y="74" width="232" height="36" rx="8" class="d-box"/>
+<circle cx="162" cy="92.0" r="4" class="d-amber d-fill"/>
+<text x="174" y="96.5" class="d-t" text-anchor="start" >White balance</text>
+<rect x="148" y="118" width="232" height="36" rx="8" class="d-box"/>
+<circle cx="162" cy="136.0" r="4" class="d-amber d-fill"/>
+<text x="174" y="140.5" class="d-t" text-anchor="start" >Tone curve</text>
+<rect x="148" y="162" width="232" height="36" rx="8" class="d-box"/>
+<circle cx="162" cy="180.0" r="4" class="d-blue d-fill"/>
+<text x="174" y="184.5" class="d-t" text-anchor="start" >Noise reduction</text>
+<rect x="148" y="206" width="232" height="36" rx="8" class="d-box"/>
+<circle cx="162" cy="224.0" r="4" class="d-green d-fill"/>
+<text x="174" y="228.5" class="d-t" text-anchor="start" >Sharpening</text>
+<line x1="20" y1="254" x2="380" y2="254" class="d-line d-faint"/>
+<text x="20" y="278" class="d-s" text-anchor="start" >Same file, different algorithms: that's why tools look different.</text>
+</svg>

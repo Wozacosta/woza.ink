@@ -54,6 +54,8 @@ The Linux kernel maintains an entropy pool fed from several sources: interrupt t
 
 **Jitter entropy** exploits something less obvious: on a modern out-of-order CPU with caches, branch prediction, and DRAM refresh cycles, the *exact* cycle count of a fixed instruction sequence varies unpredictably. Measure that variance with `RDTSC` and you have an entropy source requiring no special hardware. The kernel's `jitterentropy` module does this, and it's the reason headless VMs with no keyboard and no disk activity can still boot with a properly seeded pool.
 
+![Several weak sources feed one pool, the pool seeds a CSPRNG, and getrandom() is what your code should call.](diagram:rng-pipeline)
+
 ### The urandom question, settled
 
 The old advice — `/dev/random` for keys, `/dev/urandom` for everything else — was wrong for years and is now obsolete.
@@ -110,6 +112,8 @@ Three correct approaches:
 **Binary reduction.** 1–3 → `0`, 4–6 → `1`. Exactly one unbiased bit per roll. Dead simple, verifiable in your head, and needs 256 rolls for a 24-word seed. That's a long evening.
 
 **Hash the transcript.** Roll 100 times, write down the digits as a string, and SHA-256 the result. The hash acts as a randomness extractor: feed in ≥256 bits of entropy in any format and get a uniform 256-bit output. This is what Coldcard and most offline seed tools do, and it's the right default — the arithmetic is done by a function you can audit rather than by you at 1am.
+
+![Rolls needed for a 256-bit seed, to scale: 100 if you hash the transcript, about 192 with rejection sampling, 256 with binary reduction.](diagram:dice-rolls)
 
 ### Details that actually matter
 

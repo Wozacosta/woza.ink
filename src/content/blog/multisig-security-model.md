@@ -30,6 +30,8 @@ Start with the arithmetic:
 
 2-of-3 is the default recommendation for individuals because it's the smallest configuration that improves both theft *and* loss resistance simultaneously. 1-of-2 improves loss resistance and makes theft easier. 3-of-3 improves theft resistance and makes loss catastrophic. 2-of-3 is the only small configuration that moves both dials the right way.
 
+![Compared with one key, 1-of-2 makes theft easier and 3-of-3 makes loss fatal. 2-of-3 improves both.](diagram:multisig-quorums)
+
 For organizations the calculus differs. A DAO treasury running 5-of-9 isn't optimizing for lost keys; it's optimizing for the possibility that some of its signers are adversarial.
 
 ---
@@ -106,6 +108,8 @@ Every signature was valid. Every key stayed secret. The cryptography worked perf
 The attackers compromised a Safe developer's machine, reached Safe's cloud infrastructure, and [modified the multisig frontend's JavaScript](https://www.nccgroup.com/research/in-depth-technical-analysis-of-the-bybit-hack/) so that when Bybit's signers reviewed a transaction, the interface showed them a benign transfer while the payload they actually signed replaced the wallet's implementation contract with the attacker's.
 
 The signers approved what they were shown. They were shown a lie.
+
+![The screen and the payload disagreed, and hardware wallets showing a hash gave nobody a way to notice. Every signature was valid.](diagram:multisig-bybit)
 
 Three things follow from this, and they generalize well beyond Safe:
 

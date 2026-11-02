@@ -38,6 +38,8 @@ A DSLR uses a physical mirror to bounce light from the lens up into an optical v
 
 A mirrorless camera removes the mirror entirely. Light goes straight from the lens to the sensor, all the time. The viewfinder is electronic — a tiny screen showing you exactly what the sensor sees, including exposure preview, histogram overlay, focus peaking, and more.
 
+![A DSLR bounces light up through a prism to an optical viewfinder. A mirrorless camera sends it straight to the sensor and shows you the result on a small screen.](diagram:camera-mirror)
+
 Canon discontinued its entire DSLR lineup. The EOS 5D Mark IV — arguably the most iconic DSLR of the last decade — was added to Canon Japan's discontinuation list in 2025. Nikon and Sony made the same move years earlier. No major manufacturer is developing new DSLRs.
 
 The advantages of mirrorless are now decisive:
@@ -75,6 +77,8 @@ Three sensor sizes dominate the consumer camera market:
 **APS-C (roughly 23x15mm)** — About 1.5x smaller than full-frame. Still excellent image quality. Smaller, lighter, cheaper bodies and lenses. The "crop factor" means a 50mm lens acts like a 75mm lens — you're effectively zoomed in. This is actually an advantage for wildlife and sports. Canon R10, Sony A6700, Nikon Z50 II, Fujifilm X-T5.
 
 **Micro Four Thirds (17x13mm)** — 2x crop factor. The smallest mainstream sensor. Lenses are compact and affordable. Excellent for video and travel. Less low-light headroom. Panasonic GH7, OM System OM-5.
+
+![The three sizes to scale, centered. A smaller sensor keeps only the middle of the image, which is where crop factor comes from.](diagram:camera-sensors)
 
 Here's the practical reality: in good light, you cannot tell these apart in a final image. The differences emerge in low light, at high ISO, when pushing shadows in post-processing, and when you want extremely shallow depth of field. A beginner shooting in daylight will get great results from any of these.
 

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 256" role="img" aria-labelledby="t-rss-flow"><title id="t-rss-flow">On a platform, a ranking algorithm sits between the publisher and you and picks what you see. With RSS the site updates an XML file, your reader checks it, and you get every post in order</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-rss-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >A platform feed</text>
+<rect x="20" y="34" width="92" height="40" rx="8" class="d-box"/>
+<text x="66.0" y="58.5" class="d-t" text-anchor="middle" >Publisher</text>
+<rect x="150" y="34" width="100" height="40" rx="8" class="d-box"/>
+<text x="200.0" y="58.5" class="d-t" text-anchor="middle" >Ranking</text>
+<rect x="288" y="34" width="92" height="40" rx="8" class="d-box"/>
+<text x="334.0" y="58.5" class="d-t" text-anchor="middle" >You</text>
+<path d="M112,54 L148,54" class="d-line" marker-end="url(#ah-rss-flow)"/>
+<path d="M250,54 L286,54" class="d-line" marker-end="url(#ah-rss-flow)"/>
+<text x="200" y="92" class="d-s d-rose d-ct" text-anchor="middle" >something else picks what you see</text>
+<line x1="20" y1="112" x2="380" y2="112" class="d-line d-faint"/>
+<text x="20" y="138" class="d-t" text-anchor="start" >RSS</text>
+<rect x="20" y="150" width="92" height="40" rx="8" class="d-box"/>
+<text x="66.0" y="174.5" class="d-t" text-anchor="middle" >Publisher</text>
+<rect x="150" y="150" width="100" height="40" rx="8" class="d-box"/>
+<text x="200.0" y="174.5" class="d-t" text-anchor="middle" >feed.xml</text>
+<rect x="288" y="150" width="92" height="40" rx="8" class="d-box"/>
+<text x="334.0" y="174.5" class="d-t" text-anchor="middle" >Your reader</text>
+<path d="M112,170 L148,170" class="d-line" marker-end="url(#ah-rss-flow)"/>
+<path d="M286,170 L252,170" class="d-line" stroke-dasharray="4 3" marker-end="url(#ah-rss-flow)"/>
+<text x="269" y="142" class="d-s" text-anchor="middle" >checks</text>
+<text x="200" y="208" class="d-s d-green d-ct" text-anchor="middle" >every post, in order, unchanged</text>
+<line x1="20" y1="222" x2="380" y2="222" class="d-line d-faint"/>
+<text x="20" y="246" class="d-s" text-anchor="start" >The arrow that matters points the other way: you fetch it.</text>
+</svg>

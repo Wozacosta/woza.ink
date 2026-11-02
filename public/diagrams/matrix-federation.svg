@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 356" role="img" aria-labelledby="t-matrix-federation"><title id="t-matrix-federation">Two people on different homeservers share a room. Their servers talk to each other and to a third, and each keeps its own copy of the room. A bridge connects the room to networks like Slack, IRC and Telegram</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-matrix-federation" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="102" y="22" class="d-s d-m" text-anchor="middle" >@alice:example.com</text>
+<text x="298" y="22" class="d-s d-m" text-anchor="middle" >@bob:other.org</text>
+<path d="M102,30 L102,62" class="d-line" marker-end="url(#ah-matrix-federation)"/>
+<path d="M298,30 L298,62" class="d-line" marker-end="url(#ah-matrix-federation)"/>
+<rect x="20" y="64" width="165" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="82" r="4" class="d-blue d-fill"/>
+<text x="46" y="86" class="d-t" text-anchor="start" >example.com</text>
+<text x="46" y="102" class="d-s" text-anchor="start" >Its copy of the room</text>
+<rect x="215" y="64" width="165" height="54" rx="8" class="d-box"/>
+<circle cx="229" cy="82" r="4" class="d-green d-fill"/>
+<text x="241" y="86" class="d-t" text-anchor="start" >other.org</text>
+<text x="241" y="102" class="d-s" text-anchor="start" >Its copy of the room</text>
+<rect x="117" y="172" width="165" height="54" rx="8" class="d-box"/>
+<circle cx="131" cy="190" r="4" class="d-violet d-fill"/>
+<text x="143" y="194" class="d-t" text-anchor="start" >third.net</text>
+<text x="143" y="210" class="d-s" text-anchor="start" >Its copy of the room</text>
+<path d="M185,91 L213,91" class="d-line" marker-end="url(#ah-matrix-federation)"/>
+<path d="M215,91 L187,91" class="d-line" marker-end="url(#ah-matrix-federation)"/>
+<path d="M120,118 L160,170" class="d-line" marker-end="url(#ah-matrix-federation)"/>
+<path d="M160,170 L120,120" class="d-line" marker-end="url(#ah-matrix-federation)"/>
+<path d="M280,118 L240,170" class="d-line" marker-end="url(#ah-matrix-federation)"/>
+<path d="M240,170 L280,120" class="d-line" marker-end="url(#ah-matrix-federation)"/>
+<path d="M200,226 L200,272" class="d-line" marker-end="url(#ah-matrix-federation)"/>
+<text x="210" y="254" class="d-s" text-anchor="start" >bridge</text>
+<rect x="117" y="274" width="165" height="40" rx="8" class="d-ext"/>
+<text x="199.5" y="298.5" class="d-t" text-anchor="middle" >Slack, IRC, Telegram</text>
+<line x1="20" y1="330" x2="380" y2="330" class="d-line d-faint"/>
+<text x="20" y="350" class="d-s" text-anchor="start" >A message goes to every server in the room. Each one keeps a copy.</text>
+</svg>

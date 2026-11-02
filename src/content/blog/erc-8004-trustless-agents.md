@@ -43,6 +43,8 @@ ERC-8004 provides three primitives that let agents establish trust without pre-e
 
 Each is a separate smart contract registry. Each is minimal by design. The standard defines the interfaces; it doesn't dictate how you interpret the data.
 
+![Three small onchain registries, three questions. Heavy data stays offchain, referenced by a URI and a hash.](diagram:erc8004-registries)
+
 ---
 
 ## Identity Registry: agents as NFTs

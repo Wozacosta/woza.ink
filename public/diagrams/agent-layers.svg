@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-agent-layers"><title id="t-agent-layers">Across one session rules are on the whole time, a command runs when you trigger it, such as create-story, and a skill such as dev-story loads when the task matches it</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-agent-layers" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >One session, writing a feature</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >When each layer is in play</text>
+<text x="20" y="76" class="d-t" text-anchor="start" >Rules</text>
+<text x="20" y="91" class="d-s" text-anchor="start" >Always on</text>
+<line x1="112" y1="73" x2="380" y2="73" class="d-line d-faint"/>
+<text x="20" y="132" class="d-t" text-anchor="start" >Commands</text>
+<text x="20" y="147" class="d-s" text-anchor="start" >You trigger them</text>
+<line x1="112" y1="129" x2="380" y2="129" class="d-line d-faint"/>
+<text x="20" y="188" class="d-t" text-anchor="start" >Skills</text>
+<text x="20" y="203" class="d-s" text-anchor="start" >Task type matches</text>
+<line x1="112" y1="185" x2="380" y2="185" class="d-line d-faint"/>
+<rect x="112" y="60" width="268" height="28" rx="4" class="d-green d-fill" opacity="0.8"/>
+<rect x="132" y="116" width="84" height="28" rx="4" class="d-blue d-fill" opacity="0.8"/>
+<rect x="228" y="172" width="152" height="28" rx="4" class="d-violet d-fill" opacity="0.8"/>
+<text x="174" y="134" class="d-s d-m" text-anchor="middle" style="fill:var(--background,#faf8f5)">/create-story</text>
+<text x="304.0" y="190" class="d-s d-m" text-anchor="middle" style="fill:var(--background,#faf8f5)">dev-story</text>
+<path d="M112,224 L380,224" class="d-line" marker-end="url(#ah-agent-layers)"/>
+<text x="112" y="242" class="d-s" text-anchor="start" >start</text>
+<text x="380" y="242" class="d-s" text-anchor="end" >time</text>
+</svg>

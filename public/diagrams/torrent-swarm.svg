@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 268" role="img" aria-labelledby="t-torrent-swarm"><title id="t-torrent-swarm">Over HTTP one server uploads every copy of a file. In a BitTorrent swarm every peer uploads the pieces it has, so more downloaders add capacity instead of load</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-torrent-swarm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >HTTP</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >One server uploads every copy</text>
+<rect x="65" y="58" width="80" height="36" rx="8" class="d-box"/>
+<text x="105.0" y="80.5" class="d-t" text-anchor="middle" >Server</text>
+<path d="M105,94 L40.5,184.4" class="d-line" marker-end="url(#ah-torrent-swarm)"/>
+<circle cx="33" cy="195" r="11" class="d-box"/>
+<path d="M105,94 L73.4,182.8" class="d-line" marker-end="url(#ah-torrent-swarm)"/>
+<circle cx="69" cy="195" r="11" class="d-box"/>
+<path d="M105,94 L105.0,182.0" class="d-line" marker-end="url(#ah-torrent-swarm)"/>
+<circle cx="105" cy="195" r="11" class="d-box"/>
+<path d="M105,94 L136.6,182.8" class="d-line" marker-end="url(#ah-torrent-swarm)"/>
+<circle cx="141" cy="195" r="11" class="d-box"/>
+<path d="M105,94 L169.5,184.4" class="d-line" marker-end="url(#ah-torrent-swarm)"/>
+<circle cx="177" cy="195" r="11" class="d-box"/>
+<text x="210" y="22" class="d-t" text-anchor="start" >BitTorrent</text>
+<text x="210" y="38" class="d-s" text-anchor="start" >Every peer uploads what it has</text>
+<line x1="295.0" y1="69.0" x2="348.7" y2="100.0" class="d-line d-faint"/>
+<line x1="295.0" y1="69.0" x2="348.7" y2="162.0" class="d-line d-faint"/>
+<line x1="295.0" y1="69.0" x2="295.0" y2="193.0" class="d-line d-faint"/>
+<line x1="295.0" y1="69.0" x2="241.3" y2="162.0" class="d-line d-faint"/>
+<line x1="295.0" y1="69.0" x2="241.3" y2="100.0" class="d-line d-faint"/>
+<line x1="348.7" y1="100.0" x2="348.7" y2="162.0" class="d-line d-faint"/>
+<line x1="348.7" y1="100.0" x2="295.0" y2="193.0" class="d-line d-faint"/>
+<line x1="348.7" y1="100.0" x2="241.3" y2="162.0" class="d-line d-faint"/>
+<line x1="348.7" y1="100.0" x2="241.3" y2="100.0" class="d-line d-faint"/>
+<line x1="348.7" y1="162.0" x2="295.0" y2="193.0" class="d-line d-faint"/>
+<line x1="348.7" y1="162.0" x2="241.3" y2="162.0" class="d-line d-faint"/>
+<line x1="348.7" y1="162.0" x2="241.3" y2="100.0" class="d-line d-faint"/>
+<line x1="295.0" y1="193.0" x2="241.3" y2="162.0" class="d-line d-faint"/>
+<line x1="295.0" y1="193.0" x2="241.3" y2="100.0" class="d-line d-faint"/>
+<line x1="241.3" y1="162.0" x2="241.3" y2="100.0" class="d-line d-faint"/>
+<circle cx="295.0" cy="69.0" r="11" class="d-box"/>
+<circle cx="295.0" cy="69.0" r="4" class="d-green d-fill"/>
+<circle cx="348.7" cy="100.0" r="11" class="d-box"/>
+<circle cx="348.7" cy="100.0" r="4" class="d-blue d-fill"/>
+<circle cx="348.7" cy="162.0" r="11" class="d-box"/>
+<circle cx="348.7" cy="162.0" r="4" class="d-blue d-fill"/>
+<circle cx="295.0" cy="193.0" r="11" class="d-box"/>
+<circle cx="295.0" cy="193.0" r="4" class="d-blue d-fill"/>
+<circle cx="241.3" cy="162.0" r="11" class="d-box"/>
+<circle cx="241.3" cy="162.0" r="4" class="d-blue d-fill"/>
+<circle cx="241.3" cy="100.0" r="11" class="d-box"/>
+<circle cx="241.3" cy="100.0" r="4" class="d-blue d-fill"/>
+<line x1="20" y1="226" x2="380" y2="226" class="d-line d-faint"/>
+<text x="20" y="250" class="d-s" text-anchor="start" >More downloaders slow a server down, and speed a swarm up.</text>
+</svg>

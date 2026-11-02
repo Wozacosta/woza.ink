@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 264" role="img" aria-labelledby="t-dotfiles-stow"><title id="t-dotfiles-stow">The files your tools read in your home directory are symlinks into the dotfiles repo, one package per tool</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-dotfiles-stow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Your home directory</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Symlinks, where tools look</text>
+<text x="204" y="22" class="d-t" text-anchor="start" >~/dotfiles</text>
+<text x="204" y="38" class="d-s" text-anchor="start" >The git repo, one folder per tool</text>
+<rect x="20" y="54" width="148" height="34" rx="6" class="d-ext"/>
+<text x="32" y="75" class="d-s d-m" text-anchor="start" >~/.zshrc</text>
+<rect x="204" y="54" width="176" height="34" rx="6" class="d-box"/>
+<text x="216" y="75" class="d-s d-m" text-anchor="start" >zsh/.zshrc</text>
+<path d="M168,71 L202,71" class="d-line" marker-end="url(#ah-dotfiles-stow)"/>
+<rect x="20" y="96" width="148" height="34" rx="6" class="d-ext"/>
+<text x="32" y="117" class="d-s d-m" text-anchor="start" >~/.gitconfig</text>
+<rect x="204" y="96" width="176" height="34" rx="6" class="d-box"/>
+<text x="216" y="117" class="d-s d-m" text-anchor="start" >git/.gitconfig</text>
+<path d="M168,113 L202,113" class="d-line" marker-end="url(#ah-dotfiles-stow)"/>
+<rect x="20" y="138" width="148" height="34" rx="6" class="d-ext"/>
+<text x="32" y="159" class="d-s d-m" text-anchor="start" >~/.config/nvim</text>
+<rect x="204" y="138" width="176" height="34" rx="6" class="d-box"/>
+<text x="216" y="159" class="d-s d-m" text-anchor="start" >nvim/.config/nvim</text>
+<path d="M168,155 L202,155" class="d-line" marker-end="url(#ah-dotfiles-stow)"/>
+<rect x="20" y="180" width="148" height="34" rx="6" class="d-ext"/>
+<text x="32" y="201" class="d-s d-m" text-anchor="start" >~/.config/ghostty</text>
+<rect x="204" y="180" width="176" height="34" rx="6" class="d-box"/>
+<text x="216" y="201" class="d-s d-m" text-anchor="start" >ghostty/.config/ghostty</text>
+<path d="M168,197 L202,197" class="d-line" marker-end="url(#ah-dotfiles-stow)"/>
+<line x1="20" y1="228" x2="380" y2="228" class="d-line d-faint"/>
+<text x="20" y="252" class="d-s" text-anchor="start" >stow makes the links. The files only live in the repo.</text>
+</svg>

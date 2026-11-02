@@ -57,6 +57,8 @@ This has practical consequences. Governments, enterprises, and open-source commu
 - E2EE: Olm/Megolm are the crypto stacks for secure messaging (Signal-family primitives).
 - Bridges: Connect Matrix rooms to external networks (useful, imperfect, and extremely handy).
 
+![A room lives on every homeserver taking part in it, and bridges link it to other networks.](diagram:matrix-federation)
+
 ---
 
 ## How Matrix Feels Different (not just technically different)

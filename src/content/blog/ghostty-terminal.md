@@ -99,6 +99,8 @@ The first piece is already taking shape: **libghostty-vt**, a zero-dependency li
 
 Future components will cover input handling, GPU rendering, and ready-made widgets for GTK and Swift. The vision: any app that needs a terminal view — an IDE, a monitoring tool, a custom developer environment — can embed one without reimplementing decades of terminal specification from scratch.
 
+![Apps sit on libghostty. libghostty-vt is taking shape, and input, GPU rendering and widgets are still to come.](diagram:libghostty-stack)
+
 This is already happening. cmux, the agentic terminal for running multiple AI coding agents, uses libghostty for its rendering engine. Your Ghostty config carries over. The performance carries over. It's a different app built on the same foundation.
 
 ---

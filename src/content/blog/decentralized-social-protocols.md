@@ -33,6 +33,8 @@ ActivityPub is the most deployed decentralized social protocol in existence. Mas
 
 The key difference from ActivityPub: in AT Protocol, you can move your account — followers, posts, identity — between PDS providers without losing anything. In ActivityPub, moving between instances is partially supported but your posts don't move with you. AT Protocol bakes portability in at the architecture level.
 
+![ActivityPub keeps your account and posts on one instance, which federates with the others. AT Protocol separates your data from the relay and the apps.](diagram:social-protocols)
+
 ---
 
 ## Mastodon — the fediverse's flagship

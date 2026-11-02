@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 262" role="img" aria-labelledby="t-torrent-rarest"><title id="t-torrent-rarest">Bars show how many peers in the swarm hold each of ten pieces. Your client already has some of them, and fetches the rarest piece it is still missing next</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-torrent-rarest" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Copies of each piece in the swarm</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Your client fetches the rarest piece it doesn't have yet</text>
+<rect x="23" y="86" width="30" height="84" rx="3" class="d-green d-fill" opacity="0.8"/>
+<text x="38.0" y="81" class="d-s" text-anchor="middle" >6</text>
+<text x="38.0" y="186" class="d-s" text-anchor="middle" >1</text>
+<rect x="59" y="114" width="30" height="56" rx="3" class="d-box"/>
+<text x="74.0" y="109" class="d-s" text-anchor="middle" >4</text>
+<text x="74.0" y="186" class="d-s" text-anchor="middle" >2</text>
+<rect x="95" y="72" width="30" height="98" rx="3" class="d-green d-fill" opacity="0.8"/>
+<text x="110.0" y="67" class="d-s" text-anchor="middle" >7</text>
+<text x="110.0" y="186" class="d-s" text-anchor="middle" >3</text>
+<rect x="131" y="128" width="30" height="42" rx="3" class="d-box"/>
+<text x="146.0" y="123" class="d-s" text-anchor="middle" >3</text>
+<text x="146.0" y="186" class="d-s" text-anchor="middle" >4</text>
+<rect x="167" y="100" width="30" height="70" rx="3" class="d-box"/>
+<text x="182.0" y="95" class="d-s" text-anchor="middle" >5</text>
+<text x="182.0" y="186" class="d-s" text-anchor="middle" >5</text>
+<rect x="203" y="142" width="30" height="28" rx="3" class="d-green d-fill" opacity="0.8"/>
+<text x="218.0" y="137" class="d-s" text-anchor="middle" >2</text>
+<text x="218.0" y="186" class="d-s" text-anchor="middle" >6</text>
+<rect x="239" y="156" width="30" height="14" rx="3" class="d-amber d-fill"/>
+<text x="254.0" y="151" class="d-s" text-anchor="middle" >1</text>
+<text x="254.0" y="186" class="d-s" text-anchor="middle" >7</text>
+<rect x="275" y="114" width="30" height="56" rx="3" class="d-box"/>
+<text x="290.0" y="109" class="d-s" text-anchor="middle" >4</text>
+<text x="290.0" y="186" class="d-s" text-anchor="middle" >8</text>
+<rect x="311" y="86" width="30" height="84" rx="3" class="d-box"/>
+<text x="326.0" y="81" class="d-s" text-anchor="middle" >6</text>
+<text x="326.0" y="186" class="d-s" text-anchor="middle" >9</text>
+<rect x="347" y="142" width="30" height="28" rx="3" class="d-box"/>
+<text x="362.0" y="137" class="d-s" text-anchor="middle" >2</text>
+<text x="362.0" y="186" class="d-s" text-anchor="middle" >10</text>
+<line x1="20" y1="170" x2="380" y2="170" class="d-line"/>
+<text x="200" y="202" class="d-s" text-anchor="middle" >Piece number</text>
+<line x1="20" y1="214" x2="380" y2="214" class="d-line d-faint"/>
+<rect x="20" y="226" width="12" height="12" rx="2" class="d-green d-fill"/>
+<text x="38" y="236" class="d-s" text-anchor="start" >you have it</text>
+<rect x="124" y="226" width="12" height="12" rx="2" class="d-box"/>
+<text x="142" y="236" class="d-s" text-anchor="start" >you need it</text>
+<rect x="228" y="226" width="12" height="12" rx="2" class="d-amber d-fill"/>
+<text x="246" y="236" class="d-s" text-anchor="start" >fetch this one next</text>
+<text x="20" y="256" class="d-s" text-anchor="start" >Rare pieces spread first, so the last 10% doesn't go missing.</text>
+</svg>

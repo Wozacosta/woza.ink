@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 372" role="img" aria-labelledby="t-context-window"><title id="t-context-window">Hours into a session the context window is full of system instructions, rules, a skill, project docs, tool output and conversation. A fresh session starts with only system instructions, rules and what you load for the task, with the rest of the window free</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-context-window" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Hours into one session</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Long conversations degrade</text>
+<rect x="20" y="54" width="170" height="26" class="d-blue d-fill" opacity="0.22"/>
+<text x="105.0" y="71.0" class="d-s" text-anchor="middle" >System instructions</text>
+<line x1="20" y1="80" x2="190" y2="80" class="d-line d-faint"/>
+<rect x="20" y="80" width="170" height="30" class="d-green d-fill" opacity="0.22"/>
+<text x="105.0" y="99.0" class="d-s" text-anchor="middle" >Rules</text>
+<line x1="20" y1="110" x2="190" y2="110" class="d-line d-faint"/>
+<rect x="20" y="110" width="170" height="40" class="d-amber d-fill" opacity="0.22"/>
+<text x="105.0" y="134.0" class="d-s" text-anchor="middle" >A skill</text>
+<line x1="20" y1="150" x2="190" y2="150" class="d-line d-faint"/>
+<rect x="20" y="150" width="170" height="32" class="d-violet d-fill" opacity="0.22"/>
+<text x="105.0" y="170.0" class="d-s" text-anchor="middle" >Project docs</text>
+<line x1="20" y1="182" x2="190" y2="182" class="d-line d-faint"/>
+<rect x="20" y="182" width="170" height="62" class="d-rose d-fill" opacity="0.22"/>
+<text x="105.0" y="217.0" class="d-s" text-anchor="middle" >Tool output</text>
+<line x1="20" y1="244" x2="190" y2="244" class="d-line d-faint"/>
+<rect x="20" y="244" width="170" height="74" class="d-rose d-fill" opacity="0.22"/>
+<text x="105.0" y="285.0" class="d-s" text-anchor="middle" >Conversation</text>
+<rect x="20" y="54" width="170" height="264" rx="6" class="d-ext"/>
+<text x="210" y="22" class="d-t" text-anchor="start" >A fresh session</text>
+<text x="210" y="38" class="d-s" text-anchor="start" >Back to what you wrote down</text>
+<rect x="210" y="54" width="170" height="26" class="d-blue d-fill" opacity="0.22"/>
+<text x="295.0" y="71.0" class="d-s" text-anchor="middle" >System instructions</text>
+<line x1="210" y1="80" x2="380" y2="80" class="d-line d-faint"/>
+<rect x="210" y="80" width="170" height="30" class="d-green d-fill" opacity="0.22"/>
+<text x="295.0" y="99.0" class="d-s" text-anchor="middle" >Rules</text>
+<line x1="210" y1="110" x2="380" y2="110" class="d-line d-faint"/>
+<rect x="210" y="110" width="170" height="32" class="d-violet d-fill" opacity="0.22"/>
+<text x="295.0" y="130.0" class="d-s" text-anchor="middle" >Docs for this task</text>
+<line x1="210" y1="142" x2="380" y2="142" class="d-line d-faint"/>
+<text x="295.0" y="234.0" class="d-s" text-anchor="middle" >Room to work</text>
+<rect x="210" y="54" width="170" height="264" rx="6" class="d-ext"/>
+<line x1="20" y1="332" x2="380" y2="332" class="d-line d-faint"/>
+<text x="20" y="356" class="d-s" text-anchor="start" >Not to scale. There's no memory: only what's in the window.</text>
+</svg>

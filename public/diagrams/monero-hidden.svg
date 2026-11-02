@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 274" role="img" aria-labelledby="t-monero-hidden"><title id="t-monero-hidden">A transparent chain shows the sender, the receiver and the amount. Monero hides each with its own mechanism: a ring signature for the sender, a one-time stealth address for the receiver, and RingCT for the amount</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-monero-hidden" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-s" text-anchor="start" >On a transparent chain</text>
+<text x="176" y="22" class="d-s" text-anchor="start" >On Monero</text>
+<rect x="20" y="34" width="140" height="58" rx="8" class="d-box"/>
+<text x="34" y="57" class="d-s" text-anchor="start" >Sender</text>
+<text x="34" y="75" class="d-t d-m d-rose d-ct" text-anchor="start" >0xd8dA…6045</text>
+<path d="M160,63 L174,63" class="d-line" marker-end="url(#ah-monero-hidden)"/>
+<rect x="176" y="34" width="204" height="58" rx="8" class="d-box"/>
+<circle cx="190" cy="53" r="4" class="d-green d-fill"/>
+<text x="202" y="57" class="d-t" text-anchor="start" >Ring signature</text>
+<text x="202" y="75" class="d-s" text-anchor="start" >One of a ring of 16</text>
+<rect x="20" y="104" width="140" height="58" rx="8" class="d-box"/>
+<text x="34" y="127" class="d-s" text-anchor="start" >Receiver</text>
+<text x="34" y="145" class="d-t d-m d-rose d-ct" text-anchor="start" >0x3fC9…7FAD</text>
+<path d="M160,133 L174,133" class="d-line" marker-end="url(#ah-monero-hidden)"/>
+<rect x="176" y="104" width="204" height="58" rx="8" class="d-box"/>
+<circle cx="190" cy="123" r="4" class="d-green d-fill"/>
+<text x="202" y="127" class="d-t" text-anchor="start" >Stealth address</text>
+<text x="202" y="145" class="d-s" text-anchor="start" >One-time, per payment</text>
+<rect x="20" y="174" width="140" height="58" rx="8" class="d-box"/>
+<text x="34" y="197" class="d-s" text-anchor="start" >Amount</text>
+<text x="34" y="215" class="d-t d-m d-rose d-ct" text-anchor="start" >1.5 ETH</text>
+<path d="M160,203 L174,203" class="d-line" marker-end="url(#ah-monero-hidden)"/>
+<rect x="176" y="174" width="204" height="58" rx="8" class="d-box"/>
+<circle cx="190" cy="193" r="4" class="d-green d-fill"/>
+<text x="202" y="197" class="d-t" text-anchor="start" >RingCT</text>
+<text x="202" y="215" class="d-s" text-anchor="start" >Committed, still balanced</text>
+<text x="20" y="264" class="d-s" text-anchor="start" >Mandatory for everyone: there's no transparent mode.</text>
+</svg>

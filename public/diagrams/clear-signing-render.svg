@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 372" role="img" aria-labelledby="t-clear-signing-render"><title id="t-clear-signing-render">The wallet takes the transaction's calldata and the ERC-7730 descriptor for that contract, checks that the descriptor is bound to the contract, and applies its formats. The screen says Approve, Uniswap Universal Router, Unlimited USDC. With no matching format it shows Unknown function and the raw arguments</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-clear-signing-render" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="16" width="172" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="34" r="4" class="d-rose d-fill"/>
+<text x="46" y="38" class="d-t" text-anchor="start" >Calldata</text>
+<text x="46" y="54" class="d-s" text-anchor="start" >0x095ea7b3…</text>
+<rect x="208" y="16" width="172" height="54" rx="8" class="d-box"/>
+<circle cx="222" cy="34" r="4" class="d-blue d-fill"/>
+<text x="234" y="38" class="d-t" text-anchor="start" >Descriptor</text>
+<text x="234" y="54" class="d-s" text-anchor="start" >ERC-7730, per contract</text>
+<path d="M106,70 L106,104" class="d-line" marker-end="url(#ah-clear-signing-render)"/>
+<path d="M294,70 L294,104" class="d-line" marker-end="url(#ah-clear-signing-render)"/>
+<rect x="20" y="106" width="360" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="124" r="4" class="d-violet d-fill"/>
+<text x="46" y="128" class="d-t" text-anchor="start" >Wallet's parser</text>
+<text x="46" y="144" class="d-s" text-anchor="start" >Checks the binding, then applies each field's format</text>
+<path d="M200,160 L200,194" class="d-line" marker-end="url(#ah-clear-signing-render)"/>
+<text x="210" y="181" class="d-s" text-anchor="start" >plain words</text>
+<rect x="66" y="196" width="268" height="102" rx="12" class="d-box"/>
+<text x="86" y="224" class="d-t" text-anchor="start" >Approve</text>
+<text x="86" y="250" class="d-s" text-anchor="start" >Spender</text>
+<text x="142" y="250" class="d-t" text-anchor="start" >Uniswap Universal Router</text>
+<text x="86" y="274" class="d-s" text-anchor="start" >Amount</text>
+<text x="142" y="274" class="d-t d-rose d-ct" text-anchor="start" >Unlimited USDC</text>
+<line x1="20" y1="318" x2="380" y2="318" class="d-line d-faint"/>
+<text x="20" y="342" class="d-s" text-anchor="start" >No matching format? "Unknown function" and the raw arguments.</text>
+<text x="20" y="360" class="d-s" text-anchor="start" >Never a format borrowed from something nearby.</text>
+</svg>

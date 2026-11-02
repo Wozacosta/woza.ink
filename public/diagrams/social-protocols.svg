@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" role="img" aria-labelledby="t-social-protocols"><title id="t-social-protocols">ActivityPub is a federation of servers: your account and posts live on one instance, which talks to the others. AT Protocol is layered: your data lives in a Personal Data Server, a relay aggregates it, apps read from the relay and write to your server, and labeling services handle moderation</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-social-protocols" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >ActivityPub: a federation of servers</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Your account and posts live on one instance</text>
+<rect x="20" y="52" width="100" height="44" rx="8" class="d-box"/>
+<text x="70.0" y="78.5" class="d-t" text-anchor="middle" >Mastodon</text>
+<path d="M120,74 L148,74" class="d-line" marker-end="url(#ah-social-protocols)"/>
+<path d="M150,74 L122,74" class="d-line" marker-end="url(#ah-social-protocols)"/>
+<rect x="150" y="52" width="100" height="44" rx="8" class="d-box"/>
+<text x="200.0" y="78.5" class="d-t" text-anchor="middle" >Pixelfed</text>
+<path d="M250,74 L278,74" class="d-line" marker-end="url(#ah-social-protocols)"/>
+<path d="M280,74 L252,74" class="d-line" marker-end="url(#ah-social-protocols)"/>
+<rect x="280" y="52" width="100" height="44" rx="8" class="d-box"/>
+<text x="330.0" y="78.5" class="d-t" text-anchor="middle" >PeerTube</text>
+<line x1="20" y1="116" x2="380" y2="116" class="d-line d-faint"/>
+<text x="20" y="142" class="d-t" text-anchor="start" >AT Protocol: layers</text>
+<text x="20" y="158" class="d-s" text-anchor="start" >Your data lives apart from the apps you use</text>
+<path d="M330,204 V186 H70 V202" class="d-line" stroke-dasharray="4 3" marker-end="url(#ah-social-protocols)"/>
+<text x="200" y="180" class="d-s" text-anchor="middle" >apps write to your PDS</text>
+<rect x="20" y="204" width="100" height="54" rx="8" class="d-box"/>
+<circle cx="34" cy="222" r="4" class="d-green d-fill"/>
+<text x="46" y="226" class="d-t" text-anchor="start" >PDS</text>
+<text x="46" y="242" class="d-s" text-anchor="start" >Your data</text>
+<rect x="150" y="204" width="100" height="54" rx="8" class="d-box"/>
+<circle cx="164" cy="222" r="4" class="d-blue d-fill"/>
+<text x="176" y="226" class="d-t" text-anchor="start" >Relay</text>
+<text x="176" y="242" class="d-s" text-anchor="start" >Aggregates</text>
+<rect x="280" y="204" width="100" height="54" rx="8" class="d-box"/>
+<circle cx="294" cy="222" r="4" class="d-violet d-fill"/>
+<text x="306" y="226" class="d-t" text-anchor="start" >App</text>
+<text x="306" y="242" class="d-s" text-anchor="start" >Reads relay</text>
+<path d="M120,231 L148,231" class="d-line" marker-end="url(#ah-social-protocols)"/>
+<path d="M250,231 L278,231" class="d-line" marker-end="url(#ah-social-protocols)"/>
+<rect x="280" y="292" width="100" height="44" rx="8" class="d-ext"/>
+<text x="330.0" y="318.5" class="d-t" text-anchor="middle" >Labelers</text>
+<path d="M330,292 L330,260" class="d-line" marker-end="url(#ah-social-protocols)"/>
+<text x="320" y="280" class="d-s" text-anchor="end" >moderation</text>
+<text x="20" y="308" class="d-s" text-anchor="start" >Move your PDS and your</text>
+<text x="20" y="324" class="d-s" text-anchor="start" >followers and posts come along.</text>
+</svg>

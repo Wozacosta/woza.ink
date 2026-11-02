@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 244" role="img" aria-labelledby="t-agent-payments-sessions"><title id="t-agent-payments-sessions">x402's basic flow attaches one payment to every request. MPP authorizes a spending limit once and streams micropayments against it. x402 V2 has since added reusable sessions</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-agent-payments-sessions" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<text x="20" y="22" class="d-t" text-anchor="start" >Per request: x402's basic flow</text>
+<text x="20" y="38" class="d-s" text-anchor="start" >Every call carries its own payment</text>
+<rect x="20" y="52" width="16" height="16" rx="3" class="d-blue d-fill" opacity="0.85"/>
+<rect x="69" y="52" width="16" height="16" rx="3" class="d-blue d-fill" opacity="0.85"/>
+<rect x="118" y="52" width="16" height="16" rx="3" class="d-blue d-fill" opacity="0.85"/>
+<rect x="167" y="52" width="16" height="16" rx="3" class="d-blue d-fill" opacity="0.85"/>
+<rect x="216" y="52" width="16" height="16" rx="3" class="d-blue d-fill" opacity="0.85"/>
+<rect x="265" y="52" width="16" height="16" rx="3" class="d-blue d-fill" opacity="0.85"/>
+<rect x="314" y="52" width="16" height="16" rx="3" class="d-blue d-fill" opacity="0.85"/>
+<rect x="363" y="52" width="16" height="16" rx="3" class="d-blue d-fill" opacity="0.85"/>
+<line x1="20" y1="90" x2="380" y2="90" class="d-line d-faint"/>
+<text x="20" y="114" class="d-t" text-anchor="start" >Session: MPP</text>
+<text x="20" y="130" class="d-s" text-anchor="start" >Authorize a limit once, then stream micropayments against it</text>
+<rect x="20" y="144" width="360" height="24" rx="4" class="d-ext"/>
+<rect x="20" y="144" width="228" height="24" rx="4" class="d-green d-fill" opacity="0.18"/>
+<line x1="26" y1="149" x2="26" y2="163" class="d-line d-green d-stroke"/>
+<line x1="33" y1="149" x2="33" y2="163" class="d-line d-green d-stroke"/>
+<line x1="40" y1="149" x2="40" y2="163" class="d-line d-green d-stroke"/>
+<line x1="47" y1="149" x2="47" y2="163" class="d-line d-green d-stroke"/>
+<line x1="54" y1="149" x2="54" y2="163" class="d-line d-green d-stroke"/>
+<line x1="61" y1="149" x2="61" y2="163" class="d-line d-green d-stroke"/>
+<line x1="68" y1="149" x2="68" y2="163" class="d-line d-green d-stroke"/>
+<line x1="75" y1="149" x2="75" y2="163" class="d-line d-green d-stroke"/>
+<line x1="82" y1="149" x2="82" y2="163" class="d-line d-green d-stroke"/>
+<line x1="89" y1="149" x2="89" y2="163" class="d-line d-green d-stroke"/>
+<line x1="96" y1="149" x2="96" y2="163" class="d-line d-green d-stroke"/>
+<line x1="103" y1="149" x2="103" y2="163" class="d-line d-green d-stroke"/>
+<line x1="110" y1="149" x2="110" y2="163" class="d-line d-green d-stroke"/>
+<line x1="117" y1="149" x2="117" y2="163" class="d-line d-green d-stroke"/>
+<line x1="124" y1="149" x2="124" y2="163" class="d-line d-green d-stroke"/>
+<line x1="131" y1="149" x2="131" y2="163" class="d-line d-green d-stroke"/>
+<line x1="138" y1="149" x2="138" y2="163" class="d-line d-green d-stroke"/>
+<line x1="145" y1="149" x2="145" y2="163" class="d-line d-green d-stroke"/>
+<line x1="152" y1="149" x2="152" y2="163" class="d-line d-green d-stroke"/>
+<line x1="159" y1="149" x2="159" y2="163" class="d-line d-green d-stroke"/>
+<line x1="166" y1="149" x2="166" y2="163" class="d-line d-green d-stroke"/>
+<line x1="173" y1="149" x2="173" y2="163" class="d-line d-green d-stroke"/>
+<line x1="180" y1="149" x2="180" y2="163" class="d-line d-green d-stroke"/>
+<line x1="187" y1="149" x2="187" y2="163" class="d-line d-green d-stroke"/>
+<line x1="194" y1="149" x2="194" y2="163" class="d-line d-green d-stroke"/>
+<line x1="201" y1="149" x2="201" y2="163" class="d-line d-green d-stroke"/>
+<line x1="208" y1="149" x2="208" y2="163" class="d-line d-green d-stroke"/>
+<line x1="215" y1="149" x2="215" y2="163" class="d-line d-green d-stroke"/>
+<line x1="222" y1="149" x2="222" y2="163" class="d-line d-green d-stroke"/>
+<line x1="229" y1="149" x2="229" y2="163" class="d-line d-green d-stroke"/>
+<line x1="236" y1="149" x2="236" y2="163" class="d-line d-green d-stroke"/>
+<line x1="243" y1="149" x2="243" y2="163" class="d-line d-green d-stroke"/>
+<text x="20" y="184" class="d-s" text-anchor="start" >spent so far</text>
+<text x="380" y="184" class="d-s" text-anchor="end" >spending limit</text>
+<line x1="20" y1="198" x2="380" y2="198" class="d-line d-faint"/>
+<text x="20" y="222" class="d-s" text-anchor="start" >x402 V2 added reusable sessions as well, so agents can skip</text>
+<text x="20" y="238" class="d-s" text-anchor="start" >re-paying on every call.</text>
+</svg>

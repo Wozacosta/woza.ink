@@ -79,6 +79,8 @@ Telegram:
 
 Short version: Telegram's cloud model enables features but requires you to trust their servers; Signal's model reduces the amount of trust you must place in the server.
 
+![All three are encrypted on the wire. The difference is who holds the keys, and only Telegram's default leaves them with the server.](diagram:messenger-servers)
+
 ---
 
 ## Open Source vs. "Trust Us"

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 244" role="img" aria-labelledby="t-flashspace-spaces"><title id="t-flashspace-spaces">Four spaces, each one keystroke away. Alt+1 is the terminal with Ghostty, Alt+2 the browser with Firefox, Alt+3 communication with Slack, Discord and email, and Alt+4 everything else. Alt+Shift plus a number moves the focused window there</title>
+<style>
+.d-box{fill:var(--surface,#f1ede6);stroke:var(--line-strong,#cfc8bc);stroke-width:1}
+.d-ext{fill:none;stroke:var(--line-strong,#cfc8bc);stroke-width:1;stroke-dasharray:4 3}
+.d-t{fill:var(--foreground,#1a1a1a);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:13px;font-weight:600}
+.d-s{fill:var(--subtle,#6b665f);font-family:var(--font-inter,Inter),system-ui,-apple-system,sans-serif;font-size:11px}
+.d-m{font-family:var(--font-mono,ui-monospace),Menlo,monospace;font-size:10.5px}
+.d-line{stroke:var(--subtle,#6b665f);stroke-width:1.25;fill:none}
+.d-faint{stroke:var(--line-strong,#cfc8bc)}
+.d-head{fill:var(--subtle,#6b665f)}
+.d-violet{--c:var(--d-violet,#6d28d9)}.d-blue{--c:var(--d-blue,#1d4ed8)}.d-amber{--c:var(--d-amber,#92400e)}
+.d-green{--c:var(--d-green,#047857)}.d-rose{--c:var(--d-rose,#be123c)}
+.d-fill{fill:var(--c)}.d-stroke{stroke:var(--c)}.d-ct{fill:var(--c)}
+</style>
+<defs><marker id="ah-flashspace-spaces" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="d-head"/></marker></defs>
+<rect x="20" y="16" width="176" height="80" rx="8" class="d-box"/>
+<rect x="20" y="16" width="176" height="6" class="d-green d-fill" opacity="0.8"/>
+<rect x="34" y="34" width="46" height="20" rx="4" class="d-ext"/>
+<text x="57" y="48" class="d-s d-m" text-anchor="middle" >Alt+1</text>
+<text x="34" y="72" class="d-t" text-anchor="start" >Terminal</text>
+<text x="34" y="87" class="d-s" text-anchor="start" >Ghostty, tmux</text>
+<rect x="204" y="16" width="176" height="80" rx="8" class="d-box"/>
+<rect x="204" y="16" width="176" height="6" class="d-blue d-fill" opacity="0.8"/>
+<rect x="218" y="34" width="46" height="20" rx="4" class="d-ext"/>
+<text x="241" y="48" class="d-s d-m" text-anchor="middle" >Alt+2</text>
+<text x="218" y="72" class="d-t" text-anchor="start" >Browser</text>
+<text x="218" y="87" class="d-s" text-anchor="start" >Firefox</text>
+<rect x="20" y="104" width="176" height="80" rx="8" class="d-box"/>
+<rect x="20" y="104" width="176" height="6" class="d-amber d-fill" opacity="0.8"/>
+<rect x="34" y="122" width="46" height="20" rx="4" class="d-ext"/>
+<text x="57" y="136" class="d-s d-m" text-anchor="middle" >Alt+3</text>
+<text x="34" y="160" class="d-t" text-anchor="start" >Communication</text>
+<text x="34" y="175" class="d-s" text-anchor="start" >Slack, Discord, email</text>
+<rect x="204" y="104" width="176" height="80" rx="8" class="d-box"/>
+<rect x="204" y="104" width="176" height="6" class="d-violet d-fill" opacity="0.8"/>
+<rect x="218" y="122" width="46" height="20" rx="4" class="d-ext"/>
+<text x="241" y="136" class="d-s d-m" text-anchor="middle" >Alt+4</text>
+<text x="218" y="160" class="d-t" text-anchor="start" >Misc</text>
+<text x="218" y="175" class="d-s" text-anchor="start" >Finder, settings</text>
+<line x1="20" y1="196" x2="380" y2="196" class="d-line d-faint"/>
+<text x="20" y="220" class="d-s" text-anchor="start" >Alt+Shift+number moves the focused window to that space.</text>
+</svg>

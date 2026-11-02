@@ -23,6 +23,8 @@ The trick is simple. A file gets split into pieces — typically 256KB to 4MB ea
 
 This is peer-to-peer in the purest sense. No central server holds the file. The swarm is the server.
 
+![A server uploads every copy itself. In a swarm every peer uploads what it has, so more downloaders add capacity instead of load.](diagram:torrent-swarm)
+
 ---
 
 ## The vocabulary
@@ -44,6 +46,8 @@ BitTorrent's genius isn't just "split file, share pieces." It's the incentive de
 ### Piece selection: rarest first
 
 When your client needs to decide which piece to download next, it picks the rarest one — the piece fewest peers in the swarm currently have. This is counterintuitive. You might think downloading common pieces first would be safer. But rarest-first ensures that rare pieces get replicated quickly, preventing bottlenecks where everyone has the same 90% and nobody has the last 10%.
+
+![Ten pieces and how many peers hold each. The client skips what it already has and goes for the rarest of the rest.](diagram:torrent-rarest)
 
 A 2006 INRIA paper confirmed this: rarest first and the choke algorithm alone are sufficient to achieve near-optimal piece diversity and download performance. The simplicity is the point.
 
@@ -99,6 +103,8 @@ The tracker became optional. Even if every tracker went down, existing swarms co
 ### Phase 3: Magnet links (2008-2012)
 
 BEP 9 enabled peers to exchange torrent metadata over the wire protocol itself. Combined with DHT, this meant you could start a download from nothing but a 40-character hash encoded in a magnet URI. No .torrent file, no tracker, no website hosting metadata. Just a link.
+
+![A magnet link holds only the infohash. The DHT finds the peers, the peers supply the metadata, and the transfer starts.](diagram:torrent-magnet)
 
 Magnet links made BitTorrent nearly impossible to shut down at the infrastructure level. The Pirate Bay famously switched to magnet-only in 2012, dropping .torrent file hosting entirely.
 

@@ -44,6 +44,8 @@ Three cryptographic mechanisms do the work:
 
 Together, these three mechanisms mean that on Monero, the sender, receiver, and amount of every transaction are hidden by default. This is qualitatively different from Bitcoin or Ethereum — not privacy added on top, but privacy built into the base layer.
 
+![A transparent chain shows who, to whom and how much. Monero hides each with its own mechanism.](diagram:monero-hidden)
+
 Monero also uses [Dandelion++](https://arxiv.org/abs/1805.11060) for broadcast privacy — transactions propagate through the network in a way that makes it harder to correlate a transaction with the IP address that first broadcast it.
 
 **The tradeoffs are real.** Ring signatures are much larger than regular signatures — Monero transactions are significantly heavier than Bitcoin transactions at the same economic throughput. The ASIC-resistant RandomX proof-of-work algorithm is intentional: Monero prioritizes CPU mining to maintain broad decentralization. Monero has also faced delisting pressure from regulated exchanges precisely because its privacy is so strong that compliance tools can't analyze its blockchain. That's the point, but it has practical consequences for liquidity and accessibility.

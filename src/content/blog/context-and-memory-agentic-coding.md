@@ -22,6 +22,8 @@ Once you internalize this, you stop fighting the tool and start designing around
 
 An agent like Claude Code operates by reading a prompt — which includes system instructions, your rules files, any loaded skills, tool outputs, and the conversation history — and producing a response. There's no database being queried. There's no long-term memory being updated. It's all one big block of text.
 
+![Everything the agent knows is text in one window. A fresh session keeps only what you wrote down.](diagram:context-window)
+
 The practical implications:
 
 - **Long conversations degrade.** As the window fills, earlier context gets less weight or eventually falls off. A conversation that started sharp can get fuzzy after dozens of back-and-forth exchanges.

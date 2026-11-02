@@ -83,6 +83,8 @@ Keybindings:
 
 That's the whole setup. Four workspaces, eight keybindings.
 
+![Four spaces, each one keystroke away.](diagram:flashspace-spaces)
+
 ---
 
 ## For tiling: pair it with a lightweight tiler

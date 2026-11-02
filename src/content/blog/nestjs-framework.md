@@ -93,6 +93,8 @@ NestJS gives you five layers between an incoming request and your handler. Each 
 
 The order is deterministic: middleware, then guards, then interceptors (pre), then pipes, then your handler, then interceptors (post), then exception filters if something went wrong. Global-scoped first, then controller-scoped, then route-scoped.
 
+![Down through the layers to your handler, then back out through the interceptors. If something throws, an exception filter writes the response.](diagram:nest-lifecycle)
+
 This layered architecture means you rarely write cross-cutting concerns inside your handlers. Auth is a guard. Validation is a pipe. Logging is an interceptor. Your handler just handles.
 
 ---

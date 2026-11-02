@@ -12,6 +12,11 @@ export function SiteFooter() {
             </a>
           </li>
           <li>
+            <a href={AUTHOR.bluesky} className="hover:text-fg" rel="me noopener noreferrer" target="_blank">
+              Bluesky
+            </a>
+          </li>
+          <li>
             <a href="/feed.xml" className="hover:text-fg">
               RSS
             </a>

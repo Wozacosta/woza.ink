@@ -37,6 +37,7 @@ I believe in:
 Want to chat? Found a bug? Have a project idea? I'd love to hear from you.
 
 - GitHub: [@Wozacosta](https://github.com/Wozacosta)
+- Bluesky: [@woza.ink](https://bsky.app/profile/woza.ink)
 
 ---
 

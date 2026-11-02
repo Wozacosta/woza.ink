@@ -7,6 +7,7 @@ export const SITE_DESCRIPTION =
 export const AUTHOR = {
   name: "Samy",
   github: "https://github.com/Wozacosta",
+  bluesky: "https://bsky.app/profile/woza.ink",
 };
 
 /** AT-URI of the site.standard.publication record. Also in sequoia.json and public/.well-known */

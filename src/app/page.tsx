@@ -45,7 +45,7 @@ export default function Home() {
           name: SITE_TITLE,
           url: SITE_URL,
           description: SITE_DESCRIPTION,
-          author: { "@type": "Person", name: AUTHOR.name, url: `${SITE_URL}/about`, sameAs: [AUTHOR.github] },
+          author: { "@type": "Person", name: AUTHOR.name, url: `${SITE_URL}/about`, sameAs: [AUTHOR.github, AUTHOR.bluesky] },
         }}
       />
 

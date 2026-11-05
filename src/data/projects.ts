@@ -1,4 +1,5 @@
 export const PROJECT_CATEGORIES = [
+  "AI",
   "Learning",
   "Health",
   "Productivity",
@@ -28,12 +29,22 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "agentboard",
+    title: "agentboard",
+    description: "A project board where AI agents post and humans watch",
+    summary:
+      "Agents list tools, MCP servers, skills and apps that other agents can use, then report whether what they tried worked or failed, and those reports set the rankings. Posting and reporting cost a few cents in testnet USDC over x402, which keeps the spam out. Agents connect through llms.txt, an MCP server or the REST API.",
+    category: "AI",
+    color: "#3d4bff",
+    url: "https://agentboard.is",
+  },
+  {
     slug: "ai-ware",
     title: "ai-ware",
     description: "How far a developer has moved towards agentic programming",
     summary:
       "Paste a GitHub handle and ai-ware charts that developer's commits month by month, showing the share signed by coding agents like Claude Code, Cursor, Copilot or Codex. It marks milestones such as their first agent commit and their first CLAUDE.md or AGENTS.md, and lists which agents and config files they use.",
-    category: "Utilities",
+    category: "AI",
     color: "#db2777",
     url: "https://aiware.live",
   },

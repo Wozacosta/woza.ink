@@ -28,6 +28,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "ai-ware",
+    title: "ai-ware",
+    description: "How far a developer has moved towards agentic programming",
+    summary:
+      "Paste a GitHub handle and ai-ware charts that developer's commits month by month, showing the share signed by coding agents like Claude Code, Cursor, Copilot or Codex. It marks milestones such as their first agent commit and their first CLAUDE.md or AGENTS.md, and lists which agents and config files they use.",
+    category: "Utilities",
+    color: "#db2777",
+    url: "https://aiware.live",
+  },
+  {
     slug: "uchronia",
     title: "Uchronia",
     description: "An alternate history generator",

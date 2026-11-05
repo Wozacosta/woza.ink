@@ -88,6 +88,8 @@ const CAPTURE: Record<string, CaptureOptions> = {
     prepare: waitForUchronia,
   },
   habitu: { prepare: seedHabitu },
+  // A real profile; the first scan can take ~40s, then it's cached for an hour
+  "ai-ware": { url: "https://aiware.live/?u=wozacosta", waitMs: 50_000 },
 };
 
 let browser: Browser | null = null;

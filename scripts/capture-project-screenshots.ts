@@ -87,6 +87,14 @@ async function scrollToReadme(page: Page) {
     const readme = document.querySelector("article.markdown-body");
     if (readme) window.scrollTo(0, readme.getBoundingClientRect().top + window.scrollY - 72);
   });
+  // Badges and screenshots are lazy-loaded through GitHub's image proxy
+  await page.waitForFunction(
+    () =>
+      [...document.querySelectorAll<HTMLImageElement>("article.markdown-body img")]
+        .filter((img) => img.getBoundingClientRect().top < window.innerHeight)
+        .every((img) => img.complete && img.naturalWidth > 0),
+    { timeout: 15_000 },
+  ).catch(() => {});
 }
 
 const CAPTURE: Record<string, CaptureOptions> = {

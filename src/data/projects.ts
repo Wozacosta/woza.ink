@@ -184,6 +184,27 @@ export const projects: Project[] = [
     github: "https://github.com/Wozacosta/leplein",
   },
   {
+    slug: "obrain",
+    title: "obrain",
+    description: "Wire Obsidian into Claude Code in one command",
+    summary:
+      "One script installs Obsidian and Claude Code, scaffolds a notes vault, and adds slash commands like /morning, /weekly and /recap. Claude reads the vault at the start of every session, so it already knows your projects and habits. Everything stays on your Mac.",
+    category: "AI",
+    color: "#7c3aed",
+    url: "https://github.com/Wozacosta/obrain",
+  },
+  {
+    slug: "awesome-clear-signing",
+    title: "Awesome Clear Signing",
+    description: "A curated guide to readable transaction signing",
+    summary:
+      "The standards, tools, registries, wallets and incidents behind clear signing on Ethereum, from ERC-7730 descriptors to ERC-8213 fingerprints. It closes with a field guide to what a wallet actually asks you to sign: transaction types, EIP-191 and EIP-712 messages, UserOperations and EIP-7702 authorizations.",
+    category: "Crypto",
+    color: "#059669",
+    url: "https://github.com/Wozacosta/awesome-clear-signing",
+    post: "clear-signing",
+  },
+  {
     slug: "payp",
     title: "Payp",
     description: "Pay and get paid with crypto, simply",

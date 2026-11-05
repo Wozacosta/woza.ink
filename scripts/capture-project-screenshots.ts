@@ -81,6 +81,14 @@ async function waitForUchronia(page: Page) {
   );
 }
 
+/** Repos have no landing page: show the README, clear of its sticky tab bar */
+async function scrollToReadme(page: Page) {
+  await page.evaluate(() => {
+    const readme = document.querySelector("article.markdown-body");
+    if (readme) window.scrollTo(0, readme.getBoundingClientRect().top + window.scrollY - 72);
+  });
+}
+
 const CAPTURE: Record<string, CaptureOptions> = {
   // Examples are free to explore and served from cache
   uchronia: {
@@ -90,6 +98,8 @@ const CAPTURE: Record<string, CaptureOptions> = {
   habitu: { prepare: seedHabitu },
   // A real profile; the first scan can take ~40s, then it's cached for an hour
   "ai-ware": { url: "https://aiware.live/?u=wozacosta", waitMs: 50_000 },
+  obrain: { prepare: scrollToReadme },
+  "awesome-clear-signing": { prepare: scrollToReadme },
 };
 
 let browser: Browser | null = null;

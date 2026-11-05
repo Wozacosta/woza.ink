@@ -188,7 +188,7 @@ export const projects: Project[] = [
     title: "obrain",
     description: "Wire Obsidian into Claude Code in one command",
     summary:
-      "One script installs Obsidian and Claude Code, scaffolds a notes vault, and adds slash commands like /morning, /weekly and /recap. Claude reads the vault at the start of every session, so it already knows your projects and habits. Everything stays on your Mac.",
+      "Run npx obrain and a short wizard installs Obsidian and Claude Code, builds a notes vault, and adds slash commands like /morning, /weekly and /recap. Claude reads the vault at the start of every session, so it already knows your projects and habits. After that, the same command opens a menu to start your day, add files or check that everything's in place.",
     category: "AI",
     color: "#7c3aed",
     url: "https://github.com/Wozacosta/obrain",

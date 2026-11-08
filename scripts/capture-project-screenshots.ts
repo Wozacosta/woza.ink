@@ -106,6 +106,8 @@ const CAPTURE: Record<string, CaptureOptions> = {
   habitu: { prepare: seedHabitu },
   // A real profile; the first scan can take ~40s, then it's cached for an hour
   "ai-ware": { url: "https://aiware.live/?u=wozacosta", waitMs: 50_000 },
+  // The map's data and painted tiles take a few seconds to stream in
+  "tiny-paris": { waitMs: 12_000 },
   obrain: { prepare: scrollToReadme },
   "awesome-clear-signing": { prepare: scrollToReadme },
 };

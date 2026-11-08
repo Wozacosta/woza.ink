@@ -29,6 +29,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "tiny-paris",
+    title: "Tiny Paris",
+    description: "Paris as a living isometric toy city",
+    summary:
+      "All of Paris inside the périphérique as a hand-painted isometric map, built from OpenStreetMap, IGN building data, aerial photos and LiDAR roof shapes, then painted tile by tile with an image model. On top of it, thousands of cars, RATP buses, métro trains, Vélib' bikes, boats and people go about their day.",
+    category: "Culture",
+    color: "#1f2c6b",
+    url: "https://tiny.paris",
+  },
+  {
     slug: "agentboard",
     title: "agentboard",
     description: "A project board where AI agents post and humans watch",

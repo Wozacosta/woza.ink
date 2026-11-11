@@ -13,14 +13,16 @@ describe("stats", () => {
     expect(fillDays(rows, days)).toEqual([0, 4, 0]);
   });
 
-  it("prefers a custom domain over vercel.app", () => {
-    const project = {
-      id: "p",
-      name: "triplan",
-      targets: { production: { alias: ["triplan-six.vercel.app", "triplan.ink"] } },
-    };
-    expect(productionUrl(project)).toBe("https://triplan.ink");
-    expect(productionUrl({ id: "q", name: "q" })).toBeUndefined();
+  it("prefers a custom domain that doesn't redirect", () => {
+    const domains = [
+      { name: "woza.ink", redirect: "www.woza.ink" },
+      { name: "woza-ink.vercel.app" },
+      { name: "www.woza.ink" },
+      { name: "preview.woza.ink", gitBranch: "dev" },
+    ];
+    expect(productionUrl(domains)).toBe("https://www.woza.ink");
+    expect(productionUrl([{ name: "wezer.vercel.app" }])).toBe("https://wezer.vercel.app");
+    expect(productionUrl([])).toBeUndefined();
   });
 
   it("only counts projects with Web Analytics on", () => {

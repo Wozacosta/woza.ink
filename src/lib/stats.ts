@@ -29,7 +29,7 @@ export interface ProjectStats {
 export interface Stats {
   tracked: ProjectStats[];
   /** Projects with Web Analytics switched off */
-  untracked: { name: string; url?: string }[];
+  untracked: string[];
   since: string;
   until: string;
 }
@@ -38,7 +38,6 @@ interface VercelProject {
   id: string;
   name: string;
   webAnalytics?: { enabledAt?: number; disabledAt?: number };
-  targets?: { production?: { alias?: string[] } };
 }
 
 interface VisitRow {
@@ -70,12 +69,21 @@ export function fillDays(rows: VisitRow[], days: string[]): number[] {
   return days.map((d) => byDay.get(d) ?? 0);
 }
 
-/** The public domain for a project: a custom one if it has it */
-export function productionUrl(project: VercelProject): string | undefined {
-  const aliases = project.targets?.production?.alias ?? [];
-  const host = aliases.find((a) => !a.endsWith(".vercel.app")) ?? aliases[0];
+interface VercelDomain {
+  name: string;
+  redirect?: string | null;
+  gitBranch?: string | null;
+}
+
+/** The public domain for a project: a custom one that doesn't redirect, if it has one */
+export function productionUrl(domains: VercelDomain[]): string | undefined {
+  const live = domains.filter((d) => !d.redirect && !d.gitBranch);
+  const host = (live.find((d) => !d.name.endsWith(".vercel.app")) ?? live[0])?.name;
   return host ? `https://${host}` : undefined;
 }
+
+const domains = (projectId: string) =>
+  api<{ domains: VercelDomain[] }>(`/v9/projects/${projectId}/domains`, {}).then((r) => r.domains);
 
 export const tracksAnalytics = (p: VercelProject) =>
   Boolean(p.webAnalytics?.enabledAt && !p.webAnalytics.disabledAt);
@@ -106,7 +114,10 @@ const top = (rows: VisitRow[], key: string): Row[] =>
     .map((r) => ({ label: String(r[key] || "Direct"), visitors: r.visitors }));
 
 async function projectStats(p: VercelProject, days: string[], since: string, until: string) {
-  const daily = await visits(p.id, since, until, { by: "day" });
+  const [daily, hosts] = await Promise.all([
+    visits(p.id, since, until, { by: "day" }),
+    domains(p.id),
+  ]);
   const visitors = daily.reduce((n, r) => n + r.visitors, 0);
   const pageviews = daily.reduce((n, r) => n + r.pageviews, 0);
   const [pages, referrers] = visitors
@@ -118,7 +129,7 @@ async function projectStats(p: VercelProject, days: string[], since: string, unt
   return {
     id: p.id,
     name: p.name,
-    url: productionUrl(p),
+    url: productionUrl(hosts),
     visitors,
     pageviews,
     daily: fillDays(daily, days),
@@ -144,8 +155,8 @@ export async function getStats(now = new Date()): Promise<Stats | null> {
     tracked: tracked.sort((a, b) => b.visitors - a.visitors || a.name.localeCompare(b.name)),
     untracked: projects
       .filter((p) => !tracksAnalytics(p))
-      .map((p) => ({ name: p.name, url: productionUrl(p) }))
-      .sort((a, b) => a.name.localeCompare(b.name)),
+      .map((p) => p.name)
+      .sort(),
     since,
     until: days[days.length - 1],
   };

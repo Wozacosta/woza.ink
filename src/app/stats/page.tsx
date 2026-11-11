@@ -160,7 +160,7 @@ export default async function StatsPage() {
             <span className="font-mono text-xs uppercase tracking-wide text-subtle">
               Web Analytics off ·{" "}
             </span>
-            {stats.untracked.map((p) => p.name).join(", ")}
+            {stats.untracked.join(", ")}
           </p>
         )}
       </section>

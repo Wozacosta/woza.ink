@@ -7,7 +7,7 @@ describe("llms.txt", () => {
 
   it("follows the llmstxt.org shape: h1, blockquote summary, h2 sections", () => {
     expect(txt).toMatch(/^# woza\.ink\n\n> .+\n/);
-    expect(txt).toContain("\n## Blog\n");
+    expect(txt).toContain("\n## Notebook\n");
     expect(txt).toContain("\n## Projects\n");
     expect(txt).toContain("\n## Optional\n");
   });

@@ -9,7 +9,9 @@ I'm a developer who loves building things on the web. This site is my corner of 
 
 ## What I Do
 
-By day, I work as a software engineer, crafting products that (hopefully) make people's lives a little easier. By night, I tinker with side projects, explore new technologies, and occasionally write about what I learn.
+By day, I work as a software engineer, crafting products that (hopefully) make people's lives a little easier. By night, I tinker with side projects, explore new technologies, and keep a [notebook](/blog) of what I learn.
+
+That notebook is mostly written by AI, from my notes, questions and research. My own opinions are marked as takes, so you can tell which words are mine.
 
 I'm particularly interested in:
 

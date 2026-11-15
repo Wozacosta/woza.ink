@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { getAllSlugs, getPostBySlug, getReadTime } from "@/data/blog";
 import { OG_COLORS, OG_SIZE, loadOgFonts } from "@/lib/og";
 
-export const alt = "woza.ink blog post";
+export const alt = "woza.ink notebook post";
 export const size = OG_SIZE;
 export const contentType = "image/png";
 

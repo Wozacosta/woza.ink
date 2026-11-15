@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { SERIES, type Series } from "@/data/series";
 import { tagSlug } from "@/lib/tags";
+import { countTakes } from "@/lib/takes";
 
 export interface BlogPost {
   slug: string;
@@ -21,6 +22,8 @@ export interface BlogPost {
   blueskyPost?: string;
   /** On the site with a label, but out of feeds and search until it's finished */
   wip: boolean;
+  /** Number of `> [!take]` blocks: Samy's own words in an AI-written post */
+  takes: number;
 }
 
 const BLOG_DIR = path.join(process.cwd(), "src/content/blog");
@@ -41,6 +44,7 @@ function readPost(slug: string): BlogPost {
     atUri: data.atUri,
     blueskyPost: data.blueskyPost,
     wip: data.wip === true,
+    takes: countTakes(content),
   };
 }
 

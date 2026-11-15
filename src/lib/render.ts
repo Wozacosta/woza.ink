@@ -2,6 +2,8 @@ import fs from "fs";
 import path from "path";
 import { Marked, Renderer, type Tokens } from "marked";
 import { highlight } from "@/lib/highlight";
+import { AUTHOR } from "@/lib/site";
+import { TAKE_MARKER } from "@/lib/takes";
 
 const defaultRenderer = new Renderer();
 
@@ -52,8 +54,20 @@ export async function renderMarkdown(
   { diagrams = "inline" }: RenderOptions = {},
 ): Promise<string> {
   const codeBlocks: { lang: string; code: string }[] = [];
+  let takes = 0;
   const md = new Marked({
     renderer: {
+      // `> [!take]` marks Samy's own words in an AI-written post (src/lib/takes.ts)
+      blockquote(token) {
+        if (!TAKE_MARKER.test(token.text)) return false;
+        takes++;
+        const body = this.parser
+          .parse(token.tokens)
+          .replace(/^<p>\[!take\][ \t]*\n?/i, "<p>")
+          .replace(/^<p><\/p>\n?/, "");
+        // The label is text, not CSS, so feed readers and agents see it too
+        return `<aside class="take" id="take-${takes}"><p class="take-label">${escapeHtml(AUTHOR.name)}'s take</p>\n${body}</aside>\n`;
+      },
       // Wide tables scroll in their own box instead of widening the page
       table(token) {
         return `<div class="table-wrap">${defaultRenderer.table.call(this, token)}</div>`;

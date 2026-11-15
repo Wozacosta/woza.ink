@@ -34,6 +34,23 @@ describe("renderMarkdown", () => {
   });
 });
 
+describe("takes", () => {
+  it("renders `> [!take]` as a labelled box, numbered for links", async () => {
+    const html = await renderMarkdown("> [!take]\n> Mine.\n\nAI text.\n\n> [!TAKE] Also mine.");
+    expect(html).toContain(`<aside class="take" id="take-1"><p class="take-label">Samy's take</p>`);
+    expect(html).toContain('<aside class="take" id="take-2">');
+    expect(html).toContain("<p>Mine.</p>");
+    expect(html).toContain("<p>Also mine.</p>");
+    expect(html).not.toMatch(/\[!take\]/i);
+  });
+
+  it("leaves ordinary blockquotes alone", async () => {
+    const html = await renderMarkdown("> A quote about [!take] later.");
+    expect(html).toMatch(/^<blockquote>/);
+    expect(html).not.toContain("take-label");
+  });
+});
+
 describe("diagrams", () => {
   it("inlines the SVG in a figure, not inside a paragraph", async () => {
     const html = await renderMarkdown("Intro.\n\n![The pipeline](diagram:arr-architecture)\n\nAfter.");

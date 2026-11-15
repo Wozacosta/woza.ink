@@ -25,6 +25,7 @@ module.exports = {
           strong: "var(--line-strong)",
         },
         surface: "var(--surface)",
+        take: "var(--take)",
       },
     },
   },

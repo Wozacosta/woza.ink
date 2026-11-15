@@ -1,7 +1,9 @@
 # AGENTS.md
 
-Personal site at **https://www.woza.ink**: a markdown blog with margin sidenotes, a projects
-showcase, a reading list and a setup page. Next.js 16 (App Router), React 19, TypeScript
+Personal site at **https://www.woza.ink**: a markdown notebook with margin sidenotes, a projects
+showcase, a reading list and a setup page. The notebook is mostly written by AI from Samy's
+notes, and says so on the site; his own words go in takes (see below). It used to be called the
+blog, and its URLs and code still use `blog`. Next.js 16 (App Router), React 19, TypeScript
 (strict), Tailwind CSS 3, Vitest. Deployed on Vercel from `main`; nearly every route is
 statically generated at build time.
 
@@ -43,9 +45,21 @@ Use **pnpm** only (`packageManager` is pinned; there is no npm lockfile).
 
 ## Common tasks
 
-**Add a blog post**: create `src/content/blog/<slug>.md` with the frontmatter above. RSS,
+**Add a post**: create `src/content/blog/<slug>.md` with the frontmatter above. RSS,
 sitemap, tag pages, the social image, `llms.txt` and `/blog/<slug>.md` all pick it up
 automatically.
+
+**Add one of Samy's takes**: in a post, start a blockquote with `[!take]`, Obsidian's callout
+syntax, so it also renders in his vault:
+
+```markdown
+> [!take]
+> What I actually think, in my own words.
+```
+
+It renders as a labelled "Samy's take" box (`src/lib/takes.ts`, `src/lib/render.ts`), the post
+header and the Notebook list show how many a post has, and feeds and the markdown views keep the
+label. Only Samy writes takes: never put AI-written text in one.
 
 **Start a work-in-progress post**: add `wip: true` to the frontmatter. It's on the site with a
 WIP label (blog list, tag and series pages, and its own URL), but out of RSS, `llms.txt`, the

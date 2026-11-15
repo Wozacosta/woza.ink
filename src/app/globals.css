@@ -21,6 +21,9 @@
     --d-amber: #92400e;
     --d-green: #047857;
     --d-rose: #be123c;
+    /* Samy's own words in AI-written posts (`> [!take]`) */
+    --take: #92400e;
+    --take-bg: #f8ecd9;
     --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
     color-scheme: light;
 }
@@ -39,6 +42,8 @@
     --d-amber: #fbbf24;
     --d-green: #34d399;
     --d-rose: #fb7185;
+    --take: #fbbf24;
+    --take-bg: #2b2518;
     color-scheme: dark;
 }
 
@@ -282,6 +287,38 @@ body {
         margin-top: 0.05em;
         color: var(--foreground);
     }
+}
+
+/* Samy's take: his own words inside an AI-written post (src/lib/takes.ts) */
+.take {
+    margin: 2em 0;
+    padding: 1em 1.25em;
+    border-left: 3px solid var(--take);
+    border-radius: 0 0.5rem 0.5rem 0;
+    background: var(--take-bg);
+    color: var(--foreground);
+}
+
+.take > :first-child {
+    margin-top: 0;
+}
+
+.take > :last-child {
+    margin-bottom: 0;
+}
+
+.take .take-label {
+    margin-bottom: 0.5em;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--take);
+}
+
+.prose .take p:not(.take-label) {
+    color: var(--foreground);
 }
 
 /* Decorative opening quote mark on blockquotes */

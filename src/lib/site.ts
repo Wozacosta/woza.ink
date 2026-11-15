@@ -2,7 +2,10 @@
 export const SITE_URL = "https://www.woza.ink";
 export const SITE_TITLE = "woza.ink";
 export const SITE_DESCRIPTION =
-  "Samy's corner of the web: small, focused web apps and writing on crypto protocols, AI-assisted coding and developer tools.";
+  "Samy's corner of the web: small, focused web apps, and a notebook on crypto protocols, AI-assisted coding and developer tools that AI writes from his notes.";
+
+/** Where posts live. The URLs stay /blog so links, feeds and Standard.site records don't break */
+export const NOTEBOOK_TITLE = "Notebook";
 
 export const AUTHOR = {
   name: "Samy",
@@ -15,7 +18,7 @@ export const STANDARD_SITE_PUBLICATION =
   "at://did:plc:l72dcexjk4ytyh4nhy5vtix4/site.standard.publication/3mzbwjfrek62i";
 
 export const NAV_LINKS = [
-  { href: "/blog", label: "Blog" },
+  { href: "/blog", label: NOTEBOOK_TITLE },
   { href: "/projects", label: "Projects" },
   { href: "/reading", label: "Reading" },
   { href: "/setup", label: "Setup" },

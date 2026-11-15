@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { type BlogPost, getReadTime } from "@/data/blog";
 import { formatDate } from "@/lib/format";
+import { takesLabel } from "@/lib/takes";
 import { TagBadge } from "@/components/TagBadge";
 import { WipBadge } from "@/components/WipBadge";
 
@@ -25,6 +26,12 @@ export function PostList({ posts }: { posts: BlogPost[] }) {
               </time>
               <span aria-hidden="true">·</span>
               <span>{getReadTime(post.content)} min read</span>
+              {post.takes > 0 && (
+                <>
+                  <span aria-hidden="true">·</span>
+                  <span className="text-take">✎ {takesLabel(post.takes)}</span>
+                </>
+              )}
               {post.wip && <WipBadge />}
             </div>
             <h2

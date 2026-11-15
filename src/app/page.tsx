@@ -55,15 +55,16 @@ export default function Home() {
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
           I build small, focused web apps, mostly to scratch my own itch, and
-          write about crypto protocols, AI-assisted coding and the tools I use
-          every day.
+          keep a notebook on crypto protocols, AI-assisted coding and the tools I
+          use every day. AI writes most of it from my notes; my own takes are
+          marked.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/blog"
             className="rounded-full bg-fg px-5 py-2.5 text-sm font-medium text-bg transition-opacity hover:opacity-85"
           >
-            Read the blog
+            Open the notebook
           </Link>
           <Link
             href="/projects"
@@ -75,7 +76,7 @@ export default function Home() {
       </section>
 
       <section aria-labelledby="latest-posts" className="mx-auto max-w-3xl px-5 pb-16 sm:px-8">
-        <SectionHeading id="latest-posts" title="Latest writing" href="/blog" cta="All posts" />
+        <SectionHeading id="latest-posts" title="Latest in the notebook" href="/blog" cta="All posts" />
         <ul className="divide-y divide-line border-y border-line">
           {posts.map((post) => (
             <li key={post.slug}>

@@ -9,7 +9,7 @@ import { projects } from "@/data/projects";
 import { Marked } from "marked";
 import { getSidenotes } from "@/data/sidenotes";
 import { orderByPosition } from "@/lib/sidenotes";
-import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/site";
+import { AUTHOR, NOTEBOOK_TITLE, SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/site";
 
 /** Posts start with `# Title`; drop it since we write our own header */
 function stripLeadingHeading(markdown: string): string {
@@ -36,6 +36,7 @@ export function postToMarkdown(post: BlogPost): string {
     `- Published: ${post.date}`,
     `- Tags: ${post.tags.join(", ")}`,
     `- URL: ${url}`,
+    `- Written by: AI, from ${AUTHOR.name}'s notes. Blockquotes starting with [!take] are ${AUTHOR.name}'s own words.`,
     "",
     resolveDiagrams(absolutizeLinks(stripLeadingHeading(post.content))).trim(),
   ];
@@ -72,10 +73,12 @@ export function llmsTxt(): string {
     "",
     `> ${SITE_DESCRIPTION}`,
     "",
-    "Every blog post is available as markdown by appending `.md` to its URL, or by requesting its normal URL with `Accept: text/markdown`. All posts in one file: " +
+    `Posts in the ${NOTEBOOK_TITLE.toLowerCase()} are mostly written by AI from ${AUTHOR.name}'s notes. Blockquotes starting with [!take] are his own words.`,
+    "",
+    "Every post is available as markdown by appending `.md` to its URL, or by requesting its normal URL with `Accept: text/markdown`. All posts in one file: " +
       `${SITE_URL}/llms-full.txt`,
     "",
-    "## Blog",
+    `## ${NOTEBOOK_TITLE}`,
     "",
     ...posts.map(
       (p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}.md): ${p.description} (${p.date})`,

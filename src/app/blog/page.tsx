@@ -3,11 +3,12 @@ import { getAllPosts, getAllSeries, getAllTags } from "@/data/blog";
 import { PageHeader } from "@/components/PageHeader";
 import { PostList } from "@/components/PostList";
 import { TagBadge } from "@/components/TagBadge";
+import { AUTHOR, NOTEBOOK_TITLE } from "@/lib/site";
 
 export const metadata = {
-  title: "Blog — woza.ink",
+  title: `${NOTEBOOK_TITLE} — woza.ink`,
   description:
-    "Writing on crypto protocols, AI-assisted coding, developer tools and the things I build.",
+    "Notes on crypto protocols, AI-assisted coding, developer tools and the things I build, written by AI from my research. My own takes are marked.",
   alternates: { canonical: "/blog" },
 };
 
@@ -19,10 +20,26 @@ export default function BlogPage() {
   return (
     <>
       <PageHeader
-        title="Blog"
-        description="Thoughts, ideas, and things I'm learning."
+        title={NOTEBOOK_TITLE}
+        description="Notes on crypto protocols, AI-assisted coding and the tools I use."
         meta={`${posts.length} post${posts.length !== 1 ? "s" : ""}`}
       >
+        <section
+          id="how-its-written"
+          aria-label="How this is written"
+          className="mt-6 scroll-mt-24 rounded-lg border border-line bg-surface px-4 py-3 text-sm leading-relaxed text-muted"
+        >
+          <p>
+            <span className="font-medium text-fg">How this is written.</span> AI writes most of
+            what&apos;s here, from my notes, questions and research. I pick the topics and steer
+            it, but the wording is the AI&apos;s, including where it says &ldquo;I&rdquo;. My own
+            words are marked as takes:
+          </p>
+          <aside className="take !mb-1 !mt-3 !py-3 text-sm">
+            <p className="take-label">{AUTHOR.name}&apos;s take</p>
+            <p>Words in a box like this are mine, not the AI&apos;s.</p>
+          </aside>
+        </section>
         {tags.length > 0 && (
           // One swipeable row on phones, wrapped from sm up
           <nav

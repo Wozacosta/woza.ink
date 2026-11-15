@@ -13,7 +13,8 @@ import { addHeadingIds } from "@/lib/headings";
 import { injectSidenoteMarkers, orderByPosition } from "@/lib/sidenotes";
 import { renderMarkdown, stripLeadingH1 } from "@/lib/render";
 import { formatDate } from "@/lib/format";
-import { AUTHOR, SITE_TITLE, SITE_URL, STANDARD_SITE_PUBLICATION } from "@/lib/site";
+import { AUTHOR, NOTEBOOK_TITLE, SITE_TITLE, SITE_URL, STANDARD_SITE_PUBLICATION } from "@/lib/site";
+import { takesLabel } from "@/lib/takes";
 import { BlueskyComments } from "@/components/BlueskyComments";
 import { TagBadge } from "@/components/TagBadge";
 import { ReadingProgress } from "@/components/ReadingProgress";
@@ -128,14 +129,29 @@ export default async function BlogPostPage({
               href="/blog"
               className="inline-block font-mono text-xs uppercase tracking-widest text-subtle transition-colors hover:text-fg"
             >
-              ← Blog
+              ← {NOTEBOOK_TITLE}
             </Link>
-            <div className="mt-6 flex items-center gap-3 font-mono text-xs text-subtle">
+            <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs text-subtle">
               <time dateTime={post.date} className="uppercase tracking-wide">
                 {formatDate(post.date)}
               </time>
               <span aria-hidden="true">·</span>
               <span>{readTime} min read</span>
+              <span aria-hidden="true">·</span>
+              <Link
+                href="/blog#how-its-written"
+                className="underline decoration-dotted underline-offset-4 transition-colors hover:text-fg"
+              >
+                Written with AI
+              </Link>
+              {post.takes > 0 && (
+                <>
+                  <span aria-hidden="true">·</span>
+                  <a href="#take-1" className="text-take underline-offset-4 hover:underline">
+                    {takesLabel(post.takes)} by {AUTHOR.name}
+                  </a>
+                </>
+              )}
             </div>
             {series && (
               <p className="mt-2 font-mono text-xs text-subtle">

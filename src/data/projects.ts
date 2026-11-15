@@ -29,6 +29,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "flowchart",
+    title: "flowchart",
+    description: "Where to start with an artist, and where to go next",
+    summary:
+      "Branching \"getting into\" guides in the spirit of the /mu/ flowcharts: start at one record and follow arrows like \"something more daring\" through a whole discography, with streaming links, track previews and videos for every node. Connect Last.fm or rate records as you go and the ones you've heard light up, saved locally and synced across devices.",
+    category: "Culture",
+    color: "#14532d",
+    url: "https://flowchart.wiki",
+  },
+  {
     slug: "tiny-paris",
     title: "Tiny Paris",
     description: "Paris as a living isometric toy city",

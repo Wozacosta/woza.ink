@@ -108,6 +108,8 @@ const CAPTURE: Record<string, CaptureOptions> = {
   "ai-ware": { url: "https://aiware.live/?u=wozacosta", waitMs: 50_000 },
   // The map's data and painted tiles take a few seconds to stream in
   "tiny-paris": { waitMs: 12_000 },
+  // The home page lists only a few charts; show one
+  flowchart: { url: "https://flowchart.wiki/c/radiohead?mode=graph", waitMs: 6_000 },
   obrain: { prepare: scrollToReadme },
   "awesome-clear-signing": { prepare: scrollToReadme },
 };

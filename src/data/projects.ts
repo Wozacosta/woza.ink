@@ -29,6 +29,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "majordome",
+    title: "Majordome",
+    description: "A second brain that keeps working while you are away",
+    summary:
+      "A free, open-source Mac app, forked from T3 Code, that joins a folder of markdown notes with the Claude or ChatGPT plan you already have. The assistant reads your notes, files what you drop in, gathers every to-do and runs routines you describe in your own words, and asks before it opens anything private. Add a small server of your own and it keeps going while your Mac sleeps.",
+    category: "AI",
+    color: "#17804a",
+    url: "https://majord.me",
+    github: "https://github.com/Wozacosta/majordome",
+  },
+  {
     slug: "flowchart",
     title: "flowchart",
     description: "Where to start with an artist, and where to go next",
@@ -211,7 +222,7 @@ export const projects: Project[] = [
       "Run npx obrain and a short wizard installs Obsidian and Claude Code, builds a notes vault, and adds slash commands like /morning, /weekly and /recap. Claude reads the vault at the start of every session, so it already knows your projects and habits. After that, the same command opens a menu to start your day, add files or check that everything's in place.",
     category: "AI",
     color: "#7c3aed",
-    url: "https://github.com/Wozacosta/obrain",
+    url: "https://github.com/Wozacosta/majordome/tree/main/packages/obrain",
   },
   {
     slug: "awesome-clear-signing",

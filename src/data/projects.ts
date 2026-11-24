@@ -58,6 +58,7 @@ export const projects: Project[] = [
     category: "Culture",
     color: "#1f2c6b",
     url: "https://tiny.paris",
+    github: "https://github.com/Wozacosta/tiny-paris",
   },
   {
     slug: "agentboard",

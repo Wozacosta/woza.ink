@@ -110,6 +110,8 @@ const CAPTURE: Record<string, CaptureOptions> = {
   "tiny-paris": { waitMs: 12_000 },
   // The home page lists only a few charts; show one
   flowchart: { url: "https://flowchart.wiki/c/radiohead?mode=graph", waitMs: 6_000 },
+  // A new game starts on an empty map; the demo builds out a whole city
+  citybuilder: { url: "https://wozacosta.github.io/citybuilder/?demo", waitMs: 8_000 },
   obrain: { prepare: scrollToReadme },
   "awesome-clear-signing": { prepare: scrollToReadme },
 };

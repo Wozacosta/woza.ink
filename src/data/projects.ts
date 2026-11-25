@@ -29,6 +29,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "citybuilder",
+    title: "citybuilder",
+    description: "An isometric city builder between Hong Kong and Monaco",
+    summary:
+      "Zone a hillside harbour town and watch it grow from villas into neon-lit towers. Trams, subways, an airport and a monorail arrive on their own as the city grows. You can add stadiums, TV towers and monuments, or press Plan to lay out a whole city at once. Everything runs in one HTML file, with 3D models baked into sprites.",
+    category: "Culture",
+    color: "#0e7490",
+    url: "https://wozacosta.github.io/citybuilder/",
+    github: "https://github.com/Wozacosta/citybuilder",
+  },
+  {
     slug: "majordome",
     title: "Majordome",
     description: "A second brain that keeps working while you are away",

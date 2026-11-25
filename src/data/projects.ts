@@ -85,7 +85,7 @@ export const projects: Project[] = [
     title: "citybuilder",
     description: "An isometric city builder between Hong Kong and Monaco",
     summary:
-      "Zone a hillside harbour town and watch it grow from villas into neon-lit towers. Trams, subways, an airport and a monorail arrive on their own as the city grows. You can add stadiums, TV towers and monuments, or press Plan to lay out a whole city at once. Everything runs in one HTML file, with 3D models baked into sprites.",
+      "Press Plan and watch a hilly harbour town grow at a slow, steady pace, from villas into business districts of neon-lit towers linked by footbridges. Roads tunnel through the hills, and trams, subways, an airport and a monorail arrive on their own. You add the landmarks (stadiums, TV towers, monuments) and trigger events. It all runs in one HTML file, with about 265 3D buildings baked into sprites.",
     category: "Culture",
     color: "#0e7490",
     url: "https://wozacosta.github.io/citybuilder/",
